@@ -1,0 +1,313 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <link rel="shortcut icon" href="../../images/favicon.ico">
+        <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+		<meta http-equiv="Cache-control" content="no-cache">
+        <title>Automatic Hangar Air and Door Control</title>
+		<link rel="stylesheet" type="text/css" href="../../global-style.css">
+		<link rel="stylesheet" type="text/css" href="../../se/local-style.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        
+		<script src = "../../browser.js"></script>
+		<script src = "../../library.js"></script>
+		<script src = "../../jquery.js"></script>
+		<script id = "footer-space-script" src = "../../footer-spacing.js"></script>
+		<script id = "background-script" src = "../../se/backgroundgen.js"></script>
+    </head>
+    <body >
+        	<div id = "navbar" class="navbar">
+	  <a class="navbar-button" href="../../index.html">Reika's Mods Home</a>
+	  <a class="navbar-button" href="../../se/index.html">Space Engineers Home</a>
+		  <div class="dropdown">
+			<button class="dropbtn">Information <i class="fa fa-angle-down"></i></button>
+			<div class="dropdown-content">
+					<a href="../../se\pages\info\faq.html">FAQ</a>
+					<a href="../../se\pages\info\contact.html">Contact</a>
+					<a href="../../se\pages\info\history.html">History</a>
+			</div>
+		  </div>
+		  <div class="dropdown">
+			<button class="dropbtn">Permissions <i class="fa fa-angle-down"></i></button>
+			<div class="dropdown-content">
+					<a href="../../se\pages\perms\license.html">License</a>
+			</div>
+		  </div>
+	  <div class="dropdown">
+		<button class="dropbtn">Content <i class="fa fa-angle-down"></i></button>
+		<div class="dropdown-content">
+<a class = "dropdown-subheader">Mods</a>				<a href="../../se\mods\electronicwarfare.html">Electronic Warfare</a>
+				<a href="../../se\mods\cargoships.html">Extra Cargo Ships</a>
+				<a href="../../se\mods\gastanks.html">Gas Compressor</a>
+				<a href="../../se\mods\lowgravgen.html">Gravgen Priority</a>
+				<a href="../../se\mods\industrialthruster.html">Industrial Thruster</a>
+				<a href="../../se\mods\oreproc.html">Ore Processing</a>
+<a class = "dropdown-subheader">Blueprints</a>				<a href="../../se\blueprints\anaconda.html">Anaconda</a>
+				<a href="../../se\blueprints\anaconda2.html">Anaconda (Custom)</a>
+				<a href="../../se\blueprints\dropship.html">Federal Dropship</a>
+				<a href="../../se\blueprints\harvester.html">Harvester</a>
+				<a href="../../se\blueprints\jumpgate.html">Jump Gate</a>
+				<a href="../../se\blueprints\salvager.html">Salvager</a>
+				<a href="../../se\blueprints\spacetruck.html">Space Truck</a>
+<a class = "dropdown-subheader">Scripts</a>				<a href="../../se\scripts\cargomanager.html">Cargo Manager</a>
+				<a href="../../se\scripts\hangar.html">Hangar Control</a>
+				<a href="../../se\scripts\jumpcontrol.html">Jump Control</a>
+				<a href="../../se\scripts\o2control.html">Pressurization Control</a>
+		</div>
+	  </div>
+	  <div class="dropdown">
+		<button class="dropbtn">Other Games <i class="fa fa-angle-down"></i></button>
+		<div class="dropdown-content">
+				<a href="../../minecraft/index.html">Minecraft</a>
+				<a href="../../factorio/index.html">Factorio</a>
+				<a href="../../p2/index.html">Portal 2</a>
+				<a href="../../stellaris/index.html">Stellaris</a>
+				<a href="../../fce/index.html">FortressCraft Evolved</a>
+				<a href="../../starbound/index.html">Starbound</a>
+		</div>
+	  </div>
+	  <div class="dropdown">
+		<button class="dropbtn">Other Projects <i class="fa fa-angle-down"></i></button>
+		<div class="dropdown-content">
+				<a href="../../projects/calendar.html">Game Calendar</a>
+				<a href="../../projects/eventbuilder.html">Stellaris Event Builder</a>
+				<a href="../../projects/fcompile.html">FCompile</a>
+		</div>
+	  </div>
+	</div>
+		<noscript><div style = "text-align: center; width: 100%;"><div id = "nojs-header"><div><img class = "header-alert" src = "../../images/alert.png"></div><div>You have JavaScript disabled; it is recommended you enable it for this site.<br>While the site will (mostly) function with scripts disabled, some sections (eg changelog view) require it to update the page contents based on your input.<br>Additionally, JS is used to generate page styling, meaning disabling scripts will leave pages ugly, boring, and in some cases poorly arranged in ways that might impede readability.</div></div></div></noscript>
+		<div id="toc_container">
+<h3>Quick Nav</h3>
+<hr>
+<table class="toc_list">
+	<tr style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><span><i class="fas fa-angle-double-up"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-description">Description</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-description'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-scriptvars">Script Options</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-scriptvars'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+</table>
+</div>
+        <div class = "textarea">
+			<!--<h2>Automatic Hangar Air and Door Control</h2>-->
+						<div class = "header-image">
+				<img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785513724_2FB94558C6873CFE1C2E09CC6A567E6AEC62B87212_2F.jpg" >
+			</div>			<section class = "textblock" id = "text-block-description">
+				<h3>Description</h3>
+					This script allows automatic hangar systems where the main doors will open automatically when something is waiting to enter or exit, without any risk of air loss. It will handle this automatically, by manipulating doors and pumping air in or out of the hangar as necessary, before allowing the hangar doors to open.
+					<br><br>
+					To use it, simply plop a sensor near the hangar door, set its ranges, and name it appropriately - see the configuration settings for details - and the script will monitor it to control the various blocks as necessary.
+					<br><br>
+					Additionally, it can also control appropriately-named lights to illuminate the hangar in various colors to show whether the door is pressurized and unsafe to open, about to open, or is in the process of opening or already open.
+			</section>
+<br>
+			<section class = "textblock" id = "text-block-scriptvars">
+			<div class = "scriptvars">
+				<h3>Script Options</h3>
+				The script contains the following configurable variables/functions to adapt the script to your ship configuration or needs:
+				<br>
+				<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>DISPLAY_TAG</h4>
+Type: string<br>
+			Current Default Value:<div class = "code-block">"Beam"</div>
+		</div>
+	Any spotlight with this (and a hangar ID) in its name will be color-controlled.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>AUX_DISPLAY_TAG</h4>
+Type: string<br>
+			Current Default Value:<div class = "code-block">"Color Lights"</div>
+		</div>
+	Any lighting block in a group named "&lt;HangarID&gt; - &lt;AUX_DISPLAY_TAG&gt;" will be counted as an auxiliary color-controlled light.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>AUX_GROUP_TAG</h4>
+Type: string<br>
+			Current Default Value:<div class = "code-block">"Lights"</div>
+		</div>
+	Any lighting block in a group named "&lt;HangarID&gt; - &lt;AUX_GROUP_TAG&gt;" will be counted as an auxiliary light for that hangar.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>VENT_GROUP_TAG</h4>
+Type: string<br>
+			Current Default Value:<div class = "code-block">"Air Vent"</div>
+		</div>
+	Any vent with this (and a hangar ID) in its name will be counted as a Hangar supply vent and will be consulted for oxygen levels.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>EXTERNAL_VENT_TAG</h4>
+Type: string<br>
+			Current Default Value:<div class = "code-block">"External Air Vent"</div>
+		</div>
+	Any vent with this in its name will be counted as an external vent and will be consulted for atmospheric oxygen levels.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>SENSOR_TAG</h4>
+Type: string<br>
+			Current Default Value:<div class = "code-block">"Door Sensor"</div>
+		</div>
+	Any sensor with this (and a hangar ID) in its name will be checked for what grids it detects to know when to open the door of the hangar.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>RED_THRESHOLD</h4>
+Type: float<br>
+			Current Default Value:<div class = "code-block">10</div>
+		</div>
+	Spotlights will be red if air level is below this percentage.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>GREEN_THRESHOLD</h4>
+Type: float<br>
+			Current Default Value:<div class = "code-block">98</div>
+		</div>
+	And green if it is above this; they will be yellow if it is in between.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>AMBIENT_LIGHT_THRESHOLD</h4>
+Type: float<br>
+			Current Default Value:<div class = "code-block">GREEN_THRESHOLD</div>
+		</div>
+	Any auxiliary lights in the hangar will be toggled on and off, being on if the oxygen level is above this.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>RED_IF_PRESSURIZED</h4>
+Type: bool<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	Enable this to flip red and green, so that instead of an air level indicator, you get a "safe to open the door" indicator.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>COLOR_FADE_DURATION</h4>
+Type: float<br>
+			Current Default Value:<div class = "code-block">60</div>
+		</div>
+	How many update cycles (in 1/60th of a second) should be spent fading between colors.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>OPEN_ATMO_THRESHOLD</h4>
+Type: float<br>
+			Current Default Value:<div class = "code-block">80F</div>
+		</div>
+	If atmospheric O2 is above this percentage, hangars will be left open; set this over 100 to disable that behavior.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>allowOpenIfNoO2Space</h4>
+Type: bool<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	Whether to allow the hangar to open when pressurized but there is no space to put the air in tanks.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>HANGAR_GROUPS</h4>
+Type: string[]<br>
+			Current Default Value:<div class = "code-block">{"Hangar"}</div>
+		</div>
+	Each string in this list is treated as a separate hangar group ('ID').
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>isConnectedToHangar<code>(string blockName, string id)</code></h4>
+Return Type: bool<br>
+			Current Default Code:<div class = "code-block">return blockName.Contains(id);</div>
+		</div>
+	Whether a given vent or internal door is connected to the hangar of a given ID; This is usually "hangar and vent/door are part of the same group", but might be different if for example the hangars are all connected, sharing doors and/or vents.
+</div>
+
+			</div>
+			</section>
+<br>
+			<section class = "textblock" id = "text-block-sourcecode">
+			<div class = "modsource">
+				<h3>Source Code</h3>				The source code for Automatic Hangar Air and Door Control can be found here:<button type="button" class = "srcbtn" onclick="location.href='https://github.com/ReikaKalseki/IngameScripts/blob/master/Hangar%20Control.cs'"><span>GitHub<div class = "spacer"></div><i class="fab fa-github"></i></span></button>
+			</div>
+			</section>
+<br>
+<section class = "textblock" id = "text-block-downloads">
+	<h3>Downloads</h3>
+<button type="button" class = "dlbtn" onclick="location.href='https://steamcommunity.com/sharedfiles/filedetails/?id=1721054430'"><span>Steam Workshop<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
+</section>
+			<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
+		<hr>
+		<div id = "footer-spacing">
+		
+		</div>
+		<hr>
+		If you like any of my mods, maps, or other content, or want to help me develop them, feel free to use my Patreon or the buttons below. Every little bit helps me be able to keep working on them, and helps ensure both maintenance and expansion of them.<br>
+		If you wish to give a one-time donation, I recommend you use the Paypal link on the right; Patreon, though it can be used for one-time donations, is designed for ongoing monthly 'subscriptions' (ie a set amount of money gifted each month for as long as you remain a 'patron'). Paypal can also register a donation with monthly recurrence, should that seem preferable to you.<br>
+		For both systems, the amount you choose to donate is up to you, and for Patreon, can be changed at any time should you wish to decrease or increase the amount.<br>
+		And thank you for your support. :D<br>
+					<div class = "linkiconblock">
+					<div class = "linktile">
+						<div class = "linklabel">Patreon</div>
+						<div><a href="http://www.patreon.com/reikasminecraft"><img src="../../images/patreon.png"  height="48" ></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Paypal</div>
+						<div><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5XRAM3SXBRJY4"><img src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif"  height="48" ></a></div>
+					</div>
+			</div>
+		<hr>
+		To contact me (though some of these are only checked periodically, and many are for specific topics) or find additional information or content, visit any one of these platforms:<br>
+					<div class = "linkiconblock">
+					<div class = "linktile">
+						<div class = "linklabel">Minecraft Forums</div>
+						<div><a href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1291655"><img src="../../images/mcico.png"  width="36"  height="36" title="Minecraft Only"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Factorio Forums</div>
+						<div><a href="https://forums.factorio.com/viewforum.php?f=216"><img src="../../images/factorio.png"  width="36"  height="36" title="Factorio Only"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">GitHub</div>
+						<div><a href="https://github.com/ReikaKalseki"><img src="../../images/gitico.png"  width="36"  height="36" ></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Discord</div>
+						<div><a href="https://discordapp.com/channels/@me/143569407665242112/"><img src="../../images/discico.png"  width="36"  height="36" title="Discord ID: Reika#3161"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Steam</div>
+						<div><a href="https://steamcommunity.com/id/ReikaKalseki/myworkshopfiles/"><img src="../../images/steamico.png"  width="36"  height="36" title="Please no random friend requests"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">YouTube</div>
+						<div><a href="https://www.youtube.com/user/ReikasMinecraft/videos"><img src="../../images/ytico.png"  width="36"  height="36" ></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">SoundCloud</div>
+						<div><a href="https://soundcloud.com/reikakalseki"><img src="../../images/soundico.png"  width="36"  height="36" title="Music Only"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Reddit</div>
+						<div><a href="https://www.reddit.com/user/ReikaKalseki/"><img src="../../images/redditico.png"  width="36"  height="36" ></a></div>
+					</div>
+			</div>
+		<hr>
+		This site is proudly Canadian. <i class="fab fa-canadian-maple-leaf"></i><br>
+		<hr>
+		Site (including embedded JavaScript) and linked projects (mods, maps, etc) created by and &copy; ReikaKalseki, except for content within which is part of the base games, as noted below.<br>
+		<hr>
+			Minecraft and its content and assets are &copy; Mojang AB, with whom I am not affiliated<br>
+			Factorio and its content and assets are &copy; Wube Software, with whom I am not affiliated<br>
+			Portal 2 and its content and assets are &copy; Valve Corporation, with whom I am not affiliated<br>
+			Stellaris and its content and assets are &copy; Paradox Interactive, with whom I am not affiliated<br>
+			Space Engineers and its content and assets are &copy; Keen Software House, with whom I am not affiliated<br>
+			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
+			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>
+	</div></footer>
+		</div>
+    </body>
+</html>

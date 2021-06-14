@@ -1,0 +1,305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <link rel="shortcut icon" href="../../images/favicon.ico">
+        <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+		<meta http-equiv="Cache-control" content="no-cache">
+        <title>Refinery and Cargo Manager</title>
+		<link rel="stylesheet" type="text/css" href="../../global-style.css">
+		<link rel="stylesheet" type="text/css" href="../../se/local-style.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        
+		<script src = "../../browser.js"></script>
+		<script src = "../../library.js"></script>
+		<script src = "../../jquery.js"></script>
+		<script id = "footer-space-script" src = "../../footer-spacing.js"></script>
+		<script id = "background-script" src = "../../se/backgroundgen.js"></script>
+    </head>
+    <body >
+        	<div id = "navbar" class="navbar">
+	  <a class="navbar-button" href="../../index.html">Reika's Mods Home</a>
+	  <a class="navbar-button" href="../../se/index.html">Space Engineers Home</a>
+		  <div class="dropdown">
+			<button class="dropbtn">Information <i class="fa fa-angle-down"></i></button>
+			<div class="dropdown-content">
+					<a href="../../se\pages\info\faq.html">FAQ</a>
+					<a href="../../se\pages\info\contact.html">Contact</a>
+					<a href="../../se\pages\info\history.html">History</a>
+			</div>
+		  </div>
+		  <div class="dropdown">
+			<button class="dropbtn">Permissions <i class="fa fa-angle-down"></i></button>
+			<div class="dropdown-content">
+					<a href="../../se\pages\perms\license.html">License</a>
+			</div>
+		  </div>
+	  <div class="dropdown">
+		<button class="dropbtn">Content <i class="fa fa-angle-down"></i></button>
+		<div class="dropdown-content">
+<a class = "dropdown-subheader">Mods</a>				<a href="../../se\mods\electronicwarfare.html">Electronic Warfare</a>
+				<a href="../../se\mods\cargoships.html">Extra Cargo Ships</a>
+				<a href="../../se\mods\gastanks.html">Gas Compressor</a>
+				<a href="../../se\mods\lowgravgen.html">Gravgen Priority</a>
+				<a href="../../se\mods\industrialthruster.html">Industrial Thruster</a>
+				<a href="../../se\mods\oreproc.html">Ore Processing</a>
+<a class = "dropdown-subheader">Blueprints</a>				<a href="../../se\blueprints\anaconda.html">Anaconda</a>
+				<a href="../../se\blueprints\anaconda2.html">Anaconda (Custom)</a>
+				<a href="../../se\blueprints\dropship.html">Federal Dropship</a>
+				<a href="../../se\blueprints\harvester.html">Harvester</a>
+				<a href="../../se\blueprints\jumpgate.html">Jump Gate</a>
+				<a href="../../se\blueprints\salvager.html">Salvager</a>
+				<a href="../../se\blueprints\spacetruck.html">Space Truck</a>
+<a class = "dropdown-subheader">Scripts</a>				<a href="../../se\scripts\cargomanager.html">Cargo Manager</a>
+				<a href="../../se\scripts\hangar.html">Hangar Control</a>
+				<a href="../../se\scripts\jumpcontrol.html">Jump Control</a>
+				<a href="../../se\scripts\o2control.html">Pressurization Control</a>
+		</div>
+	  </div>
+	  <div class="dropdown">
+		<button class="dropbtn">Other Games <i class="fa fa-angle-down"></i></button>
+		<div class="dropdown-content">
+				<a href="../../minecraft/index.html">Minecraft</a>
+				<a href="../../factorio/index.html">Factorio</a>
+				<a href="../../p2/index.html">Portal 2</a>
+				<a href="../../stellaris/index.html">Stellaris</a>
+				<a href="../../fce/index.html">FortressCraft Evolved</a>
+				<a href="../../starbound/index.html">Starbound</a>
+		</div>
+	  </div>
+	  <div class="dropdown">
+		<button class="dropbtn">Other Projects <i class="fa fa-angle-down"></i></button>
+		<div class="dropdown-content">
+				<a href="../../projects/calendar.html">Game Calendar</a>
+				<a href="../../projects/eventbuilder.html">Stellaris Event Builder</a>
+				<a href="../../projects/fcompile.html">FCompile</a>
+		</div>
+	  </div>
+	</div>
+		<noscript><div style = "text-align: center; width: 100%;"><div id = "nojs-header"><div><img class = "header-alert" src = "../../images/alert.png"></div><div>You have JavaScript disabled; it is recommended you enable it for this site.<br>While the site will (mostly) function with scripts disabled, some sections (eg changelog view) require it to update the page contents based on your input.<br>Additionally, JS is used to generate page styling, meaning disabling scripts will leave pages ugly, boring, and in some cases poorly arranged in ways that might impede readability.</div></div></div></noscript>
+		<div id="toc_container">
+<h3>Quick Nav</h3>
+<hr>
+<table class="toc_list">
+	<tr style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><span><i class="fas fa-angle-double-up"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-description">Description</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-description'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-scriptvars">Script Options</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-scriptvars'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+</table>
+</div>
+        <div class = "textarea">
+			<!--<h2>Refinery and Cargo Manager</h2>-->
+						<section class = "textblock" id = "text-block-description">
+				<h3>Description</h3>
+					This script will automatically manage the inventories of cargo containers and production blocks - including refineries (vanilla and many modded ones), assemblers, and oxygen generators - on the ship. It can move ores around, ensuring they <i>only</i> into the most useful refinery; For example, you will no longer have refineries pulling uranium - and costing you yield - when you have dedicated centrifuges for that ore.
+					<br><br>
+					It will also automatically empty the output inventories of both processing and assembling machines alike.
+					<br><br>
+					This means that there is no longer a need to try and achieve automated item transport with conveyor sorters, which can rarely accomplish this task to the same level, especially without accidentally making it so that half your cargo ports cannot transfer between them, or having an endless loop of items being pushed in a circle.
+					<br><br>
+					There are additional capabilities as well; it can be configured to prioritize the refinement of ores you are running low on. It can additionally filter which cargo containers are loaded first when emptying refineries and assemblers, and what items those containers can accept, to allow item-specific sorting. It also has the enabled-by-default option to collect cargo from small containers into large ones. This is useful if you use them like I do, where large containers are the main storage, and small containers are "access ports".
+			</section>
+<br>
+			<section class = "textblock" id = "text-block-scriptvars">
+			<div class = "scriptvars">
+				<h3>Script Options</h3>
+				The script contains the following configurable variables/functions to adapt the script to your ship configuration or needs:
+				<br>
+				<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>DISPLAY_TAG</h4>
+Type: string<br>
+			Current Default Value:<div class = "code-block">"CargoManagerDisplay"</div>
+		</div>
+	Any LCD panel with this in its name is overridden to show status.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>EJECTION_GROUP</h4>
+Type: string<br>
+			Current Default Value:<div class = "code-block">"Excess Cargo Ejection"</div>
+		</div>
+	The group with all collectors/ejectors which are set to eject their contents.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>ENABLE_ORE_SORTING</h4>
+Type: bool<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	Whether ore should be sorted automatically between refinery types; useful if you have mods for specialized processing.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>MOVE_FROM_SMALL_TO_LARGE</h4>
+Type: bool<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	Whether items should be moved from small to large containers if possible.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>SKIP_OFFLINE_REFINERIES</h4>
+Type: bool<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	Whether offline refineries should be ignored for the purposes of ore routing; this allows choosing between either holding onto the ore until a "better" refinery is available or ignoring those refineries and just using the most applicable enabled one.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>ENABLE_O2_GENS</h4>
+Type: bool<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	Whether offline O2/H2 generators should be ignored, vs turned on as long as there is work for them.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>EJECT_OVERFULL_ITEMS</h4>
+Type: string[]<br>
+			Current Default Value:<div class = "code-block">{"Ore/Stone", "Ingot/Stone"}</div>
+		</div>
+	Which items to eject if they get too full. Empty list for none.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>EJECTION_THRESHOLD</h4>
+Type: float<br>
+			Current Default Value:<div class = "code-block">0.9F</div>
+		</div>
+	To be ejected, the cargo space must be at least this fraction full, and the item must represent at least this fraction of all stored items.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>ORE_PRIORITY</h4>
+Type: string[]<br>
+			Current Default Value:<div class = "code-block">{"Iron/50000", "Nickel/10000", "Silicon/5000", "Cobalt/2500", "Silver/1000", "Gold/200"}</div>
+		</div>
+	Ore types and the ingot threshold at which they are given priority (ie if you have less than this amount of refined metal). If multiple "priority" ores are applicable, the ordering of this list determines priority among them.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>SORTING</h4>
+Type: string[]<br>
+			Current Default Value:<div class = "code-block">{""}</div>
+		</div>
+	Which item types to sort, and where. Empty list for none.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>NO_PROCESS</h4>
+Type: string[]<br>
+			Current Default Value:<div class = "code-block">{}</div>
+		</div>
+	Ores to keep as ore, preventing any processing. Useful if this script is running on a mining ship and needs to cart the ore back to base for specialized processing.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>isActualProcessingRefinery<code>(string name)</code></h4>
+Return Type: bool<br>
+			Current Default Code:<div class = "code-block">return !name.Contains("shieldgenerator"); //Shields ignored by default</div>
+		</div>
+	Some mods use blocks which are refineries internally, but have no cargo handling nor ore processing. Use this to filter them out.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>cargoBoxSortOrder<code>(IMyCargoContainer box1, IMyCargoContainer box2)</code></h4>
+Return Type: int<br>
+			Current Default Code:<div class = "code-block">return box1.CustomName.CompareTo(box2.CustomName); //Default string comparison on their terminal names, which will end up being based on their autogenned numbers</div>
+		</div>
+	Standard Java/C# Comparator format, used to determine the sorting order of cargo containers, and thus filling priority.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>isItemValidForContainer<code>(string itemCategory, string itemType, string containerName)</code></h4>
+Return Type: bool<br>
+			Current Default Code:<div class = "code-block">return true;</div>
+		</div>
+	Whether the given cargo container can accept this item when emptied from other locations. This allows item-type-specific sorting.
+</div>
+
+			</div>
+			</section>
+<br>
+			<section class = "textblock" id = "text-block-sourcecode">
+			<div class = "modsource">
+				<h3>Source Code</h3>				The source code for Refinery and Cargo Manager can be found here:<button type="button" class = "srcbtn" onclick="location.href='https://github.com/ReikaKalseki/IngameScripts/blob/master/InvManager.cs'"><span>GitHub<div class = "spacer"></div><i class="fab fa-github"></i></span></button>
+			</div>
+			</section>
+<br>
+<section class = "textblock" id = "text-block-downloads">
+	<h3>Downloads</h3>
+<button type="button" class = "dlbtn" onclick="location.href='https://steamcommunity.com/sharedfiles/filedetails/?id=1721053370'"><span>Steam Workshop<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
+</section>
+			<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
+		<hr>
+		<div id = "footer-spacing">
+		
+		</div>
+		<hr>
+		If you like any of my mods, maps, or other content, or want to help me develop them, feel free to use my Patreon or the buttons below. Every little bit helps me be able to keep working on them, and helps ensure both maintenance and expansion of them.<br>
+		If you wish to give a one-time donation, I recommend you use the Paypal link on the right; Patreon, though it can be used for one-time donations, is designed for ongoing monthly 'subscriptions' (ie a set amount of money gifted each month for as long as you remain a 'patron'). Paypal can also register a donation with monthly recurrence, should that seem preferable to you.<br>
+		For both systems, the amount you choose to donate is up to you, and for Patreon, can be changed at any time should you wish to decrease or increase the amount.<br>
+		And thank you for your support. :D<br>
+					<div class = "linkiconblock">
+					<div class = "linktile">
+						<div class = "linklabel">Patreon</div>
+						<div><a href="http://www.patreon.com/reikasminecraft"><img src="../../images/patreon.png"  height="48" ></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Paypal</div>
+						<div><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5XRAM3SXBRJY4"><img src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif"  height="48" ></a></div>
+					</div>
+			</div>
+		<hr>
+		To contact me (though some of these are only checked periodically, and many are for specific topics) or find additional information or content, visit any one of these platforms:<br>
+					<div class = "linkiconblock">
+					<div class = "linktile">
+						<div class = "linklabel">Minecraft Forums</div>
+						<div><a href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1291655"><img src="../../images/mcico.png"  width="36"  height="36" title="Minecraft Only"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Factorio Forums</div>
+						<div><a href="https://forums.factorio.com/viewforum.php?f=216"><img src="../../images/factorio.png"  width="36"  height="36" title="Factorio Only"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">GitHub</div>
+						<div><a href="https://github.com/ReikaKalseki"><img src="../../images/gitico.png"  width="36"  height="36" ></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Discord</div>
+						<div><a href="https://discordapp.com/channels/@me/143569407665242112/"><img src="../../images/discico.png"  width="36"  height="36" title="Discord ID: Reika#3161"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Steam</div>
+						<div><a href="https://steamcommunity.com/id/ReikaKalseki/myworkshopfiles/"><img src="../../images/steamico.png"  width="36"  height="36" title="Please no random friend requests"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">YouTube</div>
+						<div><a href="https://www.youtube.com/user/ReikasMinecraft/videos"><img src="../../images/ytico.png"  width="36"  height="36" ></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">SoundCloud</div>
+						<div><a href="https://soundcloud.com/reikakalseki"><img src="../../images/soundico.png"  width="36"  height="36" title="Music Only"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Reddit</div>
+						<div><a href="https://www.reddit.com/user/ReikaKalseki/"><img src="../../images/redditico.png"  width="36"  height="36" ></a></div>
+					</div>
+			</div>
+		<hr>
+		This site is proudly Canadian. <i class="fab fa-canadian-maple-leaf"></i><br>
+		<hr>
+		Site (including embedded JavaScript) and linked projects (mods, maps, etc) created by and &copy; ReikaKalseki, except for content within which is part of the base games, as noted below.<br>
+		<hr>
+			Minecraft and its content and assets are &copy; Mojang AB, with whom I am not affiliated<br>
+			Factorio and its content and assets are &copy; Wube Software, with whom I am not affiliated<br>
+			Portal 2 and its content and assets are &copy; Valve Corporation, with whom I am not affiliated<br>
+			Stellaris and its content and assets are &copy; Paradox Interactive, with whom I am not affiliated<br>
+			Space Engineers and its content and assets are &copy; Keen Software House, with whom I am not affiliated<br>
+			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
+			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>
+	</div></footer>
+		</div>
+    </body>
+</html>

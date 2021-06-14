@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <link rel="shortcut icon" href="../../images/favicon.ico">
+        <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+		<meta http-equiv="Cache-control" content="no-cache">
+        <title>Extra Cargo Ships Variety Pack</title>
+		<link rel="stylesheet" type="text/css" href="../../global-style.css">
+		<link rel="stylesheet" type="text/css" href="../../se/local-style.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        
+		<script src = "../../browser.js"></script>
+		<script src = "../../library.js"></script>
+		<script src = "../../jquery.js"></script>
+		<script id = "footer-space-script" src = "../../footer-spacing.js"></script>
+		<script id = "background-script" src = "../../se/backgroundgen.js"></script>
+    </head>
+    <body >
+        	<div id = "navbar" class="navbar">
+	  <a class="navbar-button" href="../../index.html">Reika's Mods Home</a>
+	  <a class="navbar-button" href="../../se/index.html">Space Engineers Home</a>
+		  <div class="dropdown">
+			<button class="dropbtn">Information <i class="fa fa-angle-down"></i></button>
+			<div class="dropdown-content">
+					<a href="../../se\pages\info\faq.html">FAQ</a>
+					<a href="../../se\pages\info\contact.html">Contact</a>
+					<a href="../../se\pages\info\history.html">History</a>
+			</div>
+		  </div>
+		  <div class="dropdown">
+			<button class="dropbtn">Permissions <i class="fa fa-angle-down"></i></button>
+			<div class="dropdown-content">
+					<a href="../../se\pages\perms\license.html">License</a>
+			</div>
+		  </div>
+	  <div class="dropdown">
+		<button class="dropbtn">Content <i class="fa fa-angle-down"></i></button>
+		<div class="dropdown-content">
+<a class = "dropdown-subheader">Mods</a>				<a href="../../se\mods\electronicwarfare.html">Electronic Warfare</a>
+				<a href="../../se\mods\cargoships.html">Extra Cargo Ships</a>
+				<a href="../../se\mods\gastanks.html">Gas Compressor</a>
+				<a href="../../se\mods\lowgravgen.html">Gravgen Priority</a>
+				<a href="../../se\mods\industrialthruster.html">Industrial Thruster</a>
+				<a href="../../se\mods\oreproc.html">Ore Processing</a>
+<a class = "dropdown-subheader">Blueprints</a>				<a href="../../se\blueprints\anaconda.html">Anaconda</a>
+				<a href="../../se\blueprints\anaconda2.html">Anaconda (Custom)</a>
+				<a href="../../se\blueprints\dropship.html">Federal Dropship</a>
+				<a href="../../se\blueprints\harvester.html">Harvester</a>
+				<a href="../../se\blueprints\jumpgate.html">Jump Gate</a>
+				<a href="../../se\blueprints\salvager.html">Salvager</a>
+				<a href="../../se\blueprints\spacetruck.html">Space Truck</a>
+<a class = "dropdown-subheader">Scripts</a>				<a href="../../se\scripts\cargomanager.html">Cargo Manager</a>
+				<a href="../../se\scripts\hangar.html">Hangar Control</a>
+				<a href="../../se\scripts\jumpcontrol.html">Jump Control</a>
+				<a href="../../se\scripts\o2control.html">Pressurization Control</a>
+		</div>
+	  </div>
+	  <div class="dropdown">
+		<button class="dropbtn">Other Games <i class="fa fa-angle-down"></i></button>
+		<div class="dropdown-content">
+				<a href="../../minecraft/index.html">Minecraft</a>
+				<a href="../../factorio/index.html">Factorio</a>
+				<a href="../../p2/index.html">Portal 2</a>
+				<a href="../../stellaris/index.html">Stellaris</a>
+				<a href="../../fce/index.html">FortressCraft Evolved</a>
+				<a href="../../starbound/index.html">Starbound</a>
+		</div>
+	  </div>
+	  <div class="dropdown">
+		<button class="dropbtn">Other Projects <i class="fa fa-angle-down"></i></button>
+		<div class="dropdown-content">
+				<a href="../../projects/calendar.html">Game Calendar</a>
+				<a href="../../projects/eventbuilder.html">Stellaris Event Builder</a>
+				<a href="../../projects/fcompile.html">FCompile</a>
+		</div>
+	  </div>
+	</div>
+		<noscript><div style = "text-align: center; width: 100%;"><div id = "nojs-header"><div><img class = "header-alert" src = "../../images/alert.png"></div><div>You have JavaScript disabled; it is recommended you enable it for this site.<br>While the site will (mostly) function with scripts disabled, some sections (eg changelog view) require it to update the page contents based on your input.<br>Additionally, JS is used to generate page styling, meaning disabling scripts will leave pages ugly, boring, and in some cases poorly arranged in ways that might impede readability.</div></div></div></noscript>
+		<div id="toc_container">
+<h3>Quick Nav</h3>
+<hr>
+<table class="toc_list">
+	<tr style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><span><i class="fas fa-angle-double-up"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-general">General</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-general'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-ships">Ships</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-ships'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+</table>
+</div>
+        <div class = "textarea">
+			<!--<h2>Extra Cargo Ships Variety Pack</h2>-->
+						<div class = "header-image">
+				<img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785440618_2F6FE9A21F3E2F21333E8438E9E6ABAB22C961FD39_2F.jpg" >
+			</div>			<section class = "textblock" id = "text-block-general">
+				<h3>General</h3>
+					This mod adds seven new cargo ships which can spawn as SPRT NPC ships alongside the vanilla ones. Each ship type is unique, distinct in function and style both from vanilla ships and from each other.
+					<br><br>
+					All are large-grid, covering a huge size range; three ships are large (larger even than the Military Transporter), two are medium-sized (approximately Commercial-Freighter sized), and two are small (Private Sail sized).
+					<br><br>
+					Unlike vanilla ships, but like the ships spawned from mods like Atmospheric Encounters, these ships come with active programmable blocks pre-scripted to help them function as ships (see my script library for those scripts). It is thus recommended, though not strictly necessary, to have ingame scripts enabled.
+			</section><br>
+			<section class = "textblock" id = "text-block-ships">
+				<h3>Ships</h3>
+					<h4>Construction Breaker</h4>
+					Medium sized, construction-themed. Has welders, grinders, and a heavy load of components and construction tools. Lightly armed, but it has a trick up its sleeve.<br>
+					<div class = "block-image">
+	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785435516_2F945E6522918DA8CA2EBBA08AD63102119E6BD116_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785435516_2F945E6522918DA8CA2EBBA08AD63102119E6BD116_2F.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785435347_2F3DBB6EE9F56DC32B402DC7087B5378D09E9C4228_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785435347_2F3DBB6EE9F56DC32B402DC7087B5378D09E9C4228_2F.jpg" style="max-width:75%;" ></a>
+</div>
+					<br><br>
+					<h4>Personal Racer</h4>
+					A tiny but very fast ship with only the bare essentials for survival in deep space. Minimal armament.<br>
+					<div class = "block-image">
+	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785436775_2F2BED673CCBCE1FF11BFB3C166115AB3D5F990F4D_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785436775_2F2BED673CCBCE1FF11BFB3C166115AB3D5F990F4D_2F.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785436988_2FF6C6FEF4BB3314B34D2BA904C6DA63E12E3D9F12_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785436988_2FF6C6FEF4BB3314B34D2BA904C6DA63E12E3D9F12_2F.jpg" style="max-width:75%;" ></a>
+</div>
+					<br><br>
+					<h4>Hydrogen Tanker</h4>
+					Medium sized, and designed for carrying a crapload of hydrogen and not much else. Moderately armed, and useful as a direct capture, or salvaged for materials. Also fairly explosive given all that gas.<br>
+					<div class = "block-image">
+	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785436109_2F8242367CBCF63D6984B2393C927A85D5B7F927B7_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785436109_2F8242367CBCF63D6984B2393C927A85D5B7F927B7_2F.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785436369_2F1B9144CF0E4423212B3080F75A696818BB895800_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785436369_2F1B9144CF0E4423212B3080F75A696818BB895800_2F.jpg" style="max-width:75%;" ></a>
+</div>
+					<br><br>
+					<h4>Mining Carrier</h4>
+					A large mining-themed ship, boasting extensive cargo space and lots of ore processing capability. Heavily armed; dangerous to approach but a very valuable capture, either as your own carrier or for its huge quantity of parts. Carries ores and whatever those ores got refined into.<br>
+					<div class = "block-image">
+	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785435701_2FBF537E535A25A69F7FDB03412BF1CFF39BA2C0E6_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785435701_2FBF537E535A25A69F7FDB03412BF1CFF39BA2C0E6_2F.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785435891_2FEA24C7D47CBE677C96B31697168B47951398094C_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785435891_2FEA24C7D47CBE677C96B31697168B47951398094C_2F.jpg" style="max-width:75%;" ></a>
+</div>
+					<br><br>
+					<h4>Luxury Liner</h4>
+					A large cruise-ship type ship. By far the flashiest of the ships in the pack (including in the literal sense), and focusing mainly on visual design, but nonetheless highly functional. It does not have a large cargo capacity or other special feature, but it is useful as either salvage or a pleasure craft. Lightly armed, and a LOT more agile than it looks, even without the hydrogen boost. This ship is also the <i>only</i> cargo ship in the mod - or vanilla - capable of planetary landings and takeoffs, equipped with both sufficient takeoff thrust and re-entry parachutes.<br>
+					<div class = "block-image">
+	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785437329_2F7AFDF83B9FA26C80A4B7C49CA732E96049DB8BA7_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785437329_2F7AFDF83B9FA26C80A4B7C49CA732E96049DB8BA7_2F.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785437465_2FE1289BFC7AB3E88D51096A0C5AA1EF48F4CACD08_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785437465_2FE1289BFC7AB3E88D51096A0C5AA1EF48F4CACD08_2F.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785437642_2F7B5953277FAAF28AD920531F5248C3A9472F0152_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785437642_2F7B5953277FAAF28AD920531F5248C3A9472F0152_2F.jpg" style="max-width:75%;" ></a>
+</div>
+					<br><br>
+					<h4>Torpedo</h4>
+					A tiny little thing which barely classifies as a ship at all. Completely unarmed...at least in the traditional sense.<br>
+					<div class = "block-image">
+	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785437179_2FC599FB351D03223F726FF7E716219E729DEC05AB_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785437179_2FC599FB351D03223F726FF7E716219E729DEC05AB_2F.jpg" style="max-width:75%;" ></a>
+</div>
+					<br><br>
+					<h4>Military Carrier</h4>
+					By far the largest of the seven, this is a heavily armored and very durable platform capable of ferrying multiple smaller ships inside its massive hangar, which runs the length of the ship. Very heavily armed, and very capable of fighting back, inside and out. This ship has by far the most components if ground down, but could also serve as your own carrier. Carries military-style stuff - weapons, ammo, and some defensive-type components.<br>
+					<div class = "block-image">
+	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785434984_2F7FC4574971EEAAA3481158E9B907C64D833DFD3B_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785434984_2F7FC4574971EEAAA3481158E9B907C64D833DFD3B_2F.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785435157_2F0D0FFFD513CB375B14A988B2B33CEB8C3DF26028_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785435157_2F0D0FFFD513CB375B14A988B2B33CEB8C3DF26028_2F.jpg" style="max-width:75%;" ></a>
+</div>
+			</section>
+<br>
+			<section class = "textblock" id = "text-block-sourcecode">
+			<div class = "modsource">
+				<h3>Source Code</h3>				The source code for this mod is not publicly available. If you need it for some reason, please contact me.
+			</div>
+			</section>
+<br>
+<section class = "textblock" id = "text-block-downloads">
+	<h3>Downloads</h3>
+<button type="button" class = "dlbtn" onclick="location.href='https://steamcommunity.com/sharedfiles/filedetails/?id=1721042736'"><span>Steam Workshop<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
+</section>
+			<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
+		<hr>
+		<div id = "footer-spacing">
+		
+		</div>
+		<hr>
+		If you like any of my mods, maps, or other content, or want to help me develop them, feel free to use my Patreon or the buttons below. Every little bit helps me be able to keep working on them, and helps ensure both maintenance and expansion of them.<br>
+		If you wish to give a one-time donation, I recommend you use the Paypal link on the right; Patreon, though it can be used for one-time donations, is designed for ongoing monthly 'subscriptions' (ie a set amount of money gifted each month for as long as you remain a 'patron'). Paypal can also register a donation with monthly recurrence, should that seem preferable to you.<br>
+		For both systems, the amount you choose to donate is up to you, and for Patreon, can be changed at any time should you wish to decrease or increase the amount.<br>
+		And thank you for your support. :D<br>
+					<div class = "linkiconblock">
+					<div class = "linktile">
+						<div class = "linklabel">Patreon</div>
+						<div><a href="http://www.patreon.com/reikasminecraft"><img src="../../images/patreon.png"  height="48" ></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Paypal</div>
+						<div><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5XRAM3SXBRJY4"><img src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif"  height="48" ></a></div>
+					</div>
+			</div>
+		<hr>
+		To contact me (though some of these are only checked periodically, and many are for specific topics) or find additional information or content, visit any one of these platforms:<br>
+					<div class = "linkiconblock">
+					<div class = "linktile">
+						<div class = "linklabel">Minecraft Forums</div>
+						<div><a href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1291655"><img src="../../images/mcico.png"  width="36"  height="36" title="Minecraft Only"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Factorio Forums</div>
+						<div><a href="https://forums.factorio.com/viewforum.php?f=216"><img src="../../images/factorio.png"  width="36"  height="36" title="Factorio Only"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">GitHub</div>
+						<div><a href="https://github.com/ReikaKalseki"><img src="../../images/gitico.png"  width="36"  height="36" ></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Discord</div>
+						<div><a href="https://discordapp.com/channels/@me/143569407665242112/"><img src="../../images/discico.png"  width="36"  height="36" title="Discord ID: Reika#3161"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Steam</div>
+						<div><a href="https://steamcommunity.com/id/ReikaKalseki/myworkshopfiles/"><img src="../../images/steamico.png"  width="36"  height="36" title="Please no random friend requests"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">YouTube</div>
+						<div><a href="https://www.youtube.com/user/ReikasMinecraft/videos"><img src="../../images/ytico.png"  width="36"  height="36" ></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">SoundCloud</div>
+						<div><a href="https://soundcloud.com/reikakalseki"><img src="../../images/soundico.png"  width="36"  height="36" title="Music Only"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Reddit</div>
+						<div><a href="https://www.reddit.com/user/ReikaKalseki/"><img src="../../images/redditico.png"  width="36"  height="36" ></a></div>
+					</div>
+			</div>
+		<hr>
+		This site is proudly Canadian. <i class="fab fa-canadian-maple-leaf"></i><br>
+		<hr>
+		Site (including embedded JavaScript) and linked projects (mods, maps, etc) created by and &copy; ReikaKalseki, except for content within which is part of the base games, as noted below.<br>
+		<hr>
+			Minecraft and its content and assets are &copy; Mojang AB, with whom I am not affiliated<br>
+			Factorio and its content and assets are &copy; Wube Software, with whom I am not affiliated<br>
+			Portal 2 and its content and assets are &copy; Valve Corporation, with whom I am not affiliated<br>
+			Stellaris and its content and assets are &copy; Paradox Interactive, with whom I am not affiliated<br>
+			Space Engineers and its content and assets are &copy; Keen Software House, with whom I am not affiliated<br>
+			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
+			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>
+	</div></footer>
+		</div>
+    </body>
+</html>
