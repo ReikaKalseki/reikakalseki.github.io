@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <link rel="shortcut icon" href="../../images/favicon.ico">
+        <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+		<meta http-equiv="Cache-control" content="no-cache">
+        <title>RealCasual</title>
+		<link rel="stylesheet" type="text/css" href="../../global-style.css">
+		<link rel="stylesheet" type="text/css" href="../../starbound/local-style.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        
+		<script src = "../../browser.js"></script>
+		<script src = "../../library.js"></script>
+		<script src = "../../jquery.js"></script>
+		<script id = "footer-space-script" src = "../../footer-spacing.js"></script>
+			<script src = "../../simplex.js"></script>
+		<script id = "background-script" src = "../../starbound/backgroundgen.js"></script>
+    </head>
+    <body >
+        	<div id = "navbar" class="navbar">
+	  <a class="navbar-button" href="../../index.html">Reika's Mods Home</a>
+	  <a class="navbar-button" href="../../starbound/index.html">Starbound Home</a>
+		  <div class="dropdown">
+			<button class="dropbtn">Information <i class="fa fa-angle-down"></i></button>
+			<div class="dropdown-content">
+					<a href="../../starbound\pages\info\faq.html">FAQ</a>
+					<a href="../../starbound\pages\info\contact.html">Contact</a>
+					<a href="../../starbound\pages\info\history.html">History</a>
+			</div>
+		  </div>
+		  <div class="dropdown">
+			<button class="dropbtn">Permissions <i class="fa fa-angle-down"></i></button>
+			<div class="dropdown-content">
+					<a href="../../starbound\pages\perms\license.html">License</a>
+			</div>
+		  </div>
+	  <div class="dropdown">
+		<button class="dropbtn">Mods <i class="fa fa-angle-down"></i></button>
+		<div class="dropdown-content">
+				<a href="../../starbound\mods\betterrent.html">Better Rent</a>
+				<a href="../../starbound\mods\craftableelevators.html">Craftable Elevators</a>
+				<a href="../../starbound\mods\displayores.html">Display Ores</a>
+				<a href="../../starbound\mods\healthycapture.html">Healthy Capture</a>
+				<a href="../../starbound\mods\lazyguards.html">Lazy Guards</a>
+				<a href="../../starbound\mods\moonoverhaul.html">Moon Overhaul</a>
+				<a href="../../starbound\mods\progressivebiomes.html">Progressive Biomes</a>
+				<a href="../../starbound\mods\realcasual.html">RealCasual</a>
+				<a href="../../starbound\mods\richerasteroids.html">Richer Asteroids</a>
+				<a href="../../starbound\mods\scaledores.html">Scaled Ores</a>
+		</div>
+	  </div>
+	  <div class="dropdown">
+		<button class="dropbtn">Other Games <i class="fa fa-angle-down"></i></button>
+		<div class="dropdown-content">
+				<a href="../../minecraft/index.html">Minecraft</a>
+				<a href="../../factorio/index.html">Factorio</a>
+				<a href="../../p2/index.html">Portal 2</a>
+				<a href="../../stellaris/index.html">Stellaris</a>
+				<a href="../../se/index.html">Space Engineers</a>
+				<a href="../../fce/index.html">FortressCraft Evolved</a>
+		</div>
+	  </div>
+	  <div class="dropdown">
+		<button class="dropbtn">Other Projects <i class="fa fa-angle-down"></i></button>
+		<div class="dropdown-content">
+				<a href="../../projects/calendar.html">Game Calendar</a>
+				<a href="../../projects/eventbuilder.html">Stellaris Event Builder</a>
+				<a href="../../projects/fcompile.html">FCompile</a>
+		</div>
+	  </div>
+	</div>
+		<noscript><div style = "text-align: center; width: 100%;"><div id = "nojs-header"><div><img class = "header-alert" src = "../../images/alert.png"></div><div>You have JavaScript disabled; it is recommended you enable it for this site.<br>While the site will (mostly) function with scripts disabled, some sections (eg changelog view) require it to update the page contents based on your input.<br>Additionally, JS is used to generate page styling, meaning disabling scripts will leave pages ugly, boring, and in some cases poorly arranged in ways that might impede readability.</div></div></div></noscript>
+		<div id="toc_container">
+<h3>Quick Nav</h3>
+<hr>
+<table class="toc_list">
+	<tr style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><span><i class="fas fa-angle-double-up"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-general">General</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-general'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-changes">Changes</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-changes'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+</table>
+</div>
+        <div class = "textarea">
+			<!--<h2>RealCasual</h2>-->
+						<div class = "header-image">
+				<img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F450745254171890550_2F52996FAA8DB69EA36066D7A102DBCDDAA098249A_2F.jpg" >
+			</div><div style = "text-align: center; width: 100%;"><div class = "header-alert-box" style = "background-color: #F0FFBF; border-color: #C6FF00;"><div class = "header-alert-inner"><img class = "header-alert" src = "data:image/png;base64,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"></div><div class = "header-alert-inner">This item is very old and has not been tested; it may still work, but it may not.</div></div></div>			<section class = "textblock" id = "text-block-general">
+				<h3>General</h3>
+					RealCasual makes the game rather easier and less risky, for those who want a truly casual gameplay experience, and who want to be effectively invincible in the end game.
+			</section><br>
+			<section class = "textblock" id = "text-block-changes">
+				<h3>Changes</h3>
+					<ul>
+					<li>Increases shipping container storage capacity to 1000 slots<div class = "tooltip"><img class = 'tooltipicon' src = '../../images/info.png'><span class='tooltiptext'>Note that this can make them have a noticeable FPS impact in their GUI when full, as the game is now rendering 1000 different items</span></div></li>
+					<li>Buffs armor player DPS 35%</li>
+					<li>Doubles protection and energy value from armor</li>
+					<li>Makes certain recipes cheaper, including capture pods, several wiring items, and pet tethers</li>
+					<li>Doubles smelted ore pixel refinery output</li>
+					<li>Increases high-tier ore (Aegisalt, Ferozium, Violium, Solarium) pixel refinery output 50% (on top of the above)</li>
+					<li>Significantly buffs beam drill and dual rifle mech weapons, making them very powerful mining and defence tools respectively</li>
+					<li>Removes skimbus spawns from asteroid fields</li></ul>
+			</section>
+<br>
+			<section class = "textblock" id = "text-block-sourcecode">
+			<div class = "modsource">
+				<h3>Source Code</h3>				The source code for RealCasual can be found here:<button type="button" class = "srcbtn" onclick="location.href='https://github.com/ReikaKalseki/RealCasual'"><span>GitHub<div class = "spacer"></div><i class="fab fa-github"></i></span></button>
+			</div>
+			</section>
+<br>
+<section class = "textblock" id = "text-block-downloads">
+	<h3>Downloads</h3>
+<button type="button" class = "dlbtn" onclick="location.href='https://steamcommunity.com/sharedfiles/filedetails/?id=751145979'"><span>Steam Workshop<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
+</section>
+			<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
+		<hr>
+		<div id = "footer-spacing">
+		
+		</div>
+		<hr>
+		If you like any of my mods, maps, or other content, or want to help me develop them, feel free to use my Patreon or the buttons below. Every little bit helps me be able to keep working on them, and helps ensure both maintenance and expansion of them.<br>
+		If you wish to give a one-time donation, I recommend you use the Paypal link on the right; Patreon, though it can be used for one-time donations, is designed for ongoing monthly 'subscriptions' (ie a set amount of money gifted each month for as long as you remain a 'patron'). Paypal can also register a donation with monthly recurrence, should that seem preferable to you.<br>
+		For both systems, the amount you choose to donate is up to you, and for Patreon, can be changed at any time should you wish to decrease or increase the amount.<br>
+		And thank you for your support. :D<br>
+					<div class = "linkiconblock">
+					<div class = "linktile">
+						<div class = "linklabel">Patreon</div>
+						<div><a href="http://www.patreon.com/reikasminecraft"><img src="../../images/patreon.png"  height="48" ></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Paypal</div>
+						<div><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5XRAM3SXBRJY4"><img src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif"  height="48" ></a></div>
+					</div>
+			</div>
+		<hr>
+		To contact me (though some of these are only checked periodically, and many are for specific topics) or find additional information or content, visit any one of these platforms:<br>
+					<div class = "linkiconblock">
+					<div class = "linktile">
+						<div class = "linklabel">Minecraft Forums</div>
+						<div><a href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1291655"><img src="../../images/mcico.png"  width="36"  height="36" title="Minecraft Only"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Factorio Forums</div>
+						<div><a href="https://forums.factorio.com/viewforum.php?f=216"><img src="../../images/factorio.png"  width="36"  height="36" title="Factorio Only"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">GitHub</div>
+						<div><a href="https://github.com/ReikaKalseki"><img src="../../images/gitico.png"  width="36"  height="36" ></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Discord</div>
+						<div><a href="https://discordapp.com/channels/@me/143569407665242112/"><img src="../../images/discico.png"  width="36"  height="36" title="Discord ID: Reika#3161"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Steam</div>
+						<div><a href="https://steamcommunity.com/id/ReikaKalseki/myworkshopfiles/"><img src="../../images/steamico.png"  width="36"  height="36" title="Please no random friend requests"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">YouTube</div>
+						<div><a href="https://www.youtube.com/user/ReikasMinecraft/videos"><img src="../../images/ytico.png"  width="36"  height="36" ></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">SoundCloud</div>
+						<div><a href="https://soundcloud.com/reikakalseki"><img src="../../images/soundico.png"  width="36"  height="36" title="Music Only"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Reddit</div>
+						<div><a href="https://www.reddit.com/user/ReikaKalseki/"><img src="../../images/redditico.png"  width="36"  height="36" ></a></div>
+					</div>
+			</div>
+		<hr>
+		This site is proudly Canadian. <i class="fab fa-canadian-maple-leaf"></i><br>
+		<hr>
+		Site (including embedded JavaScript) and linked projects (mods, maps, etc) created by and &copy; ReikaKalseki, except for content within which is part of the base games, as noted below.<br>
+		<hr>
+			Minecraft and its content and assets are &copy; Mojang AB, with whom I am not affiliated<br>
+			Factorio and its content and assets are &copy; Wube Software, with whom I am not affiliated<br>
+			Portal 2 and its content and assets are &copy; Valve Corporation, with whom I am not affiliated<br>
+			Stellaris and its content and assets are &copy; Paradox Interactive, with whom I am not affiliated<br>
+			Space Engineers and its content and assets are &copy; Keen Software House, with whom I am not affiliated<br>
+			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
+			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>
+	</div></footer>
+		</div>
+    </body>
+</html>

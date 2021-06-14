@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <link rel="shortcut icon" href="../../images/favicon.ico">
+        <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+		<meta http-equiv="Cache-control" content="no-cache">
+        <title>Richer Asteroids</title>
+		<link rel="stylesheet" type="text/css" href="../../global-style.css">
+		<link rel="stylesheet" type="text/css" href="../../starbound/local-style.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        
+		<script src = "../../browser.js"></script>
+		<script src = "../../library.js"></script>
+		<script src = "../../jquery.js"></script>
+		<script id = "footer-space-script" src = "../../footer-spacing.js"></script>
+			<script src = "../../simplex.js"></script>
+		<script id = "background-script" src = "../../starbound/backgroundgen.js"></script>
+    </head>
+    <body >
+        	<div id = "navbar" class="navbar">
+	  <a class="navbar-button" href="../../index.html">Reika's Mods Home</a>
+	  <a class="navbar-button" href="../../starbound/index.html">Starbound Home</a>
+		  <div class="dropdown">
+			<button class="dropbtn">Information <i class="fa fa-angle-down"></i></button>
+			<div class="dropdown-content">
+					<a href="../../starbound\pages\info\faq.html">FAQ</a>
+					<a href="../../starbound\pages\info\contact.html">Contact</a>
+					<a href="../../starbound\pages\info\history.html">History</a>
+			</div>
+		  </div>
+		  <div class="dropdown">
+			<button class="dropbtn">Permissions <i class="fa fa-angle-down"></i></button>
+			<div class="dropdown-content">
+					<a href="../../starbound\pages\perms\license.html">License</a>
+			</div>
+		  </div>
+	  <div class="dropdown">
+		<button class="dropbtn">Mods <i class="fa fa-angle-down"></i></button>
+		<div class="dropdown-content">
+				<a href="../../starbound\mods\betterrent.html">Better Rent</a>
+				<a href="../../starbound\mods\craftableelevators.html">Craftable Elevators</a>
+				<a href="../../starbound\mods\displayores.html">Display Ores</a>
+				<a href="../../starbound\mods\healthycapture.html">Healthy Capture</a>
+				<a href="../../starbound\mods\lazyguards.html">Lazy Guards</a>
+				<a href="../../starbound\mods\moonoverhaul.html">Moon Overhaul</a>
+				<a href="../../starbound\mods\progressivebiomes.html">Progressive Biomes</a>
+				<a href="../../starbound\mods\realcasual.html">RealCasual</a>
+				<a href="../../starbound\mods\richerasteroids.html">Richer Asteroids</a>
+				<a href="../../starbound\mods\scaledores.html">Scaled Ores</a>
+		</div>
+	  </div>
+	  <div class="dropdown">
+		<button class="dropbtn">Other Games <i class="fa fa-angle-down"></i></button>
+		<div class="dropdown-content">
+				<a href="../../minecraft/index.html">Minecraft</a>
+				<a href="../../factorio/index.html">Factorio</a>
+				<a href="../../p2/index.html">Portal 2</a>
+				<a href="../../stellaris/index.html">Stellaris</a>
+				<a href="../../se/index.html">Space Engineers</a>
+				<a href="../../fce/index.html">FortressCraft Evolved</a>
+		</div>
+	  </div>
+	  <div class="dropdown">
+		<button class="dropbtn">Other Projects <i class="fa fa-angle-down"></i></button>
+		<div class="dropdown-content">
+				<a href="../../projects/calendar.html">Game Calendar</a>
+				<a href="../../projects/eventbuilder.html">Stellaris Event Builder</a>
+				<a href="../../projects/fcompile.html">FCompile</a>
+		</div>
+	  </div>
+	</div>
+		<noscript><div style = "text-align: center; width: 100%;"><div id = "nojs-header"><div><img class = "header-alert" src = "../../images/alert.png"></div><div>You have JavaScript disabled; it is recommended you enable it for this site.<br>While the site will (mostly) function with scripts disabled, some sections (eg changelog view) require it to update the page contents based on your input.<br>Additionally, JS is used to generate page styling, meaning disabling scripts will leave pages ugly, boring, and in some cases poorly arranged in ways that might impede readability.</div></div></div></noscript>
+		<div id="toc_container">
+<h3>Quick Nav</h3>
+<hr>
+<table class="toc_list">
+	<tr style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><span><i class="fas fa-angle-double-up"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-general">General</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-general'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-spawnrates">Spawn Rates</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-spawnrates'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+</table>
+</div>
+        <div class = "textarea">
+			<!--<h2>Richer Asteroids</h2>-->
+						<div class = "header-image">
+				<img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F450745254171889398_2F1A2273348458254139BEAD004C0CA57CC1D68049_2F.jpg" >
+			</div><div style = "text-align: center; width: 100%;"><div class = "header-alert-box" style = "background-color: #BFFFBF; border-color: #00FF00;"><div class = "header-alert-inner"><img class = "header-alert" src = "data:image/png;base64,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"></div><div class = "header-alert-inner">This item is very old and has not received maintenance, but nonetheless still appears to work.</div></div></div>			<section class = "textblock" id = "text-block-general">
+				<h3>General</h3>
+					Richer Asteroids adds non-tiered non-core-fragment ores (coal, gold, diamond etc) to asteroids, while trying to still remain balanced. Do note that this has partly been included in vanilla in the intervening years, but this mod still adds some new ores - eg diamond - and the rates are also somewhat different.
+			</section><br>
+			<section class = "textblock" id = "text-block-spawnrates">
+				<h3>Spawn Rates</h3>
+					<h4>Spawn Rates</h4>
+<table class = "delta-table">
+  <tr>
+	<th style = "width: 22.25%">
+		
+	</th>
+	<th style = "width: 2.5%; border-left: none; border-collapse: collapse; border-spacing:0;">
+		
+	</th>
+	<th style = "width: 22.25%">
+		Vanilla 2016
+	</th>
+	<th style = "width: 22.25%">
+		Vanilla
+	</th>
+	<th style = "width: 22.25%">
+		Modded
+	</th>
+  </tr>
+  <tr>
+	<td>
+		Coal
+	</td>
+	<td style = "text-align: center;">
+<img src="https://starbounder.org/mediawiki/images/a/a7/Coal.png" height = "16px" style="vertical-align:middle; text-align: center;">	</td>
+	<td>
+		0
+	</td>
+	<td>
+		0
+	</td>
+	<td>
+		0.4
+	</td>
+  </tr>
+  <tr>
+	<td>
+		Copper
+	</td>
+	<td style = "text-align: center;">
+<img src="https://starbounder.org/mediawiki/images/7/78/Copper_Ore.png" height = "16px" style="vertical-align:middle; text-align: center;">	</td>
+	<td>
+		0.65
+	</td>
+	<td>
+		0.65
+	</td>
+	<td>
+		0.6
+	</td>
+  </tr>
+  <tr>
+	<td>
+		Iron
+	</td>
+	<td style = "text-align: center;">
+<img src="https://starbounder.org/mediawiki/images/8/87/Iron_Ore.png" height = "16px" style="vertical-align:middle; text-align: center;">	</td>
+	<td>
+		0
+	</td>
+	<td>
+		0
+	</td>
+	<td>
+		0.75
+	</td>
+  </tr>
+  <tr>
+	<td>
+		Silver
+	</td>
+	<td style = "text-align: center;">
+<img src="https://starbounder.org/mediawiki/images/9/97/Silver_Ore.png" height = "16px" style="vertical-align:middle; text-align: center;">	</td>
+	<td>
+		0
+	</td>
+	<td>
+		0.45
+	</td>
+	<td>
+		0.45
+	</td>
+  </tr>
+  <tr>
+	<td>
+		Gold
+	</td>
+	<td style = "text-align: center;">
+<img src="https://starbounder.org/mediawiki/images/f/f7/Gold_Ore.png" height = "16px" style="vertical-align:middle; text-align: center;">	</td>
+	<td>
+		0
+	</td>
+	<td>
+		0.55
+	</td>
+	<td>
+		0.55
+	</td>
+  </tr>
+  <tr>
+	<td>
+		Diamond
+	</td>
+	<td style = "text-align: center;">
+<img src="https://starbounder.org/mediawiki/images/e/ea/Diamond.png" height = "16px" style="vertical-align:middle; text-align: center;">	</td>
+	<td>
+		0
+	</td>
+	<td>
+		0
+	</td>
+	<td>
+		0.15
+	</td>
+  </tr>
+</table>
+			</section>
+<br>
+			<section class = "textblock" id = "text-block-sourcecode">
+			<div class = "modsource">
+				<h3>Source Code</h3>				The source code for Richer Asteroids can be found here:<button type="button" class = "srcbtn" onclick="location.href='https://github.com/ReikaKalseki/RicherAsteroids'"><span>GitHub<div class = "spacer"></div><i class="fab fa-github"></i></span></button>
+			</div>
+			</section>
+<br>
+<section class = "textblock" id = "text-block-downloads">
+	<h3>Downloads</h3>
+<button type="button" class = "dlbtn" onclick="location.href='https://steamcommunity.com/sharedfiles/filedetails/?id=751145712'"><span>Steam Workshop<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
+</section>
+			<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
+		<hr>
+		<div id = "footer-spacing">
+		
+		</div>
+		<hr>
+		If you like any of my mods, maps, or other content, or want to help me develop them, feel free to use my Patreon or the buttons below. Every little bit helps me be able to keep working on them, and helps ensure both maintenance and expansion of them.<br>
+		If you wish to give a one-time donation, I recommend you use the Paypal link on the right; Patreon, though it can be used for one-time donations, is designed for ongoing monthly 'subscriptions' (ie a set amount of money gifted each month for as long as you remain a 'patron'). Paypal can also register a donation with monthly recurrence, should that seem preferable to you.<br>
+		For both systems, the amount you choose to donate is up to you, and for Patreon, can be changed at any time should you wish to decrease or increase the amount.<br>
+		And thank you for your support. :D<br>
+					<div class = "linkiconblock">
+					<div class = "linktile">
+						<div class = "linklabel">Patreon</div>
+						<div><a href="http://www.patreon.com/reikasminecraft"><img src="../../images/patreon.png"  height="48" ></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Paypal</div>
+						<div><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5XRAM3SXBRJY4"><img src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif"  height="48" ></a></div>
+					</div>
+			</div>
+		<hr>
+		To contact me (though some of these are only checked periodically, and many are for specific topics) or find additional information or content, visit any one of these platforms:<br>
+					<div class = "linkiconblock">
+					<div class = "linktile">
+						<div class = "linklabel">Minecraft Forums</div>
+						<div><a href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1291655"><img src="../../images/mcico.png"  width="36"  height="36" title="Minecraft Only"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Factorio Forums</div>
+						<div><a href="https://forums.factorio.com/viewforum.php?f=216"><img src="../../images/factorio.png"  width="36"  height="36" title="Factorio Only"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">GitHub</div>
+						<div><a href="https://github.com/ReikaKalseki"><img src="../../images/gitico.png"  width="36"  height="36" ></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Discord</div>
+						<div><a href="https://discordapp.com/channels/@me/143569407665242112/"><img src="../../images/discico.png"  width="36"  height="36" title="Discord ID: Reika#3161"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Steam</div>
+						<div><a href="https://steamcommunity.com/id/ReikaKalseki/myworkshopfiles/"><img src="../../images/steamico.png"  width="36"  height="36" title="Please no random friend requests"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">YouTube</div>
+						<div><a href="https://www.youtube.com/user/ReikasMinecraft/videos"><img src="../../images/ytico.png"  width="36"  height="36" ></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">SoundCloud</div>
+						<div><a href="https://soundcloud.com/reikakalseki"><img src="../../images/soundico.png"  width="36"  height="36" title="Music Only"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Reddit</div>
+						<div><a href="https://www.reddit.com/user/ReikaKalseki/"><img src="../../images/redditico.png"  width="36"  height="36" ></a></div>
+					</div>
+			</div>
+		<hr>
+		This site is proudly Canadian. <i class="fab fa-canadian-maple-leaf"></i><br>
+		<hr>
+		Site (including embedded JavaScript) and linked projects (mods, maps, etc) created by and &copy; ReikaKalseki, except for content within which is part of the base games, as noted below.<br>
+		<hr>
+			Minecraft and its content and assets are &copy; Mojang AB, with whom I am not affiliated<br>
+			Factorio and its content and assets are &copy; Wube Software, with whom I am not affiliated<br>
+			Portal 2 and its content and assets are &copy; Valve Corporation, with whom I am not affiliated<br>
+			Stellaris and its content and assets are &copy; Paradox Interactive, with whom I am not affiliated<br>
+			Space Engineers and its content and assets are &copy; Keen Software House, with whom I am not affiliated<br>
+			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
+			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>
+	</div></footer>
+		</div>
+    </body>
+</html>
