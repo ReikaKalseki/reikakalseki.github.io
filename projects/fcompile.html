@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <link rel="shortcut icon" href="../images/favicon.ico">
+        <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+		<meta http-equiv="Cache-control" content="no-cache">
+        <title>FCompile</title>
+		<link rel="stylesheet" type="text/css" href="../global-style.css">
+		<link rel="stylesheet" type="text/css" href="../local-style.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        
+		<script src = "../browser.js"></script>
+		<script src = "../library.js"></script>
+		<script src = "../jquery.js"></script>
+		<script id = "footer-space-script" src = "../footer-spacing.js"></script>
+		<script id = "background-script" src = "../backgroundgen.js"></script>
+    </head>
+    <body class = "other-project-body">
+        	<div id = "navbar" class="navbar"> <!-- navbar-narrow if you want to unroll games -->
+	  <a class="navbar-button" href="../index.html">Reika Home</a>
+	  <!--<a class="navbar-button" href="index.html">Information</a> -->
+	  <!--
+			<a class="navbar-button" href="minecraft/index.html">Minecraft</a>
+			<a class="navbar-button" href="factorio/index.html">Factorio</a>
+			<a class="navbar-button" href="p2/index.html">Portal 2</a>
+			<a class="navbar-button" href="stellaris/index.html">Stellaris</a>
+			<a class="navbar-button" href="se/index.html">Space Engineers</a>
+			<a class="navbar-button" href="fce/index.html">FortressCraft Evolved</a>
+			<a class="navbar-button" href="starbound/index.html">Starbound</a>
+		-->
+	  <div class="dropdown">
+		<button class="dropbtn">Game List <i class="fa fa-angle-down"></i></button>
+		<div class="dropdown-content">
+				<a href="../minecraft/index.html">Minecraft</a>
+				<a href="../factorio/index.html">Factorio</a>
+				<a href="../p2/index.html">Portal 2</a>
+				<a href="../stellaris/index.html">Stellaris</a>
+				<a href="../se/index.html">Space Engineers</a>
+				<a href="../fce/index.html">FortressCraft Evolved</a>
+				<a href="../starbound/index.html">Starbound</a>
+		</div>
+	  </div>
+	  <div class="dropdown">
+		<button class="dropbtn">Other Projects <i class="fa fa-angle-down"></i></button>
+		<div class="dropdown-content">
+				<a href="../projects/calendar.html">Game Calendar</a>
+				<a href="../projects/eventbuilder.html">Stellaris Event Builder</a>
+				<a href="../projects/fcompile.html">FCompile</a>
+		</div>
+	  </div>
+	</div>
+		<noscript><div style = "text-align: center; width: 100%;"><div id = "nojs-header"><div><img class = "header-alert" src = "../images/alert.png"></div><div>You have JavaScript disabled; it is recommended you enable it for this site.<br>While the site will (mostly) function with scripts disabled, some sections (eg changelog view) require it to update the page contents based on your input.<br>Additionally, JS is used to generate page styling, meaning disabling scripts will leave pages ugly, boring, and in some cases poorly arranged in ways that might impede readability.</div></div></div></noscript>
+		<div id="toc_container">
+<h3>Quick Nav</h3>
+<hr>
+<table class="toc_list">
+	<tr style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><span><i class="fas fa-angle-double-up"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-overview">Overview</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-overview'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-function">Function</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-function'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-settings">Settings</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-settings'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-futureplans">Future Plans</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-futureplans'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-license">License</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-license'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+</table>
+</div>
+        <div class = "textarea-other-project">
+			<!--<h2>FCompile</h2>-->
+						<section class = "textblock" id = "text-block-overview">
+				<h3>Overview</h3>
+					FCompile is a simple utility designed to package Factorio mods into ZIP files suitable for release. This automation allows for saving large quantities of time when releasing new versions of many mods at once, especially when the development folder contains many files you do not wish to include in the public downloads (such as construction images or old copies of assets).
+			</section><br>
+			<section class = "textblock" id = "text-block-function">
+				<h3>Function</h3>
+					FCompile will read through all appropriate mods in the target folder, and package all "mod-relevant" files into ZIPs, one for each mod. These ZIPs can then be uploaded directly to the Factorio mod portal. What mods are relevant, and where to find them, as well as what constitutes a "mod relevant" file, are defined in the settings (see below). There is also functionality for things like automatically populating the version and swapping in files in place of the ones found in the mod folder.
+					<br><br>
+					At this time, this is not a GUI program; it is launched via the standard jar-running method (<code>java -jar [jarname].jar [args]</code>) in command-line, and all settings are parsed from the <code>settings.ini</code> file.
+			</section><br>
+			<section class = "textblock" id = "text-block-settings">
+				<h3>Settings</h3>
+					<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>mod_directory</h4>
+Type: Single Value<br>
+			Current Default Value:<div class = "code-block">C:/Users/Reika/AppData/Roaming/Factorio/mods</div>
+		</div>
+	Where your Factorio mods are located.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>target_author</h4>
+Type: Single Value<br>
+			Current Default Value:<div class = "code-block">Reika</div>
+		</div>
+	The mod author whose mods you wish to compile. Almost always you.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>output_directory</h4>
+Type: Single Value<br>
+			Current Default Value:<div class = "code-block">E:/Compiled Factorio Mods</div>
+		</div>
+	The output to which you want the compiled mods exported.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>clean_output</h4>
+Type: Single Value<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	Whether to purge the contents of the above output folder each compile.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>version_override</h4>
+Type: Single Value<br>
+			Current Default Value:<div class = "code-block">1.105.001</div>
+		</div>
+	If this is not 'none', whatever version is supplied in the mod folder/info is ignored in favor of the override. Very useful if you do not want a constantly-changing folder name (for example, because of GitHub pathing). Ensure it is the standard 'A.B.C' format, but you can use the numbers to mean what you wish.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>ignored_filetypes</h4>
+Type: List<br>
+			Current Default Value:<div class = "code-block">pdn,<br> psd,<br> zip,<br> rar,<br> bmp,<br> gif,<br> jpg,<br> jpeg,<br> aup,<br> aiff,<br> wav,<br> skp,<br> skb</div>
+		</div>
+	File extenstions to ignore; basically anything you do not want packed into the mod download. Use 'none' for nothing; separate entries with ',', and do not include the leading period.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>ignored_strings</h4>
+Type: List<br>
+			Current Default Value:<div class = "code-block">.git,<br> metadata</div>
+		</div>
+	Anything containing any one of the following strings (anywhere in the path or name) is ignored. Use 'none' for nothing; separate entries with ','.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>image_filter</h4>
+Type: Single Value<br>
+			Current Default Value:<div class = "code-block">graphics</div>
+		</div>
+	Should images only be allowed conditionally, and if so, from what folder(s) (ie in-mod path must start with one of these)? Use 'none' for no filter; separate entries with ','.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>sound_filter</h4>
+Type: List<br>
+			Current Default Value:<div class = "code-block">sounds,<br> sound</div>
+		</div>
+	Should sounds only be allowed conditionally, and if so, from what folder(s) (ie in-mod path must start with one of these)? Use 'none' for no filter; separate entries with ','.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>log_per_file</h4>
+Type: Single Value<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	Whether to print a log message for every file parsed. Useful when debugging to see why a file is or is not being included in the final zip.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>swap_ins</h4>
+Type: Single Value<br>
+			Current Default Value:<div class = "code-block">Oreverhaul|config.lua|E:/Java Workspaces/FactorioCompiler/Factorio Compiler/default_oreverhaul_config.lua</div>
+		</div>
+	Which, if any, files to "swap in" in place of ones from the mod dir, and from where. Format: [ModName|FileToSwap|Replacement], with the file to swap using mod-relative path and the replacement using absolute. Use 'none' for no swaps; separate entries with ','.
+</div>
+
+			</section><br>
+			<section class = "textblock" id = "text-block-futureplans">
+				<h3>Future Plans</h3>
+					I have desire to enable this tool to upload the compiled ZIPs to the mod portal, but I have no idea how to do the HTTP or authentication system to make that possible.
+					<br><br>
+					I also want to make the jar runnable "directly", ie via clicking on it in explorer, not requiring a command line call.
+			</section>
+<br>
+			<section class = "textblock" id = "text-block-sourcecode">
+			<div class = "modsource">
+				<h3>Source Code</h3>				The source code for FCompile can be found here:<button type="button" class = "srcbtn" onclick="location.href='https://github.com/ReikaKalseki/FCompile'"><span>GitHub<div class = "spacer"></div><i class="fab fa-github"></i></span></button>
+			</div>
+			</section>
+<br>
+			<section class = "textblock" id = "text-block-license">
+			<div class = "project-license">
+<h3>License</h3>FCompile is released under a personal-use visible-source license. It may be used for the intended or similar purposes, for personal use (including creation/maintenance of your own projects). <b>It may not be used for commercial purposes or paid software</b>. Unless given explicit written permission, it cannot be redistributed, nor can it be adapted or packaged into a larger product. Derivative works of FCompile can be produced, but only for your own personal use; these works or modified versions may never be shared with others.
+			</div>
+			</section>
+<br><br>
+<section class = "textblock" id = "text-block-downloads">
+	<h3>Downloads</h3>
+<button type="button" class = "dlbtn" onclick="location.href='http://www.mediafire.com/file/p9ac7wytr7m5tyf/FCompile_v2.zip/file'"><span>Mediafire<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
+</section>
+			<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
+		<hr>
+		<div id = "footer-spacing">
+		
+		</div>
+		<hr>
+		If you like any of my mods, maps, or other content, or want to help me develop them, feel free to use my Patreon or the buttons below. Every little bit helps me be able to keep working on them, and helps ensure both maintenance and expansion of them.<br>
+		If you wish to give a one-time donation, I recommend you use the Paypal link on the right; Patreon, though it can be used for one-time donations, is designed for ongoing monthly 'subscriptions' (ie a set amount of money gifted each month for as long as you remain a 'patron'). Paypal can also register a donation with monthly recurrence, should that seem preferable to you.<br>
+		For both systems, the amount you choose to donate is up to you, and for Patreon, can be changed at any time should you wish to decrease or increase the amount.<br>
+		And thank you for your support. :D<br>
+					<div class = "linkiconblock">
+					<div class = "linktile">
+						<div class = "linklabel">Patreon</div>
+						<div><a href="http://www.patreon.com/reikasminecraft"><img src="../images/patreon.png"  height="48" ></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Paypal</div>
+						<div><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5XRAM3SXBRJY4"><img src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif"  height="48" ></a></div>
+					</div>
+			</div>
+		<hr>
+		To contact me (though some of these are only checked periodically, and many are for specific topics) or find additional information or content, visit any one of these platforms:<br>
+					<div class = "linkiconblock">
+					<div class = "linktile">
+						<div class = "linklabel">Minecraft Forums</div>
+						<div><a href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1291655"><img src="../images/mcico.png"  width="36"  height="36" title="Minecraft Only"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Factorio Forums</div>
+						<div><a href="https://forums.factorio.com/viewforum.php?f=216"><img src="../images/factorio.png"  width="36"  height="36" title="Factorio Only"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">GitHub</div>
+						<div><a href="https://github.com/ReikaKalseki"><img src="../images/gitico.png"  width="36"  height="36" ></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Discord</div>
+						<div><a href="https://discordapp.com/channels/@me/143569407665242112/"><img src="../images/discico.png"  width="36"  height="36" title="Discord ID: Reika#3161"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Steam</div>
+						<div><a href="https://steamcommunity.com/id/ReikaKalseki/myworkshopfiles/"><img src="../images/steamico.png"  width="36"  height="36" title="Please no random friend requests"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">YouTube</div>
+						<div><a href="https://www.youtube.com/user/ReikasMinecraft/videos"><img src="../images/ytico.png"  width="36"  height="36" ></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">SoundCloud</div>
+						<div><a href="https://soundcloud.com/reikakalseki"><img src="../images/soundico.png"  width="36"  height="36" title="Music Only"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Reddit</div>
+						<div><a href="https://www.reddit.com/user/ReikaKalseki/"><img src="../images/redditico.png"  width="36"  height="36" ></a></div>
+					</div>
+			</div>
+		<hr>
+		This site is proudly Canadian. <i class="fab fa-canadian-maple-leaf"></i><br>
+		<hr>
+		Site (including embedded JavaScript) and linked projects (mods, maps, etc) created by and &copy; ReikaKalseki, except for content within which is part of the base games, as noted below.<br>
+		<hr>
+			Minecraft and its content and assets are &copy; Mojang AB, with whom I am not affiliated<br>
+			Factorio and its content and assets are &copy; Wube Software, with whom I am not affiliated<br>
+			Portal 2 and its content and assets are &copy; Valve Corporation, with whom I am not affiliated<br>
+			Stellaris and its content and assets are &copy; Paradox Interactive, with whom I am not affiliated<br>
+			Space Engineers and its content and assets are &copy; Keen Software House, with whom I am not affiliated<br>
+			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
+			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>
+	</div></footer>
+		</div>
+    </body>
+</html>

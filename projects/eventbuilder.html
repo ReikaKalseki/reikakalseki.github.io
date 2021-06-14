@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <link rel="shortcut icon" href="../images/favicon.ico">
+        <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+		<meta http-equiv="Cache-control" content="no-cache">
+        <title>Stellaris Event Builder</title>
+		<link rel="stylesheet" type="text/css" href="../global-style.css">
+		<link rel="stylesheet" type="text/css" href="../local-style.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        
+		<script src = "../browser.js"></script>
+		<script src = "../library.js"></script>
+		<script src = "../jquery.js"></script>
+		<script id = "footer-space-script" src = "../footer-spacing.js"></script>
+		<script id = "background-script" src = "../backgroundgen.js"></script>
+    </head>
+    <body class = "other-project-body">
+        	<div id = "navbar" class="navbar"> <!-- navbar-narrow if you want to unroll games -->
+	  <a class="navbar-button" href="../index.html">Reika Home</a>
+	  <!--<a class="navbar-button" href="index.html">Information</a> -->
+	  <!--
+			<a class="navbar-button" href="minecraft/index.html">Minecraft</a>
+			<a class="navbar-button" href="factorio/index.html">Factorio</a>
+			<a class="navbar-button" href="p2/index.html">Portal 2</a>
+			<a class="navbar-button" href="stellaris/index.html">Stellaris</a>
+			<a class="navbar-button" href="se/index.html">Space Engineers</a>
+			<a class="navbar-button" href="fce/index.html">FortressCraft Evolved</a>
+			<a class="navbar-button" href="starbound/index.html">Starbound</a>
+		-->
+	  <div class="dropdown">
+		<button class="dropbtn">Game List <i class="fa fa-angle-down"></i></button>
+		<div class="dropdown-content">
+				<a href="../minecraft/index.html">Minecraft</a>
+				<a href="../factorio/index.html">Factorio</a>
+				<a href="../p2/index.html">Portal 2</a>
+				<a href="../stellaris/index.html">Stellaris</a>
+				<a href="../se/index.html">Space Engineers</a>
+				<a href="../fce/index.html">FortressCraft Evolved</a>
+				<a href="../starbound/index.html">Starbound</a>
+		</div>
+	  </div>
+	  <div class="dropdown">
+		<button class="dropbtn">Other Projects <i class="fa fa-angle-down"></i></button>
+		<div class="dropdown-content">
+				<a href="../projects/calendar.html">Game Calendar</a>
+				<a href="../projects/eventbuilder.html">Stellaris Event Builder</a>
+				<a href="../projects/fcompile.html">FCompile</a>
+		</div>
+	  </div>
+	</div>
+		<noscript><div style = "text-align: center; width: 100%;"><div id = "nojs-header"><div><img class = "header-alert" src = "../images/alert.png"></div><div>You have JavaScript disabled; it is recommended you enable it for this site.<br>While the site will (mostly) function with scripts disabled, some sections (eg changelog view) require it to update the page contents based on your input.<br>Additionally, JS is used to generate page styling, meaning disabling scripts will leave pages ugly, boring, and in some cases poorly arranged in ways that might impede readability.</div></div></div></noscript>
+		<div id="toc_container">
+<h3>Quick Nav</h3>
+<hr>
+<table class="toc_list">
+	<tr style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><span><i class="fas fa-angle-double-up"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-overview">Overview</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-overview'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-interface">Interface</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-interface'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-titlebar">Title Bar</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-titlebar'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-datasections">Data Sections</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-datasections'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-settings">Settings</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-settings'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-codeeditor">Code Editor</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-codeeditor'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-implementation">Implementation</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-implementation'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-license">License</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-license'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+</table>
+</div>
+        <div class = "textarea-other-project">
+			<!--<h2>Stellaris Event Builder</h2>-->
+			<div style = "text-align: center; width: 100%;"><div class = "header-alert-box" style = "background-color: #BFE4FF; border-color: #0094FF;"><div class = "header-alert-inner"><img class = "header-alert" src = "data:image/png;base64,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"></div><div class = "header-alert-inner">This item is incomplete or not yet fit for release, and is not available for public use.</div></div></div>			<section class = "textblock" id = "text-block-overview">
+				<h3>Overview</h3>
+					The Stellaris Event Builder is a work-in-progress tool designed to make creating and editing Stellaris Events simpler, faster, and easier. While not designed as a complete replacement for text-based editing - in particular when writing complex code blocks - it is very well-suited to things like mass refactoring, editing chains, changing properties like the MTTH or graphics, or error checking.
+			</section><br>
+			<section class = "textblock" id = "text-block-interface">
+				<h3>Interface</h3>
+					<div class = "block-image">
+	<a href = "../imagedownloads/i-imgur-com_2FKUPBkUY.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../imagedownloads/i-imgur-com_2FKUPBkUY.png" style="max-width:75%;" ></a>
+</div><br>
+					The title bar (1) provides access to many of the core operations, and will be discussed below. Once a mod is selected, a namespace can be chosen from those present in the mod via a dropdown (3). This will populate the event list (2) with an entry for each loaded event. Clicking any event will open it in the main panel at right. The top of this panel (4) shows "general" information about the event, including its name/ID, its scope/type (and a dropdown to change it if desired), and the title (localized if possible).
+					<br><br>
+					Below this is a row of tabs (5) to navigate between the various sections of the event's data. Note that tabs cannot be loaded if that property is not valid for the event as currently defined (so in the pictured example, the "triggered only" event cannot also have a generic "ambient" trigger and MTTH, since those are conceptually mutually exclusive; likewise, a hidden event would not have options or a description, and so on). Some tabs contain a toggle to enable or disable that property.
+					<br><br>
+					The data view and editor pane (6) is where the actual data for the selected section of the active event is shown and able to be modified. The contents of this panel change extensively depending on the selected section and what data the event has, and will be described in more detail later.
+					<br><br>
+					There is an indicator for current loaded mod near the bottom (7) and below that, a status bar (8) which will show statuses like "reloading data" or error messages when they arise.
+			</section><br>
+			<section class = "textblock" id = "text-block-titlebar">
+				<h3>Title Bar</h3>
+					The title bar is the root navigational element with which all other functions are accessed or at least made relevant.<br>
+					<h4>Control</h4>
+					This contains "core" program features like access to the settings menu, as well as "generic" operations like "reload all data".
+					<br><br>
+					<h4>Mods</h4>
+					Once a mod folder has been selected, all the available mods, plus the base game, will appear as entries in this dropdown. Selecting one is a requirement to begin any meaningful editing.
+					<br><br>
+					<h4>Tools</h4>
+					The tools menu contains utility functions, like checking the current event for errors (invalid property combinations, calling nonexistent other events, et cetera), and performance issues (eg complex trigger conditions in an ambient-trigger event). At the time of writing, most of these are incomplete.
+					<br><br>
+					<h4>Namespaces</h4>
+					This menu allows for the loading and saving of all or specific namespaces, renaming or deletion of existing namespaces, and creation of new ones.
+					<br><br>
+					<h4>Events</h4>
+					This offers similar options to the namespaces menu, just on an event level. This also has a "copy event" function.
+					<br><br>
+					<h4>Help</h4>
+					This provides access to some basic helper tools, including three menu options to load the wiki pages for conditions, effects, and modifiers. 
+			</section><br>
+			<section class = "textblock" id = "text-block-datasections">
+				<h3>Data Sections</h3>
+					<h4>Basic Properties</h4>
+					This is for the basic properties any event can have, including whether it is hidden, what its sound and image are, and whether it uses a MTTH/trigger system or an explicit call elsewhere. These are what determine which of the other tabs are accessible.
+					<br><br>
+					<h4>Descriptions</h4>
+					<div class = "block-image">
+	<a href = "../imagedownloads/i-imgur-com_2FfRZErJK.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../imagedownloads/i-imgur-com_2FfRZErJK.png" style="max-width:75%;" ></a>
+</div><br>
+					This contains a read-only view of the localized description, both the default - if it exists - and any conditional descriptions, along with their conditions. Unlike the text of the descriptions, which is read-only, these conditions can be edited via the code editor tool.
+					<br><br>
+					<h4>Trigger Condition</h4>
+					<div class = "block-image">
+	<a href = "../imagedownloads/i-imgur-com_2F5UjEWuh.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../imagedownloads/i-imgur-com_2F5UjEWuh.png" style="max-width:75%;" ></a>
+</div><br>
+					This provides a preview and access to the code editor for the "trigger" block of the event, ie the condition which must be fulfilled for ambient event activation to occur.
+					<br><br>
+					<h4>Mean Time To Happen<div class = "tooltip"><img class = 'tooltipicon' src = '../images/info.png'><span class='tooltiptext'>Incomplete</span></div></h4>
+					<div class = "block-image">
+	<a href = "../imagedownloads/i-imgur-com_2F4YMDuSn.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../imagedownloads/i-imgur-com_2F4YMDuSn.png" style="max-width:75%;" ></a>
+</div><br>
+					This panel is where the timing of ambient activation is controlled, with the base duration - time unit and number - is chosen, as well as any modifiers on the MTTH. Like the conditional descriptions, these code blocks can be both previewed and opened in the code editor.
+					<br><br>
+					<h4>Immediate Block</h4>
+					<div class = "block-image">
+	<a href = "../imagedownloads/i-imgur-com_2FeKMA4q9.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../imagedownloads/i-imgur-com_2FeKMA4q9.png" style="max-width:75%;" ></a>
+</div><br>
+					From here, the "immediate" code block, if any, can be previewed and edited.
+					<br><br>
+					<h4>Options<div class = "tooltip"><img class = 'tooltipicon' src = '../images/info.png'><span class='tooltiptext'>Incomplete</span></div></h4>
+					<div class = "block-image">
+	<a href = "../imagedownloads/i-imgur-com_2FVHXbfyB.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../imagedownloads/i-imgur-com_2FVHXbfyB.png" style="max-width:75%;" ></a>
+</div><br>
+					This pane contains entries for each option the event has. Each entry contains the internal ID, a tooltip key if applicable, text options, triggers for visibility and selectability of that option, AI weight, and the effect of selecting that option.
+			</section><br>
+			<section class = "textblock" id = "text-block-settings">
+				<h3>Settings</h3>
+					<div class = "block-image">
+	<a href = "../imagedownloads/i-imgur-com_2FzDVpVjs.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../imagedownloads/i-imgur-com_2FzDVpVjs.png" style="max-width:75%;" ></a>
+</div><br>
+					The program has several options to modify how it is used and how it exports files. Most of these are self-explanatory. If the application is loaded without the paths values set to valid folders, such as when the application is first launched, it will divert to a small window asking you for the paths to the game install and the mod folder, as without these nothing of value can be done.
+			</section><br>
+			<section class = "textblock" id = "text-block-codeeditor">
+				<h3>Code Editor</h3>
+					The code editor is a planned feature to allow the editing of code blocks with more ease than a text editor. While it will not be designed to completely supplant text editors, it will be useful for things like restructuring logic, or duplicating or expanding blocks.
+			</section><br>
+			<section class = "textblock" id = "text-block-implementation">
+				<h3>Implementation</h3>
+					The Event Builder is written in Java, using the JavaFX GUI and windowing library. Parsing of events is done with an ANTLR grammar that is now part of their standard library, with a custom converter to build internal representations of the events.
+			</section>
+<br>
+			<section class = "textblock" id = "text-block-sourcecode">
+			<div class = "modsource">
+				<h3>Source Code</h3>				The source code for Stellaris Event Builder can be found here:<button type="button" class = "srcbtn" onclick="location.href='https://github.com/ReikaKalseki/StellarisEventBuilder'"><span>GitHub<div class = "spacer"></div><i class="fab fa-github"></i></span></button>
+			</div>
+			</section>
+<br>
+			<section class = "textblock" id = "text-block-license">
+			<div class = "project-license">
+<h3>License</h3>Stellaris Event Builder is released under a personal-use visible-source license. It may be used for the intended or similar purposes, for personal use (including creation/maintenance of your own projects). <b>It may not be used for commercial purposes or paid software</b>. Unless given explicit written permission, it cannot be redistributed, nor can it be adapted or packaged into a larger product. Derivative works of Stellaris Event Builder can be produced, but only for your own personal use; these works or modified versions may never be shared with others.
+			</div>
+			</section>
+<br><br>
+<section class = "textblock" id = "text-block-downloads">
+	<h3>Downloads</h3>
+Downloads for this item are not currently available.
+</section>
+			<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
+		<hr>
+		<div id = "footer-spacing">
+		
+		</div>
+		<hr>
+		If you like any of my mods, maps, or other content, or want to help me develop them, feel free to use my Patreon or the buttons below. Every little bit helps me be able to keep working on them, and helps ensure both maintenance and expansion of them.<br>
+		If you wish to give a one-time donation, I recommend you use the Paypal link on the right; Patreon, though it can be used for one-time donations, is designed for ongoing monthly 'subscriptions' (ie a set amount of money gifted each month for as long as you remain a 'patron'). Paypal can also register a donation with monthly recurrence, should that seem preferable to you.<br>
+		For both systems, the amount you choose to donate is up to you, and for Patreon, can be changed at any time should you wish to decrease or increase the amount.<br>
+		And thank you for your support. :D<br>
+					<div class = "linkiconblock">
+					<div class = "linktile">
+						<div class = "linklabel">Patreon</div>
+						<div><a href="http://www.patreon.com/reikasminecraft"><img src="../images/patreon.png"  height="48" ></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Paypal</div>
+						<div><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5XRAM3SXBRJY4"><img src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif"  height="48" ></a></div>
+					</div>
+			</div>
+		<hr>
+		To contact me (though some of these are only checked periodically, and many are for specific topics) or find additional information or content, visit any one of these platforms:<br>
+					<div class = "linkiconblock">
+					<div class = "linktile">
+						<div class = "linklabel">Minecraft Forums</div>
+						<div><a href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1291655"><img src="../images/mcico.png"  width="36"  height="36" title="Minecraft Only"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Factorio Forums</div>
+						<div><a href="https://forums.factorio.com/viewforum.php?f=216"><img src="../images/factorio.png"  width="36"  height="36" title="Factorio Only"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">GitHub</div>
+						<div><a href="https://github.com/ReikaKalseki"><img src="../images/gitico.png"  width="36"  height="36" ></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Discord</div>
+						<div><a href="https://discordapp.com/channels/@me/143569407665242112/"><img src="../images/discico.png"  width="36"  height="36" title="Discord ID: Reika#3161"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Steam</div>
+						<div><a href="https://steamcommunity.com/id/ReikaKalseki/myworkshopfiles/"><img src="../images/steamico.png"  width="36"  height="36" title="Please no random friend requests"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">YouTube</div>
+						<div><a href="https://www.youtube.com/user/ReikasMinecraft/videos"><img src="../images/ytico.png"  width="36"  height="36" ></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">SoundCloud</div>
+						<div><a href="https://soundcloud.com/reikakalseki"><img src="../images/soundico.png"  width="36"  height="36" title="Music Only"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Reddit</div>
+						<div><a href="https://www.reddit.com/user/ReikaKalseki/"><img src="../images/redditico.png"  width="36"  height="36" ></a></div>
+					</div>
+			</div>
+		<hr>
+		This site is proudly Canadian. <i class="fab fa-canadian-maple-leaf"></i><br>
+		<hr>
+		Site (including embedded JavaScript) and linked projects (mods, maps, etc) created by and &copy; ReikaKalseki, except for content within which is part of the base games, as noted below.<br>
+		<hr>
+			Minecraft and its content and assets are &copy; Mojang AB, with whom I am not affiliated<br>
+			Factorio and its content and assets are &copy; Wube Software, with whom I am not affiliated<br>
+			Portal 2 and its content and assets are &copy; Valve Corporation, with whom I am not affiliated<br>
+			Stellaris and its content and assets are &copy; Paradox Interactive, with whom I am not affiliated<br>
+			Space Engineers and its content and assets are &copy; Keen Software House, with whom I am not affiliated<br>
+			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
+			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>
+	</div></footer>
+		</div>
+    </body>
+</html>
