@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <link rel="shortcut icon" href="../../../images/favicon.ico">
+        <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+		<meta http-equiv="Cache-control" content="no-cache">
+        <title>LuaBlock</title>
+		<link rel="stylesheet" type="text/css" href="../../../global-style.css">
+		<link rel="stylesheet" type="text/css" href="../../../minecraft/local-style.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        
+		<script src = "../../../browser.js"></script>
+		<script src = "../../../library.js"></script>
+		<script src = "../../../jquery.js"></script>
+		<script id = "footer-space-script" src = "../../../footer-spacing.js"></script>
+			<script src = "../../../minecraft/precursor.js"></script>
+		<script id = "background-script" src = "../../../minecraft/backgroundgen.js"></script>
+    </head>
+    <body >
+        	<div id = "navbar" class="navbar">
+	  <a class="navbar-button" href="../../../index.html">Reika's Mods Home</a>
+	  <a class="navbar-button" href="../../../minecraft/index.html">Minecraft Home</a>
+		  <div class="dropdown">
+			<button class="dropbtn">Information <i class="fa fa-angle-down"></i></button>
+			<div class="dropdown-content">
+					<a href="../../../minecraft\pages\info\faq.html">FAQ</a>
+					<a href="../../../minecraft\pages\info\contact.html">Contact</a>
+					<a href="../../../minecraft\pages\info\history.html">History</a>
+					<a href="../../../minecraft\pages\info\changelog.html">Change Logs</a>
+					<a href="../../../minecraft\pages\info\spotlights.html">Spotlights</a>
+					<a href="../../../minecraft\pages\info\luablock.html">LuaBlock</a>
+					<a href="../../../minecraft\pages\info\nottosay.html">Things Not To Say</a>
+					<a href="../../../minecraft\pages\info\updating.html">Version Updates</a>
+			</div>
+		  </div>
+		  <div class="dropdown">
+			<button class="dropbtn">Permissions <i class="fa fa-angle-down"></i></button>
+			<div class="dropdown-content">
+					<a href="../../../minecraft\pages\perms\license.html">License</a>
+					<a href="../../../minecraft\pages\perms\packrules.html">Modpack Rules</a>
+					<a href="../../../minecraft\pages\perms\thirdparty.html">Third Party Modifications</a>
+					<a href="../../../minecraft\pages\perms\modpacks.html">Approved Modpacks</a>
+			</div>
+		  </div>
+	  <div class="dropdown">
+		<button class="dropbtn">Mods <i class="fa fa-angle-down"></i></button>
+		<div class="dropdown-content">
+				<a href="../../../minecraft\mods\dragonapi.html">DragonAPI</a>
+				<a href="../../../minecraft\mods\archisections.html">ArchiSections</a>
+				<a href="../../../minecraft\mods\cavecontrol.html">CaveControl</a>
+				<a href="../../../minecraft\mods\chromaticraft.html">ChromatiCraft</a>
+				<a href="../../../minecraft\mods\condensedores.html">CondensedOres</a>
+				<a href="../../../minecraft\mods\critterpet.html">CritterPet</a>
+				<a href="../../../minecraft\mods\dyetrees.html">DyeTrees</a>
+				<a href="../../../minecraft\mods\electricraft.html">ElectriCraft</a>
+				<a href="../../../minecraft\mods\enderforest.html">EnderForest</a>
+				<a href="../../../minecraft\mods\expandedredstone.html">Expanded Redstone</a>
+				<a href="../../../minecraft\mods\geostrata.html">GeoStrata</a>
+				<a href="../../../minecraft\mods\legacycraft.html">LegacyCraft</a>
+				<a href="../../../minecraft\mods\loottweaks.html">LootTweaks</a>
+				<a href="../../../minecraft\mods\meteorcraft.html">MeteorCraft</a>
+				<a href="../../../minecraft\mods\reactorcraft.html">ReactorCraft</a>
+				<a href="../../../minecraft\mods\rotarycraft.html">RotaryCraft</a>
+				<a href="../../../minecraft\mods\satisforestry.html">Satisforestry</a>
+				<a href="../../../minecraft\mods\territoryzone.html">TerritoryZone</a>
+				<a href="../../../minecraft\mods\treeclimbing.html">TreeClimbing</a>
+				<a href="../../../minecraft\mods\usefultnt.html">UsefulTNT</a>
+				<a href="../../../minecraft\mods\voidmonster.html">Void Monster</a>
+		</div>
+	  </div>
+	  <div class="dropdown">
+		<button class="dropbtn">Other Games <i class="fa fa-angle-down"></i></button>
+		<div class="dropdown-content">
+				<a href="../../../factorio/index.html">Factorio</a>
+				<a href="../../../p2/index.html">Portal 2</a>
+				<a href="../../../stellaris/index.html">Stellaris</a>
+				<a href="../../../se/index.html">Space Engineers</a>
+				<a href="../../../fce/index.html">FortressCraft Evolved</a>
+				<a href="../../../starbound/index.html">Starbound</a>
+		</div>
+	  </div>
+	  <div class="dropdown">
+		<button class="dropbtn">Other Projects <i class="fa fa-angle-down"></i></button>
+		<div class="dropdown-content">
+				<a href="../../../projects/calendar.html">Game Calendar</a>
+				<a href="../../../projects/eventbuilder.html">Stellaris Event Builder</a>
+				<a href="../../../projects/fcompile.html">FCompile</a>
+		</div>
+	  </div>
+	</div>
+		<noscript><div style = "text-align: center; width: 100%;"><div id = "nojs-header"><div><img class = "header-alert" src = "../../../images/alert.png"></div><div>You have JavaScript disabled; it is recommended you enable it for this site.<br>While the site will (mostly) function with scripts disabled, some sections (eg changelog view) require it to update the page contents based on your input.<br>Additionally, JS is used to generate page styling, meaning disabling scripts will leave pages ugly, boring, and in some cases poorly arranged in ways that might impede readability.</div></div></div></noscript>
+		<div id="toc_container">
+<h3>Quick Nav</h3>
+<hr>
+<table class="toc_list">
+	<tr style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><span><i class="fas fa-angle-double-up"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-introduction">Introduction</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-introduction'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-format">Format</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-format'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-details">Details</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-details'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-specialkeys">Special Keys</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-specialkeys'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-inheritance">Inheritance</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-inheritance'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-domains/trees">Domains/Trees</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-domains/trees'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr><td><a href="#text-block-troubleshooting">Troubleshooting</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-troubleshooting'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+</table>
+</div>
+        <div class = "textarea">
+			<!--<h2>LuaBlock</h2>-->
+						<section class = "textblock" id = "text-block-introduction">
+				<h3>Introduction</h3>
+					In addition to the standard "base" configs that simply control mod-wide options, many of my mods use the "LuaBlock" system for defining more complex objects to be used by some part of the mod. This can range from simple definitions, such as custom Void Monster drops, to slightly more complex versions that are effectively arrays of data - such as CaveControl biome definitions - to complex structures with nested tables, such as for Satisforestry biome configs or custom RotaryCraft machine recipes.
+					<br><br>
+					The name "LuaBlock" comes from the fact that the structure and format of an entry is designed to resemble Factorio prototype definitions, which are themselves nested Lua tables. However, despite this name, and the common use of .lua as the file extension for generated LuaBlock files (done to prompt syntax highlighting in editors), they are <i>not</i> intended or parsed as actual lua code. That said, it is semantically quite similar, meaning if you are familiar with Lua table objects, this system should come naturally.
+					<br><br>
+					I developed this system in December 2015 for CondensedOres, as that mod required a way to easily define "ore generation entries", ie a set of values which together defined an ore generation template, including data such as what blocks to use, the spawn rules, the frequencies, and the height profile. The standard configs, being one global list of values, was not suited for this, nor was the old "comma separated string" I used in some old "custom entry" configs (eg RC extractor ores and TerritoryZone definitions). Since then, more and more of my mods have started using it, from CaveControl switching its definition format to LuaBlock, to new systems for custom recipes in RotaryCraft, its addons, and ChromatiCraft, to entirely new mods like LootTweaks and Satisforestry being designed with it from the beginning.
+			</section><br>
+			<section class = "textblock" id = "text-block-format">
+				<h3>Format</h3>
+					LuaBlock is conceptually quite simple; it is simply a way of specifying assorted key-value pairs, where the value may in turn be another table of such pairs. For example, take the following LuaBlock definition:
+					<div class = "code-block">
+					{<br>
+					<div class = "code-indent"></div>type = "somename"<br>
+					<div class = "code-indent"></div>amount = 24<br>
+					<div class = "code-indent"></div>fluid = "water"<br>
+					<div class = "code-indent"></div>is_cold = true<br>
+					<div class = "code-indent"></div>colors = {<br>
+					<div class = "code-indent"></div><div class = "code-indent"></div>0x0000ff<br>
+					<div class = "code-indent"></div><div class = "code-indent"></div>0x22aaff<br>
+					<div class = "code-indent"></div><div class = "code-indent"></div>0x60a0ff<br>
+					<div class = "code-indent"></div>}<br>
+					}<br>
+					</div><br>
+					This defines a table of six key-value pairs. Two (type and fluid) are mapped to string values, one to an integer, one to a boolean, and one to a list (which itself contains three integers specified in hexadecimal format). Whatever system is expecting this kind of definition would presumably apply that information - fetching values by key as needed - to something for which those properties were relevant. For example, that might define a block with three color variants, a temperature hot/cold, and an amount of some fluid type.
+			</section><br>
+			<section class = "textblock" id = "text-block-details">
+				<h3>Details</h3>
+					The format is always like in the example above; one key-value pair per line (not counting cases where the value spans multiple lines), with no separating commas or other delimiters, formatted as "key = value" (tabs and spaces are ignored, but recommended to aid readability). The type of variable used for the value will be based on whichever valid format it matches - "true" and "false" (ignoring case) will become booleans; any integer will become as such; any other number will become a double-precision floating point value; anything else becomes a String. You can specify a 'type override' for values which "look" like one type but need to be interpreted as another, or for primitive types not chosen by default. To do this, specify the value in the format <code>[datatype=type]value</code>, where "value" is the value as normal and "type" is the Java primitive type you wish to use (byte, short, long, etc).
+					<br><br>
+					ItemStacks - like what are used in recipes or as drops - are defined somewhat specially, but similar to Minetweaker, in a format of <code>modid:itemregistryname:metadata*stacksize</code>. Metadata is optional, and will be set to zero if unspecified. If NBT is desired, a separate entry - usually called "nbt" or similar - will be parsed into the NBT tag. Additionally, the "cached ItemStack" registry in several of my mods - such as <code>ItemStacks</code> in RotaryCraft and <code>ChromaStacks</code> in ChromatiCraft, can be directly queried to save looking for - often long and complicated - registry names. For example, this block will define a basic 3x3 crafting recipe:
+					<div class = "code-block">
+					{<br>
+					<div class = "code-indent"></div>type = "test1"<br>
+					<div class = "code-indent"></div>recipe = {<br>
+					<div class = "code-indent"></div><div class = "code-indent"></div>shaped = true<br>
+					<div class = "code-indent"></div><div class = "code-indent"></div>input_top = "ore:stone, ore:stone, null"<br>
+					<div class = "code-indent"></div><div class = "code-indent"></div>input_middle = "minecraft:gold_ingot, chromaticraft_stack:elementUnit, null"<br>
+					<div class = "code-indent"></div><div class = "code-indent"></div>input_bottom = "ore:ingotGold, null, rotarycraft_stack:steelgear"<br>
+					<div class = "code-indent"></div>}<br>
+					<div class = "code-indent"></div>output = "chromaticraft_stack:lumaDust*3"<br>
+					<div class = "code-indent"></div>output_tag = {<br>
+					<div class = "code-indent"></div><div class = "code-indent"></div>tag1 = 370<br>
+					<div class = "code-indent"></div><div class = "code-indent"></div>tag2 = "potato"<br>
+					<div class = "code-indent"></div>}<br>
+					}<br>
+					</div><br>
+					That recipe will take a grid of:<br>
+					[stone, stone, empty]<br>
+					[gold ingot, CC elemental core, empty]<br>
+					[gold ingot, empty, steel gear]<br>
+					And make a stack of 3 CC luma dust, with NBT consisting of two tags, "tag1" mapped to int 370, and "tag2" mapped to string "potato".
+			</section><br>
+			<section class = "textblock" id = "text-block-specialkeys">
+				<h3>Special Keys</h3>
+					The "type" key is special - it is internally used as a lookup ID, and as such A) must always be present B) must be unique within its "domain" (ie whatever system this LuaBlock is being loaded into, such as CaveControl definitions or Satisforestry lizard doggo drops) and C) cannot be inherited from a parent. Its actual <i>value</i> is rarely important; it is merely required that it be usable as an identifier. Additionally, should the parsing of the block fail, or the block be deemed an invalid definition (for example missing a required property), the value of "type" will be used to identify it in the log messages indicating this failure.
+					<br><br>
+					Another special key is "inherit"; this one is not mandatory, but it specifies the type ID (ie the value of "type") of the "parent" LuaBlock definition, used for inheritance.
+			</section><br>
+			<section class = "textblock" id = "text-block-inheritance">
+				<h3>Inheritance</h3>
+					One of the most convenient and powerful features of the LuaBlock system is that of inheritance, something also modelled on the Factorio prototypes. Every block can inherit from a parent, which allows for easier creation of "mostly the same but changing a few things" sort of definitions. For example, in an ore definition system, you may have 22 entries which all share the exact same spawn block, biome rules, and so on; you can specify those in a "base" definition, which the child definitions all inherit from, allowing them to only have to specify their unique properties (eg block lists).
+					<br><br>
+					For example, take the following three definitions, as they might appear in some file:
+					<div class = "code-block">
+					{<br>
+					<div class = "code-indent"></div>type = "basevalue"<br>
+					<div class = "code-indent"></div>rate = 13.5<br>
+					<div class = "code-indent"></div>color = 0xff0000<br>
+					<div class = "code-indent"></div>spawnRule = {<br>
+					<div class = "code-indent"></div><div class = "code-indent"></div>require = {<br>
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>0<br>
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>1<br>
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>-1<br>
+					<div class = "code-indent"></div><div class = "code-indent"></div>}<br>
+					<div class = "code-indent"></div><div class = "code-indent"></div>exclude = {<br>
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>7<br>
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>-112<br>
+					<div class = "code-indent"></div><div class = "code-indent"></div>}<br>
+					<div class = "code-indent"></div>}<br>
+					}<br>
+					{<br>
+					<div class = "code-indent"></div>type = "defA"<br>
+					<div class = "code-indent"></div>inherit = "basevalue"<br>
+					<div class = "code-indent"></div>color = 0xffff00<br>
+					<div class = "code-indent"></div>minHeight = 32<br>
+					}<br>
+					{<br>
+					<div class = "code-indent"></div>type = "defB"<br>
+					<div class = "code-indent"></div>inherit = "basevalue"<br>
+					<div class = "code-indent"></div>rate = 105.2<br>
+					<div class = "code-indent"></div>minHeight = 60<br>
+					}<br>
+					</div><br>
+					Because defA and defB both inherit from basevalue, they acquire the properties within it that they do not explicitly specify. So both inherit the spawnRule entry (saving a lot of copy-paste of a complex value); additionally, defA inherits the rate of 13.5, and defB inherits the color (red).
+			</section><br>
+			<section class = "textblock" id = "text-block-domains/trees">
+				<h3>Domains/Trees</h3>
+					Internally, LuaBlocks are loaded into various "trees", each being intended for a specific purpose, and generally (but not always) defined in a single file (or set of files in a folder). For example, when RotaryCraft is looking for custom Blast Furnace recipes, it looks to a specific file and loads every block it can find in that file to the same tree (as children under an implicit "root" block). This tree is the "domain" in which those LuaBlocks are used, and determines A) the "scope" of where their "type" value needs to be unique (it is no consequence if both an RC centrifuge recipe, a Satisforestry resource node definition, and a cave control biome rule all share the same type, as no system ever checks all three of those trees) and B) the "semantic" meaning of those entries, ie what keys are required and what each key "means". Internally, each "system" loading a LuaBlock tree is meant for a specific purpose (such as all the examples mentioned thus far); there is no sharing of data.
+			</section><br>
+			<section class = "textblock" id = "text-block-troubleshooting">
+				<h3>Troubleshooting</h3>
+					Because LuaBlock is ultimately a freeform text format, it is entirely possible for it to be specified incorrectly, such that the game will not load the entries and do with them as you intend. This can be either due to structural issues, or semantic incorrectness. The former is simply "the LuaBlock could not be parsed into a key-value map", and is a result of things like messing up the actual definition structure (putting multiple things on one line, adding extra characters, et cetera). Semantic incorrectness is far more common; that means that the block you defined is logically invalid in some way. For example, a recipe-defining block with no output item specified (or a specification for an item that does not exist) will count as invalid. The exact requirements and limitations is domain-specific; for example, CondensedOres entries <i>must</i> have (or inherit) things like heightRule and blocks, since an ore definition with no block list to use as the ore, or no Y values to generate at, is meaningless. Those properties would meanwhile be meaningless in almost any other context.
+					<br><br>
+					Note that superfluous properties do <i>not</i> cause any kind of failure; they simply get added into the internal map but never inspected. For example, you can safely define a key-value pair of, say, "has_entity = true" anywhere, but unless the operative domain actually looks for a property called "has_entity", it will be completely ignored.
+					<br><br>
+					When a block is failed to be loaded, or is deemed invalid, this is generally noted in the log file; the mod in question will say something to the effect of "definition not loaded" and give some kind of reason why (eg "temperature out of bounds"). Many mods will also indicate how many entries it found in the config, how many it attempted to load, and how many of those succeeded.
+			</section>
+			<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
+		<hr>
+		<div id = "footer-spacing">
+		
+		</div>
+		<hr>
+		If you like any of my mods, maps, or other content, or want to help me develop them, feel free to use my Patreon or the buttons below. Every little bit helps me be able to keep working on them, and helps ensure both maintenance and expansion of them.<br>
+		If you wish to give a one-time donation, I recommend you use the Paypal link on the right; Patreon, though it can be used for one-time donations, is designed for ongoing monthly 'subscriptions' (ie a set amount of money gifted each month for as long as you remain a 'patron'). Paypal can also register a donation with monthly recurrence, should that seem preferable to you.<br>
+		For both systems, the amount you choose to donate is up to you, and for Patreon, can be changed at any time should you wish to decrease or increase the amount.<br>
+		And thank you for your support. :D<br>
+					<div class = "linkiconblock">
+					<div class = "linktile">
+						<div class = "linklabel">Patreon</div>
+						<div><a href="http://www.patreon.com/reikasminecraft"><img src="../../../images/patreon.png"  height="48" ></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Paypal</div>
+						<div><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5XRAM3SXBRJY4"><img src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif"  height="48" ></a></div>
+					</div>
+			</div>
+		<hr>
+		To contact me (though some of these are only checked periodically, and many are for specific topics) or find additional information or content, visit any one of these platforms:<br>
+					<div class = "linkiconblock">
+					<div class = "linktile">
+						<div class = "linklabel">Minecraft Forums</div>
+						<div><a href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1291655"><img src="../../../images/mcico.png"  width="36"  height="36" title="Minecraft Only"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Factorio Forums</div>
+						<div><a href="https://forums.factorio.com/viewforum.php?f=216"><img src="../../../images/factorio.png"  width="36"  height="36" title="Factorio Only"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">GitHub</div>
+						<div><a href="https://github.com/ReikaKalseki"><img src="../../../images/gitico.png"  width="36"  height="36" ></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Discord</div>
+						<div><a href="https://discordapp.com/channels/@me/143569407665242112/"><img src="../../../images/discico.png"  width="36"  height="36" title="Discord ID: Reika#3161"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Steam</div>
+						<div><a href="https://steamcommunity.com/id/ReikaKalseki/myworkshopfiles/"><img src="../../../images/steamico.png"  width="36"  height="36" title="Please no random friend requests"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">YouTube</div>
+						<div><a href="https://www.youtube.com/user/ReikasMinecraft/videos"><img src="../../../images/ytico.png"  width="36"  height="36" ></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">SoundCloud</div>
+						<div><a href="https://soundcloud.com/reikakalseki"><img src="../../../images/soundico.png"  width="36"  height="36" title="Music Only"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Reddit</div>
+						<div><a href="https://www.reddit.com/user/ReikaKalseki/"><img src="../../../images/redditico.png"  width="36"  height="36" ></a></div>
+					</div>
+			</div>
+		<hr>
+		This site is proudly Canadian. <i class="fab fa-canadian-maple-leaf"></i><br>
+		<hr>
+		Site (including embedded JavaScript) and linked projects (mods, maps, etc) created by and &copy; ReikaKalseki, except for content within which is part of the base games, as noted below.<br>
+		<hr>
+			Minecraft and its content and assets are &copy; Mojang AB, with whom I am not affiliated<br>
+			Factorio and its content and assets are &copy; Wube Software, with whom I am not affiliated<br>
+			Portal 2 and its content and assets are &copy; Valve Corporation, with whom I am not affiliated<br>
+			Stellaris and its content and assets are &copy; Paradox Interactive, with whom I am not affiliated<br>
+			Space Engineers and its content and assets are &copy; Keen Software House, with whom I am not affiliated<br>
+			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
+			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>
+	</div></footer>
+		</div>
+    </body>
+</html>
