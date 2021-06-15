@@ -32,6 +32,8 @@ function updateChangeData() {
 			var mv = document.getElementById("mod-version-cache");
 			var gameVer = gv.innerHTML;
 			var modVer = mv.innerHTML;
+			if (modVer == null || modVer == "" || typeof(modVer) == "undefined")
+		return;				
   text.innerHTML = "<h2>"+modVer+" ["+gameVer+"]"+mv.dataset.date+"</h2><br>";
   var list = document.getElementsByClassName("modchangecheck");
 	for (var i = 0; i < list.length; i++) {

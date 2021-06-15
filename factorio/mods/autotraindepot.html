@@ -11,7 +11,7 @@
         
 		<script src = "../../browser.js"></script>
 		<script src = "../../library.js"></script>
-		<script src = "../../jquery.js"></script>
+		<!--<script src = "../../jquery.js"></script>-->
 		<script id = "footer-space-script" src = "../../footer-spacing.js"></script>
 		<script id = "background-script" src = "../../factorio/backgroundgen.js"></script>
     </head>
@@ -119,8 +119,7 @@
 					AutoTrainDepot's core feature is the addition of an intelligent depot control system to prevent that deadlocking, as well as simplify the use of these "one production loop" trains. A depot is constructed by building several storages - chests, warehouses, et cetera - between two rail stations made with special train stops, such that the same storages are the output of one station and the input for the other. Then, these storages are connected with circuit wire to the depot controller, as are each of the train stations (color of wire from the storages is not important, but the stations are: red for the "filling" station and green for the unloading one).<br>
 					<div class = "block-image">
 	<a href = "../../imagedownloads/i-imgur-com_2FUR5ws6k.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FUR5ws6k.jpg" style="max-width:75%;" ></a>
-</div>
-					<br><br>
+</div><br>
 					If set up correctly, the depot controller will then monitor both stations and all connected storages and will manipulate the I/O to and from those storages to do several things:<ul>
 					<li>Ensure no item receives more than its share of the total storage (see below)</li>
 					<li>Update filters on I/O to manage type-specific loading</li>

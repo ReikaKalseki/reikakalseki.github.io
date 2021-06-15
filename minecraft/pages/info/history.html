@@ -11,7 +11,7 @@
         
 		<script src = "../../../browser.js"></script>
 		<script src = "../../../library.js"></script>
-		<script src = "../../../jquery.js"></script>
+		<!--<script src = "../../../jquery.js"></script>-->
 		<script id = "footer-space-script" src = "../../../footer-spacing.js"></script>
 			<script src = "../../../minecraft/precursor.js"></script>
 		<script id = "background-script" src = "../../../minecraft/backgroundgen.js"></script>
@@ -114,8 +114,7 @@
 					At the time, I was unfamiliar with the majority of the modded ecosystem - Tekkit lacked many of the now standard mods, and many others that were included I had largely ignored. As a result, the early phases of RotaryCraft's design were done with pure vanilla plus maybe BuildCraft or RedPower in mind. This meant that most of those early blocks - for example the Aerosolizer, Pile Driver, or Reservoir - were either very unusual and with limited application, or very similar to content seen in many mods. There was also very limited expandability and mod support; for example, the pump and reservoir were <i>only</i> coded to accept lava or water.<br>
 					<div class = "block-image">
 	<a href = "../../../imagedownloads/i-imgur-com_2F25Jn9bv.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../../imagedownloads/i-imgur-com_2F25Jn9bv.jpg" style="max-width:75%;" ></a>
-</div>.
-					<br><br>
+</div>.<br>
 					The gradual addition of new blocks and tools - sometimes based on suggestions (notably the Extractor as a four-stage ore processing machine), sometimes to fill often niche applications I had envisioned - continued until that June, where I was invited onto a small modded server along with a few other people I knew on the FTB Teamspeak.
 			</section><br>
 			<section class = "textblock" id = "text-block-enteringtheecosystem">
@@ -125,13 +124,11 @@
 					RotaryCraft was pretty swiftly removed from their pack - much of the "Old Guard" of that community did not want to touch a mod like it - but I ended up starting a new singleplayer survival world with a derivative of their pack, and the duration of this world was the time in which a great deal of the fundamental compatibility and interfacing with other mods was added. Notably, this was when I implemented a more generalized fluid system (though actually switching to the Forge fluid system was not to come until the 1.6.4 update that September), the ModOreList and ModWoodList registries that form the backbone of the Extractor, Woodcutter, and more, and various mod handler classes to directly reference their blocks, items, and mechanics. This also saw the creation of the first power conversion blocks.<br>
 					<div class = "block-image">
 	<a href = "../../../imagedownloads/i-imgur-com_2FiLcjLl5.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../../imagedownloads/i-imgur-com_2FiLcjLl5.png" style="max-width:75%;" ></a>	<a href = "../../../imagedownloads/i-imgur-com_2F0MAn5jw.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../../imagedownloads/i-imgur-com_2F0MAn5jw.png" style="max-width:75%;" ></a>	<div class = "image-caption">Mod compatibility machines from that world.</div>
-</div>
-					<br><br>
+</div><br>
 					One other notable feature of that world that led to a new feature was the fact I had unwittingly set up my base within short range of a dark node, which was creating unpleasant effects around my base. After reading online about TC3 node mechanics - in particular node movement and merging, and the fact that silverwoods could create pure nodes, I implemented the ability to use the RC woodcutter to farm silverwoods and thus pure nodes with which I hoped to neutralize the dark node.<br>
 					<div class = "block-image">
 	<a href = "../../../imagedownloads/i-imgur-com_2FWKCnspm.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../../imagedownloads/i-imgur-com_2FWKCnspm.png" style="max-width:75%;" ></a>	<a href = "../../../imagedownloads/i-imgur-com_2FwrvgHmE.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../../imagedownloads/i-imgur-com_2FwrvgHmE.png" style="max-width:75%;" ></a>
-</div>
-					<br><br>
+</div><br>
 					During the course of this world, I also revisited some short-lived testing/learning mod ideas from the prior winter. First was an old "learning to use metadata" mod with multiple rock types; this became GeoStrata, though at the time it only had rocks (lacking Onyx and Opal, and only smooth, cobble, and brick variants) and crystals. Next was a "creature below the bedrock making scary noises" mod I had gotten the idea for when messing around with Tekkit (and hearing similar noises in the void created by MAtmos), which of course became VoidMonster.
 					<br><br>
 					Towards the end of that summer, I started work on another mod, one to address the fact that scaling RC power beyond a few hundred MW was generally a pain. This of course was the start of ReactorCraft.<br>
@@ -154,13 +151,11 @@
 					Fairly early on, I ran into some headaches splitting power among the fans for my farms, so created the Shaft Power Bus. That proved glitchy and hard to use, so I tried again, this time with a dedicated hydraulic-based mod purely focused on transport and distribution of RC power. Early design issues and some revisions reshaped that to use electricity, becoming ElectriCraft.<br>
 					<div class = "block-image">
 	<a href = "../../../imagedownloads/i-imgur-com_2FsfSVKSb.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../../imagedownloads/i-imgur-com_2FsfSVKSb.png" style="max-width:75%;" ></a>	<a href = "../../../imagedownloads/i-imgur-com_2FFZkHn2F.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../../imagedownloads/i-imgur-com_2FFZkHn2F.png" style="max-width:75%;" ></a>	<div class = "image-caption">Hydraulics becomes ElectriCraft.</div>
-</div>
-					<br><br>
+</div><br>
 					Not long later, I finally had some ideas on how to finally realize a desire I had had for several months - the culmination of the RC and ReC techtrees, and the final solution to whatever power needs any base could ever have. This of course was the fusion reactor, which had been on hold because I had not known how to proceed without invoking electrical machinery (something I both then and now actively avoid) for plasma containment, how to handle plasma injection into the torus in a way that felt appropriate, or how to actually implement the fusion system and the means to extract energy. Early in 2014, I had finally devised solutions in the form of the toroid and solenoid magnets, the injector multiblock, and the neutron capture system respectively. Development of the reactor then proceeded swiftly.<br>
 					<div class = "block-image">
 	<a href = "../../../imagedownloads/i-imgur-com_2FtEiLCEm.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../../imagedownloads/i-imgur-com_2FtEiLCEm.png" style="max-width:75%;" ></a>	<a href = "../../../imagedownloads/i-imgur-com_2FltBiuO7.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../../imagedownloads/i-imgur-com_2FltBiuO7.png" style="max-width:75%;" ></a>	<a href = "../../../imagedownloads/i-imgur-com_2FA3O9dX0.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../../imagedownloads/i-imgur-com_2FA3O9dX0.png" style="max-width:75%;" ></a>	<a href = "../../../imagedownloads/i-imgur-com_2FE2psu0T.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../../imagedownloads/i-imgur-com_2FE2psu0T.png" style="max-width:75%;" ></a>	<div class = "image-caption">Rapid fusion reactor progress.</div>
-</div>
-					<br><br>
+</div><br>
 					Some other new features were added that were small at the time, but players familiar with my mods will see what they set in motion: <br>
 					One, I wanted a more powerful variant of the effect-giving crystals that had been in GeoStrata for a few months, and so invented "Potion Crystals".
 					<br><br>
@@ -182,20 +177,17 @@
 					In parallel with doing the update, I moved the Guardian Stone and Tile Accelerator to a new mod, and started toying around with some features that ChromatiCraft users will probably recognize:<br>
 					<div class = "block-image">
 	<a href = "../../../imagedownloads/i-imgur-com_2FyCnbwts.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../../imagedownloads/i-imgur-com_2FyCnbwts.png" style="max-width:75%;" ></a>	<a href = "../../../imagedownloads/i-imgur-com_2FAqoTQER.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../../imagedownloads/i-imgur-com_2FAqoTQER.png" style="max-width:75%;" ></a>	<a href = "../../../imagedownloads/i-imgur-com_2FcUuoBdf.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../../imagedownloads/i-imgur-com_2FcUuoBdf.png" style="max-width:75%;" ></a>
-</div>
-					<br><br>
+</div><br>
 					After the 1.7 update was complete, I hit something of a roadblock, as I was not sure how to proceed with my magic system. Front-runner ideas were a chroma-based power system, as well as a sort of "ambient energy field" concept kind of similar to the aura system in TC3.
 					<br><br>
 					As has been clearly demonstrated to happen regularly with these mods, the idea that ended up being best - and used - occurred randomly (and in this case at a particularly inopportune time). I had the idea of something similar to cellular networks, with signal towers and repeaters to relay the signal. I knew immediately that this was where I wanted development to go, and spent several days bringing that model to fruition.<br>
 					<div class = "block-image">
 	<a href = "../../../imagedownloads/i-imgur-com_2FYW92ytu.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../../imagedownloads/i-imgur-com_2FYW92ytu.png" style="max-width:75%;" ></a>	<a href = "../../../imagedownloads/i-imgur-com_2FgQf0Ig6.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../../imagedownloads/i-imgur-com_2FgQf0Ig6.png" style="max-width:75%;" ></a>	<a href = "../../../imagedownloads/i-imgur-com_2FkHZNkLT.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../../imagedownloads/i-imgur-com_2FkHZNkLT.png" style="max-width:75%;" ></a>	<div class = "image-caption">The beginnings of the Crystal Network.</div>
-</div>
-					<br><br>
+</div><br>
 					I then applied that system to early versions of the main crafting and imbuement blocks, what would become the Casting and Ritual tables:<br>
 					<div class = "block-image">
 	<a href = "../../../imagedownloads/i-imgur-com_2FjF2G9VJ.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../../imagedownloads/i-imgur-com_2FjF2G9VJ.png" style="max-width:75%;" ></a>	<a href = "../../../imagedownloads/i-imgur-com_2FR3GeKUt.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../../imagedownloads/i-imgur-com_2FR3GeKUt.png" style="max-width:75%;" ></a>
-</div>
-					<br><br>
+</div><br>
 					ChromatiCraft exploded in content over the next few months, gaining many of its core blocks and items, as well as much of its modern worldgen, overworld structures, and resources (including the progression-dependent ones).
 			</section><br>
 			<section class = "textblock" id = "text-block-anewfrontier">
@@ -203,13 +195,11 @@
 					Things entered a sort of coasting for a while, until April of 2015, when I had my most ambitious idea yet. Back in October, someone had made a remark about a "complete the monument-style quest" (so named after a lot of vanilla maps under that theme in the first half of the 2010s, notably Vech's super hostile series). That comment came back to me, and I decided that I would in fact add such a system. I spent weeks learning how to implement custom dimensions and low-level chunk generation code, something that was not remotely "smooth sailing":<br>
 					<div class = "block-image">
 	<a href = "../../../imagedownloads/i-imgur-com_2FiKUEnk9.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../../imagedownloads/i-imgur-com_2FiKUEnk9.png" style="max-width:75%;" ></a>	<a href = "../../../imagedownloads/i-imgur-com_2FpSg54p1.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../../imagedownloads/i-imgur-com_2FpSg54p1.png" style="max-width:75%;" ></a>	<div class = "image-caption">About as opposite of "smooth" as you can get, really.</div>
-</div>
-					<br><br>
+</div><br>
 					Eventually I had figured it out, and went through several iterations before settling on the base appearance I wanted.<br>
 					<div class = "block-image">
 	<a href = "../../../imagedownloads/i-imgur-com_2FsaZYO8Z.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../../imagedownloads/i-imgur-com_2FsaZYO8Z.png" style="max-width:75%;" ></a>	<a href = "../../../imagedownloads/i-imgur-com_2F3dmZmof.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../../imagedownloads/i-imgur-com_2F3dmZmof.png" style="max-width:75%;" ></a>	<a href = "../../../imagedownloads/i-imgur-com_2FG890YZl.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../../imagedownloads/i-imgur-com_2FG890YZl.png" style="max-width:75%;" ></a>
-</div>
-					<br><br>
+</div><br>
 					The next several months were spent on the first three puzzles: the 3D Maze, Locks and Keys (based on a redstone-based puzzle map I had made for vanilla three years prior, itself a remake of a game I made in the summer of 2010), and - after shelving the Shifting Maze - the Noneuclidean puzzle (helped in part by recently having gotten and tried Antichamber).<br>
 					<div class = "block-image">
 	<a href = "../../../imagedownloads/i-imgur-com_2F8632NiU.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../../imagedownloads/i-imgur-com_2F8632NiU.png" style="max-width:75%;" ></a>	<a href = "../../../imagedownloads/i-imgur-com_2FGUssBQd.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../../imagedownloads/i-imgur-com_2FGUssBQd.png" style="max-width:75%;" ></a>	<a href = "../../../imagedownloads/i-imgur-com_2FFdyFUf5.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../../imagedownloads/i-imgur-com_2FFdyFUf5.png" style="max-width:75%;" ></a>	<div class = "image-caption">Three iterations of locks and keys, years apart.</div>
@@ -226,8 +216,7 @@
 					The first few months of 2020 led to a big rework of the RotaryCraft material tiering system, adding the new tungsten gearboxes to fill in the huge leap in material capabilities, as well as address some remarks - going all the way back to early 2019 - that the diamond gears were both far too convenient to not immediately jump to and far too unrealistic. That summer saw yet another old but shelved feature be completed, the structure location map for ChromatiCraft, finally made possible with a new algorithm to more deterministically and regularly place the overworld structures (itself a major change both internally and from a gameplay perspective). Then came the fall, where I tried Satisfactory for the first time, and fell in love with its pink forest, and it was not long before I had created the new mod of Satisforestry.<br>
 					<div class = "block-image">
 	<a href = "../../../imagedownloads/i-imgur-com_2F2w7jbz2.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../../imagedownloads/i-imgur-com_2F2w7jbz2.jpg" style="max-width:75%;" ></a>	<a href = "../../../imagedownloads/i-imgur-com_2FWoEiM9W.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../../imagedownloads/i-imgur-com_2FWoEiM9W.jpg" style="max-width:75%;" ></a>	<a href = "../../../imagedownloads/i-imgur-com_2FVs45i5a.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../../imagedownloads/i-imgur-com_2FVs45i5a.jpg" style="max-width:75%;" ></a>	<a href = "../../../imagedownloads/i-imgur-com_2FG1JdSrC.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../../imagedownloads/i-imgur-com_2FG1JdSrC.jpg" style="max-width:75%;" ></a>	<a href = "../../../imagedownloads/i-imgur-com_2FvwgCTU9.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../../imagedownloads/i-imgur-com_2FvwgCTU9.jpg" style="max-width:75%;" ></a>	<a href = "../../../imagedownloads/i-imgur-com_2FbWzZUVL.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../../imagedownloads/i-imgur-com_2FbWzZUVL.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">The pink forest takes shape.</div>
-</div>
-					<br><br>
+</div><br>
 					Since then, the pattern of adding new content has resumed; it is a mystery as to what the future will bring.
 			</section>
 			<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">

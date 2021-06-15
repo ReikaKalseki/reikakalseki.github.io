@@ -11,7 +11,7 @@
         
 		<script src = "../../browser.js"></script>
 		<script src = "../../library.js"></script>
-		<script src = "../../jquery.js"></script>
+		<!--<script src = "../../jquery.js"></script>-->
 		<script id = "footer-space-script" src = "../../footer-spacing.js"></script>
 		<script id = "background-script" src = "../../factorio/backgroundgen.js"></script>
     </head>
@@ -117,8 +117,7 @@
 </div><br>
 					<div class = "block-image">
 	<a href = "../../imagedownloads/i-imgur-com_2FmrmP4hO.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FmrmP4hO.png" style="max-width:75%;" ></a>	<div class = "image-caption">Sample distribution with Bob's mods, where the greater diversity in ores makes the tiering even more clear.</div>
-</div>
-					<br><br>
+</div><br>
 					There are two generation modes in Oreverhaul. The first simply edits ores already placed by the native game autoplace specifications, deleting "too close to spawn" ores to enforce distance tiering and editing richnesses on a per-tile basis. This mode leaves the ore generation "feeling" mostly vanilla, but cannot apply all the normal effects of distance - for example patches growing in size with increasing distance - and because of the increasingly strict deletion behavior nearer the spawn, can result in the total amount of ore being unexpectedly low. Additionally, due to the possibility of overlapping ore patches of which Oreverhaul deletes one ore, this can result in some strange ore field geometries.
 					<br><br>
 					The second generation mode, the default, completely replaces the autoplace-based ore generation, and places ore patches explicitly, based on the set of ores which can spawn at that distance. This has no issues with ore amounts or placement irregularities, and is much more flexible and reliable, but is slightly less vanilla-feeling, and is marginally more expensive to generate. Additionally, with this mode selected, the "preview" feature in the map settings is no longer accurate for ore placement, and all ore-related map generation settings in the menu (size, frequency, richness) are entirely ignored.
