@@ -89,7 +89,7 @@
 	  </div>
 	</div>
 		<noscript><div style = "text-align: center; width: 100%;"><div id = "nojs-header"><div><img class = "header-alert" src = "../../images/alert.png"></div><div>You have JavaScript disabled; it is recommended you enable it for this site.<br>While the site will (mostly) function with scripts disabled, some sections (eg changelog view, or sortable tables) require it to update the page contents based on your input.<br>Additionally, JS is used to generate page styling, meaning disabling scripts will leave pages ugly, boring, and in some cases poorly arranged in ways that might impede readability.<br>If you have no idea what this means, or have not in fact disabled scripts, try simply reloading the page, as it may not have loaded completely or correctly.</div></div></div></noscript>
-		<div style = "text-align: center; width: 100%;"><div class = "header-alert-box" style = "border-color: red; background-color: #f008 !important; border-width: 4px;">This site is still being built! Not all content is present, and there may be errors in text, function, optimization, or information, and anything is subject to change. <b>Please do not share the site at this time</b>.</div></div>
+		<div style = "text-align: center; width: 100%;"><div class = "header-alert-box" style = "border-color: red; background-color: #f008 !important; color: #fff; border-width: 4px; animation: blinker 3s linear infinite;">This site is still being built! Not all content is present, and there may be errors in text, function, optimization, or information, and anything is subject to change. <b>Please do not share the site at this time</b>.</div></div>
 		<div id="toc_container">
 <h3>Quick Nav</h3>
 <hr>
@@ -115,7 +115,7 @@
 			</section><br>
 			<section class = "textblock" id = "text-block-details">
 				<h3>Details</h3>
-					World rendering in Minecraft can be roughly divided into three blocks: Chunk rendering, entity rendering, and TileEntity (TESR) rendering. The former is done in 16x16x16 subchunks (as the DragonAPI <code>/chgpkt</code> command will show), while the latter are done one by one at whatever position the entity or TileEntity is located at. With Archisections culling active, rendering of these objects is cancelled for any entity or TESR that does not share a zone with you (ie it will not render if you are not in its zone, including if it is not in a zone and you are, and vice versa). Since chunk rendering is segmented, it is culled only if you are in a zone - no chunk culling will take effect if you are outside one - and will cull any subchunk that does not intersect with your zone or its "buffer area" (see below).
+					World rendering in Minecraft can be roughly divided into three blocks: Chunk rendering, entity rendering, and TileEntity (TESR) rendering. The former is done in 16x16x16 subchunks (as the <a href="../../minecraft\mods\dragonapi.html">DragonAPI</a> <code>/chgpkt</code> command will show), while the latter are done one by one at whatever position the entity or TileEntity is located at. With Archisections culling active, rendering of these objects is cancelled for any entity or TESR that does not share a zone with you (ie it will not render if you are not in its zone, including if it is not in a zone and you are, and vice versa). Since chunk rendering is segmented, it is culled only if you are in a zone - no chunk culling will take effect if you are outside one - and will cull any subchunk that does not intersect with your zone or its "buffer area" (see below).
 			</section><br>
 			<section class = "textblock" id = "text-block-usage">
 				<h3>Usage</h3>
@@ -188,8 +188,8 @@
 					<div class = "code-block">
 					46 = TRUE //Marks block ID 46 (TNT) as opaque<br>
 					35$15 = FALSE //Marks block ID 35 with meta 15 (wool, black) as NOT opaque<br>
-					RotaryCraft:blastglass = TRUE //Marks RotaryCraft's 'blastglass' block as opaque<br>
-					ChromatiCraft:crystalglass$0 = TRUE //Marks meta 0 (black) of 'crystalglass' block from ChromatiCraft as opaque<br>
+					<a href="../../minecraft\mods\rotarycraft.html">RotaryCraft</a>:blastglass = TRUE //Marks RotaryCraft's 'blastglass' block as opaque<br>
+					<a href="../../minecraft\mods\chromaticraft.html">ChromatiCraft</a>:crystalglass$0 = TRUE //Marks meta 0 (black) of 'crystalglass' block from ChromatiCraft as opaque<br>
 					</div>
 			</section><br>
 			<section class = "textblock" id = "text-block-demonstration">

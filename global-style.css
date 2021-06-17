@@ -3,6 +3,17 @@ body {
 	overflow-x: hidden;
 }
 
+font a, b a, i a {
+	color: inherit;
+	font-weight: inherit;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0.33;
+  }
+}
+
 .header-alert-box {
 display: inline-block;
 	margin-left: auto;
@@ -295,6 +306,25 @@ audio {
 	/*overflow: hidden;*/
 }
 
+.textarea-error {
+	margin: auto;
+	display:block;
+	margin-top: 75px;
+	width: 80%;
+	background: none !important;
+	padding-left: 12px;
+	padding-right: 12px;
+	padding-top: 6px;
+	padding-bottom: 12px;
+	border: none;
+	font-size: 150%;
+	-webkit-text-stroke: 1px #000;
+	font-weight: 900;
+	color: #fff;
+	/*pointer-events: none;*/
+	/*overflow: hidden;*/
+}
+
 .text-bcg-img {
 	margin: auto;
 	display:block;
@@ -355,7 +385,6 @@ audio {
 
 .error-body {
 	font-family: Calibri;
-	background-image: url("imagedownloads/i-imgur-com_8RWgxVJ.png");
 	background-size:cover;
 	background-repeat:   no-repeat;
 }
