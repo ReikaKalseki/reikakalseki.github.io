@@ -8,11 +8,11 @@
 		<link rel="stylesheet" type="text/css" href="../../global-style.css">
 		<link rel="stylesheet" type="text/css" href="../../se/local-style.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-        
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro">
 		<script src = "../../browser.js"></script>
 		<script src = "../../library.js"></script>
-		<!--<script src = "../../jquery.js"></script>-->
 		<script id = "footer-space-script" src = "../../footer-spacing.js"></script>
+		<!--<script src = "../../jquery.js"></script>-->
 		<script id = "background-script" src = "../../se/backgroundgen.js"></script>
     </head>
     <body >
@@ -81,11 +81,11 @@
 <h3>Quick Nav</h3>
 <hr>
 <table class="toc_list">
-	<tr style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><span><i class="fas fa-angle-double-up"></i></span></button></td></tr>
-		<tr><td><a href="#text-block-description">Description</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-description'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr><td><a href="#text-block-scriptvars">Script Options</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-scriptvars'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr><td><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr><td><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><span><i class="fas fa-angle-double-up"></i></span></button></td></tr>
+		<tr class = "toc-entry"><td><a href="#text-block-description">Description</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-description'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry"><td><a href="#text-block-scriptvars">Script Options</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-scriptvars'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry"><td><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry"><td><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 </table>
 </div>
         <div class = "textarea">
@@ -217,6 +217,22 @@ Return Type: bool<br>
 			Current Default Code:<div class = "code-block">return true;</div>
 		</div>
 	Whether the given cargo container can accept this item when emptied from other locations. This allows item-type-specific sorting.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>isSharedGrid<code>(string name)</code></h4>
+Return Type: bool<br>
+			Current Default Code:<div class = "code-block">return false;</div>
+		</div>
+	Whether cargo, refineries, etc on this grid should be counted as part of the main grid.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4>shutdownWhenDockedTo<code>(string connector, string other, string grid)</code></h4>
+Return Type: bool<br>
+			Current Default Code:<div class = "code-block">return false;</div>
+		</div>
+	Whether to pause all execution when the given connector is connected to the given grid by the given other connector, perhaps so its copy of this script can take precedence.
 </div>
 
 			</div>

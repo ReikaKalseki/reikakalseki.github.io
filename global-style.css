@@ -1,6 +1,9 @@
 body {
-	font-family: Calibri;
+	font-family: "Source Sans Pro", "Ubuntu", "Verdana", sans-serif;
+	font-size: 95%;
 	overflow-x: hidden;
+	line-height: 140%;
+	font-weight: 500;
 }
 
 font a, b a, i a {
@@ -12,6 +15,10 @@ font a, b a, i a {
   50% {
     opacity: 0.33;
   }
+}
+
+.toc-entry {
+	letter-spacing: 1px;
 }
 
 .header-alert-box {
@@ -84,7 +91,7 @@ display: inline-block;
 }
 
 .tocbtn {
-  font-family: Calibri;
+  font-family: "Source Sans Pro", "Ubuntu", "Verdana", sans-serif;
   display: inline-block;
   background-color: #22aaff;
   border: none;
@@ -145,7 +152,7 @@ display: inline-block;
 }
 
 .solnbtn, .dlbtn, .srcbtn {
-  font-family: Calibri;
+  font-family: "Source Sans Pro", "Ubuntu", "Verdana", sans-serif;
   font-weight: 600;
   display: inline-block;
   background-color: #22aaff;
@@ -379,12 +386,19 @@ audio {
 }
 
 .core-body, .other-project-body {
-	font-family: Calibri;
+	font-family: "Source Sans Pro", "Ubuntu", "Verdana", sans-serif;
 	background-image: url("images/text-bcg.png");
+	font-size: 92%;
+	overflow-x: hidden;
+	line-height: 140%;
+	font-weight: 500;
 }
 
 .error-body {
-	font-family: Calibri;
+	font-family: "Source Sans Pro", "Ubuntu", "Verdana", sans-serif;
+	font-size: 92%;
+	overflow-x: hidden;
+	line-height: 140%;
 	background-size:cover;
 	background-repeat:   no-repeat;
 }
@@ -412,7 +426,8 @@ audio {
 	color: #ffffff;
 	text-align: center;
 	transition: 0.3s;
-	font-family: Calibri;
+	font-family: "Source Sans Pro", "Ubuntu", "Verdana", sans-serif;
+	overflow-x: hidden;
 }
 
 .navbar a {
@@ -435,7 +450,7 @@ audio {
 	color: #ffffff;
 	text-align: center;
 	transition: 0.3s;
-	font-family: Calibri;
+	font-family: "Source Sans Pro", "Ubuntu", "Verdana", sans-serif;
 	vertical-align: middle;
 }
 
@@ -470,7 +485,7 @@ audio {
   font-family: inherit;
 	transition: 0.3s;
   margin: 0;
-  font-family: Calibri;
+  font-family: "Source Sans Pro", "Ubuntu", "Verdana", sans-serif;
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
@@ -494,7 +509,7 @@ audio {
   background-color: inherit;
 	transition: 0.15s;
 	font-weight: normal;
-  font-family: Calibri;
+  font-family: "Source Sans Pro", "Ubuntu", "Verdana", sans-serif;
 }
 
 .dropdown-content a {
@@ -508,7 +523,7 @@ audio {
       background: #323232 none repeat scroll 0% 50%;
 	color: #ffffff;
 	font-weight: normal;
-  font-family: Calibri;
+  font-family: "Source Sans Pro", "Ubuntu", "Verdana", sans-serif;
 }
 
 .dropdown-content a:hover {
@@ -531,7 +546,7 @@ audio {
       background: #801010 none repeat scroll 0% 50%;
 	color: #ffffff;
 	font-weight: normal;
-  font-family: Calibri;
+  font-family: "Source Sans Pro", "Ubuntu", "Verdana", sans-serif;
 }
 
 #navimp:hover {
@@ -594,17 +609,20 @@ h2 {
 	margin-top: -6px;
 	margin-bottom: 0px;
 	border-bottom: 4px groove #ddd;
+	letter-spacing: 1px;
 }
 
 h3 {
   margin-top: 4px;
   margin-bottom: 1px;
 	border-bottom: 2px groove #fff;
+	letter-spacing: 0.5px;
 }
 
 h4 {
   margin-top: 2px;
   margin-bottom: 1px;
+	letter-spacing: 0.5px;
 }
 
 table {
@@ -702,7 +720,7 @@ tr:nth-child(even) {
 }
 
 .chgbtn, .verbtn  {
-  font-family: Calibri;
+  font-family: "Source Sans Pro", "Ubuntu", "Verdana", sans-serif;
   font-weight: 600;
   display: inline-block;
   background-color: #22aaff;
@@ -719,7 +737,7 @@ tr:nth-child(even) {
 }
 
 .spotbtn {
-  font-family: Calibri;
+  font-family: "Source Sans Pro", "Ubuntu", "Verdana", sans-serif;
   font-weight: 600;
   display: inline-block;
   background-color: #22aaff;

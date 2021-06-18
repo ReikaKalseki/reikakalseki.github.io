@@ -1,5 +1,7 @@
 function setFooterSize() {		
 				var footer = document.getElementById('footer-block');
+				if (footer == null || typeof(footer) == "undefined")
+					return;
 				var current = footer.getBoundingClientRect().bottom;
 				var height = window.innerHeight;
 				var diff = height-current;
