@@ -100,7 +100,7 @@ function modifyImageLocational(rows, cols,  x, y, idx, img, xmas, hallow) {
 }
 
 function getRandomFunctionalBlock(i, k, idx) {
-	var f = Math.random();
+	var f = Math.random()*1.5;
 	var entry = null;
 	if (f < 0.05) {
 		entry = {image:"gravgen", cargo:false, x:i, y:k, index:idx, sides:["l", "r", "u", "d"]};
@@ -123,6 +123,15 @@ function getRandomFunctionalBlock(i, k, idx) {
 	else if (f < 0.8) {
 		entry = {image:"door", cargo:false, x:i, y:k, index:idx, sides:["l", "r", "u", "d"]};
 	}
+	else if (f < 0.9) {
+		entry = {image:"cent", cargo:true, x:i, y:k, index:idx, sides:["u", "d"]};
+	}
+	else if (f < 1.1) {
+		entry = {image:"blast_b", cargo:true, x:i, y:k, index:idx, sides:["d"]};
+	}
+	else if (f < 1.3) {
+		entry = {image:"stone_br", cargo:true, x:i, y:k, index:idx, sides:["d", "r"]};
+	}
 	else {
 		entry = {image:"cargo", cargo:true, x:i, y:k, index:idx, sides:["l", "r", "u", "d"]};
 	}
@@ -144,11 +153,23 @@ function placeRoom(x, y, rows, cols, front, back, points) {
 	for (var i = 0; i < n; i++) {
 		var px = getRandomBetween(x-w, x+w);
 		var idx = getArrayIndex(cols, px, y+h-2);
+		if (front[idx] != "inner" && front[idx] != "interiorwall" && front[idx] != "air")
+			continue;
 		var entry = getRandomFunctionalBlock(px, y+h-2, idx);
 		front[idx] = entry.image;
 		if (front[idx] == "assembler_b") {
 			front[getArrayIndex(cols, px, y+h-3)] = "assembler_t";
 		}
+		if (front[idx] == "blast_b") {
+			front[getArrayIndex(cols, px, y+h-3)] = "blast_t";
+		}
+			
+		if (front[idx] == "stone_br") {
+			front[getArrayIndex(cols, px, y+h-3)] = "stone_tr";
+			front[getArrayIndex(cols, px-1, y+h-3)] = "stone_tl";
+			front[getArrayIndex(cols, px-1, y+h-2)] = "stone_bl";
+		}
+			
 		if (entry.cargo)
 			points.push(entry);
 	}
@@ -235,11 +256,24 @@ function makeConveyors(rows, cols, front, back, points) {
 				}
 			}
 			else 
-	*/if (front[idx] == "assembler_b") {
+	*/		if (front[idx] == "assembler_b") {
 				front[getArrayIndex(cols, i, k-1)] = "assembler_t";
 			}
 			else if (front[idx] == "assembler_t") {
 				front[getArrayIndex(cols, i, k+1)] = "assembler_b";
+			}
+			
+			if (front[idx] == "blast_b") {
+				front[getArrayIndex(cols, i, k-1)] = "blast_t";
+			}
+			else if (front[idx] == "blast_t") {
+				front[getArrayIndex(cols, i, k+1)] = "blast_b";
+			}
+			
+			if (front[idx] == "stone_br") {
+				front[getArrayIndex(cols, i, k-1)] = "stone_tr";
+				front[getArrayIndex(cols, i-1, k-1)] = "stone_tl";
+				front[getArrayIndex(cols, i-1, k)] = "stone_bl";
 			}
 		}
 	}

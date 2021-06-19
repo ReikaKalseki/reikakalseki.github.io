@@ -8,14 +8,13 @@
 		<link rel="stylesheet" type="text/css" href="../../../global-style.css">
 		<link rel="stylesheet" type="text/css" href="../../../starbound/local-style.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Lato|Exo 2|Ubuntu|Cairo">
 		<script src = "../../../browser.js"></script>
 		<script src = "../../../library.js"></script>
 		<script id = "footer-space-script" src = "../../../footer-spacing.js"></script>
 		<!--<script src = "../../../jquery.js"></script>-->
 			<script src = "../../../simplex.js"></script>
-		<script id = "background-script" src = "../../../starbound/backgroundgen.js"></script>
-    </head>
+<script id = "background-script" src = "../../../starbound/backgroundgen.js"></script>    </head>
     <body >
         	<div id = "navbar" class="navbar">
 	  <a class="navbar-button" href="../../../index.html">Reika's Mods Home</a>
@@ -85,17 +84,17 @@
 			<!--<h2>FAQ</h2>-->
 			<section class = "textblock" id = "text-block-general">
 	<h3>GENERAL</h3>
-		<h4 style = "margin-top: 0px;">"I want to do a mod spotlight. Can I?"</h4>
+		<h4 class = "faq-entry" style = "margin-top: 0px;">"I want to do a mod spotlight. Can I?"</h4>
 		Of course! I always appreciate spotlights, and am willing to work with you to ensure their accuracy and thoroughness.
 </section><br>
 <section class = "textblock" id = "text-block-issues">
 	<h3>ISSUES</h3>
-		<h4 style = "margin-top: 0px;">"I have an error with DisplayOres - (MaterialException) Duplicate material id found for material."</h4>
+		<h4 class = "faq-entry" style = "margin-top: 0px;">"I have an error with DisplayOres - (MaterialException) Duplicate material id found for material."</h4>
 		Starbound, like most other block-based games, assigns block IDs to the various block types and does not do well if two blocks are assigned the same ID (ie a conflict). However, unlike any other ID-using game I make mods for, Starbound only loads static definitions for IDs, with no possibility of making them programmatic, and no system of giving mods "configuration options" to the user. This means that the IDs are effectively hardcoded, and the best modders can do is hope the numbers they picked are free, and update them if not. Since there is no comprehensive list of occupied IDs, nor can one predict what mods the user has...this is effectively impossible. More detail can be found <a href="https://www.reddit.com/r/starboundmods/comments/50ndo1/lets_talk_block_ids/">here</a>.
 </section><br>
 <section class = "textblock" id = "text-block-commentary">
 	<h3>COMMENTARY</h3>
-		<h4 style = "margin-top: 0px;">"Your mods are so old and out of date!"</h4>
+		<h4 class = "faq-entry" style = "margin-top: 0px;">"Your mods are so old and out of date!"</h4>
 		Almost all my starbound modding was done in a few-week time span towards the end of the summer of 2016, when I was between MC server iterations and too preoccupied with real-life time demands to do more complex modding or play more involved games. As a result, despite having played the game for a couple weeks at a time off and on since then - see <a href="../../../starbound\pages\info\history.html">history</a> for details - I have not done much other than make very minor tweaks the mods.Even so, most of them <i>still work</i>, especially the ones that are more important (eg RealCasual, RicherAsteroids, and Moon Overhaul). The only two that I <i>know</i> are nonfunctional are LazyGuards and HealthyCapture, and the latter is a feature in many modern mods, making it much lower priority. Both are script mods, which also means they are rather more of a hassle to repair, and will likely just break again when the game updates again. In fact, a repeated string of updates and breakages towards the end of 2016 is what made me move on from Starbound modding in the first place.
 </section><br>
 
