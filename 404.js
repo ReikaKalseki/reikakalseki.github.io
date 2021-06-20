@@ -1,4 +1,4 @@
-var images = {minecraft:"i-imgur-com_8RWgxVJ.png", stellaris:"i-imgur-com_2F21dYgUx.jpg", fce:"i-imgur-com_2FgNtglD6.jpg", factorio:"i-imgur-com_2F9slqiIR.jpg", p2:"i-imgur-com_2FYCaKfCN.png", se:"i-imgur-com_2F49lF5zd.jpg", starbound:""};
+var images = {minecraft:"i-imgur-com_8RWgxVJ.png", stellaris:"i-imgur-com_2F21dYgUx.jpg", fce:"i-imgur-com_2FgNtglD6.jpg", factorio:"i-imgur-com_2F9slqiIR.jpg", p2:"i-imgur-com_2FYCaKfCN.png", se:"i-imgur-com_2F49lF5zd.jpg", starbound:"i-imgur-com_2FR7PKAx0.png"};
 
 var url = window.location.href;
 var idx = url.indexOf("sitecore");

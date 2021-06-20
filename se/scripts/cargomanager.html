@@ -107,7 +107,7 @@
 				<br>
 				<div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>DISPLAY_TAG</h4>
+			<h4 class = "setting-name">DISPLAY_TAG</h4>
 Type: string<br>
 			Current Default Value:<div class = "code-block">"CargoManagerDisplay"</div>
 		</div>
@@ -115,7 +115,7 @@ Type: string<br>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>EJECTION_GROUP</h4>
+			<h4 class = "setting-name">EJECTION_GROUP</h4>
 Type: string<br>
 			Current Default Value:<div class = "code-block">"Excess Cargo Ejection"</div>
 		</div>
@@ -123,7 +123,7 @@ Type: string<br>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>ENABLE_ORE_SORTING</h4>
+			<h4 class = "setting-name">ENABLE_ORE_SORTING</h4>
 Type: bool<br>
 			Current Default Value:<div class = "code-block">true</div>
 		</div>
@@ -131,7 +131,7 @@ Type: bool<br>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>MOVE_FROM_SMALL_TO_LARGE</h4>
+			<h4 class = "setting-name">MOVE_FROM_SMALL_TO_LARGE</h4>
 Type: bool<br>
 			Current Default Value:<div class = "code-block">true</div>
 		</div>
@@ -139,7 +139,7 @@ Type: bool<br>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>SKIP_OFFLINE_REFINERIES</h4>
+			<h4 class = "setting-name">SKIP_OFFLINE_REFINERIES</h4>
 Type: bool<br>
 			Current Default Value:<div class = "code-block">true</div>
 		</div>
@@ -147,7 +147,7 @@ Type: bool<br>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>ENABLE_O2_GENS</h4>
+			<h4 class = "setting-name">ENABLE_O2_GENS</h4>
 Type: bool<br>
 			Current Default Value:<div class = "code-block">false</div>
 		</div>
@@ -155,7 +155,7 @@ Type: bool<br>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>EJECT_OVERFULL_ITEMS</h4>
+			<h4 class = "setting-name">EJECT_OVERFULL_ITEMS</h4>
 Type: string[]<br>
 			Current Default Value:<div class = "code-block">{"ore/stone", "ingot/stone"}</div>
 		</div>
@@ -163,7 +163,7 @@ Type: string[]<br>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>EJECTION_THRESHOLD</h4>
+			<h4 class = "setting-name">EJECTION_THRESHOLD</h4>
 Type: float<br>
 			Current Default Value:<div class = "code-block">0.9F</div>
 		</div>
@@ -171,7 +171,7 @@ Type: float<br>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>ORE_PRIORITY</h4>
+			<h4 class = "setting-name">ORE_PRIORITY</h4>
 Type: string[]<br>
 			Current Default Value:<div class = "code-block">{"Iron/50000", "Nickel/10000", "Silicon/5000", "Cobalt/2500", "Silver/1000", "Gold/200"}</div>
 		</div>
@@ -179,7 +179,7 @@ Type: string[]<br>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>SORTING</h4>
+			<h4 class = "setting-name">SORTING</h4>
 Type: string[]<br>
 			Current Default Value:<div class = "code-block">{""}</div>
 		</div>
@@ -187,7 +187,7 @@ Type: string[]<br>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>NO_PROCESS</h4>
+			<h4 class = "setting-name">NO_PROCESS</h4>
 Type: string[]<br>
 			Current Default Value:<div class = "code-block">{}</div>
 		</div>
@@ -195,7 +195,7 @@ Type: string[]<br>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>isActualProcessingRefinery<code>(string name)</code></h4>
+			<h4 class = "setting-name">isActualProcessingRefinery<code class = "setting-args">(string name)</code></h4>
 Return Type: bool<br>
 			Current Default Code:<div class = "code-block">return !name.Contains("shieldgenerator"); //Shields ignored by default</div>
 		</div>
@@ -203,7 +203,7 @@ Return Type: bool<br>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>cargoBoxSortOrder<code>(IMyCargoContainer box1, IMyCargoContainer box2)</code></h4>
+			<h4 class = "setting-name">cargoBoxSortOrder<code class = "setting-args">(IMyCargoContainer box1, IMyCargoContainer box2)</code></h4>
 Return Type: int<br>
 			Current Default Code:<div class = "code-block">return box1.CustomName.CompareTo(box2.CustomName); //Default string comparison on their terminal names, which will end up being based on their autogenned numbers</div>
 		</div>
@@ -211,7 +211,7 @@ Return Type: int<br>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>isItemValidForContainer<code>(string itemCategory, string itemType, string containerName)</code></h4>
+			<h4 class = "setting-name">isItemValidForContainer<code class = "setting-args">(string itemCategory, string itemType, string containerName)</code></h4>
 Return Type: bool<br>
 			Current Default Code:<div class = "code-block">return true;</div>
 		</div>
@@ -219,7 +219,7 @@ Return Type: bool<br>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>isSharedGrid<code>(string name)</code></h4>
+			<h4 class = "setting-name">isSharedGrid<code class = "setting-args">(string name)</code></h4>
 Return Type: bool<br>
 			Current Default Code:<div class = "code-block">return false;</div>
 		</div>
@@ -227,7 +227,7 @@ Return Type: bool<br>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>shutdownWhenDockedTo<code>(string connector, string other, string grid)</code></h4>
+			<h4 class = "setting-name">shutdownWhenDockedTo<code class = "setting-args">(string connector, string other, string grid)</code></h4>
 Return Type: bool<br>
 			Current Default Code:<div class = "code-block">return false;</div>
 		</div>

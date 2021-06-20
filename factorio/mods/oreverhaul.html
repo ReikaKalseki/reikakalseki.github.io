@@ -140,31 +140,31 @@
 					The following is the full list of the configuration settings, pulled directly from <a href="https://github.com/ReikaKalseki/Oreverhaul/blob/master/config.lua">the code repository</a>:<br>
 					<div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>oreTierDistances</h4>
+			<h4 class = "setting-name">oreTierDistances</h4>
 Type: Table<br>
-			Current Default Value:<div class = "code-block">{<br>tier0 = 0,<br> tier1 = 40,<br> tier2 = 200,<br> tier3 = 500,<br> tier4 = 1000,<br> tier5 = 2000<br>}</div>
+			Current Default Value:<div class = "code-block">{<br><div class  =  "spacer"></div>tier0 = 0,<br><div class  =  "spacer"></div> tier1 = 40,<br><div class  =  "spacer"></div> tier2 = 200,<br><div class  =  "spacer"></div> tier3 = 500,<br><div class  =  "spacer"></div> tier4 = 1000,<br><div class  =  "spacer"></div> tier5 = 2000<br>}</div>
 		</div>
 	Reasonably self-explanatory. How far (in tiles) must you travel before tier N ores begin to generate? You can also set all tier distances to zero to effectively disable tiering.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>oreTiers</h4>
+			<h4 class = "setting-name">oreTiers</h4>
 Type: Table<br>
-			Current Default Value:<div class = "code-block">{<br>coal = 0,<br> iron-ore = 0,<br> copper-ore = 0,<br> stone = 0,<br> ground-water = 0,<br> tin-ore = 1,<br> lead-ore = 1,<br> quartz = 1,<br> nickel-ore = 2,<br> silver-ore = 2,<br> crude-oil = 2,<br> lithia-water = 2,<br> zinc-ore = 2,<br> sulfur = 2,<br> cobalt-ore = 3,<br> bauxite-ore = 3,<br> gold-ore = 3,<br> gem-ore = 3,<br> rutile-ore = 4,<br> tungsten-ore = 4,<br> uraninite = 5,<br> fluorite = 5,<br> uranium-ore = 5,<br> thorium-ore = 5<br>}</div>
+			Current Default Value:<div class = "code-block">{<br><div class  =  "spacer"></div>coal = 0,<br><div class  =  "spacer"></div> iron-ore = 0,<br><div class  =  "spacer"></div> copper-ore = 0,<br><div class  =  "spacer"></div> stone = 0,<br><div class  =  "spacer"></div> ground-water = 0,<br><div class  =  "spacer"></div> tin-ore = 1,<br><div class  =  "spacer"></div> lead-ore = 1,<br><div class  =  "spacer"></div> quartz = 1,<br><div class  =  "spacer"></div> nickel-ore = 2,<br><div class  =  "spacer"></div> silver-ore = 2,<br><div class  =  "spacer"></div> crude-oil = 2,<br><div class  =  "spacer"></div> lithia-water = 2,<br><div class  =  "spacer"></div> zinc-ore = 2,<br><div class  =  "spacer"></div> sulfur = 2,<br><div class  =  "spacer"></div> cobalt-ore = 3,<br><div class  =  "spacer"></div> bauxite-ore = 3,<br><div class  =  "spacer"></div> gold-ore = 3,<br><div class  =  "spacer"></div> gem-ore = 3,<br><div class  =  "spacer"></div> rutile-ore = 4,<br><div class  =  "spacer"></div> tungsten-ore = 4,<br><div class  =  "spacer"></div> uraninite = 5,<br><div class  =  "spacer"></div> fluorite = 5,<br><div class  =  "spacer"></div> uranium-ore = 5,<br><div class  =  "spacer"></div> thorium-ore = 5<br>}</div>
 		</div>
 	Which ores fit in what tier. Anything not in this list is entirely ignored (deleted and not generated). Adding custom ores is entirely supported; use their internal names. Any specified ore that does not exist is ignored for generation but logged. BobMod ores configured with input from Bobingabout, and so should be reasonably fitting for his progression. AngelOres not included by default since their processing (more advanced resources based on processing the same ore type) is fundamentally incompatible with a distance tiering system. Add them if desired, but there is little point in doing so.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>starterOres</h4>
+			<h4 class = "setting-name">starterOres</h4>
 Type: Table<br>
-			Current Default Value:<div class = "code-block">{<br>coal = 4,<br> iron-ore = 7,<br> copper-ore = 4,<br> stone = 2<br>}</div>
+			Current Default Value:<div class = "code-block">{<br><div class  =  "spacer"></div>coal = 4,<br><div class  =  "spacer"></div> iron-ore = 7,<br><div class  =  "spacer"></div> copper-ore = 4,<br><div class  =  "spacer"></div> stone = 2<br>}</div>
 		</div>
 	Ores that MUST be present near the center. Numerical values are their relative weights (since not all are of equal need in the early game).
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>ignoredOres</h4>
+			<h4 class = "setting-name">ignoredOres</h4>
 Type: List<br>
 			Current Default Value:<div class = "code-block">[geothermal]</div>
 		</div>
@@ -172,12 +172,12 @@ Type: List<br>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 49.75%">
-			<h4>redoOrePlacement</h4>
+			<h4 class = "setting-name">redoOrePlacement</h4>
 Type: Single Value<br>
 			Current Default Value:<div class = "code-block">true</div>
 		</div>
 		<div class = "setting-box" style = "width: 49.75%">
-			<h4>redoSpawnerPlacement</h4>
+			<h4 class = "setting-name">redoSpawnerPlacement</h4>
 Type: Single Value<br>
 			Current Default Value:<div class = "code-block">true</div>
 		</div>
@@ -185,7 +185,7 @@ Type: Single Value<br>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>richnessScaling</h4>
+			<h4 class = "setting-name">richnessScaling</h4>
 Type: Single Value<br>
 			Current Default Value:<div class = "code-block">true</div>
 		</div>
@@ -193,36 +193,36 @@ Type: Single Value<br>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>richnessFactors</h4>
+			<h4 class = "setting-name">richnessFactors</h4>
 Type: Table<br>
-			Current Default Value:<div class = "code-block">{<br>sulfur = 0.6<br>}</div>
+			Current Default Value:<div class = "code-block">{<br><div class  =  "spacer"></div>sulfur = 0.6<br>}</div>
 		</div>
 	Add or modify entries here to add flat richness multipliers by ore type. Unspecified ores default to one. Some ores - notably liquids - are ignored in favor of internal code. No ore has this by default (that I know of).
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>radiusFactors</h4>
+			<h4 class = "setting-name">radiusFactors</h4>
 Type: Table<br>
-			Current Default Value:<div class = "code-block">{<br>sulfur = 0.75<br>}</div>
+			Current Default Value:<div class = "code-block">{<br><div class  =  "spacer"></div>sulfur = 0.75<br>}</div>
 		</div>
 	Add or modify entries here to add flat ore patch size multipliers by ore type. Unspecified ores default to one. No effect on liquids. Some clamping is applied to avoid tiny ore patches (clamped at starter area size). In the base game, stone has a penalty (equivalent to assigning a value of 0.67); this is removed by default since it is usually irritating. Only meaningful if ore generation override is ENABLED.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>antiBias</h4>
+			<h4 class = "setting-name">antiBias</h4>
 Type: Table<br>
-			Current Default Value:<div class = "code-block">{<br>sulfur = 0.8,<br> stone = 0.3<br>}</div>
+			Current Default Value:<div class = "code-block">{<br><div class  =  "spacer"></div>sulfur = 0.8,<br><div class  =  "spacer"></div> stone = 0.3<br>}</div>
 		</div>
 	At a given distance, there is a set of ores which are permitted for generation (determined by distance gating). When an ore patch is to be generated, one entry in that list is selected. Normally every ore is equally likely to generate, being randomly selected from that set; this option allows you to reduce the overall frequency of certain ores (those patches may become something else). Anti-biasing triggers a "reroll" of the ore if the first selection has a corresponding value; it may select the same ore again (with the same chance as before), Anti-biasing is applied once per patch only; even if the new ore is the same as the old one, it will NOT reroll again, nor will it do anything if the new ore also has an anti-bias. The numerical effect of an anti-bias on a certain ore, assuming N possible ores, and an anti-bias of 'f', is a chance reduction from 1/N to (1/N)-((1/N)*f*(1-1/N)). So, for example, if sulfur is one of eight candidate ores, and has a 25% anti-bias, one quarter of the sulfur gets "rerolled", 7/8ths of which becomes something other than sulfur, or a total reduction of 0.125*0.25*0.875. Only meaningful if ore generation override is ENABLED, and does not apply to the start area. Anti-biases must be between zero and one. Values outside this range will at best have no effect and at worst cause serious issues.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 49.75%">
-			<h4>oreMixinSeed</h4>
+			<h4 class = "setting-name">oreMixinSeed</h4>
 Type: Single Value<br>
 			Current Default Value:<div class = "code-block">0</div>
 		</div>
 		<div class = "setting-box" style = "width: 49.75%">
-			<h4>spawnerMixinSeed</h4>
+			<h4 class = "setting-name">spawnerMixinSeed</h4>
 Type: Single Value<br>
 			Current Default Value:<div class = "code-block">0</div>
 		</div>
@@ -230,12 +230,12 @@ Type: Single Value<br>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 49.75%">
-			<h4>offsetX</h4>
+			<h4 class = "setting-name">offsetX</h4>
 Type: Single Value<br>
 			Current Default Value:<div class = "code-block">0</div>
 		</div>
 		<div class = "setting-box" style = "width: 49.75%">
-			<h4>offsetY</h4>
+			<h4 class = "setting-name">offsetY</h4>
 Type: Single Value<br>
 			Current Default Value:<div class = "code-block">0</div>
 		</div>
@@ -243,7 +243,7 @@ Type: Single Value<br>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>oreTierDistanceFactor</h4>
+			<h4 class = "setting-name">oreTierDistanceFactor</h4>
 Type: Single Value<br>
 			Current Default Value:<div class = "code-block">1</div>
 		</div>
@@ -251,7 +251,7 @@ Type: Single Value<br>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>oreRichnessDistanceFactor</h4>
+			<h4 class = "setting-name">oreRichnessDistanceFactor</h4>
 Type: Single Value<br>
 			Current Default Value:<div class = "code-block">1</div>
 		</div>
@@ -259,7 +259,7 @@ Type: Single Value<br>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>oreDistanceFactor</h4>
+			<h4 class = "setting-name">oreDistanceFactor</h4>
 Type: Single Value<br>
 			Current Default Value:<div class = "code-block">1</div>
 		</div>
@@ -267,7 +267,7 @@ Type: Single Value<br>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>oreSizeDistanceFactor</h4>
+			<h4 class = "setting-name">oreSizeDistanceFactor</h4>
 Type: Single Value<br>
 			Current Default Value:<div class = "code-block">1</div>
 		</div>
@@ -275,7 +275,7 @@ Type: Single Value<br>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>spawnerDistanceFactor</h4>
+			<h4 class = "setting-name">spawnerDistanceFactor</h4>
 Type: Single Value<br>
 			Current Default Value:<div class = "code-block">1</div>
 		</div>
@@ -283,7 +283,7 @@ Type: Single Value<br>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>minSpawnerDistance</h4>
+			<h4 class = "setting-name">minSpawnerDistance</h4>
 Type: Single Value<br>
 			Current Default Value:<div class = "code-block">400</div>
 		</div>
@@ -291,7 +291,7 @@ Type: Single Value<br>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>spawnerClustering</h4>
+			<h4 class = "setting-name">spawnerClustering</h4>
 Type: Single Value<br>
 			Current Default Value:<div class = "code-block">1</div>
 		</div>
@@ -299,7 +299,7 @@ Type: Single Value<br>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>oreRichnessScalingFactor</h4>
+			<h4 class = "setting-name">oreRichnessScalingFactor</h4>
 Type: Single Value<br>
 			Current Default Value:<div class = "code-block">2.5</div>
 		</div>
@@ -307,7 +307,7 @@ Type: Single Value<br>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>flatRichnessFactor</h4>
+			<h4 class = "setting-name">flatRichnessFactor</h4>
 Type: Single Value<br>
 			Current Default Value:<div class = "code-block">1</div>
 		</div>
@@ -315,7 +315,7 @@ Type: Single Value<br>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>orePatchChanceFactor</h4>
+			<h4 class = "setting-name">orePatchChanceFactor</h4>
 Type: Single Value<br>
 			Current Default Value:<div class = "code-block">1</div>
 		</div>
@@ -323,7 +323,7 @@ Type: Single Value<br>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>plateauRichness</h4>
+			<h4 class = "setting-name">plateauRichness</h4>
 Type: Single Value<br>
 			Current Default Value:<div class = "code-block">false</div>
 		</div>
@@ -331,7 +331,7 @@ Type: Single Value<br>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>spawnerScaling</h4>
+			<h4 class = "setting-name">spawnerScaling</h4>
 Type: Single Value<br>
 			Current Default Value:<div class = "code-block">true</div>
 		</div>
@@ -339,7 +339,7 @@ Type: Single Value<br>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>spawnerRateFactor</h4>
+			<h4 class = "setting-name">spawnerRateFactor</h4>
 Type: Single Value<br>
 			Current Default Value:<div class = "code-block">1</div>
 		</div>
@@ -347,7 +347,7 @@ Type: Single Value<br>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>clearSmallPatches</h4>
+			<h4 class = "setting-name">clearSmallPatches</h4>
 Type: Single Value<br>
 			Current Default Value:<div class = "code-block">true</div>
 		</div>
@@ -355,12 +355,12 @@ Type: Single Value<br>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 49.75%">
-			<h4>orePatchCondensationStart</h4>
+			<h4 class = "setting-name">orePatchCondensationStart</h4>
 Type: Single Value<br>
 			Current Default Value:<div class = "code-block">1.4</div>
 		</div>
 		<div class = "setting-box" style = "width: 49.75%">
-			<h4>orePatchCondensationEnd</h4>
+			<h4 class = "setting-name">orePatchCondensationEnd</h4>
 Type: Single Value<br>
 			Current Default Value:<div class = "code-block">2</div>
 		</div>
@@ -368,7 +368,7 @@ Type: Single Value<br>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>richnessPerOre</h4>
+			<h4 class = "setting-name">richnessPerOre</h4>
 Type: Single Value<br>
 			Current Default Value:<div class = "code-block">true</div>
 		</div>
@@ -376,7 +376,7 @@ Type: Single Value<br>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>nestHealthFactor</h4>
+			<h4 class = "setting-name">nestHealthFactor</h4>
 Type: Single Value<br>
 			Current Default Value:<div class = "code-block">10</div>
 		</div>
@@ -384,12 +384,12 @@ Type: Single Value<br>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 49.75%">
-			<h4>retrogenOreDistance</h4>
+			<h4 class = "setting-name">retrogenOreDistance</h4>
 Type: Single Value<br>
 			Current Default Value:<div class = "code-block">-1</div>
 		</div>
 		<div class = "setting-box" style = "width: 49.75%">
-			<h4>retrogenSpawnerDistance</h4>
+			<h4 class = "setting-name">retrogenSpawnerDistance</h4>
 Type: Single Value<br>
 			Current Default Value:<div class = "code-block">-1</div>
 		</div>
@@ -397,15 +397,15 @@ Type: Single Value<br>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>retrogenOreSet</h4>
+			<h4 class = "setting-name">retrogenOreSet</h4>
 Type: Single Value<br>
-			Current Default Value:<div class = "code-block">{<br><br>}</div>
+			Current Default Value:<div class = "code-block">{<br><div class  =  "spacer"></div><br>}</div>
 		</div>
 	Which ores to retrogen, if the ore retrogen is enabled. Make empty for "all".
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4>enforceSpawnerTieringForBuiltBases</h4>
+			<h4 class = "setting-name">enforceSpawnerTieringForBuiltBases</h4>
 Type: Single Value<br>
 			Current Default Value:<div class = "code-block">true</div>
 		</div>
@@ -413,12 +413,12 @@ Type: Single Value<br>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 49.75%">
-			<h4>expensiveRecipeMultiplier</h4>
+			<h4 class = "setting-name">expensiveRecipeMultiplier</h4>
 Type: Single Value<br>
 			Current Default Value:<div class = "code-block">1.5</div>
 		</div>
 		<div class = "setting-box" style = "width: 49.75%">
-			<h4>expensiveTechMultiplier</h4>
+			<h4 class = "setting-name">expensiveTechMultiplier</h4>
 Type: Single Value<br>
 			Current Default Value:<div class = "code-block">1.125</div>
 		</div>
