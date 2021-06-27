@@ -1,0 +1,2731 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <link rel="shortcut icon" href="../../../images/favicon.ico">
+        <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+		<meta http-equiv="Cache-control" content="no-cache">
+        <title>Change Logs</title>
+		<link rel="stylesheet" type="text/css" href="../../../global-style.css">
+		<link rel="stylesheet" type="text/css" href="../../../factorio/local-style.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Lato|Exo 2|Ubuntu|Cairo">
+		<script src = "../../../browser.js"></script>
+		<script src = "../../../library.js"></script>
+		<script id = "footer-space-script" src = "../../../footer-spacing.js"></script>
+		<!--<script src = "../../../jquery.js"></script>-->
+			<script src = "../../../changeloader.js"></script>
+<script id = "background-script" src = "../../../factorio/backgroundgen.js"></script>    </head>
+    <body >
+        	<div id = "navbar" class="navbar">
+	  <a class="navbar-button" href="../../../index.html">Reika's Mods Home</a>
+	  <a class="navbar-button" href="../../../factorio/index.html">Factorio Home</a>
+		  <div class="navdropdown">
+			<button class="navdropbtn">Information <i class="fa fa-angle-down"></i></button>
+			<div class="navdrop-content">
+					<a class = "navdrop-entry" href="../../../factorio\pages\info\faq.html">FAQ</a>
+					<a class = "navdrop-entry" href="../../../factorio\pages\info\contact.html">Contact</a>
+					<a class = "navdrop-entry" href="../../../factorio\pages\info\history.html">History</a>
+					<a class = "navdrop-entry" href="../../../factorio\pages\info\changelog.html">Change Logs</a>
+			</div>
+		  </div>
+		  <div class="navdropdown">
+			<button class="navdropbtn">Permissions <i class="fa fa-angle-down"></i></button>
+			<div class="navdrop-content">
+					<a class = "navdrop-entry" href="../../../factorio\pages\perms\license.html">License</a>
+			</div>
+		  </div>
+	  <div class="navdropdown">
+		<button class="navdropbtn">Mods <i class="fa fa-angle-down"></i></button>
+		<div class="navdrop-content">
+				<a class = "navdrop-entry" href="../../../factorio\mods\dragonindustries.html">Dragon Industries</a>
+				<a class = "navdrop-entry" href="../../../factorio\mods\autotraindepot.html">AutoTrainDepot</a>
+				<a class = "navdrop-entry" href="../../../factorio\mods\bioluminescence.html">Bioluminescence</a>
+				<a class = "navdrop-entry" href="../../../factorio\mods\biterbias.html">BiterBias</a>
+				<a class = "navdrop-entry" href="../../../factorio\mods\chokepoint.html">ChokePoint</a>
+				<a class = "navdrop-entry" href="../../../factorio\mods\dewpointaggregator.html">DewPointAggregator</a>
+				<a class = "navdrop-entry" href="../../../factorio\mods\dirtymining.html">DirtyMining</a>
+				<a class = "navdrop-entry" href="../../../factorio\mods\earlyextensions.html">EarlyExtensions</a>
+				<a class = "navdrop-entry" href="../../../factorio\mods\easycreative.html">EasyCreative</a>
+				<a class = "navdrop-entry" href="../../../factorio\mods\endgamecombat.html">EndgameCombat</a>
+				<a class = "navdrop-entry" href="../../../factorio\mods\factorio.html">Factor-I/O</a>
+				<a class = "navdrop-entry" href="../../../factorio\mods\fastfurnaces.html">FastFurnaces</a>
+				<a class = "navdrop-entry" href="../../../factorio\mods\ftweaks.html">FTweaks</a>
+				<a class = "navdrop-entry" href="../../../factorio\mods\geothermal.html">Geothermal</a>
+				<a class = "navdrop-entry" href="../../../factorio\mods\infitech.html">InfiTech</a>
+				<a class = "navdrop-entry" href="../../../factorio\mods\itemfinder.html">ItemFinder</a>
+				<a class = "navdrop-entry" href="../../../factorio\mods\lossprevention.html">LossPrevention</a>
+				<a class = "navdrop-entry" href="../../../factorio\mods\nauvisday.html">NauvisDay</a>
+				<a class = "navdrop-entry" href="../../../factorio\mods\oldwormsound.html">OldWormSound</a>
+				<a class = "navdrop-entry" href="../../../factorio\mods\oreverhaul.html">Oreverhaul</a>
+				<a class = "navdrop-entry" href="../../../factorio\mods\pheromones.html">Pheromones</a>
+				<a class = "navdrop-entry" href="../../../factorio\mods\radionetwork.html">RadioNetwork</a>
+				<a class = "navdrop-entry" href="../../../factorio\mods\rubberbelts.html">RubberBelts</a>
+				<a class = "navdrop-entry" href="../../../factorio\mods\treeplant.html">T-Re(e)plant</a>
+				<a class = "navdrop-entry" href="../../../factorio\mods\turmoil.html">TurmOil</a>
+		</div>
+	  </div>
+	  <div class="navdropdown">
+		<button class="navdropbtn">Other Games <i class="fa fa-angle-down"></i></button>
+		<div class="navdrop-content">
+				<a class = "navdrop-entry" href="../../../minecraft/index.html">Minecraft</a>
+				<a class = "navdrop-entry" href="../../../p2/index.html">Portal 2</a>
+				<a class = "navdrop-entry" href="../../../stellaris/index.html">Stellaris</a>
+				<a class = "navdrop-entry" href="../../../se/index.html">Space Engineers</a>
+				<a class = "navdrop-entry" href="../../../fce/index.html">FortressCraft Evolved</a>
+				<a class = "navdrop-entry" href="../../../starbound/index.html">Starbound</a>
+		</div>
+	  </div>
+	  <div class="navdropdown">
+		<button class="navdropbtn">Other Projects <i class="fa fa-angle-down"></i></button>
+		<div class="navdrop-content">
+				<a class = "navdrop-entry" href="../../../projects/calendar.html">Game Calendar</a>
+				<a class = "navdrop-entry" href="../../../projects/eventbuilder.html">Stellaris Event Builder</a>
+				<a class = "navdrop-entry" href="../../../projects/fcompile.html">FCompile</a>
+		</div>
+	  </div>
+	</div>
+		<noscript><div style = "text-align: center; width: 100%;"><div id = "nojs-header"><div><img class = "header-alert" src = "../../../images/alert.png"></div><div>You have JavaScript disabled; it is recommended you enable it for this site.<br>While the site will (mostly) function with scripts disabled, some sections (eg changelog view, or sortable tables) require it to update the page contents based on your input.<br>Additionally, JS is used to generate page styling, meaning disabling scripts will leave pages ugly, boring, and in some cases poorly arranged in ways that might impede readability.<br>If you have no idea what this means, or have not in fact disabled scripts, try simply reloading the page, as it may not have loaded completely or correctly.</div></div></div></noscript>
+		<div style = "text-align: center; width: 100%;"><div class = "header-alert-box" style = "border-color: red; background-color: #f008 !important; color: #fff; border-width: 4px; animation: blinker 3s linear infinite;">This site is still being built! Not all content is present, and there may be errors in text, function, optimization, or information, and anything is subject to change. <b>Please do not share the site at this time</b>.</div></div>
+		
+        <div class = "textarea">
+			<!--<h2>Change Logs</h2>-->
+			<h3>Introduction</h3>
+These are the changelogs for all the mods going back as far as they have been kept, sorted by game and mod version. Click a button to load the changes made in that version; the presence of any mod and its changes in the displayed data can be toggled with the options below.<br><br>Note that I have not always kept changelogs, nor equally good ones; as you go back, changelogs may be missing data such as their release date or game version, or even be absent entirely. This also means the "Game Version" ranges below may not be fully accurate for the earliest releases, which may predate any changelog efforts, and where manual reconstruction was attempted. Furthermore, where I have record of changes but incomplete record of releases, the changes will be attributed to the soonest release after the change I can confirm, which may not be the actual release date of that change.<br><br>Finally, the display data you see here is autogenerated by parsing existing written changelogs in other forms, and as such I cannot guarantee that it not have the occasional error such as a missing change or incorrect date ranges in the table below.
+<br><br>
+<h3>Mods</h3>
+<table class = "changetable">
+  <tr>
+	<th style = "width: 25%;">
+		Mod Name
+	</th>
+	<th style = "width: 20%;">
+		Game Version Range
+	</th>
+	<th style = "width: 25%;">
+		Changelog Data Range
+	</th>
+	<th style = "width: 20%;">
+		Latest Available Version
+	</th>
+	<th style = "width: 10%;">
+		Show Changes
+	</th>
+  </tr>
+<tr>
+<td><a href = "../../../factorio\mods\dragonindustries.html">Dragon Industries</a></td>
+<td>0.17 - 1.1</td>
+<td>1.17.6 [0.17] - 1.101.1 [1.1]</td>
+<td>1.105.1 [1.1]</td>
+<td><input type="checkbox" class="modchangecheck" data-value = "dragonindustries" data-mod = "Dragon Industries" onclick = "updateChangeData()" checked></td>
+</tr>
+<tr>
+<td><a href = "../../../factorio\mods\autotraindepot.html">AutoTrainDepot</a></td>
+<td>0.16 - 1.1</td>
+<td>1.0.96 [0.16] - 1.105.1 [1.1]</td>
+<td>1.105.1 [1.1]</td>
+<td><input type="checkbox" class="modchangecheck" data-value = "autotraindepot" data-mod = "AutoTrainDepot" onclick = "updateChangeData()" checked></td>
+</tr>
+<tr>
+<td><a href = "../../../factorio\mods\bioluminescence.html">Bioluminescence</a></td>
+<td>0.16 - 1.1</td>
+<td>13/10/2018 [0.16] - 1.105.1 [1.1]</td>
+<td>1.105.1 [1.1]</td>
+<td><input type="checkbox" class="modchangecheck" data-value = "bioluminescence" data-mod = "Bioluminescence" onclick = "updateChangeData()" checked></td>
+</tr>
+<tr>
+<td><a href = "../../../factorio\mods\biterbias.html">BiterBias</a></td>
+<td>0.12 - 1.1</td>
+<td>12/12/2015 [0.12] - 1.105.1 [1.1]</td>
+<td>1.105.1 [1.1]</td>
+<td><input type="checkbox" class="modchangecheck" data-value = "biterbias" data-mod = "BiterBias" onclick = "updateChangeData()" checked></td>
+</tr>
+<tr>
+<td><a href = "../../../factorio\mods\chokepoint.html">ChokePoint</a></td>
+<td>0.16 - 1.1</td>
+<td>12/12/2017 [0.16] - 1.102.1 [1.1]</td>
+<td>1.105.1 [1.1]</td>
+<td><input type="checkbox" class="modchangecheck" data-value = "chokepoint" data-mod = "ChokePoint" onclick = "updateChangeData()" checked></td>
+</tr>
+<tr>
+<td><a href = "../../../factorio\mods\dewpointaggregator.html">DewPointAggregator</a></td>
+<td>0.16 - 1.1</td>
+<td>16/08/2018 [0.16] - 1.102.1 [1.1]</td>
+<td>1.105.1 [1.1]</td>
+<td><input type="checkbox" class="modchangecheck" data-value = "dewpointaggregator" data-mod = "DewPointAggregator" onclick = "updateChangeData()" checked></td>
+</tr>
+<tr>
+<td><a href = "../../../factorio\mods\dirtymining.html">DirtyMining</a></td>
+<td>0.15 - 1.1</td>
+<td>02/08/2017 [0.15] - 1.102.1 [1.1]</td>
+<td>1.105.1 [1.1]</td>
+<td><input type="checkbox" class="modchangecheck" data-value = "dirtymining" data-mod = "DirtyMining" onclick = "updateChangeData()" checked></td>
+</tr>
+<tr>
+<td><a href = "../../../factorio\mods\earlyextensions.html">EarlyExtensions</a></td>
+<td>0.18 - 1.1</td>
+<td>01/06/2020 [0.18] - 1.105.1 [1.1]</td>
+<td>1.105.1 [1.1]</td>
+<td><input type="checkbox" class="modchangecheck" data-value = "earlyextensions" data-mod = "EarlyExtensions" onclick = "updateChangeData()" checked></td>
+</tr>
+<tr>
+<td><a href = "../../../factorio\mods\easycreative.html">EasyCreative</a></td>
+<td>0.16 - 1.1</td>
+<td>1.0.115 [0.16] - 1.102.1 [1.1]</td>
+<td>1.105.1 [1.1]</td>
+<td><input type="checkbox" class="modchangecheck" data-value = "easycreative" data-mod = "EasyCreative" onclick = "updateChangeData()" checked></td>
+</tr>
+<tr>
+<td><a href = "../../../factorio\mods\endgamecombat.html">EndgameCombat</a></td>
+<td>0.11 - 1.1</td>
+<td>0.0.0 [0.11] - 1.105.1 [1.1]</td>
+<td>1.105.1 [1.1]</td>
+<td><input type="checkbox" class="modchangecheck" data-value = "endgamecombat" data-mod = "EndgameCombat" onclick = "updateChangeData()" checked></td>
+</tr>
+<tr>
+<td><a href = "../../../factorio\mods\factorio.html">Factor-I/O</a></td>
+<td>0.16 - 1.1</td>
+<td>1.0.96 [0.16] - 1.102.1 [1.1]</td>
+<td>1.105.1 [1.1]</td>
+<td><input type="checkbox" class="modchangecheck" data-value = "factorio" data-mod = "Factor-I/O" onclick = "updateChangeData()" checked></td>
+</tr>
+<tr>
+<td><a href = "../../../factorio\mods\fastfurnaces.html">FastFurnaces</a></td>
+<td>0.12 - 1.1</td>
+<td>24/11/2015 [0.12] - 1.105.1 [1.1]</td>
+<td>1.105.1 [1.1]</td>
+<td><input type="checkbox" class="modchangecheck" data-value = "fastfurnaces" data-mod = "FastFurnaces" onclick = "updateChangeData()" checked></td>
+</tr>
+<tr>
+<td><a href = "../../../factorio\mods\ftweaks.html">FTweaks</a></td>
+<td>0.12 - 1.1</td>
+<td>03/12/2015 [0.12] - 1.105.1 [1.1]</td>
+<td>1.105.1 [1.1]</td>
+<td><input type="checkbox" class="modchangecheck" data-value = "ftweaks" data-mod = "FTweaks" onclick = "updateChangeData()" checked></td>
+</tr>
+<tr>
+<td><a href = "../../../factorio\mods\geothermal.html">Geothermal</a></td>
+<td>0.15 - 1.1</td>
+<td>17/06/2017 [0.15] - 1.105.1 [1.1]</td>
+<td>1.105.1 [1.1]</td>
+<td><input type="checkbox" class="modchangecheck" data-value = "geothermal" data-mod = "Geothermal" onclick = "updateChangeData()" checked></td>
+</tr>
+<tr>
+<td><a href = "../../../factorio\mods\infitech.html">InfiTech</a></td>
+<td>0.12 - 1.1</td>
+<td>27/11/2015 [0.12] - 1.105.1 [1.1]</td>
+<td>1.105.1 [1.1]</td>
+<td><input type="checkbox" class="modchangecheck" data-value = "infitech" data-mod = "InfiTech" onclick = "updateChangeData()" checked></td>
+</tr>
+<tr>
+<td><a href = "../../../factorio\mods\itemfinder.html">ItemFinder</a></td>
+<td>0.16 - 1.1</td>
+<td>1.0.150 [0.16] - 1.102.1 [1.1]</td>
+<td>1.105.1 [1.1]</td>
+<td><input type="checkbox" class="modchangecheck" data-value = "itemfinder" data-mod = "ItemFinder" onclick = "updateChangeData()" checked></td>
+</tr>
+<tr>
+<td><a href = "../../../factorio\mods\lossprevention.html">LossPrevention</a></td>
+<td>0.16 - 1.1</td>
+<td>1.0.132 [0.16] - 1.102.1 [1.1]</td>
+<td>1.105.1 [1.1]</td>
+<td><input type="checkbox" class="modchangecheck" data-value = "lossprevention" data-mod = "LossPrevention" onclick = "updateChangeData()" checked></td>
+</tr>
+<tr>
+<td><a href = "../../../factorio\mods\nauvisday.html">NauvisDay</a></td>
+<td>0.15 - 1.1</td>
+<td>21/06/2017 [0.15] - 1.105.1 [1.1]</td>
+<td>1.105.1 [1.1]</td>
+<td><input type="checkbox" class="modchangecheck" data-value = "nauvisday" data-mod = "NauvisDay" onclick = "updateChangeData()" checked></td>
+</tr>
+<tr>
+<td><a href = "../../../factorio\mods\oldwormsound.html">OldWormSound</a></td>
+<td>0.15 - 1.1</td>
+<td>23/06/2017 [0.15] - 1.102.1 [1.1]</td>
+<td>1.105.1 [1.1]</td>
+<td><input type="checkbox" class="modchangecheck" data-value = "oldwormsound" data-mod = "OldWormSound" onclick = "updateChangeData()" checked></td>
+</tr>
+<tr>
+<td><a href = "../../../factorio\mods\oreverhaul.html">Oreverhaul</a></td>
+<td>0.12 - 1.1</td>
+<td>04/06/2016 [0.12] - 1.105.1 [1.1]</td>
+<td>1.105.1 [1.1]</td>
+<td><input type="checkbox" class="modchangecheck" data-value = "oreverhaul" data-mod = "Oreverhaul" onclick = "updateChangeData()" checked></td>
+</tr>
+<tr>
+<td><a href = "../../../factorio\mods\pheromones.html">Pheromones</a></td>
+<td>0.17 - 1.1</td>
+<td>30/11/2019 [0.17] - 1.105.1 [1.1]</td>
+<td>1.105.1 [1.1]</td>
+<td><input type="checkbox" class="modchangecheck" data-value = "pheromones" data-mod = "Pheromones" onclick = "updateChangeData()" checked></td>
+</tr>
+<tr>
+<td><a href = "../../../factorio\mods\radionetwork.html">RadioNetwork</a></td>
+<td>0.16 - 1.1</td>
+<td>02/10/2018 [0.16] - 1.102.1 [1.1]</td>
+<td>1.105.1 [1.1]</td>
+<td><input type="checkbox" class="modchangecheck" data-value = "radionetwork" data-mod = "RadioNetwork" onclick = "updateChangeData()" checked></td>
+</tr>
+<tr>
+<td><a href = "../../../factorio\mods\rubberbelts.html">RubberBelts</a></td>
+<td>0.15 - 1.1</td>
+<td>0.0.20 [0.15] - 1.105.1 [1.1]</td>
+<td>1.105.1 [1.1]</td>
+<td><input type="checkbox" class="modchangecheck" data-value = "rubberbelts" data-mod = "RubberBelts" onclick = "updateChangeData()" checked></td>
+</tr>
+<tr>
+<td><a href = "../../../factorio\mods\treeplant.html">T-Re(e)plant</a></td>
+<td>0.12 - 1.1</td>
+<td>13/12/2015 [0.12] - 1.105.1 [1.1]</td>
+<td>1.105.1 [1.1]</td>
+<td><input type="checkbox" class="modchangecheck" data-value = "treeplant" data-mod = "T-Re(e)plant" onclick = "updateChangeData()" checked></td>
+</tr>
+<tr>
+<td><a href = "../../../factorio\mods\turmoil.html">TurmOil</a></td>
+<td>0.17 - 1.1</td>
+<td>1.17.18 [0.17] - 1.102.1 [1.1]</td>
+<td>1.105.1 [1.1]</td>
+<td><input type="checkbox" class="modchangecheck" data-value = "turmoil" data-mod = "TurmOil" onclick = "updateChangeData()" checked></td>
+</tr>
+</table>
+<br><br>
+<div style = "display: none">
+	<div id = "mod-version-list-1.1">
+			<div class = "mod-version-list-entry" data-date = "April 28, 2021">1.105.1</div>
+			<div class = "mod-version-list-entry" data-date = "March 27, 2021">1.102.1</div>
+			<div class = "mod-version-list-entry" data-date = "March 25, 2021">1.101.1</div>
+	</div>
+			<div class = "changelog-data-cache" id = "1.1|1.105.1|autotraindepot"><ul class = "changelist">				
+					<li>1.1 Update</li>
+					<li>Further redesign of depot handling of inserters and cleaning thereof to improve reliability</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.1|1.105.1|bioluminescence"><ul class = "changelist">				
+					<li>1.1 Update</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.1|1.105.1|biterbias"><ul class = "changelist">				
+					<li>Increase max bias factor from 0.99 to 1.0</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.1|1.105.1|earlyextensions"><ul class = "changelist">				
+					<li>Update to 1.1</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.1|1.105.1|endgamecombat"><ul class = "changelist">				
+					<li>Update to 1.1</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.1|1.105.1|fastfurnaces"><ul class = "changelist">				
+					<li>Update to 1.1</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.1|1.105.1|ftweaks"><ul class = "changelist">				
+					<li>Update to 1.1</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.1|1.105.1|geothermal"><ul class = "changelist">				
+					<li>Added new better patch graphics (again)</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.1|1.105.1|infitech"><ul class = "changelist">				
+					<li>More 1.1 fixes</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.1|1.105.1|nauvisday"><ul class = "changelist">				
+					<li>Update to 1.1</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.1|1.105.1|oreverhaul"><ul class = "changelist">				
+					<li>Changed some ore parameters again</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.1|1.105.1|pheromones"><ul class = "changelist">				
+					<li>Hid venting recipe (technical)</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.1|1.105.1|rubberbelts"><ul class = "changelist">				
+					<li>Added belt upcrafting recipe missing since 0.17 update</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.1|1.105.1|treeplant"><ul class = "changelist">				
+					<li>More 1.1 fixes and mod compat</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.1|1.102.1|biterbias"><ul class = "changelist">				
+					<li>Update to 1.1</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.1|1.102.1|chokepoint"><ul class = "changelist">				
+					<li>Update to 1.1</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.1|1.102.1|dewpointaggregator"><ul class = "changelist">				
+					<li>Update to 1.1</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.1|1.102.1|dirtymining"><ul class = "changelist">				
+					<li>Update to 1.1</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.1|1.102.1|easycreative"><ul class = "changelist">				
+					<li>Update to 1.1</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.1|1.102.1|factorio"><ul class = "changelist">				
+					<li>Update to 1.1</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.1|1.102.1|infitech"><ul class = "changelist">				
+					<li>Update to 1.1</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.1|1.102.1|itemfinder"><ul class = "changelist">				
+					<li>Update to 1.1</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.1|1.102.1|lossprevention"><ul class = "changelist">				
+					<li>Update to 1.1</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.1|1.102.1|oldwormsound"><ul class = "changelist">				
+					<li>Update to 1.1</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.1|1.102.1|oreverhaul"><ul class = "changelist">				
+					<li>Update to 1.1</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.1|1.102.1|pheromones"><ul class = "changelist">				
+					<li>Update to 1.1</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.1|1.102.1|radionetwork"><ul class = "changelist">				
+					<li>Update to 1.1</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.1|1.102.1|rubberbelts"><ul class = "changelist">				
+					<li>Update to 1.1</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.1|1.102.1|treeplant"><ul class = "changelist">				
+					<li>Update to 1.1</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.1|1.102.1|turmoil"><ul class = "changelist">				
+					<li>Update to 1.1</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.1|1.101.1|dragonindustries"><ul class = "changelist">				
+					<li>Update to 1.1</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.1|1.101.1|geothermal"><ul class = "changelist">				
+					<li>Update to 1.1</li>
+</ul>
+			</div>
+	<div id = "mod-version-list-1.0">
+			<div class = "mod-version-list-entry" data-date = "November 15, 2020">1.18.24</div>
+			<div class = "mod-version-list-entry" data-date = "August 10, 2020">1.18.18</div>
+	</div>
+			<div class = "changelog-data-cache" id = "1.0|1.18.24|dragonindustries"><ul class = "changelist">				
+					<li>Improved item lookups</li>
+					<li>Improved recipe mod compatibility</li>
+					<li>Inherited biome color system from Bioluminescence</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|1.18.24|autotraindepot"><ul class = "changelist">				
+					<li>Added custom sound for unloader</li>
+					<li>Unloader now uses large amounts of power</li>
+					<li>Fixed unloader and reloader sleeping forever at times</li>
+					<li>Added option to make unloader an inserter type entity rather than a loader</li>
+					<li>Changed unloader recipe</li>
+					<li>Tweaked some technology costs</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|1.18.24|bioluminescence"><ul class = "changelist">				
+					<li>Moved biome color code to Dragon Industries</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|1.18.24|endgamecombat"><ul class = "changelist">				
+					<li>Added option to require a unique orbital destroyer launch for each automated orbital destroyer unit on the ground</li>
+					<li>Biters building new bases now automatically schedules new orbital strikes there, as well as an alert</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|1.18.24|ftweaks"><ul class = "changelist">				
+					<li>Increased item collector equipment range from 40 to 60</li>
+					<li>Removed Schall changes</li>
+					<li>Added handling for AAI industry for early upcrafting recipes and armor tiering</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|1.18.24|geothermal"><ul class = "changelist">				
+					<li>Hid cooling geothermal water (technical fluid)</li>
+					<li>Removed blacklist of beacon effects from well</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|1.18.24|infitech"><ul class = "changelist">				
+					<li>Added research speed and worker robot capacity tech</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|1.18.24|nauvisday"><ul class = "changelist">				
+					<li>Added setting for clean refinery speed</li>
+					<li>More mod compat fixes for clean refinery</li>
+					<li>Clean refinery now better respects normal/expensive recipes</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|1.18.24|oreverhaul"><ul class = "changelist">				
+					<li>Doubled stone anti-bias</li>
+					<li>Changed many spawner generation values again</li>
+					<li>Added "Spawner clustering" option</li>
+					<li>Added "reinitializeOreRichness" command to edit richnesses of nearby ore to match new configs</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|1.18.24|treeplant"><ul class = "changelist">				
+					<li>Added sapling drop rate option</li>
+					<li>Added code to clean up biters stuck forever attacking indestructible trees and rocks</li>
+					<li>Improved rock handling mod compat</li>
+					<li>Improved decorative preservation</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|1.18.18|dragonindustries"><ul class = "changelist">				
+					<li>Added more library functions</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|1.18.18|autotraindepot"><ul class = "changelist">				
+					<li>Redesigned custom train GUI</li>
+					<li>Depots now have a GUI of their own</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|1.18.18|bioluminescence"><ul class = "changelist">				
+					<li>Added option to use entity lights again instead of script lights, to further improve FPS at the cost of risk of straggler entities</li>
+					<li>Added fixes for custom units that should not be assigned lights</li>
+					<li>Converted old light entities from rail chain signals to lamps to avoid weird interactions with rails that were a problem in 0.16</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|1.18.18|easycreative"><ul class = "changelist">				
+					<li>Improved upgrade handling</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|1.18.18|endgamecombat"><ul class = "changelist">				
+					<li>Doubled effect of lightning turret recharge tech</li>
+					<li>Further improved turret cache reliability</li>
+					<li>Reimplemented capsule dump equipment</li>
+					<li>Increased napalm shell AoE</li>
+					<li>Added shield dome reboot FX</li>
+					<li>Fixed artillery AoE damaging friendly structures</li>
+					<li>Re-added train mass increase (with modern improvements) after witnessing a high-speed train stop dead in its tracks after hitting some biters (https:</li>
+					<li>Changed some recipe and tech costs</li>
+					<li>Lightning turrets now take massively increased damage from biters but reduced damage from spitters</li>
+					<li>Fixed turret logi chest stacking due to repeated recreation</li>
+					<li>Slightly increased artillery logi request</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|1.18.18|ftweaks"><ul class = "changelist">				
+					<li>Added option and function to increase artillery range and (if EGCombat is not installed) damage</li>
+					<li>Added optional Item Collector equipment</li>
+					<li>Advanced satellite now requires space science, not just rocket silo</li>
+					<li>Removed now-native changes to Bob Electrolyzer 3 (tungsten vs aluminum)</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|1.18.18|infitech"><ul class = "changelist">				
+					<li>Unretired</li>
+					<li>Update to 0.18</li>
+					<li>Added inserter capacity tech</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|1.18.18|itemfinder"><ul class = "changelist">				
+					<li>Added optional range parameter to command</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|1.18.18|nauvisday"><ul class = "changelist">				
+					<li>Added tech to enable speed and efficiency module beacon effects on storage wells, as well as a base speed increase</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|1.18.18|radionetwork"><ul class = "changelist">				
+					<li>Added setting for comms satellite space science yield, if any</li>
+					<li>Fixed bug in range calculations</li>
+</ul>
+			</div>
+	<div id = "mod-version-list-0.18">
+			<div class = "mod-version-list-entry" data-date = "July 28, 2020">1.18.15</div>
+			<div class = "mod-version-list-entry" data-date = "July 5, 2020">1.18.12</div>
+			<div class = "mod-version-list-entry" data-date = "June 29, 2020">1.18.10</div>
+			<div class = "mod-version-list-entry" data-date = "June 15, 2020">1.18.6</div>
+			<div class = "mod-version-list-entry" data-date = "June 11, 2020">1.18.5</div>
+			<div class = "mod-version-list-entry" data-date = "June 7, 2020">1.18.3</div>
+			<div class = "mod-version-list-entry" data-date = "June 1, 2020">01/06/2020</div>
+			<div class = "mod-version-list-entry" data-date = "May 29, 2020">1.18.1</div>
+	</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.15|dragonindustries"><ul class = "changelist">				
+					<li>Fixed error in resistance handling</li>
+					<li>Fixed conversion recipes being used as intermediates</li>
+					<li>Fixed conversion recipes sometimes giving nothing</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.15|easycreative"><ul class = "changelist">				
+					<li>Cleaned up refill command system</li>
+					<li>Added functionality to automatically and instantly perform planned upgrades</li>
+					<li>Added inventory emptying area selector</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.15|endgamecombat"><ul class = "changelist">				
+					<li>Removed debug prints</li>
+					<li>Fixed handling of capsule damage and mod compat</li>
+					<li>Moved shield dome circuit connection relative to dome</li>
+					<li>Shield domes now have new modern graphics</li>
+					<li>Fixed some missing locale from 0.17 update</li>
+					<li>Redesigned plasma laser defence equipment, which had been unchanged since 2015</li>
+					<li>Removed 2015-era train mass increases</li>
+					<li>Changed uranium costs in some recipes</li>
+					<li>Added setting to add major AoE damage to artillery shell impact</li>
+					<li>Fixed turret logi chests sometimes surviving the removal of the parent entity or being placed wrong</li>
+					<li>Strongly reduced artillery logi request</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.15|ftweaks"><ul class = "changelist">				
+					<li>Added option and function to make cliff explosives cheaper</li>
+					<li>Added upcrafting recipe from steam engine to steam turbine</li>
+					<li>Added code to prevent inserters from interacting with Helicopters, preventing the need for its "disable nearby inserters" option</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.15|geothermal"><ul class = "changelist">				
+					<li>Added setting for byproduct production rate</li>
+					<li>Increased base byproduct rate four times</li>
+					<li>Added missing locale</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.15|nauvisday"><ul class = "changelist">				
+					<li>Increased pollution storage well speed 20%</li>
+					<li>Fixed more mod compat issues with clean refinery</li>
+					<li>Fixed missing locale for soft resin</li>
+					<li>Deaeros now support the upgrade system</li>
+					<li>Soft resin now disallows building and can be filled with landfill</li>
+					<li>Soft resin placement now cannot delete entities</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.12|autotraindepot"><ul class = "changelist">				
+					<li>Reworked technology costs</li>
+					<li>Added more missing locale</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.12|endgamecombat"><ul class = "changelist">				
+					<li>Added support for the native upgrading system on improved turrets and walls</li>
+					<li>Fixed some sprite issues</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.12|fastfurnaces"><ul class = "changelist">				
+					<li>Added mod compat with Iconography</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.12|nauvisday"><ul class = "changelist">				
+					<li>Added handling for fluid flushing to prevent free waste disposal</li>
+					<li>Marked "air filter" item as catalyst in clean refinery</li>
+					<li>Removed stone from the "resource production" watcher due to its being made as byproducts in other recipes</li>
+					<li>Added alert for wall nuker spawn</li>
+					<li>Markedly increased emissions for several recipes, including concrete, steel, basic oil, and coal liquefaction</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.12|oreverhaul"><ul class = "changelist">				
+					<li>Removed copper anti-bias</li>
+					<li>Increased default T2 and T3 ore distances</li>
+					<li>Added "min spawner distance" setting</li>
+					<li>Changed many spawner generation values</li>
+					<li>Reduced ore patch count 10%</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.12|treeplant"><ul class = "changelist">				
+					<li>Added option to make decoratives replanted around placed entities</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.10|dragonindustries"><ul class = "changelist">				
+					<li>Added more library functions</li>
+					<li>Redirected getTableSize to native table_size</li>
+					<li>Added ore cache</li>
+					<li>Greatly expanded recipe handling</li>
+					<li>Improved sprite handling comprehensiveness</li>
+					<li>Inherited conversion recipe sprites from FTweaks</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.10|chokepoint"><ul class = "changelist">				
+					<li>Made traversible shores an option</li>
+					<li>Added a variant of voronoicells and made it the default</li>
+					<li>Improved shallow water generation</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.10|dirtymining"><ul class = "changelist">				
+					<li>Rebalanced pollution levels for 0.17 values</li>
+					<li>Further improved modded ore handling</li>
+					<li>Added missing locale</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.10|earlyextensions"><ul class = "changelist">				
+					<li>Added early version of splitter recipe</li>
+					<li>Added upcrafting recipes for burner lab and assembler</li>
+					<li>Changed automated transport tech icon</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.10|endgamecombat"><ul class = "changelist">				
+					<li>Improved code performance</li>
+					<li>Tweaked turret targeting based on biter health to better allocate turrets in mixed type attack waves</li>
+					<li>Added option to buff green worms similar to the old one to buff green biters</li>
+					<li>Plasma turrets now have aiming and shutdown sounds</li>
+					<li>Made later game range techs more gated</li>
+					<li>Reduced some tech costs in raw pack count</li>
+					<li>Changed some ammo recipes to better reflect a cheap/expensive recipes split</li>
+					<li>T2 flamethrower and napalm shells now do a unique kind of damage, bypassing normal fire resistances unless that resistance is 100%</li>
+					<li>Rebalanced supercavitating ammo damage profile</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.10|fastfurnaces"><ul class = "changelist">				
+					<li>Added support for native upgrade system</li>
+					<li>Improved fast replace groups</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.10|geothermal"><ul class = "changelist">				
+					<li>Added geothermal fluid filtering</li>
+					<li>Added new heat exchanger sprites</li>
+					<li>Added advanced electronics tech prereq to T1 and production science to T2</li>
+					<li>Redesigned heat exchanger and well recipes to be more distinct from each other</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.10|nauvisday"><ul class = "changelist">				
+					<li>Reduced early-game pollution slightly</li>
+					<li>Increased tree pollution absorption</li>
+					<li>Added EE compat for "Attack greenlighting"</li>
+					<li>Added conversion recipes to convert to and from steam furnaces and their base counterparts</li>
+					<li>Fixed crash with resource extraction detection</li>
+					<li>Tweaked spawner-kill biter calming reset penalty</li>
+					<li>Made mining pollution blocks emit 2.5x as much pollution as before</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.10|oreverhaul"><ul class = "changelist">				
+					<li>Added small copper anti-bias</li>
+					<li>Re-added sulfur to default ore list</li>
+					<li>Reduced ore patch count in starting area</li>
+					<li>Fixed the default configs always being my personal settings, instead zeroing/one-ing them all</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.10|turmoil"><ul class = "changelist">				
+					<li>Added setting to revert flamethrower ammo recipe to 0.16 recipe</li>
+					<li>Fixed missing fluidbox allocations on modified oil recipes</li>
+					<li>Split "heavy with sulfur(ic)" mode into two separate modes, allowing choice of sulfur being a lubricant byproduct</li>
+					<li>Added option to toggle use of sulfur vs sulfuric acid in blue science recipe</li>
+					<li>Tweaked heavy-only option progression</li>
+					<li>Improved mod compat</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.6|autotraindepot"><ul class = "changelist">				
+					<li>Significantly increased deadlock alert trigger time</li>
+					<li>Added wagon slot count functionality, tiering, and upgrade tech</li>
+					<li>Added commands to manipulate depot stop cache</li>
+					<li>Created a custom train stop type to be used with depots</li>
+					<li>Added some bobmod recipe compat</li>
+					<li>Added missing icons and locale to smart train stop</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.6|bioluminescence"><ul class = "changelist">				
+					<li>Added light reloading system to reduce FPS drops from orphaned lights accumulating on large maps</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.6|endgamecombat"><ul class = "changelist">				
+					<li>Improved shockwave turret range boost tech</li>
+					<li>Improved code performance</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.6|ftweaks"><ul class = "changelist">				
+					<li>Added option and function to make Construction Drones invincible</li>
+					<li>Added command to reroute all trains using a particular stop</li>
+					<li>Added code to rebalance Schall Pickup towers and make them sequentially gated</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.6|lossprevention"><ul class = "changelist">				
+					<li>Fixed outdated item/tech references</li>
+					<li>Added resource production threshold capability</li>
+					<li>Added checks for blue science and crude oil production and associated evo caps</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.6|nauvisday"><ul class = "changelist">				
+					<li>Increased resolution of deaero curve</li>
+					<li>Added mechanic where ceasing all resource extraction for a time will dramatically increase effect of the existing biter calming mechanic</li>
+					<li>Added pollution scale values for the presence of many decorative-affecting or environmentally-focused mods (eg decorative removers or TreePlant)</li>
+					<li>Added 1.5MJ fuel value to petroleum gas to allow it to work in the gas boiler without KSPower (which added this value)</li>
+					<li>Fans no longer can accidentally make steam</li>
+					<li>Fixed some issues with spawner "enemy burst" mechanic</li>
+					<li>Made killing spawners completely reset the biter calming value to zero</li>
+					<li>Made decoratives remove trace pollution amounts</li>
+					<li>Fixed spilled liquid being destroyable</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.5|dragonindustries"><ul class = "changelist">				
+					<li>Added more library functions</li>
+					<li>Fixed bug in conversion recipe creation</li>
+					<li>Expanded tech handling</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.5|autotraindepot"><ul class = "changelist">				
+					<li>Fixed references to removed train alerts</li>
+					<li>Fixed more missing locale</li>
+					<li>Fixed more large warehouse handling</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.5|bioluminescence"><ul class = "changelist">				
+					<li>Added some missing event handlers</li>
+					<li>Added an item for the glowing trees to allow them to be replanted</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.5|dewpointaggregator"><ul class = "changelist">				
+					<li>Added production and power consumption factor setting</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.5|endgamecombat"><ul class = "changelist">				
+					<li>Plasma turrets now have new unique graphics</li>
+					<li>Made concussion turret graphics more unique but more similar to modern gun turret style</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.5|ftweaks"><ul class = "changelist">				
+					<li>Added option and function for steam cracking (ie use of steam rather than water in cracking recipes)</li>
+					<li>Added option and function for tech demultiply on upgrade-type techs</li>
+					<li>Edited some tech prereqs around electronics and plastic</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.5|geothermal"><ul class = "changelist">				
+					<li>Fixed crash with cooling geothermal water</li>
+					<li>Made cooling water better reflect its nature</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.5|nauvisday"><ul class = "changelist">				
+					<li>Restored increases to tree pollution absorption broken in 0.17</li>
+					<li>Reduced 0.15-era nerf to small biter attack power</li>
+					<li>Moved steam furnace back to advanced material processing, removing its EE compat</li>
+					<li>Refined pollution values again</li>
+					<li>Added Dew Point Aggregator to pollution exclusion list</li>
+					<li>Steam furnaces are now actually furnaces, not assembling machines, and as such no longer need recipe setting or active scripting</li>
+					<li>Gas boiler similarly cleaned and no longer needs active scripting, also fixes many lingering issues</li>
+					<li>Added settings to modify pollution processing waste consumption and product yields</li>
+					<li>Added missing bounds on many settings' values</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.5|treeplant"><ul class = "changelist">				
+					<li>Added missing locale to rock movability setting</li>
+					<li>Tree repair can now avoid outright replacing trees in many cases</li>
+					<li>Added internal retrogen capability</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.5|turmoil"><ul class = "changelist">				
+					<li>Made blue science requirements more correct for each option</li>
+					<li>Registered installation exclusion with conflicting mods</li>
+					<li>Made sulfur producible directly from heavy oil on "heavy oil" setting</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.3|dragonindustries"><ul class = "changelist">				
+					<li>Greatly improved sprite handling libraries</li>
+					<li>Added itme handling library</li>
+					<li>Expanded and improved recipe handling</li>
+					<li>Removed campaign tech handling</li>
+					<li>Expanded tech handling</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.2|autotraindepot"><ul class = "changelist">				
+					<li>More unloader fixes</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.3|chokepoint"><ul class = "changelist">				
+					<li>Added function to generate shores of muddy water at the edges and endings of rivers</li>
+					<li>Implemented voronoi noise based generation options and made those the default</li>
+					<li>Added river thickness setting</li>
+					<li>Improved water handling</li>
+					<li>Added missing locale</li>
+					<li>Moved shared code to Dragon Industries</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.2|earlyextensions"><ul class = "changelist">				
+					<li><b>Release</b></li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.3|endgamecombat"><ul class = "changelist">				
+					<li>Added option for shockwave turrets to use red circuits (and thus be oil-dependent)</li>
+					<li>More code cleanup</li>
+					<li>Halved turret alert volume</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.2|fastfurnaces"><ul class = "changelist">				
+					<li>Slightly reduced drill emissions</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.3|ftweaks"><ul class = "changelist">				
+					<li>Removed rubberbelts crappy belt upcrafting, as that is now native</li>
+					<li>Changed power usage of Electric Offshore Pump</li>
+					<li>Added code to change Construction Drone collision masks</li>
+					<li>Added "Automation" tech prereq to bob greenhouses</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.2|geothermal"><ul class = "changelist">				
+					<li>Added optional insulated fluid wagon and cooling mechanic</li>
+					<li>Removed ability of geothermal wells to be beaconed</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.3|nauvisday"><ul class = "changelist">				
+					<li>Rebalanced pollution values, especially tile absorption and some entities' base emissions</li>
+					<li>Now increases enemy_attack_pollution_consumption_modifier map setting</li>
+					<li>Massively increased oil refinery pollution</li>
+					<li>Added "max attack size multiplier" setting</li>
+					<li>Increased fan effectivity 20%</li>
+					<li>Increased pollution cost for small biters</li>
+					<li>Added EarlyExtensions compat</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.2|treeplant"><ul class = "changelist">				
+					<li>Improved mod compat</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|01/06/2020|earlyextensions"><ul class = "changelist">				
+					<li><b>Creation</b></li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.1|dragonindustries"><ul class = "changelist">				
+					<li>Update to 0.18</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.1|autotraindepot"><ul class = "changelist">				
+					<li>Update to 0.18</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.1|bioluminescence"><ul class = "changelist">				
+					<li>Update to 0.18</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.1|biterbias"><ul class = "changelist">				
+					<li>Update to 0.18</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.1|chokepoint"><ul class = "changelist">				
+					<li>Update to 0.18</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.1|dewpointaggregator"><ul class = "changelist">				
+					<li>Update to 0.18</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.1|dirtymining"><ul class = "changelist">				
+					<li>Update to 0.18</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.1|easycreative"><ul class = "changelist">				
+					<li>Update to 0.18</li>
+					<li>Greatly expanded default creative item set</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.1|endgamecombat"><ul class = "changelist">				
+					<li>Update to 0.18</li>
+					<li>Fixed fire capsule/spraying issues</li>
+					<li>Massively cleaned up code</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.1|factorio"><ul class = "changelist">				
+					<li>Update to 0.18</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.1|fastfurnaces"><ul class = "changelist">				
+					<li>Update to 0.18</li>
+					<li>Fixed fast offshore pump placement errors again</li>
+					<li>Moved shared code to Dragon Industries</li>
+					<li>Improved construction of all entities to better inherit vanilla changes</li>
+					<li>Updated graphics to 0.18</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.1|ftweaks"><ul class = "changelist">				
+					<li>Update to 0.18</li>
+					<li>Fixed some compat issues in advanced satellite recipe</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.1|geothermal"><ul class = "changelist">				
+					<li>Update to 0.18</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.1|infitech"><ul class = "changelist">				
+					<li>Retired</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.1|itemfinder"><ul class = "changelist">				
+					<li>Update to 0.18</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.1|lossprevention"><ul class = "changelist">				
+					<li>Update to 0.18</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.1|nauvisday"><ul class = "changelist">				
+					<li>Update to 0.18</li>
+					<li>Redesigned clogged offshore pump handling</li>
+					<li>Restored rubber floor step sounds to old belt sounds</li>
+					<li>Increased deaero cleaning power, especially at higher tiers</li>
+					<li>Updated GUI handling</li>
+					<li>Added new polluted water graphics (again)</li>
+					<li>Fixed some issues with polluted water</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.1|oldwormsound"><ul class = "changelist">				
+					<li>Update to 0.18</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.1|oreverhaul"><ul class = "changelist">				
+					<li>Update to 0.18</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.1|pheromones"><ul class = "changelist">				
+					<li>Update to 0.18</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.1|radionetwork"><ul class = "changelist">				
+					<li>Update to 0.18</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.1|rubberbelts"><ul class = "changelist">				
+					<li>Update to 0.18</li>
+					<li>Changed bob handling to apply RB sprite to rubber</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.1|treeplant"><ul class = "changelist">				
+					<li>Update to 0.18</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.18|1.18.1|turmoil"><ul class = "changelist">				
+					<li>Update to 0.18</li>
+					<li>Halved sulfur fuel value, increased emissions 50%, and cut acceleration power 3x</li>
+</ul>
+			</div>
+	<div id = "mod-version-list-0.17">
+			<div class = "mod-version-list-entry" data-date = "December 29, 2019">1.17.35</div>
+			<div class = "mod-version-list-entry" data-date = "November 30, 2019">30/11/2019</div>
+			<div class = "mod-version-list-entry" data-date = "September 30, 2019">1.17.24</div>
+			<div class = "mod-version-list-entry" data-date = "August 2, 2019">1.17.18</div>
+			<div class = "mod-version-list-entry" data-date = "July 1, 2019">1.17.15</div>
+			<div class = "mod-version-list-entry" data-date = "June 17, 2019">1.17.12</div>
+			<div class = "mod-version-list-entry" data-date = "June 6, 2019">1.17.6</div>
+			<div class = "mod-version-list-entry" data-date = "March 23, 2019">1.17.2</div>
+	</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.35|dragonindustries"><ul class = "changelist">				
+					<li>Added more library functions</li>
+					<li>Added basic fluid ingredients for use in other mods</li>
+					<li>Removed chemplant autobarelling support</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.35|endgamecombat"><ul class = "changelist">				
+					<li>Fixed occasional crash on load due to typo</li>
+					<li>Added more mods' technical entities to the turret range blacklist</li>
+					<li>Fixed last_user attemping to set nil when that was the fetched value, pending vanilla bugfix to allow nil as set value (https:</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.35|ftweaks"><ul class = "changelist">				
+					<li>Added code to make all chemplant recipes have colorized exhaust if they do not already, calculated based on the colors of the fluids</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.35|geothermal"><ul class = "changelist">				
+					<li>Improved AlienBiomes color detection and fixed a crash if the tile prototypes half-existed</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.35|nauvisday"><ul class = "changelist">				
+					<li>Added some sanity checks to gas boilers</li>
+					<li>Massively rebalanced pollution levels again</li>
+					<li>Fixed crash with Schall "machine scaling" refineries</li>
+					<li>Added Dragon Industries fluids to the spill table</li>
+					<li>Added emissions penalties for bob fluid venting</li>
+					<li>Added chemplant colors for pollution processing recipes</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.35|pheromones"><ul class = "changelist">				
+					<li><b>Release</b></li>
+					<li>Added chemplant tints</li>
+					<li>Redesigned sprites</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|30/11/2019|pheromones"><ul class = "changelist">				
+					<li><b>Creation</b></li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.24|dragonindustries"><ul class = "changelist">				
+					<li>Improved recipe handling</li>
+					<li>Expanded tech handling</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.24|autotraindepot"><ul class = "changelist">				
+					<li>Fixed issues with train unloader and rapid loader recipe and technology</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.24|endgamecombat"><ul class = "changelist">				
+					<li>Neutron weaponry now leaves long-lived fallout</li>
+					<li>Power armor mk3 is now unbreakable</li>
+					<li>Improved mod compatibility</li>
+					<li>Fixed turret caching losing "last_user"</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.24|factorio"><ul class = "changelist">				
+					<li>Added support for "Will of the wisp" mod to enemy sensor</li>
+					<li>Added some sanity checks to prevent inserter filter actuator from attempting to set filters on entities that do not support it</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.24|fastfurnaces"><ul class = "changelist">				
+					<li>Added bob diamonds to better drill</li>
+					<li>Fixed reference to refineries</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.24|ftweaks"><ul class = "changelist">				
+					<li>Added option to add iron pipe to green science like the abandoned vanilla idea from FFF 275</li>
+					<li>Fixed some crashes on load where a non-bob mod adds some bob materials but not others</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.24|geothermal"><ul class = "changelist">				
+					<li>Tweaked spawn rules in each biome a bit</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.24|itemfinder"><ul class = "changelist">				
+					<li>Fixed alert sound</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.24|nauvisday"><ul class = "changelist">				
+					<li>Fixed crashes with clean refinery and some mods' recipes</li>
+					<li>Pollution effects are no longer restricted to the default surface</li>
+					<li>Fixed crash with wall nuker light</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.24|oreverhaul"><ul class = "changelist">				
+					<li>Changed generation override defaults back to enabled</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.24|rubberbelts"><ul class = "changelist">				
+					<li>Fixed crash with AAI handling</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.24|treeplant"><ul class = "changelist">				
+					<li>Tree items are now burnable</li>
+					<li>Fixed alert sound</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.18|dragonindustries"><ul class = "changelist">				
+					<li>Fixed campaign tech handling</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.18|turmoil"><ul class = "changelist">				
+					<li><b>Release</b></li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.15|dragonindustries"><ul class = "changelist">				
+					<li>Expanded recipe handling</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.15|dirtymining"><ul class = "changelist">				
+					<li>Improved icon size handling for modded ores</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.15|endgamecombat"><ul class = "changelist">				
+					<li>Added more mods' technical entities to the turret range blacklist</li>
+					<li>More 0.17 fixes</li>
+					<li>Redesigned plasma beam sprite to be more unique and more dramatic</li>
+					<li>Fixed issues with locking things behind campaign only techs</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.15|ftweaks"><ul class = "changelist">				
+					<li>Fixed handling of bob steam power and belts</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.15|nauvisday"><ul class = "changelist">				
+					<li>Massively reduced pollution values to better match 0.17 changes</li>
+					<li>Added handling for campaign-only techs to prevent them being used for recipes</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.12|dragonindustries"><ul class = "changelist">				
+					<li>Expanded string handling</li>
+					<li>Added EntityTracker system</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.12|autotraindepot"><ul class = "changelist">				
+					<li>Fixed more issues in 0.17 update, mostly in GUI code</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.12|bioluminescence"><ul class = "changelist">				
+					<li>Fixed collisions on glowing bushes</li>
+					<li>Fixed AlienBiomes detection</li>
+					<li>Made biter glow size dynamic with physical size</li>
+					<li>Improved mod compatibility of biter color caching</li>
+					<li>Added plant density option</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.12|dewpointaggregator"><ul class = "changelist">				
+					<li>Fixed issues with 0.17 update</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.12|dirtymining"><ul class = "changelist">				
+					<li>Added missing icon sizes</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.12|endgamecombat"><ul class = "changelist">				
+					<li>More 0.17 fixes</li>
+					<li>Added some more fixes to dome scripting</li>
+					<li>Added more radiation resistances</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.12|fastfurnaces"><ul class = "changelist">				
+					<li>More 0.17 fixes</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.12|ftweaks"><ul class = "changelist">				
+					<li>More 0.17 fixes</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.12|geothermal"><ul class = "changelist">				
+					<li>Added missing shadow for heat exchanger</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.12|nauvisday"><ul class = "changelist">				
+					<li>Moved entity tracking to Dragon Industries</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.13|oreverhaul"><ul class = "changelist">				
+					<li>Reduced richness scaling sixfold</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.6|dragonindustries"><ul class = "changelist">				
+					<li><b>Creation</b></li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.6|autotraindepot"><ul class = "changelist">				
+					<li>Fixed issues in 0.17 update</li>
+					<li>Moved shared code to Dragon Industries</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.6|bioluminescence"><ul class = "changelist">				
+					<li>Added glowing biters</li>
+					<li>Improved entity handling to reduce straggler entities and unintended side effects</li>
+					<li>Moved shared code to Dragon Industries</li>
+					<li>Switched lights to LuaRendering script system</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.6|chokepoint"><ul class = "changelist">				
+					<li>Restricted effect to "nauvis" (ie default) surface only</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.6|dirtymining"><ul class = "changelist">				
+					<li>Moved shared code to Dragon Industries</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.6|endgamecombat"><ul class = "changelist">				
+					<li>Update to 0.17</li>
+					<li>Moved shared code to Dragon Industries</li>
+					<li>Added tech to improve shield dome reboot time</li>
+					<li>Fixed some sprite issues on equipment</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.6|factorio"><ul class = "changelist">				
+					<li>Partly added "signal duration" sensor</li>
+					<li>Added support for combinators with input data</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.6|fastfurnaces"><ul class = "changelist">				
+					<li>Update to 0.17</li>
+					<li>Fixed fast offshore pump placement errors</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.6|ftweaks"><ul class = "changelist">				
+					<li>Update to 0.17</li>
+					<li>Fixed recipe handling errors</li>
+					<li>Moved shared code and recipe library to Dragon Industries</li>
+					<li>Removed rocketry dependency from Helicopters</li>
+					<li>Fixed braking power modification for Helicopters</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.6|geothermal"><ul class = "changelist">				
+					<li>Modified how each biome spawns geothermal wells and overall distribution</li>
+					<li>Moved shared code to Dragon Industries</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.6|infitech"><ul class = "changelist">				
+					<li>Update to 0.17</li>
+					<li>Added and removed techs again to match 0.17</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.6|nauvisday"><ul class = "changelist">				
+					<li>Update to 0.17</li>
+					<li>Added acid rain</li>
+					<li>Moved shared code to Dragon Industries</li>
+					<li>Added glow to wall nukers</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.6|oldwormsound"><ul class = "changelist">				
+					<li>Integrated elements of new 0.17 worm sounds</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.6|oreverhaul"><ul class = "changelist">				
+					<li>Moved shared code to Dragon Industries</li>
+					<li>Added bob thorium ore to default table</li>
+					<li>Added 4B ore per tile clamp to richness</li>
+					<li>Made generation overrides disabled by default</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.6|radionetwork"><ul class = "changelist">				
+					<li>Fixed bob compat</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.6|rubberbelts"><ul class = "changelist">				
+					<li>Update to 0.17</li>
+					<li>Moved shared code to Dragon Industries</li>
+					<li>Updated crappy belt sprites</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.6|treeplant"><ul class = "changelist">				
+					<li>Moved shared code to Dragon Industries</li>
+					<li>More 0.17 fixes</li>
+					<li>Updated some sprites</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.2|autotraindepot"><ul class = "changelist">				
+					<li>Updated to 0.17</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.2|bioluminescence"><ul class = "changelist">				
+					<li>Update to 0.17</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.2|biterbias"><ul class = "changelist">				
+					<li>Update to 0.17</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.2|chokepoint"><ul class = "changelist">				
+					<li>Update to 0.17</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.2|dewpointaggregator"><ul class = "changelist">				
+					<li>Update to 0.17</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.2|dirtymining"><ul class = "changelist">				
+					<li>Update to 0.17</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.2|easycreative"><ul class = "changelist">				
+					<li>Update to 0.17</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.2|factorio"><ul class = "changelist">				
+					<li>Update to 0.17</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.2|geothermal"><ul class = "changelist">				
+					<li>Update to 0.17</li>
+					<li>Redesigned spawning algorithm and added several options for spawn profiles and allowed biomes</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.2|itemfinder"><ul class = "changelist">				
+					<li>Update to 0.17</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.2|lossprevention"><ul class = "changelist">				
+					<li>Update to 0.17</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.2|oldwormsound"><ul class = "changelist">				
+					<li>Update to 0.17</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.2|oreverhaul"><ul class = "changelist">				
+					<li>Update to 0.17</li>
+					<li>Tweaked placement of fluid resources</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.2|radionetwork"><ul class = "changelist">				
+					<li>Update to 0.17</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.2|rubberbelts"><ul class = "changelist">				
+					<li>Update to 0.17</li>
+					<li>Wooden gears can now be burned</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.17|1.17.2|treeplant"><ul class = "changelist">				
+					<li>Update to 0.17</li>
+</ul>
+			</div>
+	<div id = "mod-version-list-0.16">
+			<div class = "mod-version-list-entry" data-date = "November 28, 2018">1.0.180</div>
+			<div class = "mod-version-list-entry" data-date = "October 20, 2018">1.0.172</div>
+			<div class = "mod-version-list-entry" data-date = "October 15, 2018">1.0.164</div>
+			<div class = "mod-version-list-entry" data-date = "October 13, 2018">13/10/2018</div>
+			<div class = "mod-version-list-entry" data-date = "October 10, 2018">1.0.160</div>
+			<div class = "mod-version-list-entry" data-date = "October 2, 2018">02/10/2018</div>
+			<div class = "mod-version-list-entry" data-date = "September 23, 2018">1.0.150</div>
+			<div class = "mod-version-list-entry" data-date = "September 18, 2018">1.0.148</div>
+			<div class = "mod-version-list-entry" data-date = "September 10, 2018">1.0.144</div>
+			<div class = "mod-version-list-entry" data-date = "September 7, 2018">1.0.138</div>
+			<div class = "mod-version-list-entry" data-date = "September 5, 2018">1.0.135</div>
+			<div class = "mod-version-list-entry" data-date = "September 3, 2018">1.0.133</div>
+			<div class = "mod-version-list-entry" data-date = "September 2, 2018">1.0.132</div>
+			<div class = "mod-version-list-entry" data-date = "August 24, 2018">1.0.128</div>
+			<div class = "mod-version-list-entry" data-date = "August 20, 2018">1.0.120</div>
+			<div class = "mod-version-list-entry" data-date = "August 16, 2018">16/08/2018</div>
+			<div class = "mod-version-list-entry" data-date = "August 15, 2018">1.0.115</div>
+			<div class = "mod-version-list-entry" data-date = "August 13, 2018">1.0.112</div>
+			<div class = "mod-version-list-entry" data-date = "August 9, 2018">1.0.108</div>
+			<div class = "mod-version-list-entry" data-date = "August 7, 2018">1.0.106</div>
+			<div class = "mod-version-list-entry" data-date = "August 6, 2018">1.0.105</div>
+			<div class = "mod-version-list-entry" data-date = "August 2, 2018">1.0.101</div>
+			<div class = "mod-version-list-entry" data-date = "July 30, 2018">1.0.98</div>
+			<div class = "mod-version-list-entry" data-date = "July 29, 2018">1.0.97</div>
+			<div class = "mod-version-list-entry" data-date = "April 20, 2018">1.0.80</div>
+			<div class = "mod-version-list-entry" data-date = "February 3, 2018">1.0.74</div>
+			<div class = "mod-version-list-entry" data-date = "January 30, 2018">1.0.72</div>
+			<div class = "mod-version-list-entry" data-date = "January 14, 2018">1.0.70</div>
+			<div class = "mod-version-list-entry" data-date = "January 6, 2018">1.0.66</div>
+			<div class = "mod-version-list-entry" data-date = "January 4, 2018">1.0.64</div>
+			<div class = "mod-version-list-entry" data-date = "December 23, 2017">1.0.60</div>
+			<div class = "mod-version-list-entry" data-date = "December 12, 2017">12/12/2017</div>
+	</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.180|autotraindepot"><ul class = "changelist">				
+					<li>Fixed crash due to science pack 3 ingredient duplication</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.180|easycreative"><ul class = "changelist">				
+					<li>Fixed commands not being accessible the first load of a save</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.180|endgamecombat"><ul class = "changelist">				
+					<li>Tweaked napalm shell fire area</li>
+					<li>Added shield dome capacity circuit signal</li>
+					<li>Added option to disable napalm shells from lighting trees</li>
+					<li>Added T2 flamethrower to Helicopter mod</li>
+					<li>Fixed yet more rangeboost turret issues</li>
+					<li>Rebalanced some recipes</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.180|ftweaks"><ul class = "changelist">				
+					<li>Fixed commands not being accessible the first load of a save</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.180|itemfinder"><ul class = "changelist">				
+					<li>Fixed command not being accessible the first load of a save</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.180|nauvisday"><ul class = "changelist">				
+					<li>Deaerosolizer efficiency and speed is now tied to pollution levels around them</li>
+					<li>Improved and expanded Angel's Mods handling</li>
+					<li>Fixed crash when spilling some modded fluid types</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.180|radionetwork"><ul class = "changelist">				
+					<li>Fixed crash with Xander mod</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.180|treeplant"><ul class = "changelist">				
+					<li>Fixed command not being accessible the first load of a save</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.172|autotraindepot"><ul class = "changelist">				
+					<li>Added a method to keep a given input to a depot always on - change the condition to the "Always" signal</li>
+					<li>Tweaked storage balancing again - it now runs when there is not a train in the station, but only rarely</li>
+					<li>Fixed a script error with removing fluid depots connected to some pumps that were previously fast-replaced</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.172|endgamecombat"><ul class = "changelist">				
+					<li>Fixed crash on load with some users</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.172|nauvisday"><ul class = "changelist">				
+					<li>Fixed crash on load with some users due to refinery recipe changes</li>
+					<li>Halved filtered refinery item use</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.164|autotraindepot"><ul class = "changelist">				
+					<li>Added Smart Train Stop and associated signals and behavior</li>
+					<li>Added Station Bypass Beacon and associated logic</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.164|dirtymining"><ul class = "changelist">				
+					<li>Fixed circuit input wires persisting after a washer is removed</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.164|endgamecombat"><ul class = "changelist">				
+					<li>Rebalanced T2 flamethrower</li>
+					<li>Napalm rocket tech is no longer much more expensive than napalm shells</li>
+					<li>Tweaked plasma turret tech prereqs</li>
+					<li>Added option to make napalm not set trees on fire</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.164|factorio"><ul class = "changelist">				
+					<li>Added train empty/full sensor</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.164|ftweaks"><ul class = "changelist">				
+					<li>Now makes vehicle-mounted flamethrowers not suck</li>
+					<li>Adds a flamethrower to the vehicle from the helicopter mod</li>
+					<li>Fixed crash with modified Steam Turbine recipes</li>
+					<li>Added option to make fluid resources not infinite</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.164|geothermal"><ul class = "changelist">				
+					<li>New, better geothermal patch sprites</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.164|itemfinder"><ul class = "changelist">				
+					<li>Fixed the command missing entities</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.164|nauvisday"><ul class = "changelist">				
+					<li>Fixed spawner destruction creating biters on water</li>
+					<li>Rubber flooring now placeable near water</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.164|radionetwork"><ul class = "changelist">				
+					<li>Fixed script error with repeaters being removed</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|13/10/2018|bioluminescence"><ul class = "changelist">				
+					<li><b>Creation</b></li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.160|autotraindepot"><ul class = "changelist">				
+					<li>Recreated Rapid Train Loader</li>
+					<li>Trains can now have dynamic item filters for their cargo wagons, selected on a per-station and per-car basis</li>
+					<li>Added option to make trains not pathfind through occupied stations or immobile trains</li>
+					<li>Changed large warehouse recipes</li>
+					<li>Tweaked tech costs</li>
+					<li>Added locale support to GUI options</li>
+					<li>Fixed depots only having as many controllable inputs as filtered items</li>
+					<li>Copying train entity data now also copies custom GUI data</li>
+					<li>Trains now preserve most of their data when modified (only the replaced cars are cleared)</li>
+					<li>Improved performance with tick code</li>
+					<li>Depot balancing now runs more often when there is a train at the loading station, and never when there is not</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.160|dirtymining"><ul class = "changelist">				
+					<li>Added config for ore washing water consumption</li>
+					<li>Ore washer now has a circuit input to allow dynamically changing recipes</li>
+					<li>Completely new recipes for ore washer, including BobMod integration</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.160|easycreative"><ul class = "changelist">				
+					<li>Added commands to fill and empty trains</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.160|endgamecombat"><ul class = "changelist">				
+					<li>Rebalanced capsules</li>
+					<li>BobMods version of the Power Armor 3 recipe changed somewhat</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.160|factorio"><ul class = "changelist">				
+					<li>Added 'train status' sensor</li>
+					<li>Added inserter/loader filter actuator</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.160|ftweaks"><ul class = "changelist">				
+					<li>Added optional coal decomposition tech and recipes</li>
+					<li>Added option to exclude all 'upgrade' type technologies (eg turret damage, robot speed, player reach, etc) from technology cost increase</li>
+					<li>Fixed crash with Bobwarfare</li>
+					<li>Tweaked a couple techs' science packs</li>
+					<li>Belt recipe changes now apply to splitters, underground belts, and loaders as well</li>
+					<li>Tweaked a few recipes for high-tier Bob assembling machines (electrolyzers, chemical furnaces, etc)</li>
+					<li>Fixed issue with T2 electric pole tech and Angel Invar override</li>
+					<li>Added upcraft recipes for steel furnaces to electric variants</li>
+					<li>Replaced production science with logistic science in express loader tech if available</li>
+					<li>Added glow and recipe override for "LargeLamp" mod - more visually appealing and more balanced, with Bob integration</li>
+					<li>Added recipe to upgrade Bob steam engines into steam turbines</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.160|itemfinder"><ul class = "changelist">				
+					<li>Fixed the command missing spilled items from several sources</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.160|nauvisday"><ul class = "changelist">				
+					<li>Added option for steam furnace speed ratios</li>
+					<li>Filtered refineries now have variants for all Bob refineries</li>
+					<li>Fixed some locale</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.160|radionetwork"><ul class = "changelist">				
+					<li><b>Release</b></li>
+					<li>Changed some recipes</li>
+					<li>Increased default repeater range from 400 to 600</li>
+					<li>Added comms satellite</li>
+					<li>Fixed repeaters ignoring power availability</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|02/10/2018|radionetwork"><ul class = "changelist">				
+					<li><b>Creation</b></li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.150|itemfinder"><ul class = "changelist">				
+					<li><b>Creation</b></li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.148|autotraindepot"><ul class = "changelist">				
+					<li>Fixed crash without BobMods</li>
+					<li>Depot can now handle winding input belts</li>
+					<li>Made "no fuel" train alert more selective</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.148|biterbias"><ul class = "changelist">				
+					<li>Adjusted evo thresholds for big biters and spitters slightly</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.148|easycreative"><ul class = "changelist">				
+					<li>Now increases laboratory speed as well</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.148|endgamecombat"><ul class = "changelist">				
+					<li>Added sticky turrets</li>
+					<li>Health alerts should now take priority</li>
+					<li>Fixed crash with Bob Warfare</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.148|factorio"><ul class = "changelist">				
+					<li>Added 'power satisfaction' sensor</li>
+					<li>Moved tech earlier in the progression</li>
+					<li>Fixed localizations</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.148|ftweaks"><ul class = "changelist">				
+					<li>Made solar panel equipment cheaper</li>
+					<li>BobMod belt recipes now progress more smoothly</li>
+					<li>Added option to make high-tier belts cheaper</li>
+					<li>Made stack inserters more useful when they first are unlocked (greater initial capacity)</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.148|geothermal"><ul class = "changelist">				
+					<li>Added option for well fluid production multiplier</li>
+					<li>Adjusted power costs of geothermal machinery</li>
+					<li>Increased L1 geothermal steam temperature slightly, to enable it to run Bob Mk2 steam engines</li>
+					<li>Adjusted well/exchanger ratios</li>
+					<li>Redesigned worldgen code to better allow for small clusters instead of lone wells</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.148|lossprevention"><ul class = "changelist">				
+					<li>Now takes tech cost multiplier into account</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.148|nauvisday"><ul class = "changelist">				
+					<li>Pollution processing now consumes somewhat more sludge</li>
+					<li>Improved tick performance</li>
+					<li>NVDay now increases the power of the KSPower diesel generator to be competitive with the gas boiler</li>
+					<li>Gas boiler now uses a bit less fuel per cycle</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.148|treeplant"><ul class = "changelist">				
+					<li>Added option to make rocks mineable and placeable as themselves</li>
+					<li>Fixed tree healing capsule not working</li>
+					<li>Lengthened stump lifetime again</li>
+					<li>Added command to find tree stumps: /findStumps</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.144|autotraindepot"><ul class = "changelist">				
+					<li>Redesigned capability and technology system - there is now only one depot type, with capabilities unlocked by researches</li>
+					<li>Fixed crash with Picker Extended</li>
+					<li>Trains can now be given Display Names</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.144|endgamecombat"><ul class = "changelist">				
+					<li>Added Supercavitating ammo type</li>
+					<li>Electric turrets no longer play low/critical alerts unless they have a zero idle drain, as non-drainless turrets would deplete entirely if power is lost</li>
+					<li>Tweaked a few tech costs</li>
+					<li>Made laser turret damage tech more uniform</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.144|nauvisday"><ul class = "changelist">				
+					<li>Several machines no longer support attempting to change 'recipes' they only had one of</li>
+					<li>Tweaked pollution-with-chloride processing recipe</li>
+					<li>Changed and harmonized Deaerosolizer recipes</li>
+					<li>Borehole driller is now more effective the longer it is left to work</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.138|autotraindepot"><ul class = "changelist">				
+					<li>Added "train deadlock" and "no path" alerts to indicate when a train has entered am undesirable state and requires manual intervention</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.138|endgamecombat"><ul class = "changelist">				
+					<li>High-tier ammo now has some piercing damage</li>
+					<li>Ammo crate properly inherits damage from parent type</li>
+					<li>Fluid wagons no longer pop like balloons when bumped into</li>
+					<li>Shockwave turret rangeboost effectivity increased</li>
+					<li>Spitters will no longer stop just outside the range of a shockwave turret</li>
+					<li>Cheapened electric defence technologies</li>
+					<li>Turret range boost tech is now cheaper</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.138|ftweaks"><ul class = "changelist">				
+					<li>Added EGCombat turret range tech to the "tech demultiply" list</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.138|nauvisday"><ul class = "changelist">				
+					<li>Fixed steam furnaces not working</li>
+					<li>Fixed some missing locale</li>
+					<li>Fixed crash with some mods that add non-absorbing trees</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.135|autotraindepot"><ul class = "changelist">				
+					<li>Depots now manage output inserters to trains as well, 'resetting' them when a station changes trains</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.135|endgamecombat"><ul class = "changelist">				
+					<li>Shockwave turret damage technology now shows the effect in the tech screen</li>
+					<li>Moved shockwave turret earlier in the techtree, and replaced aluminum (if applicable) with nickel</li>
+					<li>Cannon turret now uses cobalt instead of invar</li>
+					<li>Acid turret now uses aluminum instead of cobalt</li>
+					<li>Fixed spurious turret alarms</li>
+					<li>Fixed some missing localizations</li>
+					<li>Added "weaponized electrical discharge" tech as a prereq for some defence technologies</li>
+					<li>Turret logi chests no longer show "no network" icons</li>
+					<li>Hid range-boost turrets from the bonus gui</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.135|ftweaks"><ul class = "changelist">				
+					<li>Fixed crash with "More Techs"</li>
+					<li>Made Bob T2 electric poles easier to get - Replaced brass with invar</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.135|nauvisday"><ul class = "changelist">				
+					<li>Fixed Bob steam furnace icons</li>
+					<li>Changed pollution processing recipes slightly</li>
+					<li>Evolution factor time contribution increased for ribbon worlds</li>
+					<li>Evolution factor time reduction increases over time if the aliens are allowed to calm down</li>
+					<li>Fixed crash with mods adding oil-refinery recipes that have only one output</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.133|autotraindepot"><ul class = "changelist">				
+					<li>Added ability to choose via GUI whether depots control the red/exclusion filter for wagons, to go with 132's change</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.133|lossprevention"><ul class = "changelist">				
+					<li>Fixed script crash when biters place a worm below evo 0.7</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.132|autotraindepot"><ul class = "changelist">				
+					<li>Added ability for cargo wagons to be marked as "fill at depot", which the depot controller will automatically handle to prevent output-type cars from being re-filled at the input side of the depot</li>
+					<li>Added basic depot type, available earlier game</li>
+					<li>Rebalanced technology dependencies and recipes</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.132|endgamecombat"><ul class = "changelist">				
+					<li>Rebalanced technology dependencies and recipes, with a focus on BobMods integration</li>
+					<li>Added command to silence the sounds from turret alerts for a user-specified length of time</li>
+					<li>T2 Flamethrower now requires Advanced Electronics 2</li>
+					<li>Added option for more intelligent "low ammo" warnings, based on dealable damage and its relation to average enemy health at that evolution factor</li>
+					<li>Reduced concussion turret damage from 5x to 2x</li>
+					<li>Made concussion turrets available much earlier</li>
+					<li>Split incendiary ammo tech into pre and post uranium</li>
+					<li>Brought incendiary uranium ammo more in line with vanilla ammo DPS</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.132|ftweaks"><ul class = "changelist">				
+					<li>Increased rocket launcher range to 35 from 22</li>
+					<li>Nano constructors now last 2.5x longer</li>
+					<li>Added some science packs and their techs as prerequisites for later-game Bob ore processing</li>
+					<li>Split BobMods cobalt processing into two techs, the later one for alloying</li>
+					<li>Helicopters mod tech now requires advanced electronics 2</li>
+					<li>Added option to make BobMod robot parts require successive crafting and upgrading like other things do - recipes tweaked to keep total cost the same</li>
+					<li>RubberBelts wooden gear can now be sludged into oil products like raw wood can</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.132|lossprevention"><ul class = "changelist">				
+					<li><b>Release</b></li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.132|nauvisday"><ul class = "changelist">				
+					<li>Increased time-based reduction of evolution factor</li>
+					<li>Fixed modded oil refineries not having pollution increase</li>
+					<li>Added exceptions for Algae Farms to pollution increase</li>
+					<li>Changed filtered oil processing recipe slightly - NaOH is now the 2x additive</li>
+					<li>Slowed gas boiler fuel consumption</li>
+					<li>Steam furnaces no longer autocopy recipes during blueprinting (and thus no longer overwrite themselves)</li>
+					<li>Fixed spilled-fluid tooltips sometimes lingering</li>
+					<li>Removed pollution cloud sound due to unavoidable stacking</li>
+					<li>Redesigned pollution-to-sulfur processing recipes for BobMods environments</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.128|autotraindepot"><ul class = "changelist">				
+					<li>Cleaned up train handling logic and added sanity checks</li>
+					<li>Added fluid depot controller, to allow for the management of fluid routing at a liquid depot for up to six liquid types per depot</li>
+					<li>Added a new element to train GUIs to allow for liquid routing control</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.128|dewpointaggregator"><ul class = "changelist">				
+					<li><b>Release</b></li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.128|dirtymining"><ul class = "changelist">				
+					<li>Removed additional fuel properties from dirty ore versions</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.128|ftweaks"><ul class = "changelist">				
+					<li>Gate technology is now cheaper on harder tech costs</li>
+					<li>Added conversion recipes for stone/basic furnaces into their steel variants</li>
+					<li>Conversion recipes are no longer used by manual crafting as intermediates</li>
+					<li>Fixed "automatic" version of red science pack recipe giving 5x the yield-per-time</li>
+					<li>Moved poison capsule to military 2</li>
+					<li>Added a recipe to decompose nitric oxide to water and nitrogen</li>
+					<li>Made "cathodes" tech for Nixie Tubes easier - no advanced electronics, only circuit network</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.128|nauvisday"><ul class = "changelist">				
+					<li>Rebalanced pollution a bit</li>
+					<li>Hid venting recipe (technical)</li>
+					<li>Added 1x lower bound to pollution increase factor option</li>
+					<li>New mod icon</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.120|autotraindepot"><ul class = "changelist">				
+					<li>Added some missing locale</li>
+					<li>Fixed missing handling for adding large versions of storage logic warehouses</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.120|easycreative"><ul class = "changelist">				
+					<li>Fixed unnecessary lag spikes when rebuilding caches</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.120|endgamecombat"><ul class = "changelist">				
+					<li>Redesigned robot and electric pole defence techs, they now have proper tiered and tech-level-dependent behavior</li>
+					<li>Trains and cliffs are now properly radiation-immune</li>
+					<li>Reduced reinforced-only wall strength from 4000 to 2000, and made it cheaper</li>
+					<li>Improved orbital strike performance</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.120|factorio"><ul class = "changelist">				
+					<li>Added fix for overly large negative measured values out of 32 bit range</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.120|ftweaks"><ul class = "changelist">				
+					<li>Split concrete tech into two, the later of which unlocks refined concrete</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.120|nauvisday"><ul class = "changelist">				
+					<li>Added steam-powered versions of Bob Chemical and Metal-Mix furnaces</li>
+					<li>Doubled spilled steam evaporation rate</li>
+					<li>Fixed Bob furnaces not having the proper pollution increase amount</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|16/08/2018|dewpointaggregator"><ul class = "changelist">				
+					<li><b>Creation</b></li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.115|easycreative"><ul class = "changelist">				
+					<li><b>Release</b></li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.115|endgamecombat"><ul class = "changelist">				
+					<li>Fixed crash with level 5 of lightning turret charging researched</li>
+					<li>Fixed crash with fluid turrets with no fluidboxes breaking alert tracking</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.115|factorio"><ul class = "changelist">				
+					<li>Fixed potential error with sensors with data cache having no cache to write to</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.115|ftweaks"><ul class = "changelist">				
+					<li>Added rocketry tech dependency to helicopters</li>
+					<li>Updated stack size handler</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.115|nauvisday"><ul class = "changelist">				
+					<li>Charcoal is no longer made from coal</li>
+					<li>Polluted water pump now has a distinct name</li>
+					<li>Prevented offshore pump placement on polluted water</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.112|chokepoint"><ul class = "changelist">				
+					<li>Changed default generation algorithm from "lines2" to "lines2d"</li>
+					<li>Added variants b, c, and d to algorithm lines2</li>
+					<li>Added missing locale</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.112|endgamecombat"><ul class = "changelist">				
+					<li>Added option to massively buff green biters' health to make the lightning turret more desirable</li>
+					<li>Increased lightning turret damage 50%</li>
+					<li>Fixed resistance handling for "resist all"</li>
+					<li>Added turret monitoring alerts and tech</li>
+					<li>Added more checks to turret caching to fix more errors</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.112|ftweaks"><ul class = "changelist">				
+					<li>Fixed erroneous references to silo scripts</li>
+					<li>Reduced speed penalty on AlienBiomes snow</li>
+					<li>Added options and functionality to split Gun Turret and red science recipes into a faster manual version and a cheaper automated version</li>
+					<li>Added an upcrafting recipe for RubberBelts crappy belt</li>
+					<li>Further improved recipe handling</li>
+					<li>Fixed references to green and purple loaders</li>
+					<li>Expanded tech set for "demultiply" option</li>
+					<li>Made all overrides more mod compatible</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.112|nauvisday"><ul class = "changelist">				
+					<li>Fixed handling of modded recipes and their interactions with steam furnace and clean refinery</li>
+					<li>Fixed crash in water pollution script</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.112|oreverhaul"><ul class = "changelist">				
+					<li>Made t1 ores appear closer</li>
+					<li>Reset default offsets to 0</li>
+					<li>Added handling for Chokepoint</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.108|chokepoint"><ul class = "changelist">				
+					<li>Changed default generation algorithm from "largeplops" to "lines2"</li>
+					<li>Added several new generation algorithms, including rivercutsringswithland3 and lines(2)</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.106|endgamecombat"><ul class = "changelist">				
+					<li>Added lightning turret</li>
+					<li>Improved performance in active scripting</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.105|nauvisday"><ul class = "changelist">				
+					<li>Fixed dead greenhouse sprites</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.101|endgamecombat"><ul class = "changelist">				
+					<li>Added handling for artillery turret</li>
+					<li>Fixed technical entities being blueprintable or deconstructable</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.101|nauvisday"><ul class = "changelist">				
+					<li>Added filtered refinery</li>
+					<li>Added formaldehyde spill effects</li>
+					<li>New tech icon for pollution processing</li>
+					<li>Wall nuker now reacts to artillery turrets</li>
+					<li>Fixed crashes with mods adding nonpolluting entities</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.98|endgamecombat"><ul class = "changelist">				
+					<li>Fixed some errors with launching custom items</li>
+					<li>Fixed plasma beam coloring</li>
+					<li>Replaced concrete with refined concrete in a couple recipes</li>
+					<li>Removed random chunk turret recaching to improve performance</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.98|factorio"><ul class = "changelist">				
+					<li>Fixed some errors with sensors with invalid or missing connections to their target</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.98|nauvisday"><ul class = "changelist">				
+					<li>Added (optional) wall nukers if severe pollution reaches nests</li>
+					<li>Removed GUI for deaeros and venting machines, making them begin functioning automatically</li>
+					<li>Added option for polluted water pollution release amount</li>
+					<li>Spilled waste now evaporates very slowly, but is very dangerous and polluting</li>
+					<li>Added new polluted water graphics</li>
+					<li>Improved water pollution performance</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.96|autotraindepot"><ul class = "changelist">				
+					<li><b>Release</b></li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.97|chokepoint"><ul class = "changelist">				
+					<li><b>Release</b></li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.96|factorio"><ul class = "changelist">				
+					<li><b>Release</b></li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.96|ftweaks"><ul class = "changelist">				
+					<li>Made manual silo crafting an option</li>
+					<li>Added some fixes to recipe handling</li>
+					<li>Replaced concrete with refined concrete in many high-tier recipes</li>
+					<li>Added Bob titanium to refined concrete if present</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.96|geothermal"><ul class = "changelist">				
+					<li>Added option for generation of geothermal wells in all biomes</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.80|nauvisday"><ul class = "changelist">				
+					<li>Fixed some issues in MP</li>
+					<li>Made high tier deaeros use refined concrete instead of basic</li>
+					<li>Fixed crash with clogged offshore pump</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.74|ftweaks"><ul class = "changelist">				
+					<li>Improved green and purple loader speeds</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.74|nauvisday"><ul class = "changelist">				
+					<li>Added spilled fluids when breaking filled entities, which may emit pollution or cause damage as they evaporate</li>
+					<li>Added compatibility with Fracking mod</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.72|endgamecombat"><ul class = "changelist">				
+					<li>Update to 0.16</li>
+					<li>Fix more script errors in turret range and upgrades</li>
+					<li>Added fire capsule</li>
+					<li>Added sprayer equipment</li>
+					<li>Added some new icon sprites</li>
+					<li>Added sanity checks on modded turrets</li>
+					<li>Removed laser beam mod compat and made beams native to mirror vanilla changes</li>
+					<li>Added strong fire resist to power armor mk3</li>
+					<li>Made power armor mk3 more expensive</li>
+					<li>Improved range turret system to not make upgrades of technical entities</li>
+					<li>Streamlined turret damage boost system to match vanilla</li>
+					<li>Added acid turret</li>
+					<li>Fixed spurious damage alerts for shield domes that are under attack but doing their job</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.72|geothermal"><ul class = "changelist">				
+					<li>Update to 0.16</li>
+					<li>Added colored geothermal patches for AlienBiomes</li>
+					<li>Added power production multiplier setting</li>
+					<li>Increased structure health</li>
+					<li>Added generation frequency option</li>
+					<li>Added cluster size option</li>
+					<li>Removed "flipped" versions of recipes</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.72|oreverhaul"><ul class = "changelist">				
+					<li>Reduced stone antibias value</li>
+					<li>Tweaked starter ore table</li>
+					<li>Removed sulfur from default settings</li>
+					<li>Added seed mixins and generation offset settings</li>
+					<li>Changed some default spawner placement and ore distance values</li>
+					<li>Added options to increase ore yield per tile based on tech cost and expensive recipe setting</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.72|rubberbelts"><ul class = "changelist">				
+					<li>Added optional crappy pure-wood T0 belt</li>
+					<li>Added more bobmods compat, makign resin and wood easier to produce</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.72|treeplant"><ul class = "changelist">				
+					<li>Fixed some icon size issues with modded trees</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.70|ftweaks"><ul class = "changelist">				
+					<li>Added void recipes for various bob fluids</li>
+					<li>Added logistics 2 to angel's warehouses tech dependencies</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.66|ftweaks"><ul class = "changelist">				
+					<li>Added option and function to replace iron ore with iron stick in concrete recipe</li>
+					<li>Added option and function to reduce effect of a world's technology cost factor on a few main early game techs to prevent forcing players to manually craft hundreds of red science</li>
+					<li>Added significant mod handling</li>
+					<li>Boilerplated much of the recipe handling to simply functionality (which would later be moved unchanged to Dragon Industries)</li>
+					<li>Buffed Bob greenhouses to compete with the old TreeFarm mod</li>
+					<li>Added more upcrafting recipes for early game items</li>
+					<li>Changed bob resin recipe</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.64|dirtymining"><ul class = "changelist">				
+					<li>Ore cleaning recipes are now technology-gated</li>
+					<li>Removed additional fuel properties from dirty ore versions</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.64|fastfurnaces"><ul class = "changelist">				
+					<li>Added "productivity" to allowed beacon effects</li>
+					<li>Redesigned free use and module config interaction again, to fix more crashes</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.64|nauvisday"><ul class = "changelist">				
+					<li>Fixed crash when disabling steam furnace causing its recipes to fail</li>
+					<li>Improved mod compat</li>
+					<li>More 0.18 fixes</li>
+					<li>Increased greenhouse wood production 10x, and gated behind bob greenhouse tech if present</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.60|biterbias"><ul class = "changelist">				
+					<li>Update to 0.16</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.60|dirtymining"><ul class = "changelist">				
+					<li>Update to 0.16</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.60|fastfurnaces"><ul class = "changelist">				
+					<li>Update to 0.16</li>
+					<li>Improved "big chest" technology to grant more kinds of logi chests</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.60|ftweaks"><ul class = "changelist">				
+					<li>Update to 0.16</li>
+					<li>Added advanced satellite, inheriting many of the earlier changes to the vanilla one</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.60|infitech"><ul class = "changelist">				
+					<li>Update to 0.16</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.60|nauvisday"><ul class = "changelist">				
+					<li>Update to 0.16</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.60|oreverhaul"><ul class = "changelist">				
+					<li>Update to 0.16</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.60|rubberbelts"><ul class = "changelist">				
+					<li>Update to 0.16</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|1.0.60|treeplant"><ul class = "changelist">				
+					<li>Update to 0.16</li>
+					<li>Tree repair now preserves color even better</li>
+					<li>Improved versatility of rock identification</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.16|12/12/2017|chokepoint"><ul class = "changelist">				
+					<li><b>Creation</b></li>
+</ul>
+			</div>
+	<div id = "mod-version-list-0.15">
+			<div class = "mod-version-list-entry" data-date = "September 5, 2017">1.0.46</div>
+			<div class = "mod-version-list-entry" data-date = "August 31, 2017">1.0.44</div>
+			<div class = "mod-version-list-entry" data-date = "August 23, 2017">1.0.36</div>
+			<div class = "mod-version-list-entry" data-date = "August 18, 2017">1.0.32</div>
+			<div class = "mod-version-list-entry" data-date = "August 11, 2017">1.0.25</div>
+			<div class = "mod-version-list-entry" data-date = "August 8, 2017">1.0.24</div>
+			<div class = "mod-version-list-entry" data-date = "August 6, 2017">1.0.12</div>
+			<div class = "mod-version-list-entry" data-date = "August 2, 2017">02/08/2017</div>
+			<div class = "mod-version-list-entry" data-date = "July 25, 2017">1.0.8</div>
+			<div class = "mod-version-list-entry" data-date = "July 22, 2017">1.0.4</div>
+			<div class = "mod-version-list-entry" data-date = "July 17, 2017">1.0.2</div>
+			<div class = "mod-version-list-entry" data-date = "July 16, 2017">1.0.1</div>
+			<div class = "mod-version-list-entry" data-date = "July 14, 2017">1.0.0</div>
+			<div class = "mod-version-list-entry" data-date = "July 12, 2017">0.0.24</div>
+			<div class = "mod-version-list-entry" data-date = "July 2, 2017">0.0.20</div>
+			<div class = "mod-version-list-entry" data-date = "June 26, 2017">0.0.12</div>
+			<div class = "mod-version-list-entry" data-date = "June 23, 2017">23/06/2017</div>
+			<div class = "mod-version-list-entry" data-date = "June 21, 2017">21/06/2017</div>
+			<div class = "mod-version-list-entry" data-date = "June 20, 2017">0.0.8</div>
+			<div class = "mod-version-list-entry" data-date = "June 17, 2017">17/06/2017</div>
+	</div>
+			<div class = "changelog-data-cache" id = "0.15|1.0.46|endgamecombat"><ul class = "changelist">				
+					<li>Improved range turret scripting to fix some issues with leftover or incorrectly identified entities</li>
+					<li>Added GFX quality option</li>
+					<li>Fixed crated ammo being used as an intermediate recipe</li>
+					<li>Domes now have tiered structure health</li>
+					<li>Added turret logistics</li>
+					<li>Fixed some potential script breakage with shockwave turret and domes</li>
+					<li>"Space plasma" option now decreases space science cost of orbital destroyer</li>
+					<li>Added more radiation resistances</li>
+					<li>Significantly increased plasma turret power throughput and slightly increased buffer size</li>
+					<li>Fixed particle overload and memory leak when killing mass quantities of biters with orbital strikes or shockwave turrets</li>
+					<li>Orbital strikes now automatically chain if enemy structures or units continue to exist nearby</li>
+					<li>Added new orbital strike VFX</li>
+					<li>Added system to clean up alien tissue</li>
+					<li>Added orbital scanner to reveal map area and allow firing orbital weaponry via the map</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|1.0.46|nauvisday"><ul class = "changelist">				
+					<li>Disabled steam smelting recipes from being used as intermediates</li>
+					<li>Fixed crashes with zero-speed dead greenhouses</li>
+					<li>Fixed detection of biofarms</li>
+					<li>Fans now have sound</li>
+					<li>Removed debug prints</li>
+					<li>NVDay now disables peaceful mode</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|1.0.44|ftweaks"><ul class = "changelist">				
+					<li>Added wood sludging</li>
+					<li>Added bob T4 and T5 solars to hard satellite recipe</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|1.0.36|dirtymining"><ul class = "changelist">				
+					<li>Fixed issues with dirty markers being left behind</li>
+					<li>Changed detritus drop rates and conversion ratios</li>
+					<li>Increased washer speed and pollution</li>
+					<li>Improved mod compatibility</li>
+					<li>Fixed ore washing being shown as an intermediate recipe step</li>
+					<li>Removed fuel value of dirty ore versions</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|1.0.36|oreverhaul"><ul class = "changelist">				
+					<li>More numerical tweaks</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|1.0.32|endgamecombat"><ul class = "changelist">				
+					<li>Added shield domes</li>
+					<li>Cannon turret now properly prioritizes spitters like it was always meant to</li>
+					<li>Added defence trap</li>
+					<li>Increased cannon turret range</li>
+					<li>Added manual orbital targeting</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|1.0.32|nauvisday"><ul class = "changelist">				
+					<li>Made DirtyMining ore washing emissions much higher</li>
+					<li>Added pollution fan</li>
+					<li>Changed pollution signal from item to virtual</li>
+					<li>Added more mod entity exclusions</li>
+					<li>Changed biter attack size curve, increasing caps</li>
+					<li>Added pollution clouds and greenhouse killing</li>
+					<li>Improved scripting performance</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|1.0.32|oreverhaul"><ul class = "changelist">				
+					<li>Added weighting system to starter ores table</li>
+					<li>Tweaked some generation values</li>
+					<li>Added RSO detection and warning</li>
+					<li>Evo factor now reduces the effect of the built bases option</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|1.0.32|treeplant"><ul class = "changelist">				
+					<li>Fixed crash with cargoless robots</li>
+					<li>Tree repair now preserves color and health</li>
+					<li>Fixed issues with mods adding weird dropless or nameless trees</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|1.0.25|oreverhaul"><ul class = "changelist">				
+					<li>Reorganized and cleaned up config, including adding new explanations</li>
+					<li>Added "Enforce Spawner Tiering For Built Bases" setting</li>
+					<li>Added independent patch size distance scaling factor</li>
+					<li>Added "anti-bias" feature</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|1.0.25|treeplant"><ul class = "changelist">				
+					<li>Fixed tree planter on some settings combinations</li>
+					<li>Fixed tree planter being identified as a tree</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|1.0.24|fastfurnaces"><ul class = "changelist">				
+					<li>Updated drill icon to match 0.15 style</li>
+					<li>Renamed drill from "Accelerated" to "Improved"</li>
+					<li>Reimplemented drill to better inherit from vanilla changes since 0.12</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|1.0.24|ftweaks"><ul class = "changelist">				
+					<li>Significantly increase centrifuge power cost and marginally increase emissions</li>
+					<li>Re-added a weaker version of BigBrother active radar bonus</li>
+					<li>Increased performance of Helicopter</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|1.0.24|geothermal"><ul class = "changelist">				
+					<li>Added concrete dependency</li>
+					<li>Forced loading after AlienBiomes</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|1.0.24|infitech"><ul class = "changelist">				
+					<li>Added locale</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|1.0.24|nauvisday"><ul class = "changelist">				
+					<li>Made many modded machines immunte to pollution increases due to them not "meaning" to be that entity type</li>
+					<li>Fixed some scripting issues in the gas boiler</li>
+					<li>Hid boring action recipe (technical)</li>
+					<li>Doubled deaero cleaning power</li>
+					<li>Slightly increased gas boiler emissions</li>
+					<li>Increased steam furnace speed 20%</li>
+					<li>Added rubber flooring</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|1.0.24|oreverhaul"><ul class = "changelist">				
+					<li>Fixed MP problems caused by CRC failures in script</li>
+					<li>Added "per ore richness" setting</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|1.0.24|treeplant"><ul class = "changelist">				
+					<li>Added option for tree healing capsule to repair pollution damage</li>
+					<li>Added automated tree replanter</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|1.0.12|endgamecombat"><ul class = "changelist">				
+					<li>Added shockwave turret</li>
+					<li>Redesigned turret techs</li>
+					<li>Fixed more issues with range turrets</li>
+					<li>Added crated ammo unpacking</li>
+					<li>Added orbital strike system, with automated orbital firing to clear the map of nests</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|1.0.12|ftweaks"><ul class = "changelist">				
+					<li>Added "running through water" sounds</li>
+					<li>Reduced BigBrother radars active area bonus - but increasing their map searching radius to compensate - to avoid making EGCombat wide area scanner obsolete</li>
+					<li>Added locale</li>
+					<li>Added large negative explosive resist to biter nests</li>
+					<li>Added options and functionality for smaller tree hitboxes and tiered (ie successive) armor crafting</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|02/08/2017|dirtymining"><ul class = "changelist">				
+					<li><b>Creation</b></li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|1.0.8|endgamecombat"><ul class = "changelist">				
+					<li>Custom techs now have better effect description</li>
+					<li>Added more radiation resistances to entities</li>
+					<li>Added crated ammo</li>
+					<li>Added several more options</li>
+					<li>Plasma turrets now have custom sounds with laser beam turrets mod</li>
+					<li>Tweaked some recipes and tech costs</li>
+					<li>Settings now use locale</li>
+					<li>Biter flesh now decomposes in inventories</li>
+					<li>Fixed issues with range-boosted turrets</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|1.0.8|treeplant"><ul class = "changelist">				
+					<li>Added tree seeds (saplings) as option to prevent infinite replaceability of trees and thus infinite free wood</li>
+					<li>Added locale</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|1.0.4|fastfurnaces"><ul class = "changelist">				
+					<li>Fixed more optional require statements</li>
+					<li>Added locale</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|1.0.4|nauvisday"><ul class = "changelist">				
+					<li>Added more changes to pollution map settings to reduce extreme tree damage</li>
+					<li>Slightly lessened time evolution factor</li>
+					<li>Tweaked polluted water creation</li>
+					<li>Fixed CRC issues and MP incompatibility</li>
+					<li>Added pollution sensor</li>
+					<li>Added much more locale</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|1.0.4|rubberbelts"><ul class = "changelist">				
+					<li>Added more AAI handling</li>
+					<li>Added locale</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|1.0.2|ftweaks"><ul class = "changelist">				
+					<li>Reduced accumulator sound volume</li>
+					<li>Fixed scripting not being MP compatible</li>
+					<li>Added code to reload recipes and technologies when the game is reloaded, to keep up to date with mod changes</li>
+					<li>Fixed construction robot fire resist code removing all other resistances</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|1.0.2|nauvisday"><ul class = "changelist">				
+					<li>Added option to not make oil deplete to form empty wells but to generate tectonic fissures instead</li>
+					<li>Added locale</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|1.0.1|fastfurnaces"><ul class = "changelist">				
+					<li>Added fast long inserter</li>
+					<li>Fixed CRC failure caused by optional "require" statements for the entity configs breaking MP compatibility</li>
+					<li>Fixed crash with modules disabled but their free use enabled causing an attempted nil reference</li>
+					<li>Changed default value of free use modules to false</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|1.0.1|rubberbelts"><ul class = "changelist">				
+					<li>Added AAI industry compat</li>
+					<li>Added Bobmods compat</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|1.0.0|biterbias"><ul class = "changelist">				
+					<li><b>Release</b></li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|1.0.0|endgamecombat"><ul class = "changelist">				
+					<li><b>Release</b></li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|1.0.0|fastfurnaces"><ul class = "changelist">				
+					<li><b>Release</b></li>
+					<li>Reduced drill power cost</li>
+					<li>Made T4 and T5 modules more expensive</li>
+					<li>Massively improved fast pump</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|1.0.0|ftweaks"><ul class = "changelist">				
+					<li><b>Release</b></li>
+					<li>Rocket launches now increase enemy evolution and trigger attack waves</li>
+					<li>Added custom centrifuge and steam turbine sounds (the latter adapted from ReactorCraft)</li>
+					<li>Made stack size increases more compatible with mods</li>
+					<li>Added "manual crafting" category and moved rocket silo to it</li>
+					<li>Made hard rocket silo depend on EGCombat plasma turrets</li>
+					<li>Added plutonium to satellite recipe (RTG) if present via mods</li>
+					<li>Added 2x steel plate to rocket fuel recipe and moved recipe to chemplant</li>
+					<li>Increased medium biter attack range almost back to vanilla values</li>
+					<li>Made breeder fuel in mods dependent on kovarex enrichment</li>
+					<li>Removed 0.12-era Bob stone pipe fluid capacity increases</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|1.0.0|geothermal"><ul class = "changelist">				
+					<li><b>Release</b></li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|1.0.0|infitech"><ul class = "changelist">				
+					<li><b>Release</b></li>
+					<li>Added EGCombat biter flesh as a science pack to evo reduction if present</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|1.0.0|nauvisday"><ul class = "changelist">				
+					<li><b>Release</b></li>
+					<li>Massively reduced deaero cleaning ability</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|1.0.0|oldwormsound"><ul class = "changelist">				
+					<li><b>Release</b></li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|1.0.0|oreverhaul"><ul class = "changelist">				
+					<li><b>Release</b></li>
+					<li>Added "plateau richness" option</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|1.0.0|rubberbelts"><ul class = "changelist">				
+					<li><b>Release</b></li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|1.0.0|treeplant"><ul class = "changelist">				
+					<li><b>Release</b></li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|0.0.24|geothermal"><ul class = "changelist">				
+					<li>Changed generation algorithm</li>
+					<li>Added optional requirement to pump water into the wells</li>
+					<li>Made T2 tech also unlock steam turbine</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|0.0.24|nauvisday"><ul class = "changelist">				
+					<li>Reduced waste production from deaerosolizers</li>
+					<li>Deaeros now have tiered efficiency</li>
+					<li>Added missing locale</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|0.0.20|endgamecombat"><ul class = "changelist">				
+					<li>Added turret range boost techs</li>
+					<li>Added alien tissue drops</li>
+					<li>Added configuration system with integration into the native mod settings menu and several config options to control things like progression gating and alien tissue behavior</li>
+					<li>Removed T2 night vision equipment</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|0.0.20|fastfurnaces"><ul class = "changelist">				
+					<li>Integrated options into the vanilla settings system</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|0.0.20|ftweaks"><ul class = "changelist">				
+					<li>Made all the nuclear tech changes an option</li>
+					<li>Added fix for "chemical spill" mod hitboxes</li>
+					<li>Removed references to UraniumPower items</li>
+					<li>Split cheap steel recipe to expensive/normal</li>
+					<li>Added some logical tech dependencies to a few techs, including loaders (logi 2, rail), flight, and electric energy distribution 2</li>
+					<li>Moved options to the vanilla mod settings system</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|0.0.20|infitech"><ul class = "changelist">				
+					<li>Moved options to mod settings system</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|0.0.20|nauvisday"><ul class = "changelist">				
+					<li>Moved configs to game settings system</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|0.0.20|oreverhaul"><ul class = "changelist">				
+					<li>Rebalanced more values</li>
+					<li>Added "richness factors" option</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|0.0.20|rubberbelts"><ul class = "changelist">				
+					<li><b>Creation</b></li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|0.0.20|treeplant"><ul class = "changelist">				
+					<li>Moved options to mod settings system</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|0.0.12|geothermal"><ul class = "changelist">				
+					<li>Added T2 conversion and tech</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|23/06/2017|oldwormsound"><ul class = "changelist">				
+					<li><b>Creation</b></li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|21/06/2017|nauvisday"><ul class = "changelist">				
+					<li><b>Creation</b></li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|0.0.8|endgamecombat"><ul class = "changelist">				
+					<li>Update to 0.15</li>
+					<li>Added turret healing techs</li>
+					<li>Plasma turrets now have compatibility with laser beam turret mod and a custom beam attack</li>
+					<li>Removed nuke shell due to vanilla addition of atomic bomb</li>
+					<li>Changed all use of uranium to be vanilla instead of UraniumPower</li>
+					<li>Redesigned all tech costs to match 0.15 styling and science pack set</li>
+					<li>Cannon turret now has a unique ammo item</li>
+					<li>Added new turret sprites and icons</li>
+					<li>Removed bullet upcrafting due to vanilla recipe changes</li>
+					<li>Made concussion turrets cheaper and earlier game</li>
+					<li>Added rocket versions of all custom cannon shells</li>
+					<li>Rebalanced ammo damage</li>
+					<li>Changed T2 night vision colors</li>
+					<li>Reduced Mk3 power armor equipment grid size</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|0.0.8|fastfurnaces"><ul class = "changelist">				
+					<li>Update to 0.15</li>
+					<li>Enabled T4 and T5 modules by default</li>
+					<li>Added missing option for T2 drill</li>
+					<li>Fixed crash with T4 and T5 steam engines if Bob's not installed</li>
+					<li>Rebalanced tech costs and recipes</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|0.0.8|ftweaks"><ul class = "changelist">				
+					<li>Update to 0.15</li>
+					<li>Remove artifact/module recipe changes due to artifacts being removed from the game</li>
+					<li>Added code to improve power pole fast replace groups</li>
+					<li>Added code to fix LoaderRedux tech dependencies</li>
+					<li>Removed follower-robot-count-20 from rocket silo dependency list</li>
+					<li>Overhauled satellite recipe, including major bob compat</li>
+					<li>Reduced bob solder crafting time</li>
+					<li>Increased bob locomotive speed</li>
+					<li>Added upcrafting recipes for bob furnaces, accumulators, and other hardware</li>
+					<li>Made all construction robots immune to fire</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|0.0.8|infitech"><ul class = "changelist">				
+					<li>Update to 0.15</li>
+					<li>Improve mod compatibility</li>
+					<li>Add new techs to match 0.15 and removed some old ones</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|0.0.8|oreverhaul"><ul class = "changelist">				
+					<li>Update to 0.15</li>
+					<li>Added new ores and more mod compat</li>
+					<li>Added new options including patch condensation and retrogen</li>
+					<li>Added optional green behemoth worms</li>
+					<li>Added option to increase nest health 10x to discourage early clearing</li>
+					<li>Rebalanced values</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|0.0.8|treeplant"><ul class = "changelist">				
+					<li>Update to 0.15</li>
+					<li>Added water capsule</li>
+					<li>Fixed bug with stacking trees on top of each other</li>
+					<li>Changed "trees drop selves" default from false to true</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.15|17/06/2017|geothermal"><ul class = "changelist">				
+					<li><b>Creation</b></li>
+</ul>
+			</div>
+	<div id = "mod-version-list-0.14">
+			<div class = "mod-version-list-entry" data-date = "October 28, 2016">0.0.5</div>
+	</div>
+			<div class = "changelog-data-cache" id = "0.14|0.0.5|biterbias"><ul class = "changelist">				
+					<li>Update to 0.14</li>
+					<li>Changed default bias factor from 0.6 to 0.33</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.14|0.0.5|endgamecombat"><ul class = "changelist">				
+					<li>Update to 0.14</li>
+					<li>Added napalm shell</li>
+					<li>Added acid capsule</li>
+					<li>Mk3 power armor now comes with a 40 slot inventory bonus</li>
+					<li>Added T2 flamethrower</li>
+					<li>Added recipe to upcraft yellow ammo into red</li>
+					<li>Plasma turrets now have custom sound</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.14|0.0.5|fastfurnaces"><ul class = "changelist">				
+					<li>Update to 0.14</li>
+					<li>Added separate configs to enable or disable each class of entity</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.14|0.0.5|ftweaks"><ul class = "changelist">				
+					<li>Update to 0.14</li>
+					<li>Added several config options for the more dramatic changes</li>
+					<li>Added code to remove bob green circuit equivalent from lamps and rail signals, using the wood board instead</li>
+					<li>Expanded nuclear tech dependencies</li>
+					<li>Reduced crafting time for bob green circuit equivalent</li>
+					<li>Cheapened KSPower wind turbine and increased power output</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.14|0.0.5|infitech"><ul class = "changelist">				
+					<li>Update to 0.14</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.14|0.0.5|oreverhaul"><ul class = "changelist">				
+					<li>Update to 0.14</li>
+					<li>Complete redesign with tiering, bob compat, and almost all modern features</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.14|0.0.5|treeplant"><ul class = "changelist">				
+					<li>Update to 0.14</li>
+					<li>Added options for big stump hitbox and trees dropping themselves to allow replanting</li>
+</ul>
+			</div>
+	<div id = "mod-version-list-0.12">
+			<div class = "mod-version-list-entry" data-date = "June 4, 2016">04/06/2016</div>
+			<div class = "mod-version-list-entry" data-date = "December 17, 2015">17/12/2015</div>
+			<div class = "mod-version-list-entry" data-date = "December 13, 2015">13/12/2015</div>
+			<div class = "mod-version-list-entry" data-date = "December 12, 2015">12/12/2015</div>
+			<div class = "mod-version-list-entry" data-date = "December 6, 2015">06/12/2015</div>
+			<div class = "mod-version-list-entry" data-date = "December 4, 2015">04/12/2015</div>
+			<div class = "mod-version-list-entry" data-date = "December 3, 2015">03/12/2015</div>
+			<div class = "mod-version-list-entry" data-date = "November 27, 2015">27/11/2015</div>
+			<div class = "mod-version-list-entry" data-date = "November 25, 2015">25/11/2015</div>
+			<div class = "mod-version-list-entry" data-date = "November 24, 2015">24/11/2015</div>
+			<div class = "mod-version-list-entry" data-date = "November 21, 2015">21/11/2015</div>
+	</div>
+			<div class = "changelog-data-cache" id = "0.12|04/06/2016|ftweaks"><ul class = "changelist">				
+					<li>Organize code</li>
+					<li>Remove pump capacity and speed increases</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.12|04/06/2016|infitech"><ul class = "changelist">				
+					<li>Added option to disable turret boost researches</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.12|04/06/2016|oreverhaul"><ul class = "changelist">				
+					<li>Creation as a simple richness scaling mod</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.12|17/12/2015|treeplant"><ul class = "changelist">				
+					<li>Added tree healing capsule</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.12|13/12/2015|treeplant"><ul class = "changelist">				
+					<li><b>Creation</b></li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.12|12/12/2015|biterbias"><ul class = "changelist">				
+					<li><b>Creation</b></li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.12|12/12/2015|endgamecombat"><ul class = "changelist">				
+					<li>Added neutron bomb shell using UraniumPower materials</li>
+					<li>Added radiation capsule</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.12|06/12/2015|infitech"><ul class = "changelist">				
+					<li>Added optional evo research</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.12|04/12/2015|endgamecombat"><ul class = "changelist">				
+					<li>Added power armor mk3 and better versions of night vision and laser defense equipment</li>
+					<li>Added wide area scanner</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.12|03/12/2015|ftweaks"><ul class = "changelist">				
+					<li><b>Creation</b></li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.12|27/11/2015|infitech"><ul class = "changelist">				
+					<li><b>Creation</b></li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.12|25/11/2015|endgamecombat"><ul class = "changelist">				
+					<li>Added better walls</li>
+					<li>Added self-defense technologies for power poles, radar, and robots to fight back if attacked</li>
+					<li>Made trains heavier to improve biter penetration</li>
+					<li>Added uranium (using UraniumPower materials) and sulfur ammo</li>
+					<li>Added high explosive cannon shells</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.12|24/11/2015|fastfurnaces"><ul class = "changelist">				
+					<li><b>Creation</b></li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "0.12|21/11/2015|endgamecombat"><ul class = "changelist">				
+					<li>Renamed to EndgameCombat</li>
+					<li>Added Concussion Turret</li>
+					<li>Added Plasma Turret</li>
+					<li>Added Cannon Turret</li>
+</ul>
+			</div>
+	<div id = "mod-version-list-0.11">
+			<div class = "mod-version-list-entry" data-date = "June 8, 2015">0.0.0</div>
+	</div>
+			<div class = "changelog-data-cache" id = "0.11|0.0.0|endgamecombat"><ul class = "changelist">				
+					<li><b>Creation</b> (as "BetterTank")</li>
+</ul>
+			</div>
+<div id = "game-version-cache"></div>
+<div id = "mod-version-cache"></div>
+<div id = "changedata-empty-cache">Select a mod version...</div>
+</div>
+<br><br>
+<h3>Change Logs</h3>
+<table class = "changetable">
+	<tr>
+		<th class = "changetable-header" style = "width: 11%;">
+			Game Version
+		</th>
+		<th class = "changetable-header" style = "width: 16%;">
+			Mod Versions
+		</th>
+		<th class = "changetable-header" id = "changedata-header" style = "width: 73%;">
+			Changes
+		</th>
+	</tr>
+	<tr>
+		<td style = "vertical-align: top;">
+			<div id = "gamever-box">
+				<button type="button" class = "verbtn-game" data-value = "1.1" onclick = "setSelectedGameVersion(this)"><span><div class = "gamever-width">1.1</div><i class="fas fa-angle-right"></i></span></button><br>
+				<button type="button" class = "verbtn-game" data-value = "1.0" onclick = "setSelectedGameVersion(this)"><span><div class = "gamever-width">1.0</div><i class="fas fa-angle-right"></i></span></button><br>
+				<button type="button" class = "verbtn-game" data-value = "0.18" onclick = "setSelectedGameVersion(this)"><span><div class = "gamever-width">0.18</div><i class="fas fa-angle-right"></i></span></button><br>
+				<button type="button" class = "verbtn-game" data-value = "0.17" onclick = "setSelectedGameVersion(this)"><span><div class = "gamever-width">0.17</div><i class="fas fa-angle-right"></i></span></button><br>
+				<button type="button" class = "verbtn-game" data-value = "0.16" onclick = "setSelectedGameVersion(this)"><span><div class = "gamever-width">0.16</div><i class="fas fa-angle-right"></i></span></button><br>
+				<button type="button" class = "verbtn-game" data-value = "0.15" onclick = "setSelectedGameVersion(this)"><span><div class = "gamever-width">0.15</div><i class="fas fa-angle-right"></i></span></button><br>
+				<button type="button" class = "verbtn-game" data-value = "0.14" onclick = "setSelectedGameVersion(this)"><span><div class = "gamever-width">0.14</div><i class="fas fa-angle-right"></i></span></button><br>
+				<button type="button" class = "verbtn-game" data-value = "0.12" onclick = "setSelectedGameVersion(this)"><span><div class = "gamever-width">0.12</div><i class="fas fa-angle-right"></i></span></button><br>
+				<button type="button" class = "verbtn-game" data-value = "0.11" onclick = "setSelectedGameVersion(this)"><span><div class = "gamever-width">0.11</div><i class="fas fa-angle-right"></i></span></button><br>
+			</div>
+		</td>
+		<td>
+			<div id = "modver-box">Select a game version...</div>
+		</td>
+		<td>
+			<div id = "changedata">Select a mod version...</div>
+		</td>
+	</tr>
+</table>
+			<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
+		<hr>
+		<div id = "footer-spacing">
+		
+		</div>
+		<hr>
+		If you like any of my mods, maps, or other content, or want to help me develop them, feel free to use my Patreon or the buttons below. Every little bit helps me be able to keep working on them, and helps ensure both maintenance and expansion of them.<br>
+		If you wish to give a one-time donation, I recommend you use the Paypal link on the right; Patreon, though it can be used for one-time donations, is designed for ongoing monthly 'subscriptions' (ie a set amount of money gifted each month for as long as you remain a 'patron'). Paypal can also register a donation with monthly recurrence, should that seem preferable to you.<br>
+		For both systems, the amount you choose to donate is up to you, and for Patreon, can be changed at any time should you wish to decrease or increase the amount.<br>
+		And thank you for your support. :D<br>
+					<div class = "linkiconblock">
+					<div class = "linktile">
+						<div class = "linklabel">Patreon</div>
+						<div><a href="http://www.patreon.com/reikasminecraft"><img src="../../../images/patreon.png"  height="48" ></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Paypal</div>
+						<div><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5XRAM3SXBRJY4"><img src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif"  height="48" ></a></div>
+					</div>
+			</div>
+		<hr>
+		To contact me (though some of these are only checked periodically, and many are for specific topics) or find additional information or content, visit any one of these platforms:<br>
+					<div class = "linkiconblock">
+					<div class = "linktile">
+						<div class = "linklabel">Minecraft Forums</div>
+						<div><a href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1291655"><img src="../../../images/mcico.png"  width="36"  height="36" title="Minecraft Only"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Factorio Forums</div>
+						<div><a href="https://forums.factorio.com/viewforum.php?f=216"><img src="../../../images/factorio.png"  width="36"  height="36" title="Factorio Only"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">GitHub</div>
+						<div><a href="https://github.com/ReikaKalseki"><img src="../../../images/gitico.png"  width="36"  height="36" ></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Discord</div>
+						<div><a href="https://discordapp.com/channels/@me/143569407665242112/"><img src="../../../images/discico.png"  width="36"  height="36" title="Discord ID: Reika#3161"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Steam</div>
+						<div><a href="https://steamcommunity.com/id/ReikaKalseki/myworkshopfiles/"><img src="../../../images/steamico.png"  width="36"  height="36" title="Please no random friend requests"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">YouTube</div>
+						<div><a href="https://www.youtube.com/user/ReikasMinecraft/videos"><img src="../../../images/ytico.png"  width="36"  height="36" ></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">SoundCloud</div>
+						<div><a href="https://soundcloud.com/reikakalseki"><img src="../../../images/soundico.png"  width="36"  height="36" title="Music Only"></a></div>
+					</div>
+					<div class = "linktile">
+						<div class = "linklabel">Reddit</div>
+						<div><a href="https://www.reddit.com/user/ReikaKalseki/"><img src="../../../images/redditico.png"  width="36"  height="36" ></a></div>
+					</div>
+			</div>
+		<hr>
+		This site is proudly Canadian. <i class="fab fa-canadian-maple-leaf"></i><br>
+		<hr>
+		Site (including embedded JavaScript) and linked projects (mods, maps, etc) created by and &copy; ReikaKalseki, except for content within which is part of the base games, as noted below.<br>
+		<hr>
+			Minecraft and its content and assets are &copy; Mojang AB, with whom I am not affiliated<br>
+			Factorio and its content and assets are &copy; Wube Software, with whom I am not affiliated<br>
+			Portal 2 and its content and assets are &copy; Valve Corporation, with whom I am not affiliated<br>
+			Stellaris and its content and assets are &copy; Paradox Interactive, with whom I am not affiliated<br>
+			Space Engineers and its content and assets are &copy; Keen Software House, with whom I am not affiliated<br>
+			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
+			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>
+	</div></footer>
+		</div>
+    </body>
+</html>

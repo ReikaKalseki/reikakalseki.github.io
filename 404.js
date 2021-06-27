@@ -1,8 +1,8 @@
 var images = {minecraft:"i-imgur-com_8RWgxVJ.png", stellaris:"i-imgur-com_2F21dYgUx.jpg", fce:"i-imgur-com_2FgNtglD6.jpg", factorio:"i-imgur-com_2F9slqiIR.jpg", p2:"i-imgur-com_2FYCaKfCN.png", se:"i-imgur-com_2F49lF5zd.jpg", starbound:"i-imgur-com_2FR7PKAx0.png"};
 
 var url = window.location.href;
-var idx = url.indexOf("/");
-url = url.substring(idx+1);
+var idx = url.indexOf(".io/");
+url = url.substring(idx+4);
 idx = url.indexOf("/");
 var game = "null";
 if (idx >= 0) {
@@ -10,7 +10,7 @@ if (idx >= 0) {
 	game = url;
 }
 
-console.log("Current site section is "+game);
+console.log("Current site section is '"+game+"'");
 
 function applyBackground() {
 	var img = images[game];

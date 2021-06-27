@@ -11,8 +11,17 @@ function setSelectedGameVersion(btn) {
 	  var entry = children[i];
 	  var name = entry.innerHTML;
 	  
-	  box.innerHTML += '<button type="button" class = "verbtn" data-value = "'+name+'" data-date = "'+entry.dataset.date+'" onclick = "setSelectedModVersion(this)"><span>'+name+'<div class = "spacer"></div><i class="fas fa-angle-right"></i></span></button><br>'
+	  box.innerHTML += '<button type="button" class = "verbtn-mod" data-value = "'+name+'" data-date = "'+entry.dataset.date+'" onclick = "setSelectedModVersion(this)"><span><div class = "modver-width">'+name+'</div><i class="fas fa-angle-right"></i></span></button><br>'
 	}
+	
+var list = document.getElementsByClassName("selver-game");
+	for (var i = 0; i < list.length; i++) {
+		list[i].classList.remove("selver-game");
+	}
+ btn.classList.add("selver-game");
+ 
+ document.getElementById("changedata").innerHTML = document.getElementById("changedata-empty-cache").innerHTML;
+ document.getElementById("changedata-header").innerHTML = "Changes";
 }
 
 function setSelectedModVersion(btn) {
@@ -23,6 +32,11 @@ function setSelectedModVersion(btn) {
  if (div.dataset.date != "")
 	div.dataset.date = " ("+div.dataset.date+")";
  //console.log(ver+" on "+div.dataset.date);
+var list = document.getElementsByClassName("selver-mod");
+	for (var i = 0; i < list.length; i++) {
+		list[i].classList.remove("selver-mod");
+	}
+ btn.classList.add("selver-mod");
  updateChangeData();
 }
 
@@ -34,7 +48,12 @@ function updateChangeData() {
 			var modVer = mv.innerHTML;
 			if (modVer == null || modVer == "" || typeof(modVer) == "undefined")
 		return;				
-  text.innerHTML = "<h2>"+modVer+" ["+gameVer+"]"+mv.dataset.date+"</h2><br>";
+ // text.innerHTML = "<h2 class = \"changelog-version-title\">"+modVer+" ["+gameVer+"]"+mv.dataset.date+"</h2>";
+ text.innerHTML = "";
+  
+  var header = document.getElementById("changedata-header");
+  header.innerHTML = "Changes in "+modVer+" ["+gameVer+"]"+mv.dataset.date+":";
+  
   var list = document.getElementsByClassName("modchangecheck");
 	for (var i = 0; i < list.length; i++) {
 		if (list[i].checked == true) {
