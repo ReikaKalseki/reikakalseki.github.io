@@ -95,41 +95,81 @@
 <hr>
 <table class="toc_list">
 	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><span><i class="fas fa-angle-double-up"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-overview">Overview</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-overview'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-overview">Overview</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-overview'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 </table>
 </div>
         <div class = "textarea">
 			<!--<h2>TerritoryZone</h2>-->
 						<section class = "textblock" id = "text-block-overview">
 				<h3>Overview</h3>
+					
 					TerritoryZone is a mod that lets you declare zones in your world as the territory of a given player or players, and allows you to optionally log or prevent others' actions inside that region, including breaking blocks, placing blocks, opening GUIs, and killing animals. By default, logging is enabled but actual enforcement is disabled.
+					
+					
 					<br><br>
+					
+					
 					Zones present themselves in two ways.<br>
+					
+					
 					One, when a player is in a zone they do not own, they see a notification onscreen about their being in that territory, and are warned not to take actions like mining without permission.<br>
+					
+					
 					<div class = "block-image">
 	<a href = "../../imagedownloads/i-imgur-com_2FCzuZTa6.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FCzuZTa6.png" style="max-width:75%;" ></a>
 </div><br>
+					
+					
 					Two, zones render in-world (akin to the glowing barriers seen in MMO game worlds, or track boundaries in racing games) to show their extent easily.<br>
+					
+					
 					<div class = "block-image">
 	<a href = "../../imagedownloads/i-imgur-com_2FCdBg9B8.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FCdBg9B8.png" style="max-width:75%;" ></a>
 </div><br>
+					
+					
 					Holding tab lets a zone be visible from the inside, and lets owners know they are inside the zone.<br>
+					
+					
 					<div class = "block-image">
 	<a href = "../../imagedownloads/i-imgur-com_2FTx0nzEj.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FTx0nzEj.png" style="max-width:75%;" ></a>
 </div><br>
+					
+					
 					Zones can be the following shapes:
+					
+					
 					<ul>
+					
+					
 					<li>Spherical  - all points within a given radius of the center are in the zone</li>
+					
+					
 					<li>Cylindrical - all points whose XZ planar pythagorean distance to the center are less than the radius are in the zone</li>
+					
+					
 					<li>Cubical - all points whose X, Y, and Z distances to the center are less than the radius are in the zone</li>
+					
+					
 					<li>Prism - all points whose X and Z distances to the center are less than the radius are in the zone</li></ul>
+					
+					
 					Zones can be of any size, from 0 to 2.147 billion blocks in radius, and can be declared at any location in any dimension. They can have any number of owners - though they need at least one, and can have a specified color for in-world rendering.
+					
+					
 					<br><br>
+					
+					
 					Zones can be added, removed, and changed without restarting the server; much like MineTweaker, the zones are declared in a special config file, which can be reloaded at any time with the command <code>/reloadterritories</code>, which will update every client logged into the server.
+					
+					
 					<br><br>
+					
+					
 					Overlapping zones are permitted but are flagged by the loader, and notify the server admin and the owner of the zone.
+					</section>
 			</section>
 <br>
 			<section class = "textblock" id = "text-block-sourcecode">

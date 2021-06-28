@@ -75,10 +75,10 @@
 <hr>
 <table class="toc_list">
 	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><span><i class="fas fa-angle-double-up"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-general">General</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-general'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-changes">Changes</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-changes'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-general">General</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-general'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-changes">Changes</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-changes'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 </table>
 </div>
         <div class = "textarea">
@@ -87,19 +87,39 @@
 				<img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F450745254171890550_2F52996FAA8DB69EA36066D7A102DBCDDAA098249A_2F.jpg" >
 			</div><div style = "text-align: center; width: 100%;"><div class = "header-alert-box" style = "background-color: #F0FFBF; border-color: #C6FF00;"><div class = "header-alert-inner"><img class = "header-alert" src = "data:image/png;base64,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"></div><div class = "header-alert-inner">This item is very old and has not been tested; it may still work, but it may not.</div></div></div>			<section class = "textblock" id = "text-block-general">
 				<h3>General</h3>
+					
 					RealCasual makes the game rather easier and less risky, for those who want a truly casual gameplay experience, and who want to be effectively invincible in the end game.
+					
 			</section><br>
 			<section class = "textblock" id = "text-block-changes">
 				<h3>Changes</h3>
+					
 					<ul>
+					
+					
 					<li>Increases shipping container storage capacity to 1000 slots<div class = "tooltip"><img class = 'tooltipicon' src = '../../images/info.png'><span class='tooltiptext'>Note that this can make them have a noticeable FPS impact in their GUI when full, as the game is now rendering 1000 different items</span></div></li>
+					
+					
 					<li>Buffs armor player DPS 35%</li>
+					
+					
 					<li>Doubles protection and energy value from armor</li>
+					
+					
 					<li>Makes certain recipes cheaper, including capture pods, several wiring items, and pet tethers</li>
+					
+					
 					<li>Doubles smelted ore pixel refinery output</li>
+					
+					
 					<li>Increases high-tier ore (Aegisalt, Ferozium, Violium, Solarium) pixel refinery output 50% (on top of the above)</li>
+					
+					
 					<li>Significantly buffs beam drill and dual rifle mech weapons, making them very powerful mining and defence tools respectively</li>
+					
+					
 					<li>Removes skimbus spawns from asteroid fields</li></ul>
+					</section>
 			</section>
 <br>
 			<section class = "textblock" id = "text-block-sourcecode">

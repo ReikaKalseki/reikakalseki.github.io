@@ -55,29 +55,38 @@
 <hr>
 <table class="toc_list">
 	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><span><i class="fas fa-angle-double-up"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-overview">Overview</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-overview'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-function">Function</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-function'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-settings">Settings</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-settings'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-futureplans">Future Plans</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-futureplans'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-license">License</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-license'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-overview">Overview</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-overview'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-function">Function</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-function'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-settings">Settings</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-settings'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-futureplans">Future Plans</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-futureplans'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-license">License</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-license'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 </table>
 </div>
         <div class = "textarea-other-project">
 			<!--<h2>FCompile</h2>-->
 						<section class = "textblock" id = "text-block-overview">
 				<h3>Overview</h3>
+					
 					FCompile is a simple utility designed to package Factorio mods into ZIP files suitable for release. This automation allows for saving large quantities of time when releasing new versions of many mods at once, especially when the development folder contains many files you do not wish to include in the public downloads (such as construction images or old copies of assets).
+					
 			</section><br>
 			<section class = "textblock" id = "text-block-function">
 				<h3>Function</h3>
+					
 					FCompile will read through all appropriate mods in the target folder, and package all "mod-relevant" files into ZIPs, one for each mod. These ZIPs can then be uploaded directly to the Factorio mod portal. What mods are relevant, and where to find them, as well as what constitutes a "mod relevant" file, are defined in the settings (see below). There is also functionality for things like automatically populating the version and swapping in files in place of the ones found in the mod folder.
+					
+					
 					<br><br>
+					
+					
 					At this time, this is not a GUI program; it is launched via the standard jar-running method (<code>java -jar [jarname].jar [args]</code>) in command-line, and all settings are parsed from the <code>settings.ini</code> file.
+					
 			</section><br>
 			<section class = "textblock" id = "text-block-settings">
 				<h3>Settings</h3>
+					
 					<div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
 			<h4 class = "setting-name">mod_directory</h4>
@@ -167,12 +176,19 @@ Type: Single Value<br>
 	Which, if any, files to "swap in" in place of ones from the mod dir, and from where. Format: [ModName|FileToSwap|Replacement], with the file to swap using mod-relative path and the replacement using absolute. Use 'none' for no swaps; separate entries with ','.
 </div>
 
+					
 			</section><br>
 			<section class = "textblock" id = "text-block-futureplans">
 				<h3>Future Plans</h3>
+					
 					I have desire to enable this tool to upload the compiled ZIPs to the mod portal, but I have no idea how to do the HTTP or authentication system to make that possible.
+					
+					
 					<br><br>
+					
+					
 					I also want to make the jar runnable "directly", ie via clicking on it in explorer, not requiring a command line call.
+					</section>
 			</section>
 <br>
 			<section class = "textblock" id = "text-block-sourcecode">

@@ -95,11 +95,11 @@
 <hr>
 <table class="toc_list">
 	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><span><i class="fas fa-angle-double-up"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-overview">Overview</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-overview'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-tiersandbatches">Tiers and Batches</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-tiersandbatches'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-samplefiles">Sample files</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-samplefiles'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-overview">Overview</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-overview'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-tiersandbatches">Tiers and Batches</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-tiersandbatches'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-samplefiles">Sample files</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-samplefiles'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 </table>
 </div>
         <div class = "textarea">
@@ -108,33 +108,75 @@
 				<img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FmdPOzOZ.png" >
 			</div>			<section class = "textblock" id = "text-block-overview">
 				<h3>Overview</h3>
+					
 					LootTweaks uses the LuaBlock system I developed for <a href="../../minecraft\mods\condensedores.html">CondensedOres</a> - and which now is used for custom CC and RC recipes, among other things - to specify changes to the loot tables present in the game.
+					
+					
 					<br><br>
+					
+					
 					These files go in <code>/config/LootTweaksChanges</code>.
+					
+					
 					<br><br>
+					
+					
 					It supports the following operations:
+					
+					
 					<ul>
+					
+					
 					<li>Clear Loot Table</li>
+					
+					
 					<li>Remove Item</li>
+					
+					
 					<li>Add Item</li>
+					
+					
 					<li>Change Item Weight</li>
+					
+					
 					<li>Change Item Chance Bounds (ie min and max chance per slot)</li>
+					
+					
 					<li>Change Item Count Bounds (ie min and max count per slot)</li>
+					
+					
 					<li>Change Item NBT</li>
+					
+					
 					<li>Add "Tier" (see below)</li>
+					
+					
 					<li>Batch operations (see below)</li></ul>
+					
+					
 					It also supports dynamic configuration reloading with the command.
+					
 			</section><br>
 			<section class = "textblock" id = "text-block-tiersandbatches">
 				<h3>Tiers and Batches</h3>
+					
 					To simplify large-scale changes, LootTweaks allows for the definition of "change batches" which can be applied as a unit, so that if you have the same, say, 48 changes you wish to make to 7 tables, you only need to define those 48 changes in a batch, and then apply that batch to the 7 tables. 
+					
+					
 					<br><br>
+					
+					
 					It also allows defining groups of items as a "tier", so you can set groups of items by rarity for spawning, rather than defining a bunch of item types as functionally equivalent.
+					
 			</section><br>
 			<section class = "textblock" id = "text-block-samplefiles">
 				<h3>Sample files</h3>
+					
 					The mod's GitHub repository contains some sample files:<br>
+					
+					
 					<a href="https://github.com/ReikaKalseki/LootTweaks/tree/master/Example Scripts">Example Scripts</a>
+					</section>
 			</section>
 <br>
 			<section class = "textblock" id = "text-block-sourcecode">

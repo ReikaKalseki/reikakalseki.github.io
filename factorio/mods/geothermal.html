@@ -90,50 +90,80 @@
 <hr>
 <table class="toc_list">
 	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><span><i class="fas fa-angle-double-up"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-overview">Overview</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-overview'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-powerproduction">Power Production</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-powerproduction'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-details">Details</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-details'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-biomes">Biomes</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-biomes'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-overview">Overview</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-overview'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-powerproduction">Power Production</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-powerproduction'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-details">Details</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-details'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-biomes">Biomes</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-biomes'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 </table>
 </div>
         <div class = "textarea">
 			<!--<h2>Geothermal</h2>-->
 						<section class = "textblock" id = "text-block-overview">
 				<h3>Overview</h3>
+					
 					Geothermal adds a new power production system to Factorio, using naturally occurring hotspots to boil water into steam with the heat deep underground.<br>
+					
+					
 					<div class = "block-image">
 	<a href = "../../imagedownloads/i-imgur-com_2F6dPVqC3.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2F6dPVqC3.png" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2FkDSSX6f.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FkDSSX6f.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Some geothermal patches.</div>
 </div>
+					</section>
 			</section><br>
 			<section class = "textblock" id = "text-block-powerproduction">
 				<h3>Power Production</h3>
+					
 					The geothermal power production is done in two stages. First, the heated water is extracted from the ground. This is then run through a special kind of heat exchanger which will boil regular water into steam.<br>
+					
+					
 					<div class = "block-image">
 	<a href = "../../imagedownloads/i-imgur-com_2F60VZlQj.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2F60VZlQj.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2FwIA7qds.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FwIA7qds.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Sample extraction and exchange facilities.</div>
 </div><br>
+					
+					
 					Note that becuase the exchanger and well both require power, and will slow down as your power supply is exceeded, this raises the possibility of a "death spiral" if you rely too heavily on geothermal power without enough safety margins; as you exceed your power capacity, the production of new geothermally-sourced steam will slow, reducing power capacity further, causing further slowing, and so on until the power is nearly exhausted. For this reason, it is not recommended to rely solely on geothermal unless you are capable of producing significantly more than your peak load capacity, or have a very large buffer.
+					
 			</section><br>
 			<section class = "textblock" id = "text-block-details">
 				<h3>Details</h3>
+					
 					Upon first unlocking geothermal power, you will only be able to extract some of the energy in the water; the output steam will be in moderate volume, but only hot enough to run steam engines (or Bob mk2 versions if those are present). Later research will unlock "High Efficiency" conversion, allowing for the production of significantly more steam per unit thermal water, and at temperatures sufficient to run steam turbines. As a result, while in the midgame geothermal is unlikely to be able to support your entire base, a late game geothermal facility is competitive with a small nuclear one.
+					
+					
 					<br><br>
+					
+					
 					To enhance realism, there is a config option to make the geothermal water not provided by the well, but instead supplied by you pumping water into the ground. This significantly complicates the piping logistics around the wells. By default, this is not enabled, and the wells will supply geothermally heated water for free, and never deplete.
+					
+					
 					<br><br>
+					
+					
 					Another optional realism enhancement is the mechanic of heat loss; if you plan on transporting your geothermal water, this will require the use of an insulated fluid wagon; unshielded, the water will cool and eventually turn into regular water. While this allows geothermal wells to also serve as plain water sources, it means that preparing for a power-providing setup has a higher startup cost.
+					
 			</section><br>
 			<section class = "textblock" id = "text-block-biomes">
 				<h3>Biomes</h3>
+					
 					The mod comes with options to control the spawning rules for geothermal patches, ie which biomes will allow them to appear. By default, this is set to "volcanic only", but the spawning algorithm can also be set to add snow biomes and red deserts to the list, in that order. The final option - also selected if the chosen restrictions do not include any biomes present in the game - is "everywhere", where the patches can appear in any biome. Note that the more permissive the biome rule, the rarer the patches within them; in volcanic biomes, with them selected exclusively, the patches are very frequent, sometimes with several dozen viewable within a hundred tiles; with the 'everywhere' option, the patches are in small clusters, separated by thousands of tiles.
+					
+					
 					<br><br>
+					
+					
 					With AlienBiomes installed, there is an option to allow for "colored" geothermal patches, to match the four colors of volcanic biome added by that mod. These go beyond a simple cosmetic change; the color in those biomes is created by trace chemical impurities in the lava and heated water, meaning that the heat exchange process will also produce small quantities of solid material - copper for green, sulfur for blue, and uranium for purple. These will accumulate and block further production unless cleared away or removed from the water with an additional geothermal filtering plant.<br>
+					
+					
 					<div class = "block-image">
 	<a href = "../../imagedownloads/i-imgur-com_2FUveAgm4.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FUveAgm4.jpg" style="max-width:75%;" ></a>
 </div><br>
+					
+					
 					<div class = "block-image">
 	<a href = "../../imagedownloads/i-imgur-com_2Fr3vKsnS.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2Fr3vKsnS.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">A rare occurrence of all four volcanic biomes in a small area, leading to a rainbow of color.</div>
 </div>
+					</section>
 			</section>
 <br>
 			<section class = "textblock" id = "text-block-sourcecode">

@@ -95,14 +95,14 @@
 <hr>
 <table class="toc_list">
 	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><span><i class="fas fa-angle-double-up"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-overview">Overview</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-overview'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-details">Details</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-details'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-usage">Usage</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-usage'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-configuration">Configuration</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-configuration'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-demonstration">Demonstration</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-demonstration'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-notes">Notes</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-notes'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-overview">Overview</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-overview'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-details">Details</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-details'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-usage">Usage</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-usage'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-configuration">Configuration</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-configuration'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-demonstration">Demonstration</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-demonstration'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-notes">Notes</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-notes'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 </table>
 </div>
         <div class = "textarea">
@@ -111,97 +111,245 @@
 				<img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2Ffb0VJcn.png" >
 			</div>			<section class = "textblock" id = "text-block-overview">
 				<h3>Overview</h3>
+					
 					ArchiSections allows you to subdivide a region - generally your base - into a number of separate "zones" - usually just individual rooms - to improve rendering performance by culling everything you cannot see. This is not dissimilar from visibility culling in many games, in particular the "Rooms" mechanic in FortressCraft Evolved.
+					
 			</section><br>
 			<section class = "textblock" id = "text-block-details">
 				<h3>Details</h3>
+					
 					World rendering in Minecraft can be roughly divided into three blocks: Chunk rendering, entity rendering, and TileEntity (TESR) rendering. The former is done in 16x16x16 subchunks (as the <a href="../../minecraft\mods\dragonapi.html">DragonAPI</a> <code>/chgpkt</code> command will show), while the latter are done one by one at whatever position the entity or TileEntity is located at. With Archisections culling active, rendering of these objects is cancelled for any entity or TESR that does not share a zone with you (ie it will not render if you are not in its zone, including if it is not in a zone and you are, and vice versa). Since chunk rendering is segmented, it is culled only if you are in a zone - no chunk culling will take effect if you are outside one - and will cull any subchunk that does not intersect with your zone or its "buffer area" (see below).
+					
 			</section><br>
 			<section class = "textblock" id = "text-block-usage">
 				<h3>Usage</h3>
+					
 					Definition of zones is done by placing a "Room Definition Controller" block; this will extend rays in all six directions to determine the bounds of its zone. These rays will continue through transparent blocks like glass, but are stopped by anything visually opaque. Anything within the extents of those six rays will be defined as in that zone. Note that this only allows for cuboidal zones; you cannot have rooms which are, for example, L-shaped. This means that ArchiSections is best used with a base consisting of discrete rooms between which there is limited visibility; it can be safely used anywhere, but if rooms intersect, or one space consists of multiple rooms, you could end up with very visible "pop-in" as machines and entities enter or exit your render list. To help reduce the risk of this, there is a config option to only accept as valid rooms with solid walls.
+					
 			</section><br>
 			<section class = "textblock" id = "text-block-configuration">
 				<h3>Configuration</h3>
+					
 					The mod comes with fairly extensive configuration to fine-tune how you want the room definition and culling to behave. In particular, there is a complex system for defining whether and which blocks count as transparent for the purposes of room calculation. Firstly, there are a number of yes/no properties the mod can query on blocks to compute whether it should be transparent or not. How or if these properties are evaluated and combined to determine the final opacity is up to the user.
+					
+					
 					<br><br>
+					
+					
 					The valid properties are as follows:<ul>
+					
+					
 					<li>OPAQUECUBE (Block isOpaqueCube() returns true)</li>
+					
+					
 					<li>NORMALRENDER (Block renderAsNormalBlock() returns true)</li>
+					
+					
 					<li>RENDERTYPEZERO (Block has render type of zero (standard cube))</li>
+					
+					
 					<li>FULLLIGHTOPACITY (Block has total light opacity)</li>
+					
+					
 					<li>ZEROLIGHTOPACITY (Block has zero light opacity)</li>
+					
+					
 					<li>OPAQUEMATERIAL (Block material is marked as opaque)</li>
+					
+					
 					<li>AIRMATERIAL (Block has air material type)</li>
+					
+					
 					<li>LIQUIDMATERIAL (Block has liquid material type)</li>
+					
+					
 					<li>ISLEAVES (Block is a leaf block)</li></ul>
+					
+					
 					These properties are then combined with a user-defined logical combination. The format is based on Stellaris condition scripting, and is simple to understand; for example:
+					
+					
 					<div class = "code-block">
+					
+					
 					{<br>
+					
+					
 					<div class = "code-indent"></div>AND = {<br>
+					
+					
 					<div class = "code-indent"></div><div class = "code-indent"></div>OR = {<br>
+					
+					
 					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>OPAQUECUBE<br>
+					
+					
 					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>RENDERTYPEZERO<br>
+					
+					
 					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>FULLLIGHTOPACITY<br>
+					
+					
 					<div class = "code-indent"></div><div class = "code-indent"></div>}<br>
+					
+					
 					<div class = "code-indent"></div><div class = "code-indent"></div>NOR = {<br>
+					
+					
 					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>AIRMATERIAL<br>
+					
+					
 					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>LIQUIDMATERIAL<br>
+					
+					
 					<div class = "code-indent"></div><div class = "code-indent"></div>}<br>
+					
+					
 					<div class = "code-indent"></div>}<br>
+					
+					
 					}<br>
+					
+					
 					</div><br>
+					
+					
 					This block will define any block as opaque if it has a "true" value for the OPAQUECUBE, RENDERTYPEZERO, or FULLLIGHTOPACITY properties, as long as neither the AIRMATERIAL or LIQUIDMATERIAL properties evaluate to true.
+					
+					
 					<br><br>
+					
+					
 					All the standard logical combinators are valid, using the following names: AND, OR, NOT, XOR, NOR, NAND, XNOR. Note that XOR with more than two inputs is treated as "one and only one of them is true", and XNOR is simply the inverse of XOR. Also note that there is an implicit top-level AND around all top-level parameters, but explicitly specifying it is recommended.
+					
+					
 					<br><br>
+					
+					
 					Here is a more complex example: 
+					
+					
 					<div class = "code-block">
+					
+					
 					{<br>
+					
+					
 					<div class = "code-indent"></div>AND = {<br>
+					
+					
 					<div class = "code-indent"></div><div class = "code-indent"></div>OR = {<br>
+					
+					
 					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>OPAQUECUBE<br>
+					
+					
 					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>AND = {<br>
+					
+					
 					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>RENDERTYPEZERO<br>
+					
+					
 					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>NORMALRENDER<br>
+					
+					
 					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>FULLLIGHTOPACITY<br>
+					
+					
 					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>}<br>
+					
+					
 					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>AND = {<br>
+					
+					
 					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>RENDERTYPEZERO<br>
+					
+					
 					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>NORMALRENDER<br>
+					
+					
 					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>OPAQUEMATERIAL<br>
+					
+					
 					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>}<br>
+					
+					
 					<div class = "code-indent"></div><div class = "code-indent"></div>}<br>
+					
+					
 					<div class = "code-indent"></div><div class = "code-indent"></div>NOR = {<br>
+					
+					
 					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>AIRMATERIAL<br>
+					
+					
 					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>LIQUIDMATERIAL<br>
+					
+					
 					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>ISLEAVES<br>
+					
+					
 					<div class = "code-indent"></div><div class = "code-indent"></div>}<br>
+					
+					
 					<div class = "code-indent"></div>}<br>
+					
+					
 					}<br>
+					
+					
 					</div><br>
+					
+					
 					This is the default configuration in the mod, and will define as opaque any block that 1) has neither AIRMATERIAL, LIQUIDMATERIAL, nor ISLEAVES, and 2) has either OPAQUECUBE, the group RENDERTYPEZERO, NORMALRENDER, <i>and</i>FULLLIGHTOPACITY, or the group RENDERTYPEZERO, NORMALRENDER, and OPAQUEMATERIAL.
+					
+					
 					<br><br>
+					
+					
 					These rules are set in the <code>ArchiSections_Opacity_Calculation.cfg</code> file in the config folder.
+					
+					
 					<br><br>
+					
+					
 					There is also a specific override configuration file (<code>ArchiSections_Opacity_Overrides.cfg</code>) to force certain blocks to be treated as transparent or opaque. Blocks can be specified by name or ID, with or without metadata (separated from the name/ID by '$'). Example valid definitions include:
+					
+					
 					<div class = "code-block">
+					
+					
 					46 = TRUE //Marks block ID 46 (TNT) as opaque<br>
+					
+					
 					35$15 = FALSE //Marks block ID 35 with meta 15 (wool, black) as NOT opaque<br>
+					
+					
 					<a href="../../minecraft\mods\rotarycraft.html">RotaryCraft</a>:blastglass = TRUE //Marks RotaryCraft's 'blastglass' block as opaque<br>
+					
+					
 					<a href="../../minecraft\mods\chromaticraft.html">ChromatiCraft</a>:crystalglass$0 = TRUE //Marks meta 0 (black) of 'crystalglass' block from ChromatiCraft as opaque<br>
+					
+					
 					</div>
+					
 			</section><br>
 			<section class = "textblock" id = "text-block-demonstration">
 				<h3>Demonstration</h3>
+					
 					This video demonstrates the culling behavior - notice how the contents of the little house are generally not visible once outside it, and while inside, the only things visible outside are the blocks themselves (minus whatever TESRs were bound to them), and even then, only for a short distance.<br>
+					
+					
 					<div class = "video">
 	<iframe class = "deembed-media" style = "max-width: 75%;" width="960" height="540" src="https://www.youtube.com/embed/BmG8PCl2LZs" title="ArchiSections Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+					
 			</section><br>
 			<section class = "textblock" id = "text-block-notes">
 				<h3>Notes</h3>
+					
 					This mod is very ASM-dependent; it relies on my adding large numbers of hooks into the render engine to selectively control what renders and when. If you disable DragonAPI ASM patches - for example to gain compatibility with a VR mod - ArchiSections is unlikely to work.
+					</section>
 			</section>
 <br>
 			<section class = "textblock" id = "text-block-sourcecode">

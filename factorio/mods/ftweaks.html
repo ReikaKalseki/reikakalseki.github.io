@@ -90,88 +90,222 @@
 <hr>
 <table class="toc_list">
 	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><span><i class="fas fa-angle-double-up"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-overview">Overview</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-overview'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-details">Details</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-details'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-overview">Overview</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-overview'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-details">Details</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-details'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 </table>
 </div>
         <div class = "textarea">
 			<!--<h2>FTweaks</h2>-->
 						<section class = "textblock" id = "text-block-overview">
 				<h3>Overview</h3>
+					
 					FTweaks makes a number of small QoL, balance, and convenience changes to the gameplay, often to address specific common headaches, smooth out common stumbling blocks, provide more freedom in logistics choices, or mitigate the effects of some setting or mod combinations. There are also some options that make things <i>harder</i> or more involved, usually to make seemingly endgame technologies - such as nuclear and rocketry - feel appropriately so, rather than being unlockable as early as the midgame.
+					
 			</section><br>
 			<section class = "textblock" id = "text-block-details">
 				<h3>Details</h3>
+					
 					FTweaks is the end result of years of compiling small modifications to balance or gameplay - modded or vanilla - that I wanted to make to my game. Often, that was to nullify an annoyance - something being a pain to work with, or stupidly expensive to the point of not feeling worth it - or to move things into more "correct-feeling" places in the techtree (or just to make some tech dependencies explicit, rather than de facto based on recipes). Many of the changes are similar to what are found in single-purpose mods for that change; this is no coincidence. I was using many of those mods for many versions and was always getting irritated with the fact half of them never updated (properly) or had random incompatibilities. Putting those changes under one umbrella of one of my mods solved both issues.
+					
+					
 					<br><br>
+					
+					
 					The changes FTweaks makes can be roughly sorted into "significant" and "minor"; the former are almost all configurable, while only a few of the latter are. Note that in the case of the "harder" type changes, there is usually significant BobMods integration, amplifying their effects.
+					
+					
 					<br><br>
+					
+					
 					Significant changes include:<ul>
+					
+					
 					<li>Harder nuclear - gates the nuclear technology behind later-game technologies, around yellow science<div class = "tooltip"><img class = 'tooltipicon' src = '../../images/gear.png'><span class='tooltiptext'>Configurable</span></div></li>
+					
+					
 					<li>Harder rocket silo - pushes the technology to near the end of the techtree - after all nonspace science packs - and significantly increases costs<div class = "tooltip"><img class = 'tooltipicon' src = '../../images/gear.png'><span class='tooltiptext'>Configurable</span></div></li>
+					
+					
 					<li>Advanced Satellite - A tier-2 satellite with much better space science yield per launch<div class = "tooltip"><img class = 'tooltipicon' src = '../../images/gear.png'><span class='tooltiptext'>Configurable</span></div></li>
+					
+					
 					<li>Harder rocket launches - launching rockets will trigger massive biter attack waves<div class = "tooltip"><img class = 'tooltipicon' src = '../../images/gear.png'><span class='tooltiptext'>Configurable</span></div></li>
+					
+					
 					<li>Adding one unit of iron pipe to green (logistic) science pack, like suggested in FFF #275<div class = "tooltip"><img class = 'tooltipicon' src = '../../images/gear.png'><span class='tooltiptext'>Configurable</span></div></li>
+					
+					
 					<li>Cheap steel - BobPlates style; reduces cost to 2 iron per steel and halves smelt time<div class = "tooltip"><img class = 'tooltipicon' src = '../../images/gear.png'><span class='tooltiptext'>Configurable</span></div></li>
+					
+					
 					<li>Wood sludging - like coal liquefaction except with wood and sulfuric acid<div class = "tooltip"><img class = 'tooltipicon' src = '../../images/gear.png'><span class='tooltiptext'>Configurable</span></div></li>
+					
+					
 					<li>Tech "demultiply" - reduces the effect of the technology cost factor on mainline techs, to avoid basic technologies like logistics 2 requiring 500 science packs<div class = "tooltip"><img class = 'tooltipicon' src = '../../images/gear.png'><span class='tooltiptext'>Configurable</span></div></li>
+					
+					
 					<li>Split red science - splits the recipe into a slightly cheaper to automate version and a slightly faster handcrafted version, to expedite the early game<div class = "tooltip"><img class = 'tooltipicon' src = '../../images/gear.png'><span class='tooltiptext'>Configurable</span></div></li>
+					
+					
 					<li>Split gun turret - splits the recipe into a slightly cheaper to automate version and a slightly faster handcrafted version, to allow for more rapid production of emergency defences<div class = "tooltip"><img class = 'tooltipicon' src = '../../images/gear.png'><span class='tooltiptext'>Configurable</span></div></li>
+					
+					
 					<li>Coal decomposition - adds a recipe to break down coal into its chemical constituents - carbon, sulfur, and hydrogen. Only works when those items/fluids exist<div class = "tooltip"><img class = 'tooltipicon' src = '../../images/gear.png'><span class='tooltiptext'>Configurable</span></div></li>
+					
+					
 					<li>Tiered Bob Robots - changes the recipes for BobMod robot parts - frames, tools, and robot brains - so that each tier is crafted from the previous tier plus the difference in cost in original recipes<div class = "tooltip"><img class = 'tooltipicon' src = '../../images/gear.png'><span class='tooltiptext'>Configurable</span></div></li>
+					
+					
 					<li>Makes the blue (and if installed, green, and purple) belts use fewer gears and bearings (just count, not type) to avoid each unit of belt costing hundreds of units of material. Also makes logistic science packs (which contain a blue belt in their recipe) not so extraordinarily expensive<div class = "tooltip"><img class = 'tooltipicon' src = '../../images/gear.png'><span class='tooltiptext'>Configurable</span></div></li>
+					
+					
 					<li>Increases green assembler speed to 1.5 (from 1.25), as if its three speed modules were functional</li>
+					
+					
 					<li>Steam cracking - cracking recipes use steam instead of water<div class = "tooltip"><img class = 'tooltipicon' src = '../../images/gear.png'><span class='tooltiptext'>Configurable</span></div></li>
+					
+					
 					<li>Moves poison capsule to military 2 (from 3)</li>
+					
+					
 					<li>Moves power armor to military 3 if not already</li>
+					
+					
 					<li>Spawners gain significant physical resistance, but are assigned <i>negative</i> explosion resistance, and reduced fire resistance</li>
+					
+					
 					<li>Significantly buffs flamethrower power and "ground sticker" behavior, at the cost of increased fuel usage</li>
+					
+					
 					<li>Item Collector equipment<div class = "tooltip"><img class = 'tooltipicon' src = '../../images/gear.png'><span class='tooltiptext'>Configurable</span></div></li>
+					
+					
 					<li>Make Construction Drones from the mod of the same name invincible<div class = "tooltip"><img class = 'tooltipicon' src = '../../images/gear.png'><span class='tooltiptext'>Configurable</span></div></li></ul>
+					
+					
 					Minor changes include (but are definitely not limited to):<ul>
+					
+					
 					<li>Adds upcrafting recipes for things like stone -> steel furnace and burner -> electric mining drills</li>
+					
+					
 					<li>Corrects some fluid colors in GUI to match their textures</li>
+					
+					
 					<li>Bigger stack sizes (200) for base materials<div class = "tooltip"><img class = 'tooltipicon' src = '../../images/gear.png'><span class='tooltiptext'>Configurable</span></div></li>
+					
+					
 					<li>Manual-only crafting of the rocket silo<div class = "tooltip"><img class = 'tooltipicon' src = '../../images/gear.png'><span class='tooltiptext'>Configurable</span></div></li>
+					
+					
 					<li>Tiered armor - makes every tier of armor require the previous to craft, adjusting recipes appropriately<div class = "tooltip"><img class = 'tooltipicon' src = '../../images/gear.png'><span class='tooltiptext'>Configurable</span></div></li>
+					
+					
 					<li>Smaller tree hitboxes<div class = "tooltip"><img class = 'tooltipicon' src = '../../images/gear.png'><span class='tooltiptext'>Configurable</span></div></li>
+					
+					
 					<li>Concrete uses iron sticks instead of ore<div class = "tooltip"><img class = 'tooltipicon' src = '../../images/gear.png'><span class='tooltiptext'>Configurable</span></div></li>
+					
+					
 					<li>Increases both range and damage per shot for artillery<div class = "tooltip"><img class = 'tooltipicon' src = '../../images/gear.png'><span class='tooltiptext'>Configurable</span></div></li>
+					
+					
 					<li>Cheaper cliff explosives<div class = "tooltip"><img class = 'tooltipicon' src = '../../images/gear.png'><span class='tooltiptext'>Configurable</span></div></li>
+					
+					
 					<li>Unify fast-replace groups on entities like pipes and power poles</li>
+					
+					
 					<li>Increase the ammo clip for nanites from 10 to 25</li>
+					
+					
 					<li>Make the first level of inserter stack size bonus have more significant effect</li>
+					
+					
 					<li>Adds titanium (if available) to reinforced concrete</li>
+					
+					
 					<li>[BobMods] Makes Greenhouses a bit faster</li>
+					
+					
 					<li>[BobMods] Adds blue (chemical) science to many midgame material researches</li>
+					
+					
 					<li>[BobMods] Makes rail signals and lamps use the basic wooden board instead of the component-requiring one</li>
+					
+					
 					<li>[BobMods] Makes resin more readily producible en masse</li>
+					
+					
 					<li>[BobMods] Makes ferric chloride use iron powder (if available) or iron sticks instead of ore</li>
+					
+					
 					<li>[BobMods] Mildly buff green and purple belts</li>
+					
+					
 					<li>[BobMods] Make solder faster to craft</li>
+					
+					
 					<li>[BobMods] Add nitric oxide decomposition recipe</li>
+					
+					
 					<li>[BobMods] Increase upgrade value between tiers of cargo wagons</li>
+					
+					
 					<li>[BobMods] Adding void recipes for water, steam, and air</li>
+					
+					
 					<li>[BobMods] Adding upcrafting/conversion abilities for various machines, including furnaces and accumulators</li>
+					
+					
 					<li>Tiered loaders (if installed) - each tier requires the former</li>
+					
+					
 					<li>Gates Angel Warehouses behind logistics 2</li>
+					
+					
 					<li>Improved rocket launcher range to 35 from 22</li>
+					
+					
 					<li>Reduce solar equipment cost</li>
+					
+					
 					<li>Reduce slowing effect of AlienBiomes snow</li>
+					
+					
 					<li>Reduce KSPower wind turbine cost</li>
+					
+					
 					<li>Adds new turbine and uranium centrifuge sounds</li>
+					
+					
 					<li>Adds water walking sounds</li>
+					
+					
 					<li>Increased helicopter power</li>
+					
+					
 					<li>Tweaked helicopter tech research if the modpack would make it very lategame</li>
+					
+					
 					<li>Increase upgrade value between tiers of Robot Battery research</li>
+					
+					
 					<li>Makes large lamps more expensive and have a lit graphic</li></ul>
+					
+					
 					If a change is currently not configurable that you find objectionable, tell me; it is not usually difficult to add an option.
+					
+					
 					<br><br>
+					
+					
 					<div class = "block-image">
 	<a href = "../../imagedownloads/i-imgur-com_2FJZlcHHd.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FJZlcHHd.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2F9G52pma.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2F9G52pma.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2FBbX9jMn.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FBbX9jMn.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2FLS4juXN.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FLS4juXN.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">The new nuclear and silo technology techtrees, without and with Bob's mods. Note that the Bob ones are with a 5x tech cost multipler, so base costs are 1/5 as large.</div>
 </div>
+					</section>
 			</section>
 <br>
 			<section class = "textblock" id = "text-block-sourcecode">

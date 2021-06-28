@@ -90,31 +90,43 @@
 <hr>
 <table class="toc_list">
 	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><span><i class="fas fa-angle-double-up"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-overview">Overview</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-overview'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-details">Details</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-details'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-options">Options</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-options'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-overview">Overview</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-overview'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-details">Details</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-details'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-options">Options</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-options'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 </table>
 </div>
         <div class = "textarea">
 			<!--<h2>Bioluminescence</h2>-->
 						<section class = "textblock" id = "text-block-overview">
 				<h3>Overview</h3>
+					
 					Bioluminescence makes night much more glowy and colorful, by adding foliage - trees, bushes, reeds, and more - that glow in the dark, as well as (optionally) making biters do the same.<br>
+					
+					
 					<div class = "block-image">
 	<a href = "../../imagedownloads/i-imgur-com_2FH0RiTNZ.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FH0RiTNZ.png" style="max-width:75%;" ></a>
 </div>
+					</section>
 			</section><br>
 			<section class = "textblock" id = "text-block-details">
 				<h3>Details</h3>
+					
 					Bioluminescence adds four kinds of foliage - sparkle trees, luminous bushes, glow reeds, and light lilies. The first three can spawn on land, the last two on water. These plants all glow in the dark in one of several colors, selected to match the color palette of the surrounding biome. Most of the plants are simply scenery and have neither collision nor mineability; sparkle trees, being solid, can also be mined and will yield an item to be placed elsewhere.
+					
+					
 					<br><br>
+					
+					
 					There is also an option to make biters glow in the dark, colored as normal. Aside from also looking aesthetically pleasing, this is also something of a survival aid at night, as now biters are quite visible from a distance.
+					
 			</section><br>
 			<section class = "textblock" id = "text-block-options">
 				<h3>Options</h3>
+					
 					There are several modes by which Biolum can apply its lights; by default, it uses the LuaRendering script system to add lights; this never has any possibility of "straggler" lights but can lead to FPS problems on large worlds. With that option off, it will place lights around the plants, which has no FPS impact but could in theory leave leftover lights separated from the plant if something deletes the plant unexpectedly. Biters always use script lights, as they are moving and constantly created and destroyed, but rarely exist in sufficient number to noticeably impact FPS.
+					
 			</section>
 <br>
 			<section class = "textblock" id = "text-block-sourcecode">

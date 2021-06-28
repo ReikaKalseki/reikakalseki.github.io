@@ -91,12 +91,24 @@
 	</div>
 		<noscript><div style = "text-align: center; width: 100%;"><div id = "nojs-header"><div><img class = "header-alert" src = "../../../images/alert.png"></div><div>You have JavaScript disabled; it is recommended you enable it for this site.<br>While the site will (mostly) function with scripts disabled, some sections (eg changelog view, or sortable tables) require it to update the page contents based on your input.<br>Additionally, JS is used to generate page styling, meaning disabling scripts will leave pages ugly, boring, and in some cases poorly arranged in ways that might impede readability.<br>If you have no idea what this means, or have not in fact disabled scripts, try simply reloading the page, as it may not have loaded completely or correctly.</div></div></div></noscript>
 		<div style = "text-align: center; width: 100%;"><div class = "header-alert-box" style = "border-color: red; background-color: #f008 !important; color: #fff; border-width: 4px; animation: blinker 3s linear infinite;">This site is still being built! Not all content is present, and there may be errors in text, function, optimization, or information, and anything is subject to change. <b>Please do not share the site at this time</b>.</div></div>
-		
+		<div id="toc_container">
+<h3>Quick Nav</h3>
+<hr>
+<table class="toc_list">
+	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><span><i class="fas fa-angle-double-up"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-intro">Introduction</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-intro'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-spotlights">Spotlight List</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-spotlights'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-viewer">YouTube Player</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-viewer'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+</table>
+</div>
         <div class = "textarea">
 			<!--<h2>Spotlights</h2>-->
-			<h3>Introduction</h3>
+			<section class = "textblock" id = "text-block-intro">
+<h3>Introduction</h3>
 The following is a small collection of spotlights or tutorials for my mods. Note that there are many more that are not shown here; I have selected the ones that were most up-to-date at the time of this posting, and which go into the appropriate level of detail, without making substantial errors.
+</section>
 <br><br>
+<section class = "textblock" id = "text-block-spotlights">
 <h3>Spotlights</h3>
 <table class = "spottable">
   <tr>
@@ -309,10 +321,13 @@ Danilus	</td>
 	</td>
   </tr>
 </table>
+</section>
 <hr>
+<section class = "textblock" id = "text-block-viewer">
 <div id = "spotlight-box">
-<p id = "spotlight">
+<p id = "spotlight">Preview a video...
 </div>
+</section>
 			<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
 		<hr>
 		<div id = "footer-spacing">

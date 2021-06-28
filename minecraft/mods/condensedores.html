@@ -95,10 +95,10 @@
 <hr>
 <table class="toc_list">
 	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><span><i class="fas fa-angle-double-up"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-overview">Overview</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-overview'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-controlparameters">Control Parameters</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-controlparameters'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-overview">Overview</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-overview'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-controlparameters">Control Parameters</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-controlparameters'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 </table>
 </div>
         <div class = "textarea">
@@ -107,28 +107,66 @@
 				<img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FB9F2KnX.png" >
 			</div>			<section class = "textblock" id = "text-block-overview">
 				<h3>Overview</h3>
+					
 					CondensedOres allows you to change the relative size, shape, and placement of ore veins, and configure various generation patterns.
+					
+					
 					<br><br>
+					
+					
 					The name "condensed" ores is based on what I originally intended it for - larger, rarer veins, ie <i>condensing</i> ore generation, but it can be used for a multitude of other purposes, ranging from just adding a few extra ore generation passes or types, to making slight modifications to default generation, to completely overhauling it with massively custom parameters.
+					
+					
 					<br><br>
+					
+					
 					It automatically generates a folder in the config folder, and any files ending in .lua, .txt, .ini, .cfg, or .yml (all formatted like the above) will be read and parsed into ore prototypes. Much like with Minetweaker, they can be reloaded at will with the command <code>/reloadoreconfig</code>.
+					
+					
 					<br><br>
+					
+					
 					The mod contains a sample file in the jar ("example.lua") to show the general format and various parameters that can be customized.
+					
+					
 					<br><br>
+					
+					
 					See the <a href="../../minecraft\pages\info\luablock.html">LuaBlock documentation</a> for more details.
+					
+					
 					<br><br>
+					
+					
 					Note that CondensedOres does <i>not</i> automatically disable most mods from generating their ore; you will need to disable that in their respective configs first. My mods, lacking such configs, can communicate with CondensedOres.
+					
 			</section><br>
 			<section class = "textblock" id = "text-block-controlparameters">
 				<h3>Control Parameters</h3>
+					
 					Ore "prototypes" can specify many values to control how and when the ore generates, including but not limited to:<ul>
+					
+					
 					<li>Chance per chunk, and veins per chunk</li>
+					
+					
 					<li>Min and max Y levels, and the interpolation curve between them</li>
+					
+					
 					<li>Biome spawn rules</li>
+					
+					
 					<li>Dimension spawn rules</li>
+					
+					
 					<li>Which blocks to generate for the ore, and whether to mix types in a single vein</li>
+					
+					
 					<li>Which blocks can be generated into</li>
+					
+					
 					<li>Block adjacency rules</li></ul>
+					</section>
 			</section>
 <br>
 			<section class = "textblock" id = "text-block-sourcecode">

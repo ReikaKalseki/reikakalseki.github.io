@@ -95,12 +95,12 @@
 <hr>
 <table class="toc_list">
 	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><span><i class="fas fa-angle-double-up"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-overview">Overview</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-overview'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-reactors">Reactors</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-reactors'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-auxiliary">Auxiliary</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-auxiliary'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-worldgen">Worldgen</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-worldgen'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-overview">Overview</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-overview'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-reactors">Reactors</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-reactors'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-auxiliary">Auxiliary</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-auxiliary'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-worldgen">Worldgen</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-worldgen'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 </table>
 </div>
         <div class = "textarea">
@@ -109,56 +109,122 @@
 				<img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2Fgl2Ptux.png" >
 			</div>			<section class = "textblock" id = "text-block-overview">
 				<h3>Overview</h3>
+					
 					ReactorCraft is a mod that adds realistic nuclear reactors, both fission and fusion, to Minecraft.<br>
+					
+					
 					This mod <b>depends</b> on <a href="../../minecraft\mods\rotarycraft.html">RotaryCraft</a> - it cannot be installed without it.
+					
+					
 					<br><br>
+					
+					
 					Here are some of the ways in which realism is simulated:<ul>
+					
+					
 					<li>The physics is simulated in such a way as to reflect reality, including real values for energy creation per reaction</li>
+					
+					
 					<li>Simulated nuclear physics governing reaction behavior, including heat production and reactivity level</li>
+					
+					
 					<li>The reactors (a large multiblock in the "interacting parts" sense, not the "blueprint" sense) have to be built in a way that reflects real reactors, with strategic placement of fuel rods, control rods, and other reactor core components</li>
+					
+					
 					<li>Realistic reactor behavior in the event of poor design, including possible meltdowns, hydrogen explosions, and radiation leakage</li>
+					
+					
 					<li>Realistic (though obviously simplified) control systems to manipulate control rods, feed fuel, and the like</li>
+					
+					
 					<li>The fuel is created realistically - including enrichment - and used realistically; users must manage things like spent fuel with spent fuel pools</li>
+					
+					
 					</ul>
+					
+					
 					<b>Note:</b> Due to internal game mechanics (entities stop ticking and accumulate if not surrounded by a buffer of loaded chunks), active fission reactors in unloaded chunks risk a meltdown. Use chunkloaders or shut down your reactors as necessary, and ensure that you do not have large quantities of escaping neutrons.
+					
 			</section><br>
 			<section class = "textblock" id = "text-block-reactors">
 				<h3>Reactors</h3>
+					
 					ReactorCraft adds four base reactor types to the game, in this rough order of progression:<ul>
+					
+					
 					<li>Pebble Bed "High Temperature Gas Reactor" (HTGR) - Low power but extremely safe, and easy to make fuel for</li>
+					
+					
 					<li>Fission - High power but much more dangerous, requires properly enriched uranium fuel, and generates waste; can run on plutonium for much greater power and danger</li>
+					
+					
 					<li>Breeder - Moderate power, very dangerous, and can convert depleted uranium to plutonium</li>
+					
+					
 					<li>Thorium - Moderate power, lower danger (greatly reduced meltdown risk), more complicated operation (liquid fueled and needs thermal and neutron kickstart)</li>
+					
+					
 					<li>Fusion - Extremely powerful to the point of running an entire server, but requires multiple massive structures, complete progression and insane quantities of resources</li></ul>
+					
+					
 					<div class = "block-image">
 	<a href = "../../imagedownloads/i-imgur-com_2F6nK9GcV.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2F6nK9GcV.png" style="max-width:75%;" ></a>	<div class = "image-caption">A fission reactor.</div>
 </div><br>
+					
+					
 					<div class = "block-image">
 	<a href = "../../imagedownloads/i-imgur-com_2FmLjs0Om.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FmLjs0Om.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">A (very unsafe) breeder reactor.</div>
 </div><br>
+					
+					
 					<div class = "block-image">
 	<a href = "../../imagedownloads/i-imgur-com_2FZNchMSw.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FZNchMSw.png" style="max-width:75%;" ></a>	<div class = "image-caption">A fusion reactor complex (before the creation of HP turbines).</div>
 </div>
+					</section>
 			</section><br>
 			<section class = "textblock" id = "text-block-auxiliary">
 				<h3>Auxiliary</h3>
+					
 					ReactorCraft also adds possible upgrades to the RC solar plant, allowing it to produce far more power than its usual 4MW base. With all upgrades, it runs on a sodium loop and generates ReC steam, meaning it can generate multiple gigawatts of power via the turbines.
+					
 			</section><br>
 			<section class = "textblock" id = "text-block-worldgen">
 				<h3>Worldgen</h3>
+					
 					ReactorCraft does add ores out of necessity.<ul>
+					
+					
 					<li>Fluorite: Spawns in the overworld between layers 32 and 60. Relatively common, and exists in several colors.</li>
+					
+					
 					<li>Pitchblende: Spawns in the end, mushroom islands, and the twilight forest. The latter two types generate between layers 8 and 24. Fairly rare.</li>
+					
+					
 					<li>Cadmium: Spawns in the overworld between layers 12 and 32. About as common as gold.</li>
+					
+					
 					<li>Indium: Spawns in the overworld between layers 0 and 16. Rare.</li>
+					
+					
 					<li>Silver: Spawns in the overworld between layers 16 and 40. About as common as gold. Can be disabled if other mods with their own silver are present.</li>
+					
+					
 					<li>Ammonium Chloride: Spawns in the nether around lava pools at layer 32. Moderately rare.</li>
+					
+					
 					<li>Calcite: Spawns in the overworld between layers 32 and 60. Tiny amounts spawn together, but clusters are common.</li>
+					
+					
 					<li>Magnetite: Spawns in the overworld between layers 60 and 128. Fairly common.</li></ul>
+					
+					
 					Like RotaryCraft, ReactorCraft has a craftable handbook:<br>
+					
+					
 					<div class = "block-image">
 	<a href = "../../imagedownloads/i-imgur-com_2F9e2tGNi.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2F9e2tGNi.png" style="max-width:75%;" ></a>
 </div>
+					</section>
 			</section>
 <br>
 			<section class = "textblock" id = "text-block-sourcecode">

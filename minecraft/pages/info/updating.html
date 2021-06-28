@@ -95,70 +95,144 @@
 <hr>
 <table class="toc_list">
 	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><span><i class="fas fa-angle-double-up"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-introduction">Introduction</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-introduction'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-backgroundinformation">Background Information</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-backgroundinformation'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-specificissues">Specific Issues</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-specificissues'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-agrowingmountain">A Growing Mountain</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-agrowingmountain'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-partialupdates">Partial Updates</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-partialupdates'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-help">Help</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-help'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-introduction">Introduction</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-introduction'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-backgroundinformation">Background Information</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-backgroundinformation'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-specificissues">Specific Issues</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-specificissues'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-agrowingmountain">A Growing Mountain</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-agrowingmountain'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-partialupdates">Partial Updates</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-partialupdates'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-help">Help</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-help'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 </table>
 </div>
         <div class = "textarea">
 			<!--<h2>Version Updates</h2>-->
 						<section class = "textblock" id = "text-block-introduction">
 				<h3>Introduction</h3>
+					
 					As anyone familiar with the modded Minecraft environment will know, my mods are at the current time still developed for the 1.7.10 version of the game, and will not function in newer game versions. In short, this is because the update process is an extreme amount of work, and because I am still unconvinced it will be worth it. This page explains these reasons in more detail.
+					
+					
 					<br><br>
+					
+					
 					Note: Large portions of this are adapted or paraphased from a few "high profile" places I have discussed this topic before, notably <a href = "https://www.reddit.com/r/feedthebeast/comments/4x8jgi/a_tale_of_broken_code_hopes_and_respect_or_why_i/">here</a> and <a href="https://www.reddit.com/r/feedthebeast/comments/5m43xk/i_am_reika_developer_of_a_number_of_large_mc_mods/dc0pr1a/">here</a>.
+					
 			</section><br>
 			<section class = "textblock" id = "text-block-backgroundinformation">
 				<h3>Background Information</h3>
+					
 					By far the most significant barrier to updating is the sheer scale of the task. Unlike in many games, where mods may continue to work unmodified even across game versions (a la Stellaris, Starbound, Space Engineers, or more), or where unless certain specific breaking changes are made to a generally stable API, the only thing you need to change is a version identifier (ie Factorio), Minecraft modding is different. Because there is no API to speak of - Forge is merely a set of hooks to register content to the game on startup, as well as a number of handlers to intercept various parts of vanilla behavior - almost the entirely of any mod's codebase is direct calls of internal vanilla code. Even something simple like, say, the ThaumCraft infernal furnace, which "seems" both simple in concept and completely "custom", is almost exclusively made of such calls, including checking neighboring blocks (<code>world.getBlock(x, y, z)</code>), looking for item entities (<code>world.getEntitiesWithinAABB(type, box)</code>), performing smelting recipe lookups (<code>FurnaceRecipes.getRecipes.getSmeltingResult(input)</code>), and more.
+					
+					
 					<br><br>
+					
+					
 					There is <i>no</i> "interface" layer that exists to "buffer" the changes, nor can one reasonably be made given the sheer variety of calls required. Those who have been in this community for a long time will remember how many projects to be exactly that kind of layer have been born and swiftly abandoned before ever reaching a point where they were practically usable.
+					
+					
 					<br><br>
+					
+					
 					Any one of these can be moved or renamed in any version update, which requires fixing by way of manually updating every call; this on its own is annoying busy work, but not insurmountable (with a few exceptions, as we will get to). However, just as common in every game version update is wholesale removal of entire portions of the codebase, sometimes going as far as eliminating entire concepts from the game (eg the "flattening", which removed metadata, and the infamous 1.8 dynamic block renderer removal).
+					
+					
 					<br><br>
+					
+					
 					As it happens, the versions between 1.7.10 and whatever version of the game you consider "modern" almost all contain such changes, sometimes several of them. Several of them are extremely time consuming or difficult to adapt to, but altogether they result in a truly monumental task if I choose to update, with an estimated time requirement of <i>multiple years</i>.
+					
+					
 					<br><br>
+					
+					
 					On that note, four things need to be stated:<ul>
+					
+					
 					<li>If one is to update, there is little point in updating to anything other than the latest version; people who would be willing to use a version that is "a little" out of date are also likely to be willing to use one that is much more outdated, and the kind of people who ask for updates all the time would continue to ask for the very newest version even if you are only slightly behind.</li>
+					
+					
 					<li>Total rewrites are <i>never</i> worth the effort. They take an absurd amount of time and rarely yield much in the way of improvement, and even in the case of a version update the majority of "rewritten" code would be identical to before, meaning all the time spent rewriting it was of no value.</li>
+					
+					
 					<li>An update is not useful if it is obsolete before it is done; that is, if I start working on an update, and that update takes eight months, but the next game version is only six months from now, I have no good reason to start; by the time I am done, I will just need to start all over again.</li>
+					
+					
 					<li>The primary purpose of an update is to reach a wider array of players, ie those who would never have tried the mods in an older verison of the game. This is primarily by way of becoming part of the mainstream ecosystem, as well as just being easier to "try out" by the average player. However, both of these mechanisms are muted <i>at best</i> for my mods; their rather niche design and appeal has meant that they never really gained a foothold in that ecosystem - despite having been in several major FTB packs - and few average players see enough interest in the mods to actually try them. As a result, the majority of my playerbase is unusually "dedicated", in a way that largely overpowers the version issues.</li></ul>
+					
 			</section><br>
 			<section class = "textblock" id = "text-block-specificissues">
 				<h3>Specific Issues</h3>
+					
 					<ul><li>By far the biggest issue is the successive redesigns of the game's render engine. The 1.8 update cast the first stone, as it were, by removing the ISimpleBlockRenderingHandler ("ISBRH") rendering system which allowed for dynamic and reasonably complex custom render code for blocks (without going "all the way" and implementing a far more expensive TileEntity-based renderer) and replacing it with prebaked JSON files. This was completely unusuable for anything that was truly meant to by dynamic, as opposed to just a handful of state variants. At the time, MFR Rednet made some fairly well-known calculations about how many variants it would take (6 independent connection sides times 16 color variants times 2 actual "states" = 2^6 x 16 x 2 net variants), but some of my renderers are even more stark: Take the CC laser puzzle control blocks (ie the ones from the "Chromatic Beams" dimension puzzle). Those have 9 variants (prism, mirror, filter, etc), three independent color flags (for a total of 8 color states), 8 orientations, and three additional flags for things like "is activated" or "can be rotated". All of these change the renderer in some usually small way. However, without the ability to write programmatic render code, while being forced to prebake render scripts for each permutation, that results in 9x8x8x2x2x2 = 4608 scripts, most of which differ in only tiny ways. Even with some kind of autogenerator, that is not remotely feasible.
+					
+					
 					I am aware that in the years since 1.8 has been released, replacements for the system - though they are not quite as good as the original - have been created. However, that took, well, years to become an option, and that meant that base game changes continued to accumulate, making the eventual update even larger of a task (more on that later).</li>
+					
+					
 					<li>Other major changes to the renderer included the removal of the "Tessellator", basically a front-end to the direct draw mode in OpenGL, which allowed for very simple and straightforward programmatic vertex drawing (something I have used extensively, especially in TileEntity renders and various HUD elements, but also large-scale "free" renders like the "Sky Rivers" in the CC dimension). This was done because such direct draw <i>is</i> comparatively inefficient and slow, but it means that now such rendering is much harder to implement, and would again require going back and redesigning massive quantities of my code.</li>
+					
+					
 					<li>Another major hurdle is the fact that 1.8 replaced almost every function taking x,y, and z position arguments - eg World's <code>getBlock(x,y,z)</code>, <code>canBlockSeeTheSky(x,y,z)</code>, and <code>getRedstoneLevel(x,y,z)</code>, Block's <code>onBlockAdded(world,x,y,z)</code>, <code>getCollisionBoundingBox(world,x,y,z)</code>, and <code>removedByPlayer(x,y,z)</code>, and Item's <code>onItemUse(ItemStack,world,x,y,z,side)</code> - with one taking a struct-like BlockPos object (which itself stores the xyz values). This is functionally identical - though it is less performant - but it means that I would need to go and change <i>every single bit of position-relevant code in every mod</i>. Given how much position-specific stuff my mods do - basically anything that happens in world fits this description, as well as the majority of properties of any block - this alone is dozens of hours of mindless busy work. Indeed, in the event I do update, I find it likely I will instead do some ASM hackery to autogenerate all those "relay" methods so I can leave my code as is and just have the calls be redirected at runtime.</li>
+					
+					
 					<li>The loss of metadata is another similar hurdle. Again, not conceptually difficult to adapt to, but an obscene amount of busy work, with very high potential for errors and little if any automated fix being possible. I use metadata extensively in my mods, and <a href="../../../minecraft\mods\dragonapi.html">DragonAPI</a> has dozens of complex block and world handling systems that take this into account. I would have to redesign basically every bit of code involving block registries, multiblocks, blueprints, or "cached pieces of the world". Not to mention all those references to what <i>was</i> a bunch of variants of one block but now needs to be correctly split into whatever specific block it now needs to be.</li>
+					
+					
 					<li>Again in the busywork vein, all of the vanilla items and blocks have been - once again - renamed internally and their points of reference moved to new locations. I probably do not need to detail how many places such things are referenced from - we are talking about literally every reference to a vanilla block or item, after all. I actually tried an automated script to fix a similar issue in the 1.7.10 update; it introduced numerous issues that were still being caught and fixed <i>four years later</i>.</li>
-					<li>The change to ItemStack handling - specifically empty slots - in 1.11 is another such problem. Prior to this, an empty slot in an inventory is represented with a value of null. For example, basically every inventory is internally just an itemstack array, eg a chest being <code>ItemStack[27]</code>. Any empty slots are simply null values at that array index. However, this was changed to use a singleton ItemStack.EMPTY object placeholder, meaning that any code not updated to the new system will A) cause crashes in the new system as the new system is not expecting null results and B) fail to correctly identify empty slots in inventories, as the old <code>!= null</code> check will of course always be true, even for empty slots. Unlike some of the previous examples of busy work, this cannot even be attempted to be fixed with some kind of find-and-replace; every reference to inventories needs to be checked, and unlike say calls to a specific block name or a specific function call, there is no common pattern or search string to look for.</li>
+					
+					
+					<li>The change to ItemStack handling - specifically empty slots - in 1.11 is another such problem. Prior to this, an empty slot in an inventory is represented with a value of null. For example, basically every inventory is internally just an itemstack array, eg a chest being <code>ItemStack[27]</code>. Any empty slots are simply null values at that array index. However, this was changed to use a singleton ItemStack.EMPTY object placeholder, meaning that any code not updated to the new system will A) cause crashes in the new system as the new system is not expecting null results and B) fail to correctly identify empty slots in inventories, as the old <code>!= null</code> check will of course always be true, even for empty slots. Unlike some of the previous examples of busy work, this cannot even be attempted to be fixed with some kind of find-and-replace; every reference to inventories needs to be checked, and unlike say calls to a specific block name or a specific function call, there is no common pattern or search string to look for. Worse, because a null check remains syntactically - if not semantically - valid, no IDE will flag it as an error, and as such there is no way to hunt down every such instance, meaning the realistic outcome is many null checks being missed, with the process of finding and correcting all of them likely to be a process ongoing for many releases for months or even years.</li>
+					
+					
 					<li>Newer versions of the game enforce a kind of "segmentation" on worldgen, that is, generation is generally required to be done in isolated chunks (rather than just spilling out of the bounds as necessary, generating additional chunks if needed). This allows for performance increases, but it greatly complicates the logic for any kind of worldgen that is made of discrete "objects" (eg structures) that A) are highly dependent on the conditions within their "planned" chunks before they can generate (such as by requiring not colliding with any terrain, features, or specific biomes); B) must <i>never</i> be only partially generated; C) are placed "as a unit", as opposed to something already segmented like the output of a noise generator; D) need to have the locations of the objects knowable (including possibly the "planned" locations before they are even generated) for some kind of detection or mapping system. I will not claim that this is <i>impossible</i>, per se, but it does create a great many unanswered questions regarding how to handle the myriad edge cases and failure states, and almost certainly a painful amount of work.</li></ul>
-					Additionally, there is another nontechnical issue: The Forge/Fabric split. While that does not making it harder for me to update, it <i>does</i> make it less appealing, because now I have to contend with a bifurcated community, where a Forge mod is completely ignored by those who insist on using Fabric (and vice versa). Since porting to Fabric is not an option - and maintaining a version for both loaders even less so - I will have far less base appeal than I did even in past versions. Moreover, since mods are split between them, I will be operating within a somewhat gutted modding ecosystem, probably destroying many of the mod interactions I have spent years developing.
+					
+					
+					Additionally, there is another nontechnical issue: The Forge/Fabric split. While that does not make it harder for me to update, it <i>does</i> make it less appealing, because now I have to contend with a bifurcated community, where a Forge mod is completely ignored by those who insist on using Fabric (and vice versa). Since porting to Fabric is not an option - and maintaining a version for both loaders even less so - I will have far less base appeal than I did even in past versions. Moreover, since mods are split between them, I will be operating within a somewhat gutted modding ecosystem, probably destroying many of the mod interactions I have spent years developing.
+					
 			</section><br>
 			<section class = "textblock" id = "text-block-agrowingmountain">
 				<h3>A Growing Mountain</h3>
+					
 					As with anything of this nature, the longer it is put off, the larger the task becomes. Recall how above it was described how the delay before a usable ISBRH replacement was found meant that the majority of mods - I was far from alone on this - had to wait a great deal of time before they could begin updating, by which point the task had grown larger (and the specter of another game update "beating them to it" grew similarly larger). For mods on the scale of <a href="../../../minecraft\mods\rotarycraft.html">RotaryCraft</a> or especially <a href="../../../minecraft\mods\chromaticraft.html">ChromatiCraft</a>, even that delay meant that it was basically guaranteed that by the time I would be done any hypothetical 1.8 update, 1.9 would already be out (and indeed, I was right). The same has also proven true for almost every update since. Not helping matters is that unlike how 1.7.10 was kind of a "standard" version for a long period of time, where the majority of the playerbase was in agreement on, no version between that and 1.12 reached anything remotely resembling the same level. This greatly eroded the apparent value of an update - why bother updating to 1.8 if half of the users are already on 1.10, and why bother updating to <i>that</i> when it leaves half of the people behind on 1.8, and by the time you are done you need to move to 1.11 anyways? - until 1.12 had proven itself several years later. By this point of course, there were now a great many major changes and redesigns accumulated that I would need to deal with during an update, making the task even more daunting.
+					
+					
 					<br><br>
-					And this pattern continues; at the time of this writing, in spring 2021, vanilla is previewing some major changes to the worldgen process, which while interesting, again comes with some major potential to break mods. Notably, y=0 is no longer the bottom limit of the world; blocks now extend to y=-64. This means that any code which previously assumed that y=0 was the world floor - such as anything scanning a chunk or column for a block, or any kind of worldgen, or anything checking if something is "in world bounds", now needs to be corrected.
+					
+					
+					And this pattern continues; at the time of this writing, in spring 2021, vanilla is previewing some major changes to the worldgen process, which while interesting, again come with some major potential to break mods. Notably, y=0 is no longer the bottom limit of the world; blocks now extend to y=-64. This means that any code which previously assumed that y=0 was the world floor - such as anything scanning a chunk or column for a block, or any kind of worldgen, or anything checking if something is "in world bounds", now needs to be corrected.
+					
 			</section><br>
 			<section class = "textblock" id = "text-block-partialupdates">
 				<h3>Partial Updates</h3>
+					
 					A somewhat common question is why I do not just update only some of my mods. The answer to that is twofold: One, DragonAPI is the base of every mod - and all but a couple use it extensively - and would thus need to be updated. This is in itself a huge task, though granted not the multi-year endeavor for all of the mods. Two, the little mods that are the easy ones to update are frankly not very popular; the vast majority of people who want updates to my content do not much care about getting a new version of ExpandedRedstone, <a href="../../../minecraft\mods\geostrata.html">GeoStrata</a>, <a href="../../../minecraft\mods\usefultnt.html">UsefulTNT</a>, or <a href="../../../minecraft\mods\meteorcraft.html">MeteorCraft</a>; they want RotaryCraft, its addons, and ChromatiCraft.
+					
 			</section><br>
 			<section class = "textblock" id = "text-block-help">
 				<h3>Help</h3>
+					
 					Another somewhat common question is whether I would be willing to accept help in updating, to make the task more realistically attainable. Contrary to many people's expectations, the answer is in fact yes, but it does come with four significant caveats:<ul>
+					
+					
 					<li>I would retain full ownership and control over the mods; the people helping would get credit for the porting effort, but would not have any authority (more than anyone else) over things like the design direction or administrative control over the mods they helped port.</li>
+					
+					
 					<li>The port would need to be (as much as possible) 1:1 equivalent. That is, no removed or added features, no changed functionality (of tools, machines, etc). Where that is not possible, I would need to be involved to determine the best course of action (as well as confirming that it actually is impossible)</li>
+					
+					
 					<li>The resultant code has to be easily maintainable/expandable by me; this means that changing coding style, or changing the required dev environment structure (for example requiring a different IDE or removing my resource loaders and forcing the 'standard' <code>src/main/java</code> and <code>src/main/resources</code> folders), would not be acceptable.</li>
+					
+					
 					<li>I cannot offer any kind of material compensation, especially of the "pay me like you would a programmer" variety; that would be many tens of thousands of dollars I do not have.</li></ul>
+					
+					
 					I have only met a handful of people who were accepting of all of those caveats, and of those who were, none of them ever really made much of a dent in the project. The largest amount of progress ever made was (allegedly) getting DragonAPI alone to boot in a 1.10 instance, but that was A) in 2018, B) only a claim, with my never seeing evidence of that fact (nor really hearing much from them ever again), and C) sounded like it was accomplished by simply removing code that was hard to update rather than actually <i>updating</i> it (meaning said DragonAPI would not be usable as the foundation for other mods).
+					
+					
 					<br><br>
+					
+					
 					If you think you will be different, I am very open to hearing from you; simply contact me via one of the (relevant) platforms in the footer.
+					</section>
 			</section>
 			<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
 		<hr>

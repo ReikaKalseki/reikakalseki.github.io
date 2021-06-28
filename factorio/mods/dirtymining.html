@@ -90,35 +90,55 @@
 <hr>
 <table class="toc_list">
 	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><span><i class="fas fa-angle-double-up"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-overview">Overview</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-overview'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-details">Details</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-details'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-overview">Overview</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-overview'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-details">Details</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-details'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 </table>
 </div>
         <div class = "textarea">
 			<!--<h2>DirtyMining</h2>-->
 						<section class = "textblock" id = "text-block-overview">
 				<h3>Overview</h3>
+					
 					DirtyMining allows you to get increased yield from your ore - equivalent to several levels of mining productivity in potential throughput and per-tile total yield - without requiring custom mining drills or massively changing your ore handling infrastrucure.
+					
 			</section><br>
 			<section class = "textblock" id = "text-block-details">
 				<h3>Details</h3>
+					
 					This effect is achieved quite simply: This mod adds an area selection tool (like blueprints and the deconstruction planner) which will only interact with ore tiles, and can mark them for "dirty extraction".<br>
+					
+					
 					<div class = "block-image">
 	<a href = "../../imagedownloads/i-imgur-com_2F6qkKZOh.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2F6qkKZOh.jpg" style="max-width:75%;" ></a>
 </div><br>
+					
+					
 					This results in ore being mined less carefully, collecting more overall usable material that would otherwise have been ignored. This also allows it to collect a little <i>faster</i>, thus improving throughput on existing ore fields as well.
+					
+					
 					<br><br>
+					
+					
 					However, this comes at a cost; the less careful collection method results in the ore being unusably contaminated with detritus - dirt, wood, et cetera - and so it must be cleaned before being processed via the normal means. This requires the use of the Ore Washing Plant.<br>
+					
+					
 					This machine receives the dirty ore and will separate it - with the use of a large quantity of water - from the debris, which is output as several separate items, including pebbles and twigs. Each individual item type is a fairly uncommon result from a given unit of ore being cleaned, but over time, the waste items will accumulate unless processed or otherwise removed. As a first step, they can be converted into various raw materials, but this usually results in a huge surplus of those materials unless more intelligent processing measures are implemented.<br>
+					
+					
 					<div class = "block-image">
 	<a href = "../../imagedownloads/i-imgur-com_2Fs9Op2Do.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2Fs9Op2Do.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">A large dual ore washing plant.</div>
 </div><br>
+					
+					
 					Once washed, ore can be used exactly as it would had it been harvested normally. The ore washing plant is capable of <i>very</i> high throughput, so it will never become the bottleneck in your ore handling sequence, unless you starve it of water or allow waste to accumulate. Additionally, the ore washing plant has a circuit connection to allow you to design a generalized ore washing "facility"; the ore washing plants will convert their expected input and output to whatever item type is specified on the circuit signal fed into their connection node.<br>
+					
+					
 					<div class = "block-image">
 	<a href = "../../imagedownloads/i-imgur-com_2FbjsLBx8.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FbjsLBx8.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">This image dates from the short period when they needed the <i>clean</i> item as the signal; that was changed before the signal connection was ever released.</div>
 </div>
+					</section>
 			</section>
 <br>
 			<section class = "textblock" id = "text-block-sourcecode">

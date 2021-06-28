@@ -90,15 +90,32 @@
 	</div>
 		<noscript><div style = "text-align: center; width: 100%;"><div id = "nojs-header"><div><img class = "header-alert" src = "../../../images/alert.png"></div><div>You have JavaScript disabled; it is recommended you enable it for this site.<br>While the site will (mostly) function with scripts disabled, some sections (eg changelog view, or sortable tables) require it to update the page contents based on your input.<br>Additionally, JS is used to generate page styling, meaning disabling scripts will leave pages ugly, boring, and in some cases poorly arranged in ways that might impede readability.<br>If you have no idea what this means, or have not in fact disabled scripts, try simply reloading the page, as it may not have loaded completely or correctly.</div></div></div></noscript>
 		<div style = "text-align: center; width: 100%;"><div class = "header-alert-box" style = "border-color: red; background-color: #f008 !important; color: #fff; border-width: 4px; animation: blinker 3s linear infinite;">This site is still being built! Not all content is present, and there may be errors in text, function, optimization, or information, and anything is subject to change. <b>Please do not share the site at this time</b>.</div></div>
-		
+		<div id="toc_container">
+<h3>Quick Nav</h3>
+<hr>
+<table class="toc_list">
+	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><span><i class="fas fa-angle-double-up"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-content">Content</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-content'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-placeholder">Placeholder</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-placeholder'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-alink">A link</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-alink'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-submissions">Submissions</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-submissions'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+</table>
+</div>
         <div class = "textarea">
 			<!--<h2>Fanmade Content</h2>-->
-			<h3>Fanmade Content</h3>
+			<section class = "textblock" id = "text-block-content">
+<h3>Fanmade Content</h3>
+	<section class = "textblock" id = "text-block-placeholder">
 	<h4>Placeholder</h4>
-This is placeholder description	<br><br>
+This is placeholder description	</section>
+	<br><br>
+	<section class = "textblock" id = "text-block-alink">
 	<h4>A link</h4>
-<a href="true">http://some.site.com/fakepage</a>	<br><br>
+<a href="true">http://some.site.com/fakepage</a>	</section>
+	<br><br>
+</section>
 
+<section class = "textblock" id = "text-block-submissions">
 <h3>Submissions</h3>
 If you wish to submit your own fanmade content for featuring on this site, contact me with your proposal, including a way for me to see the proposed content as you wish it to appear, and a statement of whether you are seeking a simple link to your own page or for the content to be directly embedded into this page.
 <br><br>
@@ -114,12 +131,12 @@ Examples of content that are likely to be approved or rejected, and why:
 <li><img class = "inlineicon" src = "../../../images/x.png"> A build showcase - unlikely to be approved<ul><li>Unlikely to be novel, but may potentially be innovative or dramatic enough</li></ul></li>
 <li><img class = "inlineicon" src = "../../../images/x.png"> A simple progression guide - very unlikely to be approved<ul><li>Lack of uniqueness</li><li>Potential reduction of gameplay to a checklist</li></ul></li>
 </ul>
-<br><br>
-When you submit a proposal for content for me to include, I will review it to determine if it is appropriate for inclusion, and if not what changes could be made to correct this if possible. Assuming that it passes this, I will then add it here when I am able to do so. Note that I make no guarantees of timing on that front; my responses and inclusion may be immediate or may be - in an extreme case - delayed by many weeks, depending on the current demands on my time.
+When you submit a proposal for content for me to include, I will review it to determine if it is appropriate for inclusion, and if not what changes could be made to correct this if possible. Assuming that it passes this, I will then add it here when I am able to do so. I can make no guarantees of timing on that front; my responses and inclusion may be immediate, or may be - in an extreme case - delayed by many weeks, depending on the current demands on my time.
 <br><br>
 Note that if you want your content to be included directly on this page, rather than a link to your own page, I will be more stringent about the requirements and potential issues. Additionally, any referenced media - such as images - that are involved will need to be hosted on a platform of your choosing that allows me to hotlink them here (which is <i>not</i> permitted by most online image hosts such as imgur), and you will need to provide proof that this is permitted, usually by way of explict mentions of this fact in their terms of service.
 <br><br>
 I reserve the right to remove content as I deem necessary, though I will try to make an effort to prevent that from becoming necessary where reasonably possible.
+</section>
 
 			<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
 		<hr>

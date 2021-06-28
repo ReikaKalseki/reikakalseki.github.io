@@ -90,74 +90,132 @@
 <hr>
 <table class="toc_list">
 	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><span><i class="fas fa-angle-double-up"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-overview">Overview</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-overview'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-depots">Depots</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-depots'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-automateddepots">Automated Depots</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-automateddepots'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-fluiddepots">Fluid Depots</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-fluiddepots'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-technologies">Technologies</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-technologies'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-rapidloadingandunloading">Rapid Loading and Unloading</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-rapidloadingandunloading'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-otherfeatures">Other Features</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-otherfeatures'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-overview">Overview</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-overview'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-depots">Depots</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-depots'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-automateddepots">Automated Depots</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-automateddepots'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-fluiddepots">Fluid Depots</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-fluiddepots'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-technologies">Technologies</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-technologies'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-rapidloadingandunloading">Rapid Loading and Unloading</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-rapidloadingandunloading'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-otherfeatures">Other Features</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-otherfeatures'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 </table>
 </div>
         <div class = "textarea">
 			<!--<h2>AutoTrainDepot</h2>-->
 						<section class = "textblock" id = "text-block-overview">
 				<h3>Overview</h3>
+					
 					AutoTrainDepot (ATD) enables the use of generalized train depots without reliance on logistics bots just handling everything automatically, by adding mechanisms to prevent item deficits or surpluses from causing deadlocks, and allowing for intelligent train-specific loading. It also adds a handful of other features to make train-based logistics more flexible and powerful, without making it much more complex to use.
+					
 			</section><br>
 			<section class = "textblock" id = "text-block-depots">
 				<h3>Depots</h3>
+					
 					In a train-based factory (as opposed to, for example, one built around a "main bus"), there are one or more centralized item repositories that act as intermediate storage and/or switching points for various items. For example, one train might collect iron, copper, and steel, and return with various military products (gun turrets, red ammo, etc). Another might take iron and copper and produce green circuits, pipes, gear wheels, and red science. A third might take those pipes and circuits, plus more raw iron and steel, and make engines, green science, and mining drills.
+					
+					
 					<br><br>
+					
+					
 					In other words, a common storage buffer is used as both the source and the destination for various items, collected or deposited by individual trains, based on their route. There can be one master depot that stores the entire factory's buffer, or there can be local/specific depots, for example for ore, oil products, stone works, or more.
+					
+					
 					<br><br>
+					
+					
 					In vanilla Factorio, this is only really possible with the logistics network; because belts and inserters will generally blindly collect whatever they can from a train, and place it in the depot, it can and often will disproportionately fill with items that are produced in greater quantity, leaving no space for other items and causing a complete stoppage of production. Because the filters and conditions on the belts/inserters would need to change constantly, based on the contents of the current train and current depot state, this is not generally feasible with anything but a logistics network.
+					
 			</section><br>
 			<section class = "textblock" id = "text-block-automateddepots">
 				<h3>Automated Depots</h3>
+					
 					AutoTrainDepot's core feature is the addition of an intelligent depot control system to prevent that deadlocking, as well as simplify the use of these "one production loop" trains. A depot is constructed by building several storages - chests, warehouses, et cetera - between two rail stations made with special train stops, such that the same storages are the output of one station and the input for the other. Then, these storages are connected with circuit wire to the depot controller, as are each of the train stations (color of wire from the storages is not important, but the stations are: red for the "filling" station and green for the unloading one).<br>
+					
+					
 					<div class = "block-image">
 	<a href = "../../imagedownloads/i-imgur-com_2FUR5ws6k.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FUR5ws6k.jpg" style="max-width:75%;" ></a>
 </div><br>
+					
+					
 					If set up correctly, the depot controller will then monitor both stations and all connected storages and will manipulate the I/O to and from those storages to do several things:<ul>
+					
+					
 					<li>Ensure no item receives more than its share of the total storage (see below)</li>
+					
+					
 					<li>Update filters on I/O to manage type-specific loading</li>
+					
+					
 					<li>Keep the input/output lines clear to avoid blockage</li></ul>
+					
+					
 					Depots have an input to select the number of item types the depot is expected to handle; the capacity for any item is thus the total available storage divided by this number (once accounting for stack size).
+					
+					
 					<br><br>
+					
+					
 					With an automated depot, you can dispatch any number of trains to and from it, attempting to deliver or collect any item, without any risk of an excess of, say, stone bricks preventing anything else from being delivered. This allows for massively complex train networks all sharing the same central storage, allowing you to focus on the various production outposts.
+					
 			</section><br>
 			<section class = "textblock" id = "text-block-fluiddepots">
 				<h3>Fluid Depots</h3>
+					
 					ATD also adds the ability to build fluid depots, which enable a centralized storage for up to six fluid types, and which can dynamically connect to the correct wagons for draining or filling on a train-specific basis. This allows you to have "freeform" trains; rather than needing to ensure that, for example, sulfuric acid pickup was always the third wagon in the train, so that it would be filled with the correct fluid, with a fluid depot you can bring in any train that fits in the station, and the depot controller will intelligently connect the pumps as needed, with no risk of mixing (provided you have built a proper depot with six independent pump/pipe/tank systems).
+					
+					
 					<br><br>
+					
+					
 					This is done by the use of a custom GUI that is opened alongside the vanilla train GUI, where you can set which of the six "fluid slots" (plus "none") each fluid wagon in that specific train is mapped to. For example, if you have train A with wagons of sulfuric acid, hydrazine, crude oil, and chlorine in that order, train B that wants to collect chlorine in its first fluid wagon, and train C that wants to deposit crude oil and collect sulfuric acid in cars one and four respectively, you would mark the four wagons of A with slots 1 through 4, then the first of B to slot 4, the first of C as slot 3, and the fourth of C as slot 1.<br>
+					
+					
 					<div class = "video">
 	<iframe class = "deembed-media" style = "max-width: 75%;" width="960" height="540" src="https://www.youtube.com/embed/tFCElfyCsN0" title="A demonstration of the fluid depot." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+					
 			</section><br>
 			<section class = "textblock" id = "text-block-technologies">
 				<h3>Technologies</h3>
+					
 					All of the depots' capabilities beyond simple limit management are unlocked with dedicated technologies; depots will be unable to perform the majority of their tasks without them. Completing a technology will make it available to all depots, even pre-existing ones. These capabilities are:<ul>
+					
+					
 					<li>Locked slot (red "X" bar) control, to prevent output-type wagons from filling at the depot, or one train taking excessive quantities of an ingredient<li>
+					
+					
 					<li>Cleaning inserters feeding trains so they can be used for the next train with a different item type, or for multiple item types for one wagon, without jamming</li>
+					
+					
 					<li>Inventory balancing, to ensure all items are distributed and available to every storage and thus wagon in the pickup station, without manual "cycle feeding" infrastructure</li>
+					
+					
 					<li>Changing input filters dynamically so that the depot automatically handles any item type on any input inserter or belt</li>
+					
+					
 					<li>Setting train wagon filters dynamically on a per-station basis to allow wagons to carry both ingredients and products</li></ul>
+					
+					
 					There are also technologies to increase the - initially small - max item/fluid type limit, max item count, and how many slots per storage and per wagon the depot can "see" and thus make use of.
+					
 			</section><br>
 			<section class = "textblock" id = "text-block-rapidloadingandunloading">
 				<h3>Rapid Loading and Unloading</h3>
+					
 					There are optional (as in can be disabled in mod settings) rapid loader and unloader devices, to improve throughput on late-game depots; these have very high throughput, but also high (multi MW) power draw. In the case of unloading, they also take far more space than inserters.<br>
+					
+					
 					<div class = "block-image">
 	<a href = "../../imagedownloads/i-imgur-com_2FsF9vAaE.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FsF9vAaE.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2FJk1Lxuk.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FJk1Lxuk.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Sample depots, with and without BobMods. Both are using the rapid loaders and unloaders instead of basic inserters.</div>
 </div>
+					</section>
 			</section><br>
 			<section class = "textblock" id = "text-block-otherfeatures">
 				<h3>Other Features</h3>
+					
 					ATD also adds a handful of other features to expand upon train logistics and prevent issues. These include the Station Bypass Beacon, which allows a train to skip a station in its route if it has no real need to go there (for example it is already mostly full of the item that stop would deliver, or that stop has nothing to supply), the smart train stop, which can intelligently handle "ingredient" vs "product" wagons, and direct trains based on whether it has product-type items available or space for ingredient-type ones (for example not allowing a train to leave a production station until "ingredients" wagons are empty), and a "deadlock detection" alert in case trains become properly stuck.
+					</section>
 			</section>
 <br>
 			<section class = "textblock" id = "text-block-sourcecode">

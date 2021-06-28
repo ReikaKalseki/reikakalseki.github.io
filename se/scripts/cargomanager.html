@@ -81,23 +81,37 @@
 <hr>
 <table class="toc_list">
 	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><span><i class="fas fa-angle-double-up"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-description">Description</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-description'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-scriptvars">Script Options</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-scriptvars'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-description">Description</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-description'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-scriptvars">Script Options</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-scriptvars'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 </table>
 </div>
         <div class = "textarea">
 			<!--<h2>Refinery and Cargo Manager</h2>-->
 						<section class = "textblock" id = "text-block-description">
 				<h3>Description</h3>
+					
 					This script will automatically manage the inventories of cargo containers and production blocks - including refineries (vanilla and many modded ones), assemblers, and oxygen generators - on the ship. It can move ores around, ensuring they <i>only</i> into the most useful refinery; For example, you will no longer have refineries pulling uranium - and costing you yield - when you have dedicated centrifuges for that ore.
+					
+					
 					<br><br>
+					
+					
 					It will also automatically empty the output inventories of both processing and assembling machines alike.
+					
+					
 					<br><br>
+					
+					
 					This means that there is no longer a need to try and achieve automated item transport with conveyor sorters, which can rarely accomplish this task to the same level, especially without accidentally making it so that half your cargo ports cannot transfer between them, or having an endless loop of items being pushed in a circle.
+					
+					
 					<br><br>
+					
+					
 					There are additional capabilities as well; it can be configured to prioritize the refinement of ores you are running low on. It can additionally filter which cargo containers are loaded first when emptying refineries and assemblers, and what items those containers can accept, to allow item-specific sorting. It also has the enabled-by-default option to collect cargo from small containers into large ones. This is useful if you use them like I do, where large containers are the main storage, and small containers are "access ports".
+					</section>
 			</section>
 <br>
 			<section class = "textblock" id = "text-block-scriptvars">

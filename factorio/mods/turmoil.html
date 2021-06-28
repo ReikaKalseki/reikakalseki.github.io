@@ -90,35 +90,63 @@
 <hr>
 <table class="toc_list">
 	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><span><i class="fas fa-angle-double-up"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-overview">Overview</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-overview'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-details">Details</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-details'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry"><td><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-overview">Overview</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-overview'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-details">Details</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-details'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 </table>
 </div>
         <div class = "textarea">
 			<!--<h2>TurmOil</h2>-->
 						<section class = "textblock" id = "text-block-overview">
 				<h3>Overview</h3>
+					
 					TurmOil redesigns the Basic Oil Processing recipe and surrounding techtree (including blue science), with multiple replacement options.
+					
 			</section><br>
 			<section class = "textblock" id = "text-block-details">
 				<h3>Details</h3>
+					
 					In version 0.17.60 of Factorio, Basic Oil Processing was changed to only give petroleum gas. I do not consider that change sensible or well-conceived, for several reasons. Several from what I said <a href="https://forums.factorio.com/viewtopic.php?p=445281#p445281">on the forums</a> include:<ul>
+					
+					
 					<li>Having <i>any</i> refinery recipes be simple 1-in/1-out feels wrong, as it does not fit the theme of oil processing nor does it justify something the size of the refinery.</li>
+					
+					
 					<li>This new system still "teaches" players the wrong thing, such that they will have to massively refactor their entire oil processing setup once they switch to AOP from BOP. And unlike with items, deconstructing fluid handling systems voids the fluid, meaning if they have built this big mess of pipes with 50k stored PG, they will have to lose all of that in order to rebuild, or sit there and gradually consume it while waiting 12 ingame hours to actually do so. I have done the latter in many cases, in many games; <b>it is not fun</b>.</li>
+					
+					
 					<li>Having BOP produce only PG and AOP produce all three still feels backwards, as the PG is still the most valuable product, and as such you would expect to get a better ratio-yield of it from AOP, not BOP</li>
+					
+					
 					<li>Making sulfur from PG still does not make a lot of sense from a chemistry perspective.</li>
+					
+					
 					<li>Moving robots later is still a terrible idea, especially given that they are supposed to be what the player entirely moves to for large-scale construction. The later you move it, the less likely players are going to actually switch to it as a mainstay of construction.</li>
+					
+					
 					<li>The new chemical science recipe does not feel very chemical-y; the last one, as IronCartographer put it, could be envisioned as the engine burning the solid fuel while the red circuit analyses that; this one...feels ad-hoc.</li>
+					
+					
 					<li>A rocket fuel recipe being solid fuel plus *more* light oil - which is the "intended" way of making solid fuel - feels weird.</li></ul>
+					
+					
 					TurmOil was born from the chaos of that update - and the discussion threads for the two FFFs heralding the change (#304 and #305).
+					
+					
 					<br><br>
+					
+					
 					TurmOil grants several choices for how to "undo" that BOP recipe change: The default is the most dramatic, where BOP makes heavy oil exclusively, sulfur is a byproduct of the lubricant recipe (and is burnable as fuel), and blue science uses electric engines, solid fuel, and sulfur as its recipe. A slightly less dramatic option instead makes sulfur produced from heavy oil instead of petroleum gas, while keeping the other changes from the previous option regarding blue science and BOP making heavy oil. This also enables heavy to light cracked alongside BOP.<br>
+					
+					
 					Simpler still - and more similar to many suggestions for the vanilla game in these discussion threads - is an option to make BOP produce heavy oil, with blue science using electric engines, solid fuel, and red wire, while keeping the heavy to light cracking. Finally, there is a "revert" option, which simply restores the vanilla recipes before 0.17.60.<br>
+					
+					
 					<div class = "block-image">
 	<a href = "../../imagedownloads/i-imgur-com_2FovCxNTE.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FovCxNTE.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2FnShflg3.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FnShflg3.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2FE5zK5fN.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FE5zK5fN.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2Flb0L7nl.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2Flb0L7nl.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">The techtree for the options above, in order.</div>
 </div>
+					</section>
 			</section>
 <br>
 			<section class = "textblock" id = "text-block-sourcecode">
