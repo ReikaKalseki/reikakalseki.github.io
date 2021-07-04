@@ -1,6 +1,12 @@
-var SCALE = 1;
+//import * as browser from '../browser.js'
+//import * as library from '../library.js'
 
-function addImage(elem, img, ix, iy, iw, ih) {
+import { xmas, hallow, viskey, visval, xkey, ykey, hkey, wkey, getRandomBetween, getRandomDecimalBetween, getOrCreateImgPath, getTileWidth, getTileHeight, getArrayIndex} from '../library'
+import { isPhone} from '../browser'
+
+const SCALE = 1;
+
+function addImage(elem:HTMLElement, img:string, ix:number, iy:number, iw:number, ih:number) {
 	//var pre = '<image x="'+ix+'" y="'+iy+'" width="'+iw+'" height="'+ih+'" xlink:href="'+getImageRoot();
 	//var post = '.png" />';
 	//return pre+img+post;
@@ -15,7 +21,7 @@ function addImage(elem, img, ix, iy, iw, ih) {
 		iy = Math.max(0, iy-1);
 		//console.log("Geo @ "+ix+", "+iy);
 	}
-	var svgimg = document.createElementNS('http://www.w3.org/2000/svg', 'image');
+	let svgimg = document.createElementNS('http://www.w3.org/2000/svg', 'image');
 	svgimg.setAttributeNS(null, wkey, getTileWidth(iw));
 	svgimg.setAttributeNS(null, hkey, getTileHeight(ih));
 	svgimg.setAttributeNS('http://www.w3.org/1999/xlink', 'href', getOrCreateImgPath(img, "factiles"));
@@ -27,30 +33,29 @@ function addImage(elem, img, ix, iy, iw, ih) {
 	elem.appendChild(svgimg);
 }
 
-function buildImage(elem, rows, cols, ground, ore, blocks, xmas, hallow) {
+function buildImage(elem:HTMLElement, rows:number, cols:number, ground:string[], ore:string[], blocks:string[]) {
 	var w = 32*SCALE;
 	var h = 32*SCALE;
 	var x = 0;
 	var y = 0;
 	for (var k = 0; k < rows; k++) {
 		x = 0;
-		for (var i = 0; i < cols; i++) {
+		for (var i = 0; i < cols; i++) {			
+			var idx = getArrayIndex(cols, i, k);
 			if (k < rows/2 && i < cols/2) {
 				var gnd = ground[getArrayIndex(cols/2, i, k)];
-				gnd = modifyImageLocational(ground, rows/2, cols/2, i, k, idx, gnd, xmas, hallow);
+				gnd = modifyImageLocational(ground, rows/2, cols/2, i, k, idx, gnd);
 				addImage(elem, gnd, x*2, y*2, w*2, h*2);
 			}
-			
-			var idx = getArrayIndex(cols, i, k);
 			var img = ore[idx];
 			//console.log("Got "+img+" @ "+i+", "+k);
-			img = modifyImageLocational(ore, rows, cols, i, k, idx, img, xmas, hallow);
+			img = modifyImageLocational(ore, rows, cols, i, k, idx, img);
 			if (img != "air")
 				addImage(elem, img, x, y, w, h);
 			
 			img = blocks[idx];
 			//console.log("Got "+img+" @ "+i+", "+k);
-			img = modifyImageLocational(blocks, rows, cols, i, k, idx, img, xmas, hallow);
+			img = modifyImageLocational(blocks, rows, cols, i, k, idx, img);
 			if (img != "air") {
 				addImage(elem, img, x, y, w, h);
 			}
@@ -60,7 +65,7 @@ function buildImage(elem, rows, cols, ground, ore, blocks, xmas, hallow) {
 	}
 }
 
-function isTransparent(img) {
+function isTransparent(img:string) {
 	switch(img) {
 		case "air":
 			return true;
@@ -69,7 +74,7 @@ function isTransparent(img) {
 	}
 }
 
-function tryCorrectBeltJunctions(blocks, rows, cols, x, y, idx, img) {
+function tryCorrectBeltJunctions(blocks:string[], rows:number, cols:number, x:number, y:number, idx:number, img:string) {
 	var idxl = getArrayIndex(cols, x-1, y);
 	var idxr = getArrayIndex(cols, x+1, y);
 	var idxu = getArrayIndex(cols, x, y-1);
@@ -103,7 +108,7 @@ function tryCorrectBeltJunctions(blocks, rows, cols, x, y, idx, img) {
 	return img;
 }
 
-function modifyImageLocational(blocks, rows, cols, x, y, idx, img, xmas, hallow) {
+function modifyImageLocational(blocks:string[], rows:number, cols:number, x:number, y:number, idx:number, img:string) {
 	if (img.startsWith("belt") && img.length == 7) { //corner
 		img = tryCorrectBeltJunctions(blocks, rows, cols, x, y, idx, img);
 	}
@@ -117,11 +122,7 @@ function getGroundAt(rows, cols, x, y) {
 	return "grass"+getRandomBetween(0, 15);
 }*/
 
-function genOrePatch(rows, cols, blocks, x, y, ore) {
-	
-}
-
-function genBelt(rows, cols, blocks) {
+function genBelt(rows:number, cols:number, blocks:string[]) {
 	var side1 = getRandomBetween(0, 3);/*
 	//var side2 = getRandomBetween(0, 3);
 	var y1 = side1 == 0 || side1 == 2 ? (Math.random() < 0.5 ? 0 : rows) : getRandomBetween(0, rows);
@@ -246,14 +247,14 @@ function genBelt(rows, cols, blocks) {
 	}
 }
 
-function canBeltMoveFrom(blocks, cols, rows, x, y, dx, dy) {
+function canBeltMoveFrom(blocks:string[], cols:number, rows:number, x:number, y:number, dx:number, dy:number) {
 	var x2 = x+dx;
 	var y2 = y+dy;
 	var idx = getArrayIndex(cols, x2, y2);
 	return x2 < 0 || x2 >= cols || y2 < 0 || y2 >= rows || blocks[idx] == "air" || (blocks[idx].startsWith("belt") && Math.random() < 0.5);
 }
 
-function generateDecorations(rows, cols, ground, blocks, tw, th, w, h) {
+function generateDecorations(rows:number, cols:number, ground:string[], blocks:string[], tw:number, th:number, w:number, h:number) {
 	var list = [];
 	for (var n = 0; n < Math.floor(rows/4); n++) {
 		//var posX = getRandomBetween(6, cols-6);
@@ -406,7 +407,7 @@ function getRandomBuilding() {
 	return types[getRandomBetween(0, types.length-1)];
 }
 
-function genDirt(rows, cols, ground) {
+function genDirt(rows:number, cols:number, ground:string[]) {
 	var x = getRandomBetween(4, cols-4);
 	var y = getRandomBetween(4, rows-4);
 	
@@ -439,7 +440,7 @@ function genDirt(rows, cols, ground) {
 	}
 }
 
-function generateOre(rows, cols, ore) {
+function generateOre(rows:number, cols:number, ore:string[]) {
 	for (var n = 0; n < rows*cols/200; n++) {
 		var r = getRandomBetween(2, 9);
 		var x = getRandomBetween(r+2, cols-r-2);
@@ -496,22 +497,22 @@ function generateOre(rows, cols, ore) {
 	}
 }
 
-function setPageBackground() {
+export default function setPageBackground() {
 	if (isPhone)
 		return;
 	
-	var tail = '</svg>';
-	var w = 32*SCALE;
-	var h = 32*SCALE;
-	var x = 0;
-	var y = 0;
+		let tail = '</svg>';
+		let w = 32*SCALE;
+		let h = 32*SCALE;
+		let x = 0;
+		let y = 0;
 	
 	//var height = findHighestNode(0, document.documentElement.childNodes);
-	var body = document.body;
-    var html = document.documentElement;
-	var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)-64;
+	let body = document.body;
+    let html = document.documentElement;
+	let height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)-64;
 	
-	var titleImg = document.getElementsByClassName("title-image")[0];
+	let titleImg = document.getElementsByClassName("title-image")[0] as HTMLImageElement;
 	if (titleImg == null || titleImg.src == null || titleImg.src == "" || titleImg.src == window.location.href) {
 		height += 72;
 	}
@@ -527,17 +528,17 @@ function setPageBackground() {
 //console.log(rw+" x "+rh);
 
   
-  var rows = Math.ceil(rh/h);
-  var cols = Math.ceil(rw/w);
-	var tw = cols*w;
-	var th = rows*h;
+let rows = Math.ceil(rh/h);
+  let cols = Math.ceil(rw/w);
+	let tw = cols*w;
+	let th = rows*h;
 	
 	console.log("Generating Factorio tileset with "+cols+" columns and "+rows+" rows");
 	
-	var xmlns = "http://www.w3.org/2000/svg";
-	var elem = document.createElementNS(xmlns, "svg");
-	elem.setAttributeNS(null, "width", tw);
-    elem.setAttributeNS(null, "height", th);
+	let xmlns = "http://www.w3.org/2000/svg";
+	let elem = document.createElementNS(xmlns, "svg") as HTMLElement;
+	elem.setAttributeNS(null, "width", tw.toString());
+    elem.setAttributeNS(null, "height", th.toString());
 	
 	var ground = new Array(Math.ceil(cols*rows/4));
 	var ore = new Array(cols*rows);
@@ -545,13 +546,14 @@ function setPageBackground() {
 	
 	for (var i = 0; i < cols; i++) {
 		for (var k = 0; k < rows; k++) {
-			var idx = getArrayIndex(cols, i, k);
-			var img = "air"
+			let idx = getArrayIndex(cols, i, k);
+			let img = "air"
 			blocks[idx] = img;
 			ore[idx] = img;
-			if (i < cols/2 && k < rows/2)
-				var max = xmas ? 15 : (Math.random() < 0.125 ? 15 : 3);
+			if (i < cols/2 && k < rows/2) {
+				let max = xmas ? 15 : (Math.random() < 0.125 ? 15 : 3);
 				ground[getArrayIndex(cols/2, i, k)] = (xmas ? "snow" : "grass")+getRandomBetween(0, max);
+			}
 		}
 	}
 	
@@ -560,14 +562,14 @@ function setPageBackground() {
 	
 	generateOre(rows, cols, ore);
 	
-	var deco = generateDecorations(rows, cols, ground, blocks, tw, th, w, h);
+	let deco = generateDecorations(rows, cols, ground, blocks, tw, th, w, h);
 	
 	for (var i = 0; i < Math.floor(rows/1.5); i++)
 		genBelt(rows, cols, blocks);
 	
-	buildImage(elem, rows, cols, ground, ore, blocks, xmas, hallow);
+	buildImage(elem, rows, cols, ground, ore, blocks);
 	
-	var domes = [];	
+	let domes = [];	
 	for (var i = 0; i < deco.length; i++) {
 		var dx = deco[i].x-w/2;
 		var dy = deco[i].y-h/2;
@@ -581,8 +583,8 @@ function setPageBackground() {
 		addImage(elem, domes[i].image, domes[i].x, domes[i].y, domes[i].size, domes[i].size);
 	}
 	
-	var tag = "background-content";
-	var container = document.getElementById(tag);
+	let tag = "background-content";
+	let container = document.getElementById(tag);
 	if (container == null) {
 		container = document.createElement("div")
 		container.id = tag;
@@ -595,9 +597,5 @@ function setPageBackground() {
 	  //console.log(elem);
 	container.appendChild(elem);
 }
-/*
-function Deco(img, x, y, size) {
-   
-}*/
 
-window.addEventListener("load", function(event) {setPageBackground()});
+//window.addEventListener("load", function(event) {setPageBackground()});

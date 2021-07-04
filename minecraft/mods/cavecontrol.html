@@ -9,13 +9,9 @@
 		<link rel="stylesheet" type="text/css" href="../../minecraft/local-style.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Lato|Exo 2|Ubuntu|Cairo">
-		<script src = "../../browser.js"></script>
-		<script src = "../../library.js"></script>
-		<script id = "footer-space-script" src = "../../footer-spacing.js"></script>
-		<!--<script src = "../../jquery.js"></script>-->
-			<script src = "../../minecraft/precursor.js"></script>
-<script id = "background-script" src = "../../minecraft/backgroundgen.js"></script>    </head>
-    <body >
+		<script src = "../../compiledJS/entrypoint.bundle.js"></script>
+    </head>
+    <body  data-game="minecraft">
         	<div id = "navbar" class="navbar">
 	  <a class="navbar-button" href="../../index.html">Reika's Mods Home</a>
 	  <a class="navbar-button" href="../../minecraft/index.html">Minecraft Home</a>
@@ -96,11 +92,16 @@
 <table class="toc_list">
 	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><span><i class="fas fa-angle-double-up"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-overview">Overview</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-overview'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-densitymultipliers">Density Multipliers</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-densitymultipliers'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-structuretoggles">Structure Toggles</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-structuretoggles'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-generationmodifiers">Generation Modifiers</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-generationmodifiers'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-biomerules">Biome Rules</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-biomerules'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-configuration">Configuration</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-configuration'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-controlparameters">Control Parameters</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-controlparameters'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-description">Description</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-description'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-sampleruleset">Sample Ruleset</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sampleruleset'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-propertylist">Property List</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-propertylist'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-propertydetails">Property Details</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-propertydetails'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-densitymultipliers">Density Multipliers</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-densitymultipliers'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-generationmodifiers">Generation Modifiers</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-generationmodifiers'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-comparisons">Comparisons</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-comparisons'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-modsettings">Configuration Settings</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-modsettings'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 </table>
@@ -113,58 +114,131 @@
 					Cave Control allows you to control the generation of caves and underground structures. These settings do not affect the nether or mod dimensions, but may affect the Twilight Forest.
 					
 			</section><br>
-			<section class = "textblock" id = "text-block-densitymultipliers">
-				<h3>Density Multipliers</h3>
+			<section class = "textblock" id = "text-block-configuration">
+				<h3>Configuration</h3>
 					
-					The cave density multiplier allows you to make caves sparser or denser. To disable caves entirely, set the density to zero. Sparser caves generally mean easier survival play and are simpler for creative worlds, while denser caves allow for more exploration.
-					
-					
-					<br><br>
-					
-					
-					Ravine frequency can also be controlled. At higher settings, ravines spawn more frequently. Like with caves, a zero frequency disables them entirely.
+					Though there are some global config options using the normal mod config system, CaveControl primarily uses the <a href="../../minecraft\pages\info\luablock.html">LuaBlock system</a> used for many of my mods where more complex configuration is required. A group of these parameters is here called a "rule set", defining a value for each controllable parameter. There is a 'global' rule set which is applied to all biomes; in addition, each biome can have a unique rule set assigned to override some or all of the global parameters. This allows you to have, for example, a 0.7x cave rate global modifier, with Taiga biomes having 1.5x caves instead.
 					
 					
 					<br><br>
 					
 					
-					Note that excessive cave or ravine densities can easily cause lag and even crash the game, as the Minecraft cave generation algorithms are surprisingly intensive.
+					To define rule sets, or edit the global one, see the files in the <code>Reika/Cave_Definition</code> folder in the standard config folder. Add new files here to define additional rulesets, and edit <code>global.lua</code> if you wish to change the global ruleset. <code>info.txt</code> contains a summarized version of this and the below information.
 					
 			</section><br>
-			<section class = "textblock" id = "text-block-structuretoggles">
-				<h3>Structure Toggles</h3>
+			<section class = "textblock" id = "text-block-controlparameters">
+				<h3>Control Parameters</h3>
+					<section class = "textblock" id = "text-block-description">
+					<h4>Ruleset Description</h4>
 					
-					Cave Control allows you to enable or disable the generation of various types of underground structures, including strongholds, mineshafts, dungeons, and more.
+					
+					Ruleset definition is very simple, with a single-level LuaBlock that simply maps parameters to values. Unlike in most cases, the value of <code>type</code> here <i>is</i> significant; this value will define which biome for which the ruleset applies, or if equal to "global" will define it as the global rule set. For biome-specific rule sets, the format is <code>[ID]#[NAME]</code>, where [ID] is the biome ID and [NAME] is the biomeName property. If you do not know the biome name, "*" will act as a wildcard, and only the ID will be checked. Note that mutated and subbiomes (eg ForestHills, Extreme Hills Edge, Ice Spikes (a derivative of Ice Plains), and Flower Forest) cannot have their own definitions; they inherit from the parent biome.
+					
+					
+					<br><br>
+					</section>
+					<section class = "textblock" id = "text-block-sampleruleset">
+					<h4>Sample Ruleset</h4>
+					
+					
+					A sample rule set may look like this:
+					
+					
+					<div class = "code-block">
+					
+					
+					{<br>
+					
+					
+					<div class = "code-indent"></div>type = "32#MegaTaiga"<br>
+					
+					
+					<div class = "code-indent"></div>density = 0.7<br>
+					
+					
+					<div class = "code-indent"></div>dungeons = 4.0<br>
+					
+					
+					<div class = "code-indent"></div>gen_strongholds = true<br>
+					
+					
+					<div class = "code-indent"></div>large_cave_chance = 15.0<br>
+					
+					
+					<div class = "code-indent"></div>large_cave_size = 1.5<br>
+					
+					
+					<div class = "code-indent"></div>large_cave_variance = 9.0<br>
+					
+					
+					<div class = "code-indent"></div>max_y = 32<br>
+					
+					
+					<div class = "code-indent"></div>ravines = 1.15<br>
+					
+					
+					}<br>
+					
+					
+					</div><br>
+					
+					
+					This rule set overrides the specified property values - for example applying a 70% modifier to overall cave spawning, and reducing the chance of large cave nodes by almost half - while inheriting everything else from the global set.<br>
+					</section>
+					<section class = "textblock" id = "text-block-propertylist">
+					<h4>Property List</h4>
+					
+					
+					This is the full set of properties you can configure; the defaults listed are the defaults the global ruleset generates with in a new mod installation, and are the values used in vanilla (or simply 1.0 for multipliers).<br>
+					
+					
+					<table class = "luablock-docs">
+<tr><th style = "width: 20%">Definition Key</th><th style = "width: 65%">Description</th><th style = "width: 15%">Default Value</th></tr>
+	<tr class = "luablock-setting"><td>density</td><td>Cave Density Multiplier</td><td>1.0</td></tr>
+	<tr class = "luablock-setting"><td>ravines</td><td>Ravine Frequency Multiplier</td><td>1.0</td></tr>
+	<tr class = "luablock-setting"><td>mineshafts</td><td>Mineshafts Frequency Multiplier</td><td>1.0</td></tr>
+	<tr class = "luablock-setting"><td>dungeons</td><td>Dungeon Spawn Factor</td><td>1.0</td></tr>
+	<tr class = "luablock-setting"><td>gen_strongholds</td><td>Generate Strongholds</td><td> true</td></tr>
+	<tr class = "luablock-setting"><td>lava_caves</td><td>Fill Deep Caves with Lava</td><td> true</td></tr>
+	<tr class = "luablock-setting"><td>water_caves</td><td>Fill Deep Caves with Water</td><td> false</td></tr>
+	<tr class = "luablock-setting"><td>cave_size</td><td>Cave Node Size Multiplier</td><td>1.0</td></tr>
+	<tr class = "luablock-setting"><td>large_cave_chance</td><td>Large Cave Node Chance</td><td>25.0</td></tr>
+	<tr class = "luablock-setting"><td>large_cave_size</td><td>Large Cave Node Size Factor</td><td>1.0</td></tr>
+	<tr class = "luablock-setting"><td>large_cave_variance</td><td>Large Cave Node Size Variance</td><td>6.0</td></tr>
+	<tr class = "luablock-setting"><td>min_y</td><td>Cave Generation Y Min</td><td> 0</td></tr>
+	<tr class = "luablock-setting"><td>max_y</td><td>Cave Generation Y Max</td><td> 256</td></tr>
+	<tr class = "luablock-setting"><td>vscale</td><td>Vertical Scale Factor</td><td>1.0</td></tr>
+</table>
 					
 			</section><br>
-			<section class = "textblock" id = "text-block-generationmodifiers">
-				<h3>Generation Modifiers</h3>
-					
-					In vanilla, all caves below layer 10 are filled with lava. Cave Control allows you to disable that feature, exposing the bedrock in the deep caves and generally making caving safer. However, mobs can spawn more frequently due to a lack of lava lighting, and it greatly reduces the amount of early-game lava available for obsidian, decoration, or fuel in tech mods.
-					
-					
-					<br><br>
+			<section class = "textblock" id = "text-block-propertydetails">
+				<h3>Property Details</h3>
+					<section class = "textblock" id = "text-block-densitymultipliers">
+					<h4>Density Multipliers</h4>
 					
 					
-					Cave control also allows for deep caves to be filled with water instead. Note that this sharply reduces the density of those caves, as water-filled caves are not taken to be valid cave nodes by the generation algorithm.
+					The cave density multiplier allows you to make caves sparser or denser. To disable caves entirely, set the density to zero. Sparser caves generally mean easier survival play and are simpler for creative worlds, while denser caves allow for more exploration. Various structures such as ravines have their own independent density multipliers, and which can be disabled with a zero value.
 					
 					
 					<br><br>
 					
 					
-					There are also controls for some size and shape parameters for the generation algorithm, such as cave node size multipliers, min and max Y values, and the rates of large caves vs small ones.
+					Note that excessive densities can easily cause lag and even crash the game, as the Minecraft cave generation algorithms are surprisingly intensive.
 					
-			</section><br>
-			<section class = "textblock" id = "text-block-biomerules">
-				<h3>Biome Rules</h3>
 					
-					CaveControl uses the LuaBlock system, with one 'global' rule set applied to all biomes, and the ability to specify biome-specific rule sets to override some or all of its parameters. This allows you to have, for example, a 0.7x cave rate global modifier, with Taiga biomes having 1.5x caves instead.
+					<br><br>
+					</section>
+					<section class = "textblock" id = "text-block-generationmodifiers">
+					<h4>Generation Modifiers</h4>
+					
+					
+					Some modifiers are simple toggles, such as whether to fill caves below y=10 with lava (as in vanilla) or water instead, or whether to allow stronghold spawns in the biome. Numeric values may be multipliers, such as the chance or size variance of a "large" cave node or the vertical scale factor of the generation algorithm, or they may be direct values, such as the min and max Y values (which allow for restricting caves to certain depths if desired).
 					
 					
 					<br><br>
 					
 					
-					See the <a href="../../minecraft\pages\info\luablock.html">LuaBlock documentation</a> for more details.
+					Note that while disabling deep lava and exposing the bedrock in the deep caves can generally make caving safer, mobs can spawn more frequently due to a lack of lava lighting, and it greatly reduces the amount of early-game lava available for obsidian, decoration, or fuel in tech mods. Furthermore, replacing this with water sharply reduces the density of those caves, as water-filled caves are not taken to be valid cave nodes by the generation algorithm.
 					
 			</section><br>
 			<section class = "textblock" id = "text-block-comparisons">
@@ -181,16 +255,89 @@
 					</section>
 			</section>
 <br>
+			<section class = "textblock" id = "text-block-modsettings">
+			<div class = "modsettings">
+				<h3>Configuration Settings</h3>
+				This mod contains several config options to modify values and behaviors - such as for balance or server safety concerns, or simply personal taste - to your preferences. Note that several settings may have bounds imposed on their values, either logically or explicitly; these can usually be seen in the actual settings files or ingame. These are listed in order found in the source code, which is generally the order in which they were added; They may be present in a different order ingame or in the configuration files.
+				<br>
+				<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Generate Caves in Superflat</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Generate Ravines in Superflat</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Stronghold Minimum Radius</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">768</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Stronghold Maximum Radius</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">1280</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Stronghold Count</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">3</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Stronghold Ring Count</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">1</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Stronghold Ring Scale</h4>
+Type: float<br>
+			Current Default Value:<div class = "code-block">1F</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Block Strongholds in Oceans</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+
+			</div>
+			</section>
+<br>
 			<section class = "textblock" id = "text-block-sourcecode">
 			<div class = "modsource">
-				<h3>Source Code</h3>				The source code for CaveControl can be found here:<button type="button" class = "srcbtn" onclick="location.href='https://github.com/ReikaKalseki/CaveControl'"><span>GitHub<div class = "spacer"></div><i class="fab fa-github"></i></span></button>
+				<h3>Source Code</h3>				The source code for CaveControl can be found here:<button type="button" class = "srcbtn" onclick="window.open('https://github.com/ReikaKalseki/CaveControl', '_blank'); return false;"><span>GitHub<div class = "spacer"></div><i class="fab fa-github"></i></span></button>
 			</div>
 			</section>
 <br>
 <section class = "textblock" id = "text-block-downloads">
 	<h3>Downloads</h3>
-		<button type="button" class = "dlbtn" onclick="location.href='https://www.curseforge.com/minecraft/mc-mods/cavecontrol'"><span>1.7.10: CurseForge<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
-		<button type="button" class = "dlbtn" onclick="location.href='http://adf.ly/qVsbx'"><span>1.6.4: Adfly<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
+		<button type="button" class = "dlbtn" onclick="window.open('https://www.curseforge.com/minecraft/mc-mods/cavecontrol', '_blank'); return false;"><span>1.7.10: CurseForge<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
+		<button type="button" class = "dlbtn" onclick="window.open('http://adf.ly/qVsbx', '_blank'); return false;"><span>1.6.4: Adfly<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
 </section>
 			<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
 		<hr>

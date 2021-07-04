@@ -9,13 +9,9 @@
 		<link rel="stylesheet" type="text/css" href="../../minecraft/local-style.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Lato|Exo 2|Ubuntu|Cairo">
-		<script src = "../../browser.js"></script>
-		<script src = "../../library.js"></script>
-		<script id = "footer-space-script" src = "../../footer-spacing.js"></script>
-		<!--<script src = "../../jquery.js"></script>-->
-			<script src = "../../minecraft/precursor.js"></script>
-<script id = "background-script" src = "../../minecraft/backgroundgen.js"></script>    </head>
-    <body >
+		<script src = "../../compiledJS/entrypoint.bundle.js"></script>
+    </head>
+    <body  data-game="minecraft">
         	<div id = "navbar" class="navbar">
 	  <a class="navbar-button" href="../../index.html">Reika's Mods Home</a>
 	  <a class="navbar-button" href="../../minecraft/index.html">Minecraft Home</a>
@@ -194,20 +190,28 @@
 					        <br>
 					
 					
-					Custom drops can also be specified using the <a href="../../minecraft\pages\info\luablock.html">LuaBlock</a> system, specified in a special file in the config directory.
+					Custom drops can also be specified using the <a href="../../minecraft\pages\info\luablock.html">LuaBlock</a> system, specified in files placed in the <code>Reika/Void Monster_CustomDrops/</code> folder in the config directory. This folder already contains an example file showing the format; Each item is defined with a single top-level block using the following parameters:<br>
+					
+					
+					<table class = "luablock-docs">
+<tr><th style = "width: 20%">Definition Key</th><th style = "width: 65%">Description</th><th style = "width: 15%">Default Value</th></tr>
+	<tr class = "luablock-setting"><td>item</td><td>Item definition</td><td></td></tr>
+	<tr class = "luablock-setting"><td>required_difficulty</td><td>Minimum config difficulty to drop this item</td><td>1</td></tr>
+	<tr class = "luablock-setting"><td>item_nbt</td><td>NBT Tags (Optional)</td><td></td></tr>
+</table>
 					</section>
 			</section>
 <br>
 			<section class = "textblock" id = "text-block-sourcecode">
 			<div class = "modsource">
-				<h3>Source Code</h3>				The source code for Void Monster can be found here:<button type="button" class = "srcbtn" onclick="location.href='https://github.com/ReikaKalseki/VoidMonster'"><span>GitHub<div class = "spacer"></div><i class="fab fa-github"></i></span></button>
+				<h3>Source Code</h3>				The source code for Void Monster can be found here:<button type="button" class = "srcbtn" onclick="window.open('https://github.com/ReikaKalseki/VoidMonster', '_blank'); return false;"><span>GitHub<div class = "spacer"></div><i class="fab fa-github"></i></span></button>
 			</div>
 			</section>
 <br>
 <section class = "textblock" id = "text-block-downloads">
 	<h3>Downloads</h3>
-		<button type="button" class = "dlbtn" onclick="location.href='https://www.curseforge.com/minecraft/mc-mods/void-monster'"><span>1.7.10: CurseForge<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
-		<button type="button" class = "dlbtn" onclick="location.href='http://adf.ly/qtd4w'"><span>1.6.4: Adfly<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
+		<button type="button" class = "dlbtn" onclick="window.open('https://www.curseforge.com/minecraft/mc-mods/void-monster', '_blank'); return false;"><span>1.7.10: CurseForge<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
+		<button type="button" class = "dlbtn" onclick="window.open('http://adf.ly/qtd4w', '_blank'); return false;"><span>1.6.4: Adfly<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
 </section>
 			<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
 		<hr>

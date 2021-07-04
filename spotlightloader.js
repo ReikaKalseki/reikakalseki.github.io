@@ -1,11 +1,11 @@
-function setVideoBox(url) {
-	var embed = '<iframe width="960" height="540" src="';
+function setVideoBox(url:string|undefined) {
+	let embed = '<iframe width="960" height="540" src="';
 	embed += url;
 	embed += '"></iframe>';
-	document.getElementById("spotlight-box").innerHTML = embed;
+	(document.getElementById("spotlight-box") as HTMLDivElement).innerHTML = embed;
 }
 
-function onButtonClick() {
+function onButtonClick(this:HTMLButtonElement) {
 	var type = this.dataset.type;
 	if (type == "link") {
 		window.open(this.dataset.url);
@@ -21,6 +21,7 @@ function onButtonClick() {
 document.addEventListener("DOMContentLoaded", function(event) {
 	var list = document.getElementsByClassName("spotbtn");
 	for (var i = 0; i < list.length; i++) {
-		list[i].onclick = onButtonClick.bind(list[i]);
+		let btn = list[i] as HTMLButtonElement;
+		btn.onclick = onButtonClick.bind(btn);
 	}
 });

@@ -9,13 +9,9 @@
 		<link rel="stylesheet" type="text/css" href="../../../minecraft/local-style.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Lato|Exo 2|Ubuntu|Cairo">
-		<script src = "../../../browser.js"></script>
-		<script src = "../../../library.js"></script>
-		<script id = "footer-space-script" src = "../../../footer-spacing.js"></script>
-		<!--<script src = "../../../jquery.js"></script>-->
-			<script src = "../../../minecraft/precursor.js"></script>
-<script id = "background-script" src = "../../../minecraft/backgroundgen.js"></script>    </head>
-    <body >
+		<script src = "../../../compiledJS/entrypoint.bundle.js"></script>
+    </head>
+    <body  data-game="minecraft">
         	<div id = "navbar" class="navbar">
 	  <a class="navbar-button" href="../../../index.html">Reika's Mods Home</a>
 	  <a class="navbar-button" href="../../../minecraft/index.html">Minecraft Home</a>
@@ -98,6 +94,10 @@
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-introduction">Introduction</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-introduction'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-format">Format</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-format'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-details">Details</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-details'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-items">Items</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-items'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-basicdefinition">Basic Definition</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-basicdefinition'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-itemstackregistries">ItemStack Registries</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-itemstackregistries'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-itemdelegates">Item Delegates</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-itemdelegates'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-specialkeys">Special Keys</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-specialkeys'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-inheritance">Inheritance</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-inheritance'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-domains/trees">Domains/Trees</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-domains/trees'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
@@ -115,7 +115,7 @@
 					<br><br>
 					
 					
-					The name "LuaBlock" comes from the fact that the structure and format of an entry is designed to resemble Factorio prototype definitions, which are themselves nested Lua tables. However, despite this name, and the common use of .lua as the file extension for generated LuaBlock files (done to prompt syntax highlighting in editors), they are <i>not</i> intended or parsed as actual lua code. That said, it is semantically quite similar, meaning if you are familiar with Lua table objects, this system should come naturally.
+					The name "LuaBlock" comes from the fact that the structure and format of an entry is designed to resemble Factorio prototype definitions, which are themselves nested Lua tables. However, despite this name, and the common use of .lua as the file extension for default or generated LuaBlock files (done to prompt syntax highlighting in editors), they are <i>not</i> intended or parsed as actual lua code. That said, it is semantically quite similar, meaning if you are familiar with Lua table objects, this system should come naturally. For most use cases, the actual file extension is flexible; .lua is the default (and is recommended for the highlighting described above), but most LuaBlock-using systems will also look for .txt, .cfg, .ini, .yml, or similar "config text file" type file extensions.
 					
 					
 					<br><br>
@@ -177,11 +177,23 @@
 					
 					The format is always like in the example above; one key-value pair per line (not counting cases where the value spans multiple lines), with no separating commas or other delimiters, formatted as "key = value" (tabs and spaces are ignored, but recommended to aid readability). The type of variable used for the value will be based on whichever valid format it matches - "true" and "false" (ignoring case) will become booleans; any integer will become as such; any other number will become a double-precision floating point value; anything else becomes a String. You can specify a 'type override' for values which "look" like one type but need to be interpreted as another, or for primitive types not chosen by default. To do this, specify the value in the format <code>[datatype=type]value</code>, where "value" is the value as normal and "type" is the Java primitive type you wish to use (byte, short, long, etc).
 					
+			</section><br>
+			<section class = "textblock" id = "text-block-items">
+				<h3>Items</h3>
+					<section class = "textblock" id = "text-block-basicdefinition">
+					<h4>Basic Definition</h4>
+					
+					
+					ItemStacks - like what are used in recipes or as drops - are defined somewhat specially, but similar to Minetweaker, in a format of <code>modid:itemregistryname:metadata*stacksize</code>. Metadata is optional, and will be set to zero if unspecified. If NBT is desired, a separate entry - usually called "nbt" or similar - will be parsed into the NBT tag.
+					
 					
 					<br><br>
+					</section>
+					<section class = "textblock" id = "text-block-itemstackregistries">
+					<h4>ItemStack Registries</h4>
 					
 					
-					ItemStacks - like what are used in recipes or as drops - are defined somewhat specially, but similar to Minetweaker, in a format of <code>modid:itemregistryname:metadata*stacksize</code>. Metadata is optional, and will be set to zero if unspecified. If NBT is desired, a separate entry - usually called "nbt" or similar - will be parsed into the NBT tag. Additionally, the "cached ItemStack" registry in several of my mods - such as <code>ItemStacks</code> in RotaryCraft and <code>ChromaStacks</code> in ChromatiCraft, can be directly queried to save looking for - often long and complicated - registry names. For example, this block will define a basic 3x3 crafting recipe:
+					Additionally, the "cached ItemStack" registry, which contains references to most crafting or resource type items in the applicable mod, and is found in several of my mods - such as <code>ItemStacks</code> in RotaryCraft and <code>ChromaStacks</code> in ChromatiCraft, can be directly queried to save looking for - often long and complicated - registry names. For example, this block will define a basic 3x3 crafting recipe:
 					
 					
 					<div class = "code-block">
@@ -246,11 +258,98 @@
 					
 					And make a stack of 3 CC luma dust, with NBT consisting of two tags, "tag1" mapped to int 370, and "tag2" mapped to string "potato".
 					
+					
+					<br><br>
+					</section>
+					<section class = "textblock" id = "text-block-itemdelegates">
+					<h4>Item Delegates</h4>
+					
+					
+					For ease of use, some complex items have special handlers you can use to define them. Notably, this includes Forestry genetics items - saplings, bees, et cetera - and mystcraft pages. To use this, you specify a "delegate" tag as the item ID, and provide a fake NBT block containing whatever values define the item you want.
+					
+					
+					<br><br>
+					
+					
+					For example, these three blocks define a forestry white willow sapling, a steadfast princess with some specific genes, and the "Single Biome" mystcraft page.
+					
+					
+					<div class = "code-block">
+					
+					
+					{<br>
+					
+					
+					<div class = "code-indent"></div>item = "delegate:forestry_tree"<br>
+					
+					
+					<div class = "code-indent"></div>nbt = {<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>class = "SAPLING"<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>species = "forestry.treeWillow"<br>
+					
+					
+					<div class = "code-indent"></div>}<br>
+					
+					
+					}<br>
+					
+					
+					{<br>
+					
+					
+					<div class = "code-indent"></div>item = "delegate:forestry_bee"<br>
+					
+					
+					<div class = "code-indent"></div>nbt = {<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>class = "PRINCESS"<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>species = "forestry.speciesSteadfast"<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>tolerant_flyer = true<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>speed = "forestry.speedSlower"<br>
+					
+					
+					<div class = "code-indent"></div>}<br>
+					
+					
+					}<br>
+					
+					
+					{<br>
+					
+					
+					<div class = "code-indent"></div>item = "delegate:myst_page"<br>
+					
+					
+					<div class = "code-indent"></div>nbt = {<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>page = "BioConSingle"<br>
+					
+					
+					<div class = "code-indent"></div>}<br>
+					
+					
+					}<br>
+					
+					
+					</div>
+					
 			</section><br>
 			<section class = "textblock" id = "text-block-specialkeys">
 				<h3>Special Keys</h3>
 					
-					The "type" key is special - it is internally used as a lookup ID, and as such A) must always be present B) must be unique within its "domain" (ie whatever system this LuaBlock is being loaded into, such as CaveControl definitions or Satisforestry lizard doggo drops) and C) cannot be inherited from a parent. Its actual <i>value</i> is rarely important; it is merely required that it be usable as an identifier. Additionally, should the parsing of the block fail, or the block be deemed an invalid definition (for example missing a required property), the value of "type" will be used to identify it in the log messages indicating this failure.
+					The "type" key is special - it is internally used as a lookup ID, and as such A) must always be present B) must be unique within its "domain" (ie whatever system this LuaBlock is being loaded into, such as CaveControl definitions or Satisforestry lizard doggo drops) and C) cannot be inherited from a parent. Its actual <i>value</i> is rarely - but not never - important; it is merely required that it be usable as an identifier. Additionally, should the parsing of the block fail, or the block be deemed an invalid definition (for example missing a required property), the value of "type" will be used to identify it in the log messages indicating this failure.
 					
 					
 					<br><br>

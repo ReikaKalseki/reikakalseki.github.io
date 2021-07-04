@@ -9,13 +9,9 @@
 		<link rel="stylesheet" type="text/css" href="../../minecraft/local-style.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Lato|Exo 2|Ubuntu|Cairo">
-		<script src = "../../browser.js"></script>
-		<script src = "../../library.js"></script>
-		<script id = "footer-space-script" src = "../../footer-spacing.js"></script>
-		<!--<script src = "../../jquery.js"></script>-->
-			<script src = "../../minecraft/precursor.js"></script>
-<script id = "background-script" src = "../../minecraft/backgroundgen.js"></script>    </head>
-    <body >
+		<script src = "../../compiledJS/entrypoint.bundle.js"></script>
+    </head>
+    <body  data-game="minecraft">
         	<div id = "navbar" class="navbar">
 	  <a class="navbar-button" href="../../index.html">Reika's Mods Home</a>
 	  <a class="navbar-button" href="../../minecraft/index.html">Minecraft Home</a>
@@ -97,6 +93,7 @@
 	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><span><i class="fas fa-angle-double-up"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-overview">Overview</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-overview'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-screenshots">Screenshots</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-screenshots'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-modsettings">Configuration Settings</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-modsettings'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 </table>
@@ -182,16 +179,169 @@
 					</section>
 			</section>
 <br>
+			<section class = "textblock" id = "text-block-modsettings">
+			<div class = "modsettings">
+				<h3>Configuration Settings</h3>
+				This mod contains several config options to modify values and behaviors - such as for balance or server safety concerns, or simply personal taste - to your preferences. Note that several settings may have bounds imposed on their values, either logically or explicitly; these can usually be seen in the actual settings files or ingame. These are listed in order found in the source code, which is generally the order in which they were added; They may be present in a different order ingame or in the configuration files.
+				<br>
+				<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Overworld Meteor Rarity</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">72000</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">End Meteor Rarity</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">72000</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Twilight Forest Meteor Rarity</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">54000</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Meteor Rarity in Other Dimensions</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">36000</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Meteor Ore Density</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">40</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Minimum Impactable Y</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">-1</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Always Skyburst in Overworld</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Always Skyburst in Nether</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Always Skyburst in End</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Always Skyburst in Twilight Forest</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Always Skyburst in Other Dimensions</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Allow Meteor Showers</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Global Airburst Override</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Generate Ancient Meteors</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Percent of Meteors With Ore</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">100</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Defence Gun Deletes Meteors Instead of Skyburst</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Meteor Sound Volume (0.5-2.0)</h4>
+Type: float<br>
+			Current Default Value:<div class = "code-block">1F</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Enforce Meteor Type Weights For Small Numbers</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+
+			</div>
+			</section>
+<br>
 			<section class = "textblock" id = "text-block-sourcecode">
 			<div class = "modsource">
-				<h3>Source Code</h3>				The source code for MeteorCraft can be found here:<button type="button" class = "srcbtn" onclick="location.href='https://github.com/ReikaKalseki/MeteorCraft'"><span>GitHub<div class = "spacer"></div><i class="fab fa-github"></i></span></button>
+				<h3>Source Code</h3>				The source code for MeteorCraft can be found here:<button type="button" class = "srcbtn" onclick="window.open('https://github.com/ReikaKalseki/MeteorCraft', '_blank'); return false;"><span>GitHub<div class = "spacer"></div><i class="fab fa-github"></i></span></button>
 			</div>
 			</section>
 <br>
 <section class = "textblock" id = "text-block-downloads">
 	<h3>Downloads</h3>
-		<button type="button" class = "dlbtn" onclick="location.href='https://www.curseforge.com/minecraft/mc-mods/meteorcraft'"><span>1.7.10: CurseForge<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
-		<button type="button" class = "dlbtn" onclick="location.href='http://adf.ly/qtczF'"><span>1.6.4: Adfly<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
+		<button type="button" class = "dlbtn" onclick="window.open('https://www.curseforge.com/minecraft/mc-mods/meteorcraft', '_blank'); return false;"><span>1.7.10: CurseForge<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
+		<button type="button" class = "dlbtn" onclick="window.open('http://adf.ly/qtczF', '_blank'); return false;"><span>1.6.4: Adfly<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
 </section>
 			<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
 		<hr>

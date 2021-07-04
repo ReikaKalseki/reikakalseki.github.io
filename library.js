@@ -1,27 +1,27 @@
-var root = [];
-var date = new Date(); //new Date("December 16, 2016 11:13:00");//
-var time = date.getSeconds();
-var month = date.getMonth();
-var day = date.getDate();
-var xmas = month == 11 || (month == 0 && day <= 10); //between dec 1 and jan 10
-var hallow = month == 9 && day >= 10; //between oct 10 and oct 31	
-var viskey = 'visibility';
-var visval = 'visible';
-var xkey = 'x';
-var ykey = 'y';
-var hkey = 'height';
-var wkey = 'width';
-var tileWidthNum = -1;
-var tileHeightNum = -1;
-var tileWidth;
-var tileHeight;
-var imagePaths = {};
+let root: { [key: string]: string } = {};
+export const date = new Date(); //new Date("December 16, 2016 11:13:00");//
+export const time = date.getSeconds();
+export const month = date.getMonth();
+export const day = date.getDate();
+export const xmas = month == 11 || (month == 0 && day <= 10); //between dec 1 and jan 10
+export const hallow = month == 9 && day >= 10; //between oct 10 and oct 31	
+export const viskey = 'visibility';
+export const visval = 'visible';
+export const xkey = 'x';
+export const ykey = 'y';
+export const hkey = 'height';
+export const wkey = 'width';
+let tileWidthNum = -1;
+let tileHeightNum = -1;
+let tileWidth:string;
+let tileHeight:string;
+let imagePaths: { [key: string]: string } = {};
 
-function absDiff(a, b) {
+export function absDiff(a:number, b:number) {
 	return Math.abs(Math.abs(a) - Math.abs(b))
 }
 
-function getImageRoot(folderName) {
+export function getImageRoot(folderName:string) {
 	if (root[folderName] == null || typeof(root[folderName]) == "undefined") {
 		var ret = "images/"+folderName+"/";
 		var url = window.location.href;
@@ -38,15 +38,15 @@ function getImageRoot(folderName) {
 	return root[folderName];
 }
 
-function getRandomBetween(min, max) {
+export function getRandomBetween(min:number, max:number) {
 	return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-function getRandomDecimalBetween(min, max) {
+export function getRandomDecimalBetween(min:number, max:number) {
 	return Math.random() * (max - min) + min;
 }
 
-function getOrCreateImgPath(img, folder) {
+export function getOrCreateImgPath(img:string, folder:string) {
 	if (imagePaths[img] == null) {
 		imagePaths[img] = getImageRoot(folder)+img+".png";
 		//console.log("Computed image path '"+imagePaths[img]+"' for image '"+img+"'");
@@ -54,7 +54,7 @@ function getOrCreateImgPath(img, folder) {
 	return imagePaths[img];
 }
 
-function getTileWidth(iw) {
+export function getTileWidth(iw:number) {
 	if (tileWidthNum != iw) {
 		tileWidthNum = iw;
 		tileWidth = tileWidthNum.toString();
@@ -62,7 +62,7 @@ function getTileWidth(iw) {
 	return tileWidth;
 }
 
-function getTileHeight(ih) {
+export function getTileHeight(ih:number) {
 	if (tileHeightNum != ih) {
 		tileHeightNum = ih;
 		tileHeight = tileHeightNum.toString();
@@ -70,6 +70,6 @@ function getTileHeight(ih) {
 	return tileHeight;
 }
 
-function getArrayIndex(cols, x, y) {
+export function getArrayIndex(cols:number, x:number, y:number) {
 	return x+y*cols;
 }

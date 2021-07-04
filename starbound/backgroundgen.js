@@ -1,8 +1,22 @@
-var STARFIELD_SIZE = 2048;
-var STAR_SIZE = 21;
+import * as SimplexNoise from 'simplex-noise'
 
-function addImage(elem, img, ix, iy, iw, ih, star) {
-	img = modifyImageLocational(ix, iy, img, xmas, hallow);
+import { xmas, hallow, viskey, visval, xkey, ykey, hkey, wkey, getRandomBetween, getRandomDecimalBetween, getOrCreateImgPath, getTileWidth, getTileHeight, getArrayIndex} from '../library'
+import { isPhone} from '../browser'
+
+const STARFIELD_SIZE = 2048;
+const STAR_SIZE = 21;
+
+interface star {
+	x: number;
+	y: number;
+	index: number;
+	cx: number;
+	cy: number;
+	connections: star[];
+  }
+
+function addImage(elem:HTMLElement, img:string, ix:number, iy:number, iw:number, ih:number, star:boolean) {
+	img = modifyImageLocational(ix, iy, img);
 	//var pre = '<image x="'+ix+'" y="'+iy+'" width="'+iw+'" height="'+ih+'" xlink:href="'+getImageRoot();
 	//var post = '.png" />';
 	//return pre+img+post;
@@ -19,18 +33,18 @@ function addImage(elem, img, ix, iy, iw, ih, star) {
 	elem.appendChild(svgimg);
 }
 
-function modifyImageLocational(x, y, img, xmas, hallow) {
+function modifyImageLocational(x:number, y:number, img:string) {
 	return img;
 }
 
-function connectStars(elem, star, other) {
+function connectStars(elem:HTMLElement, star:star, other:star) {
 	if (Math.random() > 0.275)
 		return;
 	var line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-	line.setAttributeNS(null, "x1", star.x+STAR_SIZE/2);
-	line.setAttributeNS(null, "y1", star.y+STAR_SIZE/2);
-	line.setAttributeNS(null, "x2", other.x+STAR_SIZE/2);
-	line.setAttributeNS(null, "y2", other.y+STAR_SIZE/2);
+	line.setAttributeNS(null, "x1", (star.x+STAR_SIZE/2).toString());
+	line.setAttributeNS(null, "y1", (star.y+STAR_SIZE/2).toString());
+	line.setAttributeNS(null, "x2", (other.x+STAR_SIZE/2).toString());
+	line.setAttributeNS(null, "y2", (other.y+STAR_SIZE/2).toString());
 	line.setAttributeNS(null, "stroke", "rgb(160, 160, 160)");
 	line.setAttributeNS(null, "stroke-width", "1");
 	line.setAttributeNS(null, "stroke-dasharray", "4");
@@ -44,14 +58,14 @@ function setPageBackground() {
 	if (isPhone)
 		return;
 	
-	var tail = '</svg>';
+		let tail = '</svg>';
 	
 	//var height = findHighestNode(0, document.documentElement.childNodes);
-	var body = document.body;
-    var html = document.documentElement;
-	var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)-64;
+	let body = document.body;
+    let html = document.documentElement;
+	let height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)-64;
 	
-	var titleImg = document.getElementsByClassName("title-image")[0];
+	let titleImg = document.getElementsByClassName("title-image")[0] as HTMLImageElement;
 	if (titleImg == null || titleImg.src == null || titleImg.src == "" || titleImg.src == window.location.href) {
 		height += 72;
 	}
@@ -61,17 +75,17 @@ function setPageBackground() {
 	
 	//console.log("Total height is "+height+", document content is: "+document.documentElement.innerHTML);
   
-	var rh = Math.max(height, window.innerHeight, document.body.clientHeight);
-	var rw = Math.max(window.innerWidth, document.body.clientWidth);
+	let rh = Math.max(height, window.innerHeight, document.body.clientHeight);
+	let rw = Math.max(window.innerWidth, document.body.clientWidth);
 
 //console.log(rw+" x "+rh);
 	
 	console.log("Generating starbound nav map background");
 	
-	var xmlns = "http://www.w3.org/2000/svg";
-	var elem = document.createElementNS(xmlns, "svg");
-	elem.setAttributeNS(null, "width", rw);
-    elem.setAttributeNS(null, "height", rh);
+	let xmlns = "http://www.w3.org/2000/svg";
+	let elem = document.createElementNS(xmlns, "svg") as HTMLElement;
+	elem.setAttributeNS(null, "width", rw.toString());
+    elem.setAttributeNS(null, "height", rh.toString());
 		
 	for (var i = 0; i < rw; i += STARFIELD_SIZE) {
 		for (var k = 0; k < rh; k += STARFIELD_SIZE) {
@@ -79,32 +93,32 @@ function setPageBackground() {
 		}
 	}
 	
-	var dStar = STAR_SIZE*3;
-	var dd = STAR_SIZE*1.35;
+	let dStar = STAR_SIZE*3;
+	let dd = STAR_SIZE*1.35;
 	
-	var cols = Math.ceil(rw/dStar);
-	var rows = Math.ceil(rh/dStar);
+	let cols = Math.ceil(rw/dStar);
+	let rows = Math.ceil(rh/dStar);
 	
-	var stars = new Array(cols*rows);
+	let stars = new Array(cols*rows);
 	
-	var simplex = new SimplexNoise();
+	let simplex = new SimplexNoise();
 	
 	for (var i = 0; i < cols; i++) {
 		for (var k = 0; k < rows; k++) {
-			var dx = (i+0.5)*dStar;
-			var dy = (k+0.5)*dStar;
-			var posX = getRandomBetween(dx-dd, dx+dd);
-			var posY = getRandomBetween(dy-dd, dy+dd);
-			var entry = {x:posX, y:posY, cx:i, cy:k, index:getArrayIndex(cols, i, k), connections:[]};
+			let dx = (i+0.5)*dStar;
+			let dy = (k+0.5)*dStar;
+			let posX = getRandomBetween(dx-dd, dx+dd);
+			let posY = getRandomBetween(dy-dd, dy+dd);
+			let entry = {x:posX, y:posY, cx:i, cy:k, index:getArrayIndex(cols, i, k), connections:[]};
 			stars[entry.index] = entry;
-			var value = Math.min(5, Math.abs(Math.round(simplex.noise2D(i*0.125, k*0.125)*6)));
-			var img = "star"+value;
+			let value = Math.min(5, Math.abs(Math.round(simplex.noise2D(i*0.125, k*0.125)*6)));
+			let img = "star"+value;
 			addImage(elem, img, posX, posY, STAR_SIZE, STAR_SIZE, true);
 		}
 	}
 	
 	for (var i = 0; i < stars.length; i++) {
-		var star = stars[i];
+		let star = stars[i];
 		
 		if (star.cx > 0 && Math.random() < 0.33) {
 			var other = stars[getArrayIndex(cols, star.cx-1, star.cy)]
@@ -119,7 +133,7 @@ function setPageBackground() {
 		
 	}
 	for (var i = 0; i < stars.length; i++) {
-		var star = stars[i];
+		let star = stars[i];
 		
 		if (star.connections.length == 0) {
 			//console.log("unconnected star: "+star)
@@ -142,8 +156,8 @@ function setPageBackground() {
 		}
 	}
 	
-	var tag = "background-content";
-	var container = document.getElementById(tag);
+	let tag = "background-content";
+	let container = document.getElementById(tag);
 	if (container == null) {
 		container = document.createElement("div")
 		container.id = tag;

@@ -9,13 +9,9 @@
 		<link rel="stylesheet" type="text/css" href="../../minecraft/local-style.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Lato|Exo 2|Ubuntu|Cairo">
-		<script src = "../../browser.js"></script>
-		<script src = "../../library.js"></script>
-		<script id = "footer-space-script" src = "../../footer-spacing.js"></script>
-		<!--<script src = "../../jquery.js"></script>-->
-			<script src = "../../minecraft/precursor.js"></script>
-<script id = "background-script" src = "../../minecraft/backgroundgen.js"></script>    </head>
-    <body >
+		<script src = "../../compiledJS/entrypoint.bundle.js"></script>
+    </head>
+    <body  data-game="minecraft">
         	<div id = "navbar" class="navbar">
 	  <a class="navbar-button" href="../../index.html">Reika's Mods Home</a>
 	  <a class="navbar-button" href="../../minecraft/index.html">Minecraft Home</a>
@@ -96,8 +92,10 @@
 <table class="toc_list">
 	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><span><i class="fas fa-angle-double-up"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-overview">Overview</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-overview'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-informationfordevelopers">Information for Developers</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-informationfordevelopers'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-features">Features</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-features'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-developerfeatures">Developer Features</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-developerfeatures'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-developeruse">Developer Use</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-developeruse'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-modsettings">Configuration Settings</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-modsettings'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 </table>
@@ -109,6 +107,12 @@
 					
 					DragonAPI is a function library and support mod which is relied upon by all of my mods. If you do not have the API, you will crash on game load with a NoClassDefFoundError mentioning DragonAPIMod.class.
 					
+			</section><br>
+			<section class = "textblock" id = "text-block-features">
+				<h3>Features</h3>
+					
+					DragonAPI does add some features to the game in its own right. Most of the significant ones are configurable (see below); others are simply streamlining and fixes.
+					
 					
 					<br><br>
 					
@@ -119,8 +123,8 @@
 					        
 					</section>
 			</section><br>
-			<section class = "textblock" id = "text-block-informationfordevelopers">
-				<h3>Information for Developers</h3>
+			<section class = "textblock" id = "text-block-developerfeatures">
+				<h3>Developer Features</h3>
 					
 					If you are a developer, here are some (a very small subset) of the features to using DragonAPI:
 					
@@ -174,19 +178,420 @@
 					</section>
 			</section>
 <br>
+			<section class = "textblock" id = "text-block-modsettings">
+			<div class = "modsettings">
+				<h3>Configuration Settings</h3>
+				This mod contains several config options to modify values and behaviors - such as for balance or server safety concerns, or simply personal taste - to your preferences. Note that several settings may have bounds imposed on their values, either logically or explicitly; these can usually be seen in the actual settings files or ingame. These are listed in order found in the source code, which is generally the order in which they were added; They may be present in a different order ingame or in the configuration files.
+				<br>
+				<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Console Loading Info</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Log Loading Info To Separate File</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Debug Mode</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Sync Packet ID</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">182</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Disable Renders For Debug</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Show TileEntity NBT when using Debug Key</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Increase sound channel count</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Restore Obsidian Blast Resistance</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Disable Hotbar Swapping</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Log errors to chat</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Sort Creative Tabs Alphabetically</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Custom/Donator Renders</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Only show update notice to Ops or SSP</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Only show update notice to pack creator</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Force Gregtech Ore Compatibility</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Log Sync Packet CME Avoidance</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Slow Sync Packets - Only use this as a last resort</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Minimum Delay (ms) for 'Can't Keep Up!' Log Warning</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">0</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Check Environment Sanity</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Attempt to Repair Environment Sanity</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Admins Bypass Permissions</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Use HashMap for Sound Categories - Only use if necessary</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Compare mod file hashes between client and server</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Enable Temporally Dependent Amusement Behavior</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Particle Limit (Vanilla = 4000)</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">4000</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Debug Overlay Key (LWJGL ID)</h4>
+Type: float<br>
+			Current Default Value:<div class = "code-block">0x0F</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Direct OpenComputers Support</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Automatic Reboot Interval (Seconds)</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">-1</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Merge XP Orbs Like Items</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Extra Block Ticks When Raining</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Prevent Mobs From Targeting Players Immediately After Logging In</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Cache Skins</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Biome Humidity Dependent Fire Spread</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Restrict profiling abilities to admins</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Bytecodeexec command user UUID whitelist</h4>
+Type: String Array<br>
+			Current Default Value:<div class = "code-block">new String[0]</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Automatic Collection of Inventories; set to 'NULL' to disable</h4>
+Type: String<br>
+			Current Default Value:<div class = "code-block">Key.LCTRL.name()</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">AFK Timer Threshold (Seconds); Set to 0 to Disable</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">120</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Reroute Ender Eyes to Stronghold Entrances</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Expected Approximate Maximum World Size (Radius)</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">5000</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Expected Approximate World Center Location X</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">0</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Expected Approximate World Center Location Z</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">0</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Disable rain sound and particles</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Bytecodeexec command notifies other admins</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Player-Specific Mob Caps</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Setting Warning Persistence (EVERYLOAD/SETTINGCHANGE/VERSION/ONCE)</h4>
+Type: String<br>
+			Current Default Value:<div class = "code-block">SETTINGCHANGE</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Allow charged certus to be recognized as normal certus ore</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Prevent block spreading near unloaded chunks</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Make bonemeal generate biome-correct foliage instead of tall grass</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Version Change Warning Level (0 = None, 1 = ReikaMods only, 2 = All)</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">2</div>
+		</div>
+	
+</div>
+
+			</div>
+			</section>
+<br>
 			<section class = "textblock" id = "text-block-sourcecode">
 			<div class = "modsource">
-				<h3>Source Code</h3>				The source code for DragonAPI can be found here:<button type="button" class = "srcbtn" onclick="location.href='https://github.com/ReikaKalseki/DragonAPI'"><span>GitHub<div class = "spacer"></div><i class="fab fa-github"></i></span></button>
+				<h3>Source Code</h3>				The source code for DragonAPI can be found here:<button type="button" class = "srcbtn" onclick="window.open('https://github.com/ReikaKalseki/DragonAPI', '_blank'); return false;"><span>GitHub<div class = "spacer"></div><i class="fab fa-github"></i></span></button>
 			</div>
 			</section>
 <br>
 <section class = "textblock" id = "text-block-downloads">
 	<h3>Downloads</h3>
-		<button type="button" class = "dlbtn" onclick="location.href='https://www.curseforge.com/minecraft/mc-mods/dragonapi'"><span>1.7.10: CurseForge<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
-		<button type="button" class = "dlbtn" onclick="location.href='http://adf.ly/qtcxS'"><span>1.6.4: Adfly<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
-		<button type="button" class = "dlbtn" onclick="location.href='http://adf.ly/Wtfiw'"><span>1.5.2: Adfly<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
-		<button type="button" class = "dlbtn" onclick="location.href='http://adf.ly/Qx9gZ'"><span>1.5.1: Adfly<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
-		<button type="button" class = "dlbtn" onclick="location.href='http://adf.ly/Qx9it'"><span>1.4.7: Adfly<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
+		<button type="button" class = "dlbtn" onclick="window.open('https://www.curseforge.com/minecraft/mc-mods/dragonapi', '_blank'); return false;"><span>1.7.10: CurseForge<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
+		<button type="button" class = "dlbtn" onclick="window.open('http://adf.ly/qtcxS', '_blank'); return false;"><span>1.6.4: Adfly<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
+		<button type="button" class = "dlbtn" onclick="window.open('http://adf.ly/Wtfiw', '_blank'); return false;"><span>1.5.2: Adfly<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
+		<button type="button" class = "dlbtn" onclick="window.open('http://adf.ly/Qx9gZ', '_blank'); return false;"><span>1.5.1: Adfly<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
+		<button type="button" class = "dlbtn" onclick="window.open('http://adf.ly/Qx9it', '_blank'); return false;"><span>1.4.7: Adfly<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
 </section>
 			<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
 		<hr>

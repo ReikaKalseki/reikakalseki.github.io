@@ -1,18 +1,22 @@
-var SCALE = 2;
+const SCALE = 2;
 
-var coldMin = 0.22;
-var coldMax = 0.28;
-var toxicMin = 0.45;
-var toxicMax = 0.55;
-var lavaMin = 0.87;
-var lavaMax = 0.95;
-var coldVar = 0.02;
-var toxicVar = 0.05;
+const coldMin = 0.22;
+const coldMax = 0.28;
+const toxicMin = 0.45;
+const toxicMax = 0.55;
+const lavaMin = 0.87;
+const lavaMax = 0.95;
+const coldVar = 0.02;
+const toxicVar = 0.05;
 
-var lavaCeilRow = 999;
-var lavaFloorRow = 0;
+let lavaCeilRow = 999;
+let lavaFloorRow = 0;
 
-function addImage(elem, img, ix, iy, iw, ih) {
+
+import { xmas, hallow, viskey, visval, xkey, ykey, hkey, wkey, getRandomBetween, getRandomDecimalBetween, getOrCreateImgPath, getTileWidth, getTileHeight, getArrayIndex} from '../library'
+import { isPhone} from '../browser'
+
+function addImage(elem:HTMLElement, img:string, ix:number, iy:number, iw:number, ih:number) {
 	//var pre = '<image x="'+ix+'" y="'+iy+'" width="'+iw+'" height="'+ih+'" xlink:href="'+getImageRoot();
 	//var post = '.png" />';
 	//return pre+img+post;
@@ -28,7 +32,7 @@ function addImage(elem, img, ix, iy, iw, ih) {
 	elem.appendChild(svgimg);
 }
 
-function buildImage(elem, rows, cols, terrain, xmas, hallow) {
+function buildImage(elem:HTMLElement, rows:number, cols:number, terrain:string[][]) {
 	var w = 16*SCALE;
 	var h = 16*SCALE;
 	var x = 0;
@@ -37,7 +41,7 @@ function buildImage(elem, rows, cols, terrain, xmas, hallow) {
 		x = 0;
 		for (var i = 0; i < cols; i++) {
 			var idx = getArrayIndex(cols, i, k);
-			var imgs = terrain[idx];
+			let imgs = terrain[idx];
 			//console.log("Got "+img+" @ "+i+", "+k);
 			if (xmas && imgs.length > 0 && imgs[imgs.length-1] != "cave" && !imgs[imgs.length-1].startsWith("gem") && imgs[imgs.length-1] != "lava" && (k < lavaCeilRow || k > lavaFloorRow)) {
 				var imgsa = k == 0 ? ["cave"] : terrain[getArrayIndex(cols, i, k-1)];
@@ -46,7 +50,7 @@ function buildImage(elem, rows, cols, terrain, xmas, hallow) {
 			}
 			for (var n = 0; n < imgs.length; n++) {
 				var img = imgs[n];
-				img = modifyImageLocational(rows, cols, terrain, i, k, idx, img, xmas, hallow);
+				img = modifyImageLocational(rows, cols, terrain, i, k, idx, img);
 				addImage(elem, img, x, y, w, h);
 			}
 			x += w;
@@ -55,7 +59,7 @@ function buildImage(elem, rows, cols, terrain, xmas, hallow) {
 	}
 }
 
-function isTransparent(img) {
+function isTransparent(img:string) {
 	switch(img) {
 		case "air":
 		case "crystal":
@@ -67,21 +71,21 @@ function isTransparent(img) {
 	}
 }
 
-function setBlock(terrain, idx, img) {
+function setBlock(terrain:string[][], idx:number, img:string) {
 	if (img == "cave")
 		console.log("ERROR: ADDED CAVE ON NULL");
 	terrain[idx] = [];
 	terrain[idx].push(img);
 }
 
-function setBottomBlock(terrain, idx, img) {
+function setBottomBlock(terrain:string[][], idx:number, img:string) {
 	if (terrain[idx] == null || terrain[idx].length == 0)
 		setBlock(terrain, idx, img);
 	else
 		terrain[idx][0] = img;
 }
 
-function addBlock(terrain, idx, img) {
+function addBlock(terrain:string[][], idx:number, img:string) {
 	//console.log("---");
 	//console.log(terrain[idx]);
 	terrain[idx].push(img);
@@ -89,7 +93,7 @@ function addBlock(terrain, idx, img) {
 	//console.log("---");
 }
 
-function getTopBlock(terrain, idx) {
+function getTopBlock(terrain:string[][], idx:number) {
 	var li = terrain[idx]
 	var ret = li == undefined || li.length == 0 ? null : li[li.length-1];
 	//if (ret == "cave")
@@ -97,14 +101,14 @@ function getTopBlock(terrain, idx) {
 	return ret;
 }
 
-function getBottomBlock(terrain, idx) {
+function getBottomBlock(terrain:string[][], idx:number) {
 	var li = terrain[idx]
 	return li.length == 0 ? null : li[0];
 }
 
-function getRandomRawGenBlockAt(x, y, rows, cold, toxic, lava) {
+function getRandomRawGenBlockAt(x:number, y:number, rows:number, cold:number[], toxic:number[], lava:number[]) {
 	var f = y/rows;
-	var coldCtr = cold[x];
+	let coldCtr = cold[x];
 	var toxicCtr = toxic[x];
 	var lavaCtr = lava[x];
 	var ret = "rock";
@@ -119,11 +123,11 @@ function getRandomRawGenBlockAt(x, y, rows, cold, toxic, lava) {
 	return ret;
 }
 
-function modifyImageLocational(rows, cols, terrain, x, y, idx, img, xmas, hallow) {	
+function modifyImageLocational(rows:number, cols:number, terrain:string[][], x:number, y:number, idx:number, img:string) {	
 	return img;
 }
 
-function getOreVeinSize(ore, y, rows) {
+function getOreVeinSize(ore:string, y:number, rows:number) {
 	var f = y/rows;
 	var s = f < 0.2 ? 1 : 1+(f-0.2)*0.75;
 	switch(ore) {
@@ -140,7 +144,7 @@ function getOreVeinSize(ore, y, rows) {
 	}
 }
 
-function genOreVein(rows, cols, terrain, x, y, ore, cold, toxic, lava) {
+function genOreVein(rows:number, cols:number, terrain:string[][], x:number, y:number, ore:string, cold:number[], toxic:number[], lava:number[]) {
 	var s = getOreVeinSize(ore, y, rows);
 	//s[0] = 1;
 	//s[1] = 9;
@@ -162,7 +166,7 @@ function genOreVein(rows, cols, terrain, x, y, ore, cold, toxic, lava) {
 				if (di*di+dk*dk <= r*r+0.25) {
 					var dx = Math.floor(i+d*slopeX);
 					var dy = Math.floor(k+d*slopeY);
-					var idx = getArrayIndex(cols, dx, dy);
+					let idx = getArrayIndex(cols, dx, dy);
 					if (ore == "hardresin")
 						setBlock(terrain, idx, ore);
 					else if (ore == "cave") {
@@ -183,7 +187,7 @@ function genOreVein(rows, cols, terrain, x, y, ore, cold, toxic, lava) {
 	}
 }
 
-function isValidRock(ore, rock) {
+function isValidRock(ore:string, rock:string|null) {
 	if (ore == "hardresin")
 		return true;
 	if (ore == "biomass")
@@ -191,7 +195,7 @@ function isValidRock(ore, rock) {
 	return rock == "deepstone" || rock == "bedrock" || rock == "rock";
 }
 
-function getRandomOreType(rows, x, y, cold, toxic, lava) {
+function getRandomOreType(rows:number, x:number, y:number, cold:number[], toxic:number[], lava:number[]) {
 	var f = y/rows;
 	var list = ["coal", "copper", "tin"];
 	if (f > cold[x]-0.12) {
@@ -215,7 +219,7 @@ function getRandomOreType(rows, x, y, cold, toxic, lava) {
 	return list[Math.floor(Math.random()*list.length)];
 }
 
-function genOreVeins(rows, cols, terrain, cold, toxic, lava) {
+function genOreVeins(rows:number, cols:number, terrain:string[][], cold:number[], toxic:number[], lava:number[]) {
 	var veins = rows*cols/32;
 	//veins = 1;
 	for (var i = 0; i < veins; i++) {
@@ -227,7 +231,7 @@ function genOreVeins(rows, cols, terrain, cold, toxic, lava) {
 	}
 }
 
-function generateLayers(rows, cols, terrain, cold, toxic, lava) {
+function generateLayers(rows:number, cols:number, terrain:string[][], cold:number[], toxic:number[], lava:number[]) {
 	var lastColdCeil = -1;
 	var lastColdFloor = -1;
 	var lastToxicFloor = -1;
@@ -344,7 +348,7 @@ function generateLayers(rows, cols, terrain, cold, toxic, lava) {
 	}
 }
 
-function generateCaves(rows, cols, terrain, cold, toxic, lava) {
+function generateCaves(rows:number, cols:number, terrain:string[][], cold:number[], toxic:number[], lava:number[]) {
 	for (var i = 0; i < rows/2.5; i++) {
 		var x = getRandomBetween(0, cols);
 		var y = getRandomBetween(0, rows);
@@ -352,7 +356,7 @@ function generateCaves(rows, cols, terrain, cold, toxic, lava) {
 	}
 }
 
-function generateResinBalls(rows, cols, terrain, cold, toxic, lava) {
+function generateResinBalls(rows:number, cols:number, terrain:string[][], cold:number[], toxic:number[], lava:number[]) {
 	for (var i = 0; i < rows/40; i++) {
 		var x = getRandomBetween(6, cols-6);
 		var y = getRandomBetween(Math.floor(cold[x]*rows/2), Math.floor(lava[x]*rows-12));
@@ -360,7 +364,7 @@ function generateResinBalls(rows, cols, terrain, cold, toxic, lava) {
 	}
 }
 
-function generateSurfaceResin(rows, cols, terrain) {
+function generateSurfaceResin(rows:number, cols:number, terrain:string[][]) {
 	var t0 = getRandomBetween(0, 4);
 	for (var i = 0; i < cols; i++) {
 		var t = Math.max(t0-1, Math.min(t0+1, getRandomBetween(0, 4)));
@@ -372,7 +376,7 @@ function generateSurfaceResin(rows, cols, terrain) {
 	}
 }
 
-function getRandomCrystal(y, rows, cold, toxic, lava) {
+function getRandomCrystal(y:number, rows:number, cold:number, toxic:number, lava:number) {
 	var f = y/rows;
 	var list = [];
 	if (f < cold/2) {
@@ -396,21 +400,21 @@ function getRandomCrystal(y, rows, cold, toxic, lava) {
 	return list.length == 0 ? null : list[Math.floor(Math.random()*list.length)];
 }
 
-function generateCrystalGlow(elem, x, y, r, g, b) {
+function generateCrystalGlow(elem:HTMLElement, x:number, y:number, r:number, g:number, b:number) {
 	r *= 0.85;
 	g *= 0.85;
 	b *= 0.85;
 	var line = document.createElementNS('http://www.w3.org/2000/svg', 'ellipse');
-	line.setAttributeNS(null, "cx", (x+0.5)*16*SCALE);
-	line.setAttributeNS(null, "cy", (y+0.5)*16*SCALE);
-	line.setAttributeNS(null, "rx", 5*16*SCALE);
-	line.setAttributeNS(null, "ry", 5*16*SCALE);
+	line.setAttributeNS(null, "cx", ((x+0.5)*16*SCALE).toString());
+	line.setAttributeNS(null, "cy", ((y+0.5)*16*SCALE).toString());
+	line.setAttributeNS(null, "rx", (5*16*SCALE).toString());
+	line.setAttributeNS(null, "ry", (5*16*SCALE).toString());
 	line.setAttributeNS(null, "fill", "rgb("+r+", "+g+", "+b+")");
 	line.setAttributeNS(null, "style", "mix-blend-mode: screen; filter: blur(32px);");
 	elem.appendChild(line);
 }
 
-function generateCrystals(rows, cols, terrain, cold, toxic, lava) {
+function generateCrystals(rows:number, cols:number, terrain:string[][], cold:number[], toxic:number[], lava:number[]) {
 	var placed = [];
 	for (var i = 0; i < rows*3; i++) {
 		var x = getRandomBetween(2, cols-2);
@@ -434,18 +438,18 @@ function setPageBackground() {
 	if (isPhone)
 		return;
 	
-	var tail = '</svg>';
-	var w = 16*SCALE;
-	var h = 16*SCALE;
-	var x = 0;
-	var y = 0;
+		let tail = '</svg>';
+	let w = 16*SCALE;
+	let h = 16*SCALE;
+	let x = 0;
+	let y = 0;
 	
 	//var height = findHighestNode(0, document.documentElement.childNodes);
-	var body = document.body;
-    var html = document.documentElement;
-	var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)-64;
+	let body = document.body;
+    let html = document.documentElement;
+	let height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)-64;
 	
-	var titleImg = document.getElementsByClassName("title-image")[0];
+	let titleImg = document.getElementsByClassName("title-image")[0] as HTMLImageElement;
 	if (titleImg == null || titleImg.src == null || titleImg.src == "" || titleImg.src == window.location.href) {
 		height += 72;
 	}
@@ -455,29 +459,29 @@ function setPageBackground() {
 	
 	//console.log("Total height is "+height+", document content is: "+document.documentElement.innerHTML);
   
-	var rh = Math.max(height, window.innerHeight, document.body.clientHeight);
-	var rw = Math.max(window.innerWidth, document.body.clientWidth);
+	let rh = Math.max(height, window.innerHeight, document.body.clientHeight);
+	let rw = Math.max(window.innerWidth, document.body.clientWidth);
 
 //console.log(rw+" x "+rh);
 
   
-  var rows = Math.ceil(rh/h)+1;
-  var cols = Math.ceil(rw/w);
-	var tw = cols*w;
-	var th = rows*h;
+let rows = Math.ceil(rh/h)+1;
+let cols = Math.ceil(rw/w);
+let tw = cols*w;
+let th = rows*h;
 	
 	console.log("Generating FCE chunk slice tileset with "+cols+" columns and "+rows+" rows");
 	
-	var xmlns = "http://www.w3.org/2000/svg";
-	var elem = document.createElementNS(xmlns, "svg");
-	elem.setAttributeNS(null, "width", tw);
-    elem.setAttributeNS(null, "height", th);
+	let xmlns = "http://www.w3.org/2000/svg";
+	let elem = document.createElementNS(xmlns, "svg") as HTMLElement;
+	elem.setAttributeNS(null, "width", tw.toString());
+    elem.setAttributeNS(null, "height", th.toString());
 	
-	var terrain = new Array(cols*rows);
+	let terrain = new Array(cols*rows);
 	
-	var cold = new Array(cols);
-	var toxic = new Array(cols);
-	var lava = new Array(cols);
+	let cold = new Array(cols);
+	let toxic = new Array(cols);
+	let lava = new Array(cols);
 	
 	for (var i = 0; i < cols; i++) {
 		cold[i] = getRandomDecimalBetween(coldMin, coldMax);
@@ -492,8 +496,8 @@ function setPageBackground() {
 	
 	for (var i = 0; i < cols; i++) {
 		for (var k = 0; k < rows; k++) {
-			var img = getRandomRawGenBlockAt(i, k, rows, cold, toxic, lava);
-			var idx = getArrayIndex(cols, i, k);
+			let img = getRandomRawGenBlockAt(i, k, rows, cold, toxic, lava);
+			let idx = getArrayIndex(cols, i, k);
 			terrain[idx] = null;
 			setBlock(terrain, idx, img);
 		}
@@ -504,16 +508,16 @@ function setPageBackground() {
 	generateCaves(rows, cols, terrain, cold, toxic, lava);
 	generateResinBalls(rows, cols, terrain, cold, toxic, lava);
 	generateSurfaceResin(rows, cols, terrain);
-	var crys = generateCrystals(rows, cols, terrain, cold, toxic, lava);
+	let crys = generateCrystals(rows, cols, terrain, cold, toxic, lava);
 	//generateLPTs(rows, cols, terrain);
 	
-	buildImage(elem, rows, cols, terrain, xmas, hallow);
+	buildImage(elem, rows, cols, terrain);
 	
 	for (var i = 0; i < crys.length; i++) {
-		var cry = crys[i];
-		var r = 0;
-		var g = 0;
-		var b = 0;
+		let cry = crys[i];
+		let r = 0;
+		let g = 0;
+		let b = 0;
 		switch(cry.type) {
 			case "diamond":
 				r = 224;
@@ -547,8 +551,8 @@ function setPageBackground() {
 		generateCrystalGlow(elem, cry.x, cry.y, r, g, b);
 	}
 	
-	var tag = "background-content";
-	var container = document.getElementById(tag);
+	let tag = "background-content";
+	let container = document.getElementById(tag);
 	if (container == null) {
 		container = document.createElement("div")
 		container.id = tag;

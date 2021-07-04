@@ -1,7 +1,25 @@
-var SCALE = 1;
-var STARFIELD_SIZE = 2000;
+const SCALE = 1;
+const STARFIELD_SIZE = 2000;
 
-function addImage(elem, img, ix, iy, iw, ih) {
+import { xmas, hallow, viskey, visval, xkey, ykey, hkey, wkey, getRandomBetween, getRandomDecimalBetween, getOrCreateImgPath, getTileWidth, getTileHeight, getArrayIndex} from '../library'
+import { isPhone} from '../browser'
+
+interface machine {
+	x: number;
+	y: number;
+	index: number;
+	image:string;
+	cargo:boolean;
+	sides:string[];
+  }
+
+  interface point {
+	x: number;
+	y: number;
+  }
+
+
+function addImage(elem:HTMLElement, img:string, ix:number, iy:number, iw:number, ih:number) {
 	//var pre = '<image x="'+ix+'" y="'+iy+'" width="'+iw+'" height="'+ih+'" xlink:href="'+getImageRoot();
 	//var post = '.png" />';
 	//return pre+img+post;
@@ -15,7 +33,7 @@ function addImage(elem, img, ix, iy, iw, ih) {
 	elem.appendChild(svgimg);
 }
 
-function buildImage(elem, rows, cols,  front, back, xmas, hallow, imgw, imgh) {
+function buildImage(elem:HTMLElement, rows:number, cols:number, front:string[], back:string[], imgw:number, imgh:number) {
 	var w = 64*SCALE;
 	var h = 64*SCALE;
 	var x = 0;
@@ -23,22 +41,22 @@ function buildImage(elem, rows, cols,  front, back, xmas, hallow, imgw, imgh) {
 	
 	if (xmas) {
 		var svgimg = document.createElementNS('http://www.w3.org/2000/svg', 'image');
-		svgimg.setAttributeNS(null, wkey, 320);
-		svgimg.setAttributeNS(null, hkey, 320);
-		svgimg.setAttributeNS('http://www.w3.org/1999/xlink', 'href', getOrCreateImgPath("xmas"));
-		svgimg.setAttributeNS(null, xkey, getRandomBetween(32, imgw-350));
-		svgimg.setAttributeNS(null, ykey, getRandomBetween(32, imgw-350));
+		svgimg.setAttributeNS(null, wkey, "320");
+		svgimg.setAttributeNS(null, hkey, "320");
+		svgimg.setAttributeNS('http://www.w3.org/1999/xlink', 'href', getOrCreateImgPath("xmas", "se"));
+		svgimg.setAttributeNS(null, xkey, getRandomBetween(32, imgw-350).toString());
+		svgimg.setAttributeNS(null, ykey, getRandomBetween(32, imgw-350).toString());
 		svgimg.setAttributeNS(null, viskey, visval);
 		elem.appendChild(svgimg);
 	}
 	
 	if (hallow) {
 		var svgimg = document.createElementNS('http://www.w3.org/2000/svg', 'image');
-		svgimg.setAttributeNS(null, wkey, 320);
-		svgimg.setAttributeNS(null, hkey, 320);
-		svgimg.setAttributeNS('http://www.w3.org/1999/xlink', 'href', getOrCreateImgPath("hallow"));
-		svgimg.setAttributeNS(null, xkey, getRandomBetween(32, imgw-350));
-		svgimg.setAttributeNS(null, ykey, getRandomBetween(32, imgw-350));
+		svgimg.setAttributeNS(null, wkey, "320");
+		svgimg.setAttributeNS(null, hkey, "320");
+		svgimg.setAttributeNS('http://www.w3.org/1999/xlink', 'href', getOrCreateImgPath("hallow", "se"));
+		svgimg.setAttributeNS(null, xkey, getRandomBetween(32, imgw-350).toString());
+		svgimg.setAttributeNS(null, ykey, getRandomBetween(32, imgw-350).toString());
 		svgimg.setAttributeNS(null, viskey, visval);
 		elem.appendChild(svgimg);
 	}
@@ -49,7 +67,7 @@ function buildImage(elem, rows, cols,  front, back, xmas, hallow, imgw, imgh) {
 			var idx = getArrayIndex(cols, i, k);
 			var img = front[idx];
 			if (isTransparent(img) && back[idx] != "sky") {
-				var bimg = modifyImageLocational(rows, cols, i, k, idx, back[idx], xmas, hallow);
+				var bimg = modifyImageLocational(rows, cols, i, k, idx, back[idx]);
 				addImage(elem, bimg, x, y, w, h);
 			}
 			if (img != "air") {
@@ -57,7 +75,7 @@ function buildImage(elem, rows, cols,  front, back, xmas, hallow, imgw, imgh) {
 				if (back[idx] != "sky")
 					addImage(elem, "inner", x, y, w, h);
 				if (img != "inner") {
-					img = modifyImageLocational(rows, cols, i, k, idx, img, xmas, hallow);
+					img = modifyImageLocational(rows, cols, i, k, idx, img);
 					addImage(elem, img, x, y, w, h);
 				}
 			}
@@ -67,7 +85,7 @@ function buildImage(elem, rows, cols,  front, back, xmas, hallow, imgw, imgh) {
 	}
 }
 
-function isTransparent(img) {
+function isTransparent(img:string) {
 	switch(img) {
 		case "air":
 		case "gravgen":
@@ -85,7 +103,7 @@ function isTransparent(img) {
 	}
 }
 
-function modifyImageLocational(rows, cols,  x, y, idx, img, xmas, hallow) {
+function modifyImageLocational(rows:number, cols:number, x:number, y:number, idx:number, img:string) {	
 	if (img == "armor") {
 		if (xmas) {
 			var v = Math.cos(x*0.25)+Math.cos(x*0.75)*0.43-Math.sin(y*0.47)*0.72;
@@ -99,7 +117,7 @@ function modifyImageLocational(rows, cols,  x, y, idx, img, xmas, hallow) {
 	return img;
 }
 
-function getRandomFunctionalBlock(i, k, idx) {
+function getRandomFunctionalBlock(i:number, k:number, idx:number) {
 	var f = Math.random()*1.5;
 	var entry = null;
 	if (f < 0.05) {
@@ -138,7 +156,7 @@ function getRandomFunctionalBlock(i, k, idx) {
 	return entry;
 }
 
-function placeRoom(x, y, rows, cols, front, back, points) {
+function placeRoom(x:number, y:number, rows:number, cols:number, front:string[], back:string[], points:machine[]) {
 	var w = getRandomBetween(2, 4);
 	var h = getRandomBetween(4, 5);
 	for (var k = 0; k < h; k++) {
@@ -175,7 +193,7 @@ function placeRoom(x, y, rows, cols, front, back, points) {
 	}
 }
 
-function putConveyorAt(rows, cols, front, back, idx, type) {
+function putConveyorAt(rows:number, cols:number, front:string[], back:string[], idx:number, type:string) {
 	if (back[idx] == "armor" || back[idx] == "interiorwall" || back[idx] == "sky" || back[idx] == "cargo") {
 		if (back[idx] == "cargo" || front[idx] == "cargo" || front[idx].startsWith("conv"))
 			type = "cargo";
@@ -183,7 +201,7 @@ function putConveyorAt(rows, cols, front, back, idx, type) {
 	}
 }
 
-function tryConnectConveyor(rows, cols, front, back, p1, p2) {
+function tryConnectConveyor(rows:number, cols:number, front:string[], back:string[], p1:point, p2:point) {
 	//console.log("Connecting "+p1.x+","+p1.y+" -> "+p2.x+","+p2.y);
 	for (var i = Math.min(p1.x, p2.x)+1; i < Math.max(p1.x, p2.x); i++) {
 		putConveyorAt(rows, cols, front, back, getArrayIndex(cols, i, p1.y), "conv_h");
@@ -211,7 +229,7 @@ function tryConnectConveyor(rows, cols, front, back, p1, p2) {
 	putConveyorAt(rows, cols, front, back, getArrayIndex(cols, p2.x, p1.y), corner);
 }
 
-function makeConveyors(rows, cols, front, back, points) {
+function makeConveyors(rows:number, cols:number, front:string[], back:string[], points:machine[]) {
 	for (var k = 0; k < rows; k++) {
 		for (var i = 0; i < cols; i++) {
 			if (Math.random() < 0.2) {
@@ -279,7 +297,7 @@ function makeConveyors(rows, cols, front, back, points) {
 	}
 }
 
-function makeHalls(rows, cols, front, back) {
+function makeHalls(rows:number, cols:number, front:string[], back:string[]) {
 	for (var k = 0; k < rows; k++) {
 		for (var i = 0; i < cols; i++) {
 			var idx = getArrayIndex(cols, i, k);
@@ -300,7 +318,7 @@ function makeHalls(rows, cols, front, back) {
 	}
 }
 
-function wrapInArmor(rows, cols, front, back) {
+function wrapInArmor(rows:number, cols:number, front:string[], back:string[]) {
 	for (var k = 0; k < rows; k++) {
 		for (var i = 0; i < cols; i++) {
 			var idx = getArrayIndex(cols, i, k);
@@ -321,18 +339,18 @@ function setPageBackground() {
 	if (isPhone)
 		return;
 	
-	var tail = '</svg>';
-	var w = 64*SCALE;
-	var h = 64*SCALE;
-	var x = 0;
-	var y = 0;
+		let tail = '</svg>';
+	let w = 64*SCALE;
+	let h = 64*SCALE;
+	let x = 0;
+	let y = 0;
 	
 	//var height = findHighestNode(0, document.documentElement.childNodes);
-	var body = document.body;
-    var html = document.documentElement;
-	var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)-64;
+	let body = document.body;
+    let html = document.documentElement;
+	let height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)-64;
 	
-	var titleImg = document.getElementsByClassName("title-image")[0];
+	let titleImg = document.getElementsByClassName("title-image")[0] as HTMLImageElement;
 	if (titleImg == null || titleImg.src == null || titleImg.src == "" || titleImg.src == window.location.href) {
 		height += 72;
 	}
@@ -342,23 +360,23 @@ function setPageBackground() {
 	
 	//console.log("Total height is "+height+", document content is: "+document.documentElement.innerHTML);
   
-	var rh = Math.max(height, window.innerHeight, document.body.clientHeight);
-	var rw = Math.max(window.innerWidth, document.body.clientWidth);
+	let rh = Math.max(height, window.innerHeight, document.body.clientHeight);
+	let rw = Math.max(window.innerWidth, document.body.clientWidth);
 
 //console.log(rw+" x "+rh);
 
   
-  var rows = Math.ceil(rh/h);
-  var cols = Math.ceil(rw/w);
-	var tw = cols*w;
-	var th = rows*h;
+let rows = Math.ceil(rh/h);
+let cols = Math.ceil(rw/w);
+let tw = cols*w;
+	let th = rows*h;
 	
-	console.log("Generating portal tileset with "+cols+" columns and "+rows+" rows");
+	console.log("Generating SE tileset with "+cols+" columns and "+rows+" rows");
 	
-	var xmlns = "http://www.w3.org/2000/svg";
-	var elem = document.createElementNS(xmlns, "svg");
-	elem.setAttributeNS(null, "width", tw);
-    elem.setAttributeNS(null, "height", th);
+	let xmlns = "http://www.w3.org/2000/svg";
+	let elem = document.createElementNS(xmlns, "svg") as HTMLElement;
+	elem.setAttributeNS(null, "width", tw.toString());
+    elem.setAttributeNS(null, "height", th.toString());
 	
 	for (var i = 0; i < rw; i += STARFIELD_SIZE) {
 		for (var k = 0; k < rh; k += STARFIELD_SIZE) {
@@ -366,8 +384,8 @@ function setPageBackground() {
 		}
 	}
 		
-	var back = new Array(cols*rows);
-	var front = new Array(cols*rows);
+	let back = new Array(cols*rows);
+	let front = new Array(cols*rows);
 	
 	for (var k = 0; k < rows; k++) {
 		for (var i = 0; i < cols; i++) {
@@ -377,7 +395,7 @@ function setPageBackground() {
 		}
 	}
 	
-	var points = [];
+	let points:machine[] = [];
 	
 	for (var k = 0; k < rows*0.75; k++) {
 		placeRoom(getRandomBetween(4, cols-4), getRandomBetween(2, rows-2), rows, cols, front, back, points);
@@ -387,10 +405,10 @@ function setPageBackground() {
 	wrapInArmor(rows, cols, front, back);
 	makeConveyors(rows, cols, front, back, points);
 	
-	buildImage(elem, rows, cols,  front, back, xmas, hallow, rw, rh);
+	buildImage(elem, rows, cols,  front, back, rw, rh);
 	
-	var tag = "background-content";
-	var container = document.getElementById(tag);
+	let tag = "background-content";
+	let container = document.getElementById(tag);
 	if (container == null) {
 		container = document.createElement("div")
 		container.id = tag;

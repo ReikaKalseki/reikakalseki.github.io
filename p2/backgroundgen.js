@@ -1,6 +1,9 @@
-var SCALE = 1;
+const SCALE = 1;
 
-function addImage(elem, img, ix, iy, iw, ih) {
+import { xmas, hallow, viskey, visval, xkey, ykey, hkey, wkey, getRandomBetween, getRandomDecimalBetween, getOrCreateImgPath, getTileWidth, getTileHeight, getArrayIndex} from '../library'
+import { isPhone} from '../browser'
+
+function addImage(elem:HTMLElement, img:string, ix:number, iy:number, iw:number, ih:number) {
 	//var pre = '<image x="'+ix+'" y="'+iy+'" width="'+iw+'" height="'+ih+'" xlink:href="'+getImageRoot();
 	//var post = '.png" />';
 	//return pre+img+post;
@@ -16,7 +19,7 @@ function addImage(elem, img, ix, iy, iw, ih) {
 	elem.appendChild(svgimg);
 }
 
-function buildImage(elem, rows, cols, terrain, blocks, xmas, hallow) {
+function buildImage(elem:HTMLElement, rows:number, cols:number, terrain:string[], blocks:string[][]) {
 	var w = 128*SCALE;
 	var h = 128*SCALE;
 	var x = 0;
@@ -25,15 +28,15 @@ function buildImage(elem, rows, cols, terrain, blocks, xmas, hallow) {
 	for (var k = 0; k < rows; k++) {
 		x = 0;
 		for (var i = 0; i < cols; i++) {
-			var idx = getArrayIndex(cols, i, k);
-			var imgs = blocks[idx];
+			let idx = getArrayIndex(cols, i, k);
+			let imgs = blocks[idx];
 			addImage(elem, terrain[idx], x, y, w, h);
-			if (imgs != "air") {
+			if (imgs.length != 1 || imgs[0] != "air") {
 				//console.log("Got "+img+" @ "+i+", "+k);
 				for (var n = 0; n < imgs.length; n++) {
 					var img = imgs[n];
 					if (img != "air") {
-						img = modifyImageLocational(rows, cols, terrain, i, k, idx, img, xmas, hallow);
+						img = modifyImageLocational(rows, cols, terrain, i, k, idx, img);
 						addImage(elem, img, x, y, w, h);
 						if (xmas && img.startsWith("laser")) {
 							lasers.push({x:x, y:y});
@@ -54,15 +57,15 @@ function buildImage(elem, rows, cols, terrain, blocks, xmas, hallow) {
 	}
 }
 
-function getRandomTileAt(x, y, rows) {
+function getRandomTileAt(x:number, y:number, rows:number) {
 	return "black"+getRandomBetween(0, 15);
 }
 
-function modifyImageLocational(rows, cols, terrain, x, y, idx, img, xmas, hallow) {
+function modifyImageLocational(rows:number, cols:number, terrain:string[], x:number, y:number, idx:number, img:string) {
 	return img;
 }
 
-function placePortalSurface(terrain, blocks, rows, cols, blue, orange) {
+function placePortalSurface(terrain:string[], blocks:string[][], rows:number, cols:number, blue:boolean, orange:boolean) {
 	var w = getRandomBetween(1, 6);
 	var h = getRandomBetween(1, 3);
 	var x = getRandomBetween(0, cols-1);
@@ -87,7 +90,7 @@ function placePortalSurface(terrain, blocks, rows, cols, blue, orange) {
 	return [blue, orange];
 }
 
-function placeTestElements(blocks, rows, cols) {
+function placeTestElements(blocks:string[][], rows:number, cols:number) {
 	for (var i = 1; i < rows-1; i++) {
 		if (Math.random() < 0.1) {
 			generateBeam(blocks, rows, cols, 0, i);
@@ -100,7 +103,7 @@ function placeTestElements(blocks, rows, cols) {
 	}
 }
 
-function generateBeam(blocks, rows, cols, x, y) {
+function generateBeam(blocks:string[][], rows:number, cols:number, x:number, y:number) {
 	var type = Math.random() < 0.5 ? (Math.random() < 0.5 ? "lightbridge" : "laser") : (xmas ? "funnel_xmas" : (Math.random() < 0.35 ? "funnel_o" : "funnel"));
 	var dx = (x == 0 ? 1 : 0);
 	var dy = 1-dx;
@@ -112,8 +115,8 @@ function generateBeam(blocks, rows, cols, x, y) {
 	}
 }
 
-function addBlock(blocks, idx, img) {
-	if (blocks[idx] == "air") {
+function addBlock(blocks:string[][], idx:number, img:string) {
+	if (blocks[idx].length == 1 && blocks[idx][0] == "air") {
 		blocks[idx] = [];
 	}
 	blocks[idx].push(img);
@@ -123,18 +126,18 @@ function setPageBackground() {
 	if (isPhone)
 		return;
 	
-	var tail = '</svg>';
-	var w = 128*SCALE;
-	var h = 128*SCALE;
-	var x = 0;
-	var y = 0;
+	let tail = '</svg>';
+	let w = 128*SCALE;
+	let h = 128*SCALE;
+	let x = 0;
+	let y = 0;
 	
 	//var height = findHighestNode(0, document.documentElement.childNodes);
-	var body = document.body;
-    var html = document.documentElement;
-	var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)-64;
+	let body = document.body;
+    let html = document.documentElement;
+	let height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)-64;
 	
-	var titleImg = document.getElementsByClassName("title-image")[0];
+	let titleImg = document.getElementsByClassName("title-image")[0] as HTMLImageElement;
 	if (titleImg == null || titleImg.src == null || titleImg.src == "" || titleImg.src == window.location.href) {
 		height += 72;
 	}
@@ -144,38 +147,38 @@ function setPageBackground() {
 	
 	//console.log("Total height is "+height+", document content is: "+document.documentElement.innerHTML);
   
-	var rh = Math.max(height, window.innerHeight, document.body.clientHeight);
-	var rw = Math.max(window.innerWidth, document.body.clientWidth);
+	let rh = Math.max(height, window.innerHeight, document.body.clientHeight);
+	let rw = Math.max(window.innerWidth, document.body.clientWidth);
 
 //console.log(rw+" x "+rh);
 
   
-  var rows = Math.ceil(rh/h);
-  var cols = Math.ceil(rw/w);
-	var tw = cols*w;
-	var th = rows*h;
+let rows = Math.ceil(rh/h);
+let cols = Math.ceil(rw/w);
+let tw = cols*w;
+let th = rows*h;
 	
 	console.log("Generating portal tileset with "+cols+" columns and "+rows+" rows");
 	
-	var xmlns = "http://www.w3.org/2000/svg";
-	var elem = document.createElementNS(xmlns, "svg");
-	elem.setAttributeNS(null, "width", tw);
-    elem.setAttributeNS(null, "height", th);
+	let xmlns = "http://www.w3.org/2000/svg";
+	let elem = document.createElementNS(xmlns, "svg") as HTMLElement;
+	elem.setAttributeNS(null, "width", tw.toString());
+    elem.setAttributeNS(null, "height", th.toString());
 	
-	var terrain = new Array(cols*rows);
-	var blocks = new Array(cols*rows);
+	let terrain:string[] = new Array(cols*rows);
+	let blocks:string[][] = new Array(cols*rows);
 	
 	for (var i = 0; i < cols; i++) {
 		for (var k = 0; k < rows; k++) {
 			var img = getRandomTileAt(i, k, rows);
 			var idx = getArrayIndex(cols, i, k);
 			terrain[idx] = img;
-			blocks[idx] = "air";
+			blocks[idx] = ["air"];
 		}
 	}
 	
-	var blue = true;
-	var orange = true;
+	let blue = true;
+	let orange = true;
 	
 	for (var i = 0; i < rows/4; i++) {
 		var ret = placePortalSurface(terrain, blocks, rows, cols, blue, orange);
@@ -185,10 +188,10 @@ function setPageBackground() {
 	
 	placeTestElements(blocks, rows, cols);
 	
-	buildImage(elem, rows, cols, terrain, blocks, xmas, hallow);
+	buildImage(elem, rows, cols, terrain, blocks);
 	
-	var tag = "background-content";
-	var container = document.getElementById(tag);
+	let tag = "background-content";
+	let container = document.getElementById(tag);
 	if (container == null) {
 		container = document.createElement("div")
 		container.id = tag;

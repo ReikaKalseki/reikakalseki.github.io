@@ -9,12 +9,9 @@
 		<link rel="stylesheet" type="text/css" href="../../se/local-style.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Lato|Exo 2|Ubuntu|Cairo">
-		<script src = "../../browser.js"></script>
-		<script src = "../../library.js"></script>
-		<script id = "footer-space-script" src = "../../footer-spacing.js"></script>
-		<!--<script src = "../../jquery.js"></script>-->
-<script id = "background-script" src = "../../se/backgroundgen.js"></script>    </head>
-    <body >
+		<script src = "../../compiledJS/entrypoint.bundle.js"></script>
+    </head>
+    <body  data-game="se">
         	<div id = "navbar" class="navbar">
 	  <a class="navbar-button" href="../../index.html">Reika's Mods Home</a>
 	  <a class="navbar-button" href="../../se/index.html">Space Engineers Home</a>
@@ -205,7 +202,7 @@
 <br>
 <section class = "textblock" id = "text-block-downloads">
 	<h3>Downloads</h3>
-<button type="button" class = "dlbtn" onclick="location.href='https://steamcommunity.com/sharedfiles/filedetails/?id=1721042736'"><span>Steam Workshop<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
+<button type="button" class = "dlbtn" onclick="window.open('https://steamcommunity.com/sharedfiles/filedetails/?id=1721042736', '_blank'); return false;"><span>Steam Workshop<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
 </section>
 			<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
 		<hr>

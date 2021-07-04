@@ -9,12 +9,9 @@
 		<link rel="stylesheet" type="text/css" href="../../factorio/local-style.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Lato|Exo 2|Ubuntu|Cairo">
-		<script src = "../../browser.js"></script>
-		<script src = "../../library.js"></script>
-		<script id = "footer-space-script" src = "../../footer-spacing.js"></script>
-		<!--<script src = "../../jquery.js"></script>-->
-<script id = "background-script" src = "../../factorio/backgroundgen.js"></script>    </head>
-    <body >
+		<script src = "../../compiledJS/entrypoint.bundle.js"></script>
+    </head>
+    <body  data-game="factorio">
         	<div id = "navbar" class="navbar">
 	  <a class="navbar-button" href="../../index.html">Reika's Mods Home</a>
 	  <a class="navbar-button" href="../../factorio/index.html">Factorio Home</a>
@@ -119,13 +116,13 @@
 <br>
 			<section class = "textblock" id = "text-block-sourcecode">
 			<div class = "modsource">
-				<h3>Source Code</h3>				The source code for LossPrevention can be found here:<button type="button" class = "srcbtn" onclick="location.href='https://github.com/ReikaKalseki/LossPrevention'"><span>GitHub<div class = "spacer"></div><i class="fab fa-github"></i></span></button>
+				<h3>Source Code</h3>				The source code for LossPrevention can be found here:<button type="button" class = "srcbtn" onclick="window.open('https://github.com/ReikaKalseki/LossPrevention', '_blank'); return false;"><span>GitHub<div class = "spacer"></div><i class="fab fa-github"></i></span></button>
 			</div>
 			</section>
 <br>
 <section class = "textblock" id = "text-block-downloads">
 	<h3>Downloads</h3>
-<button type="button" class = "dlbtn" onclick="location.href='https://mods.factorio.com/mod/LossPrevention'"><span>Factorio Mod Portal<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
+<button type="button" class = "dlbtn" onclick="window.open('https://mods.factorio.com/mod/LossPrevention', '_blank'); return false;"><span>Factorio Mod Portal<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
 </section>
 			<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
 		<hr>

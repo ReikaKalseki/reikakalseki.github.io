@@ -9,12 +9,9 @@
 		<link rel="stylesheet" type="text/css" href="../../factorio/local-style.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Lato|Exo 2|Ubuntu|Cairo">
-		<script src = "../../browser.js"></script>
-		<script src = "../../library.js"></script>
-		<script id = "footer-space-script" src = "../../footer-spacing.js"></script>
-		<!--<script src = "../../jquery.js"></script>-->
-<script id = "background-script" src = "../../factorio/backgroundgen.js"></script>    </head>
-    <body >
+		<script src = "../../compiledJS/entrypoint.bundle.js"></script>
+    </head>
+    <body  data-game="factorio">
         	<div id = "navbar" class="navbar">
 	  <a class="navbar-button" href="../../index.html">Reika's Mods Home</a>
 	  <a class="navbar-button" href="../../factorio/index.html">Factorio Home</a>
@@ -92,6 +89,7 @@
 	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><span><i class="fas fa-angle-double-up"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-overview">Overview</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-overview'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-evoreduction">Evo Reduction</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-evoreduction'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-modsettings">Configuration Settings</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-modsettings'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 </table>
@@ -117,15 +115,32 @@
 					</section>
 			</section>
 <br>
+			<section class = "textblock" id = "text-block-modsettings">
+			<div class = "modsettings">
+				<h3>Configuration Settings</h3>
+				This mod contains several config options to modify values and behaviors - such as for balance or server safety concerns, or simply personal taste - to your preferences. Note that several settings may have bounds imposed on their values, either logically or explicitly; these can usually be seen in the actual settings files or ingame. These are listed in order found in the source code, which is generally the order in which they were added; They may be present in a different order ingame or in the configuration files.
+				<br>
+				<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Enable evolution factor research</h4>
+Type: bool<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	Enable evolution factor research; each time this research is completed the evolution factor is slightly reduced.
+</div>
+
+			</div>
+			</section>
+<br>
 			<section class = "textblock" id = "text-block-sourcecode">
 			<div class = "modsource">
-				<h3>Source Code</h3>				The source code for InfiTech can be found here:<button type="button" class = "srcbtn" onclick="location.href='https://github.com/ReikaKalseki/InfiTech'"><span>GitHub<div class = "spacer"></div><i class="fab fa-github"></i></span></button>
+				<h3>Source Code</h3>				The source code for InfiTech can be found here:<button type="button" class = "srcbtn" onclick="window.open('https://github.com/ReikaKalseki/InfiTech', '_blank'); return false;"><span>GitHub<div class = "spacer"></div><i class="fab fa-github"></i></span></button>
 			</div>
 			</section>
 <br>
 <section class = "textblock" id = "text-block-downloads">
 	<h3>Downloads</h3>
-<button type="button" class = "dlbtn" onclick="location.href='https://mods.factorio.com/mod/InfiTech'"><span>Factorio Mod Portal<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
+<button type="button" class = "dlbtn" onclick="window.open('https://mods.factorio.com/mod/InfiTech', '_blank'); return false;"><span>Factorio Mod Portal<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
 </section>
 			<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
 		<hr>

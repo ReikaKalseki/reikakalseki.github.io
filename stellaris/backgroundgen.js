@@ -1,8 +1,24 @@
-var STARFIELD_SIZE = 2048;
-var STAR_SIZE = 32;
+const STARFIELD_SIZE = 2048;
+const STAR_SIZE = 32;
 
-function addImage(elem, img, ix, iy, iw, ih, star) {
-	img = modifyImageLocational(ix, iy, img, xmas, hallow);
+import { xmas, hallow, viskey, visval, xkey, ykey, hkey, wkey, getRandomBetween, getRandomDecimalBetween, getOrCreateImgPath, getTileWidth, getTileHeight, getArrayIndex} from '../library'
+import { isPhone} from '../browser'
+
+interface star {
+	x: number;
+	y: number;
+	index: number;
+	cx: number;
+	cy: number;
+	isAleran: boolean;
+	isAleranBorder: boolean;
+	borderDistance: number;
+	connections: star[];
+	angle: number;
+  }
+
+function addImage(elem:HTMLElement, img:string, ix:number, iy:number, iw:number, ih:number, star:boolean) {
+	img = modifyImageLocational(ix, iy, img);
 	//var pre = '<image x="'+ix+'" y="'+iy+'" width="'+iw+'" height="'+ih+'" xlink:href="'+getImageRoot();
 	//var post = '.png" />';
 	//return pre+img+post;
@@ -19,11 +35,11 @@ function addImage(elem, img, ix, iy, iw, ih, star) {
 	elem.appendChild(svgimg);
 }
 
-function modifyImageLocational(x, y, img, xmas, hallow) {
+function modifyImageLocational(x:number, y:number, img:string) {
 	return img;
 }
 
-function connectStars(elem, star, other) {
+function connectStars(elem:HTMLElement, star:star, other:star) {
 	if (star.connections.includes(other)) {
 		if (!other.connections.includes(star)) {
 			other.connections.push(star);
@@ -31,10 +47,10 @@ function connectStars(elem, star, other) {
 		return;
 	}
 	var line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-	line.setAttributeNS(null, "x1", star.x+STAR_SIZE/2);
-	line.setAttributeNS(null, "y1", star.y+STAR_SIZE/2);
-	line.setAttributeNS(null, "x2", other.x+STAR_SIZE/2);
-	line.setAttributeNS(null, "y2", other.y+STAR_SIZE/2);
+	line.setAttributeNS(null, "x1", (star.x+STAR_SIZE/2).toString());
+	line.setAttributeNS(null, "y1", (star.y+STAR_SIZE/2).toString());
+	line.setAttributeNS(null, "x2", (other.x+STAR_SIZE/2).toString());
+	line.setAttributeNS(null, "y2", (other.y+STAR_SIZE/2).toString());
 	line.setAttributeNS(null, "stroke", "rgb(0, 212, 255)");
 	if (xmas) {
 		if (Math.random() < 0.5)
@@ -49,21 +65,21 @@ function connectStars(elem, star, other) {
 	other.connections.push(star);
 }
 
-function generateTerritory(elem, w, h, stars, alera) {
-	var region = [];
-	var edges = [];
+function generateTerritory(elem:HTMLElement, w:number, h:number, stars:star[], alera:star) {
+	let region:star[] = [];
+	let edges:star[] = [];
 
 	region.push(alera);
 	alera.borderDistance = -1;
 	var n = getRandomBetween(4, 9);
 	for (var i = 0; i < n; i++) {
 		//console.log(i+"/"+n+": ");
-		var next = [];
+		let next:star[] = [];
 		for (var k = 0; k < region.length; k++) {
-			var star = region[k];
+			let star = region[k];
 			if (typeof star.connections !== 'undefined' && star.connections.length > 0) {
 				for (var a = 0; a < star.connections.length; a++) {
-					var other = star.connections[a];
+					let other = star.connections[a];
 					if (!region.includes(other) && !next.includes(other)) {
 						next.push(other);
 					}
@@ -86,7 +102,7 @@ function generateTerritory(elem, w, h, stars, alera) {
 			for (var k = 0; k < star.connections.length; k++) {
 				var other = star.connections[k];
 				if (!region.includes(other)) {
-					var entry = {x:(star.x+other.x+STAR_SIZE)/2, y:(star.y+other.y+STAR_SIZE)/2}
+					let entry = {x:(star.x+other.x+STAR_SIZE)/2, y:(star.y+other.y+STAR_SIZE)/2} as star;
 					entry.angle = Math.atan2(entry.y-STAR_SIZE/2-alera.y, entry.x-STAR_SIZE/2-alera.x);
 					edges.push(entry);
 					star.isAleranBorder = true;
@@ -123,7 +139,7 @@ function generateTerritory(elem, w, h, stars, alera) {
 }
 
 //Credit to https://jsfiddle.net/prafuitu/8m2n5qg6/
-function computeControlPoints(K)
+function computeControlPoints(K:number[])
 {
 	if (K.length == 2) {
   	return {
@@ -132,15 +148,15 @@ function computeControlPoints(K)
     };
   }
 
-	p1=new Array();
-	p2=new Array();
-	n = K.length-1;
+	let p1=new Array();
+	let p2=new Array();
+	let n = K.length-1;
 	
 	/*rhs vector*/
-	a=new Array();
-	b=new Array();
-	c=new Array();
-	r=new Array();
+	let a=new Array();
+	let b=new Array();
+	let c=new Array();
+	let r=new Array();
 	
 	/*left most segment*/
 	a[0]=0;
@@ -149,7 +165,7 @@ function computeControlPoints(K)
 	r[0] = K[0]+2*K[1];
 	
 	/*internal segments*/
-	for (i = 1; i < n - 1; i++)
+	for (var i = 1; i < n - 1; i++)
 	{
 		a[i]=1;
 		b[i]=4;
@@ -164,9 +180,9 @@ function computeControlPoints(K)
 	r[n-1] = 8*K[n-1]+K[n];
 	
 	/*solves Ax=b with the Thomas algorithm (from Wikipedia)*/
-	for (i = 1; i < n; i++)
+	for (var i = 1; i < n; i++)
 	{
-		m = a[i]/b[i-1];
+		var m = a[i]/b[i-1];
 		b[i] = b[i] - m * c[i - 1];
 		r[i] = r[i] - m*r[i-1];
 	}
@@ -176,7 +192,7 @@ function computeControlPoints(K)
 		p1[i] = (r[i] - c[i] * p1[i+1]) / b[i];
 		
 	/*we have p1, now compute p2*/
-	for (i=0;i<n-1;i++)
+	for (var i=0;i<n-1;i++)
 		p2[i]=2*K[i+1]-p1[i+1];
 	
 	p2[n-1]=0.5*(K[n]+p1[n-1]);
@@ -184,7 +200,7 @@ function computeControlPoints(K)
 	return {p1:p1, p2:p2};
 }
 
-function drawSpline(svg, data) {
+function drawSpline(svg:HTMLElement, data:string) {
 	var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
   path.setAttributeNS(null, 'stroke', "#785FB6");
   path.setAttributeNS(null, 'stroke-width', "5");
@@ -199,14 +215,14 @@ function setPageBackground() {
 	if (isPhone)
 		return;
 	
-	var tail = '</svg>';
+		let tail = '</svg>';
 	
 	//var height = findHighestNode(0, document.documentElement.childNodes);
-	var body = document.body;
-    var html = document.documentElement;
-	var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)-64;
+	let body = document.body;
+    let html = document.documentElement;
+	let height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)-64;
 	
-	var titleImg = document.getElementsByClassName("title-image")[0];
+	let titleImg = document.getElementsByClassName("title-image")[0] as HTMLImageElement;
 	if (titleImg == null || titleImg.src == null || titleImg.src == "" || titleImg.src == window.location.href) {
 		height += 72;
 	}
@@ -216,17 +232,17 @@ function setPageBackground() {
 	
 	//console.log("Total height is "+height+", document content is: "+document.documentElement.innerHTML);
   
-	var rh = Math.max(height, window.innerHeight, document.body.clientHeight);
-	var rw = Math.max(window.innerWidth, document.body.clientWidth);
+	let rh = Math.max(height, window.innerHeight, document.body.clientHeight);
+	let rw = Math.max(window.innerWidth, document.body.clientWidth);
 
 //console.log(rw+" x "+rh);
 	
 	console.log("Generating stellaris galaxy map background");
 	
-	var xmlns = "http://www.w3.org/2000/svg";
-	var elem = document.createElementNS(xmlns, "svg");
-	elem.setAttributeNS(null, "width", rw);
-    elem.setAttributeNS(null, "height", rh);
+	let xmlns = "http://www.w3.org/2000/svg";
+	let elem = document.createElementNS(xmlns, "svg") as HTMLElement;
+	elem.setAttributeNS(null, "width", rw.toString());
+    elem.setAttributeNS(null, "height", rh.toString());
 		
 	for (var i = 0; i < rw; i += STARFIELD_SIZE) {
 		for (var k = 0; k < rh; k += STARFIELD_SIZE) {
@@ -234,13 +250,13 @@ function setPageBackground() {
 		}
 	}
 	
-	var dStar = STAR_SIZE*3;
-	var dd = STAR_SIZE*1.35;
+	let dStar = STAR_SIZE*3;
+	let dd = STAR_SIZE*1.35;
 	
-	var cols = Math.ceil(rw/dStar);
-	var rows = Math.ceil(rh/dStar);
+	let cols = Math.ceil(rw/dStar);
+	let rows = Math.ceil(rh/dStar);
 	
-	var stars = new Array(cols*rows);
+	let stars = new Array(cols*rows);
 	
 	for (var i = 0; i < cols; i++) {
 		for (var k = 0; k < rows; k++) {
@@ -265,7 +281,7 @@ function setPageBackground() {
 		}
 	}
 	
-	var alera = stars[getArrayIndex(cols, getRandomBetween(4, cols-4), getRandomBetween(4, rows-4))];
+	let alera = stars[getArrayIndex(cols, getRandomBetween(4, cols-4), getRandomBetween(4, rows-4))];
 	
 	for (var i = 0; i < stars.length; i++) {
 		var star = stars[i];		
@@ -332,8 +348,8 @@ function setPageBackground() {
 		addImage(elem, star.image, star.x, star.y, STAR_SIZE, STAR_SIZE, true);
 	}
 	
-	var tag = "background-content";
-	var container = document.getElementById(tag);
+	let tag = "background-content";
+	let container = document.getElementById(tag);
 	if (container == null) {
 		container = document.createElement("div")
 		container.id = tag;

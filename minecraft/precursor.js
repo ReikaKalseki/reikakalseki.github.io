@@ -1,12 +1,14 @@
-function populateObfBlocks() {		
+import { getRandomBetween, getOrCreateImgPath} from '../library'
+
+function populateObfBlocks() {
 				var divs = document.getElementsByClassName('obfuscated-text-container');
 				for (var i = 0; i < divs.length; i++) {
-					var div = divs[i];
-					var min = parseInt(div.dataset.minlength);
-					var max = parseInt(div.dataset.maxlength);
-					var amt = getRandomBetween(min, max);
+					let div = divs[i] as HTMLDivElement;
+					let min = parseInt(div.dataset.minlength as string);
+					let max = parseInt(div.dataset.maxlength as string);
+					let amt = getRandomBetween(min, max);
 					console.log("Generating "+amt+"/"+min+"-"+max+" precursor chars to fill div #"+i);
-					var n = 0;
+					let n = 0;
 					for (var k = 0; k < amt; k++) {
 						var num = getRandomBetween(0, 63);
 						 addChar(div, num);
@@ -19,10 +21,10 @@ function populateObfBlocks() {
 				}
 			}
 			
-			function addChar(div, num) {
-				var img = document.createElement("img");  
+			function addChar(div:HTMLDivElement, num:number) {
+				let img = document.createElement("img") as HTMLImageElement;  
 						img.className = "precursor-char";
-						var name = "lorescript_"+num;
+						let name = "lorescript_"+num;
 						img.src = getOrCreateImgPath(name, "precursor");
 						div.appendChild(img);
 			}

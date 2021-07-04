@@ -9,13 +9,9 @@
 		<link rel="stylesheet" type="text/css" href="../../minecraft/local-style.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Lato|Exo 2|Ubuntu|Cairo">
-		<script src = "../../browser.js"></script>
-		<script src = "../../library.js"></script>
-		<script id = "footer-space-script" src = "../../footer-spacing.js"></script>
-		<!--<script src = "../../jquery.js"></script>-->
-			<script src = "../../minecraft/precursor.js"></script>
-<script id = "background-script" src = "../../minecraft/backgroundgen.js"></script>    </head>
-    <body >
+		<script src = "../../compiledJS/entrypoint.bundle.js"></script>
+    </head>
+    <body  data-game="minecraft">
         	<div id = "navbar" class="navbar">
 	  <a class="navbar-button" href="../../index.html">Reika's Mods Home</a>
 	  <a class="navbar-button" href="../../minecraft/index.html">Minecraft Home</a>
@@ -96,7 +92,18 @@
 <table class="toc_list">
 	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><span><i class="fas fa-angle-double-up"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-overview">Overview</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-overview'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-configuration">Configuration</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-configuration'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-controlparameters">Control Parameters</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-controlparameters'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-description">Description</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-description'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-sampleprototype">Sample Prototype</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sampleprototype'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-propertylist">Property List</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-propertylist'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-propertydetails">Property Details</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-propertydetails'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-sprinklemix">Sprinkle Mix</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sprinklemix'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-heightpattern">Height Pattern</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-heightpattern'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-spawnrules">Spawn Rules</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-spawnrules'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-combinations">Combinations</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-combinations'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-proximityrule">Proximity Rule</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-proximityrule'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-modsettings">Configuration Settings</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-modsettings'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 </table>
@@ -120,64 +127,280 @@
 					<br><br>
 					
 					
-					It automatically generates a folder in the config folder, and any files ending in .lua, .txt, .ini, .cfg, or .yml (all formatted like the above) will be read and parsed into ore prototypes. Much like with Minetweaker, they can be reloaded at will with the command <code>/reloadoreconfig</code>.
-					
-					
-					<br><br>
-					
-					
-					The mod contains a sample file in the jar ("example.lua") to show the general format and various parameters that can be customized.
-					
-					
-					<br><br>
-					
-					
-					See the <a href="../../minecraft\pages\info\luablock.html">LuaBlock documentation</a> for more details.
-					
-					
-					<br><br>
-					
-					
 					Note that CondensedOres does <i>not</i> automatically disable most mods from generating their ore; you will need to disable that in their respective configs first. My mods, lacking such configs, can communicate with CondensedOres.
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-configuration">
+				<h3>Configuration</h3>
+					
+					Though there are some global config options using the normal mod config system, CondensedOres primarily uses the <a href="../../minecraft\pages\info\luablock.html">LuaBlock system</a> used for many of my mods where more complex configuration is required. A group of these parameters is here called a "prototype", defining a value for each controllable parameter. There is a 'base' prototype which does not map to any spawned ore type but which all user-defined prototypes inherit from, allowing for simple specification of default properties. You can then define your own prototypes to create actual spawning groups.
+					
+					
+					<br><br>
+					
+					
+					To define rule sets, or edit the global one, see the files in the <code>Reika/CondensedOres_Files</code> folder in the standard config folder. Add new files here to define your prototypes, and edit <code>base.lua</code> if you wish to change the base values. Any files ending in .lua, .txt, .ini, .cfg, or .yml (all formatted like the above) will be read and parsed into ore prototypes. The mod also contains a sample file in the jar ("example.lua") to show the general format and various parameters - with detailed explanation - that can be customized as they might appear in a real file, along with many more example values than can be shown here.
+					
+					
+					<br><br>
+					
+					
+					Much like with Minetweaker, prototypes can be reloaded at will with the command <code>/reloadoreconfig</code>.
 					
 			</section><br>
 			<section class = "textblock" id = "text-block-controlparameters">
 				<h3>Control Parameters</h3>
-					
-					Ore "prototypes" can specify many values to control how and when the ore generates, including but not limited to:<ul>
-					
-					
-					<li>Chance per chunk, and veins per chunk</li>
+					<section class = "textblock" id = "text-block-description">
+					<h4>Prototype Description</h4>
 					
 					
-					<li>Min and max Y levels, and the interpolation curve between them</li>
+					Each property on the prototype defines some corresponding property on the ore generation entry you wish to create ingame, such as the height limit, what blocks can be spawned in, or the generation chance per chunk. Some properties - such as the height or biome restrictions - are mapped not to single values but groups of values; these can often be partially specified, with "missing" parameters again inherited from base.
 					
 					
-					<li>Biome spawn rules</li>
+					<br><br>
 					
 					
-					<li>Dimension spawn rules</li>
+					Some properties are not inheritable, including the block list - which is naturally going to change with each ore type anyway - as well as the actual value of things like the biome ID in a biome restriction.
 					
 					
-					<li>Which blocks to generate for the ore, and whether to mix types in a single vein</li>
-					
-					
-					<li>Which blocks can be generated into</li>
-					
-					
-					<li>Block adjacency rules</li></ul>
+					<br><br>
 					</section>
+					<section class = "textblock" id = "text-block-sampleprototype">
+					<h4>Sample Prototype</h4>
+					
+					
+					A sample prototype may look like this:
+					
+					
+					<div class = "code-block">
+					
+					
+					{<br>
+					
+					
+					<div class = "code-indent"></div>type = "base"<br>
+					
+					
+					<div class = "code-indent"></div>sprinkleMix = true<br>
+					
+					
+					<div class = "code-indent"></div>veinSize = 6<br>
+					
+					
+					<div class = "code-indent"></div>blocks = {<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>"somemodore:2"<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>"othermodore"<br>
+					
+					
+					<div class = "code-indent"></div>}<br>
+					
+					
+					<div class = "code-indent"></div>heightRule = {<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>maxHeight = 48<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>minHeight = 16<br>
+					
+					
+					<div class = "code-indent"></div>}<br>
+					
+					
+					<div class = "code-indent"></div>veinFrequency = {<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>chunkGenChance = 1<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>veinsPerChunk = 3<br>
+					
+					
+					<div class = "code-indent"></div>}<br>
+					
+					
+					}<br>
+					
+					
+					</div><br>
+					
+					
+					This prototype will inherit some values - such as the empty biome restrictions or the vanilla stone spawn block - from the base, while overriding the specified values, such as changing the spawning Y range from 0-64 to 16-48.
+					
+					
+					<br><br>
+					</section>
+					<section class = "textblock" id = "text-block-propertylist">
+					<h4>Property List</h4>
+					
+					
+					This is the full set of properties you can configure; the defaults listed are the defaults the global ruleset generates with in a new mod installation, and are the values used in vanilla (or simply 1.0 for multipliers).<br>
+					
+					
+					<table class = "luablock-docs">
+<tr><th style = "width: 20%">Definition Key</th><th style = "width: 65%">Description</th><th style = "width: 15%">Default Value</th></tr>
+	<tr class = "luablock-setting"><td>sortOrder</td><td>Entry sorting order</td><td>0</td></tr>
+	<tr class = "luablock-setting"><td>retrogen</td><td>Enable retrogen</td><td>false</td></tr>
+	<tr class = "luablock-setting"><td>sprinkleMix</td><td>Enable sprinkle mixing</td><td>false</td></tr>
+	<tr class = "luablock-setting"><td>veinSize</td><td>Vein axial length (not block count)</td><td>10</td></tr>
+	<tr class = "luablock-setting"><td>blocks</td><td>Ore block list</td><td></td></tr>
+	<tr class = "luablock-setting"><td>heightRule</td><td>Y-level spawning pattern</td><td></td></tr>
+		<tr class = "luablock-subsetting"><td style = "text-align: right;">maxHeight</td><td>Maximum Y level</td><td>64</td></tr>
+		<tr class = "luablock-subsetting"><td style = "text-align: right;">minHeight</td><td>Minimum Y level</td><td>0</td></tr>
+		<tr class = "luablock-subsetting"><td style = "text-align: right;">variation</td><td>Height distribution pattern</td><td>"linear"</td></tr>
+	<tr class = "luablock-setting"><td>veinFrequency</td><td>Spawn frequency rules</td><td></td></tr>
+		<tr class = "luablock-subsetting"><td style = "text-align: right;">chunkGenChance</td><td>Chance (out of 1) to attempt generation per chunk</td><td>1.0</td></tr>
+		<tr class = "luablock-subsetting"><td style = "text-align: right;">veinsPerChunk</td><td>Number of generation attempts per chunk if the above test suceeds</td><td>8</td></tr>
+	<tr class = "luablock-setting"><td>spawnBlock</td><td>Blocks to spawn in (list)</td><td></td></tr>
+	<tr class = "luablock-setting"><td>biomeRules</td><td>Biome restrictions</td><td></td></tr>
+		<tr class = "luablock-subsetting"><td style = "text-align: right;">combination</td><td>Rule combination</td><td>"or"</td></tr>
+	<tr class = "luablock-setting"><td>dimensionRules</td><td>Dimension restrictions</td><td></td></tr>
+		<tr class = "luablock-subsetting"><td style = "text-align: right;">combination</td><td>Rule combination</td><td>"or"</td></tr>
+	<tr class = "luablock-setting"><td>proximityRules</td><td>Adjacent block requirements</td><td></td></tr>
+		<tr class = "luablock-subsetting"><td style = "text-align: right;">strict</td><td>Require strict proximity</td><td>false</td></tr>
+</table>
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-propertydetails">
+				<h3>Property Details</h3>
+					<section class = "textblock" id = "text-block-sprinklemix">
+					<h4>Sprinkle Mix</h4>
+					
+					
+					By default, if you define multiple blocks for an ore prototype, each vein will be assigned one at random, and that block will be used to generate the entire vein. Sprinkle mix overrides this behavior, choosing blocks randomly on a per-block basis, causing the vein to consist of a random mix of all its block types. This will negate things like veinminer, and may result in markedly increased inventory load.
+					
+					
+					<br><br>
+					</section>
+					<section class = "textblock" id = "text-block-heightpattern">
+					<h4>Height Pattern</h4>
+					
+					
+					The default height pattern, and that which is used in vanilla and almost all mods is "linear", which may be better termed "flat", where each Y level in the valid range is equally likely to be chosen when performing generation. Alternative options include "normal", for a normal distribution, and "pyramid", for a triangular distribution. Both of these options will make the middle value the most common, with an ore type increasingly less likely to appear at the extremes of its spawning range.
+					
+					
+					<br><br>
+					</section>
+					<section class = "textblock" id = "text-block-spawnrules">
+					<h4>Biome And Dimension Rules</h4>
+					
+					
+					Biome rules can be specified in multiple ways, using the biome name, ID, or a Forge BiomeDictionary tag. For single-biome rules, define <i>either</i> an ID specification with <code>biomeID</code>, or a name with <code>biomeName</code>. The <code>type</code> property - not to be confused with the same-name property on the overall prototype - defines what the rule is, ie whether it is a requirement (<code>include</code>), exclusion (<code>exclude</code>), or Forge biome dictionary require/exclude (<code>dictionary-require</code> and <code>dictionary-exclude</code> respectively).
+					
+					
+					<br><br>
+					
+					
+					The following is a sample biome rule, which will only be able to spawn in Forge-tagged forest-type biomes, with the specific exclusion of Rainbow Forest:
+					
+					
+					<div class = "code-block">
+					
+					
+					<div class = "code-indent"></div>biomeRules = {<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>combination = "and"<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>{<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>type = "dictionary-require"<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>name = "forest"<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>}<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>{<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>type = "exclude"<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>biomeName = "Rainbow Forest"<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>}<br>
+					
+					
+					<div class = "code-indent"></div>}<br>
+					
+					
+					</div><br>
+					
+					
+					Dimension rules work similarly, but have only two types - whitelist and blacklist - and the only useful value is a numeric <code>dimensionID</code> property.
+					
+					
+					<br><br>
+					</section>
+					<section class = "textblock" id = "text-block-combinations">
+					<h4>Restriction Combination</h4>
+					
+					
+					For biome and dimension restrictions, you can define multiple criteria, and as such you will also need to define whether these criteria are meant to be used in an "AND" or an "OR" combination, ie whether spawning requires that <i>all</i> or <i>any</i> be satisfied.
+					
+					
+					<br><br>
+					</section>
+					<section class = "textblock" id = "text-block-proximityrule">
+					<h4>Proximity Rule</h4>
+					
+					
+					Proximity rules define a block that an ore type must be adjacent to, for example an ore that can only spawn near lava (as RailCraft sulfur does). "Strict" mode forces <i>every</i> ore block to be near the required block type, which can markedly reduce the amount of that ore which actually generates; non-strict mode simply requires that the vein touch the required block type at some point.
+					</section>
+			</section>
+<br>
+			<section class = "textblock" id = "text-block-modsettings">
+			<div class = "modsettings">
+				<h3>Configuration Settings</h3>
+				This mod contains several config options to modify values and behaviors - such as for balance or server safety concerns, or simply personal taste - to your preferences. Note that several settings may have bounds imposed on their values, either logically or explicitly; these can usually be seen in the actual settings files or ingame. These are listed in order found in the source code, which is generally the order in which they were added; They may be present in a different order ingame or in the configuration files.
+				<br>
+				<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Global Frequency Multiplier</h4>
+Type: float<br>
+			Current Default Value:<div class = "code-block">1F</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Global Size Multiplier</h4>
+Type: float<br>
+			Current Default Value:<div class = "code-block">1F</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Prevent Vanilla Ore Generation</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+
+			</div>
 			</section>
 <br>
 			<section class = "textblock" id = "text-block-sourcecode">
 			<div class = "modsource">
-				<h3>Source Code</h3>				The source code for CondensedOres can be found here:<button type="button" class = "srcbtn" onclick="location.href='https://github.com/ReikaKalseki/CondensedOres'"><span>GitHub<div class = "spacer"></div><i class="fab fa-github"></i></span></button>
+				<h3>Source Code</h3>				The source code for CondensedOres can be found here:<button type="button" class = "srcbtn" onclick="window.open('https://github.com/ReikaKalseki/CondensedOres', '_blank'); return false;"><span>GitHub<div class = "spacer"></div><i class="fab fa-github"></i></span></button>
 			</div>
 			</section>
 <br>
 <section class = "textblock" id = "text-block-downloads">
 	<h3>Downloads</h3>
-<button type="button" class = "dlbtn" onclick="location.href='https://www.curseforge.com/minecraft/mc-mods/condensedores'"><span>CurseForge<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
+<button type="button" class = "dlbtn" onclick="window.open('https://www.curseforge.com/minecraft/mc-mods/condensedores', '_blank'); return false;"><span>CurseForge<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
 </section>
 			<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
 		<hr>
