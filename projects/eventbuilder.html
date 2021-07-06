@@ -10,6 +10,9 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Lato|Exo 2|Ubuntu|Cairo">
 		<script src = "../compiledJS/entrypoint.bundle.js"></script>
+		<div id = "script-list">
+			footer-spacing
+		</div>
     </head>
     <body class = "other-project-body" >
         	<div id = "navbar" class="navbar"> <!-- navbar-narrow if you want to unroll games -->
@@ -55,19 +58,19 @@
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-overview">Overview</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-overview'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-interface">Interface</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-interface'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-titlebar">Title Bar</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-titlebar'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-control">Control</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-control'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-mods">Mods</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-mods'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-tools">Tools</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-tools'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-namespaces">Namespaces</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-namespaces'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-events">Events</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-events'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-help">Help</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-help'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-titlebar-autosub-control">Control</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-titlebar-autosub-control'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-titlebar-autosub-mods">Mods</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-titlebar-autosub-mods'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-titlebar-autosub-tools">Tools</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-titlebar-autosub-tools'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-titlebar-autosub-namespaces">Namespaces</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-titlebar-autosub-namespaces'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-titlebar-autosub-events">Events</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-titlebar-autosub-events'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-titlebar-autosub-help">Help</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-titlebar-autosub-help'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-datasections">Data Sections</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-datasections'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-basicproperties">Basic Properties</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-basicproperties'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-descriptions">Descriptions</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-descriptions'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-triggercondition">Trigger Condition</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-triggercondition'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-mtth">MTTH</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-mtth'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-immediateblock">Immediate Block</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-immediateblock'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-options">Options</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-options'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-datasections-autosub-basicproperties">Basic Properties</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-datasections-autosub-basicproperties'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-datasections-autosub-descriptions">Descriptions</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-datasections-autosub-descriptions'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-datasections-autosub-triggercondition">Trigger Condition</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-datasections-autosub-triggercondition'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-datasections-autosub-mtth">MTTH</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-datasections-autosub-mtth'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-datasections-autosub-immediateblock">Immediate Block</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-datasections-autosub-immediateblock'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-datasections-autosub-options">Options</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-datasections-autosub-options'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-settings">Settings</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-settings'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-codeeditor">Code Editor</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-codeeditor'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-implementation">Implementation</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-implementation'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
@@ -118,7 +121,7 @@
 					
 					The title bar is the root navigational element with which all other functions are accessed or at least made relevant.<br>
 					</section>
-					<section class = "textblock" id = "text-block-control">
+					<section class = "textblock" id = "text-block-titlebar-autosub-control">
 					<h4>Control</h4>
 					
 					
@@ -127,7 +130,7 @@
 					
 					<br><br>
 					</section>
-					<section class = "textblock" id = "text-block-mods">
+					<section class = "textblock" id = "text-block-titlebar-autosub-mods">
 					<h4>Mods</h4>
 					
 					
@@ -136,7 +139,7 @@
 					
 					<br><br>
 					</section>
-					<section class = "textblock" id = "text-block-tools">
+					<section class = "textblock" id = "text-block-titlebar-autosub-tools">
 					<h4>Tools</h4>
 					
 					
@@ -145,7 +148,7 @@
 					
 					<br><br>
 					</section>
-					<section class = "textblock" id = "text-block-namespaces">
+					<section class = "textblock" id = "text-block-titlebar-autosub-namespaces">
 					<h4>Namespaces</h4>
 					
 					
@@ -154,7 +157,7 @@
 					
 					<br><br>
 					</section>
-					<section class = "textblock" id = "text-block-events">
+					<section class = "textblock" id = "text-block-titlebar-autosub-events">
 					<h4>Events</h4>
 					
 					
@@ -163,7 +166,7 @@
 					
 					<br><br>
 					</section>
-					<section class = "textblock" id = "text-block-help">
+					<section class = "textblock" id = "text-block-titlebar-autosub-help">
 					<h4>Help</h4>
 					
 					
@@ -172,7 +175,7 @@
 			</section><br>
 			<section class = "textblock" id = "text-block-datasections">
 				<h3>Data Sections</h3>
-					<section class = "textblock" id = "text-block-basicproperties">
+					<section class = "textblock" id = "text-block-datasections-autosub-basicproperties">
 					<h4>Basic Properties</h4>
 					
 					
@@ -181,7 +184,7 @@
 					
 					<br><br>
 					</section>
-					<section class = "textblock" id = "text-block-descriptions">
+					<section class = "textblock" id = "text-block-datasections-autosub-descriptions">
 					<h4>Descriptions</h4>
 					
 					
@@ -195,7 +198,7 @@
 					
 					<br><br>
 					</section>
-					<section class = "textblock" id = "text-block-triggercondition">
+					<section class = "textblock" id = "text-block-datasections-autosub-triggercondition">
 					<h4>Trigger Condition</h4>
 					
 					
@@ -209,7 +212,7 @@
 					
 					<br><br>
 					</section>
-					<section class = "textblock" id = "text-block-mtth">
+					<section class = "textblock" id = "text-block-datasections-autosub-mtth">
 					<h4>Mean Time To Happen<div class = "tooltip"><img class = 'tooltipicon' src = '../images/info.png'><span class='tooltiptext'>Incomplete</span></div></h4>
 					
 					
@@ -223,7 +226,7 @@
 					
 					<br><br>
 					</section>
-					<section class = "textblock" id = "text-block-immediateblock">
+					<section class = "textblock" id = "text-block-datasections-autosub-immediateblock">
 					<h4>Immediate Block</h4>
 					
 					
@@ -237,7 +240,7 @@
 					
 					<br><br>
 					</section>
-					<section class = "textblock" id = "text-block-options">
+					<section class = "textblock" id = "text-block-datasections-autosub-options">
 					<h4>Options<div class = "tooltip"><img class = 'tooltipicon' src = '../images/info.png'><span class='tooltiptext'>Incomplete</span></div></h4>
 					
 					

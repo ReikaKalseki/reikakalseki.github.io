@@ -10,6 +10,10 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Lato|Exo 2|Ubuntu|Cairo">
 		<script src = "../../compiledJS/entrypoint.bundle.js"></script>
+		<div id = "script-list">
+			footer-spacing
+				,minecraft/precursor
+		</div>
     </head>
     <body  data-game="minecraft">
         	<div id = "navbar" class="navbar">
@@ -93,12 +97,18 @@
 	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><span><i class="fas fa-angle-double-up"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-overview">Overview</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-overview'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-theworld">The World</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-theworld'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-pylons">Pylons</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-pylons'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-buriedstructures">Buried Structures</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-buriedstructures'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-cavecrystals">Cave Crystals</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-cavecrystals'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-forests">Forests</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-forests'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-luminouscliffs">Luminous Cliffs</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-luminouscliffs'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-theworld-autosub-pylons">Pylons</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-theworld-autosub-pylons'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-theworld-autosub-buriedstructures">Buried Structures</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-theworld-autosub-buriedstructures'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-theworld-autosub-cavecrystals">Cave Crystals</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-theworld-autosub-cavecrystals'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-theworld-autosub-forests">Forests</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-theworld-autosub-forests'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-theworld-autosub-luminouscliffs">Luminous Cliffs</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-theworld-autosub-luminouscliffs'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-constructs">Constructs</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-constructs'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-progression">Progression</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-progression'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-modinterations">Mod Interations</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-modinterations'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-api">API</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-api'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-api-autosub-background">Background</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-api-autosub-background'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-api-autosub-installation">Installation</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-api-autosub-installation'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-customrecipes">Custom Recipes</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-customrecipes'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-modsettings">Configuration Settings</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-modsettings'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
@@ -137,7 +147,7 @@
 			</section><br>
 			<section class = "textblock" id = "text-block-theworld">
 				<h3>The World</h3>
-					<section class = "textblock" id = "text-block-pylons">
+					<section class = "textblock" id = "text-block-theworld-autosub-pylons">
 					<h4>Pylons</h4>
 					
 					
@@ -148,7 +158,7 @@
 	<a href = "../../imagedownloads/i-imgur-com_2FfAAPkjK.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FfAAPkjK.png" style="max-width:75%;" ></a>	<div class = "image-caption">A Crystal Pylon.</div>
 </div><br>
 					</section>
-					<section class = "textblock" id = "text-block-buriedstructures">
+					<section class = "textblock" id = "text-block-theworld-autosub-buriedstructures">
 					<h4>Buried Structures</h4>
 					
 					
@@ -159,7 +169,7 @@
 	<a href = "../../imagedownloads/i-imgur-com_2FXIymv90.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FXIymv90.png" style="max-width:75%;" ></a>	<div class = "image-caption">Something shines in the darkness.</div>
 </div><br>
 					</section>
-					<section class = "textblock" id = "text-block-cavecrystals">
+					<section class = "textblock" id = "text-block-theworld-autosub-cavecrystals">
 					<h4>Cave Crystals</h4>
 					
 					
@@ -170,7 +180,7 @@
 	<a href = "../../imagedownloads/i-imgur-com_2FwGFBzl3.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FwGFBzl3.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Some cave crystals and other blocks visible in a ravine.</div>
 </div><br>
 					</section>
-					<section class = "textblock" id = "text-block-forests">
+					<section class = "textblock" id = "text-block-theworld-autosub-forests">
 					<h4>Forests</h4>
 					
 					
@@ -181,7 +191,7 @@
 	<a href = "../../imagedownloads/i-imgur-com_2F0AYDuey.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2F0AYDuey.jpg" style="max-width:75%;" ></a>
 </div><br>
 					</section>
-					<section class = "textblock" id = "text-block-luminouscliffs">
+					<section class = "textblock" id = "text-block-theworld-autosub-luminouscliffs">
 					<h4>Luminous Cliffs</h4>
 					
 					
@@ -192,6 +202,27 @@
 	<a href = "../../imagedownloads/i-imgur-com_2FAz5nxoB.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FAz5nxoB.jpg" style="max-width:75%;" ></a>
 </div>
 					</section>
+			</section><br>
+			<section class = "textblock" id = "text-block-constructs">
+				<h3>Constructs</h3>
+					
+					There is a vast array of constructs in ChromatiCraft, designed to address many gameplay needs and solve many problems. Some are fairly standard and comparable to what you might find in a tech mod, while others are unique, and have purposes ranging from decoration to defence to transportation and more.<br>
+					
+					
+					<div class = "video">
+	<iframe class = "deembed-media" style = "max-width: 75%;" width="960" height="540" src="https://www.youtube.com/embed/LheYxD1294k" title="Orchestra" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div><br>
+					
+					
+					<div class = "video">
+	<iframe class = "deembed-media" style = "max-width: 75%;" width="960" height="540" src="https://www.youtube.com/embed/khKlNuZaNyw" title="Transgate" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div><br>
+					
+					
+					<div class = "video">
+	<iframe class = "deembed-media" style = "max-width: 75%;" width="960" height="540" src="https://www.youtube.com/embed/KJYG_UmbOws" title="Meteor tower" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+					
 			</section><br>
 			<section class = "textblock" id = "text-block-progression">
 				<h3>Progression</h3>
@@ -220,7 +251,17 @@
 					
 					
 					<div class = "block-image">
-	<a href = "../../imagedownloads/i-imgur-com_2FqRCxysd.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FqRCxysd.png" style="max-width:75%;" ></a>	<div class = "image-caption">Transporting energy.</div>
+	<a href = "../../imagedownloads/i-imgur-com_2FqRCxysd.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FqRCxysd.png" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2FgF44WVe.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FgF44WVe.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Transporting energy.</div>
+</div><br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2FspsjLl8.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FspsjLl8.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Late game constructs using energy.</div>
+</div><br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2FU2PXBUZ.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FU2PXBUZ.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Imbuing energy into yourself.</div>
 </div><br>
 					
 					
@@ -234,9 +275,79 @@
 					
 					
 					<div class = "block-image">
-	<a href = "../../imagedownloads/i-imgur-com_2F7FnlTab.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2F7FnlTab.jpg" style="max-width:75%;" ></a>	<div class = "image-caption"><div class = "obfuscated-text-container" data-minlength = "9" data-maxlength = "18"></div></div>
+	<a href = "../../imagedownloads/i-imgur-com_2F7FnlTab.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2F7FnlTab.jpg" style="max-width:75%;" ></a>	<video style = "max-width: 75%;" width="960" height="540" autoplay muted loop>
+  <source class = "deembed-media" src="../../imagedownloads/i-imgur-com_2Fdk9Yd1W.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>	<div class = "image-caption"><div class = "obfuscated-text-container" data-minlength = "9" data-maxlength = "18"></div></div>
+</div><br>
+					
+					
+					This of course also unlocks the most powerful set of abilities in the mod.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2FOhvg7K7.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FOhvg7K7.jpg" style="max-width:75%;" ></a>
+</div><br>
+					
+					
+					<div class = "video">
+	<iframe class = "deembed-media" style = "max-width: 75%;" width="960" height="540" src="https://www.youtube.com/embed/dNwEs0fti6E" title="sky ember" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div><br>
+					
+					
+					<div class = "video">
+	<iframe class = "deembed-media" style = "max-width: 75%;" width="960" height="540" src="https://www.youtube.com/embed/c0LZ2erDipo?t=74" title="op is fun" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-modinterations">
+				<h3>Mod Interations</h3>
+					
+					ChromatiCraft has a huge number of interactions with a great many mods; many of its blocks are designed to work with the features in other mods, or address challenges that often arise. Many more are designed to be able to leverage other mods' features to enhance their own functionality. Additionally, ChromatiCraft adds custom content into many mods, including custom Forestry bees, trees and butterflies and ThaumCraft aspects and recipes.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2F5utbteQ.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2F5utbteQ.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2F6I7s40F-jpeg.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2F6I7s40F-jpeg.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Some ThaumCraft integration.</div>
+</div><br>
+					
+					
+					<div class = "block-image">
+	<video style = "max-width: 75%;" width="960" height="540" autoplay muted loop>
+  <source class = "deembed-media" src="../../imagedownloads/i-imgur-com_2Fn6wLx9Q.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>	<a href = "../../imagedownloads/i-imgur-com_2FzBb6W8z.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FzBb6W8z.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Various other mod integration features.</div>
+</div><br>
+					
+					
+					<div class = "video">
+	<iframe class = "deembed-media" style = "max-width: 75%;" width="960" height="540" src="https://www.youtube.com/embed/ROOIhl7PzL4" title="Mana booster" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-api">
+				<h3>API</h3>
+					<section class = "textblock" id = "text-block-api-autosub-background">
+					<h4>Background</h4>
+					
+					
+					ChromatiCraft has an extensive API to allow for mod creators to interface with mod systems and to add custom content, including adding recipes and abilities, querying player progression, interacting with the adjacency cores, mineral extractor, and other constructs, and more. There are also a great many events with which you can be notified of various occurrences.
+					
+					
+					<br><br>
 					</section>
+					<section class = "textblock" id = "text-block-api-autosub-installation">
+					<h4>Installation And Use</h4>
+					
+					
+					The API can be found in the "API" package of the source code; just add that to your development environment as you see fit (it was designed with simply dropping it into the source folders in mind, but can also be loaded as a library). I take special care to avoid the API making hard references to any internal CC code, so you should have no issues integrating it. To avoid a hard dependency on the API, use standard Forge <code>@Optional</code> (or similar) methods to conditionally strip interfaces and either conditional calls (ie calling the API function via a method which is itself only invoked if CC is loaded, thus "compartmentalizing" your references to the API within a method that is never loaded if not necessary) or reflection to invoke library methods.
+					</section>
+			</section>
+<br>
+			<section class = "textblock" id = "text-block-customrecipes">
+				<h3>Adding Custom Recipes</h3>
+				ChromatiCraft can use the <a href="../../minecraft\pages\info\luablock.html">LuaBlock system</a> to add custom recipes to some or all of its production blocks (such as crafting tables, machines, et cetera). To do this, create a folder called <code>ChromatiCraft_CustomRecipes</code> in the <code>Reika</code> subfolder of your config directory. In that folder you can place LuaBlock files with the extension <code>.recipes_[system]</code>, where <code>[system]</code> is the internal name of the machine, recipe system, or the like. The exact format and parameters required depends entirely on the nature of the recipes you are adding, and what properties and features they normally have. To see example files, as well as a list of all available recipe systems for ChromatiCraft, see <a href="https://github.com/ReikaKalseki/ChromatiCraft/tree/master/CustomRecipeExamples">this folder</a> on the GitHub repository.
+				<br><br>
+				It is <b>strongly</b> advised that you be familiar with both the specific recipe system you want to add to, as well as the mod as a whole, before attempting to add new recipes. Not only is a working understanding of the relevant parts of the mod necessary to make additions make sense from a game design standpoint, but the large number of properties ChromatiCraft recipes have invites many opportunities to define properties with meaningless or invalid values, such as item counts exceeding stack limits, temperatures out of bounds, or items that do not exist. Though the recipe parsers apply many sanity checks, those cannot be fully comprehensive, and it is entirely possible to still define recipes that are syntactically but not semantically valid. These recipes, when attempted to be used, are likely to create undesired effects ingame, including failure to operate, exploits, or even crashes.
 			</section>
 <br>
 			<section class = "textblock" id = "text-block-modsettings">

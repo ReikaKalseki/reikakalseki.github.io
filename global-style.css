@@ -122,7 +122,8 @@ display: inline-block;
 	width: auto;
 	width: 14%;
 	right: 84.4%;
-	font-size: 105%;
+	/*font-size: 105%;*/
+	font-size: 0.83vw;
 	position:fixed;
 	margin: auto;
 	display:block;
@@ -1009,6 +1010,10 @@ tr:nth-child(even) {
 	padding-top: 0.27129679869777534rem;
 	padding-bottom: 0.3391209983722192rem;
 	min-height: 36.62506782419967rem;
+}
+
+#script-list {
+	display:none;
 }
 
 svg {

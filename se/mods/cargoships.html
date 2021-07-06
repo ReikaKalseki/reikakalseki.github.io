@@ -10,6 +10,9 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Lato|Exo 2|Ubuntu|Cairo">
 		<script src = "../../compiledJS/entrypoint.bundle.js"></script>
+		<div id = "script-list">
+			footer-spacing
+		</div>
     </head>
     <body  data-game="se">
         	<div id = "navbar" class="navbar">
@@ -80,13 +83,13 @@
 	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><span><i class="fas fa-angle-double-up"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-general">General</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-general'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-ships">Ships</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-ships'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-constructionbreaker">Construction Breaker</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-constructionbreaker'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-personalracer">Personal Racer</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-personalracer'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-hydrogentanker">Hydrogen Tanker</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-hydrogentanker'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-miningcarrier">Mining Carrier</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-miningcarrier'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-luxuryliner">Luxury Liner</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-luxuryliner'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-torpedo">Torpedo</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-torpedo'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-militarycarrier">Military Carrier</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-militarycarrier'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-ships-autosub-constructionbreaker">Construction Breaker</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-ships-autosub-constructionbreaker'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-ships-autosub-personalracer">Personal Racer</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-ships-autosub-personalracer'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-ships-autosub-hydrogentanker">Hydrogen Tanker</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-ships-autosub-hydrogentanker'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-ships-autosub-miningcarrier">Mining Carrier</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-ships-autosub-miningcarrier'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-ships-autosub-luxuryliner">Luxury Liner</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-ships-autosub-luxuryliner'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-ships-autosub-torpedo">Torpedo</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-ships-autosub-torpedo'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-ships-autosub-militarycarrier">Military Carrier</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-ships-autosub-militarycarrier'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 </table>
@@ -115,7 +118,7 @@
 			</section><br>
 			<section class = "textblock" id = "text-block-ships">
 				<h3>Ships</h3>
-					<section class = "textblock" id = "text-block-constructionbreaker">
+					<section class = "textblock" id = "text-block-ships-autosub-constructionbreaker">
 					<h4>Construction Breaker</h4>
 					
 					
@@ -126,7 +129,7 @@
 	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785435516_2F945E6522918DA8CA2EBBA08AD63102119E6BD116_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785435516_2F945E6522918DA8CA2EBBA08AD63102119E6BD116_2F.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785435347_2F3DBB6EE9F56DC32B402DC7087B5378D09E9C4228_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785435347_2F3DBB6EE9F56DC32B402DC7087B5378D09E9C4228_2F.jpg" style="max-width:75%;" ></a>
 </div><br>
 					</section>
-					<section class = "textblock" id = "text-block-personalracer">
+					<section class = "textblock" id = "text-block-ships-autosub-personalracer">
 					<h4>Personal Racer</h4>
 					
 					
@@ -137,7 +140,7 @@
 	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785436775_2F2BED673CCBCE1FF11BFB3C166115AB3D5F990F4D_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785436775_2F2BED673CCBCE1FF11BFB3C166115AB3D5F990F4D_2F.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785436988_2FF6C6FEF4BB3314B34D2BA904C6DA63E12E3D9F12_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785436988_2FF6C6FEF4BB3314B34D2BA904C6DA63E12E3D9F12_2F.jpg" style="max-width:75%;" ></a>
 </div><br>
 					</section>
-					<section class = "textblock" id = "text-block-hydrogentanker">
+					<section class = "textblock" id = "text-block-ships-autosub-hydrogentanker">
 					<h4>Hydrogen Tanker</h4>
 					
 					
@@ -148,7 +151,7 @@
 	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785436109_2F8242367CBCF63D6984B2393C927A85D5B7F927B7_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785436109_2F8242367CBCF63D6984B2393C927A85D5B7F927B7_2F.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785436369_2F1B9144CF0E4423212B3080F75A696818BB895800_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785436369_2F1B9144CF0E4423212B3080F75A696818BB895800_2F.jpg" style="max-width:75%;" ></a>
 </div><br>
 					</section>
-					<section class = "textblock" id = "text-block-miningcarrier">
+					<section class = "textblock" id = "text-block-ships-autosub-miningcarrier">
 					<h4>Mining Carrier</h4>
 					
 					
@@ -159,7 +162,7 @@
 	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785435701_2FBF537E535A25A69F7FDB03412BF1CFF39BA2C0E6_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785435701_2FBF537E535A25A69F7FDB03412BF1CFF39BA2C0E6_2F.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785435891_2FEA24C7D47CBE677C96B31697168B47951398094C_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785435891_2FEA24C7D47CBE677C96B31697168B47951398094C_2F.jpg" style="max-width:75%;" ></a>
 </div><br>
 					</section>
-					<section class = "textblock" id = "text-block-luxuryliner">
+					<section class = "textblock" id = "text-block-ships-autosub-luxuryliner">
 					<h4>Luxury Liner</h4>
 					
 					
@@ -170,7 +173,7 @@
 	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785437329_2F7AFDF83B9FA26C80A4B7C49CA732E96049DB8BA7_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785437329_2F7AFDF83B9FA26C80A4B7C49CA732E96049DB8BA7_2F.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785437465_2FE1289BFC7AB3E88D51096A0C5AA1EF48F4CACD08_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785437465_2FE1289BFC7AB3E88D51096A0C5AA1EF48F4CACD08_2F.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785437642_2F7B5953277FAAF28AD920531F5248C3A9472F0152_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785437642_2F7B5953277FAAF28AD920531F5248C3A9472F0152_2F.jpg" style="max-width:75%;" ></a>
 </div><br>
 					</section>
-					<section class = "textblock" id = "text-block-torpedo">
+					<section class = "textblock" id = "text-block-ships-autosub-torpedo">
 					<h4>Torpedo</h4>
 					
 					
@@ -181,7 +184,7 @@
 	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785437179_2FC599FB351D03223F726FF7E716219E729DEC05AB_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F838142710785437179_2FC599FB351D03223F726FF7E716219E729DEC05AB_2F.jpg" style="max-width:75%;" ></a>
 </div><br>
 					</section>
-					<section class = "textblock" id = "text-block-militarycarrier">
+					<section class = "textblock" id = "text-block-ships-autosub-militarycarrier">
 					<h4>Military Carrier</h4>
 					
 					
