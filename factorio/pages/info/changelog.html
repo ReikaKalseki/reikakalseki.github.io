@@ -1,19 +1,16 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
     <head>
         <link rel="shortcut icon" href="../../../images/favicon.ico">
         <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
 		<meta http-equiv="Cache-control" content="no-cache">
         <title>Change Logs</title>
-		<link rel="stylesheet" type="text/css" href="../../../global-style.css">
-		<link rel="stylesheet" type="text/css" href="../../../factorio/local-style.css">
+		<link rel="stylesheet" type="text/css" href="../../../compiledJS/entrypoint.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Lato|Exo 2|Ubuntu|Cairo">
 		<script src = "../../../compiledJS/entrypoint.bundle.js"></script>
-		<div id = "script-list">
-			footer-spacing
-				,changeloader
-		</div>
+		<meta name="script-def" content="footer-spacing">
+			<meta name="script-def" content="changeloader">
     </head>
     <body  data-game="factorio">
         	<div id = "navbar" class="navbar">
@@ -96,7 +93,8 @@
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-changes">Change Viewer</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-changes'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 </table>
 </div>
-        <div class = "textarea">
+        <div id = "textarea" class = "textarea ">
+			<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
 			<!--<h2>Change Logs</h2>-->
 			<section class = "textblock" id = "text-block-intro">
 <h3>Introduction</h3>
@@ -123,6 +121,13 @@ These are the changelogs for all the mods going back as far as they have been ke
 		Show Changes
 	</th>
   </tr>
+<tr>
+<td>[ALL]</td>
+<td></td>
+<td></td>
+<td></td>
+<td><input type="checkbox" class="modchangecheck" data-value = "all" data-mod = "[ALL]" checked></td>
+</tr>
 <tr>
 <td><a href = "../../../factorio\mods\dragonindustries.html">Dragon Industries</a></td>
 <td>0.17 - 1.1</td>
@@ -303,9 +308,9 @@ These are the changelogs for all the mods going back as far as they have been ke
 <br><br>
 <div style = "display: none">
 	<div id = "mod-version-list-1.1">
-			<div class = "mod-version-list-entry" data-date = "April 28, 2021">1.105.1</div>
-			<div class = "mod-version-list-entry" data-date = "March 27, 2021">1.102.1</div>
-			<div class = "mod-version-list-entry" data-date = "March 25, 2021">1.101.1</div>
+			<div class = "mod-version-list-entry" data-date = "April 28, 2021" data-modset = "autotraindepot|ftweaks|oreverhaul|endgamecombat|infitech|nauvisday|fastfurnaces|earlyextensions|bioluminescence|geothermal|rubberbelts|pheromones|biterbias|treeplant">1.105.1</div>
+			<div class = "mod-version-list-entry" data-date = "March 27, 2021" data-modset = "chokepoint|easycreative|turmoil|dirtymining|oldwormsound|oreverhaul|lossprevention|infitech|factorio|itemfinder|rubberbelts|dewpointaggregator|pheromones|radionetwork|biterbias|treeplant">1.102.1</div>
+			<div class = "mod-version-list-entry" data-date = "March 25, 2021" data-modset = "dragonindustries|geothermal">1.101.1</div>
 	</div>
 			<div class = "changelog-data-cache" id = "1.1|1.105.1|autotraindepot"><ul class = "changelist">				
 					<li>1.1 Update</li>
@@ -437,8 +442,8 @@ These are the changelogs for all the mods going back as far as they have been ke
 </ul>
 			</div>
 	<div id = "mod-version-list-1.0">
-			<div class = "mod-version-list-entry" data-date = "November 15, 2020">1.18.24</div>
-			<div class = "mod-version-list-entry" data-date = "August 10, 2020">1.18.18</div>
+			<div class = "mod-version-list-entry" data-date = "November 15, 2020" data-modset = "autotraindepot|nauvisday|bioluminescence|ftweaks|dragonindustries|geothermal|oreverhaul|endgamecombat|infitech|treeplant">1.18.24</div>
+			<div class = "mod-version-list-entry" data-date = "August 10, 2020" data-modset = "itemfinder|autotraindepot|nauvisday|easycreative|bioluminescence|ftweaks|dragonindustries|endgamecombat|radionetwork|infitech">1.18.18</div>
 	</div>
 			<div class = "changelog-data-cache" id = "1.0|1.18.24|dragonindustries"><ul class = "changelist">				
 					<li>Improved item lookups</li>
@@ -559,14 +564,14 @@ These are the changelogs for all the mods going back as far as they have been ke
 </ul>
 			</div>
 	<div id = "mod-version-list-0.18">
-			<div class = "mod-version-list-entry" data-date = "July 28, 2020">1.18.15</div>
-			<div class = "mod-version-list-entry" data-date = "July 5, 2020">1.18.12</div>
-			<div class = "mod-version-list-entry" data-date = "June 29, 2020">1.18.10</div>
-			<div class = "mod-version-list-entry" data-date = "June 15, 2020">1.18.6</div>
-			<div class = "mod-version-list-entry" data-date = "June 11, 2020">1.18.5</div>
-			<div class = "mod-version-list-entry" data-date = "June 7, 2020">1.18.3</div>
-			<div class = "mod-version-list-entry" data-date = "June 1, 2020">01/06/2020</div>
-			<div class = "mod-version-list-entry" data-date = "May 29, 2020">1.18.1</div>
+			<div class = "mod-version-list-entry" data-date = "July 28, 2020" data-modset = "nauvisday|easycreative|ftweaks|dragonindustries|geothermal|endgamecombat">1.18.15</div>
+			<div class = "mod-version-list-entry" data-date = "July 5, 2020" data-modset = "autotraindepot|nauvisday|fastfurnaces|oreverhaul|endgamecombat|treeplant">1.18.12</div>
+			<div class = "mod-version-list-entry" data-date = "June 29, 2020" data-modset = "nauvisday|fastfurnaces|chokepoint|earlyextensions|turmoil|dirtymining|dragonindustries|geothermal|oreverhaul|endgamecombat">1.18.10</div>
+			<div class = "mod-version-list-entry" data-date = "June 15, 2020" data-modset = "autotraindepot|nauvisday|bioluminescence|ftweaks|endgamecombat|lossprevention">1.18.6</div>
+			<div class = "mod-version-list-entry" data-date = "June 11, 2020" data-modset = "autotraindepot|nauvisday|turmoil|bioluminescence|ftweaks|dragonindustries|geothermal|dewpointaggregator|endgamecombat|treeplant">1.18.5</div>
+			<div class = "mod-version-list-entry" data-date = "June 7, 2020" data-modset = "autotraindepot|nauvisday|fastfurnaces|chokepoint|earlyextensions|ftweaks|dragonindustries|geothermal|endgamecombat|treeplant">1.18.2</div>
+			<div class = "mod-version-list-entry" data-date = "June 1, 2020" data-modset = "earlyextensions">01/06/2020</div>
+			<div class = "mod-version-list-entry" data-date = "May 29, 2020" data-modset = "autotraindepot|chokepoint|easycreative|turmoil|dirtymining|oldwormsound|ftweaks|dragonindustries|oreverhaul|endgamecombat|lossprevention|infitech|factorio|itemfinder|nauvisday|fastfurnaces|bioluminescence|geothermal|rubberbelts|dewpointaggregator|pheromones|radionetwork|biterbias|treeplant">1.18.1</div>
 	</div>
 			<div class = "changelog-data-cache" id = "0.18|1.18.15|dragonindustries"><ul class = "changelist">				
 					<li>Fixed error in resistance handling</li>
@@ -829,7 +834,7 @@ These are the changelogs for all the mods going back as far as they have been ke
 					<li>Made sulfur producible directly from heavy oil on "heavy oil" setting</li>
 </ul>
 			</div>
-			<div class = "changelog-data-cache" id = "0.18|1.18.3|dragonindustries"><ul class = "changelist">				
+			<div class = "changelog-data-cache" id = "0.18|1.18.2|dragonindustries"><ul class = "changelist">				
 					<li>Greatly improved sprite handling libraries</li>
 					<li>Added itme handling library</li>
 					<li>Expanded and improved recipe handling</li>
@@ -841,7 +846,7 @@ These are the changelogs for all the mods going back as far as they have been ke
 					<li>More unloader fixes</li>
 </ul>
 			</div>
-			<div class = "changelog-data-cache" id = "0.18|1.18.3|chokepoint"><ul class = "changelist">				
+			<div class = "changelog-data-cache" id = "0.18|1.18.2|chokepoint"><ul class = "changelist">				
 					<li>Added function to generate shores of muddy water at the edges and endings of rivers</li>
 					<li>Implemented voronoi noise based generation options and made those the default</li>
 					<li>Added river thickness setting</li>
@@ -854,7 +859,7 @@ These are the changelogs for all the mods going back as far as they have been ke
 					<li><b>Release</b></li>
 </ul>
 			</div>
-			<div class = "changelog-data-cache" id = "0.18|1.18.3|endgamecombat"><ul class = "changelist">				
+			<div class = "changelog-data-cache" id = "0.18|1.18.2|endgamecombat"><ul class = "changelist">				
 					<li>Added option for shockwave turrets to use red circuits (and thus be oil-dependent)</li>
 					<li>More code cleanup</li>
 					<li>Halved turret alert volume</li>
@@ -864,7 +869,7 @@ These are the changelogs for all the mods going back as far as they have been ke
 					<li>Slightly reduced drill emissions</li>
 </ul>
 			</div>
-			<div class = "changelog-data-cache" id = "0.18|1.18.3|ftweaks"><ul class = "changelist">				
+			<div class = "changelog-data-cache" id = "0.18|1.18.2|ftweaks"><ul class = "changelist">				
 					<li>Removed rubberbelts crappy belt upcrafting, as that is now native</li>
 					<li>Changed power usage of Electric Offshore Pump</li>
 					<li>Added code to change Construction Drone collision masks</li>
@@ -876,7 +881,7 @@ These are the changelogs for all the mods going back as far as they have been ke
 					<li>Removed ability of geothermal wells to be beaconed</li>
 </ul>
 			</div>
-			<div class = "changelog-data-cache" id = "0.18|1.18.3|nauvisday"><ul class = "changelist">				
+			<div class = "changelog-data-cache" id = "0.18|1.18.2|nauvisday"><ul class = "changelist">				
 					<li>Rebalanced pollution values, especially tile absorption and some entities' base emissions</li>
 					<li>Now increases enemy_attack_pollution_consumption_modifier map setting</li>
 					<li>Massively increased oil refinery pollution</li>
@@ -1007,14 +1012,14 @@ These are the changelogs for all the mods going back as far as they have been ke
 </ul>
 			</div>
 	<div id = "mod-version-list-0.17">
-			<div class = "mod-version-list-entry" data-date = "December 29, 2019">1.17.35</div>
-			<div class = "mod-version-list-entry" data-date = "November 30, 2019">30/11/2019</div>
-			<div class = "mod-version-list-entry" data-date = "September 30, 2019">1.17.24</div>
-			<div class = "mod-version-list-entry" data-date = "August 2, 2019">1.17.18</div>
-			<div class = "mod-version-list-entry" data-date = "July 1, 2019">1.17.15</div>
-			<div class = "mod-version-list-entry" data-date = "June 17, 2019">1.17.12</div>
-			<div class = "mod-version-list-entry" data-date = "June 6, 2019">1.17.6</div>
-			<div class = "mod-version-list-entry" data-date = "March 23, 2019">1.17.2</div>
+			<div class = "mod-version-list-entry" data-date = "December 29, 2019" data-modset = "nauvisday|ftweaks|dragonindustries|geothermal|pheromones|endgamecombat">1.17.35</div>
+			<div class = "mod-version-list-entry" data-date = "November 30, 2019" data-modset = "pheromones">30/11/2019</div>
+			<div class = "mod-version-list-entry" data-date = "September 30, 2019" data-modset = "itemfinder|autotraindepot|nauvisday|fastfurnaces|ftweaks|dragonindustries|geothermal|rubberbelts|oreverhaul|endgamecombat|treeplant|factorio">1.17.24</div>
+			<div class = "mod-version-list-entry" data-date = "August 2, 2019" data-modset = "turmoil|dragonindustries">1.17.18</div>
+			<div class = "mod-version-list-entry" data-date = "July 1, 2019" data-modset = "nauvisday|dirtymining|ftweaks|dragonindustries|endgamecombat">1.17.15</div>
+			<div class = "mod-version-list-entry" data-date = "June 17, 2019" data-modset = "autotraindepot|nauvisday|fastfurnaces|bioluminescence|dirtymining|ftweaks|dragonindustries|geothermal|oreverhaul|dewpointaggregator|endgamecombat">1.17.12</div>
+			<div class = "mod-version-list-entry" data-date = "June 6, 2019" data-modset = "autotraindepot|chokepoint|dirtymining|oldwormsound|ftweaks|dragonindustries|oreverhaul|endgamecombat|infitech|factorio|nauvisday|fastfurnaces|bioluminescence|geothermal|rubberbelts|radionetwork|treeplant">1.17.6</div>
+			<div class = "mod-version-list-entry" data-date = "March 23, 2019" data-modset = "autotraindepot|chokepoint|easycreative|dirtymining|oldwormsound|oreverhaul|lossprevention|factorio|itemfinder|bioluminescence|geothermal|rubberbelts|dewpointaggregator|radionetwork|biterbias|treeplant">1.17.1</div>
 	</div>
 			<div class = "changelog-data-cache" id = "0.17|1.17.35|dragonindustries"><ul class = "changelist">				
 					<li>Added more library functions</li>
@@ -1192,7 +1197,7 @@ These are the changelogs for all the mods going back as far as they have been ke
 					<li>Moved entity tracking to Dragon Industries</li>
 </ul>
 			</div>
-			<div class = "changelog-data-cache" id = "0.17|1.17.13|oreverhaul"><ul class = "changelist">				
+			<div class = "changelog-data-cache" id = "0.17|1.17.12|oreverhaul"><ul class = "changelist">				
 					<li>Reduced richness scaling sixfold</li>
 </ul>
 			</div>
@@ -1289,106 +1294,106 @@ These are the changelogs for all the mods going back as far as they have been ke
 					<li>Updated some sprites</li>
 </ul>
 			</div>
-			<div class = "changelog-data-cache" id = "0.17|1.17.2|autotraindepot"><ul class = "changelist">				
+			<div class = "changelog-data-cache" id = "0.17|1.17.1|autotraindepot"><ul class = "changelist">				
 					<li>Updated to 0.17</li>
 </ul>
 			</div>
-			<div class = "changelog-data-cache" id = "0.17|1.17.2|bioluminescence"><ul class = "changelist">				
+			<div class = "changelog-data-cache" id = "0.17|1.17.1|bioluminescence"><ul class = "changelist">				
 					<li>Update to 0.17</li>
 </ul>
 			</div>
-			<div class = "changelog-data-cache" id = "0.17|1.17.2|biterbias"><ul class = "changelist">				
+			<div class = "changelog-data-cache" id = "0.17|1.17.1|biterbias"><ul class = "changelist">				
 					<li>Update to 0.17</li>
 </ul>
 			</div>
-			<div class = "changelog-data-cache" id = "0.17|1.17.2|chokepoint"><ul class = "changelist">				
+			<div class = "changelog-data-cache" id = "0.17|1.17.1|chokepoint"><ul class = "changelist">				
 					<li>Update to 0.17</li>
 </ul>
 			</div>
-			<div class = "changelog-data-cache" id = "0.17|1.17.2|dewpointaggregator"><ul class = "changelist">				
+			<div class = "changelog-data-cache" id = "0.17|1.17.1|dewpointaggregator"><ul class = "changelist">				
 					<li>Update to 0.17</li>
 </ul>
 			</div>
-			<div class = "changelog-data-cache" id = "0.17|1.17.2|dirtymining"><ul class = "changelist">				
+			<div class = "changelog-data-cache" id = "0.17|1.17.1|dirtymining"><ul class = "changelist">				
 					<li>Update to 0.17</li>
 </ul>
 			</div>
-			<div class = "changelog-data-cache" id = "0.17|1.17.2|easycreative"><ul class = "changelist">				
+			<div class = "changelog-data-cache" id = "0.17|1.17.1|easycreative"><ul class = "changelist">				
 					<li>Update to 0.17</li>
 </ul>
 			</div>
-			<div class = "changelog-data-cache" id = "0.17|1.17.2|factorio"><ul class = "changelist">				
+			<div class = "changelog-data-cache" id = "0.17|1.17.1|factorio"><ul class = "changelist">				
 					<li>Update to 0.17</li>
 </ul>
 			</div>
-			<div class = "changelog-data-cache" id = "0.17|1.17.2|geothermal"><ul class = "changelist">				
+			<div class = "changelog-data-cache" id = "0.17|1.17.1|geothermal"><ul class = "changelist">				
 					<li>Update to 0.17</li>
 					<li>Redesigned spawning algorithm and added several options for spawn profiles and allowed biomes</li>
 </ul>
 			</div>
-			<div class = "changelog-data-cache" id = "0.17|1.17.2|itemfinder"><ul class = "changelist">				
+			<div class = "changelog-data-cache" id = "0.17|1.17.1|itemfinder"><ul class = "changelist">				
 					<li>Update to 0.17</li>
 </ul>
 			</div>
-			<div class = "changelog-data-cache" id = "0.17|1.17.2|lossprevention"><ul class = "changelist">				
+			<div class = "changelog-data-cache" id = "0.17|1.17.1|lossprevention"><ul class = "changelist">				
 					<li>Update to 0.17</li>
 </ul>
 			</div>
-			<div class = "changelog-data-cache" id = "0.17|1.17.2|oldwormsound"><ul class = "changelist">				
+			<div class = "changelog-data-cache" id = "0.17|1.17.1|oldwormsound"><ul class = "changelist">				
 					<li>Update to 0.17</li>
 </ul>
 			</div>
-			<div class = "changelog-data-cache" id = "0.17|1.17.2|oreverhaul"><ul class = "changelist">				
+			<div class = "changelog-data-cache" id = "0.17|1.17.1|oreverhaul"><ul class = "changelist">				
 					<li>Update to 0.17</li>
 					<li>Tweaked placement of fluid resources</li>
 </ul>
 			</div>
-			<div class = "changelog-data-cache" id = "0.17|1.17.2|radionetwork"><ul class = "changelist">				
+			<div class = "changelog-data-cache" id = "0.17|1.17.1|radionetwork"><ul class = "changelist">				
 					<li>Update to 0.17</li>
 </ul>
 			</div>
-			<div class = "changelog-data-cache" id = "0.17|1.17.2|rubberbelts"><ul class = "changelist">				
+			<div class = "changelog-data-cache" id = "0.17|1.17.1|rubberbelts"><ul class = "changelist">				
 					<li>Update to 0.17</li>
 					<li>Wooden gears can now be burned</li>
 </ul>
 			</div>
-			<div class = "changelog-data-cache" id = "0.17|1.17.2|treeplant"><ul class = "changelist">				
+			<div class = "changelog-data-cache" id = "0.17|1.17.1|treeplant"><ul class = "changelist">				
 					<li>Update to 0.17</li>
 </ul>
 			</div>
 	<div id = "mod-version-list-0.16">
-			<div class = "mod-version-list-entry" data-date = "November 28, 2018">1.0.180</div>
-			<div class = "mod-version-list-entry" data-date = "October 20, 2018">1.0.172</div>
-			<div class = "mod-version-list-entry" data-date = "October 15, 2018">1.0.164</div>
-			<div class = "mod-version-list-entry" data-date = "October 13, 2018">13/10/2018</div>
-			<div class = "mod-version-list-entry" data-date = "October 10, 2018">1.0.160</div>
-			<div class = "mod-version-list-entry" data-date = "October 2, 2018">02/10/2018</div>
-			<div class = "mod-version-list-entry" data-date = "September 23, 2018">1.0.150</div>
-			<div class = "mod-version-list-entry" data-date = "September 18, 2018">1.0.148</div>
-			<div class = "mod-version-list-entry" data-date = "September 10, 2018">1.0.144</div>
-			<div class = "mod-version-list-entry" data-date = "September 7, 2018">1.0.138</div>
-			<div class = "mod-version-list-entry" data-date = "September 5, 2018">1.0.135</div>
-			<div class = "mod-version-list-entry" data-date = "September 3, 2018">1.0.133</div>
-			<div class = "mod-version-list-entry" data-date = "September 2, 2018">1.0.132</div>
-			<div class = "mod-version-list-entry" data-date = "August 24, 2018">1.0.128</div>
-			<div class = "mod-version-list-entry" data-date = "August 20, 2018">1.0.120</div>
-			<div class = "mod-version-list-entry" data-date = "August 16, 2018">16/08/2018</div>
-			<div class = "mod-version-list-entry" data-date = "August 15, 2018">1.0.115</div>
-			<div class = "mod-version-list-entry" data-date = "August 13, 2018">1.0.112</div>
-			<div class = "mod-version-list-entry" data-date = "August 9, 2018">1.0.108</div>
-			<div class = "mod-version-list-entry" data-date = "August 7, 2018">1.0.106</div>
-			<div class = "mod-version-list-entry" data-date = "August 6, 2018">1.0.105</div>
-			<div class = "mod-version-list-entry" data-date = "August 2, 2018">1.0.101</div>
-			<div class = "mod-version-list-entry" data-date = "July 30, 2018">1.0.98</div>
-			<div class = "mod-version-list-entry" data-date = "July 29, 2018">1.0.97</div>
-			<div class = "mod-version-list-entry" data-date = "April 20, 2018">1.0.80</div>
-			<div class = "mod-version-list-entry" data-date = "February 3, 2018">1.0.74</div>
-			<div class = "mod-version-list-entry" data-date = "January 30, 2018">1.0.72</div>
-			<div class = "mod-version-list-entry" data-date = "January 14, 2018">1.0.70</div>
-			<div class = "mod-version-list-entry" data-date = "January 6, 2018">1.0.66</div>
-			<div class = "mod-version-list-entry" data-date = "January 4, 2018">1.0.64</div>
-			<div class = "mod-version-list-entry" data-date = "December 23, 2017">1.0.60</div>
-			<div class = "mod-version-list-entry" data-date = "December 12, 2017">12/12/2017</div>
+			<div class = "mod-version-list-entry" data-date = "November 28, 2018" data-modset = "itemfinder|autotraindepot|nauvisday|easycreative|ftweaks|endgamecombat|radionetwork|treeplant">1.0.180</div>
+			<div class = "mod-version-list-entry" data-date = "October 20, 2018" data-modset = "autotraindepot|nauvisday|endgamecombat">1.0.172</div>
+			<div class = "mod-version-list-entry" data-date = "October 15, 2018" data-modset = "itemfinder|autotraindepot|nauvisday|dirtymining|ftweaks|geothermal|endgamecombat|radionetwork|factorio">1.0.164</div>
+			<div class = "mod-version-list-entry" data-date = "October 13, 2018" data-modset = "bioluminescence">13/10/2018</div>
+			<div class = "mod-version-list-entry" data-date = "October 10, 2018" data-modset = "itemfinder|autotraindepot|nauvisday|easycreative|dirtymining|ftweaks|endgamecombat|radionetwork|factorio">1.0.160</div>
+			<div class = "mod-version-list-entry" data-date = "October 2, 2018" data-modset = "radionetwork">02/10/2018</div>
+			<div class = "mod-version-list-entry" data-date = "September 23, 2018" data-modset = "itemfinder">1.0.150</div>
+			<div class = "mod-version-list-entry" data-date = "September 18, 2018" data-modset = "autotraindepot|nauvisday|easycreative|ftweaks|geothermal|endgamecombat|lossprevention|biterbias|treeplant|factorio">1.0.148</div>
+			<div class = "mod-version-list-entry" data-date = "September 10, 2018" data-modset = "autotraindepot|nauvisday|endgamecombat">1.0.144</div>
+			<div class = "mod-version-list-entry" data-date = "September 7, 2018" data-modset = "autotraindepot|nauvisday|ftweaks|endgamecombat">1.0.138</div>
+			<div class = "mod-version-list-entry" data-date = "September 5, 2018" data-modset = "autotraindepot|nauvisday|ftweaks|endgamecombat">1.0.135</div>
+			<div class = "mod-version-list-entry" data-date = "September 3, 2018" data-modset = "autotraindepot|lossprevention">1.0.133</div>
+			<div class = "mod-version-list-entry" data-date = "September 2, 2018" data-modset = "autotraindepot|nauvisday|ftweaks|endgamecombat|lossprevention">1.0.132</div>
+			<div class = "mod-version-list-entry" data-date = "August 24, 2018" data-modset = "autotraindepot|nauvisday|dirtymining|ftweaks|dewpointaggregator">1.0.128</div>
+			<div class = "mod-version-list-entry" data-date = "August 20, 2018" data-modset = "autotraindepot|nauvisday|easycreative|ftweaks|endgamecombat|factorio">1.0.120</div>
+			<div class = "mod-version-list-entry" data-date = "August 16, 2018" data-modset = "dewpointaggregator">16/08/2018</div>
+			<div class = "mod-version-list-entry" data-date = "August 15, 2018" data-modset = "nauvisday|easycreative|ftweaks|endgamecombat|factorio">1.0.115</div>
+			<div class = "mod-version-list-entry" data-date = "August 13, 2018" data-modset = "nauvisday|chokepoint|ftweaks|oreverhaul|endgamecombat">1.0.112</div>
+			<div class = "mod-version-list-entry" data-date = "August 9, 2018" data-modset = "chokepoint">1.0.108</div>
+			<div class = "mod-version-list-entry" data-date = "August 7, 2018" data-modset = "endgamecombat">1.0.106</div>
+			<div class = "mod-version-list-entry" data-date = "August 6, 2018" data-modset = "nauvisday">1.0.105</div>
+			<div class = "mod-version-list-entry" data-date = "August 2, 2018" data-modset = "nauvisday|endgamecombat">1.0.101</div>
+			<div class = "mod-version-list-entry" data-date = "July 30, 2018" data-modset = "nauvisday|endgamecombat|factorio">1.0.98</div>
+			<div class = "mod-version-list-entry" data-date = "July 29, 2018" data-modset = "autotraindepot|chokepoint|ftweaks|geothermal|factorio">1.0.96</div>
+			<div class = "mod-version-list-entry" data-date = "April 20, 2018" data-modset = "nauvisday">1.0.80</div>
+			<div class = "mod-version-list-entry" data-date = "February 3, 2018" data-modset = "nauvisday|ftweaks">1.0.74</div>
+			<div class = "mod-version-list-entry" data-date = "January 30, 2018" data-modset = "geothermal|rubberbelts|oreverhaul|endgamecombat|treeplant">1.0.72</div>
+			<div class = "mod-version-list-entry" data-date = "January 14, 2018" data-modset = "ftweaks">1.0.70</div>
+			<div class = "mod-version-list-entry" data-date = "January 6, 2018" data-modset = "ftweaks">1.0.66</div>
+			<div class = "mod-version-list-entry" data-date = "January 4, 2018" data-modset = "nauvisday|fastfurnaces|dirtymining">1.0.64</div>
+			<div class = "mod-version-list-entry" data-date = "December 23, 2017" data-modset = "nauvisday|fastfurnaces|dirtymining|ftweaks|rubberbelts|oreverhaul|infitech|biterbias|treeplant">1.0.60</div>
+			<div class = "mod-version-list-entry" data-date = "December 12, 2017" data-modset = "chokepoint">12/12/2017</div>
 	</div>
 			<div class = "changelog-data-cache" id = "0.16|1.0.180|autotraindepot"><ul class = "changelist">				
 					<li>Fixed crash due to science pack 3 ingredient duplication</li>
@@ -1925,7 +1930,7 @@ These are the changelogs for all the mods going back as far as they have been ke
 					<li><b>Release</b></li>
 </ul>
 			</div>
-			<div class = "changelog-data-cache" id = "0.16|1.0.97|chokepoint"><ul class = "changelist">				
+			<div class = "changelog-data-cache" id = "0.16|1.0.96|chokepoint"><ul class = "changelist">				
 					<li><b>Release</b></li>
 </ul>
 			</div>
@@ -2080,26 +2085,26 @@ These are the changelogs for all the mods going back as far as they have been ke
 </ul>
 			</div>
 	<div id = "mod-version-list-0.15">
-			<div class = "mod-version-list-entry" data-date = "September 5, 2017">1.0.46</div>
-			<div class = "mod-version-list-entry" data-date = "August 31, 2017">1.0.44</div>
-			<div class = "mod-version-list-entry" data-date = "August 23, 2017">1.0.36</div>
-			<div class = "mod-version-list-entry" data-date = "August 18, 2017">1.0.32</div>
-			<div class = "mod-version-list-entry" data-date = "August 11, 2017">1.0.25</div>
-			<div class = "mod-version-list-entry" data-date = "August 8, 2017">1.0.24</div>
-			<div class = "mod-version-list-entry" data-date = "August 6, 2017">1.0.12</div>
-			<div class = "mod-version-list-entry" data-date = "August 2, 2017">02/08/2017</div>
-			<div class = "mod-version-list-entry" data-date = "July 25, 2017">1.0.8</div>
-			<div class = "mod-version-list-entry" data-date = "July 22, 2017">1.0.4</div>
-			<div class = "mod-version-list-entry" data-date = "July 17, 2017">1.0.2</div>
-			<div class = "mod-version-list-entry" data-date = "July 16, 2017">1.0.1</div>
-			<div class = "mod-version-list-entry" data-date = "July 14, 2017">1.0.0</div>
-			<div class = "mod-version-list-entry" data-date = "July 12, 2017">0.0.24</div>
-			<div class = "mod-version-list-entry" data-date = "July 2, 2017">0.0.20</div>
-			<div class = "mod-version-list-entry" data-date = "June 26, 2017">0.0.12</div>
-			<div class = "mod-version-list-entry" data-date = "June 23, 2017">23/06/2017</div>
-			<div class = "mod-version-list-entry" data-date = "June 21, 2017">21/06/2017</div>
-			<div class = "mod-version-list-entry" data-date = "June 20, 2017">0.0.8</div>
-			<div class = "mod-version-list-entry" data-date = "June 17, 2017">17/06/2017</div>
+			<div class = "mod-version-list-entry" data-date = "September 5, 2017" data-modset = "nauvisday|endgamecombat">1.0.46</div>
+			<div class = "mod-version-list-entry" data-date = "August 31, 2017" data-modset = "ftweaks">1.0.44</div>
+			<div class = "mod-version-list-entry" data-date = "August 23, 2017" data-modset = "dirtymining|oreverhaul">1.0.36</div>
+			<div class = "mod-version-list-entry" data-date = "August 18, 2017" data-modset = "nauvisday|oreverhaul|endgamecombat|treeplant">1.0.32</div>
+			<div class = "mod-version-list-entry" data-date = "August 11, 2017" data-modset = "oreverhaul|treeplant">1.0.25</div>
+			<div class = "mod-version-list-entry" data-date = "August 8, 2017" data-modset = "nauvisday|fastfurnaces|ftweaks|geothermal|oreverhaul|infitech|treeplant">1.0.24</div>
+			<div class = "mod-version-list-entry" data-date = "August 6, 2017" data-modset = "ftweaks|endgamecombat">1.0.12</div>
+			<div class = "mod-version-list-entry" data-date = "August 2, 2017" data-modset = "dirtymining">02/08/2017</div>
+			<div class = "mod-version-list-entry" data-date = "July 25, 2017" data-modset = "endgamecombat|treeplant">1.0.8</div>
+			<div class = "mod-version-list-entry" data-date = "July 22, 2017" data-modset = "nauvisday|fastfurnaces|rubberbelts">1.0.4</div>
+			<div class = "mod-version-list-entry" data-date = "July 17, 2017" data-modset = "nauvisday|ftweaks">1.0.2</div>
+			<div class = "mod-version-list-entry" data-date = "July 16, 2017" data-modset = "fastfurnaces|rubberbelts">1.0.1</div>
+			<div class = "mod-version-list-entry" data-date = "July 14, 2017" data-modset = "nauvisday|fastfurnaces|oldwormsound|ftweaks|geothermal|rubberbelts|oreverhaul|endgamecombat|infitech|biterbias|treeplant">1.0.0</div>
+			<div class = "mod-version-list-entry" data-date = "July 12, 2017" data-modset = "nauvisday|geothermal">0.0.24</div>
+			<div class = "mod-version-list-entry" data-date = "July 2, 2017" data-modset = "nauvisday|fastfurnaces|ftweaks|rubberbelts|oreverhaul|endgamecombat|infitech|treeplant">0.0.20</div>
+			<div class = "mod-version-list-entry" data-date = "June 26, 2017" data-modset = "geothermal">0.0.12</div>
+			<div class = "mod-version-list-entry" data-date = "June 23, 2017" data-modset = "oldwormsound">23/06/2017</div>
+			<div class = "mod-version-list-entry" data-date = "June 21, 2017" data-modset = "nauvisday">21/06/2017</div>
+			<div class = "mod-version-list-entry" data-date = "June 20, 2017" data-modset = "fastfurnaces|ftweaks|oreverhaul|endgamecombat|infitech|treeplant">0.0.8</div>
+			<div class = "mod-version-list-entry" data-date = "June 17, 2017" data-modset = "geothermal">17/06/2017</div>
 	</div>
 			<div class = "changelog-data-cache" id = "0.15|1.0.46|endgamecombat"><ul class = "changelist">				
 					<li>Improved range turret scripting to fix some issues with leftover or incorrectly identified entities</li>
@@ -2499,7 +2504,7 @@ These are the changelogs for all the mods going back as far as they have been ke
 </ul>
 			</div>
 	<div id = "mod-version-list-0.14">
-			<div class = "mod-version-list-entry" data-date = "October 28, 2016">0.0.5</div>
+			<div class = "mod-version-list-entry" data-date = "October 28, 2016" data-modset = "fastfurnaces|ftweaks|oreverhaul|endgamecombat|infitech|biterbias|treeplant">0.0.5</div>
 	</div>
 			<div class = "changelog-data-cache" id = "0.14|0.0.5|biterbias"><ul class = "changelist">				
 					<li>Update to 0.14</li>
@@ -2545,17 +2550,17 @@ These are the changelogs for all the mods going back as far as they have been ke
 </ul>
 			</div>
 	<div id = "mod-version-list-0.12">
-			<div class = "mod-version-list-entry" data-date = "June 4, 2016">04/06/2016</div>
-			<div class = "mod-version-list-entry" data-date = "December 17, 2015">17/12/2015</div>
-			<div class = "mod-version-list-entry" data-date = "December 13, 2015">13/12/2015</div>
-			<div class = "mod-version-list-entry" data-date = "December 12, 2015">12/12/2015</div>
-			<div class = "mod-version-list-entry" data-date = "December 6, 2015">06/12/2015</div>
-			<div class = "mod-version-list-entry" data-date = "December 4, 2015">04/12/2015</div>
-			<div class = "mod-version-list-entry" data-date = "December 3, 2015">03/12/2015</div>
-			<div class = "mod-version-list-entry" data-date = "November 27, 2015">27/11/2015</div>
-			<div class = "mod-version-list-entry" data-date = "November 25, 2015">25/11/2015</div>
-			<div class = "mod-version-list-entry" data-date = "November 24, 2015">24/11/2015</div>
-			<div class = "mod-version-list-entry" data-date = "November 21, 2015">21/11/2015</div>
+			<div class = "mod-version-list-entry" data-date = "June 4, 2016" data-modset = "ftweaks">04/06/2016</div>
+			<div class = "mod-version-list-entry" data-date = "December 17, 2015" data-modset = "treeplant">17/12/2015</div>
+			<div class = "mod-version-list-entry" data-date = "December 13, 2015" data-modset = "treeplant">13/12/2015</div>
+			<div class = "mod-version-list-entry" data-date = "December 12, 2015" data-modset = "endgamecombat">12/12/2015</div>
+			<div class = "mod-version-list-entry" data-date = "December 6, 2015" data-modset = "infitech">06/12/2015</div>
+			<div class = "mod-version-list-entry" data-date = "December 4, 2015" data-modset = "endgamecombat">04/12/2015</div>
+			<div class = "mod-version-list-entry" data-date = "December 3, 2015" data-modset = "ftweaks">03/12/2015</div>
+			<div class = "mod-version-list-entry" data-date = "November 27, 2015" data-modset = "infitech">27/11/2015</div>
+			<div class = "mod-version-list-entry" data-date = "November 25, 2015" data-modset = "endgamecombat">25/11/2015</div>
+			<div class = "mod-version-list-entry" data-date = "November 24, 2015" data-modset = "fastfurnaces">24/11/2015</div>
+			<div class = "mod-version-list-entry" data-date = "November 21, 2015" data-modset = "endgamecombat">21/11/2015</div>
 	</div>
 			<div class = "changelog-data-cache" id = "0.12|04/06/2016|ftweaks"><ul class = "changelist">				
 					<li>Organize code</li>
@@ -2624,7 +2629,7 @@ These are the changelogs for all the mods going back as far as they have been ke
 </ul>
 			</div>
 	<div id = "mod-version-list-0.11">
-			<div class = "mod-version-list-entry" data-date = "June 8, 2015">0.0.0</div>
+			<div class = "mod-version-list-entry" data-date = "June 8, 2015" data-modset = "endgamecombat">0.0.0</div>
 	</div>
 			<div class = "changelog-data-cache" id = "0.11|0.0.0|endgamecombat"><ul class = "changelist">				
 					<li><b>Creation</b> (as "BetterTank")</li>
@@ -2636,7 +2641,7 @@ These are the changelogs for all the mods going back as far as they have been ke
 </div>
 <br><br>
 <section class = "textblock" id = "text-block-changes">
-<h3>Change Logs</h3>
+<span><div style = "display: inline-block; width: 49.8%; text-align: left;"><h3>Change Logs</h3></div><div style = "display: inline-block; width: 49.8%; text-align: right;"><button type="button" id = "newverbtn"><span>Select Most Recent Version<div class = "spacer"></div><i class="fas fa-fast-forward"></i></span></button></div></span>
 <table class = "changetable">
 	<tr>
 		<th class = "changetable-header" style = "width: 11%;">
@@ -2652,15 +2657,15 @@ These are the changelogs for all the mods going back as far as they have been ke
 	<tr>
 		<td style = "vertical-align: top;">
 			<div id = "gamever-box">
-				<button type="button" class = "verbtn-game" data-value = "1.1"><span><div class = "gamever-width">1.1</div><i class="fas fa-angle-right"></i></span></button><br>
-				<button type="button" class = "verbtn-game" data-value = "1.0"><span><div class = "gamever-width">1.0</div><i class="fas fa-angle-right"></i></span></button><br>
-				<button type="button" class = "verbtn-game" data-value = "0.18"><span><div class = "gamever-width">0.18</div><i class="fas fa-angle-right"></i></span></button><br>
-				<button type="button" class = "verbtn-game" data-value = "0.17"><span><div class = "gamever-width">0.17</div><i class="fas fa-angle-right"></i></span></button><br>
-				<button type="button" class = "verbtn-game" data-value = "0.16"><span><div class = "gamever-width">0.16</div><i class="fas fa-angle-right"></i></span></button><br>
-				<button type="button" class = "verbtn-game" data-value = "0.15"><span><div class = "gamever-width">0.15</div><i class="fas fa-angle-right"></i></span></button><br>
-				<button type="button" class = "verbtn-game" data-value = "0.14"><span><div class = "gamever-width">0.14</div><i class="fas fa-angle-right"></i></span></button><br>
-				<button type="button" class = "verbtn-game" data-value = "0.12"><span><div class = "gamever-width">0.12</div><i class="fas fa-angle-right"></i></span></button><br>
-				<button type="button" class = "verbtn-game" data-value = "0.11"><span><div class = "gamever-width">0.11</div><i class="fas fa-angle-right"></i></span></button><br>
+				<button type="button"  id = "newestgamever"  class = "verbtn-game" data-value = "1.1"><span><div class = "gamever-width">1.1</div><i class="fas fa-angle-right"></i></span></button><br>
+				<button type="button"  class = "verbtn-game" data-value = "1.0"><span><div class = "gamever-width">1.0</div><i class="fas fa-angle-right"></i></span></button><br>
+				<button type="button"  class = "verbtn-game" data-value = "0.18"><span><div class = "gamever-width">0.18</div><i class="fas fa-angle-right"></i></span></button><br>
+				<button type="button"  class = "verbtn-game" data-value = "0.17"><span><div class = "gamever-width">0.17</div><i class="fas fa-angle-right"></i></span></button><br>
+				<button type="button"  class = "verbtn-game" data-value = "0.16"><span><div class = "gamever-width">0.16</div><i class="fas fa-angle-right"></i></span></button><br>
+				<button type="button"  class = "verbtn-game" data-value = "0.15"><span><div class = "gamever-width">0.15</div><i class="fas fa-angle-right"></i></span></button><br>
+				<button type="button"  class = "verbtn-game" data-value = "0.14"><span><div class = "gamever-width">0.14</div><i class="fas fa-angle-right"></i></span></button><br>
+				<button type="button"  class = "verbtn-game" data-value = "0.12"><span><div class = "gamever-width">0.12</div><i class="fas fa-angle-right"></i></span></button><br>
+				<button type="button"  class = "verbtn-game" data-value = "0.11"><span><div class = "gamever-width">0.11</div><i class="fas fa-angle-right"></i></span></button><br>
 			</div>
 		</td>
 		<td>
@@ -2683,49 +2688,49 @@ These are the changelogs for all the mods going back as far as they have been ke
 		For both systems, the amount you choose to donate is up to you, and for Patreon, can be changed at any time should you wish to decrease or increase the amount.<br>
 		And thank you for your support. :D<br>
 					<div class = "linkiconblock">
-					<div class = "linktile">
+					<div class = "linktile" style = "width: 49.75%">
 						<div class = "linklabel">Patreon</div>
-						<div><a href="http://www.patreon.com/reikasminecraft"><img src="../../../images/patreon.png"  height="48" ></a></div>
+						<a class = "icon icon-patreon" href="http://www.patreon.com/reikasminecraft" ></a>
 					</div>
-					<div class = "linktile">
+					<div class = "linktile" style = "width: 49.75%">
 						<div class = "linklabel">Paypal</div>
-						<div><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5XRAM3SXBRJY4"><img src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif"  height="48" ></a></div>
+						<a class = "icon icon-paypal" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5XRAM3SXBRJY4" ></a>
 					</div>
 			</div>
 		<hr>
 		To contact me (though some of these are only checked periodically, and many are for specific topics) or find additional information or content, visit any one of these platforms:<br>
 					<div class = "linkiconblock">
-					<div class = "linktile">
+					<div class = "linktile" style = "width: 11.75%">
 						<div class = "linklabel">Minecraft Forums</div>
-						<div><a href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1291655"><img src="../../../images/mcico.png"  width="36"  height="36" title="Minecraft Only"></a></div>
+						<a class = "icon icon-mcforums" href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1291655" title="Minecraft Only"></a>
 					</div>
-					<div class = "linktile">
+					<div class = "linktile" style = "width: 11.75%">
 						<div class = "linklabel">Factorio Forums</div>
-						<div><a href="https://forums.factorio.com/viewforum.php?f=216"><img src="../../../images/factorio.png"  width="36"  height="36" title="Factorio Only"></a></div>
+						<a class = "icon icon-facforums" href="https://forums.factorio.com/viewforum.php?f=216" title="Factorio Only"></a>
 					</div>
-					<div class = "linktile">
+					<div class = "linktile" style = "width: 11.75%">
 						<div class = "linklabel">GitHub</div>
-						<div><a href="https://github.com/ReikaKalseki"><img src="../../../images/gitico.png"  width="36"  height="36" ></a></div>
+						<a class = "icon icon-github" href="https://github.com/ReikaKalseki" ></a>
 					</div>
-					<div class = "linktile">
+					<div class = "linktile" style = "width: 11.75%">
 						<div class = "linklabel">Discord</div>
-						<div><a href="https://discordapp.com/channels/@me/143569407665242112/"><img src="../../../images/discico.png"  width="36"  height="36" title="Discord ID: Reika#3161"></a></div>
+						<a class = "icon icon-discord" href="https://discordapp.com/channels/@me/143569407665242112/" title="Discord ID: Reika#3161"></a>
 					</div>
-					<div class = "linktile">
+					<div class = "linktile" style = "width: 11.75%">
 						<div class = "linklabel">Steam</div>
-						<div><a href="https://steamcommunity.com/id/ReikaKalseki/myworkshopfiles/"><img src="../../../images/steamico.png"  width="36"  height="36" title="Please no random friend requests"></a></div>
+						<a class = "icon icon-steam" href="https://steamcommunity.com/id/ReikaKalseki/myworkshopfiles/" title="Please no random friend requests"></a>
 					</div>
-					<div class = "linktile">
+					<div class = "linktile" style = "width: 11.75%">
 						<div class = "linklabel">YouTube</div>
-						<div><a href="https://www.youtube.com/user/ReikasMinecraft/videos"><img src="../../../images/ytico.png"  width="36"  height="36" ></a></div>
+						<a class = "icon icon-youtube" href="https://www.youtube.com/user/ReikasMinecraft/videos" ></a>
 					</div>
-					<div class = "linktile">
+					<div class = "linktile" style = "width: 11.75%">
 						<div class = "linklabel">SoundCloud</div>
-						<div><a href="https://soundcloud.com/reikakalseki"><img src="../../../images/soundico.png"  width="36"  height="36" title="Music Only"></a></div>
+						<a class = "icon icon-soundcloud" href="https://soundcloud.com/reikakalseki" title="Music Only"></a>
 					</div>
-					<div class = "linktile">
+					<div class = "linktile" style = "width: 11.75%">
 						<div class = "linklabel">Reddit</div>
-						<div><a href="https://www.reddit.com/user/ReikaKalseki/"><img src="../../../images/redditico.png"  width="36"  height="36" ></a></div>
+						<a class = "icon icon-reddit" href="https://www.reddit.com/user/ReikaKalseki/" ></a>
 					</div>
 			</div>
 		<hr>

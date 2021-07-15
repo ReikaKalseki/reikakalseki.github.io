@@ -1,20 +1,17 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
     <head>
         <link rel="shortcut icon" href="../../../images/favicon.ico">
         <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
 		<meta http-equiv="Cache-control" content="no-cache">
         <title>Change Logs</title>
-		<link rel="stylesheet" type="text/css" href="../../../global-style.css">
-		<link rel="stylesheet" type="text/css" href="../../../minecraft/local-style.css">
+		<link rel="stylesheet" type="text/css" href="../../../compiledJS/entrypoint.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Lato|Exo 2|Ubuntu|Cairo">
 		<script src = "../../../compiledJS/entrypoint.bundle.js"></script>
-		<div id = "script-list">
-			footer-spacing
-				,minecraft/precursor
-				,changeloader
-		</div>
+		<meta name="script-def" content="footer-spacing">
+			<meta name="script-def" content="minecraft/precursor">
+			<meta name="script-def" content="changeloader">
     </head>
     <body  data-game="minecraft">
         	<div id = "navbar" class="navbar">
@@ -101,7 +98,8 @@
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-changes">Change Viewer</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-changes'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 </table>
 </div>
-        <div class = "textarea">
+        <div id = "textarea" class = "textarea ">
+			<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
 			<!--<h2>Change Logs</h2>-->
 			<section class = "textblock" id = "text-block-intro">
 <h3>Introduction</h3>
@@ -128,6 +126,13 @@ These are the changelogs for all the mods going back as far as they have been ke
 		Show Changes
 	</th>
   </tr>
+<tr>
+<td>[ALL]</td>
+<td></td>
+<td></td>
+<td></td>
+<td><input type="checkbox" class="modchangecheck" data-value = "all" data-mod = "[ALL]" checked></td>
+</tr>
 <tr>
 <td><a href = "../../../minecraft\mods\dragonapi.html">DragonAPI</a></td>
 <td>1.4.7 - 1.7.10</td>
@@ -280,104 +285,104 @@ These are the changelogs for all the mods going back as far as they have been ke
 <br><br>
 <div style = "display: none">
 	<div id = "mod-version-list-1.7.10">
-			<div class = "mod-version-list-entry" data-date = "March 30, 2021">v29g</div>
-			<div class = "mod-version-list-entry" data-date = "March 29, 2021">v29f</div>
-			<div class = "mod-version-list-entry" data-date = "March 28, 2021">v29e</div>
-			<div class = "mod-version-list-entry" data-date = "March 27, 2021">v29d</div>
-			<div class = "mod-version-list-entry" data-date = "March 26, 2021">v29c</div>
-			<div class = "mod-version-list-entry" data-date = "March 24, 2021">v29b</div>
-			<div class = "mod-version-list-entry" data-date = "March 23, 2021">v29a</div>
-			<div class = "mod-version-list-entry" data-date = "January 6, 2021">v28a</div>
-			<div class = "mod-version-list-entry" data-date = "December 27, 2020">v27d</div>
-			<div class = "mod-version-list-entry" data-date = "December 27, 2020">v27c</div>
-			<div class = "mod-version-list-entry" data-date = "December 26, 2020">v27b</div>
-			<div class = "mod-version-list-entry" data-date = "December 4, 2020">v27a</div>
-			<div class = "mod-version-list-entry" data-date = "May 27, 2020">v26b</div>
-			<div class = "mod-version-list-entry" data-date = "May 23, 2020">v26a</div>
-			<div class = "mod-version-list-entry" data-date = "April 2, 2020">v25c</div>
-			<div class = "mod-version-list-entry" data-date = "April 1, 2020">v25b</div>
-			<div class = "mod-version-list-entry" data-date = "April 1, 2020">v25a</div>
-			<div class = "mod-version-list-entry" data-date = "December 22, 2019">v24b</div>
-			<div class = "mod-version-list-entry" data-date = "December 22, 2019">v24a</div>
-			<div class = "mod-version-list-entry" data-date = "October 27, 2019">v23b</div>
-			<div class = "mod-version-list-entry" data-date = "October 11, 2019">v23a</div>
-			<div class = "mod-version-list-entry" data-date = "December 22, 2018">v22d</div>
-			<div class = "mod-version-list-entry" data-date = "December 21, 2018">v22c</div>
-			<div class = "mod-version-list-entry" data-date = "December 19, 2018">v22b</div>
-			<div class = "mod-version-list-entry" data-date = "December 18, 2018">v22a</div>
-			<div class = "mod-version-list-entry" data-date = "August 9, 2018">v21b</div>
-			<div class = "mod-version-list-entry" data-date = "August 5, 2018">v21a</div>
-			<div class = "mod-version-list-entry" data-date = "July 22, 2018">v20c</div>
-			<div class = "mod-version-list-entry" data-date = "July 21, 2018">v20b</div>
-			<div class = "mod-version-list-entry" data-date = "July 20, 2018">v20a</div>
-			<div class = "mod-version-list-entry" data-date = "November 13, 2017">v19c</div>
-			<div class = "mod-version-list-entry" data-date = "November 10, 2017">v19b</div>
-			<div class = "mod-version-list-entry" data-date = "November 9, 2017">v19a</div>
-			<div class = "mod-version-list-entry" data-date = "August 11, 2017">v18b</div>
-			<div class = "mod-version-list-entry" data-date = "August 7, 2017">v18a</div>
-			<div class = "mod-version-list-entry" data-date = "May 27, 2017">v17c</div>
-			<div class = "mod-version-list-entry" data-date = "May 22, 2017">v17b</div>
-			<div class = "mod-version-list-entry" data-date = "May 21, 2017">v17a</div>
-			<div class = "mod-version-list-entry" data-date = "October 10, 2016">v16d</div>
-			<div class = "mod-version-list-entry" data-date = "October 8, 2016">v16c</div>
-			<div class = "mod-version-list-entry" data-date = "October 7, 2016">v16b</div>
-			<div class = "mod-version-list-entry" data-date = "October 5, 2016">v16</div>
-			<div class = "mod-version-list-entry" data-date = "">v15</div>
-			<div class = "mod-version-list-entry" data-date = "">v14d</div>
-			<div class = "mod-version-list-entry" data-date = "">v14c</div>
-			<div class = "mod-version-list-entry" data-date = "">v14b</div>
-			<div class = "mod-version-list-entry" data-date = "">v14</div>
-			<div class = "mod-version-list-entry" data-date = "">v13b</div>
-			<div class = "mod-version-list-entry" data-date = "">v13</div>
-			<div class = "mod-version-list-entry" data-date = "">v12e</div>
-			<div class = "mod-version-list-entry" data-date = "">v12d</div>
-			<div class = "mod-version-list-entry" data-date = "">v12c</div>
-			<div class = "mod-version-list-entry" data-date = "">v12b</div>
-			<div class = "mod-version-list-entry" data-date = "">v12</div>
-			<div class = "mod-version-list-entry" data-date = "">v11b</div>
-			<div class = "mod-version-list-entry" data-date = "">v11</div>
-			<div class = "mod-version-list-entry" data-date = "">v10d</div>
-			<div class = "mod-version-list-entry" data-date = "">v10c</div>
-			<div class = "mod-version-list-entry" data-date = "">v10b</div>
-			<div class = "mod-version-list-entry" data-date = "">v10</div>
-			<div class = "mod-version-list-entry" data-date = "">v9b</div>
-			<div class = "mod-version-list-entry" data-date = "">v9a</div>
-			<div class = "mod-version-list-entry" data-date = "">v8g</div>
-			<div class = "mod-version-list-entry" data-date = "">v8f</div>
-			<div class = "mod-version-list-entry" data-date = "">v8e</div>
-			<div class = "mod-version-list-entry" data-date = "">v8d</div>
-			<div class = "mod-version-list-entry" data-date = "">v8c</div>
-			<div class = "mod-version-list-entry" data-date = "">v8b</div>
-			<div class = "mod-version-list-entry" data-date = "">v8</div>
-			<div class = "mod-version-list-entry" data-date = "">v7f</div>
-			<div class = "mod-version-list-entry" data-date = "">v7e</div>
-			<div class = "mod-version-list-entry" data-date = "">v7d</div>
-			<div class = "mod-version-list-entry" data-date = "">v7c</div>
-			<div class = "mod-version-list-entry" data-date = "">v7b</div>
-			<div class = "mod-version-list-entry" data-date = "">v7</div>
-			<div class = "mod-version-list-entry" data-date = "">v6f</div>
-			<div class = "mod-version-list-entry" data-date = "">v6e</div>
-			<div class = "mod-version-list-entry" data-date = "">v6d</div>
-			<div class = "mod-version-list-entry" data-date = "">v6c</div>
-			<div class = "mod-version-list-entry" data-date = "">v6b</div>
-			<div class = "mod-version-list-entry" data-date = "">v6</div>
-			<div class = "mod-version-list-entry" data-date = "">v5c</div>
-			<div class = "mod-version-list-entry" data-date = "">v5b</div>
-			<div class = "mod-version-list-entry" data-date = "">v5</div>
-			<div class = "mod-version-list-entry" data-date = "">v4c</div>
-			<div class = "mod-version-list-entry" data-date = "">v4b</div>
-			<div class = "mod-version-list-entry" data-date = "">v4</div>
-			<div class = "mod-version-list-entry" data-date = "">v3d</div>
-			<div class = "mod-version-list-entry" data-date = "">v3c</div>
-			<div class = "mod-version-list-entry" data-date = "">v3b</div>
-			<div class = "mod-version-list-entry" data-date = "">v3</div>
-			<div class = "mod-version-list-entry" data-date = "">v2</div>
-			<div class = "mod-version-list-entry" data-date = "">v1f</div>
-			<div class = "mod-version-list-entry" data-date = "">v1e</div>
-			<div class = "mod-version-list-entry" data-date = "">v1d</div>
-			<div class = "mod-version-list-entry" data-date = "">v1c</div>
-			<div class = "mod-version-list-entry" data-date = "">v1b</div>
-			<div class = "mod-version-list-entry" data-date = "">v1</div>
+			<div class = "mod-version-list-entry" data-date = "March 30, 2021" data-modset = "rotarycraft|chromaticraft|dragonapi">v29g</div>
+			<div class = "mod-version-list-entry" data-date = "March 29, 2021" data-modset = "rotarycraft|dragonapi">v29f</div>
+			<div class = "mod-version-list-entry" data-date = "March 28, 2021" data-modset = "rotarycraft|reactorcraft|chromaticraft">v29e</div>
+			<div class = "mod-version-list-entry" data-date = "March 27, 2021" data-modset = "rotarycraft|reactorcraft|chromaticraft|dragonapi|satisforestry|cavecontrol">v29d</div>
+			<div class = "mod-version-list-entry" data-date = "March 26, 2021" data-modset = "rotarycraft|reactorcraft|chromaticraft|dragonapi|satisforestry|voidmonster|treeclimbing|cavecontrol">v29c</div>
+			<div class = "mod-version-list-entry" data-date = "March 24, 2021" data-modset = "rotarycraft|reactorcraft|dragonapi|satisforestry">v29b</div>
+			<div class = "mod-version-list-entry" data-date = "March 23, 2021" data-modset = "rotarycraft|meteorcraft|reactorcraft|chromaticraft|geostrata|dragonapi|satisforestry|legacycraft">v29a</div>
+			<div class = "mod-version-list-entry" data-date = "January 6, 2021" data-modset = "rotarycraft|meteorcraft|reactorcraft|chromaticraft|geostrata|dragonapi|satisforestry|critterpet">v28a</div>
+			<div class = "mod-version-list-entry" data-date = "December 27, 2020" data-modset = "reactorcraft|chromaticraft|dragonapi|satisforestry|critterpet">v27d</div>
+			<div class = "mod-version-list-entry" data-date = "December 27, 2020" data-modset = "dragonapi">v27c</div>
+			<div class = "mod-version-list-entry" data-date = "December 26, 2020" data-modset = "rotarycraft|meteorcraft|reactorcraft|chromaticraft|dragonapi|satisforestry">v27b</div>
+			<div class = "mod-version-list-entry" data-date = "December 4, 2020" data-modset = "rotarycraft|reactorcraft|chromaticraft|geostrata|dragonapi|satisforestry|condensedores|treeclimbing|electricraft|critterpet|cavecontrol">v27a</div>
+			<div class = "mod-version-list-entry" data-date = "May 27, 2020" data-modset = "rotarycraft|reactorcraft|chromaticraft|dragonapi">v26b</div>
+			<div class = "mod-version-list-entry" data-date = "May 23, 2020" data-modset = "rotarycraft|expandedredstone|reactorcraft|chromaticraft|dragonapi|archisections|condensedores|treeclimbing">v26a</div>
+			<div class = "mod-version-list-entry" data-date = "April 2, 2020" data-modset = "dragonapi">v25c</div>
+			<div class = "mod-version-list-entry" data-date = "April 1, 2020" data-modset = "rotarycraft|chromaticraft">v25b</div>
+			<div class = "mod-version-list-entry" data-date = "April 1, 2020" data-modset = "rotarycraft|meteorcraft|geostrata|cavecontrol|expandedredstone|reactorcraft|chromaticraft|dragonapi|voidmonster|archisections|condensedores|electricraft|critterpet|territoryzone">v25a</div>
+			<div class = "mod-version-list-entry" data-date = "December 22, 2019" data-modset = "rotarycraft|chromaticraft|dragonapi">v24b</div>
+			<div class = "mod-version-list-entry" data-date = "December 22, 2019" data-modset = "rotarycraft|reactorcraft|chromaticraft|geostrata|dragonapi|voidmonster|archisections|electricraft|critterpet">v24a</div>
+			<div class = "mod-version-list-entry" data-date = "October 27, 2019" data-modset = "rotarycraft|reactorcraft|chromaticraft|dragonapi|condensedores|critterpet">v23b</div>
+			<div class = "mod-version-list-entry" data-date = "October 11, 2019" data-modset = "rotarycraft|meteorcraft|loottweaks|geostrata|cavecontrol|expandedredstone|reactorcraft|chromaticraft|dragonapi|voidmonster|condensedores|electricraft|critterpet">v23a</div>
+			<div class = "mod-version-list-entry" data-date = "December 22, 2018" data-modset = "rotarycraft|chromaticraft|dragonapi">v22d</div>
+			<div class = "mod-version-list-entry" data-date = "December 21, 2018" data-modset = "rotarycraft|chromaticraft|dragonapi|voidmonster">v22c</div>
+			<div class = "mod-version-list-entry" data-date = "December 19, 2018" data-modset = "rotarycraft|chromaticraft|dragonapi">v22b</div>
+			<div class = "mod-version-list-entry" data-date = "December 18, 2018" data-modset = "rotarycraft|reactorcraft|chromaticraft|geostrata|dragonapi|voidmonster|electricraft">v22a</div>
+			<div class = "mod-version-list-entry" data-date = "August 9, 2018" data-modset = "rotarycraft|reactorcraft|chromaticraft|dragonapi|electricraft">v21b</div>
+			<div class = "mod-version-list-entry" data-date = "August 5, 2018" data-modset = "rotarycraft|meteorcraft|reactorcraft|chromaticraft|geostrata|dragonapi|condensedores|electricraft">v21a</div>
+			<div class = "mod-version-list-entry" data-date = "July 22, 2018" data-modset = "rotarycraft|reactorcraft|chromaticraft|geostrata|dragonapi">v20c</div>
+			<div class = "mod-version-list-entry" data-date = "July 21, 2018" data-modset = "chromaticraft|dragonapi">v20b</div>
+			<div class = "mod-version-list-entry" data-date = "July 20, 2018" data-modset = "rotarycraft|expandedredstone|reactorcraft|chromaticraft|geostrata|dragonapi|electricraft">v20a</div>
+			<div class = "mod-version-list-entry" data-date = "November 13, 2017" data-modset = "rotarycraft|reactorcraft|chromaticraft|dragonapi|voidmonster">v19c</div>
+			<div class = "mod-version-list-entry" data-date = "November 10, 2017" data-modset = "rotarycraft|reactorcraft|chromaticraft|dragonapi|electricraft">v19b</div>
+			<div class = "mod-version-list-entry" data-date = "November 9, 2017" data-modset = "rotarycraft|expandedredstone|meteorcraft|reactorcraft|chromaticraft|geostrata|dragonapi|voidmonster|electricraft|territoryzone">v19a</div>
+			<div class = "mod-version-list-entry" data-date = "August 11, 2017" data-modset = "reactorcraft|dragonapi">v18b</div>
+			<div class = "mod-version-list-entry" data-date = "August 7, 2017" data-modset = "rotarycraft|expandedredstone|meteorcraft|reactorcraft|chromaticraft|geostrata|dragonapi|electricraft">v18a</div>
+			<div class = "mod-version-list-entry" data-date = "May 27, 2017" data-modset = "rotarycraft|chromaticraft|geostrata|dragonapi">v17c</div>
+			<div class = "mod-version-list-entry" data-date = "May 22, 2017" data-modset = "rotarycraft|dragonapi|cavecontrol">v17b</div>
+			<div class = "mod-version-list-entry" data-date = "May 21, 2017" data-modset = "rotarycraft|meteorcraft|geostrata|legacycraft|cavecontrol|expandedredstone|reactorcraft|chromaticraft|dragonapi|voidmonster|condensedores|electricraft|critterpet|territoryzone">v17a</div>
+			<div class = "mod-version-list-entry" data-date = "October 10, 2016" data-modset = "rotarycraft|reactorcraft|chromaticraft|dragonapi|electricraft">v16d</div>
+			<div class = "mod-version-list-entry" data-date = "October 8, 2016" data-modset = "rotarycraft|dragonapi">v16c</div>
+			<div class = "mod-version-list-entry" data-date = "October 7, 2016" data-modset = "rotarycraft|chromaticraft|dragonapi">v16b</div>
+			<div class = "mod-version-list-entry" data-date = "October 5, 2016" data-modset = "rotarycraft|expandedredstone|meteorcraft|reactorcraft|chromaticraft|geostrata|dragonapi|electricraft|legacycraft|critterpet|territoryzone">v16</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|reactorcraft|chromaticraft|geostrata|dragonapi">v15</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|reactorcraft|chromaticraft|dragonapi">v14d</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|reactorcraft|chromaticraft|dragonapi|electricraft">v14c</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|reactorcraft|chromaticraft|geostrata|dragonapi|electricraft">v14b</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|expandedredstone|reactorcraft|chromaticraft|geostrata|dragonapi|voidmonster|electricraft|territoryzone">v14</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "expandedredstone|chromaticraft|dragonapi">v13b</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|expandedredstone|meteorcraft|reactorcraft|chromaticraft|geostrata|dragonapi|electricraft|territoryzone">v13</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|chromaticraft|dragonapi">v12e</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|reactorcraft|chromaticraft|dragonapi">v12d</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|reactorcraft|chromaticraft|dragonapi">v12c</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|reactorcraft|chromaticraft|dragonapi">v12b</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|expandedredstone|reactorcraft|chromaticraft|geostrata|dragonapi|electricraft">v12</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|expandedredstone|reactorcraft|chromaticraft|dragonapi">v11b</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|expandedredstone|meteorcraft|reactorcraft|chromaticraft|geostrata|dragonapi|electricraft|legacycraft|territoryzone">v11</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|reactorcraft|chromaticraft|dragonapi|legacycraft">v10d</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "dragonapi">v10c</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|chromaticraft|dragonapi|condensedores">v10b</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|expandedredstone|reactorcraft|chromaticraft|geostrata|dragonapi|condensedores|electricraft|legacycraft|cavecontrol">v10</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|reactorcraft|chromaticraft|dragonapi|electricraft">v9b</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|expandedredstone|reactorcraft|chromaticraft|geostrata|dragonapi|electricraft|territoryzone">v9a</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|chromaticraft|dragonapi">v8g</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|reactorcraft|chromaticraft|dragonapi|electricraft">v8f</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "chromaticraft|dragonapi">v8e</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|reactorcraft|chromaticraft|dragonapi">v8d</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|dragonapi">v8c</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|chromaticraft|geostrata|dragonapi">v8b</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|expandedredstone|meteorcraft|reactorcraft|chromaticraft|geostrata|dragonapi|voidmonster|electricraft">v8</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|dragonapi">v7f</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|reactorcraft|chromaticraft|dragonapi|electricraft">v7e</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|dragonapi">v7d</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|reactorcraft|chromaticraft|dragonapi">v7c</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|reactorcraft|chromaticraft|dragonapi|electricraft">v7b</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|meteorcraft|reactorcraft|chromaticraft|geostrata|dragonapi|voidmonster|electricraft|legacycraft|cavecontrol|territoryzone">v7</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|chromaticraft|dragonapi">v6f</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|reactorcraft|chromaticraft|dragonapi">v6e</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|chromaticraft|dragonapi">v6d</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|reactorcraft|chromaticraft|dragonapi|voidmonster">v6c</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|chromaticraft|territoryzone">v6b</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|reactorcraft|chromaticraft|geostrata|dragonapi|electricraft|territoryzone">v6</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|reactorcraft|chromaticraft|dragonapi">v5c</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|chromaticraft|dragonapi">v5b</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|expandedredstone|reactorcraft|chromaticraft|geostrata|dragonapi|electricraft|legacycraft">v5</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|meteorcraft|reactorcraft|chromaticraft|dragonapi|electricraft">v4c</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|reactorcraft|chromaticraft|dragonapi|electricraft">v4b</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|expandedredstone|meteorcraft|reactorcraft|chromaticraft|geostrata|dragonapi|voidmonster|electricraft|legacycraft|cavecontrol">v4</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|reactorcraft|chromaticraft|electricraft">v3d</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|dragonapi">v3c</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|expandedredstone|reactorcraft|chromaticraft|geostrata|dragonapi">v3b</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|expandedredstone|meteorcraft|reactorcraft|chromaticraft|geostrata|dragonapi|voidmonster|electricraft|legacycraft">v3</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|meteorcraft|reactorcraft|chromaticraft|dragonapi|electricraft|legacycraft">v2</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|meteorcraft|reactorcraft|chromaticraft|dragonapi|electricraft">v1f</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|meteorcraft|reactorcraft|chromaticraft|geostrata|dragonapi">v1e</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|reactorcraft|chromaticraft|dragonapi">v1d</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|chromaticraft|dragonapi|electricraft">v1c</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|chromaticraft|dragonapi|electricraft">v1b</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "reactorcraft|geostrata|electricraft">v1</div>
 	</div>
 			<div class = "changelog-data-cache" id = "1.7.10|v29g|dragonapi"><ul class = "changelist">				
 					<li>Fixed encoding on XML loader to ensure they are loaded as UTF8</li>
@@ -6537,53 +6542,53 @@ These are the changelogs for all the mods going back as far as they have been ke
 </ul>
 			</div>
 	<div id = "mod-version-list-1.6.4">
-			<div class = "mod-version-list-entry" data-date = "">v25z</div>
-			<div class = "mod-version-list-entry" data-date = "">v25g</div>
-			<div class = "mod-version-list-entry" data-date = "">v25f</div>
-			<div class = "mod-version-list-entry" data-date = "">v25e</div>
-			<div class = "mod-version-list-entry" data-date = "">v25d</div>
-			<div class = "mod-version-list-entry" data-date = "">v25c</div>
-			<div class = "mod-version-list-entry" data-date = "">v25b</div>
-			<div class = "mod-version-list-entry" data-date = "">v25</div>
-			<div class = "mod-version-list-entry" data-date = "">v24b</div>
-			<div class = "mod-version-list-entry" data-date = "">v24</div>
-			<div class = "mod-version-list-entry" data-date = "">v23d</div>
-			<div class = "mod-version-list-entry" data-date = "">v23c</div>
-			<div class = "mod-version-list-entry" data-date = "">v23b</div>
-			<div class = "mod-version-list-entry" data-date = "">v23</div>
-			<div class = "mod-version-list-entry" data-date = "">v22</div>
-			<div class = "mod-version-list-entry" data-date = "">v21b</div>
-			<div class = "mod-version-list-entry" data-date = "">v21</div>
-			<div class = "mod-version-list-entry" data-date = "">v20g</div>
-			<div class = "mod-version-list-entry" data-date = "">v20f</div>
-			<div class = "mod-version-list-entry" data-date = "">v20e</div>
-			<div class = "mod-version-list-entry" data-date = "">v20d</div>
-			<div class = "mod-version-list-entry" data-date = "">v20c</div>
-			<div class = "mod-version-list-entry" data-date = "">v20b</div>
-			<div class = "mod-version-list-entry" data-date = "">v20</div>
-			<div class = "mod-version-list-entry" data-date = "">v19b</div>
-			<div class = "mod-version-list-entry" data-date = "">v19</div>
-			<div class = "mod-version-list-entry" data-date = "">v18d</div>
-			<div class = "mod-version-list-entry" data-date = "">v18c</div>
-			<div class = "mod-version-list-entry" data-date = "">v18b</div>
-			<div class = "mod-version-list-entry" data-date = "">v18</div>
-			<div class = "mod-version-list-entry" data-date = "">v17b</div>
-			<div class = "mod-version-list-entry" data-date = "">v17</div>
-			<div class = "mod-version-list-entry" data-date = "">v16d</div>
-			<div class = "mod-version-list-entry" data-date = "">v16c</div>
-			<div class = "mod-version-list-entry" data-date = "">v16b</div>
-			<div class = "mod-version-list-entry" data-date = "">v16</div>
-			<div class = "mod-version-list-entry" data-date = "">v15b</div>
-			<div class = "mod-version-list-entry" data-date = "">v15</div>
-			<div class = "mod-version-list-entry" data-date = "">v14b</div>
-			<div class = "mod-version-list-entry" data-date = "">v14</div>
-			<div class = "mod-version-list-entry" data-date = "">v13</div>
-			<div class = "mod-version-list-entry" data-date = "">v12d</div>
-			<div class = "mod-version-list-entry" data-date = "">v12c</div>
-			<div class = "mod-version-list-entry" data-date = "">v12b</div>
-			<div class = "mod-version-list-entry" data-date = "">v12</div>
-			<div class = "mod-version-list-entry" data-date = "">v11b</div>
-			<div class = "mod-version-list-entry" data-date = "">v11a</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|reactorcraft|geostrata|dragonapi|voidmonster|electricraft">v25z</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|reactorcraft|geostrata|dragonapi|dyetrees">v25g</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|reactorcraft|geostrata|dragonapi|electricraft">v25f</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|expandedredstone">v25e</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|dragonapi">v25d</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|reactorcraft|dragonapi|electricraft">v25c</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "dragonapi">v25b</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|expandedredstone|meteorcraft|reactorcraft|geostrata|dragonapi|voidmonster|dyetrees|electricraft|legacycraft|critterpet">v25</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft">v24b</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|meteorcraft|reactorcraft|geostrata|dragonapi|voidmonster|electricraft|critterpet">v24</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|reactorcraft|geostrata|dragonapi|electricraft">v23d</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "reactorcraft">v23c</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|expandedredstone|reactorcraft|geostrata|dragonapi">v23b</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|expandedredstone|meteorcraft|reactorcraft|geostrata|dragonapi|dyetrees|electricraft|critterpet">v23</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|expandedredstone|reactorcraft|geostrata|dragonapi|voidmonster|dyetrees|critterpet">v22</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft">v21b</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|meteorcraft|reactorcraft|enderforest|geostrata|dyetrees|electricraft">v21</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "dragonapi">v20g</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|meteorcraft|reactorcraft|geostrata|dragonapi|electricraft">v20f</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|reactorcraft|dragonapi">v20e</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|reactorcraft|geostrata|dragonapi|electricraft">v20d</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft">v20c</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft">v20b</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|reactorcraft|geostrata|dragonapi|dyetrees|electricraft|legacycraft">v20</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|meteorcraft|reactorcraft|enderforest|geostrata|dragonapi|voidmonster|electricraft|legacycraft">v19b</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|meteorcraft|reactorcraft|geostrata|dragonapi|voidmonster|dyetrees|electricraft|critterpet">v19</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|reactorcraft|dragonapi|dyetrees">v18d</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "">v18c</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|dragonapi">v18b</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|expandedredstone|meteorcraft|reactorcraft|enderforest|geostrata|dragonapi|dyetrees|legacycraft">v18</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|reactorcraft">v17b</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|meteorcraft|reactorcraft|geostrata|dragonapi|voidmonster|dyetrees">v17</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "dragonapi">v16d</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|dragonapi">v16c</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|dragonapi">v16b</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|expandedredstone|meteorcraft|reactorcraft|geostrata|dragonapi|dyetrees">v16</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "reactorcraft|dragonapi">v15b</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|expandedredstone|meteorcraft|reactorcraft|enderforest|geostrata|dragonapi|dyetrees|legacycraft">v15</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|reactorcraft">v14b</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|expandedredstone|meteorcraft|reactorcraft|geostrata|dragonapi|dyetrees|legacycraft">v14</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|expandedredstone|reactorcraft|dragonapi|legacycraft">v13</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|dragonapi|critterpet">v12d</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|expandedredstone|geostrata|dragonapi">v12c</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|dragonapi">v12b</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|meteorcraft|reactorcraft|enderforest|geostrata|dragonapi|dyetrees|legacycraft">v12</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|reactorcraft|geostrata|dragonapi|dyetrees|legacycraft">v11b</div>
+			<div class = "mod-version-list-entry" data-date = "" data-modset = "rotarycraft|expandedredstone|meteorcraft|geostrata|dragonapi|dyetrees">v11a</div>
 	</div>
 			<div class = "changelog-data-cache" id = "1.6.4|v25z|dragonapi"><ul class = "changelist">				
 					<li>Expanded WorldLocation class</li>
@@ -8475,7 +8480,7 @@ These are the changelogs for all the mods going back as far as they have been ke
 </div>
 <br><br>
 <section class = "textblock" id = "text-block-changes">
-<h3>Change Logs</h3>
+<span><div style = "display: inline-block; width: 49.8%; text-align: left;"><h3>Change Logs</h3></div><div style = "display: inline-block; width: 49.8%; text-align: right;"><button type="button" id = "newverbtn"><span>Select Most Recent Version<div class = "spacer"></div><i class="fas fa-fast-forward"></i></span></button></div></span>
 <table class = "changetable">
 	<tr>
 		<th class = "changetable-header" style = "width: 11%;">
@@ -8491,8 +8496,8 @@ These are the changelogs for all the mods going back as far as they have been ke
 	<tr>
 		<td style = "vertical-align: top;">
 			<div id = "gamever-box">
-				<button type="button" class = "verbtn-game" data-value = "1.7.10"><span><div class = "gamever-width">1.7.10</div><i class="fas fa-angle-right"></i></span></button><br>
-				<button type="button" class = "verbtn-game" data-value = "1.6.4"><span><div class = "gamever-width">1.6.4</div><i class="fas fa-angle-right"></i></span></button><br>
+				<button type="button"  id = "newestgamever"  class = "verbtn-game" data-value = "1.7.10"><span><div class = "gamever-width">1.7.10</div><i class="fas fa-angle-right"></i></span></button><br>
+				<button type="button"  class = "verbtn-game" data-value = "1.6.4"><span><div class = "gamever-width">1.6.4</div><i class="fas fa-angle-right"></i></span></button><br>
 			</div>
 		</td>
 		<td>
@@ -8515,49 +8520,49 @@ These are the changelogs for all the mods going back as far as they have been ke
 		For both systems, the amount you choose to donate is up to you, and for Patreon, can be changed at any time should you wish to decrease or increase the amount.<br>
 		And thank you for your support. :D<br>
 					<div class = "linkiconblock">
-					<div class = "linktile">
+					<div class = "linktile" style = "width: 49.75%">
 						<div class = "linklabel">Patreon</div>
-						<div><a href="http://www.patreon.com/reikasminecraft"><img src="../../../images/patreon.png"  height="48" ></a></div>
+						<a class = "icon icon-patreon" href="http://www.patreon.com/reikasminecraft" ></a>
 					</div>
-					<div class = "linktile">
+					<div class = "linktile" style = "width: 49.75%">
 						<div class = "linklabel">Paypal</div>
-						<div><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5XRAM3SXBRJY4"><img src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif"  height="48" ></a></div>
+						<a class = "icon icon-paypal" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5XRAM3SXBRJY4" ></a>
 					</div>
 			</div>
 		<hr>
 		To contact me (though some of these are only checked periodically, and many are for specific topics) or find additional information or content, visit any one of these platforms:<br>
 					<div class = "linkiconblock">
-					<div class = "linktile">
+					<div class = "linktile" style = "width: 11.75%">
 						<div class = "linklabel">Minecraft Forums</div>
-						<div><a href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1291655"><img src="../../../images/mcico.png"  width="36"  height="36" title="Minecraft Only"></a></div>
+						<a class = "icon icon-mcforums" href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1291655" title="Minecraft Only"></a>
 					</div>
-					<div class = "linktile">
+					<div class = "linktile" style = "width: 11.75%">
 						<div class = "linklabel">Factorio Forums</div>
-						<div><a href="https://forums.factorio.com/viewforum.php?f=216"><img src="../../../images/factorio.png"  width="36"  height="36" title="Factorio Only"></a></div>
+						<a class = "icon icon-facforums" href="https://forums.factorio.com/viewforum.php?f=216" title="Factorio Only"></a>
 					</div>
-					<div class = "linktile">
+					<div class = "linktile" style = "width: 11.75%">
 						<div class = "linklabel">GitHub</div>
-						<div><a href="https://github.com/ReikaKalseki"><img src="../../../images/gitico.png"  width="36"  height="36" ></a></div>
+						<a class = "icon icon-github" href="https://github.com/ReikaKalseki" ></a>
 					</div>
-					<div class = "linktile">
+					<div class = "linktile" style = "width: 11.75%">
 						<div class = "linklabel">Discord</div>
-						<div><a href="https://discordapp.com/channels/@me/143569407665242112/"><img src="../../../images/discico.png"  width="36"  height="36" title="Discord ID: Reika#3161"></a></div>
+						<a class = "icon icon-discord" href="https://discordapp.com/channels/@me/143569407665242112/" title="Discord ID: Reika#3161"></a>
 					</div>
-					<div class = "linktile">
+					<div class = "linktile" style = "width: 11.75%">
 						<div class = "linklabel">Steam</div>
-						<div><a href="https://steamcommunity.com/id/ReikaKalseki/myworkshopfiles/"><img src="../../../images/steamico.png"  width="36"  height="36" title="Please no random friend requests"></a></div>
+						<a class = "icon icon-steam" href="https://steamcommunity.com/id/ReikaKalseki/myworkshopfiles/" title="Please no random friend requests"></a>
 					</div>
-					<div class = "linktile">
+					<div class = "linktile" style = "width: 11.75%">
 						<div class = "linklabel">YouTube</div>
-						<div><a href="https://www.youtube.com/user/ReikasMinecraft/videos"><img src="../../../images/ytico.png"  width="36"  height="36" ></a></div>
+						<a class = "icon icon-youtube" href="https://www.youtube.com/user/ReikasMinecraft/videos" ></a>
 					</div>
-					<div class = "linktile">
+					<div class = "linktile" style = "width: 11.75%">
 						<div class = "linklabel">SoundCloud</div>
-						<div><a href="https://soundcloud.com/reikakalseki"><img src="../../../images/soundico.png"  width="36"  height="36" title="Music Only"></a></div>
+						<a class = "icon icon-soundcloud" href="https://soundcloud.com/reikakalseki" title="Music Only"></a>
 					</div>
-					<div class = "linktile">
+					<div class = "linktile" style = "width: 11.75%">
 						<div class = "linklabel">Reddit</div>
-						<div><a href="https://www.reddit.com/user/ReikaKalseki/"><img src="../../../images/redditico.png"  width="36"  height="36" ></a></div>
+						<a class = "icon icon-reddit" href="https://www.reddit.com/user/ReikaKalseki/" ></a>
 					</div>
 			</div>
 		<hr>
