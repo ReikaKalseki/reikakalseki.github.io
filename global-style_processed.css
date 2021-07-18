@@ -7,9 +7,16 @@ html {
 
 body {
 	margin: 0px !important;
-	margin: 0px !important;
+	padding: 0px !important;
 	font-size: 97%;
 	overflow-x: hidden;
+	min-height: 100vh;
+	transform: translate(0);
+}
+
+#footer-spacing {
+	margin: 0px !important;
+	padding: 0px !important;
 }
 
 .core-body, .other-project-body {
@@ -351,13 +358,8 @@ audio {
   background-color: black;
 	overflow-x: hidden;
 	overflow-y: hidden;
-}
-
-#background-content * {
-	overflow-x: hidden !important;
-	overflow-y: hidden !important;
-  padding: 0px;
-  margin: 0px;
+	height:100%;
+	width:100%;
 }
 
 .tile-layer {/*
