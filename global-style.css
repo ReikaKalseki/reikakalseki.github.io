@@ -559,6 +559,7 @@ audio {
 	transition: 0.3s;
   min-width: 12.5vw;
   max-width: 12.5vw;
+  min-height: max(2vh, 0.68cm, 20px);
 	  float: none;
   padding: 7px 0px;
   font-size: 0.9vw;
@@ -582,6 +583,7 @@ audio {
 	transition: 0.3s;
   min-width: 12.5vw;
   max-width: 12.5vw;
+  min-height: max(2vh, 0.68cm, 20px);
 	font-family: "Exo 2", "Ubuntu", "Verdana", sans-serif !important;
 }
 
@@ -599,6 +601,7 @@ audio {
   padding: 7px 17px; /* marker */
   min-width: 12.5vw;
   max-width: 12.5vw;
+  min-height: max(2vh, 0.68cm, 20px);
   background-color: inherit;
   font-family: inherit;
 	transition: 0.3s;
@@ -621,7 +624,7 @@ audio {
   position: absolute;
   min-width: 12.5vw;
   max-width: 12.5vw;
-  min-height: 20px;
+  min-height: max(2vh, 0.68cm, 20px);
 	border-top: 1px solid #000000;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
