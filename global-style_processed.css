@@ -628,7 +628,7 @@ audio {
   min-width: 14vw;
   max-width: 14vw;
   min-height: max(2vh, 0.6cm, 1.3564839934888768rem);
-  max-height: min(80vh, calc(calc(max(2vh, 0.6cm, 1.3564839934888768rem)+0.9495387954422136rem)*15));/*min(80vh, calc(95vh-max(2vh, 0.6cm, 1.3564839934888768rem)));*/
+  max-height: min(80vh, calc(calc(max(2vh, 0.6cm, 1.3564839934888768rem)+0.9495387954422136rem)*18));/*min(80vh, calc(95vh-max(2vh, 0.6cm, 1.3564839934888768rem)));*/
   overflow-y:auto;
 	border-top: 0.06782419967444384rem solid #000000;
   box-shadow: 0px 0.5425935973955507rem 1.0851871947911014rem 0px rgba(0,0,0,0.2);
