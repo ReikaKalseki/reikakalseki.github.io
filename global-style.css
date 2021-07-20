@@ -26,6 +26,8 @@ body {
 .error-body {
 	background-size:cover;
 	background-repeat:   no-repeat;
+	overflow-y: hidden;
+	max-height: 100vh;
 }
 
 .colorized a, b a, i a {
@@ -42,6 +44,24 @@ body {
   50% {
     opacity: 0.33;
   }
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeOutOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 .setting-name {
@@ -560,8 +580,8 @@ audio {
 
 .navdrop-entry {
 	transition: 0.3s;
-  min-width: 14vw;
-  max-width: 14vw;
+  min-width: calc(14vw*0.97);
+  max-width: calc(14vw*0.97);
   min-height: max(2vh, 0.6cm, 20px);
 	  float: none;
   padding: 7px 0px;
@@ -573,6 +593,21 @@ audio {
 	color: #ffffff;
 	font-weight: normal;
 	font-family: "Exo 2", "Ubuntu", "Verdana", sans-serif;
+}
+
+.nav-scroller {
+	width: 2rem !important;
+	/*overflow-x: hidden;*/
+	 color: #22aaff !important;
+	 padding: 0px;
+	 margin: 0px;
+	 position: absolute;
+	 
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 0.25s;
 }
 
 .navbar-button {
@@ -612,7 +647,7 @@ audio {
 	font-family: "Exo 2", "Ubuntu", "Verdana", sans-serif !important;
 }
 
-.navbar a:hover, .navdropdown:hover .navdropbtn {
+.navbar a:hover, .navdropdown:hover .navdropbtn, .navdrop-entry-text:hover {
     background: #22aaff none repeat scroll 0% 50%;
 	color: #000000 !important;
 }
@@ -628,8 +663,8 @@ audio {
   min-width: 14vw;
   max-width: 14vw;
   min-height: max(2vh, 0.6cm, 20px);
-  max-height: min(80vh, calc(calc(max(2vh, 0.6cm, 20px)+14px)*18));/*min(80vh, calc(95vh-max(2vh, 0.6cm, 20px)));*/
-  overflow-y:auto;
+  max-height: min(80vh, calc(calc(max(2vh, 0.6cm, 20px)+14px)*15));/*min(80vh, calc(95vh-max(2vh, 0.6cm, 20px)));*/
+  overflow-y:scroll;
 	border-top: 1px solid #000000;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
