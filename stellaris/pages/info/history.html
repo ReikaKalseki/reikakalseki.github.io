@@ -7,39 +7,40 @@
         <title>History</title>
 		<link rel="stylesheet" type="text/css" href="../../../compiledJS/entrypoint.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Lato|Exo 2|Ubuntu|Cairo">
+		<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Lato|Exo 2|Ubuntu|Cairo"> -->
 		<script src = "../../../compiledJS/entrypoint.bundle.js"></script>
 		<meta name="script-def" content="footer-spacing">
 		<meta name="script-def" content="navbar-scroll-indicator">
+		<meta name="script-def" content="quicknav-pos">
     </head>
     <body  data-game="stellaris">
         	<div id = "navbar" class="navbar">
 	  <a class="navbar-button" href="../../../index.html">Reika's Mods Home</a>
 	  <a class="navbar-button" href="../../../stellaris/index.html">Stellaris Home</a>
 		  <div class="navdropdown">
-			<button class="navdropbtn">Information <i class="fa fa-angle-down"></i></button>
+			<div class="navdropbtn">Information <i class="fa fa-angle-down"></i></div>
 			<div class="navdrop-content">
-					<a class = "navdrop-entry" href="../../../stellaris\pages\info\faq.html">FAQ</a>
-					<a class = "navdrop-entry" href="../../../stellaris\pages\info\contact.html">Contact</a>
-					<a class = "navdrop-entry" href="../../../stellaris\pages\info\history.html">History</a>
-					<a class = "navdrop-entry" href="../../../stellaris\pages\info\changelog.html">Change Logs</a>
+					<a class = "navdrop-entry" href="../../../stellaris/pages/info/faq.html">FAQ</a>
+					<a class = "navdrop-entry" href="../../../stellaris/pages/info/contact.html">Contact</a>
+					<a class = "navdrop-entry" href="../../../stellaris/pages/info/history.html">History</a>
+					<a class = "navdrop-entry" href="../../../stellaris/pages/info/changelog.html">Change Logs</a>
 			</div>
 		  </div>
 		  <div class="navdropdown">
-			<button class="navdropbtn">Permissions <i class="fa fa-angle-down"></i></button>
+			<div class="navdropbtn">Permissions <i class="fa fa-angle-down"></i></div>
 			<div class="navdrop-content">
-					<a class = "navdrop-entry" href="../../../stellaris\pages\perms\license.html">License</a>
+					<a class = "navdrop-entry" href="../../../stellaris/pages/perms/license.html">License</a>
 			</div>
 		  </div>
 	  <div class="navdropdown">
-		<button class="navdropbtn">Mods <i class="fa fa-angle-down"></i></button>
+		<div class="navdropbtn">Mods <i class="fa fa-angle-down"></i></div>
 		<div class="navdrop-content">
-				<a class = "navdrop-entry" href="../../../stellaris\mods\alerans.html">Aleran Commonwealth</a>
-				<a class = "navdrop-entry" href="../../../stellaris\mods\edstarnames.html">E:D Star Names</a>
+				<a class = "navdrop-entry" href="../../../stellaris/mods/alerans.html">Aleran Commonwealth</a>
+				<a class = "navdrop-entry" href="../../../stellaris/mods/edstarnames.html">E:D Star Names</a>
 		</div>
 	  </div>
 	  <div class="navdropdown">
-		<button class="navdropbtn">Other Games <i class="fa fa-angle-down"></i></button>
+		<div class="navdropbtn">Other Games <i class="fa fa-angle-down"></i></div>
 		<div class="navdrop-content">
 				<a class = "navdrop-entry" href="../../../minecraft/index.html">Minecraft</a>
 				<a class = "navdrop-entry" href="../../../factorio/index.html">Factorio</a>
@@ -50,7 +51,7 @@
 		</div>
 	  </div>
 	  <div class="navdropdown">
-		<button class="navdropbtn">Other Projects <i class="fa fa-angle-down"></i></button>
+		<div class="navdropbtn">Other Projects <i class="fa fa-angle-down"></i></div>
 		<div class="navdrop-content">
 				<a class = "navdrop-entry" href="../../../projects/calendar.html">Game Calendar</a>
 				<a class = "navdrop-entry" href="../../../projects/eventbuilder.html">Stellaris Event Builder</a>
@@ -60,18 +61,18 @@
 	</div>
 		<noscript><div style = "text-align: center; width: 100%;"><div id = "nojs-header"><div><img class = "header-alert" src = "../../../images/alert.png"></div><div>You have JavaScript disabled; it is recommended you enable it for this site.<br>While the site will (mostly) function with scripts disabled, some sections (eg changelog view, or sortable tables) require it to update the page contents based on your input.<br>Additionally, JS is used to generate page styling, meaning disabling scripts will leave pages ugly, boring, and in some cases poorly arranged in ways that might impede readability.<br>If you have no idea what this means, or have not in fact disabled scripts, try simply reloading the page, as it may not have loaded completely or correctly.</div></div></div></noscript>
 		<div id="toc_container">
-<h3>Quick Nav</h3>
+<span><div style = "display: inline-block;width: 40%; text-align: left;"><h3>Quick Nav</h3></div><div class = "inset-toggle" style = "width: 60%;"><input type="checkbox" id="toc-follow-toggle" checked> Follow Scroll</div></span>
 <hr>
 <table class="toc_list">
 	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><span><i class="fas fa-angle-double-up"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-gettingstarted">Getting Started</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-gettingstarted'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-foundingthecommonwealth">Founding the Commonwealth</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-foundingthecommonwealth'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-thecommonwealth">The Commonwealth</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-thecommonwealth'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-deeperstory">Deeper Story</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-deeperstory'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 </table>
 </div>
         <div id = "textarea" class = "textarea ">
 				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
-			<!--<h2>History</h2>-->
+			<!-- <h2>History</h2> -->
 						<section class = "textblock" id = "text-block-gettingstarted">
 				<h3>Getting Started</h3>
 					
@@ -91,10 +92,10 @@
 </div>
 					</section>
 			</section><br>
-			<section class = "textblock" id = "text-block-foundingthecommonwealth">
+			<section class = "textblock" id = "text-block-thecommonwealth">
 				<h3>Founding the Commonwealth</h3>
 					
-					That save did not last very long - 200 stars went by in a week - but by the end I had greatly expanded upon the species mod, and ended up splitting it into a totally new species mod, and started work on a custom prescripted country, the <a href="../../../stellaris\mods\alerans.html">Aleran Commonwealth</a>. The core concept of this empire design was as a foil to the genocidal empires, which come with <i>significant</i> gameplay advantages (enough so that at the time the meme of "I spawned near one, time for a new save" was widespread). Not only did I want to have a strong gameplay position - without being forced to play as "the bad guys", which I never want to do in any game - but I felt that their existence with unopposed advantages made for a very lopsided galaxy.
+					That save did not last very long - 200 stars went by in a week - but by the end I had greatly expanded upon the species mod, and ended up splitting it into a totally new species mod, and started work on a custom prescripted country, the <a href="../../../stellaris/mods/alerans.html">Aleran Commonwealth</a>. The core concept of this empire design was as a foil to the genocidal empires, which come with <i>significant</i> gameplay advantages (enough so that at the time the meme of "I spawned near one, time for a new save" was widespread). Not only did I want to have a strong gameplay position - without being forced to play as "the bad guys", which I never want to do in any game - but I felt that their existence with unopposed advantages made for a very lopsided galaxy.
 					
 					
 					<br><br>

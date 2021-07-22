@@ -14,6 +14,10 @@ body {
 	transform: translate(0);
 }
 
+b {
+	font-size: 99%;
+}
+
 #footer-spacing {
 	margin: 0px !important;
 	padding: 0px !important;
@@ -65,7 +69,7 @@ body {
 }
 
 .setting-name {
-	font-family: "Code New Roman", monospace;
+	font-family: "Code New Roman", monospace !important;
 	letter-spacing: 0px;
 	font-size: 110%;
 }
@@ -79,17 +83,19 @@ body {
 }
 
 .image-caption {
-	font-size: 100%;
-	font-weight: 600;
-	/*font-family: "Exo 2", "Ubuntu", "Verdana", sans-serif !important;*/
-	font-family: "Source Sans Pro", "Ubuntu", "Verdana", sans-serif;
+	font-size: 108%;
+	font-weight: 700;
+	/*font-family: "Exo 2", "Ubuntu", "Verdana", sans-serif !important;
+	font-family: "Source Sans Pro", "Ubuntu", "Verdana", sans-serif;*/
+	font-family: "Cairo", "Verdana", sans-serif !important;
 }
 
 .toc-entry {
 	letter-spacing: 1px;
 	font-family: "Cairo", "Verdana", sans-serif !important;
-	font-weight: 600;
+	font-weight: 700;
 	overflow-x: hidden;
+	font-size: 105%;
 }
 
 .toc-entry-label {
@@ -108,8 +114,8 @@ display: inline-block;
 	margin-bottom: 16px;
   border: solid 9Q;
   border-radius: 9Q;
-  font-weight: bold;
-  font-size: 120%;
+  font-weight: 600;
+  font-size: 125%;
   width: 85%;
 }
 
@@ -148,19 +154,29 @@ display: inline-block;
   border-radius: 3Q;
 }
 
+.inset-toggle {
+	font-size: 90%; 
+	display: inline-block; 
+	text-align: right;/*
+	margin-top: -12px;
+	margin-right: -15px;*/
+	position: absolute;
+    right: 6px;
+    top: 1px;
+}
+
 #toc_container {
 	border: 2Q groove #777;
-	display: table;
 	width: auto;
 	width: 14%;
 	right: 84.4%;
 	/*font-size: 105%;*/
 	font-size: 0.83vw;
-	position:fixed;
+	position:absolute;
 	margin: auto;
 	display:block;
 	margin-top: 12px;
-	font-weight: bold;
+	font-weight: 600;
 	background-image: url("images/text-bcg.png");
 	padding-left: 9px;
 	padding-right: 9px;
@@ -169,6 +185,10 @@ display: inline-block;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+#toc-follow-toggle {
+	vertical-align: text-top;
 }
 
 .tocbtn {
@@ -240,7 +260,7 @@ display: inline-block;
   border: none;
   color: #FFFFFF;
   text-align: center;
-  font-size: 120%;
+  font-size: 125%;
   padding: 6px;
   width: 100%;
   transition: all 0.5s;
@@ -347,6 +367,7 @@ audio {
 .linklabel {
 	padding-bottom: 4px;
 	font-weight: bold;
+	font-family: "Cairo", "Verdana", sans-serif !important;
 }
 
 .linktile {
@@ -579,35 +600,49 @@ audio {
 }
 
 .navdrop-entry {
-	transition: 0.3s;
-  min-width: calc(14vw*0.97);
-  max-width: calc(14vw*0.97);
   min-height: max(2vh, 0.6cm, 20px);
-	  float: none;
   padding: 7px 0px;
   font-size: 0.9vw;
   text-decoration: none;
   display: block;
   text-align: center;
-      background: #323232 none repeat scroll 0% 50%;
 	color: #ffffff;
 	font-weight: normal;
 	font-family: "Exo 2", "Ubuntu", "Verdana", sans-serif;
 }
 
 .nav-scroller {
-	width: 2rem !important;
 	/*overflow-x: hidden;*/
 	 color: #22aaff !important;
 	 padding: 0px;
 	 margin: 0px;
-	 position: absolute;
 	 
-	opacity: 1;
+	opacity: 0;
 	animation-name: fadeInOpacity;
 	animation-iteration-count: 1;
 	animation-timing-function: ease-in;
 	animation-duration: 0.25s;
+	
+	display: flex;
+flex-direction: row;
+justify-content: space-between;
+position: sticky;
+
+height:0;
+overflow:visible;
+
+transition: opacity 0.25s linear; /* could also use ease-in-out for a more "accelerating" one */
+}
+
+.nav-scroller-up {
+   top: 0px;
+}
+.nav-scroller-down {
+    bottom: 37px;
+}
+
+.nav-scroller .fas {
+	padding: 10px;
 }
 
 .navbar-button {
@@ -640,11 +675,11 @@ audio {
   min-width: 14vw;
   max-width: 14vw;
   min-height: max(2vh, 0.6cm, 20px);
-  background-color: inherit;
   font-family: inherit;
 	transition: 0.3s;
   margin: 0;
 	font-family: "Exo 2", "Ubuntu", "Verdana", sans-serif !important;
+	box-sizing:border-box;
 }
 
 .navbar a:hover, .navdropdown:hover .navdropbtn, .navdrop-entry-text:hover {
@@ -663,15 +698,17 @@ audio {
   min-width: 14vw;
   max-width: 14vw;
   min-height: max(2vh, 0.6cm, 20px);
-  max-height: min(80vh, calc(calc(max(2vh, 0.6cm, 20px)+14px)*15));/*min(80vh, calc(95vh-max(2vh, 0.6cm, 20px)));*/
-  overflow-y:scroll;
+  max-height: min(80vh, calc(calc(max(2vh, 0.6cm, 20px)+14px)*13));/*min(80vh, calc(95vh-max(2vh, 0.6cm, 20px)));*/
+  overflow-y:auto;
 	border-top: 1px solid #000000;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-  background-color: inherit;
 	transition: 0.15s;
 	font-weight: normal;
 	font-family: "Exo 2", "Ubuntu", "Verdana", sans-serif;
+      background: #323232 none repeat scroll 0% 50%;
+	  
+	  flex-direction: column;
 }
 
 .navdrop-content a:hover {
@@ -680,7 +717,7 @@ audio {
 }
 
 .navdropdown:hover .navdrop-content {
-  display: block;
+  display: flex;
 }
 
 .navdropdown-subheader {
@@ -785,14 +822,17 @@ h3 {
   margin-bottom: 1px;
 	border-bottom: 2px groove #fff;
 	letter-spacing: 0.5px;
-	font-family: "Exo 2", "Ubuntu", "Verdana", sans-serif;
+	font-family: "Exo 2", "Ubuntu", "Verdana", sans-serif !important;
+  font-weight: 600;
+  font-size: 124%;
 }
 
 h4 {
   margin-top: 2px;
   margin-bottom: 1px;
 	letter-spacing: 0.5px;
-	font-family: "Exo 2", "Ubuntu", "Verdana", sans-serif;
+	font-family: "Exo 2", "Ubuntu", "Verdana", sans-serif !important;
+  font-weight: 700;
 }
 
 table {
@@ -812,6 +852,7 @@ th {
   padding-right: 12px;
   font-size: 110%;
   font-family: "Exo 2", "Ubuntu", "Verdana", sans-serif;
+  font-weight: 600;
 }
 
 td {
@@ -908,7 +949,7 @@ tr:nth-child(even) {
   border: none;
   color: #FFFFFF;
   text-align: center;
-  font-size: 110%;
+  font-size: 125%;
   padding: 4px;
   padding-right: 6px !important;
   width: 115px;
@@ -922,16 +963,18 @@ tr:nth-child(even) {
 #newverbtn {
 	width: 280px !important;
 	margin-bottom: -3px;
+	font-size: 110%;
 }
 
 #darkmode-toggle {
 	width: 185px !important;
-	margin-bottom: -3px;
+	margin-bottom: -4px;
 	font-size: 100%;
 	position: absolute;
 	right: -14px;
 	top: -8px;
 	z-index: 0 !important;
+	padding-top: 3px;
 }
 
 .verbtn-mod {
@@ -1000,7 +1043,7 @@ tr:nth-child(even) {
   border: none;
   color: #FFFFFF;
   text-align: center;
-  font-size: 120%;
+  font-size: 125%;
   padding: 6px;
   width: 100%;
   transition: all 0.5s;
