@@ -25,7 +25,7 @@ body {
 
 main {
 	overflow-y: auto;
-	height: calc(100% - max(2vh, 0.6cm, 20px));
+	height: calc(100% - 1.0cm);
 }
 
 b {
@@ -603,7 +603,7 @@ audio {
 	font-size: 0.9896vw;
 	overflow-x: hidden;
 	z-index: 4;
-  min-height: max(2vh, 0.6cm, 20px);
+  height: 1.0cm;
 }
 
 .navbar a {
@@ -615,7 +615,7 @@ audio {
 }
 
 .navdrop-entry {
-  min-height: max(2vh, 0.6cm, 20px);
+  min-height: 1.0cm;
   padding: 7px 0px;
   font-size: 0.9vw;
   text-decoration: none;
@@ -671,7 +671,7 @@ transition: opacity 0.25s linear; /* could also use ease-in-out for a more "acce
 	transition: 0.3s;
   min-width: 14vw;
   max-width: 14vw;
-  min-height: max(2vh, 0.6cm, 20px);
+  min-height: 1.0cm;
 	font-family: "Exo 2", "Ubuntu", "Verdana", sans-serif !important;
 }
 
@@ -689,7 +689,7 @@ transition: opacity 0.25s linear; /* could also use ease-in-out for a more "acce
   padding: 7px 17px; /* marker */
   min-width: 14vw;
   max-width: 14vw;
-  min-height: max(2vh, 0.6cm, 20px);
+  min-height: 1.0cm;
   font-family: inherit;
 	transition: 0.3s;
   margin: 0;
@@ -713,8 +713,8 @@ transition: opacity 0.25s linear; /* could also use ease-in-out for a more "acce
   position: absolute;
   min-width: 14vw;
   max-width: 14vw;
-  min-height: max(2vh, 0.6cm, 20px);
-  max-height: min(80vh, calc(calc(max(2vh, 0.6cm, 20px)+14px)*13));/*min(80vh, calc(95vh-max(2vh, 0.6cm, 20px)));*/
+  min-height: 1.0cm;
+  max-height: min(80vh, calc(calc(1.0cm+14px)*13));/*min(80vh, calc(95vh-1.0cm));*/
   overflow-y:auto;
 	border-top: 1px solid #000000;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
