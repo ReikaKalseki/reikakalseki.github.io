@@ -19,6 +19,8 @@ body {
 	width: 100%;
 	position: absolute;
 	transform: translate(0);
+	top:0;
+	left:0;
 }
 
 main {
@@ -601,6 +603,7 @@ audio {
 	font-size: 0.9896vw;
 	overflow-x: hidden;
 	z-index: 4;
+  min-height: max(2vh, 0.6cm, 1.3564839934888768rem);
 }
 
 .navbar a {
