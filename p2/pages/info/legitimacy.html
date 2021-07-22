@@ -11,7 +11,7 @@
 		<script src = "../../../compiledJS/entrypoint.bundle.js"></script>
 		<meta name="script-def" content="footer-spacing">
 		<meta name="script-def" content="navbar-scroll-indicator">
-		<meta name="script-def" content="quicknav-pos">
+		<!-- <meta name="script-def" content="quicknav-pos"> -->
     </head>
     <body  data-game="p2">
         	<div id = "navbar" class="navbar">
@@ -77,10 +77,11 @@
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-preventingunintendedsolutions">Preventing Unintended Solutions</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-preventingunintendedsolutions'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 </table>
 </div>
-        <div id = "textarea" class = "textarea ">
-				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
-			<!-- <h2>Solution Legitimacy</h2> -->
-						<section class = "textblock" id = "text-block-general">
+		<main>
+			<div id = "textarea" class = "textarea ">
+					<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
+				<!-- <h2>Solution Legitimacy</h2> -->
+							<section class = "textblock" id = "text-block-general">
 				<h3>General</h3>
 					
 					Like with any puzzle, there is generally one intended solution (or family of nearly identical solutions that share the same "checkpoints") to a Portal chamber. While it may be possible to reach the exit using alternative solutions, this is not intentional, and generally something a well-designed chamber attempts to prevent if at all possible. Therefore, a "legitimate" solution is one that maps to (one of) the intended one(s). Merely having reached the exit does not make the solution <i>valid</i>; by reaching the chamberlock via an unintended series of actions, you have not actually <i>solved</i> the chamber, only bypassed it.
@@ -191,7 +192,7 @@
 					I try to remove unintended solutions from my chambers, provided doing so does not massively compromise their quality in other ways, for example by making the intended solution obvious. However, there is a specific exception: <i>I do not bother with game-level exploits</i>. That is, any issue above with the '<img src = "../../../images/bug.png">' tag above is something I will make no attempt to address. Not only are such issues rarely fixable without extremely onerous and heavy-handed enforcement (if even then), they are so far removed from the obvious intent of a puzzle that their usage is blatant cheating. They are not worth addressing, and even if I <i>did</i> have a fix, those who seriously consider them "valid" solution steps would probably just start using the console instead and consider <i>that</i> the new solution.
 					
 			</section>
-			<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
+				<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
 		<hr>
 		<div id = "footer-spacing">
 		
@@ -260,6 +261,7 @@
 			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
 			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>
 	</div></footer>
-		</div>
+			</div>
+		</main>
     </body>
 </html>

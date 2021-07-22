@@ -8,10 +8,15 @@ html {
 body {
 	margin: 0px !important;
 	padding: 0px !important;
-	font-size: 97%;
+	font-size: 97%;/*
 	overflow-x: hidden;
+	overflow-y: hidden;*/
 	min-height: 100vh;
 	transform: translate(0);
+}
+
+main {
+	overflow-y: auto;
 }
 
 b {
@@ -693,7 +698,8 @@ transition: opacity 0.25s linear; /* could also use ease-in-out for a more "acce
 }
 
 .navdrop-content {
-  display: none;
+  display: flex;
+  visibility: hidden;
   position: absolute;
   min-width: 14vw;
   max-width: 14vw;
@@ -718,6 +724,7 @@ transition: opacity 0.25s linear; /* could also use ease-in-out for a more "acce
 
 .navdropdown:hover .navdrop-content {
   display: flex;
+  visibility: visible;
 }
 
 .navdropdown-subheader {

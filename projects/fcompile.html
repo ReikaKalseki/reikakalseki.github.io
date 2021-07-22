@@ -11,7 +11,7 @@
 		<script src = "../compiledJS/entrypoint.bundle.js"></script>
 		<meta name="script-def" content="footer-spacing">
 		<meta name="script-def" content="navbar-scroll-indicator">
-		<meta name="script-def" content="quicknav-pos">
+		<!-- <meta name="script-def" content="quicknav-pos"> -->
     </head>
     <body class = "other-project-body" >
         	<div id = "navbar" class="navbar"> <!-- navbar-narrow if you want to unroll games -->
@@ -62,10 +62,11 @@
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 </table>
 </div>
-        <div id = "textarea" class = "textarea textarea-other-project">
-				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
-			<!-- <h2>FCompile</h2> -->
-						<section class = "textblock" id = "text-block-overview">
+		<main>
+			<div id = "textarea" class = "textarea textarea-other-project">
+					<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
+				<!-- <h2>FCompile</h2> -->
+							<section class = "textblock" id = "text-block-overview">
 				<h3>Overview</h3>
 					
 					FCompile is a simple utility designed to package Factorio mods into ZIP files suitable for release. This automation allows for saving large quantities of time when releasing new versions of many mods at once, especially when the development folder contains many files you do not wish to include in the public downloads (such as construction images or old copies of assets).
@@ -206,7 +207,7 @@ Type: Single Value<br>
 	<h3>Downloads</h3>
 <button type="button" class = "dlbtn" onclick="window.open('http://www.mediafire.com/file/p9ac7wytr7m5tyf/FCompile_v2.zip/file', '_blank'); return false;"><span>Mediafire<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
 </section>
-			<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
+				<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
 		<hr>
 		<div id = "footer-spacing">
 		
@@ -275,6 +276,7 @@ Type: Single Value<br>
 			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
 			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>
 	</div></footer>
-		</div>
+			</div>
+		</main>
     </body>
 </html>
