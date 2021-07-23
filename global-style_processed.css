@@ -1,5 +1,6 @@
 :root {
 	--navbarHeight: max(1vh, 0.97cm, 1.5em);
+	--navbarEntryHeight: max(1vh,.6cm,1.25em);
 	--blueHighlight: #22aaff;
 	--navBCG: #323232;
 }
@@ -24,6 +25,10 @@ body {
 	top:0;
 	left:0;*/
 	transform: translate(0);
+	
+	/** Firefox scroll */
+	scrollbar-width: thin;
+	scrollbar-color: #555 #ccc;
 }
 
 main {
@@ -620,7 +625,7 @@ audio {
 }
 
 .navdrop-entry {
-  height: max(1vh,.6cm,1.25em);/*var(--navbarHeight);*/
+  height: var(--navbarEntryHeight);
   padding: 0.4747693977211068rem 0px;
   font-size: 0.9vw;
   text-decoration: none;
@@ -682,6 +687,7 @@ transition: opacity 0.25s linear; /* could also use ease-in-out for a more "acce
 .navdropdown {
   float: left;
   overflow: hidden;
+  overscroll-behavior: contain;
 }
 
 .navdropdown .navdropbtn {
@@ -698,8 +704,8 @@ transition: opacity 0.25s linear; /* could also use ease-in-out for a more "acce
   margin: 0;
 	font-family: "Exo 2", "Ubuntu", "Verdana", sans-serif !important;
 	box-sizing:border-box;
-}
 
+}
 .navbar a:hover, .navdropdown:hover .navdropbtn, .navdrop-entry-text:hover {
     background: var(--blueHighlight) none repeat scroll 0% 50%;
 	color: #000000 !important;
@@ -716,8 +722,9 @@ transition: opacity 0.25s linear; /* could also use ease-in-out for a more "acce
   position: absolute;
   width: 14vw;
   min-height: var(--navbarHeight);
-  max-height: min(80vh, calc(calc(var(--navbarHeight) + 0.9495387954422136rem) * 13));/*min(80vh, calc(95vh-var(--navbarHeight)));*/
+  max-height: min(80vh, calc(calc(var(--navbarHeight) * 12) - 0.13564839934888767rem));/*min(80vh, calc(95vh-var(--navbarHeight)));*/
   overflow-y:auto;
+  overscroll-behavior: contain;
 	border-top: 0.06782419967444384rem solid #000000;
   box-shadow: 0px 0.5425935973955507rem 1.0851871947911014rem 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -727,6 +734,10 @@ transition: opacity 0.25s linear; /* could also use ease-in-out for a more "acce
       background: var(--navBCG) none repeat scroll 0% 50%;
 	  
 	  flex-direction: column;
+	
+	/** Firefox scroll */
+	scrollbar-width: thin;
+	scrollbar-color: var(--blueHighlight) #111111;
 }
 
 .navdrop-content a:hover {
