@@ -23,8 +23,8 @@ body {
 	width: 100%;
 	position: absolute;
 	top:0;
-	left:0;
-	transform: translate(0);
+	left:0;/*
+	transform: translate(0);*/
 	
 	/** Firefox scroll */
 	scrollbar-width: thin;
@@ -33,8 +33,8 @@ body {
 
 main {
 	overflow-y: auto;
-	height: calc(100% - var(--navbarHeight) - 2px);
-	transform: translate(0);
+	height: calc(100% - var(--navbarHeight) - 2px);/*
+	transform: translate(0);*/
 }
 
 b {
