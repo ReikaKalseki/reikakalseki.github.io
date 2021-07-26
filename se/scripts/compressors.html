@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="shortcut icon" href="../../images/favicon.ico">
+        <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+		<meta http-equiv="Cache-control" content="no-cache">
+        <title>Dynamic Compressor Manager</title>
+		<link rel="stylesheet" type="text/css" href="../../compiledJS/entrypoint.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+		<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Lato|Exo 2|Ubuntu|Cairo"> -->
+		<script src = "../../compiledJS/entrypoint.bundle.js"></script>
+		<meta name="script-def" content="footer-spacing">
+		<meta name="script-def" content="navbar-scroll-indicator">
+		<meta name="script-def" content="quicknav-pos">
+    </head>
+    <body  data-game="se">
+        	<div id = "navbar" class="navbar">
+	  <a class="navbar-button" href="../../index.html">Reika's Mods Home</a>
+	  <a class="navbar-button" href="../../se/index.html">Space Engineers Home</a>
+		  <div class="navdropdown">
+			<div class="navdropbtn">Information <i class="fa fa-angle-down"></i></div>
+			<div class="navdrop-content">
+					<a class = "navdrop-entry" href="../../se/pages/info/faq.html">FAQ</a>
+					<a class = "navdrop-entry" href="../../se/pages/info/contact.html">Contact</a>
+					<a class = "navdrop-entry" href="../../se/pages/info/history.html">History</a>
+					<a class = "navdrop-entry" href="../../se/pages/info/changelog.html">Change Logs</a>
+			</div>
+		  </div>
+		  <div class="navdropdown">
+			<div class="navdropbtn">Permissions <i class="fa fa-angle-down"></i></div>
+			<div class="navdrop-content">
+					<a class = "navdrop-entry" href="../../se/pages/perms/license.html">License</a>
+			</div>
+		  </div>
+	  <div class="navdropdown">
+		<div class="navdropbtn">Content <i class="fa fa-angle-down"></i></div>
+		<div class="navdrop-content">
+<a class = "navdropdown-subheader">Mods</a>				<a class = "navdrop-entry" href="../../se/mods/electronicwarfare.html">Electronic Warfare</a>
+				<a class = "navdrop-entry" href="../../se/mods/cargoships.html">Extra Cargo Ships</a>
+				<a class = "navdrop-entry" href="../../se/mods/gastanks.html">Gas Compressor</a>
+				<a class = "navdrop-entry" href="../../se/mods/lowgravgen.html">Gravgen Priority</a>
+				<a class = "navdrop-entry" href="../../se/mods/industrialthruster.html">Industrial Thruster</a>
+				<a class = "navdrop-entry" href="../../se/mods/oreproc.html">Ore Processing</a>
+<a class = "navdropdown-subheader">Blueprints</a>				<a class = "navdrop-entry" href="../../se/blueprints/anaconda.html">Anaconda</a>
+				<a class = "navdrop-entry" href="../../se/blueprints/anaconda2.html">Anaconda (Custom)</a>
+				<a class = "navdrop-entry" href="../../se/blueprints/dropship.html">Federal Dropship</a>
+				<a class = "navdrop-entry" href="../../se/blueprints/harvester.html">Harvester</a>
+				<a class = "navdrop-entry" href="../../se/blueprints/jumpgate.html">Jump Gate</a>
+				<a class = "navdrop-entry" href="../../se/blueprints/salvager.html">Salvager</a>
+				<a class = "navdrop-entry" href="../../se/blueprints/spacetruck.html">Space Truck</a>
+				<a class = "navdrop-entry" href="../../se/blueprints/waypoint.html">Waypoint Station</a>
+<a class = "navdropdown-subheader">Scripts</a>				<a class = "navdrop-entry" href="../../se/scripts/airlocks.html">Airlock Control</a>
+				<a class = "navdrop-entry" href="../../se/scripts/cargomanager.html">Cargo Manager</a>
+				<a class = "navdrop-entry" href="../../se/scripts/compressors.html">Compressor Manager</a>
+				<a class = "navdrop-entry" href="../../se/scripts/hangar.html">Hangar Control</a>
+				<a class = "navdrop-entry" href="../../se/scripts/jumpcontrol.html">Jump Control</a>
+				<a class = "navdrop-entry" href="../../se/scripts/powercontrol.html">Power Control</a>
+				<a class = "navdrop-entry" href="../../se/scripts/o2control.html">Pressurization Control</a>
+		</div>
+	  </div>
+	  <div class="navdropdown">
+		<div class="navdropbtn">Other Games <i class="fa fa-angle-down"></i></div>
+		<div class="navdrop-content">
+				<a class = "navdrop-entry" href="../../minecraft/index.html">Minecraft</a>
+				<a class = "navdrop-entry" href="../../factorio/index.html">Factorio</a>
+				<a class = "navdrop-entry" href="../../p2/index.html">Portal 2</a>
+				<a class = "navdrop-entry" href="../../stellaris/index.html">Stellaris</a>
+				<a class = "navdrop-entry" href="../../fce/index.html">FortressCraft Evolved</a>
+				<a class = "navdrop-entry" href="../../starbound/index.html">Starbound</a>
+		</div>
+	  </div>
+	  <div class="navdropdown">
+		<div class="navdropbtn">Other Projects <i class="fa fa-angle-down"></i></div>
+		<div class="navdrop-content">
+				<a class = "navdrop-entry" href="../../projects/calendar.html">Game Calendar</a>
+				<a class = "navdrop-entry" href="../../projects/eventbuilder.html">Stellaris Event Builder</a>
+				<a class = "navdrop-entry" href="../../projects/fcompile.html">FCompile</a>
+		</div>
+	  </div>
+	</div>
+		<noscript><div style = "text-align: center; width: 100%;"><div id = "nojs-header"><div><img class = "header-alert" src = "../../images/alert.png"></div><div>You have JavaScript disabled; it is recommended you enable it for this site.<br>While the site will (mostly) function with scripts disabled, some sections (eg changelog view, or sortable tables) require it to update the page contents based on your input.<br>Additionally, JS is used to generate page styling, meaning disabling scripts will leave pages ugly, boring, and in some cases poorly arranged in ways that might impede readability.<br>If you have no idea what this means, or have not in fact disabled scripts, try simply reloading the page, as it may not have loaded completely or correctly.</div></div></div></noscript>
+		<div id="toc_container">
+<span><div style = "display: inline-block;width: 40%; text-align: left;"><h3>Quick Nav</h3></div><div class = "inset-toggle" style = "width: 60%;"><input type="checkbox" id="toc-follow-toggle" checked> Follow Scroll</div></span>
+<hr>
+<table class="toc_list">
+	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><span><i class="fas fa-angle-double-up"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-description">Description</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-description'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-details">Details</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-details'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-scriptvars">Script Options</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-scriptvars'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
+</table>
+</div>
+        <div id = "textarea" class = "textarea ">
+				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
+			<!-- <h2>Dynamic Compressor Manager</h2> -->
+						<section class = "textblock" id = "text-block-description">
+				<h3>Description</h3>
+					
+					This script is designed to complement my <a href="../../se/mods/gastanks.html">Gas Compressors</a> mod, to allow for the visualization of compressor-vs-tank storage and reduce overall power consumption.
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-details">
+				<h3>Details</h3>
+					
+					Gas compressors use large amounts of standby power when enabled and very large amounts of power during gas flow, and this script allows for the minimization of both. It will track the gas levels in each class of compressor, and will enable compressors if and only if gas needs to be desposited or withdrawn, and will handle the stockpile control accordingly.
+					
+					
+					<br><br>
+					
+					
+					Additionally, the script will render a visualization of the relative levels of the compressors and tanks, as well as an indication of flow, allowing you to at a glance check storage levels and watch gas movement in real time.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2FIXx9Si6.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FIXx9Si6.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Hydrogen levels being roughly balanced, while nearly-full O2 tanks are being loaded into the (nearly-empty) O2 compressors.</div>
+</div>
+					</section>
+			</section>
+<br>
+			<section class = "textblock" id = "text-block-scriptvars">
+			<div class = "scriptvars">
+				<h3>Script Options</h3>
+				The script contains the following configurable variables/functions to adapt the script to your ship configuration or needs:
+				<br>
+				<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name">minimumO2TankFraction</h4>
+Type: float<br>
+			Current Default Value:<div class = "code-block">0.1F</div>
+		</div>
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name">maximumO2TankFraction</h4>
+Type: float<br>
+			Current Default Value:<div class = "code-block">0.75F</div>
+		</div>
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name">minimumH2TankFraction</h4>
+Type: float<br>
+			Current Default Value:<div class = "code-block">0.25F</div>
+		</div>
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name">maximumH2TankFraction</h4>
+Type: float<br>
+			Current Default Value:<div class = "code-block">0.8F</div>
+		</div>
+	What fill % to stop emptying tanks into compressors at or start emptying compressors into tanks.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 32.75%">
+			<h4 class = "setting-name">GREEN_THRESH</h4>
+Type: float<br>
+			Current Default Value:<div class = "code-block">0.75F</div>
+		</div>
+		<div class = "setting-box" style = "width: 32.75%">
+			<h4 class = "setting-name">YELLOW_THRESH</h4>
+Type: float<br>
+			Current Default Value:<div class = "code-block">0.5F</div>
+		</div>
+		<div class = "setting-box" style = "width: 32.75%">
+			<h4 class = "setting-name">RED_THRESH</h4>
+Type: float<br>
+			Current Default Value:<div class = "code-block">0.25F</div>
+		</div>
+	The thresholds (fractions out of 1.0) at which a fill bar changes color.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">SCREEN_TAG</h4>
+Type: string<br>
+			Current Default Value:<div class = "code-block">"CompressorScreen"</div>
+		</div>
+	Any LCD panel with this in its name will show the gas levels between tanks and compressors.
+</div>
+
+			</div>
+			</section>
+<br>
+			<section class = "textblock" id = "text-block-sourcecode">
+			<div class = "modsource">
+				<h3>Source Code</h3>				The source code for Dynamic Compressor Manager can be found here:<button type="button" class = "srcbtn" onclick="window.open('https://github.com/ReikaKalseki/IngameScripts/blob/master/CompressorManager.cs', '_blank'); return false;"><span>GitHub<div class = "spacer"></div><i class="fab fa-github"></i></span></button>
+			</div>
+			</section>
+<br>
+<section class = "textblock" id = "text-block-downloads">
+	<h3>Downloads</h3>
+<button type="button" class = "dlbtn" onclick="window.open('https://steamcommunity.com/sharedfiles/filedetails/?id=2557249549', '_blank'); return false;"><span>Steam Workshop<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
+</section>
+			<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
+		<hr>
+		<div id = "footer-spacing">
+		
+		</div>
+		<hr>
+		If you like any of my mods, maps, or other content, or want to help me develop them, feel free to use my Patreon or the buttons below. Every little bit helps me be able to keep working on them, and helps ensure both maintenance and expansion of them.<br>
+		If you wish to give a one-time donation, I recommend you use the Paypal link on the right; Patreon, though it can be used for one-time donations, is designed for ongoing monthly 'subscriptions' (ie a set amount of money gifted each month for as long as you remain a 'patron'). Paypal can also register a donation with monthly recurrence, should that seem preferable to you.<br>
+		For both systems, the amount you choose to donate is up to you, and for Patreon, can be changed at any time should you wish to decrease or increase the amount.<br>
+		And thank you for your support. :D<br>
+					<div class = "linkiconblock">
+					<div class = "linktile" style = "width: 49.75%">
+						<div class = "linklabel">Patreon</div>
+						<a class = "icon icon-patreon" href="http://www.patreon.com/reikasminecraft" ></a>
+					</div>
+					<div class = "linktile" style = "width: 49.75%">
+						<div class = "linklabel">Paypal</div>
+						<a class = "icon icon-paypal" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5XRAM3SXBRJY4" ></a>
+					</div>
+			</div>
+		<hr>
+		To contact me (though some of these are only checked periodically, and many are for specific topics) or find additional information or content, visit any one of these platforms:<br>
+					<div class = "linkiconblock">
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Minecraft Forums</div>
+						<a class = "icon icon-mcforums" href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1291655" title="Minecraft Only"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Factorio Forums</div>
+						<a class = "icon icon-facforums" href="https://forums.factorio.com/viewforum.php?f=216" title="Factorio Only"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">GitHub</div>
+						<a class = "icon icon-github" href="https://github.com/ReikaKalseki" ></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Discord</div>
+						<a class = "icon icon-discord" href="https://discordapp.com/channels/@me/143569407665242112/" title="Discord ID: Reika#3161"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Steam</div>
+						<a class = "icon icon-steam" href="https://steamcommunity.com/id/ReikaKalseki/myworkshopfiles/" title="Please no random friend requests"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">YouTube</div>
+						<a class = "icon icon-youtube" href="https://www.youtube.com/user/ReikasMinecraft/videos" ></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">SoundCloud</div>
+						<a class = "icon icon-soundcloud" href="https://soundcloud.com/reikakalseki" title="Music Only"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Reddit</div>
+						<a class = "icon icon-reddit" href="https://www.reddit.com/user/ReikaKalseki/" ></a>
+					</div>
+			</div>
+		<hr>
+		This site is proudly Canadian. <i class="fab fa-canadian-maple-leaf"></i><br>
+		<hr>
+		Site (including embedded JavaScript) and linked projects (mods, maps, etc) created by and &copy; ReikaKalseki, except for content within which is part of the base games, as noted below.<br>
+		<hr>
+			Minecraft and its content and assets are &copy; Mojang AB, with whom I am not affiliated<br>
+			Factorio and its content and assets are &copy; Wube Software, with whom I am not affiliated<br>
+			Portal 2 and its content and assets are &copy; Valve Corporation, with whom I am not affiliated<br>
+			Stellaris and its content and assets are &copy; Paradox Interactive, with whom I am not affiliated<br>
+			Space Engineers and its content and assets are &copy; Keen Software House, with whom I am not affiliated<br>
+			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
+			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>
+	</div></footer>
+		</div>
+    </body>
+</html>
