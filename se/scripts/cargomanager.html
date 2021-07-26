@@ -11,7 +11,7 @@
 		<script src = "../../compiledJS/entrypoint.bundle.js"></script>
 		<meta name="script-def" content="footer-spacing">
 		<meta name="script-def" content="navbar-scroll-indicator">
-		<meta name="script-def" content="quicknav-pos">
+		<!-- <meta name="script-def" content="quicknav-pos"> -->
     </head>
     <body  data-game="se">
         	<div id = "navbar" class="navbar">
@@ -90,10 +90,11 @@
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 </table>
 </div>
-        <div id = "textarea" class = "textarea ">
-				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
-			<!-- <h2>Refinery and Cargo Manager</h2> -->
-						<section class = "textblock" id = "text-block-description">
+		<main id = "main-scroller">
+			<div id = "textarea" class = "textarea ">
+					<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
+				<!-- <h2>Refinery and Cargo Manager</h2> -->
+							<section class = "textblock" id = "text-block-description">
 				<h3>Description</h3>
 					
 					This script will automatically manage the inventories of cargo containers and production blocks - including refineries (vanilla and many modded ones), assemblers, and oxygen generators - on the ship. It can move ores around, ensuring they <i>only</i> into the most useful refinery; For example, you will no longer have refineries pulling uranium - and costing you yield - when you have dedicated centrifuges for that ore.
@@ -271,7 +272,7 @@ Return Type: bool<br>
 	<h3>Downloads</h3>
 <button type="button" class = "dlbtn" onclick="window.open('https://steamcommunity.com/sharedfiles/filedetails/?id=1721053370', '_blank'); return false;"><span>Steam Workshop<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
 </section>
-			<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
+				<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
 		<hr>
 		<div id = "footer-spacing">
 		
@@ -340,6 +341,7 @@ Return Type: bool<br>
 			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
 			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>
 	</div></footer>
-		</div>
+			</div>
+		</main>
     </body>
 </html>

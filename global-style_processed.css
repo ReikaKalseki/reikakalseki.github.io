@@ -16,14 +16,14 @@ body {
 	margin: 0px !important;
 	padding: 0px !important;
 	font-size: 97%;
-	min-height: 100vh;/*
+	min-height: 100vh;
 	overflow-x: hidden;
 	overflow-y: hidden;
 	height: 100%;
 	width: 100%;
 	position: absolute;
 	top:0;
-	left:0;*/
+	left:0;
 	transform: translate(0);
 	
 	/** Firefox scroll */
@@ -442,6 +442,7 @@ audio {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+	flex: 0 0 auto;
 }
 
 .textarea {

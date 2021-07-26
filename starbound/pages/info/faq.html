@@ -11,7 +11,7 @@
 		<script src = "../../../compiledJS/entrypoint.bundle.js"></script>
 		<meta name="script-def" content="footer-spacing">
 		<meta name="script-def" content="navbar-scroll-indicator">
-		<meta name="script-def" content="quicknav-pos">
+		<!-- <meta name="script-def" content="quicknav-pos"> -->
     </head>
     <body  data-game="starbound">
         	<div id = "navbar" class="navbar">
@@ -77,10 +77,11 @@
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-commentary">Commentary</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-commentary'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 </table>
 </div>
-        <div id = "textarea" class = "textarea ">
-				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
-			<!-- <h2>FAQ</h2> -->
-			<section class = "textblock" id = "text-block-general">
+		<main id = "main-scroller">
+			<div id = "textarea" class = "textarea ">
+					<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
+				<!-- <h2>FAQ</h2> -->
+				<section class = "textblock" id = "text-block-general">
 	<h3>GENERAL</h3>
 		<h4 class = "faq-entry" style = "margin-top: 0px;">"I want to do a mod spotlight. Can I?"</h4>
 		Of course! I always appreciate spotlights, and am willing to work with you to ensure their accuracy and thoroughness.
@@ -96,7 +97,7 @@
 		Almost all my starbound modding was done in a few-week time span towards the end of the summer of 2016, when I was between MC server iterations and too preoccupied with real-life time demands to do more complex modding or play more involved games. As a result, despite having played the game for a couple weeks at a time off and on since then - see <a href="../../../starbound/pages/info/history.html">history</a> for details - I have not done much other than make very minor tweaks the mods.Even so, most of them <i>still work</i>, especially the ones that are more important (eg RealCasual, RicherAsteroids, and Moon Overhaul). The only two that I <i>know</i> are nonfunctional are LazyGuards and HealthyCapture, and the latter is a feature in many modern mods, making it much lower priority. Both are script mods, which also means they are rather more of a hassle to repair, and will likely just break again when the game updates again. In fact, a repeated string of updates and breakages towards the end of 2016 is what made me move on from Starbound modding in the first place.
 </section><br>
 
-			<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
+				<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
 		<hr>
 		<div id = "footer-spacing">
 		
@@ -165,6 +166,7 @@
 			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
 			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>
 	</div></footer>
-		</div>
+			</div>
+		</main>
     </body>
 </html>

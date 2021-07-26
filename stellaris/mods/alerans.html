@@ -11,7 +11,7 @@
 		<script src = "../../compiledJS/entrypoint.bundle.js"></script>
 		<meta name="script-def" content="footer-spacing">
 		<meta name="script-def" content="navbar-scroll-indicator">
-		<meta name="script-def" content="quicknav-pos">
+		<!-- <meta name="script-def" content="quicknav-pos"> -->
     </head>
     <body  data-game="stellaris">
         	<div id = "navbar" class="navbar">
@@ -80,10 +80,11 @@
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 </table>
 </div>
-        <div id = "textarea" class = "textarea ">
-				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
-			<!-- <h2>Dragon Species and Aleran Commonwealth</h2> -->
-						<div class = "header-image">
+		<main id = "main-scroller">
+			<div id = "textarea" class = "textarea ">
+					<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
+				<!-- <h2>Dragon Species and Aleran Commonwealth</h2> -->
+							<div class = "header-image">
 				<img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F960852094519401072_2FDAD12DDBBCFFBFA99BDEECDC55D22AF5831A32D7_2F.jpg" >
 			</div><div style = "text-align: center; width: 100%;"><div class = "header-alert-box" style = "background-color: #FFF5BF; border-color: #FFD800;"><div class = "header-alert-inner"><img class = "header-alert" src = "data:image/png;base64,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"></div><div class = "header-alert-inner">The normal download for this item is temporarily not available; see the page for information or alternatives.</div></div></div>			<section class = "textblock" id = "text-block-general">
 				<h3>General</h3>
@@ -702,7 +703,7 @@
 	<h3>Downloads</h3>
 <button type="button" class = "dlbtn" onclick="window.open('https://steamcommunity.com/sharedfiles/filedetails/?id=1557889336', '_blank'); return false;"><span>Steam Workshop<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
 </section>
-			<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
+				<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
 		<hr>
 		<div id = "footer-spacing">
 		
@@ -771,6 +772,7 @@
 			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
 			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>
 	</div></footer>
-		</div>
+			</div>
+		</main>
     </body>
 </html>

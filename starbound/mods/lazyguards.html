@@ -11,7 +11,7 @@
 		<script src = "../../compiledJS/entrypoint.bundle.js"></script>
 		<meta name="script-def" content="footer-spacing">
 		<meta name="script-def" content="navbar-scroll-indicator">
-		<meta name="script-def" content="quicknav-pos">
+		<!-- <meta name="script-def" content="quicknav-pos"> -->
     </head>
     <body  data-game="starbound">
         	<div id = "navbar" class="navbar">
@@ -77,10 +77,11 @@
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 </table>
 </div>
-        <div id = "textarea" class = "textarea ">
-				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
-			<!-- <h2>Lazy Guards</h2> -->
-						<div class = "header-image">
+		<main id = "main-scroller">
+			<div id = "textarea" class = "textarea ">
+					<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
+				<!-- <h2>Lazy Guards</h2> -->
+							<div class = "header-image">
 				<img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F450745254171891022_2FC4903FF621EC07748DAB2B8E478A7E67ECB84F97_2F.jpg" >
 			</div><div style = "text-align: center; width: 100%;"><div class = "header-alert-box" style = "background-color: #FFBFBF; border-color: #FF0000;"><div class = "header-alert-inner"><img class = "header-alert" src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAJFklEQVR42u1aa1BU5xl+AWlaU+M0tk46/dFYO5PhR9vpTMz0T2cy/akzZuqP0ESTYEIMCYXGmprWzNgU5Q4Lu8vFAEai3E1EiRGipaS2wanW3kxgiqBEmwsIEsQLQZbT59vzHPw8e3ZdvALZd+aZs+yePec8z/deP1YkYhGLWMQiFrGIRew2WnZ2dlS+yBPZIo0ZIsVbRH78pRLAJbL2VZHLWSLGZmCTyGCpyINfCvJFInHpIqPwAOOPQCOQBmSKHNgpEjvrBSgQaUsj8Y+BD4EyAB5hFIu8MKvJe0TiXyXhfwMTwCjwJ0CFA/LBEM65d1aSrxf5Bgh2p9P1zwMGcQqoYSjAQypzc3OjZhX5lpYWyRHJVKtfC5zUyCuMA4cAt5kUR0tEHp5VAryGModMf7GARMdtAqhQ6AN2mxXBQHk8tFfka7OCfF5eXjRW/7By77eBQQfyl4FLwD+BCpZGJMTfzQoBvCJJfxCZUMQ+CEFe5YQzQDOQa3rB59tE7p/R5JtE7oNLf5zNTH8xCPkLwDBwliJVAypZomGqb25unpkJcd++fVFwfbdy/Qag10Z+nCXwvEZeecAnFMtjiuBD/lg6IwVARn8IsexDCBhHtMRnkb9EjDAvKPKfAf8DOoC3zO7QyBP5YKvI3TOt3f0KGptDmxjTZ21uP8qj9d4QyavO8CPgBPAXJkT0DkahyMszSgD0+Ykq8W3jaiqSPi3mFXQbs5HvAo4BewA1MyCUhneI/GBGkEdHdz9cv19l8vdIVl/5CxTDbspLeoDjQCdnhHZgO0MBCbEJDVX09K/7ItVpjOFTDuTVcWRkxPB4PEZCQoKxbt06o7293Z8XTpC8qgT/Av4BoCEyisxZYWKLyKPTPfH9FHE/UcLEN2YjP0JBVq9ebURHRyMFiB9z5841UO781eBDkj8KHAYOsn3OMb3gNELh69N1zL0Lq3RMJa0WYAD4Qmtyhvm3skWLFk2St7BmzRp/UjyukVdt8/vAO5wgs8zymO52u6efAMjUa9MYs51cdZ38OS3uFy9eHCBAYmKi/zPlKX8n+b/SA1qB+isJ8SJ6g+9PK/LI9nFY+fMulq8RjfznLIPjmgBxcXEBAiQlJU1+fpLk/8ym6ACArtJ4naEAL3gP7901Pfb3XK5orMyezZzmTtnID1qzv2ZLliwJECA1NXXy88v0AIt8M5NhHeDlrAAveGq6xP4y1fGV0XUv2MgPMvHptnz58gAB1q9ff9U5n3HjpIU5QPUEbwJvMBQQcn1VIt+8o+Th7vciMfVmcaX6HXr7Sw41X1UBuwAYm686R4n2N678HpbVndw52sJQKPIPm3fI9u/frxJfzia6ZoeNfL/VAjtYSkpKgADl5eUB552jAG9xoKpjSXzD9ADlCT4I8rM7IkCpyI/QoY25WaqGNLfvZ29/OYgAGzZsCBCgvr7e8dz/cOXrNFSzLOaZXnCk4XbvHhWLzEHGb81gdj5JAayp7lN6QjDLzc0NEKCpqcnx3DHeo46lUPcCL/NBuUjy7RbgcczqE1uZqf/Lxqef5D8N0u9bVlpaGiBAa2tr0PM/0la/lh6wlV5QYG6mnsXkeN/tGna+g6T3iSpF7zI+qxmrqoc/zUoQympqaoyoqKirBDh69GjQ81VCbNOIF3P1Szkn5JuJsebgwYO3fvcIar+2me64D6gidvDYbu38hLC2trarZgElRmdnZ8jvDJmu7ifsJYpYEQpNT/Dh/stv9UbHg2oqK2Z7WqcJUMUSNXgN8sp6enqMOXPmTAoQGxtr9Pb2hv4SxdUF8PDvYnNQMjCEHUcr/tVbQh5JJxY3OZKh1eYdNhwOg7yyvr4+Y968eZMCLFiwwBgYGLjm99QwVakJ4CaK6AUu8/NXbpXrJ21m9t3PeNTJ7+IAFI75fD5j6dKlkwKsWrXKCNe6SNhD8oU8epkQcRxBnvjuTSWP2Pu2Snz57Ph2Oqx+d5jkdS/YuHGjgVnCGB4eDvt7PnqfRb7wSiWYfA/Pu6ekpOTmJESPxxMFtWvT2YvvdSB/4Bpl72bbGVYAi3w+4b6CMUyoj9ysmv8w4n68hImvxka+OszEZ7eOjg4jOTnZiI+PD9oEhbL3Sd6lCeDie4VmYjzWKHLPje3u5ufH4MLHsziSNtrIb+fuzVStq6vLWLhw4WQOiImJMaqqqqZ0DSsh5mvI04QoNPcPcm7M/UV+m84S965W7y00ct9vqpaWlhbQCS5btmzK1+nRPCDPhgLTC77AIj1wXeRB8HsYds4Uci5vcIj93uuMe6/XG9AJrlixYsrXmeCckMdNEutovXabGyctECFmqokvGl9+O527PE6Jb7fDRke4NjQ05N8VskSYP39+yFkglJ3WPCCX+wQWCsySOQEBVk5JAAwZP8fqT5Rx9attcb+dyXDgBjK/Kn2VlZV+b+ju7r6ua/g4ijuRzybcZrvcgyFqQbi/5piLC3Zbw84uh8RnoYrDkI43iZ0aGoh6Dfp0V0tBqzVY7fV2Nl8q4W2zocy2+hbpLB4z+b7XvEZZuIkvI5MP1aKtvk5cf6DXNVTYUGbGoB+lRIkGq48vtvX4Vp9fqMFly/Z2OAmQxd8ZFJr3GwWnn4QkjxPiQP6cl65fp2V+XYBKG3ELW0m8XIMugEVcJ12sjbc6eXcQ8k4C5NjIW8jkf5czed1y/zZm6H9uvJLOVrPZ5rr6dpSTm1qeYfcOXZQym1dsIUo1IXRv8Nja3QKHspfrEPf8zaF/9dP5wysX74OE/sNQAjyTQXLvEHv546YmCrOb9X8XYcV9g23LSo/pHTbvsWI4lDilQcLDbWuB7UJk21Y//cpvDNR1x/H83woqQEVFxd24yYlM28WybBk2Nwjsrplvg0tbQZfWurq0FS7Q2lm3AzyENwiKbLBEhKDjEP334Wx53YMvPoKHiMeD/QJ4DK9XAqvwAE8ATwIJwGo8yNNAIvAsbr4GeA54HngB10gGUoBU4Fd4iBcR/7/GcR3wErAeeJnH3+Czl9TnwFo87ItAKpAC/BJIBp5HuCRhFZ8DnoW3JALP4PXTQAJePwU8CawCVgKPA4/Bu+LhaY/C8x6qra2dXb9AjVjEIhaxiEUsYjdk/wd7JFXr9bVFYgAAAABJRU5ErkJggg=="></div><div class = "header-alert-inner">This item is very old and appears to have broken since its last development work.</div></div></div>			<section class = "textblock" id = "text-block-general">
 				<h3>General</h3>
@@ -105,7 +106,7 @@
 	<h3>Downloads</h3>
 <button type="button" class = "dlbtn" onclick="window.open('https://steamcommunity.com/sharedfiles/filedetails/?id=751146113', '_blank'); return false;"><span>Steam Workshop<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
 </section>
-			<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
+				<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
 		<hr>
 		<div id = "footer-spacing">
 		
@@ -174,6 +175,7 @@
 			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
 			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>
 	</div></footer>
-		</div>
+			</div>
+		</main>
     </body>
 </html>

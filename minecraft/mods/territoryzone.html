@@ -11,7 +11,7 @@
 		<script src = "../../compiledJS/entrypoint.bundle.js"></script>
 		<meta name="script-def" content="footer-spacing">
 		<meta name="script-def" content="navbar-scroll-indicator">
-		<meta name="script-def" content="quicknav-pos">
+		<!-- <meta name="script-def" content="quicknav-pos"> -->
 			<meta name="script-def" content="minecraft/precursor">
     </head>
     <body  data-game="minecraft">
@@ -99,10 +99,11 @@
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 </table>
 </div>
-        <div id = "textarea" class = "textarea ">
-				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
-			<!-- <h2>TerritoryZone</h2> -->
-						<section class = "textblock" id = "text-block-overview">
+		<main id = "main-scroller">
+			<div id = "textarea" class = "textarea ">
+					<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
+				<!-- <h2>TerritoryZone</h2> -->
+							<section class = "textblock" id = "text-block-overview">
 				<h3>Overview</h3>
 					
 					TerritoryZone is a mod that lets you declare zones in your world as the territory of a given player or players, and allows you to optionally log or prevent others' actions inside that region, including breaking blocks, placing blocks, opening GUIs, and killing animals. By default, logging is enabled but actual enforcement is disabled.
@@ -247,7 +248,7 @@ Type: boolean<br>
 	<h3>Downloads</h3>
 <button type="button" class = "dlbtn" onclick="window.open('https://www.curseforge.com/minecraft/mc-mods/territoryzone', '_blank'); return false;"><span>CurseForge<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
 </section>
-			<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
+				<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
 		<hr>
 		<div id = "footer-spacing">
 		
@@ -316,6 +317,7 @@ Type: boolean<br>
 			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
 			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>
 	</div></footer>
-		</div>
+			</div>
+		</main>
     </body>
 </html>

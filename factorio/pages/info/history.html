@@ -11,7 +11,7 @@
 		<script src = "../../../compiledJS/entrypoint.bundle.js"></script>
 		<meta name="script-def" content="footer-spacing">
 		<meta name="script-def" content="navbar-scroll-indicator">
-		<meta name="script-def" content="quicknav-pos">
+		<!-- <meta name="script-def" content="quicknav-pos"> -->
     </head>
     <body  data-game="factorio">
         	<div id = "navbar" class="navbar">
@@ -95,10 +95,11 @@
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-overhauls">Overhauls</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-overhauls'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 </table>
 </div>
-        <div id = "textarea" class = "textarea ">
-				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
-			<!-- <h2>History</h2> -->
-						<section class = "textblock" id = "text-block-gettingstarted">
+		<main id = "main-scroller">
+			<div id = "textarea" class = "textarea ">
+					<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
+				<!-- <h2>History</h2> -->
+							<section class = "textblock" id = "text-block-gettingstarted">
 				<h3>Getting Started</h3>
 					
 					My start with Factorio was actually rather interesting. I first heard it being mentioned by others in my social circle around April of 2015, but was left with a negative impression due to the fact that they were pretty much always talking about factory defence (I still remember all that talk about "biters" that made it sound like some RTS game). In a twist that I have talked about on several occasions, <a href="https://youtu.be/9yDZM0diiYc">the trailer from that era</a> (the one that was <a href="https://youtu.be/J8SBp4SyvLc">remade upon full release in 2020</a>) actually <i>dissuaded</i> me from the game even further; the <a href="https://youtu.be/9yDZM0diiYc?t=66">feature of biters at 1:05</a> is the only part that really jumped out at me, and combined with the earlier impressions to leave me completely misled as to the real nature of the game. As a result, I was in fact <i>turning down</i> people's offers to buy it for me for over a month.
@@ -264,7 +265,7 @@
 					Since then, there have been a few new minor mods, and new content in old ones. I spent much of the summer of 2020 playing the game, and with that and expanding the mods' content; this included finally converting the NVDay steam furnace and gas boiler to use proper fluid power, instead of hacky fake recipes or hidden control entities. Additionally, EGCombat got major visual and sound upgrades, ATD got both a GUI redesign and significant feature/tech expansion, and Geothermal got a rebalance, a new heat exchanger sprite, and the filtering and insulated cargo wagon systems. For all we know the origins of another major mod may not be far away.
 					</section>
 			</section>
-			<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
+				<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
 		<hr>
 		<div id = "footer-spacing">
 		
@@ -333,6 +334,7 @@
 			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
 			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>
 	</div></footer>
-		</div>
+			</div>
+		</main>
     </body>
 </html>

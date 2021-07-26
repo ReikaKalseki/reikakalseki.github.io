@@ -11,7 +11,7 @@
 		<script src = "../../../compiledJS/entrypoint.bundle.js"></script>
 		<meta name="script-def" content="footer-spacing">
 		<meta name="script-def" content="navbar-scroll-indicator">
-		<meta name="script-def" content="quicknav-pos">
+		<!-- <meta name="script-def" content="quicknav-pos"> -->
 			<meta name="script-def" content="minecraft/precursor">
     </head>
     <body  data-game="minecraft">
@@ -106,10 +106,11 @@
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-troubleshooting">Troubleshooting</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-troubleshooting'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 </table>
 </div>
-        <div id = "textarea" class = "textarea ">
-				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
-			<!-- <h2>LuaBlock</h2> -->
-						<section class = "textblock" id = "text-block-introduction">
+		<main id = "main-scroller">
+			<div id = "textarea" class = "textarea ">
+					<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
+				<!-- <h2>LuaBlock</h2> -->
+							<section class = "textblock" id = "text-block-introduction">
 				<h3>Introduction</h3>
 					
 					In addition to the standard "base" configs that simply control mod-wide options, many of my mods use the "LuaBlock" system for defining more complex objects to be used by some part of the mod. This can range from simple definitions, such as custom <a href="../../../minecraft/mods/voidmonster.html">Void Monster</a> drops, to slightly more complex versions that are effectively arrays of data - such as <a href="../../../minecraft/mods/cavecontrol.html">CaveControl</a> biome definitions - to complex structures with nested tables, such as for <a href="../../../minecraft/mods/satisforestry.html">Satisforestry</a> biome configs or custom <a href="../../../minecraft/mods/rotarycraft.html">RotaryCraft</a> machine recipes.
@@ -490,7 +491,7 @@
 					When a block is failed to be loaded, or is deemed invalid, this is generally noted in the log file; the mod in question will say something to the effect of "definition not loaded" and give some kind of reason why (eg "temperature out of bounds"). Many mods will also indicate how many entries it found in the config, how many it attempted to load, and how many of those succeeded.
 					</section>
 			</section>
-			<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
+				<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
 		<hr>
 		<div id = "footer-spacing">
 		
@@ -559,6 +560,7 @@
 			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
 			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>
 	</div></footer>
-		</div>
+			</div>
+		</main>
     </body>
 </html>

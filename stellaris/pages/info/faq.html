@@ -11,7 +11,7 @@
 		<script src = "../../../compiledJS/entrypoint.bundle.js"></script>
 		<meta name="script-def" content="footer-spacing">
 		<meta name="script-def" content="navbar-scroll-indicator">
-		<meta name="script-def" content="quicknav-pos">
+		<!-- <meta name="script-def" content="quicknav-pos"> -->
     </head>
     <body  data-game="stellaris">
         	<div id = "navbar" class="navbar">
@@ -70,10 +70,11 @@
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-commentary">Commentary</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-commentary'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 </table>
 </div>
-        <div id = "textarea" class = "textarea ">
-				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
-			<!-- <h2>FAQ</h2> -->
-			<section class = "textblock" id = "text-block-general">
+		<main id = "main-scroller">
+			<div id = "textarea" class = "textarea ">
+					<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
+				<!-- <h2>FAQ</h2> -->
+				<section class = "textblock" id = "text-block-general">
 	<h3>GENERAL</h3>
 		<h4 class = "faq-entry" style = "margin-top: 0px;">"Do your mods work in X version of the game/with X DLC?"</h4>
 		That depends on the mod. The Aleran Commonwealth definitely not with any modern version; it needs some scripting and event changes. E:D Star names probably does; name lists have not changed much if at all. As for DLCs...<i>probably</i>. I cannot speak for, much less design with and against, DLCs I do not have, but in general I doubt that adding new DLCs would outright break something.
@@ -91,7 +92,7 @@
 		One, Alerans are balanced against the bonuses the genocidal empires get, which was the inception of the whole mod; those empires are notoriously overpowered - to such a degree that the "I spawned near a determined exterminator, time for a new save" meme still dominates most stellaris communities - but my mod is just an answer to that. And no, the diplomatic maluses those empires have do not negate the bonuses; neither players nor AI usually attempt to pick a fight with an empire with seven times their fleet strength and five times their economy. Two, the bonuses the Alerans receive only apply in a very narrow playstyle; they cannot be co-opted to aid in more general play, including the ways which are the most popular and often most convenient. Three, those bonuses come with significant downsides, which culminate in a much harder time reaching victory compared to a vanilla empire. How can something be OP if it makes ultimate victory <i>harder</i>?
 </section><br>
 
-			<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
+				<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
 		<hr>
 		<div id = "footer-spacing">
 		
@@ -160,6 +161,7 @@
 			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
 			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>
 	</div></footer>
-		</div>
+			</div>
+		</main>
     </body>
 </html>

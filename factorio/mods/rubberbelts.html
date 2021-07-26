@@ -11,7 +11,7 @@
 		<script src = "../../compiledJS/entrypoint.bundle.js"></script>
 		<meta name="script-def" content="footer-spacing">
 		<meta name="script-def" content="navbar-scroll-indicator">
-		<meta name="script-def" content="quicknav-pos">
+		<!-- <meta name="script-def" content="quicknav-pos"> -->
     </head>
     <body  data-game="factorio">
         	<div id = "navbar" class="navbar">
@@ -94,10 +94,11 @@
 		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><span><i class="fas fa-angle-down"></i></span></button></td></tr>
 </table>
 </div>
-        <div id = "textarea" class = "textarea ">
-				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
-			<!-- <h2>RubberBelts</h2> -->
-						<section class = "textblock" id = "text-block-overview">
+		<main id = "main-scroller">
+			<div id = "textarea" class = "textarea ">
+					<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
+				<!-- <h2>RubberBelts</h2> -->
+							<section class = "textblock" id = "text-block-overview">
 				<h3>Overview</h3>
 					
 					RubberBelts is designed to reduce the iron cost of belts, especially in the early game where that cost can be prohibitive to building on a large enough scale to allow for later expansion. The mod - depending on your settings - either changes the basic (yellow) belt recipe or adds a new recipe for the same, using rubber instead of iron plates. If BobMods or similar rubber is present in the instance, it will use that; if not, it will add its own rubber, made by smelting resin (itself produced by simple crafting from raw wood).<br>
@@ -147,7 +148,7 @@ Type: bool<br>
 	<h3>Downloads</h3>
 <button type="button" class = "dlbtn" onclick="window.open('https://mods.factorio.com/mod/RubberBelts', '_blank'); return false;"><span>Factorio Mod Portal<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
 </section>
-			<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
+				<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
 		<hr>
 		<div id = "footer-spacing">
 		
@@ -216,6 +217,7 @@ Type: bool<br>
 			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
 			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>
 	</div></footer>
-		</div>
+			</div>
+		</main>
     </body>
 </html>
