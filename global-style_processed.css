@@ -18,12 +18,10 @@ body {
 	font-size: 97%;
 	min-height: 100vh;
 	overflow-x: hidden;
-	overflow-y: hidden;/*
+	overflow-y: hidden;
 	height: 100%;
-	width: 100%;
+	width: 100%;/*
 	position: absolute;*/
-	height: 0;
-	width: 0;
 	top:0;
 	left:0;/*
 	transform: translate(0);*/
