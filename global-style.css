@@ -18,10 +18,12 @@ body {
 	font-size: 97%;
 	min-height: 100vh;
 	overflow-x: hidden;
-	overflow-y: hidden;
+	overflow-y: hidden;/*
 	height: 100%;
 	width: 100%;
-	position: absolute;
+	position: absolute;*/
+	height: 0;
+	width: 0;
 	top:0;
 	left:0;/*
 	transform: translate(0);*/
@@ -423,15 +425,17 @@ audio {
   z-index: -1;
   background-color: black;
 	overflow-x: hidden;
-	overflow-y: hidden;
+	overflow-y: hidden;/*
 	height:100%;
-	width:100%;
+	width:100%;*/
+	width: 0;
+	height: 0;
 }
 
 .tile-layer {/*
   display: flex;
-  z-index: -1;*/
-  position: absolute;
+  z-index: -1;*//*
+  position: absolute;*/
   left: 0;
   top: 0;
   flex-direction: column;
