@@ -1,4 +1,5 @@
 :root {
+	--navbarWidth: 14.1vw;
 	--navbarHeight: max(1vh, 0.97cm, 1.5em);
 	--navbarEntryHeight: max(1vh,.6cm,1.25em);
 	--blueHighlight: #22aaff;
@@ -617,6 +618,7 @@ audio {
 	overflow-x: hidden;
 	z-index: 4;
   height: var(--navbarHeight);
+  display: flex;
 }
 
 .navbar a {
@@ -674,7 +676,7 @@ transition: opacity 0.25s linear; /* could also use ease-in-out for a more "acce
 }
 
 .navbar-button {
-  float: left;
+ /* float: left;*/
   font-size: inherit;
   color: white;
   text-align: center;
@@ -682,15 +684,17 @@ transition: opacity 0.25s linear; /* could also use ease-in-out for a more "acce
 	text-decoration: none;
 	font-weight: bold;
 	transition: 0.3s;
-  width: 14vw;
+  width: var(--navbarWidth);
   height: var(--navbarHeight);
 	font-family: "Exo 2", "Ubuntu", "Verdana", sans-serif !important;
+	flex: 0 0 var(--navbarWidth);
 }
 
 .navdropdown {
-  float: left;
+  /*float: left;*/
   overflow: hidden;
   overscroll-behavior: contain;
+	flex: 0 0 var(--navbarWidth);
 }
 
 .navdropdown .navdropbtn {
@@ -700,7 +704,7 @@ transition: opacity 0.25s linear; /* could also use ease-in-out for a more "acce
   outline: none;
   color: white;
   padding: 7px 17px; /* marker */
-  width: 14vw;
+  width: var(--navbarWidth);
   height: var(--navbarHeight);
   font-family: inherit;
 	transition: 0.3s;
@@ -723,7 +727,7 @@ transition: opacity 0.25s linear; /* could also use ease-in-out for a more "acce
   display: flex;
   visibility: hidden;
   position: absolute;
-  width: 14vw;
+  width: var(--navbarWidth);
   min-height: var(--navbarHeight);
   max-height: min(80vh, calc(calc(var(--navbarHeight) * 12) - 2px));/*min(80vh, calc(95vh-var(--navbarHeight)));*/
   overflow-y:auto;
