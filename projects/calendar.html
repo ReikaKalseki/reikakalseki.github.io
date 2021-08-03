@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="shortcut icon" href="../images/favicon.ico">
+        <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+		<meta http-equiv="Cache-control" content="no-cache">
+        <title>Game Calendar</title>
+		<link rel="stylesheet" type="text/css" href="../compiledJS/entrypoint.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+		<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Lato|Exo 2|Ubuntu|Cairo"> -->
+		<script src = "../compiledJS/entrypoint.bundle.js"></script>
+		<meta name="script-def" content="footer-spacing">
+		<meta name="script-def" content="navbar-scroll-indicator">
+		<meta name="script-def" content="quicknav-pos">
+    </head>
+    <body class = "other-project-body" >
+        	<div id = "navbar" class="navbar"> <!-- navbar-narrow if you want to unroll games -->
+	  <a class="navbar-button" href="../index.html">Reika Home</a>
+	  <!--<a class="navbar-button" href="index.html">Information</a> -->
+	  <!--
+			<a class="navbar-button" href="minecraft/index.html">Minecraft</a>
+			<a class="navbar-button" href="factorio/index.html">Factorio</a>
+			<a class="navbar-button" href="p2/index.html">Portal 2</a>
+			<a class="navbar-button" href="stellaris/index.html">Stellaris</a>
+			<a class="navbar-button" href="se/index.html">Space Engineers</a>
+			<a class="navbar-button" href="fce/index.html">FortressCraft Evolved</a>
+			<a class="navbar-button" href="starbound/index.html">Starbound</a>
+		-->
+	  <div class="navdropdown">
+		<div class="navdropbtn">Game List <i class="fa fa-angle-down"></i></div>
+		<div class="navdrop-content">
+				<a class = "navdrop-entry" href="../minecraft/index.html">Minecraft</a>
+				<a class = "navdrop-entry" href="../factorio/index.html">Factorio</a>
+				<a class = "navdrop-entry" href="../p2/index.html">Portal 2</a>
+				<a class = "navdrop-entry" href="../stellaris/index.html">Stellaris</a>
+				<a class = "navdrop-entry" href="../se/index.html">Space Engineers</a>
+				<a class = "navdrop-entry" href="../fce/index.html">FortressCraft Evolved</a>
+				<a class = "navdrop-entry" href="../starbound/index.html">Starbound</a>
+		</div>
+	  </div>
+	  <div class="navdropdown">
+		<div class="navdropbtn">Other Projects <i class="fa fa-angle-down"></i></div>
+		<div class="navdrop-content">
+				<a class = "navdrop-entry" href="../projects/calendar.html">Game Calendar</a>
+				<a class = "navdrop-entry" href="../projects/eventbuilder.html">Stellaris Event Builder</a>
+				<a class = "navdrop-entry" href="../projects/fcompile.html">FCompile</a>
+		</div>
+	  </div>
+	</div>
+		<noscript><div style = "text-align: center; width: 100%;"><div id = "nojs-header"><div><img class = "header-alert" src = "../images/alert.png"></div><div>You have JavaScript disabled; it is recommended you enable it for this site.<br>While the site will (mostly) function with scripts disabled, some sections (eg changelog view, or sortable tables) require it to update the page contents based on your input.<br>Additionally, JS is used to generate page styling, meaning disabling scripts will leave pages ugly, boring, and in some cases poorly arranged in ways that might impede readability.<br>If you have no idea what this means, or have not in fact disabled scripts, try simply reloading the page, as it may not have loaded completely or correctly.</div></div></div></noscript>
+<div id="toc_container">
+<div><div style = "display: inline-block;width: 40%; text-align: left;"><h3>Quick Nav</h3></div><div class = "inset-toggle" style = "width: 60%;"><input type="checkbox" id="toc-follow-toggle" checked> Follow Scroll</div></div>
+<hr>
+<table class="toc_list">
+	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><div><i class="fas fa-angle-double-up"></i></div></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-overview">Overview</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-overview'"><div><i class="fas fa-angle-down"></i></div></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-history">History</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-history'"><div><i class="fas fa-angle-down"></i></div></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-coreconcepts">Core Concepts</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-coreconcepts'"><div><i class="fas fa-angle-down"></i></div></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-theinterface">The Interface</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-theinterface'"><div><i class="fas fa-angle-down"></i></div></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-settings">Settings</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-settings'"><div><i class="fas fa-angle-down"></i></div></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-advancedselection">Advanced Selection</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-advancedselection'"><div><i class="fas fa-angle-down"></i></div></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-videoexport">Video Export</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-videoexport'"><div><i class="fas fa-angle-down"></i></div></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-implementation">Implementation</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-implementation'"><div><i class="fas fa-angle-down"></i></div></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-datainput">Data Input</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-datainput'"><div><i class="fas fa-angle-down"></i></div></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-sampledata">Sample Data</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sampledata'"><div><i class="fas fa-angle-down"></i></div></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><div><i class="fas fa-angle-down"></i></div></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-license">License</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-license'"><div><i class="fas fa-angle-down"></i></div></button></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><div><i class="fas fa-angle-down"></i></div></button></td></tr>
+</table>
+</div>        <div id = "textarea" class = "textarea textarea-other-project">
+				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
+			<!-- <h2>Game Calendar</h2> -->
+						<section class = "textblock" id = "text-block-overview">
+				<h3>Overview</h3>
+					
+					The "Game Calendar" is a tool designed for the visualization of a long series of potentially-overlapping time periods, divided into one or more categories, somewhat akin to a more complex Gantt chart. As the name implies, the original purpose of this was for displaying my modding and gaming activities for as long as I have good records, but it can be used with any kind of similarly-structured data, such as the contributions of several people to a communal project. This allows for simple and fast at-a-glance recognition of things like overall time investment, or patterns in timing or coincidence. It also functions as a kind of "scrapbook", allowing you to revisit any time or any specific activity in detail.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../imagedownloads/i-imgur-com_2FaaY202k.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../imagedownloads/i-imgur-com_2FaaY202k.png" style="max-width:75%;" ></a>	<div class = "image-caption">The default display view, with the data as of the time of this writing.</div>
+</div>
+					</section>
+			</section><br>
+			<section class = "textblock" id = "text-block-history">
+				<h3>History</h3>
+					
+					This tool is a massively improved, expanded, and (by being programmatic, dynamic) version of some handmade graphics I created over the years to display various activites over their time periods. Usually these were to show my history of activity within a specific domain, most commonly - since it dominates much of my modding history as well as my play time pre 2017 - Minecraft.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../imagedownloads/i-imgur-com_2FCgSaeEL.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../imagedownloads/i-imgur-com_2FCgSaeEL.png" style="max-width:75%;" ></a>	<div class = "image-caption">A 2018-era example of exactly this.</div>
+</div><br>
+					
+					
+					In the early summer of 2020, I found myself in an especially nostalgic mood and was thinking back to these handmade graphics, and decided to make a new one, this time with a proper application, with an interactive control system and which can read data files, so as to allow for far more detailed viewing and be simple to keep permanently up to date.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../imagedownloads/i-imgur-com_2FDtmaIL2.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../imagedownloads/i-imgur-com_2FDtmaIL2.png" style="max-width:75%;" ></a>	<div class = "image-caption">A very early development image.</div>
+</div><br>
+					
+					
+					This kind of display was only possible because I have an <i>extremely</i> aggressive habit of taking screenshots whenever something remotely notable or visually appealing is witnessed, or to record things like "I had this set of items at this time". As a result, I have a <i>very</i> extensive screenshot library, totalling <a href="https://i.imgur.com/GEHxETG.png">97.4GB in more than 70000 images in ShareX alone</a>, with another ten or twenty thousand images at least in various game-specific or steam screenshot folders (as I only started using ShareX in May 2015, and not even until as late as the end of 2016 for some games).
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-coreconcepts">
+				<h3>Core Concepts</h3>
+					
+					All data loaded into the calendar is defined as either a "period" or an "event"; the only real difference is that the former are spans of time, with a fixed start and end point, while the latter are single-time events. In this use case, that means each period represents a length of time I was playing or modding a specific game, and an event represents some "happening" in the course of this. Both periods and events share most properties. Chief among these is the "category", which is the overall group or family that period/event belongs to. In this case, that is a specific activity type; in the aforementioned communal project example, each category would be a specific contributor. Both periods and events also allow for descriptions, screenshots, and the application of various flags and modifiers (more on that later).<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../imagedownloads/i-imgur-com_2Fe0jtzSw.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../imagedownloads/i-imgur-com_2Fe0jtzSw.png" style="max-width:75%;" ></a>	<a href = "../imagedownloads/i-imgur-com_2FRminWeH.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../imagedownloads/i-imgur-com_2FRminWeH.png" style="max-width:75%;" ></a>	<div class = "image-caption">A sample period and some sample events.</div>
+</div>
+					</section>
+			</section><br>
+			<section class = "textblock" id = "text-block-theinterface">
+				<h3>The Interface</h3>
+					
+					<div class = "block-image">
+	<a href = "../imagedownloads/i-imgur-com_2FkIeu7pU.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../imagedownloads/i-imgur-com_2FkIeu7pU.png" style="max-width:75%;" ></a>
+</div><br>
+					
+					
+					The primary panel (1) is the calendar graphic itself; this shows the entirety of the time range - expanded to begin and end on a new year - encompassing all loaded periods. The overall layout is spiral, with each successive year encircling the previous one, resulting in a single continuous band for the time span. Each month is allocated 1/12th of the circle - ie 30 degrees - irrespective of its actual length, to ensure that all years remain aligned and to keep the calendar looking balanced.
+					
+					
+					<br><br>
+					
+					
+					Each period is rendered as an arc colored after its category; if multiple periods overlap, the arc is split at each change in "layering", with the overlapping regions drawn with a cycle between the applicable colors for the categories in that span of time. So for example, in the above image, the long purple arc occupying the first third of 2013 represents a period of <i>just</i> Minecraft modding, but while that arc would normally extend to mid-June, the existence of a brief "Modded Minecraft" arc spanning late May to early June causes a split on either side, with the middle section alternating between the modding purple and the dark green for modded MC. Where three or more regions overlap, their colors are cycled through in a consistent order.
+					
+					
+					<br><br>
+					
+					
+					Highlights are rendered as black points positioned at the radius and angle corresponding to their date of occurrence.
+					
+					
+					<br><br>
+					
+					
+					All elements are clickable; doing so will highlight them (and depending on the chosen settings, possibly related elements) and show the applicable category names, identifying name, time spans, descriptions (3), as well as previews of their screenshots if any (8). Clicking "empty" space will unselect all elements. Where multiple periods overlap and they have been split, each segment ("section") is clickable independently. To select multiple elements, standard LCTRL clicking is used (and there is no requirement that the selections be contiguous). Screenshot previews can be clicked to open the file in the native OS image previewer.
+					
+					
+					<br><br>
+					
+					
+					Embedded in the corner of this panel is a button to open the "Advanced Selection" menu (2). See below for more details.
+					
+					
+					<br><br>
+					
+					
+					The category list (4) provides both a quick overview of the set of all categories, as well as allowing for any entry to be readily toggled. Disabling a category will hide it from the calendar display (completely removing any arcs consisting solely of that category, and removing its color from any overlapping ones), and while disabled, nothing from it can be selected by clicking. This list's ordering, as well as the resultant ordering in the description and screenshot panels, is dictated by the chosen item in the sorting list (6). All categories can be moused over to show a short description if one has been specified in the data files.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../imagedownloads/i-imgur-com_2FILrHdcp.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../imagedownloads/i-imgur-com_2FILrHdcp.png" style="max-width:75%;" ></a>	<a href = "../imagedownloads/i-imgur-com_2F2kfZdkX.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../imagedownloads/i-imgur-com_2F2kfZdkX.png" style="max-width:75%;" ></a>	<div class = "image-caption">Only selecting MC-related categories and logistics-game-related categories respectively.</div>
+</div><br>
+					
+					
+					The settings in (7) determine how clicking effects a selection, as well as showing or displaying various additional data layers or modulating the display of specific elements (see below).
+					
+					
+					<br><br>
+					
+					
+					The collection of buttons in (5) are miscellaneous controls. Most are self-evident, while video exporting will be discussed later.
+					
+					
+					<br><br>
+					
+					
+					Finally, the status bar (9) will show application status messages, such as "reloading renderer" or if an error is raised.
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-settings">
+				<h3>Settings</h3>
+					
+					The top two settings control the interaction of events and periods when clicked on. With neither checked, clicking will only ever highlight the element directly interacted with; the two options enable whether to also select the events inside the time span of the clicked period (doing nothing if an event was clicked) and the periods containing the event that has been clicked (doing nothing if a period was clicked).
+					
+					
+					<br><br>
+					
+					
+					The next block of settings controls whether to show additional data layers, mostly regarding specific significant dates or ranges thereof. Note that the "break" periods are approximations of what <i>I</i> had during my university studies, so they are not necessarily what you might expect for your own case. The "dual section" nature of the christmas and summer breaks is to indicate the end of classes and the end of the exam period respectively, as only in the latter block was I truly "free".<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../imagedownloads/i-imgur-com_2F5u3TCdL.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../imagedownloads/i-imgur-com_2F5u3TCdL.png" style="max-width:75%;" ></a>
+</div><br>
+					
+					
+					Finally, there are a series of toggles to modulate the rendering of the calendar items themselves. Fistly, events can be hidden to reduce visual clutter. Next, sections which have been tagged with the "memorable" keyword in the data files - used here to indicate that particular event or period is still well- and fondly-remembered - can be drawn specially. For events, memorability causes them to render as a star instead of a circle, and memorable periods (or rather, sections including some of at least one memorable period) are rendered with full arc thickness compared to the narrower lines of "standard" periods. With this option unselected, all events are circles and all periods full thickness.
+					
+					
+					<br><br>
+					
+					
+					The next option converts the rendering from item-specific to category-specific; that is, it will merge a sequence of same-category periods into one continuous region of the category, splitting only on large gaps or where the category set changes.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../imagedownloads/i-imgur-com_2Fdo1fErC.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../imagedownloads/i-imgur-com_2Fdo1fErC.png" style="max-width:75%;" ></a>	<a href = "../imagedownloads/i-imgur-com_2FAXeEsyb.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../imagedownloads/i-imgur-com_2FAXeEsyb.png" style="max-width:75%;" ></a>	<div class = "image-caption">Elite:Dangerous activity between fall 2016 and spring 2017, default and merged mode. Note how the merging combines the entire period.</div>
+</div><br>
+					
+					
+					Next, there is an option to only show selected items. This is generally used alongside the advanced selection system.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../imagedownloads/i-imgur-com_2F0dfu6Vv.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../imagedownloads/i-imgur-com_2F0dfu6Vv.png" style="max-width:75%;" ></a>	<div class = "image-caption">Only showing selected sections, those being all the "memorable" events and periods.</div>
+</div><br>
+					
+					
+					All settings' values are persistent across program loads, assuming the application exits normally.
+					
+					
+					<br><br>
+					
+					
+					The final setting is the privacy slider. Every event or period is by default assigned a "privacy level" of zero, but an explicit value (any arbitrary positive integer) can be specified in the source file. This slider is allocated and sized dynamically based on the highest defined privacy level, and every item of a level greater than its current setting is hidden from both display and selection. This is useful if you wish to have entries that are viewable but want hidden from a particular display. For example, one might define several items that contain personally-identifiable information and assign them a high level, so that they can be shown for personal use, but hidden for public renders of the calendar where that slider is set to a lower value.
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-advancedselection">
+				<h3>Advanced Selection</h3>
+					
+					<div class = "block-image">
+	<a href = "../imagedownloads/i-imgur-com_2FkSR9WtJ.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../imagedownloads/i-imgur-com_2FkSR9WtJ.png" style="max-width:75%;" ></a>
+</div><br>
+					
+					
+					The Advanced Selection system allows for the easy selection of a large number of elements simultaneously based on various criteria. This includes selecting all memorable items, all items that occurred on a specific date, and more. There is also the option to select by arbitrary data properties specified in the files.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../imagedownloads/i-imgur-com_2FkcNA1fW.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../imagedownloads/i-imgur-com_2FkcNA1fW.png" style="max-width:75%;" ></a>	<a href = "../imagedownloads/i-imgur-com_2FlLZiRje.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../imagedownloads/i-imgur-com_2FlLZiRje.png" style="max-width:75%;" ></a>	<div class = "image-caption">All activities intersecting today and christmas respectively.</div>
+</div>
+					</section>
+			</section><br>
+			<section class = "textblock" id = "text-block-videoexport">
+				<h3>Video Export</h3>
+					
+					The calendar is capable of exporting timelapse videos, with sequential snapshots of the calendar, with embedded copies of the applicable descriptions and screenshots active at that point in time.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../imagedownloads/i-imgur-com_2Fyfh26xJ.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../imagedownloads/i-imgur-com_2Fyfh26xJ.png" style="max-width:75%;" ></a>	<div class = "image-caption">A sample video frame.</div>
+</div><br>
+					
+					
+					There are a great many options to fine-tune the export and its properties, including which video encoder to use, output format, the playback rate (days per frame), whether to hold when new items appear, to allow them to be clearly seen, "fast travel" through empty regions, and the time range. Most of these are clearly explained in the control window.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../imagedownloads/i-imgur-com_2FBcHOQjw.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../imagedownloads/i-imgur-com_2FBcHOQjw.png" style="max-width:75%;" ></a>
+</div><br>
+					
+					
+					<div class = "video">
+	<iframe class = "deembed-media" style = "max-width: 75%;" width="960" height="540" src="https://www.youtube.com/embed/I0z_KH9XdBo" title="A sample video from the time of writing." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-implementation">
+				<h3>Implementation</h3>
+					
+					The program is written in Java, using the JavaFX GUI library for the GUI and windowing system (helped with SceneBuilder for the layout planning). The actual calendar is implemented with handwritten FFP OpenGL (via lwjgl), and is embedded into the JavaFX scene via the DriftFX library (which is designed for display of custom GL contexts inside JFX applications). The video builder uses AWT graphics (BufferedImage, Graphics2D) to build each frame from the OpenGL rendered output, with the encoding using either JCodec (natively supported) or, if you provide a path to an existing install, FFMPEG. In other words, I had to marry a whole bunch of disparate java libraries and systems, not all that unlike a lot of the modding I do. :P
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-datainput">
+				<h3>Data Input</h3>
+					
+					The program loads its data from a folder (by default a folder called "Data" in the same folder as the jar itself, though this can be changed with a program argument). In that folder, every subfolder will correspond to a category, and contain two of its own subfolders, "Events", and "Periods". Each of these will contain any number of text files (any extension, so long as it is plain text), with each file corresponding to one event or period. The category folders also contain an info.txt file, containing data about the category itself.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../imagedownloads/i-imgur-com_2FNIOCW26.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../imagedownloads/i-imgur-com_2FNIOCW26.png" style="max-width:75%;" ></a>	<div class = "image-caption">One such example - my Factorio periods as of October 2020.</div>
+</div><br>
+					
+					
+					All the files are structured as a bunch of properties formatted as colon-separated key-value pairs.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../imagedownloads/i-imgur-com_2FVP7URCy.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../imagedownloads/i-imgur-com_2FVP7URCy.png" style="max-width:75%;" ></a>	<div class = "image-caption">A sample category info.txt. In this case, this sets the description, color, and some override parameters (ie properties imposed on all child events and periods). The display name of the category is by default the folder name, and so there is no explicit "display" property listed here. That would be necessary if you wanted, for example, a category with a '/' in its name, something not permitted in folder names.</div>
+</div><br>
+					
+					
+					Each individual element data file is formatted similarly to the info text files. In the case of periods, this includes start and end dates (self-explanatory), 'desc' for a description, 'screenshot', pointing to a file on the system of a screenshot from the period (and which was felt to be representative or of a memorable moment), 'memorable' applies the memorability flag discussed above. Additionally, other data values can be specified (for example you could add a 'main' key for items that represent "this is what I was spending most of my time doing in this period, far more than the other things I was also doing at the time). Only the start and end dates are mandatory keys. Events use a single "date" property instead of start and end, but are otherwise structured identically.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../imagedownloads/i-imgur-com_2F0aCv0Xq.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../imagedownloads/i-imgur-com_2F0aCv0Xq.png" style="max-width:75%;" ></a>	<div class = "image-caption">A sample data file for a period, in this case my winter 2017 Space Engineers planet-based survival world. An additional property 'modding' marks it as involving some amount of modding (in this case of SE, obviously).</div>
+</div><br>
+					
+					
+					<div class = "block-image">
+	<a href = "../imagedownloads/i-imgur-com_2FfPydZL0.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../imagedownloads/i-imgur-com_2FfPydZL0.png" style="max-width:75%;" ></a>	<div class = "image-caption">A sample event data file, in this case for a time I played <a href="https://steamcommunity.com/workshop/filedetails/?id=96685421">a MC-themed P2 map</a> and started <a href="https://www.reddit.com/r/feedthebeast/comments/3h5m75/how_is_this_even_possible_mod_preview/">a drama storm</a> when <a href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1291655-reikas-mods-tech-worldgen-civilization-and-more?comment=22840">I posted it to my MC modding thread</a> as a joke.</div>
+</div>
+					</section>
+			</section><br>
+			<section class = "textblock" id = "text-block-sampledata">
+				<h3>Sample Data</h3>
+					
+					A collection of sample data, including categories, periods, and events, can be browsed in <a href="https://github.com/ReikaKalseki/GameCalendar/tree/master/SampleData">the applicable folder of the repository</a>.
+					</section>
+			</section>
+<br>
+			<section class = "textblock" id = "text-block-sourcecode">
+			<div class = "modsource">
+				<h3>Source Code</h3>				The source code for Game Calendar can be found here:<button type="button" class = "srcbtn" onclick="window.open('https://github.com/ReikaKalseki/GameCalendar', '_blank'); return false;"><span>GitHub<div class = "spacer"></div><i class="fab fa-github"></i></span></button>
+			</div>
+			</section>
+<br>
+			<section class = "textblock" id = "text-block-license">
+			<div class = "project-license">
+<h3>License</h3>Game Calendar is released under a personal-use visible-source license. It may be used for the intended or similar purposes, for personal use (including creation/maintenance of your own projects). <b>It may not be used for commercial purposes or paid software</b>. Unless given explicit written permission, it cannot be redistributed, nor can it be adapted or packaged into a larger product. Derivative works of Game Calendar can be produced, but only for your own personal use; these works or modified versions may never be shared with others.
+			</div>
+			</section>
+<br><br>
+<section class = "textblock" id = "text-block-downloads">
+	<h3>Downloads</h3>
+Downloads for this item are not currently available.
+</section>
+<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
+		<hr>
+		<div id = "footer-spacing">
+		
+		</div>
+		<hr>
+		If you like any of my mods, maps, or other content, or want to help me develop them, feel free to use my Patreon or the buttons below. Every little bit helps me be able to keep working on them, and helps ensure both maintenance and expansion of them.<br>
+		If you wish to give a one-time donation, I recommend you use the Paypal link on the right; Patreon, though it can be used for one-time donations, is designed for ongoing monthly 'subscriptions' (ie a set amount of money gifted each month for as long as you remain a 'patron'). Paypal can also register a donation with monthly recurrence, should that seem preferable to you.<br>
+		For both systems, the amount you choose to donate is up to you, and for Patreon, can be changed at any time should you wish to decrease or increase the amount.<br>
+		And thank you for your support. :D<br>
+					<div class = "linkiconblock">
+					<div class = "linktile" style = "width: 49.75%">
+						<div class = "linklabel">Patreon</div>
+						<a class = "icon icon-patreon" href="http://www.patreon.com/reikasminecraft" ></a>
+					</div>
+					<div class = "linktile" style = "width: 49.75%">
+						<div class = "linklabel">Paypal</div>
+						<a class = "icon icon-paypal" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5XRAM3SXBRJY4" ></a>
+					</div>
+			</div>
+		<hr>
+		To contact me (though some of these are only checked periodically, and many are for specific topics) or find additional information or content, visit any one of these platforms:<br>
+					<div class = "linkiconblock">
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Minecraft Forums</div>
+						<a class = "icon icon-mcforums" href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1291655" title="Minecraft Only"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Factorio Forums</div>
+						<a class = "icon icon-facforums" href="https://forums.factorio.com/viewforum.php?f=216" title="Factorio Only"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">GitHub</div>
+						<a class = "icon icon-github" href="https://github.com/ReikaKalseki" ></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Discord</div>
+						<a class = "icon icon-discord" href="https://discord.com/channels/466852131895508992/466852131895508994/" title="Discord ID: Reika#3161"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Steam</div>
+						<a class = "icon icon-steam" href="https://steamcommunity.com/id/ReikaKalseki/myworkshopfiles/" title="Please no random friend requests"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">YouTube</div>
+						<a class = "icon icon-youtube" href="https://www.youtube.com/user/ReikasMinecraft/videos" ></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">SoundCloud</div>
+						<a class = "icon icon-soundcloud" href="https://soundcloud.com/reikakalseki" title="Music Only"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Reddit</div>
+						<a class = "icon icon-reddit" href="https://www.reddit.com/user/ReikaKalseki/" ></a>
+					</div>
+			</div>
+		<hr>
+		This site is proudly Canadian. <i class="fab fa-canadian-maple-leaf"></i><br>
+		<hr>
+		Site (including embedded JavaScript) and linked projects (mods, maps, etc) created by and &copy; ReikaKalseki, except for content within which is part of the base games, as noted below.<br>
+		<hr>
+			Minecraft and its content and assets are &copy; Mojang AB, with whom I am not affiliated<br>
+			Factorio and its content and assets are &copy; Wube Software, with whom I am not affiliated<br>
+			Portal 2 and its content and assets are &copy; Valve Corporation, with whom I am not affiliated<br>
+			Stellaris and its content and assets are &copy; Paradox Interactive, with whom I am not affiliated<br>
+			Space Engineers and its content and assets are &copy; Keen Software House, with whom I am not affiliated<br>
+			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
+			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>
+	</div></footer>		</div>
+    </body>
+</html>
