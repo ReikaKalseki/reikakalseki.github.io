@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="shortcut icon" href="../../../images/favicon.ico">
+        <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+		<meta http-equiv="Cache-control" content="no-cache">
+        <title>Change Logs</title>
+		<link rel="stylesheet" type="text/css" href="../../../compiledJS/entrypoint.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+		<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Lato|Exo 2|Ubuntu|Cairo"> -->
+		<script src = "../../../compiledJS/entrypoint.bundle.js"></script>
+		<!-- <meta name="script-def" content="footer-spacing"> -->
+		<meta name="script-def" content="navbar-scroll-indicator">
+		<!-- <meta name="script-def" content="quicknav-pos"> -->
+			<meta name="script-def" content="changeloader">
+    </head>
+    <body  data-game="stellaris">
+        	<div id = "navbar" class="navbar">
+	  <a class="navbar-button" href="../../../index.html">Reika's Mods Home</a>
+	  <a class="navbar-button" href="../../../stellaris/index.html">Stellaris Home</a>
+		  <div class="navdropdown">
+			<div class="navdropbtn">Information <i class="fa fa-angle-down"></i></div>
+			<div class="navdrop-content">
+					<a class = "navdrop-entry" href="../../../stellaris/pages/info/faq.html">FAQ</a>
+					<a class = "navdrop-entry" href="../../../stellaris/pages/info/contact.html">Contact</a>
+					<a class = "navdrop-entry" href="../../../stellaris/pages/info/history.html">History</a>
+					<a class = "navdrop-entry" href="../../../stellaris/pages/info/changelog.html">Change Logs</a>
+			</div>
+		  </div>
+		  <div class="navdropdown">
+			<div class="navdropbtn">Permissions <i class="fa fa-angle-down"></i></div>
+			<div class="navdrop-content">
+					<a class = "navdrop-entry" href="../../../stellaris/pages/perms/license.html">License</a>
+			</div>
+		  </div>
+	  <div class="navdropdown">
+		<div class="navdropbtn">Mods <i class="fa fa-angle-down"></i></div>
+		<div class="navdrop-content">
+				<a class = "navdrop-entry" href="../../../stellaris/mods/alerans.html">Aleran Commonwealth</a>
+				<a class = "navdrop-entry" href="../../../stellaris/mods/edstarnames.html">E:D Star Names</a>
+		</div>
+	  </div>
+	  <div class="navdropdown">
+		<div class="navdropbtn">Other Games <i class="fa fa-angle-down"></i></div>
+		<div class="navdrop-content">
+				<a class = "navdrop-entry" href="../../../minecraft/index.html">Minecraft</a>
+				<a class = "navdrop-entry" href="../../../factorio/index.html">Factorio</a>
+				<a class = "navdrop-entry" href="../../../p2/index.html">Portal 2</a>
+				<a class = "navdrop-entry" href="../../../se/index.html">Space Engineers</a>
+				<a class = "navdrop-entry" href="../../../fce/index.html">FortressCraft Evolved</a>
+				<a class = "navdrop-entry" href="../../../starbound/index.html">Starbound</a>
+		</div>
+	  </div>
+	  <div class="navdropdown">
+		<div class="navdropbtn">Other Projects <i class="fa fa-angle-down"></i></div>
+		<div class="navdrop-content">
+				<a class = "navdrop-entry" href="../../../projects/calendar.html">Game Calendar</a>
+				<a class = "navdrop-entry" href="../../../projects/eventbuilder.html">Stellaris Event Builder</a>
+				<a class = "navdrop-entry" href="../../../projects/fcompile.html">FCompile</a>
+		</div>
+	  </div>
+	</div>
+		<noscript><div style = "text-align: center; width: 100%;"><div id = "nojs-header"><div><img class = "header-alert" src = "../../../images/alert.png"></div><div>You have JavaScript disabled; it is recommended you enable it for this site.<br>While the site will (mostly) function with scripts disabled, some sections (eg changelog view, or sortable tables) require it to update the page contents based on your input.<br>Additionally, JS is used to generate page styling, meaning disabling scripts will leave pages ugly, boring, and in some cases poorly arranged in ways that might impede readability.<br>If you have no idea what this means, or have not in fact disabled scripts, try simply reloading the page, as it may not have loaded completely or correctly.</div></div></div></noscript>
+<div id="toc_container">
+<h3>Quick Nav</h3>
+<hr>
+<table class="toc_list">
+	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><a class = "tocbtn" href="#top"><i class="fas fa-angle-double-up"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-intro">Introduction</a></td><td><a class = "tocbtn" href="#text-block-intro"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-mods">Mod List And Info</a></td><td><a class = "tocbtn" href="#text-block-mods"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-changes">Change Viewer</a></td><td><a class = "tocbtn" href="#text-block-changes"><i class="fas fa-angle-down"></i></a></td></tr>
+</table>
+</div>        <div id = "textarea" class = "textarea ">
+				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
+			<!-- <h2>Change Logs</h2> -->
+			<section class = "textblock" id = "text-block-intro">
+<h3>Introduction</h3>
+These are the changelogs for all the mods going back as far as they have been kept, sorted by game and mod version. Click a button to load the changes made in that version; the presence of any mod and its changes in the displayed data can be toggled with the options below.<br><br>Note that I have not always kept changelogs, nor equally good ones; as you go back, changelogs may be missing data such as their release date or game version, or even be absent entirely. This also means the "Game Version" ranges below may not be fully accurate for the earliest releases, which may predate any changelog efforts, and where manual reconstruction was attempted. Furthermore, where I have record of changes but incomplete record of releases, the changes will be attributed to the soonest release after the change I can confirm, which may not be the actual release date of that change.<br><br>Finally, the display data you see here is autogenerated by parsing existing written changelogs in other forms, and as such I cannot guarantee that it not have the occasional error such as a missing change or incorrect date ranges in the table below.
+</section>
+<br><br>
+<section class = "textblock" id = "text-block-mods">
+<h3>Mods</h3>
+<table class = "changetable">
+  <tr>
+	<th style = "width: 25%;">
+		Mod Name
+	</th>
+	<th style = "width: 20%;">
+		Game Version Range
+	</th>
+	<th style = "width: 25%;">
+		Changelog Data Range
+	</th>
+	<th style = "width: 20%;">
+		Latest Available Version
+	</th>
+	<th style = "width: 10%;">
+		Show Changes
+	</th>
+  </tr>
+<tr>
+<td>[ALL]</td>
+<td></td>
+<td></td>
+<td></td>
+<td><input type="checkbox" class="modchangecheck" data-value = "all" data-mod = "[ALL]" checked></td>
+</tr>
+<tr>
+<td><a href = "../../../stellaris/mods/alerans.html">Dragon Species and Aleran Commonwealth</a></td>
+<td>2.1</td>
+<td>18/10/2018 [2.1] - 6/6/2021 [2.1]</td>
+<td>6/6/2021 [2.1]</td>
+<td><input type="checkbox" class="modchangecheck" data-value = "alerans" data-mod = "Dragon Species and Aleran Commonwealth" checked></td>
+</tr>
+<tr>
+<td><a href = "../../../stellaris/mods/edstarnames.html">Elite:Dangerous Star Names</a></td>
+<td>2.1</td>
+<td>1/8/2019 [2.1] - 1/8/2019 [2.1]</td>
+<td>6/6/2021 [2.1]</td>
+<td><input type="checkbox" class="modchangecheck" data-value = "edstarnames" data-mod = "Elite:Dangerous Star Names" checked></td>
+</tr>
+</table>
+</section>
+<br><br>
+<div style = "display: none">
+	<div id = "mod-version-list-2.1">
+			<div class = "mod-version-list-entry" data-date = "June 6, 2021" data-modset = "alerans">6/6/2021</div>
+			<div class = "mod-version-list-entry" data-date = "April 2, 2021" data-modset = "alerans">2/4/2021</div>
+			<div class = "mod-version-list-entry" data-date = "March 2, 2021" data-modset = "alerans">2/3/2021</div>
+			<div class = "mod-version-list-entry" data-date = "February 19, 2021" data-modset = "alerans">19/2/2021</div>
+			<div class = "mod-version-list-entry" data-date = "January 25, 2021" data-modset = "alerans">25/1/2021</div>
+			<div class = "mod-version-list-entry" data-date = "January 18, 2021" data-modset = "alerans">18/1/2021</div>
+			<div class = "mod-version-list-entry" data-date = "January 5, 2021" data-modset = "alerans">5/1/2021</div>
+			<div class = "mod-version-list-entry" data-date = "January 3, 2021" data-modset = "alerans">3/1/2021</div>
+			<div class = "mod-version-list-entry" data-date = "December 25, 2020" data-modset = "alerans">25/12/2020</div>
+			<div class = "mod-version-list-entry" data-date = "December 13, 2020" data-modset = "alerans">13/12/2020</div>
+			<div class = "mod-version-list-entry" data-date = "December 4, 2020" data-modset = "alerans">4/12/2020</div>
+			<div class = "mod-version-list-entry" data-date = "December 3, 2020" data-modset = "alerans">3/12/2020</div>
+			<div class = "mod-version-list-entry" data-date = "November 16, 2020" data-modset = "alerans">16/11/2020</div>
+			<div class = "mod-version-list-entry" data-date = "June 22, 2020" data-modset = "alerans">22/6/2020</div>
+			<div class = "mod-version-list-entry" data-date = "August 1, 2019" data-modset = "edstarnames">1/8/2019</div>
+			<div class = "mod-version-list-entry" data-date = "July 23, 2019" data-modset = "alerans">23/7/2019</div>
+			<div class = "mod-version-list-entry" data-date = "July 17, 2019" data-modset = "alerans">17/7/2019</div>
+			<div class = "mod-version-list-entry" data-date = "June 18, 2019" data-modset = "alerans">18/6/2019</div>
+			<div class = "mod-version-list-entry" data-date = "June 14, 2019" data-modset = "alerans">14/6/2019</div>
+			<div class = "mod-version-list-entry" data-date = "November 28, 2018" data-modset = "alerans">28/11/2018</div>
+			<div class = "mod-version-list-entry" data-date = "November 22, 2018" data-modset = "alerans">22/11/2018</div>
+			<div class = "mod-version-list-entry" data-date = "November 20, 2018" data-modset = "alerans">20/11/2018</div>
+			<div class = "mod-version-list-entry" data-date = "November 12, 2018" data-modset = "alerans">12/11/2018</div>
+			<div class = "mod-version-list-entry" data-date = "November 8, 2018" data-modset = "alerans">8/11/2018</div>
+			<div class = "mod-version-list-entry" data-date = "November 5, 2018" data-modset = "alerans">5/11/2018</div>
+			<div class = "mod-version-list-entry" data-date = "November 4, 2018" data-modset = "alerans">4/11/2018</div>
+			<div class = "mod-version-list-entry" data-date = "November 3, 2018" data-modset = "alerans">3/11/2018</div>
+			<div class = "mod-version-list-entry" data-date = "November 1, 2018" data-modset = "alerans">1/11/2018</div>
+			<div class = "mod-version-list-entry" data-date = "October 29, 2018" data-modset = "alerans">29/10/2018</div>
+			<div class = "mod-version-list-entry" data-date = "October 26, 2018" data-modset = "alerans">26/10/2018</div>
+			<div class = "mod-version-list-entry" data-date = "October 24, 2018" data-modset = "alerans">24/10/2018</div>
+			<div class = "mod-version-list-entry" data-date = "October 18, 2018" data-modset = "alerans">18/10/2018</div>
+	</div>
+			<div class = "changelog-data-cache" id = "2.1|6/6/2021|alerans"><ul class = "changelist">				
+					<li>Fixed some duplications or broken keys in some modifiers</li>
+					<li>Fixed more things being dependent on dragon trait instead of civic</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "2.1|2/4/2021|alerans"><ul class = "changelist">				
+					<li>Tweaked EbF applicability</li>
+					<li>Removed console logging</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "2.1|2/3/2021|alerans"><ul class = "changelist">				
+					<li>Expanded EbF applicability</li>
+					<li>Fixed some logical flaws in duty calls firing or not firing, especially regarding indirect allies or empires that no longer exist</li>
+					<li>Expanded "coexistence" faction demand to penalize taking the genocidal route in forked event chains (eg migrating forests)</li>
+					<li>Tweaked War in Heaven scripting</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "2.1|19/2/2021|alerans"><ul class = "changelist">				
+					<li>Increased terraforming cost 20% on pampered trait</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "2.1|25/1/2021|alerans"><ul class = "changelist">				
+					<li>Added +30 fleet command limit to civic and more to moralistic fervor modifier</li>
+					<li>Buffed AI alerans</li>
+					<li>Added increased collateral damage army modifier to civic</li>
+					<li>Added more opinion modifiers</li>
+					<li>Tweaked War in Heaven scripting</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "2.1|18/1/2021|alerans"><ul class = "changelist">				
+					<li>Central library now adds +5 starbase cap</li>
+					<li>Massively increased integration speed</li>
+					<li>Added more opinion modifiers</li>
+					<li>Added custom war in heaven events and scripting and associated duties</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "2.1|5/1/2021|alerans"><ul class = "changelist">				
+					<li>Expanded EbF applicability</li>
+					<li>Added ship build speed bonuses to moralistic fervor modifier</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "2.1|3/1/2021|alerans"><ul class = "changelist">				
+					<li>Rebuilt and expanded Duty Calls system</li>
+					<li>Alerans now start off entirely unable to build military ships</li>
+					<li>Split moralistic fervor into two tiers based on target threat level</li>
+					<li>Halved base naval cap bonus from civic, added to MF modifier instead</li>
+					<li>Tweaked some faction demands</li>
+					<li>Added "coexistence" faction demand to penalize taking the genocidal route against spaceborne life (eg space amoebas)</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "2.1|25/12/2020|alerans"><ul class = "changelist">				
+					<li>Massively increased library build cost and upkeep</li>
+					<li>Changed colossus weapon VFX</li>
+					<li>Added strong negative army modifiers to drug colossus effects</li>
+					<li>Insensitive trait can now be added via species modification</li>
+					<li>Fixed EbF completion with FE targets</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "2.1|13/12/2020|alerans"><ul class = "changelist">				
+					<li>Added "Duty Calls" system</li>
+					<li>Tied moralistic fervor into duty calls system</li>
+					<li>Removed megastructure events entirely</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "2.1|4/12/2020|alerans"><ul class = "changelist">				
+					<li>Elevated Meiza "waving rings" render bug into feature, with special project and unique physics deposits</li>
+					<li>Libraries now add to leader cap</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "2.1|3/12/2020|alerans"><ul class = "changelist">				
+					<li>Commonwealth libraries now grant free core sector system for that world</li>
+					<li>Central library adds +4 core sector systems</li>
+					<li>Reworked EbF applicability</li>
+					<li>Removed inherent bonuses against pirates and marauders</li>
+					<li>Modified or removed many civic bonuses, often moving them to other triggers or events</li>
+					<li>Added new FE opinion modifier for xenophiles</li>
+					<li>Commonwealth centralization tech now comes much faster with larger empires</li>
+					<li>Edited EbF outcomes</li>
+					<li>Influence bonus from killing leviathans is now tiered based on leviathan danger level</li>
+					<li>Expanded the outcomes of one story event chain to increase variability in outcomes and raise limit of both potential reward and damages</li>
+					<li>Massively redesigned "threat exists" combat bonus and reformed into Moralistic Fervor</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "2.1|16/11/2020|alerans"><ul class = "changelist">				
+					<li>Split several effects (including all negative habitability) from dragon trait</li>
+					<li>Added "Insensitive" trait and applied to alerans</li>
+					<li>Added "Pampered" trait with the moved habitability effects and applied to alerans</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "2.1|22/6/2020|alerans"><ul class = "changelist">				
+					<li>Removed all existing portrait art in response to DMCA against one</li>
+					<li>Added placeholder art</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "2.1|1/8/2019|edstarnames"><ul class = "changelist">				
+					<li><b>Creation</b></li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "2.1|23/7/2019|alerans"><ul class = "changelist">				
+					<li>Added story event chains with significant potential rewards and penalties depending on player adherence to aleran ideology</li>
+					<li>Fixed several things being tied to the dragon trait rather than the civic</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "2.1|17/7/2019|alerans"><ul class = "changelist">				
+					<li>Added Art Display building</li>
+					<li>Added inherent bonus against awakened marauders and pirates</li>
+					<li>Restricted existing opinion modifiers to FEs, and added some new FE-specific ones</li>
+					<li>Intensified faction demand value</li>
+					<li>Added serious penalties for unhappy population</li>
+					<li>Switched AI policy from "servitude" to "full rights"</li>
+					<li>Removed influence bonus from megastructures</li>
+					<li>Added repeating but decreasing energy bonus from building the first few gateways at the cost of fleet damage</li>
+					<li>Added influence bonus for killing leviathans</li>
+					<li>Alerans now remain federation leaders</li>
+					<li>Added new faction demands</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "2.1|18/6/2019|alerans"><ul class = "changelist">				
+					<li>Added "severe threat exists" combat bonus</li>
+					<li>Adjusted supervisory faction demands</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "2.1|14/6/2019|alerans"><ul class = "changelist">				
+					<li>Tweaked civic modifiers to further direct gameplay in the appropriate directions</li>
+					<li>Buffed AI alerans</li>
+					<li>Alerans no longer start with military ships</li>
+					<li>Added new AI scripting and diplomacy, and player interaction with AI alerans based on player behavior and ideology</li>
+					<li>Expanded EbF applicability</li>
+					<li>Reduced piracy risk</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "2.1|28/11/2018|alerans"><ul class = "changelist">				
+					<li>Added nova colossus weapon</li>
+					<li>Tweaked expansion bonuses</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "2.1|22/11/2018|alerans"><ul class = "changelist">				
+					<li>Added custom Alera tile blockers</li>
+					<li>Added custom city sprites</li>
+					<li>Expanded EbF applicability</li>
+					<li>Made unique diplomacy messages the only ones that can appear, and added new ones</li>
+					<li>Added ship names to namelist</li>
+					<li>Tweaked expansion bonuses</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "2.1|20/11/2018|alerans"><ul class = "changelist">				
+					<li>Added supervisory faction</li>
+					<li>Added meat farm</li>
+					<li>Enlightenment by force now makes the target an Aleran satellite</li>
+					<li>Expansion tech is now another triggered event</li>
+					<li>Expansion events are now later game</li>
+					<li>Buffed AI alerans</li>
+					<li>Tweaked some civic modifiers</li>
+					<li>Added influence boost for building megastructures</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "2.1|12/11/2018|alerans"><ul class = "changelist">				
+					<li>Added many unique opinion modifiers in both directions</li>
+					<li>Tweaked some civic modifiers</li>
+					<li>Added starbase build speed bonus to expansion tech</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "2.1|8/11/2018|alerans"><ul class = "changelist">				
+					<li>Added Library of the Commonwealth</li>
+					<li>Added Atmospheric Drug Lacing colossus weapon</li>
+					<li>Added mid and late game "expansion" events and techs to boost ship speeds in large empires</li>
+					<li>Dragon trait can no longer be obtained randomly or by modification</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "2.1|5/11/2018|alerans"><ul class = "changelist">				
+					<li><b>Release</b></li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "2.1|4/11/2018|alerans"><ul class = "changelist">				
+					<li>Added unique diplomacy messages</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "2.1|3/11/2018|alerans"><ul class = "changelist">				
+					<li>Added unique civics</li>
+					<li>Added Enlightentment By Force mechanic</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "2.1|1/11/2018|alerans"><ul class = "changelist">				
+					<li>Added new unique Aleris home system and neighbors</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "2.1|29/10/2018|alerans"><ul class = "changelist">				
+					<li>Added new unique authority to better reflect ideology</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "2.1|26/10/2018|alerans"><ul class = "changelist">				
+					<li>Switched Egalitarian ethic to Authoritarian</li>
+					<li>Added unique "Dragon" trait</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "2.1|24/10/2018|alerans"><ul class = "changelist">				
+					<li>Added custom name list</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "2.1|18/10/2018|alerans"><ul class = "changelist">				
+					<li><b>Creation</b></li>
+</ul>
+			</div>
+<div id = "game-version-cache"></div>
+<div id = "mod-version-cache"></div>
+<div id = "changedata-empty-cache">Select a mod version...</div>
+</div>
+<br><br>
+<section class = "textblock" id = "text-block-changes">
+<span><div style = "display: inline-block; width: 49.8%; text-align: left;"><h3>Change Logs</h3></div><div style = "display: inline-block; width: 49.8%; text-align: right;"><button type="button" id = "newverbtn"><span>Select Most Recent Version<div class = "spacer"></div><i class="fas fa-fast-forward"></i></span></button></div></span>
+<table class = "changetable">
+	<tr>
+		<th class = "changetable-header" style = "width: 11%;">
+			Game Version
+		</th>
+		<th class = "changetable-header" style = "width: 16%;">
+			Mod Versions
+		</th>
+		<th class = "changetable-header" id = "changedata-header" style = "width: 73%;">
+			Changes
+		</th>
+	</tr>
+	<tr>
+		<td style = "vertical-align: top;">
+			<div id = "gamever-box">
+				<button type="button"  id = "newestgamever"  class = "verbtn-game" data-value = "2.1"><span><div class = "gamever-width">2.1</div><i class="fas fa-angle-right"></i></span></button><br>
+			</div>
+		</td>
+		<td>
+			<div id = "modver-box">Select a game version...</div>
+		</td>
+		<td>
+			<div id = "changedata">Select a mod version...</div>
+		</td>
+	</tr>
+</table>
+</section>
+<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
+		<hr>
+		<div id = "footer-spacing">
+		
+		</div>
+		<hr>
+		If you like any of my mods, maps, or other content, or want to help me develop them, feel free to use my Patreon or the buttons below. Every little bit helps me be able to keep working on them, and helps ensure both maintenance and expansion of them.<br>
+		If you wish to give a one-time donation, I recommend you use the Paypal link on the right; Patreon, though it can be used for one-time donations, is designed for ongoing monthly 'subscriptions' (ie a set amount of money gifted each month for as long as you remain a 'patron'). Paypal can also register a donation with monthly recurrence, should that seem preferable to you.<br>
+		For both systems, the amount you choose to donate is up to you, and for Patreon, can be changed at any time should you wish to decrease or increase the amount.<br>
+		And thank you for your support. :D<br>
+					<div class = "linkiconblock">
+					<div class = "linktile" style = "width: 49.75%">
+						<div class = "linklabel">Patreon</div>
+						<a class = "icon icon-patreon" href="http://www.patreon.com/reikasminecraft" ></a>
+					</div>
+					<div class = "linktile" style = "width: 49.75%">
+						<div class = "linklabel">Paypal</div>
+						<a class = "icon icon-paypal" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5XRAM3SXBRJY4" ></a>
+					</div>
+			</div>
+		<hr>
+		To contact me (though some of these are only checked periodically, and many are for specific topics) or find additional information or content, visit any one of these platforms:<br>
+					<div class = "linkiconblock">
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Minecraft Forums</div>
+						<a class = "icon icon-mcforums" href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1291655" title="Minecraft Only"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Factorio Forums</div>
+						<a class = "icon icon-facforums" href="https://forums.factorio.com/viewforum.php?f=216" title="Factorio Only"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">GitHub</div>
+						<a class = "icon icon-github" href="https://github.com/ReikaKalseki" ></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Discord</div>
+						<a class = "icon icon-discord" href="https://discord.com/channels/466852131895508992/466852131895508994/" title="Discord ID: Reika#3161"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Steam</div>
+						<a class = "icon icon-steam" href="https://steamcommunity.com/id/ReikaKalseki/myworkshopfiles/" title="Please no random friend requests"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">YouTube</div>
+						<a class = "icon icon-youtube" href="https://www.youtube.com/user/ReikasMinecraft/videos" ></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">SoundCloud</div>
+						<a class = "icon icon-soundcloud" href="https://soundcloud.com/reikakalseki" title="Music Only"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Reddit</div>
+						<a class = "icon icon-reddit" href="https://www.reddit.com/user/ReikaKalseki/" ></a>
+					</div>
+			</div>
+		<hr>
+		This site is proudly Canadian. <i class="fab fa-canadian-maple-leaf"></i><br>
+		<hr>
+		Site (including embedded JavaScript) and linked projects (mods, maps, etc) created by and &copy; ReikaKalseki, except for content within which is part of the base games, as noted below.<br>
+		<hr>
+			Minecraft and its content and assets are &copy; Mojang AB, with whom I am not affiliated<br>
+			Factorio and its content and assets are &copy; Wube Software, with whom I am not affiliated<br>
+			Portal 2 and its content and assets are &copy; Valve Corporation, with whom I am not affiliated<br>
+			Stellaris and its content and assets are &copy; Paradox Interactive, with whom I am not affiliated<br>
+			Space Engineers and its content and assets are &copy; Keen Software House, with whom I am not affiliated<br>
+			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
+			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>
+	</div></footer>		</div>
+    </body>
+</html>

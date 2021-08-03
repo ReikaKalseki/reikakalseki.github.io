@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="shortcut icon" href="../../images/favicon.ico">
+        <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+		<meta http-equiv="Cache-control" content="no-cache">
+        <title>Waypoint Station</title>
+		<link rel="stylesheet" type="text/css" href="../../compiledJS/entrypoint.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+		<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Lato|Exo 2|Ubuntu|Cairo"> -->
+		<script src = "../../compiledJS/entrypoint.bundle.js"></script>
+		<!-- <meta name="script-def" content="footer-spacing"> -->
+		<meta name="script-def" content="navbar-scroll-indicator">
+		<!-- <meta name="script-def" content="quicknav-pos"> -->
+    </head>
+    <body  data-game="se">
+        	<div id = "navbar" class="navbar">
+	  <a class="navbar-button" href="../../index.html">Reika's Mods Home</a>
+	  <a class="navbar-button" href="../../se/index.html">Space Engineers Home</a>
+		  <div class="navdropdown">
+			<div class="navdropbtn">Information <i class="fa fa-angle-down"></i></div>
+			<div class="navdrop-content">
+					<a class = "navdrop-entry" href="../../se/pages/info/faq.html">FAQ</a>
+					<a class = "navdrop-entry" href="../../se/pages/info/contact.html">Contact</a>
+					<a class = "navdrop-entry" href="../../se/pages/info/history.html">History</a>
+					<a class = "navdrop-entry" href="../../se/pages/info/changelog.html">Change Logs</a>
+			</div>
+		  </div>
+		  <div class="navdropdown">
+			<div class="navdropbtn">Permissions <i class="fa fa-angle-down"></i></div>
+			<div class="navdrop-content">
+					<a class = "navdrop-entry" href="../../se/pages/perms/license.html">License</a>
+			</div>
+		  </div>
+	  <div class="navdropdown">
+		<div class="navdropbtn">Content <i class="fa fa-angle-down"></i></div>
+		<div class="navdrop-content">
+<a class = "navdropdown-subheader">Mods</a>				<a class = "navdrop-entry" href="../../se/mods/electronicwarfare.html">Electronic Warfare</a>
+				<a class = "navdrop-entry" href="../../se/mods/cargoships.html">Extra Cargo Ships</a>
+				<a class = "navdrop-entry" href="../../se/mods/gastanks.html">Gas Compressor</a>
+				<a class = "navdrop-entry" href="../../se/mods/lowgravgen.html">Gravgen Priority</a>
+				<a class = "navdrop-entry" href="../../se/mods/industrialthruster.html">Industrial Thruster</a>
+				<a class = "navdrop-entry" href="../../se/mods/oreproc.html">Ore Processing</a>
+<a class = "navdropdown-subheader">Blueprints</a>				<a class = "navdrop-entry" href="../../se/blueprints/anaconda.html">Anaconda</a>
+				<a class = "navdrop-entry" href="../../se/blueprints/anaconda2.html">Anaconda (Custom)</a>
+				<a class = "navdrop-entry" href="../../se/blueprints/dropship.html">Federal Dropship</a>
+				<a class = "navdrop-entry" href="../../se/blueprints/harvester.html">Harvester</a>
+				<a class = "navdrop-entry" href="../../se/blueprints/jumpgate.html">Jump Gate</a>
+				<a class = "navdrop-entry" href="../../se/blueprints/salvager.html">Salvager</a>
+				<a class = "navdrop-entry" href="../../se/blueprints/spacetruck.html">Space Truck</a>
+				<a class = "navdrop-entry" href="../../se/blueprints/waypoint.html">Waypoint Station</a>
+<a class = "navdropdown-subheader">Scripts</a>				<a class = "navdrop-entry" href="../../se/scripts/airlocks.html">Airlock Control</a>
+				<a class = "navdrop-entry" href="../../se/scripts/cargomanager.html">Cargo Manager</a>
+				<a class = "navdrop-entry" href="../../se/scripts/compressors.html">Compressor Manager</a>
+				<a class = "navdrop-entry" href="../../se/scripts/hangar.html">Hangar Control</a>
+				<a class = "navdrop-entry" href="../../se/scripts/jumpcontrol.html">Jump Control</a>
+				<a class = "navdrop-entry" href="../../se/scripts/powercontrol.html">Power Control</a>
+				<a class = "navdrop-entry" href="../../se/scripts/o2control.html">Pressurization Control</a>
+		</div>
+	  </div>
+	  <div class="navdropdown">
+		<div class="navdropbtn">Other Games <i class="fa fa-angle-down"></i></div>
+		<div class="navdrop-content">
+				<a class = "navdrop-entry" href="../../minecraft/index.html">Minecraft</a>
+				<a class = "navdrop-entry" href="../../factorio/index.html">Factorio</a>
+				<a class = "navdrop-entry" href="../../p2/index.html">Portal 2</a>
+				<a class = "navdrop-entry" href="../../stellaris/index.html">Stellaris</a>
+				<a class = "navdrop-entry" href="../../fce/index.html">FortressCraft Evolved</a>
+				<a class = "navdrop-entry" href="../../starbound/index.html">Starbound</a>
+		</div>
+	  </div>
+	  <div class="navdropdown">
+		<div class="navdropbtn">Other Projects <i class="fa fa-angle-down"></i></div>
+		<div class="navdrop-content">
+				<a class = "navdrop-entry" href="../../projects/calendar.html">Game Calendar</a>
+				<a class = "navdrop-entry" href="../../projects/eventbuilder.html">Stellaris Event Builder</a>
+				<a class = "navdrop-entry" href="../../projects/fcompile.html">FCompile</a>
+		</div>
+	  </div>
+	</div>
+		<noscript><div style = "text-align: center; width: 100%;"><div id = "nojs-header"><div><img class = "header-alert" src = "../../images/alert.png"></div><div>You have JavaScript disabled; it is recommended you enable it for this site.<br>While the site will (mostly) function with scripts disabled, some sections (eg changelog view, or sortable tables) require it to update the page contents based on your input.<br>Additionally, JS is used to generate page styling, meaning disabling scripts will leave pages ugly, boring, and in some cases poorly arranged in ways that might impede readability.<br>If you have no idea what this means, or have not in fact disabled scripts, try simply reloading the page, as it may not have loaded completely or correctly.</div></div></div></noscript>
+<div id="toc_container">
+<h3>Quick Nav</h3>
+<hr>
+<table class="toc_list">
+	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><a class = "tocbtn" href="#top"><i class="fas fa-angle-double-up"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-general">General</a></td><td><a class = "tocbtn" href="#text-block-general"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-album">Album</a></td><td><a class = "tocbtn" href="#text-block-album"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-mods">Mods</a></td><td><a class = "tocbtn" href="#text-block-mods"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-blueprint">Blueprint Info</a></td><td><a class = "tocbtn" href="#text-block-blueprint"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><a class = "tocbtn" href="#text-block-downloads"><i class="fas fa-angle-down"></i></a></td></tr>
+</table>
+</div>        <div id = "textarea" class = "textarea ">
+				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
+			<!-- <h2>Waypoint Station</h2> -->
+						<div class = "header-image">
+				<img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075072039_2F7DC02D9D475D5C18754C9A91840C9C76A8C3936F_2F.jpg" >
+			</div>			<section class = "textblock" id = "text-block-general">
+				<h3>General</h3>
+					
+					This station is designed to be a space-based base or outpost, designed primarily as an intermediate destination (hence "waypoint") and cargo relay station between various routes and ship types.
+					
+					
+					<br><br>
+					
+					
+					In particular, it is equipped with massive storage and ore processing capability, allowing it to excel as the dropoff point for space-based miners, with the refined material (or produced components) able to be collected by other ships. It also has a large grinder array on one end, granting it the ability to rapidly salvage even large ships and then provide the resultant components for collection.
+					
+					
+					<br><br>
+					
+					
+					The station has tens of MW of solar capacity and an extensive battery array, and is scripted to never allow the reactors to be drawn upon unless the total demanded power outstrips the capabilities of the renewable sources.
+					
+					
+					<br><br>
+					
+					
+					There are also many other scripts of mine running on it, including the <a href="../../se/scripts/o2control.html">O2 Controller</a>, <a href="../../se/scripts/cargomanager.html">Cargo Manager</a>, <a href="../../se/scripts/powercontrol.html">Power Manager</a>, <a href="../../se/scripts/airlocks.html">Airlock Controller</a>, and <a href="../../se/scripts/compressors.html">Gas Compressor Manager</a>.
+					
+					
+					<br><br>
+					
+					
+					This station is another case of my redesigning a workshop blueprint; the outer hull based on <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1679574279">the "Void Station" design</a>, but like in every other case it has been completely gutted and redesigned. This time significant external changes were also made, including the conversion of all landing pads into ore processing wings, the extensive solar array, and a new light kit. Overall, however, I kept the same basic layout and the same aesthetic design.
+					
+					
+					<br><br>
+					
+					
+					This blueprint uses pure heavy armor since it is designed to be left unattended for extended periods, and given that it  lacks any sort of shielding, benefits from that durability in case of pirate attack. Given that it is space-based, the mass difference is irrelevant, but if cost is an issue, you can convert it to light armor with SEToolbox or similar.
+					
+					
+					<br><br>
+					
+					
+					I preserved and expanded the original blueprint's very clever way of using gravity generators to create a multiplanar structure, ie one where the "down" reference point varies with location and where you can run around in three dimensions. Be aware that that can be...disorienting.<br>
+					
+					
+					<div class = "video">
+	<iframe class = "deembed-media" style = "max-width: 75%;" width="960" height="540" src="https://www.youtube.com/embed/qwgbiXp1vts" title="Disorienting." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-album">
+				<h3>Album</h3>
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075072520_2FC0BC87F3E9CC070916FD6FE0917B0DD41A503E1B_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075072520_2FC0BC87F3E9CC070916FD6FE0917B0DD41A503E1B_2F.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Underside.</div>
+</div><div class = "block-image">
+	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075072834_2F2288C5E6BA92D779618D4537F88EEBF65ECF41D4_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075072834_2F2288C5E6BA92D779618D4537F88EEBF65ECF41D4_2F.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Central Shaft Exterior.</div>
+</div><div class = "block-image">
+	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075074624_2F0984FF7DA4A89B3C86E2854F0ECDE6E5599321DC_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075074624_2F0984FF7DA4A89B3C86E2854F0ECDE6E5599321DC_2F.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075075474_2FE72BB503A8959DB16F48E4176FFFF5CE72214C38_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075075474_2FE72BB503A8959DB16F48E4176FFFF5CE72214C38_2F.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Upper Hub.</div>
+</div><div class = "block-image">
+	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075076077_2FAF8A67EF74D1592967046E49A04D1EB8FA4AECD4_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075076077_2FAF8A67EF74D1592967046E49A04D1EB8FA4AECD4_2F.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075080372_2FDA0FB7DD1321C1B0E2B73F42B963CE7FCC024FA8_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075080372_2FDA0FB7DD1321C1B0E2B73F42B963CE7FCC024FA8_2F.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075076268_2F2B03FAE49F7F91B47B9CB1B57E2D7693198D0619_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075076268_2F2B03FAE49F7F91B47B9CB1B57E2D7693198D0619_2F.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Central Shaft.</div>
+</div><div class = "block-image">
+	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075076781_2F1E411C33DA9BD34B11C6CA4D013A4AD134A66786_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075076781_2F1E411C33DA9BD34B11C6CA4D013A4AD134A66786_2F.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075076453_2F072B8B38AD8717234A1A3F36E633740C9F8E9B81_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075076453_2F072B8B38AD8717234A1A3F36E633740C9F8E9B81_2F.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Lower Hub.</div>
+</div><div class = "block-image">
+	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075073497_2F4D836F386AAC3D69CB4D4DB824365F98D653A53F_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075073497_2F4D836F386AAC3D69CB4D4DB824365F98D653A53F_2F.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075073873_2F266CD70C1A474A406DB703A21C3E40B4683622DB_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075073873_2F266CD70C1A474A406DB703A21C3E40B4683622DB_2F.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075074223_2F5E93A6602704C52E88B36A40EC8081E3F965FA50_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075074223_2F5E93A6602704C52E88B36A40EC8081E3F965FA50_2F.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Storage Wing.</div>
+</div><div class = "block-image">
+	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075073168_2F7F4D771C02C15F94FFE9880B9F79F0D7F6002711_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075073168_2F7F4D771C02C15F94FFE9880B9F79F0D7F6002711_2F.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Refinery Wing.</div>
+</div><div class = "block-image">
+	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075076980_2F1BD42E3FC1581B7281978CB67072DEE4A8C9EEF9_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075076980_2F1BD42E3FC1581B7281978CB67072DEE4A8C9EEF9_2F.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Platinum Wing.</div>
+</div><div class = "block-image">
+	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075077201_2F2404968EBB9F108D7CBAC26E47524FDB666E45C4_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075077201_2F2404968EBB9F108D7CBAC26E47524FDB666E45C4_2F.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Blast Furnace Wing.</div>
+</div><div class = "block-image">
+	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075077416_2FFED45DEBF54776FCDB92526DEFAD6D0A23C4E6FA_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075077416_2FFED45DEBF54776FCDB92526DEFAD6D0A23C4E6FA_2F.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Stone Wing.</div>
+</div><div class = "block-image">
+	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075077657_2F27C771ADF3D60C7096399084BF0067FCAD267827_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075077657_2F27C771ADF3D60C7096399084BF0067FCAD267827_2F.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Uranium Wing.</div>
+</div><div class = "block-image">
+	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075078048_2F346EA2633D55928AA9331FA721CB5A82661B276A_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075078048_2F346EA2633D55928AA9331FA721CB5A82661B276A_2F.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075078654_2FE55931D454394C3BF412CDC7FC62A2AAFA0F577D_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075078654_2FE55931D454394C3BF412CDC7FC62A2AAFA0F577D_2F.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Observation Deck Level 1.</div>
+</div><div class = "block-image">
+	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075079114_2F4987FD16E1CA7ABDCE41D8F8BC302FDB7E937CC9_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075079114_2F4987FD16E1CA7ABDCE41D8F8BC302FDB7E937CC9_2F.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075079393_2F1CC1F2370E1270FF07A3171F54D5FBB81C91A90F_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075079393_2F1CC1F2370E1270FF07A3171F54D5FBB81C91A90F_2F.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Observation Deck Level 2.</div>
+</div><div class = "block-image">
+	<a href = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075080039_2FCB1D6D899AB378B587173D542C4848B0A4CA199D_2F.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F1707412183075080039_2FCB1D6D899AB378B587173D542C4848B0A4CA199D_2F.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Reactor Pod.</div>
+</div>
+					</section>
+			</section><br>
+			<section class = "textblock" id = "text-block-mods">
+				<h3>Mods</h3>
+					
+					A few mods were used in the making of this station, but aside from my own mods, none of them are required for core functionality, though removing them will leave a few holes that you will want to fix.<ul>
+					
+					
+					<li><a href="../../se/mods/oreproc.html">Expanded Ore Processing</a> - this provides all the specialized ore processing blocks, without which the station will not be able to process anything but magnesium, gold, and silver (unless sorters are programmed, losing efficiency and/or speed for the remaining ores)</li>
+					
+					
+					<li><a href="../../se/mods/gastanks.html">Gas Compressors</a> - this provides the bulk of the gas storage capacity; the station can be used without this, but it will have less than a fifth its usual capacity for H2 and O2.</li>
+					
+					
+					<li><a href="https://steamcommunity.com/workshop/filedetails/?id=219757726">Nanite Control Facility</a> - entirely optional</li>
+					
+					
+					<li><a href="https://steamcommunity.com/workshop/filedetails/?id=946724937">PassageIntersections</a> - without this, some of the entrance areas in the ore processing wings will be an empty hole</li>
+					
+					
+					<li><a href="https://steamcommunity.com/workshop/filedetails/?id=1446436880">Twin Grinders</a> - replace with vanilla grinders (for a speed/AoE penalty) if desired</li></ul>
+					</section>
+			</section>
+<br>
+			<section class = "textblock" id = "text-block-blueprint">
+			<h3>Blueprint Info</h3>
+			<div class = "blueprint-data">
+				<h4>Grid Size</h4>
+					Large
+				<h4>Block Count</h4>
+					14864
+				<h4>Estimated Volume</h4>
+					113x38x113
+				<h4>Block Groups</h4><ul>					<li>Beacon Lights</li>					<li>Blue Ring Lights</li>					<li>Cargo Sorters</li>					<li>Command Ring Lights</li>					<li>Green Ring Lights</li>					<li>Indoor Lights</li>					<li>Landing Lights C</li>					<li>Landing Lights D</li>					<li>Landing Pad Flashing Lights</li>					<li>Modules</li>					<li>Outer Lights</li>					<li>Pad A Group</li>					<li>Pad A Landing Lights</li>					<li>Pad B Group</li>					<li>Pad B Landing Lights</li>					<li>Pad C Group</li>					<li>Pad D Group</li>					<li>Pad E Flashing Lights</li>					<li>Pad E Group</li>					<li>Pad F Group</li>					<li>Player Sensors</li>					<li>Purple Ring Lights</li>					<li>Red Ring Lights</li>					<li>Ring Lights</li>					<li>Runway Lights</li>					<li>Signage</li>					<li>Station Air Vents</li>					<li>Station Airlock Lights</li>					<li>Station Assemblers</li>					<li>Station Batteries</li>					<li>Station Blast Furnaces</li>					<li>Station Cargo Ports</li>					<li>Station Centrifuges</li>					<li>Station Chairs</li>					<li>Station Computers</li>					<li>Station Connectors</li>					<li>Station Cryo</li>					<li>Station Displays</li>					<li>Station Gatlings</li>					<li>Station Grav Gens</li>					<li>Station Grinders</li>					<li>Station H2 Compressors</li>					<li>Station H2 Tanks</li>					<li>Station Interior Turrets</li>					<li>Station Main Cargo</li>					<li>Station Medbays</li>					<li>Station Missiles</li>					<li>Station Nanites</li>					<li>Station O2 Compressors</li>					<li>Station O2 Farms</li>					<li>Station O2 Gens</li>					<li>Station O2 Tanks</li>					<li>Station Platinum Extractors</li>					<li>Station Refineries</li>					<li>Station Solars</li>					<li>Station Stone Crushers</li>					<li>Yellow Ring Lights</li></ul>				<h4>Subgrid Count</h4>
+					4
+				<h4>Estimated Block Breakdown</h4>
+				<table class = "bp-block-table">
+				  <tr>
+					<th style = "width: 80%;">
+						Block Type
+					</th>
+					<th style = "width: 20%;">
+						Count
+					</th>
+				  </tr>
+				  <tr>
+					<td>
+						AirVent
+					</td>
+					<td>
+						26
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Arc Furnace
+					</td>
+					<td>
+						16
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Armor Sloped Corner
+					</td>
+					<td>
+						8
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Armor Sloped Corner Base
+					</td>
+					<td>
+						4
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Armor Sloped Corner Tip
+					</td>
+					<td>
+						4
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Assembler
+					</td>
+					<td>
+						5
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Battery Block
+					</td>
+					<td>
+						54
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Beacon
+					</td>
+					<td>
+						1
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Button Panel
+					</td>
+					<td>
+						4
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Cockpit Open
+					</td>
+					<td>
+						2
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Connector
+					</td>
+					<td>
+						18
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Container
+					</td>
+					<td>
+						14
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Conveyor
+					</td>
+					<td>
+						180
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Conveyor Sorter
+					</td>
+					<td>
+						8
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Conveyor Tube
+					</td>
+					<td>
+						384
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Conveyor Tube Curved
+					</td>
+					<td>
+						133
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Corner LCD 1
+					</td>
+					<td>
+						23
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Corner LCD 2
+					</td>
+					<td>
+						1
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Cryo Chamber
+					</td>
+					<td>
+						4
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Enclosed Passage
+					</td>
+					<td>
+						6
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Energy Module
+					</td>
+					<td>
+						182
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Generator
+					</td>
+					<td>
+						1
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Gravity Generator
+					</td>
+					<td>
+						15
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Half Passage
+					</td>
+					<td>
+						2
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Half Passage Cargo Access Enc
+					</td>
+					<td>
+						2
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Half Passage Corner
+					</td>
+					<td>
+						2
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Half Passage Corner Enc
+					</td>
+					<td>
+						4
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Half Passage Enc
+					</td>
+					<td>
+						16
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Half Passage L
+					</td>
+					<td>
+						4
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Heavy Armor Block
+					</td>
+					<td>
+						2684
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Heavy Armor Corner
+					</td>
+					<td>
+						46
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Heavy Armor Corner 2 Base
+					</td>
+					<td>
+						136
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Heavy Armor Corner 2 Tip
+					</td>
+					<td>
+						222
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Heavy Armor Corner Inv
+					</td>
+					<td>
+						57
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Heavy Armor Half Slope Inverted
+					</td>
+					<td>
+						41
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Heavy Armor Inv Corner 2 Base
+					</td>
+					<td>
+						122
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Heavy Armor Inv Corner 2 Tip
+					</td>
+					<td>
+						80
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Heavy Armor Round Slope
+					</td>
+					<td>
+						8
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Heavy Armor Slope
+					</td>
+					<td>
+						534
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Heavy Armor Slope 2 Base
+					</td>
+					<td>
+						2157
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Heavy Armor Slope 2 Tip
+					</td>
+					<td>
+						1980
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Heavy Armor Sloped Corner
+					</td>
+					<td>
+						4
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Heavy Armor Sloped Corner Base
+					</td>
+					<td>
+						2
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Heavy Armor Sloped Corner Tip
+					</td>
+					<td>
+						2
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Heavy Half Armor Block
+					</td>
+					<td>
+						1239
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Heavy Half Slope Armor Block
+					</td>
+					<td>
+						268
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Hex Stone Crusher
+					</td>
+					<td>
+						16
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Hex Uranium Centrifuge
+					</td>
+					<td>
+						30
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Hydrogen Reika Compressor
+					</td>
+					<td>
+						2
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Hydrogen Tank
+					</td>
+					<td>
+						10
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Interior Pillar
+					</td>
+					<td>
+						3
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Interior Turret
+					</td>
+					<td>
+						25
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Interior Wall
+					</td>
+					<td>
+						1389
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						LCD Panel Wide
+					</td>
+					<td>
+						20
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						LargeGatlingTurret
+					</td>
+					<td>
+						12
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						LargeMissileTurret
+					</td>
+					<td>
+						4
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Light 1corner
+					</td>
+					<td>
+						308
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Light 2corner
+					</td>
+					<td>
+						12
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Medical Room
+					</td>
+					<td>
+						4
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Nanite Cleanup Upgrade
+					</td>
+					<td>
+						2
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Nanite Construct Upgrade
+					</td>
+					<td>
+						2
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Nanite Control Facility
+					</td>
+					<td>
+						1
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Nanite Speed Upgrade
+					</td>
+					<td>
+						2
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Oxygen Farm
+					</td>
+					<td>
+						4
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Oxygen Reika Compressor
+					</td>
+					<td>
+						4
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						OxygenGenerator
+					</td>
+					<td>
+						6
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						OxygenTank
+					</td>
+					<td>
+						18
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Passage Air Vent Enc
+					</td>
+					<td>
+						4
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Passage Glass Side
+					</td>
+					<td>
+						2
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Passage L Intersection Enc
+					</td>
+					<td>
+						10
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Passage Stairs
+					</td>
+					<td>
+						16
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Passage T Intersection Enc
+					</td>
+					<td>
+						1
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Passage Top
+					</td>
+					<td>
+						2
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Passage Top Enc
+					</td>
+					<td>
+						12
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Passage Top L Enc
+					</td>
+					<td>
+						4
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Passenger Seat
+					</td>
+					<td>
+						12
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Piston Base
+					</td>
+					<td>
+						4
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Piston Top
+					</td>
+					<td>
+						4
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Platinum Extractor
+					</td>
+					<td>
+						4
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Programmable Block
+					</td>
+					<td>
+						10
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Projector
+					</td>
+					<td>
+						1
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Radio Antenna
+					</td>
+					<td>
+						2
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Ramp
+					</td>
+					<td>
+						24
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Refinery
+					</td>
+					<td>
+						36
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Sensor
+					</td>
+					<td>
+						10
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Slide Door
+					</td>
+					<td>
+						50
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Small Container
+					</td>
+					<td>
+						49
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Small Light
+					</td>
+					<td>
+						221
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Solar Panel
+					</td>
+					<td>
+						656
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Stairs
+					</td>
+					<td>
+						5
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Steel Catwalk
+					</td>
+					<td>
+						160
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Steel Catwalk 2 Sides
+					</td>
+					<td>
+						153
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Steel Catwalk Corner
+					</td>
+					<td>
+						1
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Steel Catwalk Plate
+					</td>
+					<td>
+						149
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Twin Grinder
+					</td>
+					<td>
+						49
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Window 1x1 Flat
+					</td>
+					<td>
+						31
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Window 1x1 Flat Inv
+					</td>
+					<td>
+						52
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Window 1x1 Inv
+					</td>
+					<td>
+						8
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Window 1x1 Side
+					</td>
+					<td>
+						12
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Window 1x1 Slope
+					</td>
+					<td>
+						128
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Window 1x2 Face
+					</td>
+					<td>
+						4
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Window 1x2 Flat
+					</td>
+					<td>
+						11
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Window 1x2 Flat Inv
+					</td>
+					<td>
+						2
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Window 1x2 Side Left
+					</td>
+					<td>
+						4
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Window 1x2 Side Right
+					</td>
+					<td>
+						4
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Window 1x2 Slope
+					</td>
+					<td>
+						220
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Window 2x3 Flat
+					</td>
+					<td>
+						45
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Window 2x3 Flat Inv
+					</td>
+					<td>
+						62
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Window 3x3 Flat Inv
+					</td>
+					<td>
+						1
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Window Edge
+					</td>
+					<td>
+						19
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Window Square
+					</td>
+					<td>
+						31
+					</td>
+				  </tr>
+				</table>
+			</div>
+			</section>
+<br>
+
+<br>
+<section class = "textblock" id = "text-block-downloads">
+	<h3>Downloads</h3>
+<a class = "dlbtn" href="https://steamcommunity.com/sharedfiles/filedetails/?id=2556658777" target="_blank"><span>Steam Workshop<div class = "spacer"></div><i class="fas fa-download"></i></span></a>
+</section>
+<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
+		<hr>
+		<div id = "footer-spacing">
+		
+		</div>
+		<hr>
+		If you like any of my mods, maps, or other content, or want to help me develop them, feel free to use my Patreon or the buttons below. Every little bit helps me be able to keep working on them, and helps ensure both maintenance and expansion of them.<br>
+		If you wish to give a one-time donation, I recommend you use the Paypal link on the right; Patreon, though it can be used for one-time donations, is designed for ongoing monthly 'subscriptions' (ie a set amount of money gifted each month for as long as you remain a 'patron'). Paypal can also register a donation with monthly recurrence, should that seem preferable to you.<br>
+		For both systems, the amount you choose to donate is up to you, and for Patreon, can be changed at any time should you wish to decrease or increase the amount.<br>
+		And thank you for your support. :D<br>
+					<div class = "linkiconblock">
+					<div class = "linktile" style = "width: 49.75%">
+						<div class = "linklabel">Patreon</div>
+						<a class = "icon icon-patreon" href="http://www.patreon.com/reikasminecraft" ></a>
+					</div>
+					<div class = "linktile" style = "width: 49.75%">
+						<div class = "linklabel">Paypal</div>
+						<a class = "icon icon-paypal" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5XRAM3SXBRJY4" ></a>
+					</div>
+			</div>
+		<hr>
+		To contact me (though some of these are only checked periodically, and many are for specific topics) or find additional information or content, visit any one of these platforms:<br>
+					<div class = "linkiconblock">
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Minecraft Forums</div>
+						<a class = "icon icon-mcforums" href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1291655" title="Minecraft Only"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Factorio Forums</div>
+						<a class = "icon icon-facforums" href="https://forums.factorio.com/viewforum.php?f=216" title="Factorio Only"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">GitHub</div>
+						<a class = "icon icon-github" href="https://github.com/ReikaKalseki" ></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Discord</div>
+						<a class = "icon icon-discord" href="https://discord.com/channels/466852131895508992/466852131895508994/" title="Discord ID: Reika#3161"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Steam</div>
+						<a class = "icon icon-steam" href="https://steamcommunity.com/id/ReikaKalseki/myworkshopfiles/" title="Please no random friend requests"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">YouTube</div>
+						<a class = "icon icon-youtube" href="https://www.youtube.com/user/ReikasMinecraft/videos" ></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">SoundCloud</div>
+						<a class = "icon icon-soundcloud" href="https://soundcloud.com/reikakalseki" title="Music Only"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Reddit</div>
+						<a class = "icon icon-reddit" href="https://www.reddit.com/user/ReikaKalseki/" ></a>
+					</div>
+			</div>
+		<hr>
+		This site is proudly Canadian. <i class="fab fa-canadian-maple-leaf"></i><br>
+		<hr>
+		Site (including embedded JavaScript) and linked projects (mods, maps, etc) created by and &copy; ReikaKalseki, except for content within which is part of the base games, as noted below.<br>
+		<hr>
+			Minecraft and its content and assets are &copy; Mojang AB, with whom I am not affiliated<br>
+			Factorio and its content and assets are &copy; Wube Software, with whom I am not affiliated<br>
+			Portal 2 and its content and assets are &copy; Valve Corporation, with whom I am not affiliated<br>
+			Stellaris and its content and assets are &copy; Paradox Interactive, with whom I am not affiliated<br>
+			Space Engineers and its content and assets are &copy; Keen Software House, with whom I am not affiliated<br>
+			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
+			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>
+	</div></footer>		</div>
+    </body>
+</html>

@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="shortcut icon" href="../../images/favicon.ico">
+        <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+		<meta http-equiv="Cache-control" content="no-cache">
+        <title>Dragon Species and Aleran Commonwealth</title>
+		<link rel="stylesheet" type="text/css" href="../../compiledJS/entrypoint.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+		<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Lato|Exo 2|Ubuntu|Cairo"> -->
+		<script src = "../../compiledJS/entrypoint.bundle.js"></script>
+		<!-- <meta name="script-def" content="footer-spacing"> -->
+		<meta name="script-def" content="navbar-scroll-indicator">
+		<!-- <meta name="script-def" content="quicknav-pos"> -->
+    </head>
+    <body  data-game="stellaris">
+        	<div id = "navbar" class="navbar">
+	  <a class="navbar-button" href="../../index.html">Reika's Mods Home</a>
+	  <a class="navbar-button" href="../../stellaris/index.html">Stellaris Home</a>
+		  <div class="navdropdown">
+			<div class="navdropbtn">Information <i class="fa fa-angle-down"></i></div>
+			<div class="navdrop-content">
+					<a class = "navdrop-entry" href="../../stellaris/pages/info/faq.html">FAQ</a>
+					<a class = "navdrop-entry" href="../../stellaris/pages/info/contact.html">Contact</a>
+					<a class = "navdrop-entry" href="../../stellaris/pages/info/history.html">History</a>
+					<a class = "navdrop-entry" href="../../stellaris/pages/info/changelog.html">Change Logs</a>
+			</div>
+		  </div>
+		  <div class="navdropdown">
+			<div class="navdropbtn">Permissions <i class="fa fa-angle-down"></i></div>
+			<div class="navdrop-content">
+					<a class = "navdrop-entry" href="../../stellaris/pages/perms/license.html">License</a>
+			</div>
+		  </div>
+	  <div class="navdropdown">
+		<div class="navdropbtn">Mods <i class="fa fa-angle-down"></i></div>
+		<div class="navdrop-content">
+				<a class = "navdrop-entry" href="../../stellaris/mods/alerans.html">Aleran Commonwealth</a>
+				<a class = "navdrop-entry" href="../../stellaris/mods/edstarnames.html">E:D Star Names</a>
+		</div>
+	  </div>
+	  <div class="navdropdown">
+		<div class="navdropbtn">Other Games <i class="fa fa-angle-down"></i></div>
+		<div class="navdrop-content">
+				<a class = "navdrop-entry" href="../../minecraft/index.html">Minecraft</a>
+				<a class = "navdrop-entry" href="../../factorio/index.html">Factorio</a>
+				<a class = "navdrop-entry" href="../../p2/index.html">Portal 2</a>
+				<a class = "navdrop-entry" href="../../se/index.html">Space Engineers</a>
+				<a class = "navdrop-entry" href="../../fce/index.html">FortressCraft Evolved</a>
+				<a class = "navdrop-entry" href="../../starbound/index.html">Starbound</a>
+		</div>
+	  </div>
+	  <div class="navdropdown">
+		<div class="navdropbtn">Other Projects <i class="fa fa-angle-down"></i></div>
+		<div class="navdrop-content">
+				<a class = "navdrop-entry" href="../../projects/calendar.html">Game Calendar</a>
+				<a class = "navdrop-entry" href="../../projects/eventbuilder.html">Stellaris Event Builder</a>
+				<a class = "navdrop-entry" href="../../projects/fcompile.html">FCompile</a>
+		</div>
+	  </div>
+	</div>
+		<noscript><div style = "text-align: center; width: 100%;"><div id = "nojs-header"><div><img class = "header-alert" src = "../../images/alert.png"></div><div>You have JavaScript disabled; it is recommended you enable it for this site.<br>While the site will (mostly) function with scripts disabled, some sections (eg changelog view, or sortable tables) require it to update the page contents based on your input.<br>Additionally, JS is used to generate page styling, meaning disabling scripts will leave pages ugly, boring, and in some cases poorly arranged in ways that might impede readability.<br>If you have no idea what this means, or have not in fact disabled scripts, try simply reloading the page, as it may not have loaded completely or correctly.</div></div></div></noscript>
+<div id="toc_container">
+<h3>Quick Nav</h3>
+<hr>
+<table class="toc_list">
+	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><a class = "tocbtn" href="#top"><i class="fas fa-angle-double-up"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-general">General</a></td><td><a class = "tocbtn" href="#text-block-general"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-species">Species</a></td><td><a class = "tocbtn" href="#text-block-species"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-alerancommonwealth">Aleran Commonwealth</a></td><td><a class = "tocbtn" href="#text-block-alerancommonwealth"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-lore">Lore</a></td><td><a class = "tocbtn" href="#text-block-lore"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-gameplay">Gameplay</a></td><td><a class = "tocbtn" href="#text-block-gameplay"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-earlygame">Early Game</a></td><td><a class = "tocbtn" href="#text-block-earlygame"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-midgame">Mid Game</a></td><td><a class = "tocbtn" href="#text-block-midgame"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-enlightenmentbyforce">Enlightenment By Force</a></td><td><a class = "tocbtn" href="#text-block-enlightenmentbyforce"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-lategame">Late Game</a></td><td><a class = "tocbtn" href="#text-block-lategame"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-extraflavor">Extra Flavor</a></td><td><a class = "tocbtn" href="#text-block-extraflavor"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloadunavailability">Download Unavailability</a></td><td><a class = "tocbtn" href="#text-block-downloadunavailability"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><a class = "tocbtn" href="#text-block-sourcecode"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><a class = "tocbtn" href="#text-block-downloads"><i class="fas fa-angle-down"></i></a></td></tr>
+</table>
+</div>        <div id = "textarea" class = "textarea ">
+				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
+			<!-- <h2>Dragon Species and Aleran Commonwealth</h2> -->
+						<div class = "header-image">
+				<img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F960852094519401072_2FDAD12DDBBCFFBFA99BDEECDC55D22AF5831A32D7_2F.jpg" >
+			</div><div style = "text-align: center; width: 100%;"><div class = "header-alert-box" style = "background-color: #FFF5BF; border-color: #FFD800;"><div class = "header-alert-inner"><img class = "header-alert" src = "data:image/png;base64,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"></div><div class = "header-alert-inner">The normal download for this item is temporarily not available; see the page for information or alternatives.</div></div></div>			<section class = "textblock" id = "text-block-general">
+				<h3>General</h3>
+					
+					This mod consists of two parts, the species mod which it started out as, and a heavily modified custom empire design. These halves ship together, but are fairly trivial to separate.
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-species">
+				<h3>Species</h3>
+					
+					The mod adds a new species class and type, "Dragon". Like most modded species, it is made of static images, rather than (slightly) animated models. It consists of a total of 58 portraits, in 16 styles (thus with an average of four color variants each). These styles are divided into three gender categories, giving 28 male portraits, 21 female ones, and 9 "unisex" portraits which can be used for either gender. None are leader or ruler-specific.
+					
+					
+					<br><br>
+					
+					
+					There is also a trait meant to go along with the species; its net effect is strongly positive, so it is incompatible with most other beneficial traits, and has an extremely high trait point cost, high enough that major negative traits must be used to bring it to valid levels.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2Fwu6Fqfo.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2Fwu6Fqfo.png" style="max-width:75%;" ></a>
+</div><br>
+					
+					
+					<div class = "stellaris-prototype" style = "width: 100%">
+<h4>Dragon<img class = "stellaris-icon" src = "data:image/png;base64,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"></h4>
+<div class = "stellaris-desc">This species is imposing both physically and mentally - they are large, tough, and long-lived, while also being highly intelligent, and can tolerate a wide range of environments. They do, however, have greater than average need for food and resources, a fairly rigid genetic structure.</div>
+<table>
+	<tr><td style = "width: 90%">Research Speed</td><td style = "width: 10%" class = "good-effect">+15%</td></tr>
+	<tr><td style = "width: 90%">Army Damage</td><td style = "width: 10%" class = "good-effect">+15%</td></tr>
+	<tr><td style = "width: 90%">Army Health</td><td style = "width: 10%" class = "good-effect">+30%</td></tr>
+	<tr><td style = "width: 90%">Leader Lifespan</td><td style = "width: 10%" class = "good-effect">+120</td></tr>
+	<tr><td style = "width: 90%">Leader Level Cap</td><td style = "width: 10%" class = "good-effect">+3</td></tr>
+	<tr><td style = "width: 90%">Modify Species Special Project Cost</td><td style = "width: 10%" class = "bad-effect">+100%</td></tr>
+	<tr><td style = "width: 90%">Alpine World Habitability</td><td style = "width: 10%" class = "good-effect">+40%</td></tr>
+	<tr><td style = "width: 90%">Continental Habitability</td><td style = "width: 10%" class = "good-effect">+50%</td></tr>
+	<tr><td style = "width: 90%">Ocean Habitability</td><td style = "width: 10%" class = "good-effect">+20%</td></tr>
+	<tr><td style = "width: 90%">Savanna World Habitability</td><td style = "width: 10%" class = "good-effect">+30%</td></tr>
+	<tr><td style = "width: 90%">Tropical Habitability</td><td style = "width: 10%" class = "good-effect">+20%</td></tr>
+	<tr><td style = "width: 90%">Food Consumption</td><td style = "width: 10%" class = "bad-effect">+30%</td></tr>
+	<tr><td style = "width: 90%">Ruler Level Cap</td><td style = "width: 10%" class = "good-effect">+3</td></tr>
+</table>
+</div>
+
+					
+					
+					<br><br>
+					
+					
+					To help this, a strong negative trait is also included, and designed to be thematically fitting, the "Pampered" trait.<br>
+					
+					
+					<div class = "stellaris-prototype" style = "width: 100%">
+<h4>Pampered<img class = "stellaris-icon" src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAYAAABWk2cPAAAFkUlEQVR42q1XC2xTVRg+fdx1a3vb23bd1pbHXmwIW4AREBWdAipCICIsQoQRAiIkRCS6IJggBFEQ9qBAgMGYBucMITxGkIfKYIHSbS10G90AAxowhhAhGiGCw12///a2dt3dA2KTL+ec//zn++7/n2cZ6+Pv2sgp5mDWyLFtWaPntmaPWt6aNWpN25CnV17Jy3/76ouTJ9z64KMkURTV7P/4BV1Dhl8akLu22ZFd12RJu95kdN1p0dnvtXL2By26lPsBfsDdpsTMG5dSh3kvj56w9drM+eMgHvdkYoaMlGbH4M8C5oFX/Zz9Lx8TRD+ziM3MKragHsYlZpPsUj/8PPbMn9qefXXPz0Wr8h4r8qaElDEBa8bpRpA0gPAiCJslQaGTYGdYxBpmEqeyONGrTXwQSB0WuDp74TwIa3sXNLgm+o39fvSCiAQDklgowjCa0NcU+ZBQ33fMLL4OwUbYL8DmBRrtg260FswrCgaD3af7gtB/fIPecd0jpVKQBANSpGaUglwXusCL/omME2sRadjmg83DePG8NfWXlumFSxGxpovgRZ1jUL0woP4snH2yKH2xX653hTlSX8B04lfM2MWHeIjP43qqrXnJ+69BWBUR9LFEvd+aXnxWZXl0FkINcG6k9MSgQUp5CCtZgpjNNOIbSOlbEG0AeWeE/OpIWC20nx/xQo2vtMwREcWqG3Ne57hZJ6Wqd9CCQa5EJoPqq5i+k885+ETXT5ucv9ZPL1wkrWiPmiU0CAPX1TFbR284xCwdUxHVEqbvYFGiBIq6t/E/5I45Unv4oMCwCtPq+H7eWqSvJ5RjUZiZShKYhJQa5XoYc1i82BvHcXvGldo5CyYwLJb8Wo31zinMgxLKmEEciijiogQ4YCFEMplaTIY4bZU8ppX8yL87rqP6lN9O5E9awfxxybNPqoSOkzDGYjMI1DFpDAPLUMyFyGiIRUdN/jROie+wxvqwZvhzO1l9QvKyI5joYzDG4hkQsm5EewKNU+I7wISO/dl5B5jH4FpxEAYSjoUjZt76iiSMU+LbB53qtJzjzKOzFx2A4aACnn/CSGmcEl81RPemDq1hPo1twWEY9iugBHMT/5iC5E/jlPiqVOb2L9NzvmAXmWXSUZX5/jcwKmEFNj2RzcD+pJJuESpfxlkb3Q73k393XJWc5Y+KQcPWYZ/aco9rbcGvYVRCFfYnjzl6B1uEVuxilEQ+SxZZLNupn/zIvzuu8oSkmztyRr7JgsxhPcUlVlZJAsrIR1STEVE69uUikNOxNxOiVFKb7NRPfj3xbBGc5z4ZN9mFiZil9mqsM/apTPf24CuVQNEMxp58CaTTQG5HRDPkkg4GslM/+VVEjavAzRMqDeIujfXPLc7MTwsKCkJX3AVmdX7L2Wp2UwrgGAIv7pLhRluPqApBStFkyLdLBiKkdiGipn63PJbGhMaH+UxiqcHuXz94RG7klqFocT+Or1abb22HkxLIbS7I6RSiI2+afPRRe648v+S3A2KE7RKM4laUZVrznY2OjPe6PsSYIe57zra0UmV6uA2O2/B1VG6V6nyftkt4TBhupLVUxT9YLzh3rk7NExSfK5eZi8dKXoP0/O2W00oHeBnKzYC7E/iYdrSdF4sxbpPK2L6OT967un+Os8eHGQmf4OzLdqv4u6UgKYlBqfQh/5WhOh+pEzZCcIPa+PuHpqSKJSnOtD49QU8zbfwZjfWVKo3lDNLbsYm+WhYtllECoZJISZHx4ufwAx5t4ARfkeBYNtPp7P9Yj20xi6nwAnTVaIT5lRrhxBaV6TZEHpG4Av5ZrzbdXs0JnlV6+8dreXs2Lc4n/ltRy9K1eF0kHdMmjq3irO+Way1lbq1QXaI1H9rEWfYVc8J2d5xleYkuccrGeFsaHnlcb5z/Au6aQR3oRBq0AAAAAElFTkSuQmCC"></h4>
+<div class = "stellaris-desc">This species is naturally fairly demanding; they require comfortable and above-average living conditions and access to resources, and are easily made dissatisfied by those standards failing to be met.</div>
+<table>
+	<tr><td style = "width: 90%">Arctic Habitability</td><td style = "width: 10%" class = "bad-effect">-15%</td></tr>
+	<tr><td style = "width: 90%">Arid Habitability</td><td style = "width: 10%" class = "bad-effect">-20%</td></tr>
+	<tr><td style = "width: 90%">Arid Habitability</td><td style = "width: 10%" class = "bad-effect">-20%</td></tr>
+	<tr><td style = "width: 90%">Desert Habitability</td><td style = "width: 10%" class = "bad-effect">-20%</td></tr>
+	<tr><td style = "width: 90%">Tomb World Habitability</td><td style = "width: 10%" class = "bad-effect">-50%</td></tr>
+	<tr><td style = "width: 90%">Tundra Habitability</td><td style = "width: 10%" class = "bad-effect">-15%</td></tr>
+	<tr><td style = "width: 90%">Damage from Orbital Bombardment</td><td style = "width: 10%" class = "bad-effect">+10%</td></tr>
+	<tr><td style = "width: 90%">Consumer Goods Cost</td><td style = "width: 10%" class = "bad-effect">+25%</td></tr>
+	<tr><td style = "width: 90%">Happiness</td><td style = "width: 10%" class = "bad-effect">-10%</td></tr>
+	<tr><td style = "width: 90%">Terraforming Cost</td><td style = "width: 10%" class = "bad-effect">+20%</td></tr>
+</table>
+</div>
+
+					
+					
+					<br><br>
+					
+					
+					Finally, there is a custom name list, designed to specifically feel both unique and exotic without being too alien or unpronounceable, and taking (probable) phonetic preferences of the species into account. There is also a set of auxiliary food production buildings, which will replace the hydroponics farms with ones more befitting carnivores, but which are functionally identical.<br>
+					
+					
+					<div class = "stellaris-prototype" style = "width: 18%">
+<h4>Meat Farm I</h4><img class = "stellaris-graphic" src = "data:image/png;base64,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">
+<div class = "stellaris-desc">Meat farms - more accurately lab facilities - grow meatlike tissue on an industrial scale to feed carnivorous Pops.</div>
+<table>
+	<tr><td style = "width: 90%">Energy Upkeep</td><td style = "width: 10%" class = "bad-effect">1</td></tr>
+	<tr><td style = "width: 90%">Minerals Cost</td><td style = "width: 10%" class = "bad-effect">60</td></tr>
+	<tr><td style = "width: 90%">Food Production</td><td style = "width: 10%" class = "good-effect">+2</td></tr>
+</table>
+</div>
+<div class = "stellaris-prototype" style = "width: 18%">
+<h4>Meat Farm II</h4><img class = "stellaris-graphic" src = "data:image/png;base64,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">
+<div class = "stellaris-desc">Meat farms - more accurately lab facilities - grow meatlike tissue on an industrial scale to feed carnivorous Pops.</div>
+<table>
+	<tr><td style = "width: 90%">Energy Upkeep</td><td style = "width: 10%" class = "bad-effect">1.5</td></tr>
+	<tr><td style = "width: 90%">Minerals Cost</td><td style = "width: 10%" class = "bad-effect">90</td></tr>
+	<tr><td style = "width: 90%">Food Production</td><td style = "width: 10%" class = "good-effect">+3</td></tr>
+</table>
+</div>
+<div class = "stellaris-prototype" style = "width: 18%">
+<h4>Meat Farm III</h4><img class = "stellaris-graphic" src = "data:image/png;base64,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">
+<div class = "stellaris-desc">Meat farms - more accurately lab facilities - grow meatlike tissue on an industrial scale to feed carnivorous Pops.</div>
+<table>
+	<tr><td style = "width: 90%">Energy Upkeep</td><td style = "width: 10%" class = "bad-effect">2</td></tr>
+	<tr><td style = "width: 90%">Minerals Cost</td><td style = "width: 10%" class = "bad-effect">120</td></tr>
+	<tr><td style = "width: 90%">Food Production</td><td style = "width: 10%" class = "good-effect">+4</td></tr>
+</table>
+</div>
+<div class = "stellaris-prototype" style = "width: 18%">
+<h4>Meat Farm IV</h4><img class = "stellaris-graphic" src = "data:image/png;base64,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">
+<div class = "stellaris-desc">Meat farms - more accurately lab facilities - grow meatlike tissue on an industrial scale to feed carnivorous Pops.</div>
+<table>
+	<tr><td style = "width: 90%">Energy Upkeep</td><td style = "width: 10%" class = "bad-effect">2.5</td></tr>
+	<tr><td style = "width: 90%">Minerals Cost</td><td style = "width: 10%" class = "bad-effect">150</td></tr>
+	<tr><td style = "width: 90%">Food Production</td><td style = "width: 10%" class = "good-effect">+5</td></tr>
+</table>
+</div>
+<div class = "stellaris-prototype" style = "width: 18%">
+<h4>Meat Farm V</h4><img class = "stellaris-graphic" src = "data:image/png;base64,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">
+<div class = "stellaris-desc">Meat farms - more accurately lab facilities - grow meatlike tissue on an industrial scale to feed carnivorous Pops.</div>
+<table>
+	<tr><td style = "width: 90%">Energy Upkeep</td><td style = "width: 10%" class = "bad-effect">3</td></tr>
+	<tr><td style = "width: 90%">Minerals Cost</td><td style = "width: 10%" class = "bad-effect">180</td></tr>
+	<tr><td style = "width: 90%">Food Production</td><td style = "width: 10%" class = "good-effect">+7</td></tr>
+</table>
+</div>
+
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-alerancommonwealth">
+				<h3>Aleran Commonwealth</h3>
+					
+					The bulk of the mod is focused on a custom empire, the Aleran Commonwealth.
+					
+					
+					<br><br>
+					
+					
+					This empire started as (see <a href="../../stellaris/pages/info/history.html">history</a>) an answer to the genocidal empire designs (eg Determined Exterminator) and their buffs, designed to be tailor-made to destroying such empires, and provide a way to be competitive with aggressive AI empires without playing as another evil one (something I refuse to do in <i>any</i> 4X game). From there, it has grown into a large "moral enforcer" type empire, what vanilla might call "Peacekeeping Interventionists" (and then quite a bit more).
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-lore">
+				<h3>Lore</h3>
+					
+					The Aleran Commonwealth is built on three very simple principles:<ul>
+					
+					
+					<li>Life, especially sentient life, is sacrosanct - irrespective of its origin - and it must not be destroyed or made to suffer.</li>
+					
+					
+					<li>The relentless progress of science and technology is the foremost way to ensure the well-being of said life, by providing the understanding and tools to identify and resolve the causes of strife that arise.</li>
+					
+					
+					<li>If two options present themselves, and one is clearly far worse than the other, the lesser evil must be chosen, regardless of how unappealing it may be, as blindly clinging to rigid ideals, demanding a nonexistent perfect option, in the face of larger practical concerns is a recipe for at best ineffectuality and at worst catastrophe.</li></ul>
+					
+					
+					Alerans will pursue these objectives with unwavering focus, regardless of whatever barriers may stand in the way, be they literal, technological, or by convention; the very idea of an uncrossable threshold is anathematic to their mode of thought. In isolation, they will devote their society to peaceful expansion and technological developments - two things at which they excel. They will pursue these to the almost total exclusion of anything else, as those would be detrimental to the adherence to their principles.
+					
+					
+					<br><br>
+					
+					
+					Once encountering another empire, however, they will examine it deeply and judge whether that empire is in accordance with what they deem acceptable; if it actively shares and practices those values, the Alerans will (try to) become a staunch ally; should the other empure be in active defiance of their values, however, the interaction is far more aggressive. Upon the identification of an empire that deviates sufficiently from what they consider acceptable behavior, especially if that empire makes itself a threat to not just the well-being of its citizens or its neighbors, but their very existence, the Commonwealth will pursue corrective actions in dramatic fashion.
+					
+					
+					<br><br>
+					
+					
+					This is where that third principle is most relevant; while in general wanton destruction is something to be avoided, if that is the price to avert far worse outcomes, the Alerans will readily pay it; should an empire behave so badly that the total destruction of its government and sovereignty - and collateral literal destruction caused to bring that - is the less damaging option, Alerans will think nothing of pursuing exactly that.
+					
+					
+					<br><br>
+					
+					
+					When carrying out this duty, the Alerans' economy is (helped by overwhelming popular support) restructured around the war effort, allowing them to pursue it with unusual vigor, efficacy, and persistence, and barring the emergence of a far larger threat, nothing short of full capitulation and massive social restructuring on the part of the target empire will end it. This price is a steep one, involving the complete disposal of the previous power structure, a complete shift in policy, particularly regarding conquest or other species, and becoming a satellite of the Commonwealth, ready for imminent and rapid integration.
+					
+					
+					<br><br>
+					
+					
+					This devotion to principles is also directed reflectively; should the leadership of the Commonwealth - normally granted very wide control over administration, to best allow it to pursue those goals - begin to deviate in favor of other motivations, such as wars of conquest, pointless military posturing, unethical policy choices, or incompetent economic management, it will rapidly lose support, ultimately finding itself immediately replaced. 
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-gameplay">
+				<h3>Gameplay</h3>
+					
+					The Aleran Commonwealth comes with an enormous amount of customized parameters and scripting to guide it - and by proxy anyone playing as it - to play "in character", and to create a very unique (and hopefully rewarding) gameplay experience doing so, while not allowing for the (ab)use of their significant strengths for "classic" general conquest. This starts with the ethics and civics, which are predetermined and locked at game start.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2FzqxhB9w.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FzqxhB9w.png" style="max-width:75%;" ></a>
+</div><br>
+					
+					
+					<div class = "stellaris-prototype" style = "width: 32%">
+<h4>High-Tech Infrastructure<img class = "stellaris-icon" src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAYAAABWk2cPAAACrUlEQVR42s3W32tSYRjAcWtCP5ihMGMXu4gwiFrhwIuI/gCrQTSChl0kxG4atI3DbhLGYDIQzBAkupDAmARrEgxyXUwIJBlBMpCEKRkjmDeCFwXnotjT8xx8D+/7nuM5x4LowIfBe973/foe2FGX63+8MqGqzNvj6/09ycteq/5FLFglT3CjBgKHVIw2UPqP4lowWFUHCGowxqQHCiaDlQkEJBMSsXFdSCTNv+o0OIRKbNPURFlgF5Xm15LB0pCTaJTfNHH5vYDGapsHGvW7Ct22CtXXB1CYq2tR4/xS1CZY8uKmHavom4W6FmMoSthJTaIdy9MuXVxPr17aAl58/K2g8rIF8BN0aleFTxstiJ0vaOT1uCdJ9wsGaMLyhU2BHO18+WGIrj38oEfl9b0oCZhFi3bR/MyOECT8KW2iRTkYZjf5DYjwaF80DVH+lGa4KAnrUSWQ3UNAFs+tCZTxvE4LyReO1bb2Na+UsmG95DMfBbtobqHcN8o4iB6aRufPilh0t7hvGaWTxoJ5w3rZQFE6Kams12Gv8s3weCk4UPTBWLKBgMyeyVhSrmQh97ikN9vNLjy9V4B+69l4T4OPhtmNmbGUJYrubrf0KB80Wy9Fw8K/DQ4UnUbZRXFpU6to0fBywMEA3bw/mrDEHi0F6QPIUXk+dy9g+iqc9sfTd0+vAi8yEhO0v3Y1iUgOIqMxkOfLpv1LJNX3hY9R3x3/chMBwwdXbmeFIOHnmsFgB1l/p06NxOYQMHx0I1WCd9kdPUj4uWYwGLX9EseJbtTsF+WDDqI121Nql9vlmjzx6CYCct0zL7jlW7Q05VF4IWe/ytx6+JlZdPKUNS743PlPwV5UGc4fweg2hg756I3hWUsY+4U+oqMDR1k4cjx+DGM63NjXhxd5KDZY8B9dvwHj5Gbjyn3TOgAAAABJRU5ErkJggg=="></h4>
+<div class = "stellaris-desc">This civilization uses advanced technology and heavy automation in their constructions, increasing productivity, at somewhat higher initial and operating cost.</div>
+<table>
+	<tr><td style = "width: 90%">Fleet Command Limit</td><td style = "width: 10%" class = "good-effect">+30</td></tr>
+	<tr><td style = "width: 90%">Empire Energy Generation</td><td style = "width: 10%" class = "good-effect">+10%</td></tr>
+	<tr><td style = "width: 90%">Empire Minerals Production</td><td style = "width: 10%" class = "good-effect">+30%</td></tr>
+	<tr><td style = "width: 90%">Ship Upgrade Cost</td><td style = "width: 10%" class = "bad-effect">+50%</td></tr>
+	<tr><td style = "width: 90%">Building Build Speed</td><td style = "width: 10%" class = "good-effect">+25%</td></tr>
+	<tr><td style = "width: 90%">Building Cost</td><td style = "width: 10%" class = "bad-effect">+100%</td></tr>
+	<tr><td style = "width: 90%">Building Upkeep</td><td style = "width: 10%" class = "good-effect">+15%</td></tr>
+	<tr><td style = "width: 90%">Clear Blocker Time</td><td style = "width: 10%" class = "good-effect">-25%</td></tr>
+	<tr><td style = "width: 90%">Colony Development Speed</td><td style = "width: 10%" class = "good-effect">+25%</td></tr>
+	<tr><td style = "width: 90%">Robot Build Speed</td><td style = "width: 10%" class = "good-effect">+25%</td></tr>
+	<tr><td style = "width: 90%">Robot Resource Production</td><td style = "width: 10%" class = "good-effect">+40%</td></tr>
+	<tr><td style = "width: 90%">Colony Ship Build Cost</td><td style = "width: 10%" class = "bad-effect">+50%</td></tr>
+	<tr><td style = "width: 90%">Terraforming Speed</td><td style = "width: 10%" class = "good-effect">+25%</td></tr>
+</table>
+</div>
+<div class = "stellaris-prototype" style = "width: 32%">
+<h4>Ethical Dominance<img class = "stellaris-icon" src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAYAAABWk2cPAAADH0lEQVR42s3WXUhTYRzH8VMKvaDhQGMXXWQMGig0wZuiq65WSYEFyaAYCV04spexq4FUHILIhNEoLwYhOYxoEYGzi3YlmRSOwWjiBsUQkmjQRRdeFP77/x73nJ7nbM6tN3rgy55t55zPeY7zbIbxP45ob9peWzlH+XGnWuxw+jcwTxrd4QPlOaqzVUbzXOSXcAF60qsNgCLGZJGGwFHPXA9HKNqrN2qr4n2P1qF6wSYuVS9Ky0SFR6WN0OyoJ9VUD+pXd1TBwrMS0RfSWyYNtqFcyr8JmGrjDUt2FAcHWG2lM8NL1kmJE8iSHS3VXO1I1+OI6Z4mWe7JR6IPRKZnWpSb5Off+ASSJZq5siTKvfhEGImrWTK7UyJa4edD688DB66jSKdxxEB20MVpIJKgxKPdc1oSAoqhwgqKXNXQpEQTQwvroFsHJYoVYrVIInZMzhU0qaGMeQFKFH9DuWIVRABxiWW4vCqKyyovLR5pTIO9Auw0Dhr+/eEljlDQGRcQHsWcPxxBV9wq+7RI9JV+xu+H3QkrbKPuQ6uYx2TvVJRkmVhRoBO+2b+BrlWgD06kBCgDbEfDNnjqwrwFZieXKfOwWAulCvR9iDQUq8ZBkIpqlUF5k0Dq9lVRjPP7buU5ccOmz2QVOzdDgT1RokWihfGCmA/aCrrjNHFxVhxcxPtlphjdy68PztLKDaKzXSFZXkW9QBGghcmC2DngjAoIAQX+dqxQgWaeFzUUGFDMFRB5tf9TBpNABcQBRhKVAaXXZAUQK5UrVkHMFTDpNHoMO+pSUQljdSpa7fKqAVJXq6CuChRjoMOMnNl9k9Run0qImzjCvL89rOVzmqL5+zlxgpQk8uH1cgMdI2hswxs+o47THdcKHMn6200RwFd3c5VfbYvrARUnoIBltMTV/k7ls7+kr8a0VX2lVpWof9MvcT5QM1f4Q2h201WK0WwYfTuGj3OEjrZe1jrpCNWsvzWo1lvfr7JmC75XDe3bVTsFHK//p2AZDbbEtzD6kqE1FT3WEqgZY9+5N9zWhlEJ+7ab2xiz4gM7NqiNawXWGPiPxg+NabuJzbINkAAAAABJRU5ErkJggg=="></h4>
+<div class = "stellaris-desc">Those with the power to spread reason and morality have the obligation to do so, whether that be simple expansion to the stars or the elimination of ideologies which do nothing but cause stagnation or suffering. However, while those who resist progress will no doubt prove an enduring irritant, conflict must never be sought for its own sake. Should these goals or survival itself be threatened, any feasible efforts must be made to address the threat.</div>
+<table>
+	<tr><td style = "width: 90%">alliance_influence_cost</td><td style = "width: 10%" class = "good-effect">-80%</td></tr>
+	<tr><td style = "width: 90%">Army Collateral Damage</td><td style = "width: 10%" class = "bad-effect">+150%</td></tr>
+	<tr><td style = "width: 90%">Claim Influence Cost</td><td style = "width: 10%" class = "bad-effect">+400%</td></tr>
+	<tr><td style = "width: 90%">Core Sector Systems</td><td style = "width: 10%" class = "good-effect">+2</td></tr>
+	<tr><td style = "width: 90%">Election Influence Cost</td><td style = "width: 10%" class = "good-effect">-90%</td></tr>
+	<tr><td style = "width: 90%">Subject Integration Cooldown</td><td style = "width: 10%" class = "good-effect">-90%</td></tr>
+	<tr><td style = "width: 90%">Naval Capacity</td><td style = "width: 10%" class = "good-effect">+10%</td></tr>
+	<tr><td style = "width: 90%">Piracy Risk</td><td style = "width: 10%" class = "good-effect">-10%</td></tr>
+	<tr><td style = "width: 90%">Monthly Influence</td><td style = "width: 10%" class = "good-effect">+2</td></tr>
+	<tr><td style = "width: 90%">Subject Integration Speed</td><td style = "width: 10%" class = "good-effect">+24</td></tr>
+	<tr><td style = "width: 90%">War Exhaustion Gain</td><td style = "width: 10%" class = "bad-effect">+150%</td></tr>
+	<tr><td style = "width: 90%">Monthly Influence (Defensive War)</td><td style = "width: 10%" class = "good-effect">+4</td></tr>
+	<tr><td style = "width: 90%">Diplomatic Influence Cost</td><td style = "width: 10%" class = "good-effect">-100%</td></tr>
+	<tr><td style = "width: 90%">Edict Cost</td><td style = "width: 10%" class = "good-effect">-10%</td></tr>
+	<tr><td style = "width: 90%">Edict Duration</td><td style = "width: 10%" class = "good-effect">+20%</td></tr>
+	<tr><td style = "width: 90%">Faction Influence Gain</td><td style = "width: 10%" class = "bad-effect">-50%</td></tr>
+	<tr><td style = "width: 90%">Governing Ethics Attraction</td><td style = "width: 10%" class = "good-effect">+40%</td></tr>
+	<tr><td style = "width: 90%">Rivalry Influence Gain</td><td style = "width: 10%" class = "bad-effect">-90%</td></tr>
+	<tr><td style = "width: 90%">Ship Build Speed (Defensive War)</td><td style = "width: 10%" class = "good-effect">+20%</td></tr>
+	<tr><td style = "width: 90%">Subject Integration Influence Cost</td><td style = "width: 10%" class = "good-effect">-40%</td></tr>
+</table>
+</div>
+<div class = "stellaris-prototype" style = "width: 32%">
+<h4>Technology Focus<img class = "stellaris-icon" src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAYAAABWk2cPAAADQklEQVR42s3WX2hSURzAcWuD/rCFPgR76CHCIEjIwIcRe1gPLVdbg0GwhGA0gmhtLWwxEEbRJYhuLUPcFkLQZivBjEBXkDCQRJJsIC1UMMZgPjTw0Ydiv36/M8/tXLvXacFK+KJcj+ez3+XuqsHwPz48tlRlxnKm8vNuMV9b6i8wa4q6jxtlMaixEqJZzP1HOAOtqVIdIAsxnrs+sDV+FAOWTZ18SJ2nTZ1sU3WsVrABi2qhvpMJCF5cUrUJmpat0YZa0H4FbN2AqFlHEoJDKUg9XYXi15JS8tkyhK6lFdTdXgFbo/1VQVxgRGhNRDnGE0GqkCsylOc7Fwdvl4Bbo2tVpx0/HHDLrWGgQs4ka274V8nny7AUK4B8PKpEaHw2B/7hBCt8a5Hl6Y6ycE/KrQeaaYGIpkPLUFwpqapECSSYV/qGayIrClxGKbMWGqlEaQOC+KQcFeMYn5ZA+pwGGqkE7fzNSpQwyRZm0emNTmZUEUZJ+BmKIB2Usiuo0+zLYEC5LH7wOt6wUpE8FL4UQe4MQmIuw17PT3yE3PtVpYArwY4nXuRA7g5DIY1Tz2TAfz0G0okgjB6cFfssoiCiIkwbsk0RDYzFGATfQYneI5hQthZRwnTQ9S1BRw74VP1bdGCfnMWAGrR4WNNDYUi8XGJXptPmg4WZNHs978UrNJZXej2RgPynAnu+0xOAxbc5ltTtZ/F9y2VF1K6FloolmB6cZyiHCRXjKIEOo8wg+lzg9oIWalf92+CBiBZK0xFM0WtxSorAykl10MhvNwc8aNY7vWI0navNp8Qn5RGoc3rNmrfCvr2S29HigkuWu3CjfRKks3hBXXnFGut4DOFHccinC9Db5FIiKDyVAPlCYKPzQZarwweXj9yDvr3j1APdGz6iJkRzHKYIozhOqCpEFRAjjIO0D4JrWPXvVFx4lRYr7ZdYHA89jKlQPuWARWZxjIdg/6Zf4riwkU8rorybZ56o4hhP9Qe3uNKbTskejQZD167h0xhQnc0jqnpMo1XrbXaK2Wr7VdaowF4ttGtP9QRwqvafgmXU2eTfhug7hNZF9FTTYNUQ+4F9wLbXjXLYsVPagZgSbmzSyYg1E1YfuEWPn/1I8hxMk2jvAAAAAElFTkSuQmCC"></h4>
+<div class = "stellaris-desc">Study of the sciences is the path to the future, and to prosperity for all. While other fields should not be wholly ignored, they must not be confused with matters of higher importance.</div>
+<table>
+	<tr><td style = "width: 90%">Research Speed (Biology)</td><td style = "width: 10%" class = "good-effect">+10%</td></tr>
+	<tr><td style = "width: 90%">Research Speed (Field Manipulation)</td><td style = "width: 10%" class = "good-effect">+10%</td></tr>
+	<tr><td style = "width: 90%">Research Speed (Military Theory)</td><td style = "width: 10%" class = "bad-effect">-20%</td></tr>
+	<tr><td style = "width: 90%">Research Speed (New Worlds)</td><td style = "width: 10%" class = "good-effect">+5%</td></tr>
+	<tr><td style = "width: 90%">Research Speed (Particles)</td><td style = "width: 10%" class = "good-effect">+10%</td></tr>
+	<tr><td style = "width: 90%">Research Speed (Psionics)</td><td style = "width: 10%" class = "bad-effect">-50%</td></tr>
+	<tr><td style = "width: 90%">Research Speed (Statecraft)</td><td style = "width: 10%" class = "bad-effect">-15%</td></tr>
+	<tr><td style = "width: 90%">Research Alternatives</td><td style = "width: 10%" class = "good-effect">+1</td></tr>
+	<tr><td style = "width: 90%">Army Build Speed</td><td style = "width: 10%" class = "bad-effect">-20%</td></tr>
+	<tr><td style = "width: 90%">Survey Speed</td><td style = "width: 10%" class = "good-effect">+25%</td></tr>
+	<tr><td style = "width: 90%">Anomaly Research Speed</td><td style = "width: 10%" class = "good-effect">+20%</td></tr>
+	<tr><td style = "width: 90%">Science Ship Build Speed</td><td style = "width: 10%" class = "good-effect">+40%</td></tr>
+	<tr><td style = "width: 90%">Shipyard Build Speed</td><td style = "width: 10%" class = "bad-effect">-10%</td></tr>
+</table>
+</div>
+
+					
+					
+					<br><br>
+					
+					
+					You play with a centralized government structure, allowing one leader to rule without regular elections, but do not mistake that for carte blanche to rule as you please; the authority makes the conditionality of your governance very clear.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2Fcvw8F2c.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2Fcvw8F2c.png" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2FuysoHZx.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FuysoHZx.png" style="max-width:75%;" ></a>	<div class = "image-caption">These are not idle threats.</div>
+</div><br>
+					
+					
+					This restricts you from pursuing actions that are convenient but unethical, such as by taking others' territory, exterminating another species with lesser genetic traits, or taking the destructive option in various event chains. For example, choosing to destroy another civilization you happen to find yourself sharing a colony with will not be seen as clever expansionism, but as an unmitigated atrocity.
+					
+					
+					<br><br>
+					
+					
+					Once factions are relevant, this is even more clear; the dominant one will always be a reflection of that overarching ideology, a kind of hybrid ethics commission and effectiveness watchdog. Their list of expectations is long - often growing to 30+ entries by the late game, in comparison to the 5-8 of vanilla factions - and includes matters from social policy to economic strength to focus on the sciences to the drive to correct other empires as necessary. While a number of their grievances may be minor - noone is going to remove you from power solely for running an energy deficit or not uplifting enough presapients - others are exactly the opposite; several of their conditions, such as the rights of sentient species, are of such grave importance that they can singlehandedly throw most of your population into revolt. This revolt comes with more than the standard effects of unhappiness, too; in all likelihood, you will experience things like your naval power turning against you or scientific leaders actively sabotaging your progress. Ultimately, this should end in your removal from power, but I decided that an automatic forced game loss was rather too unpleasant to include.
+					
+					
+					<br><br>
+					
+					
+					The Aleran focus on these principles also means that your political influnce works completely differently; your population will be actively offended, not impressed, by things like declaring pointless rivalries or similar political machinations, and you can forget about wars of pure conquest altogether; no obtainable amount of political capital will convince your citizens of your rightful ownership of someone else's system. Instead, your influence is tied to your economic development, as you bring more and more planets to a high level of advancement.
+					
+					
+					<br><br>
+					
+					
+					Diplomatically, you will find your relationships often fairly strained, but not universally negative; other empires with similar principles to yours will hold you in high regard, and will often actively seek or at least accept cooperation. In most cases, neutral empires will be marginally more negative towards you, as they perceive the threat you can pose, as well as being offput by your rigid pursuance of the Aleran ideology.<br>
+					
+					
+					<div class = "stellaris-prototype" style = "width: 100%">
+<h4>Insensitive<img class = "stellaris-icon" src = "data:image/png;base64,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"></h4>
+<div class = "stellaris-desc">This species has a mindset that is strongly focused on what they consider right, often failing to account for or accurately predict the perceptions, reactions, and preferences of others. While not actively seeking to cause offence, they are nonetheless very prone to irritating or alienating others in their pursuit of what they consider right, and even when ideological allies may be quite difficult to get along with.</div>
+<table>
+	<tr><td style = "width: 90%">Border Friction</td><td style = "width: 10%" class = "bad-effect">+40%</td></tr>
+	<tr><td style = "width: 90%">Monthly Unity</td><td style = "width: 10%" class = "bad-effect">-5%</td></tr>
+	<tr><td style = "width: 90%">Other Species Owner Happiness</td><td style = "width: 10%" class = "bad-effect">-10%</td></tr>
+</table>
+</div>
+
+					
+					
+					<br><br>
+					
+					
+					The major exception to this is democratic crusaders; being "give me liberty or give me death"-type ideologues, they will have a strongly negative opinion toward you (though the reverse is not true), as you represent (for the targets of your wars) a complete loss of the sovereignty those crusaders so cherish. Empires that are right to see you as a threat, however, will <i>hate</i> you, on a level only exceeded by genocidal empires; barring exceptional circumstances they will never be anything but defiant, obstructionist, and aggressive against you.
+					
+					
+					<br><br>
+					
+					
+					This extends to fallen empires; the materialist and xenophile ones will consider you closer than they would most empires - the latter especially so - while the other two will look at you with at best derision and at worst intent to destroy; their "neutral point" for diplomacy is only barely above what will prompt them to war.
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-earlygame">
+				<h3>Early Game</h3>
+					
+					In practice, the Aleran Commonwealth spends the early game pursuing a policy of extremely rapid exploration and territory acquisition, and aggressive economic development. "Wasteful" development, such as in military power, is shelved entirely; you will be literally unable to build a military until one proves necessary, usually by way of meeting an empire which needs correction. This phase of the game consists purely of exploration, colonization, building development, research, and general social progress.
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-midgame">
+				<h3>Mid Game</h3>
+					
+					As the game progresses, provided you have managed well, your ability to expand will improve, in particular territory acquisition; your demonstrated successed with translate to an easier time politically justifying further starbase construction (ie reduced influence cost), and expertise gained will increase their construction speed. Additionally, around this time, you will begin to unlock unique bonuses and structures, culminating in the Library of the Commonwealth, which reinforces a colony's alignment to your ideologies, streamlines its governance, and aids in the training of new local experts.<br>
+					
+					
+					<div class = "stellaris-prototype" style = "width: 100%">
+<h4>Library of the Commonwealth</h4><img class = "stellaris-graphic" src = "data:image/png;base64,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">
+<div class = "stellaris-desc">A branch of the libraries of the Aleran commonwealth. Contains many volumes on Aleran science, technology, morality, and the governing ethics of the Commonwealth itself. These resources help aid scientists and remind citizens why society is run the way it is. This also means the colony requires far less work to administrate, allowing it to operate within the Core Sector for free.</div>
+<table>
+	<tr><td style = "width: 90%">Energy Upkeep</td><td style = "width: 10%" class = "bad-effect">30</td></tr>
+	<tr><td style = "width: 90%">Minerals Cost</td><td style = "width: 10%" class = "bad-effect">2000</td></tr>
+	<tr><td style = "width: 90%">Engineering Research Production</td><td style = "width: 10%" class = "good-effect">+1</td></tr>
+	<tr><td style = "width: 90%">Influence Production</td><td style = "width: 10%" class = "good-effect">+0.5</td></tr>
+	<tr><td style = "width: 90%">Physics Research Production</td><td style = "width: 10%" class = "good-effect">+1</td></tr>
+	<tr><td style = "width: 90%">Society Research Production</td><td style = "width: 10%" class = "good-effect">+2</td></tr>
+	<tr><td style = "width: 90%">Unity Production</td><td style = "width: 10%" class = "good-effect">+3</td></tr>
+	<tr><td style = "width: 90%">Governing Ethics Attraction (Planet Modifier)</td><td style = "width: 10%" class = "good-effect">+10%</td></tr>
+	<tr><td style = "width: 90%">Tile Engineering Output (Planet Modifier)</td><td style = "width: 10%" class = "good-effect">+5%</td></tr>
+	<tr><td style = "width: 90%">Tile Physics Output (Planet Modifier)</td><td style = "width: 10%" class = "good-effect">+5%</td></tr>
+	<tr><td style = "width: 90%">Tile Society Output (Planet Modifier)</td><td style = "width: 10%" class = "good-effect">+5%</td></tr>
+	<tr><td style = "width: 90%">Core Sector Systems (Country Modifier)</td><td style = "width: 10%" class = "good-effect">+1</td></tr>
+	<tr><td style = "width: 90%">Empire Leader Capacity (Country Modifier)</td><td style = "width: 10%" class = "good-effect">+0.1</td></tr>
+</table>
+</div>
+
+					
+					
+					<br><br>
+					
+					
+					Its capital version is even more powerful:<br>
+					
+					
+					<div class = "stellaris-prototype" style = "width: 100%">
+<h4>Central Library of the Commonwealth</h4><img class = "stellaris-graphic" src = "data:image/png;base64,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">
+<div class = "stellaris-desc">The central hub of the Aleran Commonwealth's library systems. Contains massive amounts of knowledge of Aleran science and society, and the founding documents of the Commonwealth itself, available to any researcher seeking insight or any citizen who wishes to remind themselves of society's guiding principles.</div>
+<table>
+	<tr><td style = "width: 90%">Energy Upkeep</td><td style = "width: 10%" class = "bad-effect">240</td></tr>
+	<tr><td style = "width: 90%">Minerals Cost</td><td style = "width: 10%" class = "bad-effect">36000</td></tr>
+	<tr><td style = "width: 90%">Engineering Research Production</td><td style = "width: 10%" class = "good-effect">+6</td></tr>
+	<tr><td style = "width: 90%">Influence Production</td><td style = "width: 10%" class = "good-effect">+3</td></tr>
+	<tr><td style = "width: 90%">Physics Research Production</td><td style = "width: 10%" class = "good-effect">+6</td></tr>
+	<tr><td style = "width: 90%">Society Research Production</td><td style = "width: 10%" class = "good-effect">+8</td></tr>
+	<tr><td style = "width: 90%">Unity Production</td><td style = "width: 10%" class = "good-effect">+10</td></tr>
+	<tr><td style = "width: 90%">Governing Ethics Attraction (Planet Modifier)</td><td style = "width: 10%" class = "good-effect">+25%</td></tr>
+	<tr><td style = "width: 90%">Core Sector Systems (Country Modifier)</td><td style = "width: 10%" class = "good-effect">+4</td></tr>
+	<tr><td style = "width: 90%">Empire Leader Capacity (Country Modifier)</td><td style = "width: 10%" class = "good-effect">+2</td></tr>
+	<tr><td style = "width: 90%">Engineering Research (Country Modifier)</td><td style = "width: 10%" class = "good-effect">+20%</td></tr>
+	<tr><td style = "width: 90%">Physics Research (Country Modifier)</td><td style = "width: 10%" class = "good-effect">+20%</td></tr>
+	<tr><td style = "width: 90%">Society Research (Country Modifier)</td><td style = "width: 10%" class = "good-effect">+20%</td></tr>
+	<tr><td style = "width: 90%">Monthly Unity (Country Modifier)</td><td style = "width: 10%" class = "good-effect">+10%</td></tr>
+	<tr><td style = "width: 90%">Starbase Capacity (Country Modifier)</td><td style = "width: 10%" class = "good-effect">+5</td></tr>
+	<tr><td style = "width: 90%">Governing Ethics Attraction (Country Modifier)</td><td style = "width: 10%" class = "good-effect">+10%</td></tr>
+</table>
+</div>
+
+					
+					
+					<br><br>
+					
+					
+					This is the stage of the game where the interactions with other empires become significant; by this point it is likely you will have met other empires which are engaging in things you should not allow to stand. Once you are at all able to do so, you will be prompted to carry out these duties.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2FzPNRmCc.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FzPNRmCc.png" style="max-width:75%;" ></a>
+</div><br>
+					
+					
+					Should you shirk this responsibility - such as by dragging your feet when you do not need preparation time, or worse, outright refusing to partake, the public discontent will trigger exactly the opposite, as well as risking the aforementioned effects of this loss of confidence in your capabilities.<br>
+					
+					
+					<div class = "stellaris-prototype" style = "width: 49%">
+<h4>Duty Reluctance<img class = "stellaris-icon" src = "data:image/png;base64,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"></h4>
+<div class = "stellaris-desc">The fact we are dragging our feet with our duties to the rest of the galaxy has not gone unnoticed.</div>
+<table>
+	<tr><td style = "width: 90%">Army Morale</td><td style = "width: 10%" class = "bad-effect">-10%</td></tr>
+	<tr><td style = "width: 90%">Happiness</td><td style = "width: 10%" class = "bad-effect">-5%</td></tr>
+	<tr><td style = "width: 90%">Unity Output</td><td style = "width: 10%" class = "bad-effect">-5%</td></tr>
+</table>
+</div>
+<div class = "stellaris-prototype" style = "width: 49%">
+<h4>Duty Ignored<img class = "stellaris-icon" src = "data:image/png;base64,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"></h4>
+<div class = "stellaris-desc">The fact we are have forsaken our duty to protect people across the galaxy from evil or backwards governance has not gone unnoticed, and our population has lost confidence in the ethicality of our rule.</div>
+<table>
+	<tr><td style = "width: 90%">Army Morale</td><td style = "width: 10%" class = "bad-effect">-10%</td></tr>
+	<tr><td style = "width: 90%">Governing Ethics Attraction</td><td style = "width: 10%" class = "bad-effect">-25%</td></tr>
+	<tr><td style = "width: 90%">Happiness</td><td style = "width: 10%" class = "bad-effect">-10%</td></tr>
+	<tr><td style = "width: 90%">Pop Resource Production</td><td style = "width: 10%" class = "bad-effect">-5%</td></tr>
+	<tr><td style = "width: 90%">Unity Output</td><td style = "width: 10%" class = "bad-effect">-20%</td></tr>
+</table>
+</div>
+
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-enlightenmentbyforce">
+				<h3>Enlightenment By Force</h3>
+					
+					The act of carrying out these duties is termed a war of enlightenment; during such a war, the economy of the Commonwealth is reshaped to serve it, helped by overwhelming popular support. For particularly evil or destructive opponents, these bonuses are even stronger, as your population becomes especially dedicated to the cause.<br>
+					
+					
+					<div class = "stellaris-prototype" style = "width: 49%">
+<h4>Moralistic Fervor<img class = "stellaris-icon" src = "data:image/png;base64,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"></h4>
+<div class = "stellaris-desc">We are unified in our efforts in a war to stop an evil empire from continuing its abuses or termination of sentient life.</div>
+<table>
+	<tr><td style = "width: 90%">Army Morale</td><td style = "width: 10%" class = "good-effect">+25%</td></tr>
+	<tr><td style = "width: 90%">Fleet Command Limit</td><td style = "width: 10%" class = "good-effect">+10</td></tr>
+	<tr><td style = "width: 90%">Naval Capacity</td><td style = "width: 10%" class = "good-effect">+25%</td></tr>
+	<tr><td style = "width: 90%">Piracy Risk</td><td style = "width: 10%" class = "good-effect">-40%</td></tr>
+	<tr><td style = "width: 90%">Monthly Influence</td><td style = "width: 10%" class = "good-effect">+1</td></tr>
+	<tr><td style = "width: 90%">Army Cost</td><td style = "width: 10%" class = "good-effect">-50%</td></tr>
+	<tr><td style = "width: 90%">Army Build Speed</td><td style = "width: 10%" class = "good-effect">+20%</td></tr>
+	<tr><td style = "width: 90%">Happiness</td><td style = "width: 10%" class = "good-effect">+5%</td></tr>
+	<tr><td style = "width: 90%">Accuracy</td><td style = "width: 10%" class = "good-effect">+15%</td></tr>
+	<tr><td style = "width: 90%">Fire Rate</td><td style = "width: 10%" class = "good-effect">+15%</td></tr>
+	<tr><td style = "width: 90%">Sublight Speed</td><td style = "width: 10%" class = "good-effect">+10%</td></tr>
+	<tr><td style = "width: 90%">Battleship Build Speed</td><td style = "width: 10%" class = "good-effect">+5%</td></tr>
+	<tr><td style = "width: 90%">Corvette Build Cost</td><td style = "width: 10%" class = "good-effect">-50%</td></tr>
+	<tr><td style = "width: 90%">Corvette Build Speed</td><td style = "width: 10%" class = "good-effect">+25%</td></tr>
+	<tr><td style = "width: 90%">Cruiser Build Speed</td><td style = "width: 10%" class = "good-effect">+10%</td></tr>
+	<tr><td style = "width: 90%">Destroyer Build Cost</td><td style = "width: 10%" class = "good-effect">-25%</td></tr>
+	<tr><td style = "width: 90%">Destroyer Build Speed</td><td style = "width: 10%" class = "good-effect">+15%</td></tr>
+	<tr><td style = "width: 90%">Defense Platform Build Speed</td><td style = "width: 10%" class = "good-effect">+20%</td></tr>
+	<tr><td style = "width: 90%">Starbase Upgrade Speed</td><td style = "width: 10%" class = "good-effect">+20%</td></tr>
+	<tr><td style = "width: 90%">Unity Output</td><td style = "width: 10%" class = "good-effect">+25%</td></tr>
+</table>
+</div>
+<div class = "stellaris-prototype" style = "width: 49%">
+<h4>Moralistic Fervor<img class = "stellaris-icon" src = "data:image/png;base64,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"></h4>
+<div class = "stellaris-desc">We are unified in our efforts in a war to stop another empire from engaging in its spree of genocide.</div>
+<table>
+	<tr><td style = "width: 90%">Army Morale</td><td style = "width: 10%" class = "good-effect">+50%</td></tr>
+	<tr><td style = "width: 90%">Fleet Command Limit</td><td style = "width: 10%" class = "good-effect">+30</td></tr>
+	<tr><td style = "width: 90%">Naval Capacity</td><td style = "width: 10%" class = "good-effect">+40%</td></tr>
+	<tr><td style = "width: 90%">Piracy Risk</td><td style = "width: 10%" class = "good-effect">-80%</td></tr>
+	<tr><td style = "width: 90%">Monthly Influence</td><td style = "width: 10%" class = "good-effect">+4</td></tr>
+	<tr><td style = "width: 90%">Army Cost</td><td style = "width: 10%" class = "good-effect">-50%</td></tr>
+	<tr><td style = "width: 90%">Army Build Speed</td><td style = "width: 10%" class = "good-effect">+40%</td></tr>
+	<tr><td style = "width: 90%">Happiness</td><td style = "width: 10%" class = "good-effect">+10%</td></tr>
+	<tr><td style = "width: 90%">Pop Resource Production</td><td style = "width: 10%" class = "good-effect">+10%</td></tr>
+	<tr><td style = "width: 90%">Accuracy</td><td style = "width: 10%" class = "good-effect">+25%</td></tr>
+	<tr><td style = "width: 90%">Fire Rate</td><td style = "width: 10%" class = "good-effect">+25%</td></tr>
+	<tr><td style = "width: 90%">Sublight Speed</td><td style = "width: 10%" class = "good-effect">+15%</td></tr>
+	<tr><td style = "width: 90%">Tracking</td><td style = "width: 10%" class = "good-effect">+25%</td></tr>
+	<tr><td style = "width: 90%">Weapons Range</td><td style = "width: 10%" class = "good-effect">+10%</td></tr>
+	<tr><td style = "width: 90%">Battleship Build Speed</td><td style = "width: 10%" class = "good-effect">+25%</td></tr>
+	<tr><td style = "width: 90%">Corvette Build Cost</td><td style = "width: 10%" class = "good-effect">-50%</td></tr>
+	<tr><td style = "width: 90%">Corvette Build Speed</td><td style = "width: 10%" class = "good-effect">+40%</td></tr>
+	<tr><td style = "width: 90%">Cruiser Build Speed</td><td style = "width: 10%" class = "good-effect">+25%</td></tr>
+	<tr><td style = "width: 90%">Destroyer Build Cost</td><td style = "width: 10%" class = "good-effect">-25%</td></tr>
+	<tr><td style = "width: 90%">Destroyer Build Speed</td><td style = "width: 10%" class = "good-effect">+25%</td></tr>
+	<tr><td style = "width: 90%">Defense Platform Build Speed</td><td style = "width: 10%" class = "good-effect">+50%</td></tr>
+	<tr><td style = "width: 90%">Titan Ship Build Speed</td><td style = "width: 10%" class = "good-effect">+25%</td></tr>
+	<tr><td style = "width: 90%">Starbase Upgrade Speed</td><td style = "width: 10%" class = "good-effect">+50%</td></tr>
+	<tr><td style = "width: 90%">Unity Output</td><td style = "width: 10%" class = "good-effect">+100%</td></tr>
+</table>
+</div>
+
+					
+					
+					<br><br>
+					
+					
+					This war is not a total war; it will only end with either your surrender - something that again will not go over well with your citizenry - or theirs. Given the large consequences of submitting to your demands, they will in all likelihood never do so voluntarily; you will need to obliterate their ability to fight back by taking every system and colony from them. At that point, you have won, and their empire will be completely reshaped. They become a satellite empire of yours, and are now governed under principles mirroring your own - including your ethics, your policies, and more - with additional specific stipulations against any attempt at reasserting any kind of dominance. Their old leaders will be removed from power - lethally if necessary. If necessary, the population will begin to be rehabilitated; for example, while the citizens suffering under a tyrant or inept ruler likely need no such aid in embracing the new principles, something with the population in broad support of the previous evils will require mass changing of ethics, or even in some cases culling. At no point, however, will the other empire ever be completely destroyed; to do so would be an extreme overaction far beyond that which is strictly necessary to build a better society, and directly violate the Alerans' primary principles.<br>
+					
+					
+					<div class = "stellaris-prototype" style = "width: 100%">
+<h4>Aleran Reformation<img class = "stellaris-icon" src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAYAAABWk2cPAAAC9klEQVR42s3WP2gTURzA8dgqltJKAg4ZMgSJ0EFEIYOIg5vxDwgdI2JNiYNBjYS4BFwMBSEGAoc4BKtQoZz1D2KCBF0KDWJoCARLG0Ho0g4GMnS4QenP3+81v8t7l1z+FcQrXy65vHefviPJxeEYcBuz/P2TLXV+ydnMRXvNXx6X2zeQ9ZSf4IlqGHAIKcmvYUb2XLmGZYYGMcNyUgGVb4IdCghyg8Epf/E0BpR2pj1jByD3YEM85nE2ne0XHMW+dEJz8TVY+1gXKEWPe6BV7VRxtB90Rp5I2NqHLTAaxl5NkJPHVt9vtcGIznQFNU/RiQPr8iQTw2ilfHn5ElvHNrYNK1rvutrkVC6TPJEDSo+UwPi1h1XebgIfp+A3wJv7q3vPp1oVn/80/8GF2yVI4LGHJ3UqYwf6xOTmiQWI6XdKCkiZoAWlCGNYQilfJzTPaOX1pgBpbwXbsqAErS5tCpT2Epq3ggFzorTKnqANSvFqJZQKmGjMl93AgDJ2DFFpaR1i3izEjy8MFM2hSvq6QGnjc2PfZRSs6Pytwr7Q+XChE7rbFeXJ0WODxfOoDij0tdJhUZuVttCIW6thQPEbYEWvwqw3BbOe7kW8mhIfX1msmui0O8bVZDTAKEEM94OGPWklPs7nkEAqoHxsEMwzSqs0VzsEyqukvQTmMYcV9TEqr3Y+/skWpNduuB8raaF3rSuFYyTU14aKN9RENjN9NAnUXFAXX96N7QYUXnzFYwlR0JMUpUO6OHHQmzRb1ivQwC8Vau6aLs4T9NCcRNr2Cx9RFw78wTBFKCWjDDKaDreeEyjPR7COdb+n4sB78iSCrCuVb3dytFJ1rkBnet7EceBBdbUJJUKXFysKRCvlS2xBqz1XacKH7l7GgLo4GVW65IyJHl1/CQZ+DK+64koXxkNy/oF+nCH4tBvK8JUjUSUJfDbwT9DE2KsDiH5GaNcOFU1ElBD7g33DRob67UtwcCx5GDEzhFxKExHOiU0SFnFqI47/bfsLgpGMPnqfRNwAAAAASUVORK5CYII="></h4>
+<div class = "stellaris-desc">This civilization has been reformed - by force - by the Aleran Commonwealth. It no longer seeks to subjugate or eliminate its peers, and is instead focused on prosperity and happiness for its own citizens and for its neighbors.</div>
+<table>
+	<tr><td style = "width: 90%">Naval Capacity</td><td style = "width: 10%" class = "bad-effect">-50%</td></tr>
+	<tr><td style = "width: 90%">Food Output</td><td style = "width: 10%" class = "good-effect">+15%</td></tr>
+	<tr><td style = "width: 90%">War Exhaustion Gain</td><td style = "width: 10%" class = "bad-effect">+200%</td></tr>
+	<tr><td style = "width: 90%">Research Alternatives</td><td style = "width: 10%" class = "good-effect">+1</td></tr>
+	<tr><td style = "width: 90%">Army Build Speed</td><td style = "width: 10%" class = "bad-effect">-50%</td></tr>
+	<tr><td style = "width: 90%">Unrest</td><td style = "width: 10%" class = "good-effect">-25%</td></tr>
+	<tr><td style = "width: 90%">Ethics Shift Chance</td><td style = "width: 10%" class = "good-effect">+20%</td></tr>
+	<tr><td style = "width: 90%">Governing Ethics Attraction</td><td style = "width: 10%" class = "good-effect">+40%</td></tr>
+	<tr><td style = "width: 90%">Happiness</td><td style = "width: 10%" class = "good-effect">+10%</td></tr>
+	<tr><td style = "width: 90%">Other Species Happiness</td><td style = "width: 10%" class = "good-effect">+100%</td></tr>
+	<tr><td style = "width: 90%">Slave Resource Production</td><td style = "width: 10%" class = "bad-effect">-100%</td></tr>
+	<tr><td style = "width: 90%">Shipyard Build Speed</td><td style = "width: 10%" class = "bad-effect">-50%</td></tr>
+	<tr><td style = "width: 90%">tech_cost_num_colonies</td><td style = "width: 10%" class = "good-effect">-50%</td></tr>
+	<tr><td style = "width: 90%">tech_cost_num_systems</td><td style = "width: 10%" class = "good-effect">-50%</td></tr>
+</table>
+</div>
+
+					
+					
+					<br><br>
+					
+					
+					Due to the huge reforms and the fact they now work under similar principles, Aleran Satellites can be rapidly integrated, starting only a year after the end of the war, and proceeding at many times the rate (but also the same increase in per-month influence cost).
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-lategame">
+				<h3>Late Game</h3>
+					
+					Though the Aleran Commonwealth will "snowball" very effectively if played correctly, victory is another story. The vanilla victory conditions all require owning a sufficient chunk of the galaxy, and the combined limit on wars of conquest and diplomatic strain mean that unless you are (un)lucky enough to have a galaxy full of evil empires, you cannot acquire sufficient territory without either leveraging your economic power to sway borderline empires, or waiting for a final crisis to enable the same.
+					
+					
+					<br><br>
+					
+					
+					Alerans will fight all endgame crises fairly effectively - by this point they should be capable of fielding a very large defence fleet - but the War in Heaven deserves special mention. Should this event occur, and should it be a "good vs evil" fight between opposing ethics, the Alerans will have special interactions. They can choose to take a side immediately, like in vanilla, and become a subject (though picking the evil side will once again lead to mass unrest). However, even after opting to remain neutral, the FE will come to them specifically, and state that involvement is exactly the kind of action Aleran morality demands, issuing aid if necessary and an ultimatum either way. This will grant the standard options, as well as a special one to join the war and retain independence - with a minor opinion malus - or to ask for time to prepare. Outright refusal will greatly upset them and your people.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2FMu94Iax.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FMu94Iax.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2FmPIgFiM.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FmPIgFiM.jpg" style="max-width:75%;" ></a>
+</div><br>
+					
+					
+					Colossi are a big element of the War in Heaven, and endgame wars in general, and Aleran war is no exception. However, since the standard effects are all atrocities that no Aleran would ever stand up for, there are two new colossus weapons in your arsenal, both intended to be humane. The primary is "Atmospheric Drug Lacing", which adds psychoactive but otherwise harmless compounds to the target planet's atmosphere, in effect imposing a planet-wide version of Chemical Bliss. Even more usefully, while the recipient empire will gain a special project to remove it, doing so will cause withdrawal, adding another lasting economic impact.<br>
+					
+					
+					<div class = "stellaris-prototype" style = "width: 49%">
+<h4>Drugged Stupor<img class = "stellaris-icon" src = "data:image/png;base64,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"></h4>
+<div class = "stellaris-desc">The atmosphere of this planet has been laced with psychoactive compounds. The population is happy, but lethargic and utterly useless, not to mention suggestible.</div>
+<table>
+	<tr><td style = "width: 90%">Defense Army Damage</td><td style = "width: 10%" class = "bad-effect">-95%</td></tr>
+	<tr><td style = "width: 90%">Defense Army Health</td><td style = "width: 10%" class = "bad-effect">-50%</td></tr>
+	<tr><td style = "width: 90%">Army Build Speed</td><td style = "width: 10%" class = "bad-effect">-95%</td></tr>
+	<tr><td style = "width: 90%">Food Consumption</td><td style = "width: 10%" class = "good-effect">-30%</td></tr>
+	<tr><td style = "width: 90%">Governing Ethics Attraction</td><td style = "width: 10%" class = "bad-effect">-20%</td></tr>
+	<tr><td style = "width: 90%">Pop Growth Speed</td><td style = "width: 10%" class = "bad-effect">-100%</td></tr>
+	<tr><td style = "width: 90%">Happiness</td><td style = "width: 10%" class = "good-effect">+50%</td></tr>
+	<tr><td style = "width: 90%">Resettlement Cost</td><td style = "width: 10%" class = "bad-effect">+1000%</td></tr>
+	<tr><td style = "width: 90%">Pop Resource Production</td><td style = "width: 10%" class = "bad-effect">-80%</td></tr>
+</table>
+</div>
+<div class = "stellaris-prototype" style = "width: 49%">
+<h4>Drug Withdrawal<img class = "stellaris-icon" src = "data:image/png;base64,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"></h4>
+<div class = "stellaris-desc">The population of this planet is suffering severe withdrawal from stupor-inducing drugs. They are miserable and very much hostile to the current leadership.</div>
+<table>
+	<tr><td style = "width: 90%">Army Morale</td><td style = "width: 10%" class = "bad-effect">-100%</td></tr>
+	<tr><td style = "width: 90%">Governing Ethics Attraction</td><td style = "width: 10%" class = "bad-effect">-50%</td></tr>
+	<tr><td style = "width: 90%">Happiness</td><td style = "width: 10%" class = "bad-effect">-80%</td></tr>
+	<tr><td style = "width: 90%">Resettlement Cost</td><td style = "width: 10%" class = "bad-effect">+100%</td></tr>
+</table>
+</div>
+
+					
+					
+					<br><br>
+					
+					
+					The other colossus weapon is a stellar destabilization; this is fired upon the central star of a system, and will trigger waves of solar storms, which destroy any fleet in that or neighboring systems, as well as any shield domes. This massively softens defences, allowing for easier victory with less collateral.
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-extraflavor">
+				<h3>Extra Flavor</h3>
+					
+					There is also a handful of other content in the mod to help add theming and build a consistent world, and some to better sell the sincerity of Aleran ideology (as there seem to be a large number of people who insist it must all be a pretense).
+					
+					
+					<br><br>
+					
+					
+					The former category includes a custom-designed starter system, designed to feel very unique and fitting of a civilization that always saw itself as part of a larger whole, as well as custom starting tile blockers that both connect well with the implied carnivorism and do not imply the existence of an underclass of impoverished citizens.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2Fay7F0LL.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2Fay7F0LL.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2FxONvY8a.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FxONvY8a.jpg" style="max-width:75%;" ></a>
+</div><br>
+					
+					
+					In the latter category, there are some event chains that can arise in the mid to late game, to force the player into yet more situations where they must choose between a convenient unethical option and an arduous moral one. These have many endings and many forks along the way, and can, if played right with some amount of luck, result in significant long-term bonuses. Otherwise, they almost inevitably result in serious losses.
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-downloadunavailability">
+				<h3>Download Unavailability</h3>
+					
+					At this time, the mod proper is not available on the Steam Workshop; it turns out that one of the images used in the species portraits was inadvertently sourced from Furaffinity, and the original author of that work filed a DMCA claim. Because I could not be sure of the legitimacy of the other art, I now have no portrait images; I have plans to re-release the mod with new portraits once I do have replacements, but making such replacements is extremely difficult as I am not a competent character artist, and commissioning one is infeasibly costly.
+					
+					
+					<br><br>
+					
+					
+					In the meantime, you can download a copy of the mod with placeholder graphics, which can be played directly. You can also easily swap those graphics out with any images you please, or you can switch the Alerans to use one of the other species types.
+					
+					
+					<br><br>
+					
+					
+					<a href = "https://www.mediafire.com/file/cd591ejyg9inpwu/alerans.zip/file">Download Here</a>
+					</section>
+			</section>
+<br>
+			<section class = "textblock" id = "text-block-sourcecode">
+			<div class = "modsource">
+				<h3>Source Code</h3>				The source code for Dragon Species and Aleran Commonwealth can be found here:<a class = "srcbtn" href="https://github.com/ReikaKalseki/Alerans" target="_blank"><span>GitHub<div class = "spacer"></div><i class="fab fa-github"></i></span></a>
+			</div>
+			</section>
+<br>
+<section class = "textblock" id = "text-block-downloads">
+	<h3>Downloads</h3>
+<a class = "dlbtn" href="https://steamcommunity.com/sharedfiles/filedetails/?id=1557889336" target="_blank"><span>Steam Workshop<div class = "spacer"></div><i class="fas fa-download"></i></span></a>
+</section>
+<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
+		<hr>
+		<div id = "footer-spacing">
+		
+		</div>
+		<hr>
+		If you like any of my mods, maps, or other content, or want to help me develop them, feel free to use my Patreon or the buttons below. Every little bit helps me be able to keep working on them, and helps ensure both maintenance and expansion of them.<br>
+		If you wish to give a one-time donation, I recommend you use the Paypal link on the right; Patreon, though it can be used for one-time donations, is designed for ongoing monthly 'subscriptions' (ie a set amount of money gifted each month for as long as you remain a 'patron'). Paypal can also register a donation with monthly recurrence, should that seem preferable to you.<br>
+		For both systems, the amount you choose to donate is up to you, and for Patreon, can be changed at any time should you wish to decrease or increase the amount.<br>
+		And thank you for your support. :D<br>
+					<div class = "linkiconblock">
+					<div class = "linktile" style = "width: 49.75%">
+						<div class = "linklabel">Patreon</div>
+						<a class = "icon icon-patreon" href="http://www.patreon.com/reikasminecraft" ></a>
+					</div>
+					<div class = "linktile" style = "width: 49.75%">
+						<div class = "linklabel">Paypal</div>
+						<a class = "icon icon-paypal" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5XRAM3SXBRJY4" ></a>
+					</div>
+			</div>
+		<hr>
+		To contact me (though some of these are only checked periodically, and many are for specific topics) or find additional information or content, visit any one of these platforms:<br>
+					<div class = "linkiconblock">
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Minecraft Forums</div>
+						<a class = "icon icon-mcforums" href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1291655" title="Minecraft Only"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Factorio Forums</div>
+						<a class = "icon icon-facforums" href="https://forums.factorio.com/viewforum.php?f=216" title="Factorio Only"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">GitHub</div>
+						<a class = "icon icon-github" href="https://github.com/ReikaKalseki" ></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Discord</div>
+						<a class = "icon icon-discord" href="https://discord.com/channels/466852131895508992/466852131895508994/" title="Discord ID: Reika#3161"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Steam</div>
+						<a class = "icon icon-steam" href="https://steamcommunity.com/id/ReikaKalseki/myworkshopfiles/" title="Please no random friend requests"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">YouTube</div>
+						<a class = "icon icon-youtube" href="https://www.youtube.com/user/ReikasMinecraft/videos" ></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">SoundCloud</div>
+						<a class = "icon icon-soundcloud" href="https://soundcloud.com/reikakalseki" title="Music Only"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Reddit</div>
+						<a class = "icon icon-reddit" href="https://www.reddit.com/user/ReikaKalseki/" ></a>
+					</div>
+			</div>
+		<hr>
+		This site is proudly Canadian. <i class="fab fa-canadian-maple-leaf"></i><br>
+		<hr>
+		Site (including embedded JavaScript) and linked projects (mods, maps, etc) created by and &copy; ReikaKalseki, except for content within which is part of the base games, as noted below.<br>
+		<hr>
+			Minecraft and its content and assets are &copy; Mojang AB, with whom I am not affiliated<br>
+			Factorio and its content and assets are &copy; Wube Software, with whom I am not affiliated<br>
+			Portal 2 and its content and assets are &copy; Valve Corporation, with whom I am not affiliated<br>
+			Stellaris and its content and assets are &copy; Paradox Interactive, with whom I am not affiliated<br>
+			Space Engineers and its content and assets are &copy; Keen Software House, with whom I am not affiliated<br>
+			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
+			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>
+	</div></footer>		</div>
+    </body>
+</html>

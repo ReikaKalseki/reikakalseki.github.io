@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="shortcut icon" href="../../images/favicon.ico">
+        <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+		<meta http-equiv="Cache-control" content="no-cache">
+        <title>ReactorCraft</title>
+		<link rel="stylesheet" type="text/css" href="../../compiledJS/entrypoint.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+		<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Lato|Exo 2|Ubuntu|Cairo"> -->
+		<script src = "../../compiledJS/entrypoint.bundle.js"></script>
+		<!-- <meta name="script-def" content="footer-spacing"> -->
+		<meta name="script-def" content="navbar-scroll-indicator">
+		<!-- <meta name="script-def" content="quicknav-pos"> -->
+			<meta name="script-def" content="minecraft/precursor">
+    </head>
+    <body  data-game="minecraft">
+        	<div id = "navbar" class="navbar">
+	  <a class="navbar-button" href="../../index.html">Reika's Mods Home</a>
+	  <a class="navbar-button" href="../../minecraft/index.html">Minecraft Home</a>
+		  <div class="navdropdown">
+			<div class="navdropbtn">Information <i class="fa fa-angle-down"></i></div>
+			<div class="navdrop-content">
+					<a class = "navdrop-entry" href="../../minecraft/pages/info/faq.html">FAQ</a>
+					<a class = "navdrop-entry" href="../../minecraft/pages/info/contact.html">Contact</a>
+					<a class = "navdrop-entry" href="../../minecraft/pages/info/history.html">History</a>
+					<a class = "navdrop-entry" href="../../minecraft/pages/info/changelog.html">Change Logs</a>
+					<a class = "navdrop-entry" href="../../minecraft/pages/info/spotlights.html">Spotlights</a>
+					<a class = "navdrop-entry" href="../../minecraft/pages/info/fanmade.html">Fanmade Content</a>
+					<a class = "navdrop-entry" href="../../minecraft/pages/info/luablock.html">LuaBlock</a>
+					<a class = "navdrop-entry" href="../../minecraft/pages/info/nottosay.html">Things Not To Say</a>
+					<a class = "navdrop-entry" href="../../minecraft/pages/info/updating.html">Version Updates</a>
+			</div>
+		  </div>
+		  <div class="navdropdown">
+			<div class="navdropbtn">Permissions <i class="fa fa-angle-down"></i></div>
+			<div class="navdrop-content">
+					<a class = "navdrop-entry" href="../../minecraft/pages/perms/license.html">License</a>
+					<a class = "navdrop-entry" href="../../minecraft/pages/perms/packrules.html">Modpack Rules</a>
+					<a class = "navdrop-entry" href="../../minecraft/pages/perms/thirdparty.html">Third Party Modifications</a>
+					<a class = "navdrop-entry" href="../../minecraft/pages/perms/modpacks.html">Approved Modpacks</a>
+			</div>
+		  </div>
+	  <div class="navdropdown">
+		<div class="navdropbtn">Mods <i class="fa fa-angle-down"></i></div>
+		<div class="navdrop-content">
+				<a class = "navdrop-entry" href="../../minecraft/mods/dragonapi.html">DragonAPI</a>
+				<a class = "navdrop-entry" href="../../minecraft/mods/archisections.html">ArchiSections</a>
+				<a class = "navdrop-entry" href="../../minecraft/mods/cavecontrol.html">CaveControl</a>
+				<a class = "navdrop-entry" href="../../minecraft/mods/chromaticraft.html">ChromatiCraft</a>
+				<a class = "navdrop-entry" href="../../minecraft/mods/condensedores.html">CondensedOres</a>
+				<a class = "navdrop-entry" href="../../minecraft/mods/critterpet.html">CritterPet</a>
+				<a class = "navdrop-entry" href="../../minecraft/mods/dyetrees.html">DyeTrees</a>
+				<a class = "navdrop-entry" href="../../minecraft/mods/electricraft.html">ElectriCraft</a>
+				<a class = "navdrop-entry" href="../../minecraft/mods/enderforest.html">EnderForest</a>
+				<a class = "navdrop-entry" href="../../minecraft/mods/expandedredstone.html">Expanded Redstone</a>
+				<a class = "navdrop-entry" href="../../minecraft/mods/geostrata.html">GeoStrata</a>
+				<a class = "navdrop-entry" href="../../minecraft/mods/legacycraft.html">LegacyCraft</a>
+				<a class = "navdrop-entry" href="../../minecraft/mods/loottweaks.html">LootTweaks</a>
+				<a class = "navdrop-entry" href="../../minecraft/mods/meteorcraft.html">MeteorCraft</a>
+				<a class = "navdrop-entry" href="../../minecraft/mods/reactorcraft.html">ReactorCraft</a>
+				<a class = "navdrop-entry" href="../../minecraft/mods/rotarycraft.html">RotaryCraft</a>
+				<a class = "navdrop-entry" href="../../minecraft/mods/satisforestry.html">Satisforestry</a>
+				<a class = "navdrop-entry" href="../../minecraft/mods/territoryzone.html">TerritoryZone</a>
+				<a class = "navdrop-entry" href="../../minecraft/mods/treeclimbing.html">TreeClimbing</a>
+				<a class = "navdrop-entry" href="../../minecraft/mods/usefultnt.html">UsefulTNT</a>
+				<a class = "navdrop-entry" href="../../minecraft/mods/voidmonster.html">Void Monster</a>
+		</div>
+	  </div>
+	  <div class="navdropdown">
+		<div class="navdropbtn">Other Games <i class="fa fa-angle-down"></i></div>
+		<div class="navdrop-content">
+				<a class = "navdrop-entry" href="../../factorio/index.html">Factorio</a>
+				<a class = "navdrop-entry" href="../../p2/index.html">Portal 2</a>
+				<a class = "navdrop-entry" href="../../stellaris/index.html">Stellaris</a>
+				<a class = "navdrop-entry" href="../../se/index.html">Space Engineers</a>
+				<a class = "navdrop-entry" href="../../fce/index.html">FortressCraft Evolved</a>
+				<a class = "navdrop-entry" href="../../starbound/index.html">Starbound</a>
+		</div>
+	  </div>
+	  <div class="navdropdown">
+		<div class="navdropbtn">Other Projects <i class="fa fa-angle-down"></i></div>
+		<div class="navdrop-content">
+				<a class = "navdrop-entry" href="../../projects/calendar.html">Game Calendar</a>
+				<a class = "navdrop-entry" href="../../projects/eventbuilder.html">Stellaris Event Builder</a>
+				<a class = "navdrop-entry" href="../../projects/fcompile.html">FCompile</a>
+		</div>
+	  </div>
+	</div>
+		<noscript><div style = "text-align: center; width: 100%;"><div id = "nojs-header"><div><img class = "header-alert" src = "../../images/alert.png"></div><div>You have JavaScript disabled; it is recommended you enable it for this site.<br>While the site will (mostly) function with scripts disabled, some sections (eg changelog view, or sortable tables) require it to update the page contents based on your input.<br>Additionally, JS is used to generate page styling, meaning disabling scripts will leave pages ugly, boring, and in some cases poorly arranged in ways that might impede readability.<br>If you have no idea what this means, or have not in fact disabled scripts, try simply reloading the page, as it may not have loaded completely or correctly.</div></div></div></noscript>
+<div id="toc_container">
+<h3>Quick Nav</h3>
+<hr>
+<table class="toc_list">
+	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><a class = "tocbtn" href="#top"><i class="fas fa-angle-double-up"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-overview">Overview</a></td><td><a class = "tocbtn" href="#text-block-overview"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-reactors">Reactors</a></td><td><a class = "tocbtn" href="#text-block-reactors"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-reactors-autosub-pebblebed">Pebble Bed</a></td><td><a class = "tocbtn" href="#text-block-reactors-autosub-pebblebed"><i class="fas fa-caret-down"></i></a></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-reactors-autosub-fissionreactor">Fission Reactor</a></td><td><a class = "tocbtn" href="#text-block-reactors-autosub-fissionreactor"><i class="fas fa-caret-down"></i></a></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-reactors-autosub-breederreactor">Breeder Reactor</a></td><td><a class = "tocbtn" href="#text-block-reactors-autosub-breederreactor"><i class="fas fa-caret-down"></i></a></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-reactors-autosub-thoriumreactor">Thorium Reactor</a></td><td><a class = "tocbtn" href="#text-block-reactors-autosub-thoriumreactor"><i class="fas fa-caret-down"></i></a></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-reactors-autosub-fusionreactor">Fusion Reactor</a></td><td><a class = "tocbtn" href="#text-block-reactors-autosub-fusionreactor"><i class="fas fa-caret-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-powergeneration">Power Generation</a></td><td><a class = "tocbtn" href="#text-block-powergeneration"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-powergeneration-autosub-turbines">Turbines</a></td><td><a class = "tocbtn" href="#text-block-powergeneration-autosub-turbines"><i class="fas fa-caret-down"></i></a></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-powergeneration-autosub-hpturbines">HP Turbines</a></td><td><a class = "tocbtn" href="#text-block-powergeneration-autosub-hpturbines"><i class="fas fa-caret-down"></i></a></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-powergeneration-autosub-turbinegenerator">Turbine Generator</a></td><td><a class = "tocbtn" href="#text-block-powergeneration-autosub-turbinegenerator"><i class="fas fa-caret-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-waste">Waste</a></td><td><a class = "tocbtn" href="#text-block-waste"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-meltdowns">Meltdowns</a></td><td><a class = "tocbtn" href="#text-block-meltdowns"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-auxiliary">Auxiliary</a></td><td><a class = "tocbtn" href="#text-block-auxiliary"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-auxiliary-autosub-solarupgrades">Solar Upgrades</a></td><td><a class = "tocbtn" href="#text-block-auxiliary-autosub-solarupgrades"><i class="fas fa-caret-down"></i></a></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-auxiliary-autosub-turbineflywheel">Turbine Flywheel</a></td><td><a class = "tocbtn" href="#text-block-auxiliary-autosub-turbineflywheel"><i class="fas fa-caret-down"></i></a></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-auxiliary-autosub-ammonia">Ammonia</a></td><td><a class = "tocbtn" href="#text-block-auxiliary-autosub-ammonia"><i class="fas fa-caret-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-worldgen">Worldgen</a></td><td><a class = "tocbtn" href="#text-block-worldgen"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-modsettings">Configuration Settings</a></td><td><a class = "tocbtn" href="#text-block-modsettings"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><a class = "tocbtn" href="#text-block-sourcecode"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><a class = "tocbtn" href="#text-block-downloads"><i class="fas fa-angle-down"></i></a></td></tr>
+</table>
+</div>        <div id = "textarea" class = "textarea ">
+				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
+			<!-- <h2>ReactorCraft</h2> -->
+						<div class = "header-image">
+				<img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2Fgl2Ptux.png" >
+			</div>			<section class = "textblock" id = "text-block-overview">
+				<h3>Overview</h3>
+					
+					ReactorCraft is a mod that adds realistic nuclear reactors, both fission and fusion, to Minecraft.<br>
+					
+					
+					This mod <b>depends</b> on <a href="../../minecraft/mods/rotarycraft.html">RotaryCraft</a> - it cannot be installed without it.
+					
+					
+					<br><br>
+					
+					
+					Here are some of the ways in which realism is simulated:<ul>
+					
+					
+					<li>The physics is simulated in such a way as to reflect reality, including real values for energy creation per reaction</li>
+					
+					
+					<li>Simulated nuclear physics governing reaction behavior, including heat production and reactivity level</li>
+					
+					
+					<li>The reactors (a large multiblock in the "interacting parts" sense, not the "blueprint" sense) have to be built in a way that reflects real reactors, with strategic placement of fuel rods, control rods, and other reactor core components</li>
+					
+					
+					<li>Realistic reactor behavior in the event of poor design, including possible meltdowns, hydrogen explosions, and radiation leakage</li>
+					
+					
+					<li>Realistic (though obviously simplified) control systems to manipulate control rods, feed fuel, and the like</li>
+					
+					
+					<li>The fuel is created realistically - including enrichment - and used realistically; users must manage things like spent fuel with spent fuel pools</li>
+					
+					
+					</ul>
+					
+					
+					<b>Note:</b> Due to internal game mechanics (entities stop ticking and accumulate if not surrounded by a buffer of loaded chunks), active fission reactors in unloaded chunks risk a meltdown. Use chunkloaders or shut down your reactors as necessary, and ensure that you do not have large quantities of escaping neutrons.
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-reactors">
+				<h3>Reactors</h3>
+					
+					ReactorCraft adds five base reactor types to the game, in this rough order of progression:<br>
+					</section>
+					<section class = "textblock" id = "text-block-reactors-autosub-pebblebed">
+					<h4>Pebble Bed "High Temperature Gas Reactor" (HTGR)</h4>
+					
+					
+					The pebble bed is a comparatively cheap and safe reactor; it has no risk of a traditional meltdown, and its worst failure state is simply melting into lava, something that is very difficult to achieve. Furthermore, its fuel does not need enrichment; simply grinding uranium into a powder and encasing it in graphite is sufficient to produce the TRISO fuel pellets. These fuel pellets can then simply be loaded into a reactor to generate heat which can then be extracted by CO2 channels running through it. Additionally, these reactors do not produce nuclear waste.
+					
+					
+					<br><br>
+					
+					
+					However, this simplicity comes at a cost; its power generation is by far the least of all the reactor types, and its steam is additionally at insufficient temperature and pressure to economically run the higher tiers of turbines. A typical HTGR produces a few hundred megawatts, even with optimal design it is extremely difficult to exceed more than a couple gigawatts.
+					
+					
+					<br><br>
+					</section>
+					<section class = "textblock" id = "text-block-reactors-autosub-fissionreactor">
+					<h4>Fission Reactor</h4>
+					
+					
+					The fission reactor is the "classic" nuclear reactor, based on a BWR model. These reactors use enriched uranium fuel, and rather than simply generating heat, they use a full neutron model; a fueled core will sporadically emit neutrons which will fly out in random directions. Should these neutrons hit another fueled core, they have a chance of triggering a fission event, which generates heat and three more neutrons. This then allows for a self-sustaining chain reaction in a well-designed reactor, or a runaway supercriticality in a poorly-designed one. (Note: for technical reasons, this also means that fission reactors <i>must</i> be chunkloaded, or neutrons will accumulate and cause lag or even meltdowns).
+					
+					
+					<br><br>
+					
+					
+					If the appropriate setting is enabled, neutrons emitted by fission reactors are marked as "fast" neutrons, and need to be moderated - such as with graphite blocks or heavy water - to be reduced in speed to "thermal" neutrons which can trigger additional fission reactions. This complicates reactor design and introduces yet more realism.
+					
+					
+					<br><br>
+					
+					
+					Heat is extracted from these reactors by boilers embedded in the reactor; these will convert water into high-pressure high-temperature steam used the drive the turbines. Other blocks can also be added to reactors, notably control rods, to dynamically absorb some neutrons and moderate a reaction, coolant cells, and a control computer to enable an emergency SCRAM system.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2F6nK9GcV.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2F6nK9GcV.png" style="max-width:75%;" ></a>	<div class = "image-caption">A fission reactor making extensive use of neutron reflectors and diverting some neutrons for use to irradiate materials for later use.</div>
+</div><br>
+					
+					
+					Fission reactors can also run on plutonium fuel, which produces far more heat per fission event and generally has a more aggressive reactivity profile. This means significantly increased power capabilities, but similarly increased danger.
+					
+					
+					<br><br>
+					
+					
+					Should a fission reactor reach excessive temperatures, this will first trigger outgassing events that are limited in danger but an indicator of impending disaster. If temperatures continue to climb, some blocks may melt or otherwise fail, and minor radiation leakage is likely. In the event that the temperature climbs even higher, a full meltdown will occur.
+					
+					
+					<br><br>
+					
+					
+					Less serious dangers are also present: neutrons need to be contained to within the reactor, using appropriate shielding materials. Escaped neutrons will eventually impact random other blocks and cause widespread radiation issues.
+					
+					
+					<br><br>
+					</section>
+					<section class = "textblock" id = "text-block-reactors-autosub-breederreactor">
+					<h4>Liquid Metal Fast Breeder Reactor (LMFBR)</h4>
+					
+					
+					A breeder reactor uses a mix of enriched and depleted uranium to produce plutonium fuel pellets. The overall design for these reactors is similar to fission ones, and uses the same blocks except for a special kind of fuel core and a special sodium heat exchanger. It is from this hot sodium that power can be extracted, though as these reactors are primarily designed for fuel conversion their power production is lackluster compared to the fission reactors.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2FmLjs0Om.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FmLjs0Om.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">A (very unsafe) breeder reactor.</div>
+</div><br>
+					</section>
+					<section class = "textblock" id = "text-block-reactors-autosub-thoriumreactor">
+					<h4>Liquid-Fueled Thorium Reactor (LFTR)</h4>
+					
+					
+					The thorium reactor is a unique reactor; unlike the solid-fueled uranium-based reactors, it uses a liquid thorium fuel (often called FLiBe in the real world) produced by dissolving thorium salts into molten lithium beryllium fluoride. This requires a unique and extensive raw material production chain, and the fluid logistics of this reactor make it harder to design. However, this comes at a huge benefit: thorium reactors cannot melt down. Firstly, the reactivity of a thorium reactor is highly sensitive to temperature, and ones that are overheating will become increasingly inert and limit their own potiential to run out of control. Secondly, even if temperatures do reach high values, the fuel system is capable of an automatic dump, stopping all reaction (at the cost of wasted fuel and moderate radioactivity in the space under the reactor).
+					
+					
+					<br><br>
+					
+					
+					This temperature-based reactivity, however, comes with a catch: to reach self-sustaining reaction, it will need a kickstart of both heat and neutrons from an external source. Designing such a system is left as an exercise to the reader.
+					
+					
+					<br><br>
+					</section>
+					<section class = "textblock" id = "text-block-reactors-autosub-fusionreactor">
+					<h4>Tokamak Fusion Reactor</h4>
+					
+					
+					The crown jewel of any power production infrastructure, as well as of ReactorCraft itself, the fusion reactor is a massive project with commensurate capabilities. Unlike the other reactor types, which can generally fit in a room, the fusion reactor is a large complex consisting of numerous large structures, including plasma preheaters, plasma injection, magnetic containment, and coolant delivery systems. Building one of these requires having completed the entire progression in ReactorCraft - and thus much of RotaryCraft as well - and is one of the few cases where resource costs reach exorbitant levels, particularly for steel, gold, and lodestone, as well as its enormous appetite for deuterium/tritium fuel. However, these costs are well worth it; a fusion reactor is so powerful that it is capable of running all of the bases on an entire server, with a theoretical limit measured in the hundreds of gigawatts.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2FZNchMSw.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FZNchMSw.png" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2FJSmw3wi.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FJSmw3wi.png" style="max-width:75%;" ></a>	<div class = "image-caption">A fusion reactor complex (before the creation of HP turbines), and an old image showing many of the contained parts.</div>
+</div>
+					</section>
+			</section><br>
+			<section class = "textblock" id = "text-block-powergeneration">
+				<h3>Power Generation</h3>
+					<section class = "textblock" id = "text-block-powergeneration-autosub-turbines">
+					<h4>Turbines</h4>
+					
+					
+					Reactor heat is not very useful until converted into power, which is the function of the turbine. Supplied with steam through a steam grate placed under its leading edge, it will extract the energy from the steam - where it can be disposed of or reclaimed - and generate shaft power.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2FsAoacX5.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FsAoacX5.png" style="max-width:75%;" ></a>	<div class = "image-caption">A small fission reactor and turbine.</div>
+</div><br>
+					
+					
+					Turbines are large and heavy, and require lubricant to move and will take a long time to reach operating speed, even with a steady supply of steam. Additionally, they are fragile, and will sustain extreme damage - nullifying most of their power capacity - if large solid objects enter their space while they are operating.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2F00wb7mC.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2F00wb7mC.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">A severely damaged turbine.</div>
+</div><br>
+					</section>
+					<section class = "textblock" id = "text-block-powergeneration-autosub-hpturbines">
+					<h4>High-Pressure Turbines</h4>
+					
+					
+					The High Pressure (HP) turbine is an upgraded version of the basic low-pressure (LP) turbine. Much larger and costlier, it does not require a steam grate, but it does require a much higher back pressure of steam to begin operation and a higher sustained pressure to continue operating at full efficiency. At full power, a HP turbine is capable of about 8.5GW running on water steam, approximately nine times the output of a LP turbine, for less than nine times the steam consumption. HP turbines also have solid housings, protecting them from damage, and if adequately supplied do not fluctuate like LP turbines do.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2FjeiNNI7.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FjeiNNI7.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">A HP turbine and turbine generator.</div>
+</div><br>
+					</section>
+					<section class = "textblock" id = "text-block-powergeneration-autosub-turbinegenerator">
+					<h4>Turbine Generator</h4>
+					
+					
+					No normal converter can handle the full output of a ReC turbine - attempts to try will result in major losses at best and catastrophic destruction at worst - and so the Turbine Generator fills the void. Attached directly to either kind of turbine, it can convert the entire output to one of three forms - RF, EU, or <a href="../../minecraft/mods/electricraft.html">ElectriCraft</a>. Like most other large ReC constructs, this is a multiblock and will suffer a rapid disassembly if damaged while at speed.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2FVvWOUFa.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FVvWOUFa.png" style="max-width:75%;" ></a>	<div class = "image-caption">RF and EU modes.</div>
+</div>
+					</section>
+			</section><br>
+			<section class = "textblock" id = "text-block-waste">
+				<h3>Waste</h3>
+					
+					Most kinds of ReC fission reactors produce waste, which has to be handled appropriately. Simply sticking it in a chest is not a viable long-term solution, and it cannot be destroyed by the usual means such as throwing it in lava or the void. Worse, not only will it never despawn when dropped on the ground, but that will irradiate the area. It also has a tendency to damage digital storage systems. The intended mechanism is to mimic what is done in the real world, where shorter-lived waste is stored in submerged containers - the water providing both coolant and neutron shielding - and long-lived waste is left in drums, never to be disturbed again.
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-meltdowns">
+				<h3>Meltdowns</h3>
+					
+					A meltdown is the worst possible failure state of a nuclear reactor; its first stage consists of a violent hydrogen explosion, which is likely to destroy surrounding structures and scatter pieces over a large area. Several core blocks will then melt into "corium", a viscous, intensely radioactive slag that will kill anything it touches. More insidiously, a vast quantity of radiation is scattered in the surrounding environment, and will slowly kill every plant and animal in the region. Rain can slowly clear radiation, as can a handheld sprayer tool, but normally a meltdown is such a destructive event that the only recourse is to permanently abandon the area.<br>
+					
+					
+					<div class = "video">
+	<iframe class = "deembed-media" style = "max-width: 75%;" width="960" height="540" src="https://www.youtube.com/embed/Dq8GYaSZHF4" title="Meltdown" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-auxiliary">
+				<h3>Auxiliary</h3>
+					<section class = "textblock" id = "text-block-auxiliary-autosub-solarupgrades">
+					<h4>Solar Upgrades</h4>
+					
+					
+					ReactorCraft also adds possible upgrades to the RC solar plant, allowing it to produce far more power than its usual 4MW base. With all upgrades, it runs on a sodium loop and generates ReC steam, meaning it can generate multiple gigawatts of power via the turbines.
+					
+					
+					<br><br>
+					</section>
+					<section class = "textblock" id = "text-block-auxiliary-autosub-turbineflywheel">
+					<h4>Turbine Flywheel</h4>
+					
+					
+					The turbine flywheel is like the smaller RC flywheels, designed for the turbines. It stabilizes the power production from LP turbines, allowing it to be used more easily.
+					
+					
+					<br><br>
+					</section>
+					<section class = "textblock" id = "text-block-auxiliary-autosub-ammonia">
+					<h4>Ammonia</h4>
+					
+					
+					While water steam is normally the default option in most reactors, they can use ammonia steam as well. This is more perilous - ammonia's autoignition temperature is 450C, meaning any reactor that exceeds that invites disaster - but can double the power output of any turbine. Because of the cost of ammonia production, this also heavily incentivizes closing the coolant loop and recycling your steam.
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-worldgen">
+				<h3>Worldgen</h3>
+					
+					ReactorCraft does add ores out of necessity.<ul>
+					
+					
+					<li>Fluorite: Spawns in the overworld between layers 32 and 60. Relatively common, and exists in several colors.</li>
+					
+					
+					<li>Pitchblende: Spawns in the end, mushroom islands, and the twilight forest. The latter two types generate between layers 8 and 24. Fairly rare.</li>
+					
+					
+					<li>Cadmium: Spawns in the overworld between layers 12 and 32. About as common as gold.</li>
+					
+					
+					<li>Indium: Spawns in the overworld between layers 0 and 16. Rare.</li>
+					
+					
+					<li>Silver: Spawns in the overworld between layers 16 and 40. About as common as gold. Can be disabled if other mods with their own silver are present.</li>
+					
+					
+					<li>Ammonium Chloride: Spawns in the nether around lava pools at layer 32. Moderately rare.</li>
+					
+					
+					<li>Calcite: Spawns in the overworld between layers 32 and 60. Tiny amounts spawn together, but clusters are common.</li>
+					
+					
+					<li>Magnetite: Spawns in the overworld between layers 60 and 128. Fairly common.</li></ul>
+					
+					
+					Like RotaryCraft, ReactorCraft has a craftable handbook:<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2F9e2tGNi.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2F9e2tGNi.png" style="max-width:75%;" ></a>
+</div>
+					</section>
+			</section>
+<br>
+			<section class = "textblock" id = "text-block-modsettings">
+			<div class = "modsettings">
+				<h3>Configuration Settings</h3>
+				This mod contains several config options to modify values and behaviors - such as for balance or server safety concerns, or simply personal taste - to your preferences. Note that several settings may have bounds imposed on their values, either logically or explicitly; these can usually be seen in the actual settings files or ingame. These are listed in order found in the source code, which is generally the order in which they were added; They may be present in a different order ingame or in the configuration files.
+				<br>
+				<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Visible Neutrons</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Generate Silver Ore Even If Other Mods Do</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Generate Magnetite Ore Even If Other Mods Do</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Generate Calcite Ore Even If Other Mods Do</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Generate Cadmium Ore Even If Other Mods Do</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Generate Indium Ore Even If Other Mods Do</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Retrogen Ores</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Rainbow Fluorite</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Toroid Spark Delay</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">4</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Fission Cores Chunkload When Active</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Ore Density Percentage</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">100</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Ore Discretization</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">1</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Allow Fluorite Recoloring</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Enable Fast and Thermal Neutrons</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Fission Neutrons Can Move Vertically</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Lodestone-Redstone RF Generation Multiplier</h4>
+Type: float<br>
+			Current Default Value:<div class = "code-block">1F</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Make Fuel Ores Weakly Radioactive</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+
+			</div>
+			</section>
+<br>
+			<section class = "textblock" id = "text-block-sourcecode">
+			<div class = "modsource">
+				<h3>Source Code</h3>				The source code for ReactorCraft can be found here:<a class = "srcbtn" href="https://github.com/ReikaKalseki/ReactorCraft" target="_blank"><span>GitHub<div class = "spacer"></div><i class="fab fa-github"></i></span></a>
+			</div>
+			</section>
+<br>
+<section class = "textblock" id = "text-block-downloads">
+	<h3>Downloads</h3>
+		<a class = "dlbtn" href="https://www.curseforge.com/minecraft/mc-mods/reactorcraft" target="_blank"><span>1.7.10: CurseForge<div class = "spacer"></div><i class="fas fa-download"></i></span></a>
+		<a class = "dlbtn" href="http://adf.ly/qtd1a" target="_blank"><span>1.6.4: Adfly<div class = "spacer"></div><i class="fas fa-download"></i></span></a>
+		<a class = "dlbtn" href="http://adf.ly/WtfhA" target="_blank"><span>1.5.2: Adfly<div class = "spacer"></div><i class="fas fa-download"></i></span></a>
+</section>
+<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
+		<hr>
+		<div id = "footer-spacing">
+		
+		</div>
+		<hr>
+		If you like any of my mods, maps, or other content, or want to help me develop them, feel free to use my Patreon or the buttons below. Every little bit helps me be able to keep working on them, and helps ensure both maintenance and expansion of them.<br>
+		If you wish to give a one-time donation, I recommend you use the Paypal link on the right; Patreon, though it can be used for one-time donations, is designed for ongoing monthly 'subscriptions' (ie a set amount of money gifted each month for as long as you remain a 'patron'). Paypal can also register a donation with monthly recurrence, should that seem preferable to you.<br>
+		For both systems, the amount you choose to donate is up to you, and for Patreon, can be changed at any time should you wish to decrease or increase the amount.<br>
+		And thank you for your support. :D<br>
+					<div class = "linkiconblock">
+					<div class = "linktile" style = "width: 49.75%">
+						<div class = "linklabel">Patreon</div>
+						<a class = "icon icon-patreon" href="http://www.patreon.com/reikasminecraft" ></a>
+					</div>
+					<div class = "linktile" style = "width: 49.75%">
+						<div class = "linklabel">Paypal</div>
+						<a class = "icon icon-paypal" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5XRAM3SXBRJY4" ></a>
+					</div>
+			</div>
+		<hr>
+		To contact me (though some of these are only checked periodically, and many are for specific topics) or find additional information or content, visit any one of these platforms:<br>
+					<div class = "linkiconblock">
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Minecraft Forums</div>
+						<a class = "icon icon-mcforums" href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1291655" title="Minecraft Only"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Factorio Forums</div>
+						<a class = "icon icon-facforums" href="https://forums.factorio.com/viewforum.php?f=216" title="Factorio Only"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">GitHub</div>
+						<a class = "icon icon-github" href="https://github.com/ReikaKalseki" ></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Discord</div>
+						<a class = "icon icon-discord" href="https://discord.com/channels/466852131895508992/466852131895508994/" title="Discord ID: Reika#3161"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Steam</div>
+						<a class = "icon icon-steam" href="https://steamcommunity.com/id/ReikaKalseki/myworkshopfiles/" title="Please no random friend requests"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">YouTube</div>
+						<a class = "icon icon-youtube" href="https://www.youtube.com/user/ReikasMinecraft/videos" ></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">SoundCloud</div>
+						<a class = "icon icon-soundcloud" href="https://soundcloud.com/reikakalseki" title="Music Only"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Reddit</div>
+						<a class = "icon icon-reddit" href="https://www.reddit.com/user/ReikaKalseki/" ></a>
+					</div>
+			</div>
+		<hr>
+		This site is proudly Canadian. <i class="fab fa-canadian-maple-leaf"></i><br>
+		<hr>
+		Site (including embedded JavaScript) and linked projects (mods, maps, etc) created by and &copy; ReikaKalseki, except for content within which is part of the base games, as noted below.<br>
+		<hr>
+			Minecraft and its content and assets are &copy; Mojang AB, with whom I am not affiliated<br>
+			Factorio and its content and assets are &copy; Wube Software, with whom I am not affiliated<br>
+			Portal 2 and its content and assets are &copy; Valve Corporation, with whom I am not affiliated<br>
+			Stellaris and its content and assets are &copy; Paradox Interactive, with whom I am not affiliated<br>
+			Space Engineers and its content and assets are &copy; Keen Software House, with whom I am not affiliated<br>
+			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
+			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>
+	</div></footer>		</div>
+    </body>
+</html>

@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="shortcut icon" href="../../images/favicon.ico">
+        <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+		<meta http-equiv="Cache-control" content="no-cache">
+        <title>Federal Dropship - Dragon Industries</title>
+		<link rel="stylesheet" type="text/css" href="../../compiledJS/entrypoint.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+		<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Lato|Exo 2|Ubuntu|Cairo"> -->
+		<script src = "../../compiledJS/entrypoint.bundle.js"></script>
+		<!-- <meta name="script-def" content="footer-spacing"> -->
+		<meta name="script-def" content="navbar-scroll-indicator">
+		<!-- <meta name="script-def" content="quicknav-pos"> -->
+    </head>
+    <body  data-game="se">
+        	<div id = "navbar" class="navbar">
+	  <a class="navbar-button" href="../../index.html">Reika's Mods Home</a>
+	  <a class="navbar-button" href="../../se/index.html">Space Engineers Home</a>
+		  <div class="navdropdown">
+			<div class="navdropbtn">Information <i class="fa fa-angle-down"></i></div>
+			<div class="navdrop-content">
+					<a class = "navdrop-entry" href="../../se/pages/info/faq.html">FAQ</a>
+					<a class = "navdrop-entry" href="../../se/pages/info/contact.html">Contact</a>
+					<a class = "navdrop-entry" href="../../se/pages/info/history.html">History</a>
+					<a class = "navdrop-entry" href="../../se/pages/info/changelog.html">Change Logs</a>
+			</div>
+		  </div>
+		  <div class="navdropdown">
+			<div class="navdropbtn">Permissions <i class="fa fa-angle-down"></i></div>
+			<div class="navdrop-content">
+					<a class = "navdrop-entry" href="../../se/pages/perms/license.html">License</a>
+			</div>
+		  </div>
+	  <div class="navdropdown">
+		<div class="navdropbtn">Content <i class="fa fa-angle-down"></i></div>
+		<div class="navdrop-content">
+<a class = "navdropdown-subheader">Mods</a>				<a class = "navdrop-entry" href="../../se/mods/electronicwarfare.html">Electronic Warfare</a>
+				<a class = "navdrop-entry" href="../../se/mods/cargoships.html">Extra Cargo Ships</a>
+				<a class = "navdrop-entry" href="../../se/mods/gastanks.html">Gas Compressor</a>
+				<a class = "navdrop-entry" href="../../se/mods/lowgravgen.html">Gravgen Priority</a>
+				<a class = "navdrop-entry" href="../../se/mods/industrialthruster.html">Industrial Thruster</a>
+				<a class = "navdrop-entry" href="../../se/mods/oreproc.html">Ore Processing</a>
+<a class = "navdropdown-subheader">Blueprints</a>				<a class = "navdrop-entry" href="../../se/blueprints/anaconda.html">Anaconda</a>
+				<a class = "navdrop-entry" href="../../se/blueprints/anaconda2.html">Anaconda (Custom)</a>
+				<a class = "navdrop-entry" href="../../se/blueprints/dropship.html">Federal Dropship</a>
+				<a class = "navdrop-entry" href="../../se/blueprints/harvester.html">Harvester</a>
+				<a class = "navdrop-entry" href="../../se/blueprints/jumpgate.html">Jump Gate</a>
+				<a class = "navdrop-entry" href="../../se/blueprints/salvager.html">Salvager</a>
+				<a class = "navdrop-entry" href="../../se/blueprints/spacetruck.html">Space Truck</a>
+				<a class = "navdrop-entry" href="../../se/blueprints/waypoint.html">Waypoint Station</a>
+<a class = "navdropdown-subheader">Scripts</a>				<a class = "navdrop-entry" href="../../se/scripts/airlocks.html">Airlock Control</a>
+				<a class = "navdrop-entry" href="../../se/scripts/cargomanager.html">Cargo Manager</a>
+				<a class = "navdrop-entry" href="../../se/scripts/compressors.html">Compressor Manager</a>
+				<a class = "navdrop-entry" href="../../se/scripts/hangar.html">Hangar Control</a>
+				<a class = "navdrop-entry" href="../../se/scripts/jumpcontrol.html">Jump Control</a>
+				<a class = "navdrop-entry" href="../../se/scripts/powercontrol.html">Power Control</a>
+				<a class = "navdrop-entry" href="../../se/scripts/o2control.html">Pressurization Control</a>
+		</div>
+	  </div>
+	  <div class="navdropdown">
+		<div class="navdropbtn">Other Games <i class="fa fa-angle-down"></i></div>
+		<div class="navdrop-content">
+				<a class = "navdrop-entry" href="../../minecraft/index.html">Minecraft</a>
+				<a class = "navdrop-entry" href="../../factorio/index.html">Factorio</a>
+				<a class = "navdrop-entry" href="../../p2/index.html">Portal 2</a>
+				<a class = "navdrop-entry" href="../../stellaris/index.html">Stellaris</a>
+				<a class = "navdrop-entry" href="../../fce/index.html">FortressCraft Evolved</a>
+				<a class = "navdrop-entry" href="../../starbound/index.html">Starbound</a>
+		</div>
+	  </div>
+	  <div class="navdropdown">
+		<div class="navdropbtn">Other Projects <i class="fa fa-angle-down"></i></div>
+		<div class="navdrop-content">
+				<a class = "navdrop-entry" href="../../projects/calendar.html">Game Calendar</a>
+				<a class = "navdrop-entry" href="../../projects/eventbuilder.html">Stellaris Event Builder</a>
+				<a class = "navdrop-entry" href="../../projects/fcompile.html">FCompile</a>
+		</div>
+	  </div>
+	</div>
+		<noscript><div style = "text-align: center; width: 100%;"><div id = "nojs-header"><div><img class = "header-alert" src = "../../images/alert.png"></div><div>You have JavaScript disabled; it is recommended you enable it for this site.<br>While the site will (mostly) function with scripts disabled, some sections (eg changelog view, or sortable tables) require it to update the page contents based on your input.<br>Additionally, JS is used to generate page styling, meaning disabling scripts will leave pages ugly, boring, and in some cases poorly arranged in ways that might impede readability.<br>If you have no idea what this means, or have not in fact disabled scripts, try simply reloading the page, as it may not have loaded completely or correctly.</div></div></div></noscript>
+<div id="toc_container">
+<h3>Quick Nav</h3>
+<hr>
+<table class="toc_list">
+	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><a class = "tocbtn" href="#top"><i class="fas fa-angle-double-up"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-general">General</a></td><td><a class = "tocbtn" href="#text-block-general"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-blueprint">Blueprint Info</a></td><td><a class = "tocbtn" href="#text-block-blueprint"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><a class = "tocbtn" href="#text-block-downloads"><i class="fas fa-angle-down"></i></a></td></tr>
+</table>
+</div>        <div id = "textarea" class = "textarea ">
+				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
+			<!-- <h2>Federal Dropship - Dragon Industries</h2> -->
+						<div class = "header-image">
+				<img class = "deembed-media" src = "../../imagedownloads/steamuserimages-a-akamaihd-net_2Fugc_2F972123508884912209_2F6B7032474F62B4DFB2B3A3B014EEBEFB21E9970A_2F.jpg" >
+			</div>			<section class = "textblock" id = "text-block-general">
+				<h3>General</h3>
+					
+					This started as <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1008313202">ShinobiDraca's dropship blueprint</a>, but I have vastly improved its functionality. The external appearance is almost completely unchanged, especially from above or the front, but the interior has been completely gutted and redesigned to massively enhance its utility, without requiring any mods.
+					
+					
+					<br><br>
+					
+					
+					This version of the ship has more power production, more speed and agility, more armament and durability, a longer jump range, cleaner internal systems, more maintenance features (eg medical and projector bays), more gas storage, and more automated control systems (see my scripts library for those control scripts). It also is fully pressurized and oxygen-compatible.
+					</section>
+			</section>
+<br>
+			<section class = "textblock" id = "text-block-blueprint">
+			<h3>Blueprint Info</h3>
+			<div class = "blueprint-data">
+				<h4>Grid Size</h4>
+					Large
+				<h4>Block Count</h4>
+					1168
+				<h4>Estimated Volume</h4>
+					19x11x30
+				<h4>Block Groups</h4><ul>					<li>Air Vents</li>					<li>Exterior Lights</li>					<li>Gatlings</li>					<li>Hangar Entrance</li>					<li>Headlights</li>					<li>Interior Lights</li>					<li>Missiles</li>					<li>O2 Lights</li></ul>
+				<h4>Estimated Block Breakdown</h4>
+				<table class = "bp-block-table">
+				  <tr>
+					<th style = "width: 80%;">
+						Block Type
+					</th>
+					<th style = "width: 20%;">
+						Count
+					</th>
+				  </tr>
+				  <tr>
+					<td>
+						AirVent
+					</td>
+					<td>
+						6
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						AirtightHangarDoor
+					</td>
+					<td>
+						3
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Cockpit Open
+					</td>
+					<td>
+						1
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Conveyor
+					</td>
+					<td>
+						72
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Conveyor Tube
+					</td>
+					<td>
+						26
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Conveyor Tube Curved
+					</td>
+					<td>
+						17
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Corner LCD 1
+					</td>
+					<td>
+						3
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Front Light
+					</td>
+					<td>
+						4
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Gravity Generator
+					</td>
+					<td>
+						1
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Gyro
+					</td>
+					<td>
+						26
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Heavy Armor Block
+					</td>
+					<td>
+						396
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Heavy Armor Corner
+					</td>
+					<td>
+						32
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Heavy Armor Corner 2 Base
+					</td>
+					<td>
+						34
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Heavy Armor Corner 2 Tip
+					</td>
+					<td>
+						28
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Heavy Armor Corner Inv
+					</td>
+					<td>
+						29
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Heavy Armor Inv Corner 2 Base
+					</td>
+					<td>
+						22
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Heavy Armor Inv Corner 2 Tip
+					</td>
+					<td>
+						22
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Heavy Armor Round Slope
+					</td>
+					<td>
+						2
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Heavy Armor Slope
+					</td>
+					<td>
+						142
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Heavy Armor Slope 2 Base
+					</td>
+					<td>
+						42
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Heavy Armor Slope 2 Tip
+					</td>
+					<td>
+						22
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Hydrogen Tank
+					</td>
+					<td>
+						4
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Interior Wall
+					</td>
+					<td>
+						56
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Jump Drive
+					</td>
+					<td>
+						2
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						LCD Panel
+					</td>
+					<td>
+						2
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						LargeGatlingTurret
+					</td>
+					<td>
+						4
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						LargeMissileTurret
+					</td>
+					<td>
+						2
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Light 1corner
+					</td>
+					<td>
+						14
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Light 2corner
+					</td>
+					<td>
+						1
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Missile Launcher
+					</td>
+					<td>
+						2
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						OxygenGenerator
+					</td>
+					<td>
+						2
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						OxygenTank
+					</td>
+					<td>
+						3
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Passage
+					</td>
+					<td>
+						2
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Programmable Block
+					</td>
+					<td>
+						4
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Projector
+					</td>
+					<td>
+						1
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Radio Antenna
+					</td>
+					<td>
+						1
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Ramp
+					</td>
+					<td>
+						10
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Sensor
+					</td>
+					<td>
+						1
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Ship Welder
+					</td>
+					<td>
+						2
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Slide Door
+					</td>
+					<td>
+						6
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Small Container
+					</td>
+					<td>
+						3
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Small Generator
+					</td>
+					<td>
+						6
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Small Hydrogen Thrust
+					</td>
+					<td>
+						46
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Small Light
+					</td>
+					<td>
+						7
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Sound Block
+					</td>
+					<td>
+						1
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Stairs
+					</td>
+					<td>
+						2
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Steel Catwalk
+					</td>
+					<td>
+						6
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Steel Catwalk 2 Sides
+					</td>
+					<td>
+						10
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Steel Catwalk Plate
+					</td>
+					<td>
+						9
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Survival Kit
+					</td>
+					<td>
+						1
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Wheel 1x1
+					</td>
+					<td>
+						3
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Window 1x1 Face
+					</td>
+					<td>
+						2
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Window 1x1 Flat
+					</td>
+					<td>
+						1
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Window 1x1 Inv
+					</td>
+					<td>
+						2
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Window 1x1 Side
+					</td>
+					<td>
+						4
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Window 1x1 Slope
+					</td>
+					<td>
+						1
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Window 1x2 Face
+					</td>
+					<td>
+						2
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Window 1x2 Flat Inv
+					</td>
+					<td>
+						2
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Window 1x2 Inv
+					</td>
+					<td>
+						2
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Window 1x2 Slope
+					</td>
+					<td>
+						1
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Window 2x3 Flat Inv
+					</td>
+					<td>
+						2
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Window 3x3 Flat
+					</td>
+					<td>
+						2
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Window Edge
+					</td>
+					<td>
+						1
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						Window Square
+					</td>
+					<td>
+						3
+					</td>
+				  </tr>
+				</table>
+			</div>
+			</section>
+<br>
+
+<br>
+<section class = "textblock" id = "text-block-downloads">
+	<h3>Downloads</h3>
+<a class = "dlbtn" href="https://steamcommunity.com/sharedfiles/filedetails/?id=1706390474" target="_blank"><span>Steam Workshop<div class = "spacer"></div><i class="fas fa-download"></i></span></a>
+</section>
+<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
+		<hr>
+		<div id = "footer-spacing">
+		
+		</div>
+		<hr>
+		If you like any of my mods, maps, or other content, or want to help me develop them, feel free to use my Patreon or the buttons below. Every little bit helps me be able to keep working on them, and helps ensure both maintenance and expansion of them.<br>
+		If you wish to give a one-time donation, I recommend you use the Paypal link on the right; Patreon, though it can be used for one-time donations, is designed for ongoing monthly 'subscriptions' (ie a set amount of money gifted each month for as long as you remain a 'patron'). Paypal can also register a donation with monthly recurrence, should that seem preferable to you.<br>
+		For both systems, the amount you choose to donate is up to you, and for Patreon, can be changed at any time should you wish to decrease or increase the amount.<br>
+		And thank you for your support. :D<br>
+					<div class = "linkiconblock">
+					<div class = "linktile" style = "width: 49.75%">
+						<div class = "linklabel">Patreon</div>
+						<a class = "icon icon-patreon" href="http://www.patreon.com/reikasminecraft" ></a>
+					</div>
+					<div class = "linktile" style = "width: 49.75%">
+						<div class = "linklabel">Paypal</div>
+						<a class = "icon icon-paypal" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5XRAM3SXBRJY4" ></a>
+					</div>
+			</div>
+		<hr>
+		To contact me (though some of these are only checked periodically, and many are for specific topics) or find additional information or content, visit any one of these platforms:<br>
+					<div class = "linkiconblock">
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Minecraft Forums</div>
+						<a class = "icon icon-mcforums" href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1291655" title="Minecraft Only"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Factorio Forums</div>
+						<a class = "icon icon-facforums" href="https://forums.factorio.com/viewforum.php?f=216" title="Factorio Only"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">GitHub</div>
+						<a class = "icon icon-github" href="https://github.com/ReikaKalseki" ></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Discord</div>
+						<a class = "icon icon-discord" href="https://discord.com/channels/466852131895508992/466852131895508994/" title="Discord ID: Reika#3161"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Steam</div>
+						<a class = "icon icon-steam" href="https://steamcommunity.com/id/ReikaKalseki/myworkshopfiles/" title="Please no random friend requests"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">YouTube</div>
+						<a class = "icon icon-youtube" href="https://www.youtube.com/user/ReikasMinecraft/videos" ></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">SoundCloud</div>
+						<a class = "icon icon-soundcloud" href="https://soundcloud.com/reikakalseki" title="Music Only"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Reddit</div>
+						<a class = "icon icon-reddit" href="https://www.reddit.com/user/ReikaKalseki/" ></a>
+					</div>
+			</div>
+		<hr>
+		This site is proudly Canadian. <i class="fab fa-canadian-maple-leaf"></i><br>
+		<hr>
+		Site (including embedded JavaScript) and linked projects (mods, maps, etc) created by and &copy; ReikaKalseki, except for content within which is part of the base games, as noted below.<br>
+		<hr>
+			Minecraft and its content and assets are &copy; Mojang AB, with whom I am not affiliated<br>
+			Factorio and its content and assets are &copy; Wube Software, with whom I am not affiliated<br>
+			Portal 2 and its content and assets are &copy; Valve Corporation, with whom I am not affiliated<br>
+			Stellaris and its content and assets are &copy; Paradox Interactive, with whom I am not affiliated<br>
+			Space Engineers and its content and assets are &copy; Keen Software House, with whom I am not affiliated<br>
+			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
+			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>
+	</div></footer>		</div>
+    </body>
+</html>

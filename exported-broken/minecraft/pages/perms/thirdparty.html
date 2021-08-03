@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="shortcut icon" href="../../../images/favicon.ico">
+        <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+		<meta http-equiv="Cache-control" content="no-cache">
+        <title>Third Party Modifications</title>
+		<link rel="stylesheet" type="text/css" href="../../../compiledJS/entrypoint.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+		<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Lato|Exo 2|Ubuntu|Cairo"> -->
+		<script src = "../../../compiledJS/entrypoint.bundle.js"></script>
+		<!-- <meta name="script-def" content="footer-spacing"> -->
+		<meta name="script-def" content="navbar-scroll-indicator">
+		<!-- <meta name="script-def" content="quicknav-pos"> -->
+			<meta name="script-def" content="minecraft/precursor">
+    </head>
+    <body  data-game="minecraft">
+        	<div id = "navbar" class="navbar">
+	  <a class="navbar-button" href="../../../index.html">Reika's Mods Home</a>
+	  <a class="navbar-button" href="../../../minecraft/index.html">Minecraft Home</a>
+		  <div class="navdropdown">
+			<div class="navdropbtn">Information <i class="fa fa-angle-down"></i></div>
+			<div class="navdrop-content">
+					<a class = "navdrop-entry" href="../../../minecraft/pages/info/faq.html">FAQ</a>
+					<a class = "navdrop-entry" href="../../../minecraft/pages/info/contact.html">Contact</a>
+					<a class = "navdrop-entry" href="../../../minecraft/pages/info/history.html">History</a>
+					<a class = "navdrop-entry" href="../../../minecraft/pages/info/changelog.html">Change Logs</a>
+					<a class = "navdrop-entry" href="../../../minecraft/pages/info/spotlights.html">Spotlights</a>
+					<a class = "navdrop-entry" href="../../../minecraft/pages/info/fanmade.html">Fanmade Content</a>
+					<a class = "navdrop-entry" href="../../../minecraft/pages/info/luablock.html">LuaBlock</a>
+					<a class = "navdrop-entry" href="../../../minecraft/pages/info/nottosay.html">Things Not To Say</a>
+					<a class = "navdrop-entry" href="../../../minecraft/pages/info/updating.html">Version Updates</a>
+			</div>
+		  </div>
+		  <div class="navdropdown">
+			<div class="navdropbtn">Permissions <i class="fa fa-angle-down"></i></div>
+			<div class="navdrop-content">
+					<a class = "navdrop-entry" href="../../../minecraft/pages/perms/license.html">License</a>
+					<a class = "navdrop-entry" href="../../../minecraft/pages/perms/packrules.html">Modpack Rules</a>
+					<a class = "navdrop-entry" href="../../../minecraft/pages/perms/thirdparty.html">Third Party Modifications</a>
+					<a class = "navdrop-entry" href="../../../minecraft/pages/perms/modpacks.html">Approved Modpacks</a>
+			</div>
+		  </div>
+	  <div class="navdropdown">
+		<div class="navdropbtn">Mods <i class="fa fa-angle-down"></i></div>
+		<div class="navdrop-content">
+				<a class = "navdrop-entry" href="../../../minecraft/mods/dragonapi.html">DragonAPI</a>
+				<a class = "navdrop-entry" href="../../../minecraft/mods/archisections.html">ArchiSections</a>
+				<a class = "navdrop-entry" href="../../../minecraft/mods/cavecontrol.html">CaveControl</a>
+				<a class = "navdrop-entry" href="../../../minecraft/mods/chromaticraft.html">ChromatiCraft</a>
+				<a class = "navdrop-entry" href="../../../minecraft/mods/condensedores.html">CondensedOres</a>
+				<a class = "navdrop-entry" href="../../../minecraft/mods/critterpet.html">CritterPet</a>
+				<a class = "navdrop-entry" href="../../../minecraft/mods/dyetrees.html">DyeTrees</a>
+				<a class = "navdrop-entry" href="../../../minecraft/mods/electricraft.html">ElectriCraft</a>
+				<a class = "navdrop-entry" href="../../../minecraft/mods/enderforest.html">EnderForest</a>
+				<a class = "navdrop-entry" href="../../../minecraft/mods/expandedredstone.html">Expanded Redstone</a>
+				<a class = "navdrop-entry" href="../../../minecraft/mods/geostrata.html">GeoStrata</a>
+				<a class = "navdrop-entry" href="../../../minecraft/mods/legacycraft.html">LegacyCraft</a>
+				<a class = "navdrop-entry" href="../../../minecraft/mods/loottweaks.html">LootTweaks</a>
+				<a class = "navdrop-entry" href="../../../minecraft/mods/meteorcraft.html">MeteorCraft</a>
+				<a class = "navdrop-entry" href="../../../minecraft/mods/reactorcraft.html">ReactorCraft</a>
+				<a class = "navdrop-entry" href="../../../minecraft/mods/rotarycraft.html">RotaryCraft</a>
+				<a class = "navdrop-entry" href="../../../minecraft/mods/satisforestry.html">Satisforestry</a>
+				<a class = "navdrop-entry" href="../../../minecraft/mods/territoryzone.html">TerritoryZone</a>
+				<a class = "navdrop-entry" href="../../../minecraft/mods/treeclimbing.html">TreeClimbing</a>
+				<a class = "navdrop-entry" href="../../../minecraft/mods/usefultnt.html">UsefulTNT</a>
+				<a class = "navdrop-entry" href="../../../minecraft/mods/voidmonster.html">Void Monster</a>
+		</div>
+	  </div>
+	  <div class="navdropdown">
+		<div class="navdropbtn">Other Games <i class="fa fa-angle-down"></i></div>
+		<div class="navdrop-content">
+				<a class = "navdrop-entry" href="../../../factorio/index.html">Factorio</a>
+				<a class = "navdrop-entry" href="../../../p2/index.html">Portal 2</a>
+				<a class = "navdrop-entry" href="../../../stellaris/index.html">Stellaris</a>
+				<a class = "navdrop-entry" href="../../../se/index.html">Space Engineers</a>
+				<a class = "navdrop-entry" href="../../../fce/index.html">FortressCraft Evolved</a>
+				<a class = "navdrop-entry" href="../../../starbound/index.html">Starbound</a>
+		</div>
+	  </div>
+	  <div class="navdropdown">
+		<div class="navdropbtn">Other Projects <i class="fa fa-angle-down"></i></div>
+		<div class="navdrop-content">
+				<a class = "navdrop-entry" href="../../../projects/calendar.html">Game Calendar</a>
+				<a class = "navdrop-entry" href="../../../projects/eventbuilder.html">Stellaris Event Builder</a>
+				<a class = "navdrop-entry" href="../../../projects/fcompile.html">FCompile</a>
+		</div>
+	  </div>
+	</div>
+		<noscript><div style = "text-align: center; width: 100%;"><div id = "nojs-header"><div><img class = "header-alert" src = "../../../images/alert.png"></div><div>You have JavaScript disabled; it is recommended you enable it for this site.<br>While the site will (mostly) function with scripts disabled, some sections (eg changelog view, or sortable tables) require it to update the page contents based on your input.<br>Additionally, JS is used to generate page styling, meaning disabling scripts will leave pages ugly, boring, and in some cases poorly arranged in ways that might impede readability.<br>If you have no idea what this means, or have not in fact disabled scripts, try simply reloading the page, as it may not have loaded completely or correctly.</div></div></div></noscript>
+<div id="toc_container">
+<h3>Quick Nav</h3>
+<hr>
+<table class="toc_list">
+	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><a class = "tocbtn" href="#top"><i class="fas fa-angle-double-up"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-note">Note</a></td><td><a class = "tocbtn" href="#text-block-note"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-definitions">Definitions</a></td><td><a class = "tocbtn" href="#text-block-definitions"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-preface">Preface</a></td><td><a class = "tocbtn" href="#text-block-preface"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-explanation">Explanation</a></td><td><a class = "tocbtn" href="#text-block-explanation"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-dependencies">Dependencies</a></td><td><a class = "tocbtn" href="#text-block-dependencies"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-balanceandprogression">Balance and Progression</a></td><td><a class = "tocbtn" href="#text-block-balanceandprogression"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-whyonlymine">Why Only Mine</a></td><td><a class = "tocbtn" href="#text-block-whyonlymine"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-moddesign">Mod Design</a></td><td><a class = "tocbtn" href="#text-block-moddesign"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-whyicare">Why I Care</a></td><td><a class = "tocbtn" href="#text-block-whyicare"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-specialpermissions">Special Permissions</a></td><td><a class = "tocbtn" href="#text-block-specialpermissions"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-whatyoucando">What You Can Do</a></td><td><a class = "tocbtn" href="#text-block-whatyoucando"><i class="fas fa-angle-down"></i></a></td></tr>
+</table>
+</div>        <div id = "textarea" class = "textarea ">
+				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
+			<!-- <h2>Third Party Modifications</h2> -->
+						<section class = "textblock" id = "text-block-note">
+				<h3>Note</h3>
+					
+					This was written a long time ago, before <a href="../../../minecraft/mods/chromaticraft.html">ChromatiCraft</a> was developed, and as such almost exclusively focuses on <a href="../../../minecraft/mods/rotarycraft.html">RotaryCraft</a> and its addons. Additionally, when it was written, my mods were far more widely used than they are now and there were a great many more "non-knowledgable" people running servers and packs with it. Nowadays, my userbase consists much more exclusively of people who are more familiar with or at least interested in the mod, making this less widespread of a problem than before. The arguments still apply, but problematic modifications are now less common than they are described here. Finally, despite the focus on RotaryCraft, these arguments also apply to ChromatiCraft (though that mod's built-in progression system neutralizes a few of the "you can shortcut X or Y" concerns).
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-definitions">
+				<h3>Definitions</h3>
+					
+					<ul><li>Third-Party Modifications: Changing the way a mod works through the use of general tools like Minetweaker, a dedicated mod custom-written for the purpose, or bukkit-type plugins. These can be performed by either modpack creators or server admins.</li>
+					
+					
+					<li>DRM (Digital Rights Management): A module in a piece of software to prevent certain users from gaining access, usually used to prevent users from using the software without having purchased it. Because of some companies' heavy-handed approaches, it has become to be seen as synonymous with wrongdoing, and because of its drama-inducing potential, it is a common claim in the modding community to criticize a developer's actions, even in cases bearing no resemblance to actual DRM.</li>
+					
+					
+					<li>Tiering: Setting up content in several tiers, each of which is only accessible once reaching and completing the previous tier.</li></ul>
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-preface">
+				<h3>Preface</h3>
+					
+					Many, many rumors and falsehoods are circulating about the stance I take on third-party modifications. Common (blatantly false) claims are that you cannot install Minetweaker in the same pack as RotaryCraft, or that it I will crash the game if I detect it.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../../imagedownloads/i-imgur-com_2FWfq6Jfm.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../../imagedownloads/i-imgur-com_2FWfq6Jfm.png" style="max-width:75%;" ></a>	<div class = "image-caption">High-level managers of the Resonant Rise pack spreading this rumor.</div>
+</div><br>
+					
+					
+					Also common are claims that I disallow modifications because of a "do things my way" attitude, not for any legitimate reasons.<br>
+					
+					
+					Another less-common claim is that I do not even permit changing of my configs, something that is simply false.
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-explanation">
+				<h3>Explanation</h3>
+					
+					It is true that I do not allow third-party modification to RotaryCraft (and, by extension, its addons) or ChromatiCraft when in modpacks or on servers. However, this is done because of how those mods are balanced and designed. Unlike the vast majority of mods, those mods, rather than making later-game items progressively more expensive, use a strict tiering system. I will focus mainly on RotaryCraft because it is more popular and older (and thus more well-known) than the others.<br>
+					
+					
+					RotaryCraft did not always forbid modification; that is a comparatively recent rule that was introduced to curb the undesirable effects, which are as follows:
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-dependencies">
+				<h3>Dependencies</h3>
+					
+					In RotaryCraft, every item and machine is gated behind another, in a progressive system of "you need A to get B, and B to get C, and both A and C to get D or E". A late-game machine or item may not look expensive - some cost less than twenty raw units of material - but it requires, either in its recipe, in power cost, or some other required component, another material or item that can only be obtained from the previous tier.
+					
+					
+					<br><br>
+					
+					
+					What this then means is twofold. One, removing any one of these core "stepping stone" machines or items makes everything after it inaccessible. Two, changing a recipe with the intention of making it more expensive, and inadvertently removing the gating item opens up the tier to entry-level access. The first is obviously a problem because of the fact that a large fraction of the mod content is now unreachable, and the second is a problem because a player can immediately shortcut to the given tier, severely upsetting the balance of both RotaryCraft and the rest of the pack.
+					
+					
+					<br><br>
+					
+					
+					The rebuttal to this is that a sensible pack developer will foresee this and balance it accordingly, either filling in the gaps created by a machine's removal or ensuring not to remove gating materials or other requirements.
+					
+					
+					<br><br>
+					
+					
+					Some modpack authors certainly will. However, many, possibly most, will not. For one, many pack authors, try as they may, will fail to either grasp the sheer complexity of the tiering system or find an acceptable alternative. Even the most competent and well-intentioned modpack creator has a limit to their patience and time, and for a mod where it often takes players days to grasp the requirements, it is not unreasonable for this to elude them. Additionally, many modpack authors do not put in that kind of effort. Just like in real life, a great many people are lazy, impatient or incompetent and will make rash decisions based on poor research, and for whom the idea of spending several hours testing, tweaking and retesting is an unreasonable and excessive demand, something they will not hesitate to make loudly and aggressively clear.
+					
+					
+					<br><br>
+					
+					
+					Additionally, my rules are actually more concerned with server owners, many of whom go beyond the changes added by the modpack and attempt to "rebalance" it for their server. For one, unlike modpack-level changes, these changes are far less intricate and usually consist of flatly disabling items. Second, a great many server owners are not owners because of any special skill on their part, but because they happen to have the money, hardware, or time to do so. For many server admins, the "research" conducted on a mod to determine if it is balanced for the server consists of a small amount of testing in creative mode, with perhaps some checking in NEI, a wiki, or a mod spotlight. None of these provide a decent indication of the kind of tiering RotaryCraft has, and as a result most server admins take one look at RotaryCraft and assume it is extremely overpowered, and try to modify it accordingly. The problem is worsened by the fact such judgements are often made while using out-of-date mod versions.
+					
+					
+					<br><br>
+					
+					
+					<b>Historically, the vast majority - over 90% - of the changes to RotaryCraft were some combination of the following:</b><ul>
+					
+					
+					<li>Removing the Extractor (many, many server admins and pack devs find 5x ore incredibly overpowered)</li>
+					
+					
+					<li>Adding bedrock to the Extractor's recipe (similar reasoning to above)</li>
+					
+					
+					<li>Removing the bedrock breaker (server admins call it a griefing tool)</li>
+					
+					
+					<li>Making the bedrock breaker more expensive (many people do not realize tungsten is a late-game product)</li>
+					
+					
+					<li>Removing the pulse jet furnace (it can result in fiery explosions if mistreated, thus it was labelled a griefing tool)</li>
+					
+					
+					<li>Cheaper magnetostatics (a great many people resent having to go through the above tiering for late-game power gen)</li>
+					
+					
+					<li>Removing the grinder (3x ore is too much for many people)</li>
+					
+					
+					<li>Removing the Gas Turbine (can ingest players, killing them, and can violently explode. Some also find 12kRF/t equivalent OP)</li>
+					
+					
+					<li>Removing the friction heater (fuel-less or instant smelting is overpowered to some)</li>
+					
+					
+					<li>Removing the Borer (some people find automining overpowered, and are either too lazy or ignorant to use RC's config)</li></ul>
+					
+					
+					The first two were far and away the most common, outnumbering the others put together. These may sound reasonable, especially to someone unfamiliar with RotaryCraft. Here is what happens instead:
+					
+					
+					<br><br>
+					
+					
+					Now you cannot get tungsten flakes, which are an Extractor byproduct, so you cannot get tungsten. Therefore, you can no longer make a bedrock breaker, and thus cannot get bedrock. Due to the lack of tungsten, you also can no longer make a jet engine, so you cannot use anything that requires more power than 4 microturbines (8MW) can generate (shaft junctions cap at 4 engines), or, with the lack of bedrock, more than a certain amount of torque or speed (diamond load limit because of no bedrock gears, and no CVT or high-ratio gear as those need bedrock).
+					
+					
+					<br><br>
+					
+					
+					Again because of the lack of bedrock, you also lose the compactor, which, if you have <a href="../../../minecraft/mods/reactorcraft.html">ReactorCraft</a>, means you lose the fusion reactor, as well as the uranium centrifuge; losing the uranium centrifuge means you also lose the fission reactors, which also prevents you from getting breeder or again fusion reactors.
+					
+					
+					<br><br>
+					
+					
+					<a href="../../../minecraft/mods/electricraft.html">ElectriCraft</a>, if you have it, also suffers; the lack of tungsten throttles your available battery types, and superconducting (lossless) wires are also uncraftable, as are any of the high-capacity RF cables and batteries.
+					
+					
+					<br><br>
+					
+					
+					And these effects propagate; many more machines are either impossible to create or impossible to run, and most of those are also dependencies for yet others.  All in all, about 40% of RotaryCraft, 90% of ReactorCraft, and 50% of ElectriCraft becomes impossible.
+					
+					
+					<br><br>
+					
+					
+					Depressingly, it gets worse: A not-insignificant portion of the people making changes do things like making the bedrock breaker recipe require bedrock (?!) whose effects should be obvious and which shows how little effort they put into their research.
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-balanceandprogression">
+				<h3>Balance and Progression</h3>
+					
+					On the flip side, another common occurrence was to replace the bedrock breaker's recipe with something that seemed more expensive, but removed the tungsten ingot from the recipe. Now, the bedrock breaker is no longer gated at the end of the RotaryCraft techtree, and thus players can obtain it and bedrock items - most popularly tools and armor - much earlier than would otherwise be possible. The efforts of the pack creator/server admin have backfired dramatically, and their server suffers as a result.
+					
+					
+					<br><br>
+					
+					
+					This is doubly true because the RotaryCraft progression goes beyond balance; Every step of the techtree requires more than just making and using machines. Every step is additionally gated behind some key level of problem-solving, something like obtaining a specific temperature, or understanding torque/speed mechanics, or dynamic transmission engineering. When a player obtains access to a machine without the prerequisite progression, they lack the knowledge and understanding that is assumed and expected of them. This then manifests itself as them failing to do things properly. In all likelihood, in addition to many players simply being unable to perform what would normally at that point be simple tasks, there will be machine failures, fires, explosions, and if ReactorCraft is involved, potentially biome-killing radiation.
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-whyonlymine">
+				<h3>"What about other mods? Why do they not care about this?"</h3>
+					
+					Most mod authors do not care about their mods' recipes being tweaked because they have no real progression to speak of; most often, later-game items require more resources, but could be used as an entry point to the mod if resources were not an issue. (This, by the way, is the primary argument used against the Extractor's 5x ore multiplication, that those mods become inherently unbalanced). Thus the consequences described above do not exist.
+					
+					
+					<br><br>
+					
+					
+					Some mods have some progression, like ThaumCraft or Tinker's Construct with the three crafting tiers, but here is the major catch: <b>Everyone is already familiar with those mods</b>, being far older and far more popular, so no pack dev or server admin would turn off or circumvent any of the tiers, and even if they did, the changes would be immediately obvious. Additionally, the progression in mods like ThaumCraft or Tinker's Construct is comparatively small and can be completed in a matter of a couple hours or so, and is much less complex than that of RotaryCraft, making unintended consequences much less likely. Finally, if it was a common problem, and the reputation of mods like ThaumCraft started to suffer because too many people were breaking them, I find it very likely that their devs would respond.
+					
+					
+					<br><br>
+					
+					
+					The only other Forge mod I know of that has major progression is GregTech, and he stopped caring what people do to it long ago. His mod is a special case; for the most part, it is only used by a core group of fans, and he stays out of the more general community. This means that he will experience fewer cases of bad editing and less reaction from the cases that do happen. Furthermore, for many people, his reputation is already irreparably tarnished, so he likely feels that people editing GregTech cannot do any further damage.
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-moddesign">
+				<h3>Mod Design</h3>
+					
+					RotaryCraft and ReactorCraft are designed to be as realistic as is reasonably possible to implement and play. This is core to their design. This means that every process, design, or machine approximates a real-world design as best as possible, and this includes things like recipe ingredients, power requirements, temperature requirements, and so on. Changing any of the way things work - such as by substituting recipe items, or more systemic changes - destroys that and RotaryCraft very quickly turns into a Frankenstein of its former self. For a mod that is based around a given theme, and where for the vast majority of the players, core to its appeal, this is severely problematic. It is also something of an insult to the developer, as it throws out hours upon hours of research and careful tweaking and disregards everything their content was designed to be.
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-whyicare">
+				<h3>Why I Care</h3>
+					
+					There are several reasons why I care when people damage the way RotaryCraft works through poorly thought-out modifications.
+					
+					
+					<br><br>
+					
+					
+					The altruistic answer is that I do want my content to be enjoyed by the users; I want them to have fun playing RC and not spend time getting upset because of a problem that should have never happened, be it from them getting frustrated because they do not have prerequisite knowledge or suffered as a result, or because half the mod is kept from them because their server admin made a rash decision.
+					
+					
+					<br><br>
+					
+					
+					More pragmatically, poor edits cause problems for both parties. In my case, I am often the first to hear about it when a player fails in the operation of some machine, or when something becomes impossible as the result of a bad edit. The following are real messages of this nature:<ul>
+					
+					
+					<li>"wtf is the deal man, your ore grinder thingy [Extractor] is too cheap but when I made it require bedrock, now I can't even make it! What are you smoking, making it so that I can't change the recipe the way I want?"</li>
+					
+					
+					<li>"Your mod is the most overpowered I have ever seen, you should be ashamed of your incompetence. All I needed was a few thousand cobblestone [the user replaced bedrock with compressed cobble in recipes] and suddenly I'm at the endgame, where's the challenge?!"</li>
+					
+					
+					<li>"You made the water wheels [hydrokinetics] a PITA to craft, so I made them cheaper again, and now my [400-engine] power plant lags the game! If you can't optimize your mod properly no wonder nobody likes it or you!"</li>
+					
+					
+					<li>"You'r [sic] a terrible mod developer, your items are so cheap but when I make the recipes more expensive suddenty [sic] nothing works."</li></ul>
+					
+					
+					Before I put in place my rules against modification, I averaged 5 or so such messages a day, which is a waste of time and is incredibly demotivating. Additionally, most were rather longer than these, sometimes enough to fill several pages, and I spent 30 to 120 minutes a day responding and dealing with them.
+					
+					
+					<br><br>
+					
+					
+					Additionally, when it repeats often enough, problems caused by this tend to manifest themselves as a bad reputation for the mod itself, that the mod is bugged or poorly balanced.<br>
+					
+					
+					Finally, if a machine is modified so that it no longer works the way the documentation and I claim it does, I start getting bug reports that something does not work, and I waste hours chasing a nonexistent glitch. Despite what some people claim, most players do not include what modpack they are using when making a report, nor are they even aware of any changes made to how they behave.
+					
+					
+					<br><br>
+					
+					
+					It is true that many pack makers will tell players to pose questions and bug reports and complaints to them first. However, many players - especially the kind of players who leave messages like the above - will ignore such requests, and that does nothing to stop either pack makers who do not make such requests - of which there are a great many, with an example below - or cases like the above where the ones complaining <b>are</b> the pack makers and server admins.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../../imagedownloads/i-imgur-com_2FnNyEUdi.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../../imagedownloads/i-imgur-com_2FnNyEUdi.png" style="max-width:75%;" ></a>
+</div><br>
+					
+					
+					It is commonly argued that this is not a serious problem because such reports and abuse are easily ignored. This is simply false. Not only are the false bug reports visually indistinguishable from real bug reports, but even the people spouting abuse do it through the same channels that are designed to receive legitimate bug reports, including forums, GitHub, and even email. Moreover, if one simply ignores and does not reply to their post, they tend to repeat it until they receive a response, especially if their post contained a question.
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-specialpermissions">
+				<h3>Special Permissions</h3>
+					
+					A commonly proposed solution to the above problems is to adopt a policy of allowing certain sanctioned modifications, ones that I would screen beforehand to ensure they are reasonable so that modpack authors could make reasonable changes. In a perfect world, this would be a good idea.
+					
+					
+					<br><br>
+					
+					
+					Unfortunately, as it happens, I tried this. And it blew up in my face.<br>
+					
+					
+					One, many pack creators took it very negatively. A great many painted the new exceptions as my stepping even further on their toes, portraying it as "we used to be able to do as we pleased, but now we are being forced to ask him", when that was simply false. The more unscrupulous ones even took it as an opportunity to claim I was targeting specific packs and authors for alleged personal reasons. One even accused me of bribery.<br>
+					
+					
+					Two, even worse was how many mod developers reacted. Many openly stated that I had no right to choose who can and cannot make modifications, with several claiming I was playing favorites, and more than one claiming I was implementing DRM code in my mods. Several smeared me on places like reddit and twitter - the effects of which still persist in the form of rumors and some nasty opinions a year later - and a couple of mods put code in their mod to warn players and threaten me with further actions.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../../imagedownloads/i-imgur-com_2FT1sTNdQ.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../../imagedownloads/i-imgur-com_2FT1sTNdQ.png" style="max-width:75%;" ></a>	<div class = "image-caption">A commit from Tinker's Construct soon after I tried this.</div>
+</div><br>
+					
+					
+					<code>[2013-11-21 17:47:02] [SEVERE] [TConstruct] [Environment Checks] <a href="../../../minecraft/mods/dragonapi.html">DragonAPI</a> detected. Currently this just logs a warning, however if Reika continues his plan to implement DRM-like</code><br>
+					
+					
+					<code>[2013-11-21 17:47:02] [SEVERE] [TConstruct] [Environment Checks] code in his mod then it may become marked as fully unsupported. This is just a warning at this stage.</code>
+					
+					
+					<br><br>
+					
+					
+					Because of the fact that many people - including players, pack makers, and mod developers - conflated giving permission for certain reasonable edits with giving certain people blanket permission and denying others, and because of how they reacted, I am not willing to implement such a policy, as I am reasonably certain its only outcome will be further suffering on my part.
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-whatyoucando">
+				<h3>What You Can Do</h3>
+					
+					If you do need to be able to change something in how RotaryCraft behaves, and you do not currently have the ability to do this without using a third-party modification, come to me.<br>
+					
+					
+					If you can present a valid use case, and the change does not cause significant side effects, your request may be added as a config option which you are then free to modify. Several config options that currently exist are examples of this, including the ability to disable block damage, the ability to disable several non-core machines, the ability to make the Borer and Extractor require maintenance, the ability to disable automining, and the ability to disable flight with the jetpacks.<br>
+					
+					
+					<b>Under no circumstances am I obligated to include anything suggested.</b> If I do reject your idea, I will explain my reasons for doing so, but do not get aggressive or pushy. Suggestions which go against the four main tenets of the RC mod design - realism, extremely powerful endgame, advanced rendering, and learning over grinding - are almost certainly going to be rejected without your providing a very good justification. Again, however, you will be informed of this.<br>
+					
+					
+					Any request with no real purpose ("I want an option for engines to play music sounds"/"Please add an option to make the blast furnace also craftable from diamond blocks"), or whose effects are crippling, such as by making progression impossible ("I want an option to turn off all the required worldgen"/"Can I have an option to disable engines?"), have no chance of being implemented.
+					
+					
+					<br><br>
+					
+					
+					Also, if you are playing singleplayer, you can make whatever kind of changes you like, as long as noone but you is playing that version. You are even permitted to make custom builds of the code, so long as you never share it. The only caveat is that such modified versions are ineligible for tech support.
+					</section>
+			</section>
+<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
+		<hr>
+		<div id = "footer-spacing">
+		
+		</div>
+		<hr>
+		If you like any of my mods, maps, or other content, or want to help me develop them, feel free to use my Patreon or the buttons below. Every little bit helps me be able to keep working on them, and helps ensure both maintenance and expansion of them.<br>
+		If you wish to give a one-time donation, I recommend you use the Paypal link on the right; Patreon, though it can be used for one-time donations, is designed for ongoing monthly 'subscriptions' (ie a set amount of money gifted each month for as long as you remain a 'patron'). Paypal can also register a donation with monthly recurrence, should that seem preferable to you.<br>
+		For both systems, the amount you choose to donate is up to you, and for Patreon, can be changed at any time should you wish to decrease or increase the amount.<br>
+		And thank you for your support. :D<br>
+					<div class = "linkiconblock">
+					<div class = "linktile" style = "width: 49.75%">
+						<div class = "linklabel">Patreon</div>
+						<a class = "icon icon-patreon" href="http://www.patreon.com/reikasminecraft" ></a>
+					</div>
+					<div class = "linktile" style = "width: 49.75%">
+						<div class = "linklabel">Paypal</div>
+						<a class = "icon icon-paypal" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5XRAM3SXBRJY4" ></a>
+					</div>
+			</div>
+		<hr>
+		To contact me (though some of these are only checked periodically, and many are for specific topics) or find additional information or content, visit any one of these platforms:<br>
+					<div class = "linkiconblock">
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Minecraft Forums</div>
+						<a class = "icon icon-mcforums" href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1291655" title="Minecraft Only"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Factorio Forums</div>
+						<a class = "icon icon-facforums" href="https://forums.factorio.com/viewforum.php?f=216" title="Factorio Only"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">GitHub</div>
+						<a class = "icon icon-github" href="https://github.com/ReikaKalseki" ></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Discord</div>
+						<a class = "icon icon-discord" href="https://discord.com/channels/466852131895508992/466852131895508994/" title="Discord ID: Reika#3161"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Steam</div>
+						<a class = "icon icon-steam" href="https://steamcommunity.com/id/ReikaKalseki/myworkshopfiles/" title="Please no random friend requests"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">YouTube</div>
+						<a class = "icon icon-youtube" href="https://www.youtube.com/user/ReikasMinecraft/videos" ></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">SoundCloud</div>
+						<a class = "icon icon-soundcloud" href="https://soundcloud.com/reikakalseki" title="Music Only"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Reddit</div>
+						<a class = "icon icon-reddit" href="https://www.reddit.com/user/ReikaKalseki/" ></a>
+					</div>
+			</div>
+		<hr>
+		This site is proudly Canadian. <i class="fab fa-canadian-maple-leaf"></i><br>
+		<hr>
+		Site (including embedded JavaScript) and linked projects (mods, maps, etc) created by and &copy; ReikaKalseki, except for content within which is part of the base games, as noted below.<br>
+		<hr>
+			Minecraft and its content and assets are &copy; Mojang AB, with whom I am not affiliated<br>
+			Factorio and its content and assets are &copy; Wube Software, with whom I am not affiliated<br>
+			Portal 2 and its content and assets are &copy; Valve Corporation, with whom I am not affiliated<br>
+			Stellaris and its content and assets are &copy; Paradox Interactive, with whom I am not affiliated<br>
+			Space Engineers and its content and assets are &copy; Keen Software House, with whom I am not affiliated<br>
+			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
+			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>
+	</div></footer>		</div>
+    </body>
+</html>

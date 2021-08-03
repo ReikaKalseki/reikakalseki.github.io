@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="shortcut icon" href="../../images/favicon.ico">
+        <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+		<meta http-equiv="Cache-control" content="no-cache">
+        <title>ChromatiCraft</title>
+		<link rel="stylesheet" type="text/css" href="../../compiledJS/entrypoint.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+		<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Lato|Exo 2|Ubuntu|Cairo"> -->
+		<script src = "../../compiledJS/entrypoint.bundle.js"></script>
+		<!-- <meta name="script-def" content="footer-spacing"> -->
+		<meta name="script-def" content="navbar-scroll-indicator">
+		<!-- <meta name="script-def" content="quicknav-pos"> -->
+			<meta name="script-def" content="minecraft/precursor">
+    </head>
+    <body  data-game="minecraft">
+        	<div id = "navbar" class="navbar">
+	  <a class="navbar-button" href="../../index.html">Reika's Mods Home</a>
+	  <a class="navbar-button" href="../../minecraft/index.html">Minecraft Home</a>
+		  <div class="navdropdown">
+			<div class="navdropbtn">Information <i class="fa fa-angle-down"></i></div>
+			<div class="navdrop-content">
+					<a class = "navdrop-entry" href="../../minecraft/pages/info/faq.html">FAQ</a>
+					<a class = "navdrop-entry" href="../../minecraft/pages/info/contact.html">Contact</a>
+					<a class = "navdrop-entry" href="../../minecraft/pages/info/history.html">History</a>
+					<a class = "navdrop-entry" href="../../minecraft/pages/info/changelog.html">Change Logs</a>
+					<a class = "navdrop-entry" href="../../minecraft/pages/info/spotlights.html">Spotlights</a>
+					<a class = "navdrop-entry" href="../../minecraft/pages/info/fanmade.html">Fanmade Content</a>
+					<a class = "navdrop-entry" href="../../minecraft/pages/info/luablock.html">LuaBlock</a>
+					<a class = "navdrop-entry" href="../../minecraft/pages/info/nottosay.html">Things Not To Say</a>
+					<a class = "navdrop-entry" href="../../minecraft/pages/info/updating.html">Version Updates</a>
+			</div>
+		  </div>
+		  <div class="navdropdown">
+			<div class="navdropbtn">Permissions <i class="fa fa-angle-down"></i></div>
+			<div class="navdrop-content">
+					<a class = "navdrop-entry" href="../../minecraft/pages/perms/license.html">License</a>
+					<a class = "navdrop-entry" href="../../minecraft/pages/perms/packrules.html">Modpack Rules</a>
+					<a class = "navdrop-entry" href="../../minecraft/pages/perms/thirdparty.html">Third Party Modifications</a>
+					<a class = "navdrop-entry" href="../../minecraft/pages/perms/modpacks.html">Approved Modpacks</a>
+			</div>
+		  </div>
+	  <div class="navdropdown">
+		<div class="navdropbtn">Mods <i class="fa fa-angle-down"></i></div>
+		<div class="navdrop-content">
+				<a class = "navdrop-entry" href="../../minecraft/mods/dragonapi.html">DragonAPI</a>
+				<a class = "navdrop-entry" href="../../minecraft/mods/archisections.html">ArchiSections</a>
+				<a class = "navdrop-entry" href="../../minecraft/mods/cavecontrol.html">CaveControl</a>
+				<a class = "navdrop-entry" href="../../minecraft/mods/chromaticraft.html">ChromatiCraft</a>
+				<a class = "navdrop-entry" href="../../minecraft/mods/condensedores.html">CondensedOres</a>
+				<a class = "navdrop-entry" href="../../minecraft/mods/critterpet.html">CritterPet</a>
+				<a class = "navdrop-entry" href="../../minecraft/mods/dyetrees.html">DyeTrees</a>
+				<a class = "navdrop-entry" href="../../minecraft/mods/electricraft.html">ElectriCraft</a>
+				<a class = "navdrop-entry" href="../../minecraft/mods/enderforest.html">EnderForest</a>
+				<a class = "navdrop-entry" href="../../minecraft/mods/expandedredstone.html">Expanded Redstone</a>
+				<a class = "navdrop-entry" href="../../minecraft/mods/geostrata.html">GeoStrata</a>
+				<a class = "navdrop-entry" href="../../minecraft/mods/legacycraft.html">LegacyCraft</a>
+				<a class = "navdrop-entry" href="../../minecraft/mods/loottweaks.html">LootTweaks</a>
+				<a class = "navdrop-entry" href="../../minecraft/mods/meteorcraft.html">MeteorCraft</a>
+				<a class = "navdrop-entry" href="../../minecraft/mods/reactorcraft.html">ReactorCraft</a>
+				<a class = "navdrop-entry" href="../../minecraft/mods/rotarycraft.html">RotaryCraft</a>
+				<a class = "navdrop-entry" href="../../minecraft/mods/satisforestry.html">Satisforestry</a>
+				<a class = "navdrop-entry" href="../../minecraft/mods/territoryzone.html">TerritoryZone</a>
+				<a class = "navdrop-entry" href="../../minecraft/mods/treeclimbing.html">TreeClimbing</a>
+				<a class = "navdrop-entry" href="../../minecraft/mods/usefultnt.html">UsefulTNT</a>
+				<a class = "navdrop-entry" href="../../minecraft/mods/voidmonster.html">Void Monster</a>
+		</div>
+	  </div>
+	  <div class="navdropdown">
+		<div class="navdropbtn">Other Games <i class="fa fa-angle-down"></i></div>
+		<div class="navdrop-content">
+				<a class = "navdrop-entry" href="../../factorio/index.html">Factorio</a>
+				<a class = "navdrop-entry" href="../../p2/index.html">Portal 2</a>
+				<a class = "navdrop-entry" href="../../stellaris/index.html">Stellaris</a>
+				<a class = "navdrop-entry" href="../../se/index.html">Space Engineers</a>
+				<a class = "navdrop-entry" href="../../fce/index.html">FortressCraft Evolved</a>
+				<a class = "navdrop-entry" href="../../starbound/index.html">Starbound</a>
+		</div>
+	  </div>
+	  <div class="navdropdown">
+		<div class="navdropbtn">Other Projects <i class="fa fa-angle-down"></i></div>
+		<div class="navdrop-content">
+				<a class = "navdrop-entry" href="../../projects/calendar.html">Game Calendar</a>
+				<a class = "navdrop-entry" href="../../projects/eventbuilder.html">Stellaris Event Builder</a>
+				<a class = "navdrop-entry" href="../../projects/fcompile.html">FCompile</a>
+		</div>
+	  </div>
+	</div>
+		<noscript><div style = "text-align: center; width: 100%;"><div id = "nojs-header"><div><img class = "header-alert" src = "../../images/alert.png"></div><div>You have JavaScript disabled; it is recommended you enable it for this site.<br>While the site will (mostly) function with scripts disabled, some sections (eg changelog view, or sortable tables) require it to update the page contents based on your input.<br>Additionally, JS is used to generate page styling, meaning disabling scripts will leave pages ugly, boring, and in some cases poorly arranged in ways that might impede readability.<br>If you have no idea what this means, or have not in fact disabled scripts, try simply reloading the page, as it may not have loaded completely or correctly.</div></div></div></noscript>
+<div id="toc_container">
+<h3>Quick Nav</h3>
+<hr>
+<table class="toc_list">
+	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><a class = "tocbtn" href="#top"><i class="fas fa-angle-double-up"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-overview">Overview</a></td><td><a class = "tocbtn" href="#text-block-overview"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-theworld">The World</a></td><td><a class = "tocbtn" href="#text-block-theworld"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-theworld-autosub-pylons">Pylons</a></td><td><a class = "tocbtn" href="#text-block-theworld-autosub-pylons"><i class="fas fa-caret-down"></i></a></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-theworld-autosub-buriedstructures">Buried Structures</a></td><td><a class = "tocbtn" href="#text-block-theworld-autosub-buriedstructures"><i class="fas fa-caret-down"></i></a></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-theworld-autosub-cavecrystals">Cave Crystals</a></td><td><a class = "tocbtn" href="#text-block-theworld-autosub-cavecrystals"><i class="fas fa-caret-down"></i></a></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-theworld-autosub-forests">Forests</a></td><td><a class = "tocbtn" href="#text-block-theworld-autosub-forests"><i class="fas fa-caret-down"></i></a></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-theworld-autosub-luminouscliffs">Luminous Cliffs</a></td><td><a class = "tocbtn" href="#text-block-theworld-autosub-luminouscliffs"><i class="fas fa-caret-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-constructs">Constructs</a></td><td><a class = "tocbtn" href="#text-block-constructs"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-progression">Progression</a></td><td><a class = "tocbtn" href="#text-block-progression"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-modinterations">Mod Interations</a></td><td><a class = "tocbtn" href="#text-block-modinterations"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-api">API</a></td><td><a class = "tocbtn" href="#text-block-api"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-api-autosub-background">Background</a></td><td><a class = "tocbtn" href="#text-block-api-autosub-background"><i class="fas fa-caret-down"></i></a></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-api-autosub-installation">Installation</a></td><td><a class = "tocbtn" href="#text-block-api-autosub-installation"><i class="fas fa-caret-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-customrecipes">Custom Recipes</a></td><td><a class = "tocbtn" href="#text-block-customrecipes"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-modsettings">Configuration Settings</a></td><td><a class = "tocbtn" href="#text-block-modsettings"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><a class = "tocbtn" href="#text-block-sourcecode"><i class="fas fa-angle-down"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><a class = "tocbtn" href="#text-block-downloads"><i class="fas fa-angle-down"></i></a></td></tr>
+</table>
+</div>        <div id = "textarea" class = "textarea ">
+				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
+			<!-- <h2>ChromatiCraft</h2> -->
+						<div class = "header-image">
+				<img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FUEp0w1K.jpg" >
+			</div>			<section class = "textblock" id = "text-block-overview">
+				<h3>Overview</h3>
+					
+					ChromatiCraft is a very large exploration-, experimentation-, and puzzle-based magic mod centered around harnessing and focusing the power of sixteen colors of crystal energy present in the Minecraft world. Each color of energy is associated with certain forces, traits, or concepts, ranging from light to protection to time.
+					
+					
+					<br><br>
+					
+					
+					In ChromatiCraft, you can use this energy in two main ways.<br>
+					
+					
+					One major use is to drive various devices which run on the energy. These have a wide variety of applications, and can be used to reshape the world, protect an area, acquire or transport resources with ease, augment farms of various kinds, enhance the power of other machines, create stunning decorations, and much, much more.
+					
+					
+					<br><br>
+					
+					
+					The other major use of the energy is to imbue yourself with magic powers, which give you the ability to do things like substantially extend your reach, teleport at will, project an aura of light, unify your inventory with machines, see what should normally be hidden, rain fire upon the world, or even phase through solid blocks.
+					
+					
+					<br><br>
+					
+					
+					<b>Note to servers:</b> ChromatiCraft requires large amounts of exploration, in chunks that have not been generated without ChromatiCraft. It is recommended that you pregenerate a large area in the overworld, as well as allocate some extra hard drive space for the dimension (which resets and should never exceed a few GB in size at worst, and only temporarily at that).
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-theworld">
+				<h3>The World</h3>
+					<section class = "textblock" id = "text-block-theworld-autosub-pylons">
+					<h4>Pylons</h4>
+					
+					
+					While exploring, you will occasionally find an unusual structure, made of dark stone columns, beams, and tiles. Near the top is a ring of eight blocks engraved with a strange, glowing symbol. At the top of the structure sits a glowing beacon, one visibly and audibly (and if you get too close, palpably) radiating with raw crystal power.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2FfAAPkjK.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FfAAPkjK.png" style="max-width:75%;" ></a>	<div class = "image-caption">A Crystal Pylon.</div>
+</div><br>
+					</section>
+					<section class = "textblock" id = "text-block-theworld-autosub-buriedstructures">
+					<h4>Buried Structures</h4>
+					
+					
+					The world is full of other structures - many buried or otherwise at least partly hidden, and all laden with valuables - and interesting blocks as well. Many of these will not be noticeable to you at first, sometimes even while directly looking at them; as you progress, you will gain the ability to recognize and make use of them.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2FXIymv90.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FXIymv90.png" style="max-width:75%;" ></a>	<div class = "image-caption">Something shines in the darkness.</div>
+</div><br>
+					</section>
+					<section class = "textblock" id = "text-block-theworld-autosub-cavecrystals">
+					<h4>Cave Crystals</h4>
+					
+					
+					One of the earliest things you will notice are Cave Crystals, large outcrops of solidified crystal energy, and which radiate weak effects to nearby creatures. Crystals generate in every dimension except the end, and are most frequent in the Twilight Forest. These crystals will be invaluable to your crafting efforts, both whole and their shards.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2FwGFBzl3.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FwGFBzl3.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Some cave crystals and other blocks visible in a ravine.</div>
+</div><br>
+					</section>
+					<section class = "textblock" id = "text-block-theworld-autosub-forests">
+					<h4>Forests</h4>
+					
+					
+					With ChromatiCraft, there are also new biomes in the map, including a forest full of multicolored trees and one littered with pools of liquid ender. These too contain both secrets and unique points of interest.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2F0AYDuey.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2F0AYDuey.jpg" style="max-width:75%;" ></a>
+</div><br>
+					</section>
+					<section class = "textblock" id = "text-block-theworld-autosub-luminouscliffs">
+					<h4>Luminous Cliffs</h4>
+					
+					
+					You will also find the rare Luminous Cliffs, comprised of huge terraces of land forming large overhangs and deep cave-like alcoves, as well as floating islands and foliage, creatures, and objects not found anywhere else.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2FAz5nxoB.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FAz5nxoB.jpg" style="max-width:75%;" ></a>
+</div>
+					</section>
+			</section><br>
+			<section class = "textblock" id = "text-block-constructs">
+				<h3>Constructs</h3>
+					
+					There is a vast array of constructs in ChromatiCraft, designed to address many gameplay needs and solve many problems. Some are fairly standard and comparable to what you might find in a tech mod, while others are unique, and have purposes ranging from decoration to defence to transportation and more.<br>
+					
+					
+					<div class = "video">
+	<iframe class = "deembed-media" style = "max-width: 75%;" width="960" height="540" src="https://www.youtube.com/embed/LheYxD1294k" title="Orchestra" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div><br>
+					
+					
+					<div class = "video">
+	<iframe class = "deembed-media" style = "max-width: 75%;" width="960" height="540" src="https://www.youtube.com/embed/khKlNuZaNyw" title="Transgate" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div><br>
+					
+					
+					<div class = "video">
+	<iframe class = "deembed-media" style = "max-width: 75%;" width="960" height="540" src="https://www.youtube.com/embed/KJYG_UmbOws" title="Meteor tower" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-progression">
+				<h3>Progression</h3>
+					
+					Progression in ChromatiCraft is primarily based around cycles of exploration and construction, where you acquire new knowledge via scavenging fragments from various locations, then return home to apply those and create new things, as well as experiment to fill in gaps in that information. You spawn unable to produce anything beyond the informational book (the Chromatic Lexicon) and the basic interaction tool (the Elemental Manipulator). From that point, you will need to "unlock" every recipe and ability via this process.
+					
+					
+					<br><br>
+					
+					
+					As a result, ChromatiCraft is not designed to be used immediately in a new world; it is expected players will start by doing other things and will naturally acquire those first fragments that allow them to meaningfully begin. This also means that it is not wise for it to be the sole large mod in a pack; that will force you to focus on the mod in a way that was not intended, making for a rather arduous experience.
+					
+					
+					<br><br>
+					
+					
+					At first, your abilities and options will be very limited, and the pylons of energy will be little more than scenery and a small area hazard. As you advance, you will unlock new ways of producing both materials and constructs, new ways to expedite everything from resource collection (including fragments) to construction, and gain an increasingly deep understanding of the mechanics of the various crystal elements and how to harness them.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2Fhl8CoWA.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2Fhl8CoWA.png" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2FHjGLKpM.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FHjGLKpM.png" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2Fhf5h5ts.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2Fhf5h5ts.png" style="max-width:75%;" ></a>	<div class = "image-caption">Successive iterations of your central crafting complex.</div>
+</div><br>
+					
+					
+					Once sufficiently deep into the progression, you can finally start to harness the energy directly, both for your own abilities and to craft and operate new devices. Because pylons are fixed in location, nor are they suitable to build near, you will need to construct a transport network across large distances, using repeaters to relay the signal from the source.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2FqRCxysd.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FqRCxysd.png" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2FgF44WVe.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FgF44WVe.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Transporting energy.</div>
+</div><br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2FspsjLl8.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FspsjLl8.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Late game constructs using energy.</div>
+</div><br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2FU2PXBUZ.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FU2PXBUZ.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Imbuing energy into yourself.</div>
+</div><br>
+					
+					
+					Many constructs, especially the more powerful ones, will draw this energy directly from the network; others will require it to be exchanged with a different transport medium, such as miniature repeaters - often indoors or between blocks - or an ambient radiation in a small area. Many constructs also require some kind of structure built to focus this energy.
+					
+					
+					<br><br>
+					
+					
+					Towards the end of the progression, you will learn how to build an access point to another place entirely, one where these forces reign supreme, and which might contain clues as to where all those fragments and energy sources came from...<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2F7FnlTab.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2F7FnlTab.jpg" style="max-width:75%;" ></a>	<video style = "max-width: 75%;" width="960" height="540" autoplay muted loop>
+  <source class = "deembed-media" src="../../imagedownloads/i-imgur-com_2Fdk9Yd1W.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>	<div class = "image-caption"><div class = "obfuscated-text-container" data-minlength = "9" data-maxlength = "18"></div></div>
+</div><br>
+					
+					
+					This of course also unlocks the most powerful set of abilities in the mod.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2FOhvg7K7.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FOhvg7K7.jpg" style="max-width:75%;" ></a>
+</div><br>
+					
+					
+					<div class = "video">
+	<iframe class = "deembed-media" style = "max-width: 75%;" width="960" height="540" src="https://www.youtube.com/embed/dNwEs0fti6E" title="sky ember" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div><br>
+					
+					
+					<div class = "video">
+	<iframe class = "deembed-media" style = "max-width: 75%;" width="960" height="540" src="https://www.youtube.com/embed/c0LZ2erDipo?t=74" title="op is fun" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-modinterations">
+				<h3>Mod Interations</h3>
+					
+					ChromatiCraft has a huge number of interactions with a great many mods; many of its blocks are designed to work with the features in other mods, or address challenges that often arise. Many more are designed to be able to leverage other mods' features to enhance their own functionality. Additionally, ChromatiCraft adds custom content into many mods, including custom Forestry bees, trees and butterflies and ThaumCraft aspects and recipes.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2F5utbteQ.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2F5utbteQ.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2F6I7s40F-jpeg.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2F6I7s40F-jpeg.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Some ThaumCraft integration.</div>
+</div><br>
+					
+					
+					<div class = "block-image">
+	<video style = "max-width: 75%;" width="960" height="540" autoplay muted loop>
+  <source class = "deembed-media" src="../../imagedownloads/i-imgur-com_2Fn6wLx9Q.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>	<a href = "../../imagedownloads/i-imgur-com_2FzBb6W8z.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FzBb6W8z.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Various other mod integration features.</div>
+</div><br>
+					
+					
+					<div class = "video">
+	<iframe class = "deembed-media" style = "max-width: 75%;" width="960" height="540" src="https://www.youtube.com/embed/ROOIhl7PzL4" title="Mana booster" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-api">
+				<h3>API</h3>
+					<section class = "textblock" id = "text-block-api-autosub-background">
+					<h4>Background</h4>
+					
+					
+					ChromatiCraft has an extensive API to allow for mod creators to interface with mod systems and to add custom content, including adding recipes and abilities, querying player progression, interacting with the adjacency cores, mineral extractor, and other constructs, and more. There are also a great many events with which you can be notified of various occurrences.
+					
+					
+					<br><br>
+					</section>
+					<section class = "textblock" id = "text-block-api-autosub-installation">
+					<h4>Installation And Use</h4>
+					
+					
+					The API can be found in the "API" package of the source code; just add that to your development environment as you see fit (it was designed with simply dropping it into the source folders in mind, but can also be loaded as a library). I take special care to avoid the API making hard references to any internal CC code, so you should have no issues integrating it. To avoid a hard dependency on the API, use standard Forge <code>@Optional</code> (or similar) methods to conditionally strip interfaces and either conditional calls (ie calling the API function via a method which is itself only invoked if CC is loaded, thus "compartmentalizing" your references to the API within a method that is never loaded if not necessary) or reflection to invoke library methods.
+					</section>
+			</section>
+<br>
+			<section class = "textblock" id = "text-block-customrecipes">
+				<h3>Adding Custom Recipes</h3>
+				ChromatiCraft can use the <a href="../../minecraft/pages/info/luablock.html">LuaBlock system</a> to add custom recipes to some or all of its production blocks (such as crafting tables, machines, et cetera). To do this, create a folder called <code>ChromatiCraft_CustomRecipes</code> in the <code>Reika</code> subfolder of your config directory. In that folder you can place LuaBlock files with the extension <code>.recipes_[system]</code>, where <code>[system]</code> is the internal name of the machine, recipe system, or the like. The exact format and parameters required depends entirely on the nature of the recipes you are adding, and what properties and features they normally have. To see example files, as well as a list of all available recipe systems for ChromatiCraft, see <a href="https://github.com/ReikaKalseki/ChromatiCraft/tree/master/CustomRecipeExamples">this folder</a> on the GitHub repository.
+				<br><br>
+				It is <b>strongly</b> advised that you be familiar with both the specific recipe system you want to add to, as well as the mod as a whole, before attempting to add new recipes. Not only is a working understanding of the relevant parts of the mod necessary to make additions make sense from a game design standpoint, but the large number of properties ChromatiCraft recipes have invites many opportunities to define properties with meaningless or invalid values, such as item counts exceeding stack limits, temperatures out of bounds, or items that do not exist. Though the recipe parsers apply many sanity checks, those cannot be fully comprehensive, and it is entirely possible to still define recipes that are syntactically but not semantically valid. These recipes, when attempted to be used, are likely to create undesired effects ingame, including failure to operate, exploits, or even crashes.
+			</section>
+<br>
+			<section class = "textblock" id = "text-block-modsettings">
+			<div class = "modsettings">
+				<h3>Configuration Settings</h3>
+				This mod contains several config options to modify values and behaviors - such as for balance or server safety concerns, or simply personal taste - to your preferences. Note that several settings may have bounds imposed on their values, either logically or explicitly; these can usually be seen in the actual settings files or ingame. These are listed in order found in the source code, which is generally the order in which they were added; They may be present in a different order ingame or in the configuration files.
+				<br>
+				<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Lamp Noises</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Nether Crystals</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Disable Pendant Particles</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Crystal Plants May Drop Shards</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Max Accelerator Lag in NanoSeconds(Set Negative To Disable Throttling)</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">1000000</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Guardian Stone Range</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">16</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Guardian Stone is Full Chunk Height</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Dye Block Particles</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Generate Anti-Taint plants in Rainbow Forest</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Vanilla Dye Drop Percentage</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">100</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Rainbow Forest Animal Density</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">6</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Rainbow Trees Spread Rainbow Forests</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Ender Forest Coloring</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Ender Pool Density from 1 to 3</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">2</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Liquid Ender Effect</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Rainbow Leaf Gold Apple Drop Percentage</h4>
+Type: float<br>
+			Current Default Value:<div class = "code-block">0.25F</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Generate Some Pylons as Broken</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Reload Handbook Data on Open</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Run Worldgen in Superflat Worlds</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Generate Pylons in Non-Overworld</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Spawn with CC Lexicon</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Chest Generation Tier</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">4</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Enable Ender TNT</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Use vanilla keybind system for ability selection GUI</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Allow duplication wand to copy TileEntities</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Make ThaumCraft integration require ThaumCraft progression</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Energy Buffer Overlay Location</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">0</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Retrogeneration</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Enable Biome Painter</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Rainbow Forest Biome Weight</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">10</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Ender Forest Biome Weight</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">10</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Luminous Cliffs Biome Weight</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">4</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Allow Danger in Rainbow Forests</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Lumen Relay Range</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">16</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Always Respawn EnderDragon</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Delete End on Unload</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Auxiliary Fragment Acquisition</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Duplication Wand Max Volume</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">1000</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">World Shift Can Move TileEntities</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Dimension Structure Difficulty</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">3</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Enable Ball Lightning</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Pylons Chunkload Selves Once Used</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">World Rifts Chunkload</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Make Pylon pathfinding attempt shortest path - can be intensive</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Notify players of progress gains</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Notify players via chat of their own progress gains</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Cave Lighter Range</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">128</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Cave Lighter Zone Size</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">8</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Connected Crystalline Stone Textures</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Adjacency Upgrades Require Energy</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Progression Notification Duration</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">800</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Play Dimension Join Sound For Others</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Blend CC Biome Edges</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Orchestra MIDI Size Limit (KB)</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">80</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Structure Bypass Usability (0 = None, 1 = Admins Only, 2 = All)</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">2</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Superbuild Ability Activation</h4>
+Type: String<br>
+			Current Default Value:<div class = "code-block">Key.LCTRL.name()</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Village Structure Frequency</h4>
+Type: float<br>
+			Current Default Value:<div class = "code-block">1F</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Crystal-Network-Integrated ThaumCraft Node Improvement Speed</h4>
+Type: float<br>
+			Current Default Value:<div class = "code-block">1F</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Meteor Tower Projectiles Start Fires On Impact</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Panel-Form Lumen Lamps Have No Hitbox</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Epilepsy Mode</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Spawn Pylons in Overworld</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Wireless RF Transmission Efficiency (%)</h4>
+Type: float<br>
+			Current Default Value:<div class = "code-block">100F</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Launch Pad Power</h4>
+Type: float<br>
+			Current Default Value:<div class = "code-block">1F</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Crystal Fence segment count limit</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">64</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Structure Generation Attempts Per Flagged Chunk - affects worldgen CPU use and structure rarity</h4>
+Type: int<br>
+			Current Default Value:<div class = "code-block">20</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Use Alternate Progress Shader</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Enhanced Pendants Require Charging</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name">Ability Selection GUI only shows abilities you have</h4>
+Type: boolean<br>
+			Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+
+			</div>
+			</section>
+<br>
+			<section class = "textblock" id = "text-block-sourcecode">
+			<div class = "modsource">
+				<h3>Source Code</h3>				The source code for ChromatiCraft can be found here:<a class = "srcbtn" href="https://github.com/ReikaKalseki/ChromatiCraft" target="_blank"><span>GitHub<div class = "spacer"></div><i class="fab fa-github"></i></span></a>
+			</div>
+			</section>
+<br>
+<section class = "textblock" id = "text-block-downloads">
+	<h3>Downloads</h3>
+<a class = "dlbtn" href="https://www.curseforge.com/minecraft/mc-mods/chromaticraft" target="_blank"><span>CurseForge<div class = "spacer"></div><i class="fas fa-download"></i></span></a>
+</section>
+<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
+		<hr>
+		<div id = "footer-spacing">
+		
+		</div>
+		<hr>
+		If you like any of my mods, maps, or other content, or want to help me develop them, feel free to use my Patreon or the buttons below. Every little bit helps me be able to keep working on them, and helps ensure both maintenance and expansion of them.<br>
+		If you wish to give a one-time donation, I recommend you use the Paypal link on the right; Patreon, though it can be used for one-time donations, is designed for ongoing monthly 'subscriptions' (ie a set amount of money gifted each month for as long as you remain a 'patron'). Paypal can also register a donation with monthly recurrence, should that seem preferable to you.<br>
+		For both systems, the amount you choose to donate is up to you, and for Patreon, can be changed at any time should you wish to decrease or increase the amount.<br>
+		And thank you for your support. :D<br>
+					<div class = "linkiconblock">
+					<div class = "linktile" style = "width: 49.75%">
+						<div class = "linklabel">Patreon</div>
+						<a class = "icon icon-patreon" href="http://www.patreon.com/reikasminecraft" ></a>
+					</div>
+					<div class = "linktile" style = "width: 49.75%">
+						<div class = "linklabel">Paypal</div>
+						<a class = "icon icon-paypal" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5XRAM3SXBRJY4" ></a>
+					</div>
+			</div>
+		<hr>
+		To contact me (though some of these are only checked periodically, and many are for specific topics) or find additional information or content, visit any one of these platforms:<br>
+					<div class = "linkiconblock">
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Minecraft Forums</div>
+						<a class = "icon icon-mcforums" href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1291655" title="Minecraft Only"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Factorio Forums</div>
+						<a class = "icon icon-facforums" href="https://forums.factorio.com/viewforum.php?f=216" title="Factorio Only"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">GitHub</div>
+						<a class = "icon icon-github" href="https://github.com/ReikaKalseki" ></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Discord</div>
+						<a class = "icon icon-discord" href="https://discord.com/channels/466852131895508992/466852131895508994/" title="Discord ID: Reika#3161"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Steam</div>
+						<a class = "icon icon-steam" href="https://steamcommunity.com/id/ReikaKalseki/myworkshopfiles/" title="Please no random friend requests"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">YouTube</div>
+						<a class = "icon icon-youtube" href="https://www.youtube.com/user/ReikasMinecraft/videos" ></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">SoundCloud</div>
+						<a class = "icon icon-soundcloud" href="https://soundcloud.com/reikakalseki" title="Music Only"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Reddit</div>
+						<a class = "icon icon-reddit" href="https://www.reddit.com/user/ReikaKalseki/" ></a>
+					</div>
+			</div>
+		<hr>
+		This site is proudly Canadian. <i class="fab fa-canadian-maple-leaf"></i><br>
+		<hr>
+		Site (including embedded JavaScript) and linked projects (mods, maps, etc) created by and &copy; ReikaKalseki, except for content within which is part of the base games, as noted below.<br>
+		<hr>
+			Minecraft and its content and assets are &copy; Mojang AB, with whom I am not affiliated<br>
+			Factorio and its content and assets are &copy; Wube Software, with whom I am not affiliated<br>
+			Portal 2 and its content and assets are &copy; Valve Corporation, with whom I am not affiliated<br>
+			Stellaris and its content and assets are &copy; Paradox Interactive, with whom I am not affiliated<br>
+			Space Engineers and its content and assets are &copy; Keen Software House, with whom I am not affiliated<br>
+			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
+			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>
+	</div></footer>		</div>
+    </body>
+</html>
