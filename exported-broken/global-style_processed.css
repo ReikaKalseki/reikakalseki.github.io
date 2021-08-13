@@ -471,12 +471,12 @@ audio {
 .entity-layer > * {
   grid-area: 1/1/-1/-1;
 }
-
+/*
 #background-content > * {
   height: 0;
   overflow: visible;
   width: 0;
-}
+}*/
 /*
 #background-content > div {
 	grid-column: 1 / -1;
