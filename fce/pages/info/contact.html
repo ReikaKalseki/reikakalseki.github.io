@@ -6,12 +6,12 @@
 		<meta http-equiv="Cache-control" content="no-cache">
         <title>Contact</title>
 		<link rel="stylesheet" type="text/css" href="../../../compiledJS/entrypoint.css">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> 
 		<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Lato|Exo 2|Ubuntu|Cairo"> -->
 		<script src = "../../../compiledJS/entrypoint.bundle.js"></script>
 		<meta name="script-def" content="footer-spacing">
 		<meta name="script-def" content="navbar-scroll-indicator">
-		<meta name="script-def" content="quicknav-pos">
+		<!-- <meta name="script-def" content="quicknav-pos"> -->
     </head>
     <body  data-game="fce">
         	<div id = "navbar" class="navbar">
@@ -65,12 +65,12 @@
 	</div>
 		<noscript><div style = "text-align: center; width: 100%;"><div id = "nojs-header"><div><img class = "header-alert" src = "../../../images/alert.png"></div><div>You have JavaScript disabled; it is recommended you enable it for this site.<br>While the site will (mostly) function with scripts disabled, some sections (eg changelog view, or sortable tables) require it to update the page contents based on your input.<br>Additionally, JS is used to generate page styling, meaning disabling scripts will leave pages ugly, boring, and in some cases poorly arranged in ways that might impede readability.<br>If you have no idea what this means, or have not in fact disabled scripts, try simply reloading the page, as it may not have loaded completely or correctly.</div></div></div></noscript>
 <div id="toc_container">
-<div><div style = "display: inline-block;width: 40%; text-align: left;"><h3>Quick Nav</h3></div><div class = "inset-toggle" style = "width: 60%;"><input type="checkbox" id="toc-follow-toggle" checked> Follow Scroll</div></div>
+<h3>Quick Nav</h3>
 <hr>
 <table class="toc_list">
-	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><div><i class="fas fa-angle-double-up"></i></div></button></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-feedbackandissues">Feedback and Issues</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-feedbackandissues'"><div><i class="fas fa-angle-down"></i></div></button></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-longerorgeneraldicussions">Longer or General Dicussions</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-longerorgeneraldicussions'"><div><i class="fas fa-angle-down"></i></div></button></td></tr>
+	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><a class = "tocbtn" href="#top"><i class="fas fa-angle-double-up"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-feedbackandissues">Feedback and Issues</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-feedbackandissues"></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-generaldiscussions">General Discussions</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-generaldiscussions"></a></td></tr>
 </table>
 </div>        <div id = "textarea" class = "textarea ">
 				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
@@ -81,8 +81,8 @@
 					If you want to provide some kind of feedback on or report an issue with a specific mod, the best place is generally on the workshop page for that mod; simply leave a comment and I will (hopefully) be notified and will likely respond.
 					
 			</section><br>
-			<section class = "textblock" id = "text-block-longerorgeneraldicussions">
-				<h3>Longer or General Dicussions</h3>
+			<section class = "textblock" id = "text-block-generaldiscussions">
+				<h3>Longer or General Discussions</h3>
 					
 					For discussions that do not pertain to a specific item, or which are likely to involve a lot of back-and-forth replies, this is best conducted on one of the other platforms, in particular on Discord. This can be accessed from the appropriate icon in the link row in the page footer.
 					
@@ -90,7 +90,7 @@
 					<br><br>
 					
 					
-					<span class = "colorized" style = "color: red;"><b>Please do not use email as a way of contacting me, unless you have no other options!</b></span> It is much less likely to be noticed quickly and much more of a hassle to navigate.
+					<span class = "colorized warncolor"><b>Please do not use email as a way of contacting me, unless you have no other options!</b></span> It is much less likely to be noticed quickly and much more of a hassle to navigate.
 					</section>
 			</section>
 <footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">

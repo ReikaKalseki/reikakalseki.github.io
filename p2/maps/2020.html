@@ -6,12 +6,12 @@
 		<meta http-equiv="Cache-control" content="no-cache">
         <title>2020</title>
 		<link rel="stylesheet" type="text/css" href="../../compiledJS/entrypoint.css">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> 
 		<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Lato|Exo 2|Ubuntu|Cairo"> -->
 		<script src = "../../compiledJS/entrypoint.bundle.js"></script>
 		<meta name="script-def" content="footer-spacing">
 		<meta name="script-def" content="navbar-scroll-indicator">
-		<meta name="script-def" content="quicknav-pos">
+		<!-- <meta name="script-def" content="quicknav-pos"> -->
     </head>
     <body  data-game="p2">
         	<div id = "navbar" class="navbar">
@@ -67,14 +67,14 @@
 	</div>
 		<noscript><div style = "text-align: center; width: 100%;"><div id = "nojs-header"><div><img class = "header-alert" src = "../../images/alert.png"></div><div>You have JavaScript disabled; it is recommended you enable it for this site.<br>While the site will (mostly) function with scripts disabled, some sections (eg changelog view, or sortable tables) require it to update the page contents based on your input.<br>Additionally, JS is used to generate page styling, meaning disabling scripts will leave pages ugly, boring, and in some cases poorly arranged in ways that might impede readability.<br>If you have no idea what this means, or have not in fact disabled scripts, try simply reloading the page, as it may not have loaded completely or correctly.</div></div></div></noscript>
 <div id="toc_container">
-<div><div style = "display: inline-block;width: 40%; text-align: left;"><h3>Quick Nav</h3></div><div class = "inset-toggle" style = "width: 60%;"><input type="checkbox" id="toc-follow-toggle" checked> Follow Scroll</div></div>
+<h3>Quick Nav</h3>
 <hr>
 <table class="toc_list">
-	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><div><i class="fas fa-angle-double-up"></i></div></button></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-redshift">Redshift</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-redshift'"><div><i class="fas fa-angle-down"></i></div></button></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-naturallight">Natural Light</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-naturallight'"><div><i class="fas fa-angle-down"></i></div></button></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-blueandorange">Blue And Orange</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-blueandorange'"><div><i class="fas fa-angle-down"></i></div></button></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-organizedchaos">Organized Chaos</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-organizedchaos'"><div><i class="fas fa-angle-down"></i></div></button></td></tr>
+	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><a class = "tocbtn" href="#top"><i class="fas fa-angle-double-up"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-redshift">Redshift</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-redshift"></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-naturallight">Natural Light</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-naturallight"></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-blueandorange">Blue And Orange</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-blueandorange"></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-organizedchaos">Organized Chaos</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-organizedchaos"></a></td></tr>
 </table>
 </div>        <div id = "textarea" class = "textarea ">
 				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
@@ -108,10 +108,10 @@
 					<div class = "datablock">Primary Elements:<br><img class = "rowicon" src="https://raw.githubusercontent.com/BEEmod/BEE2-items/30fe416c03b67cabf617ab3c2ec913b006a20c6a/packages/valve/test_elements/resources/BEE2/items/clean/cubes.png" title = "Cube" alt = "Cube"><div class = "spacer"></div><img class = "rowicon" src="https://i1.theportalwiki.net/img/d/df/Puzzle_Creator_fizzler.png" title = "Material Emancipation Grill" alt = "Material Emancipation Grill"><div class = "spacer"></div><img class = "rowicon" src="https://i1.theportalwiki.net/img/8/82/Puzzle_Creator_deathfield.png" title = "Laser Field" alt = "Laser Field"><div class = "spacer"></div><img class = "rowicon" src="https://i1.theportalwiki.net/img/6/6c/Puzzle_Creator_hard_light_emitter.png" title = "Light Bridge" alt = "Light Bridge"><div class = "spacer"></div><img class = "rowicon" src="https://i1.theportalwiki.net/img/f/fd/Puzzle_Creator_tbeam.png" title = "Excursion Funnel" alt = "Excursion Funnel"><div class = "spacer"></div><img class = "rowicon" src="https://github.com/BEEmod/BEE2-items/blob/c994f4760018af49af9493b827d8f85de2dacde5/icons/items/fizz_new/mif.png?raw=true" title = "Matter Inquisition Field" alt = "Matter Inquisition Field"><div class = "spacer"></div></div><br>
 					
 					
-					<button type="button" class = "dlbtn" onclick="location.href='https://steamcommunity.com/sharedfiles/filedetails/?id=2196838933'"><span>View/Download in Steam Workshop<div class = "spacer"></div><i class="fab fa-steam"></i></span></button><br>
+					<a class = "dlbtn" href="https://steamcommunity.com/sharedfiles/filedetails/?id=2196838933" target="_blank"><span>View/Download in Steam Workshop<div class = "spacer"></div><i class="fab fa-steam"></i></span></a><br>
 					
 					
-					<button type="button" class = "solnbtn" onclick="location.href='https://youtu.be/Vd4nugL5AGQ'"><span>Open Solution Video<div class = "spacer"></div><i class="fab fa-youtube"></i></span></button>
+					<a class = "solnbtn" href="https://youtu.be/Vd4nugL5AGQ" target="_blank"><span>Open Solution Video<div class = "spacer"></div><i class="fab fa-youtube"></i></span></a>
 					</section>
 			</section><br>
 			<section class = "textblock" id = "text-block-naturallight">
@@ -131,10 +131,10 @@
 					<div class = "datablock">Primary Elements:<br><img class = "rowicon" src="https://raw.githubusercontent.com/BEEmod/BEE2-items/30fe416c03b67cabf617ab3c2ec913b006a20c6a/packages/valve/test_elements/resources/BEE2/items/clean/cubes.png" title = "Cube" alt = "Cube"><div class = "spacer"></div><img class = "rowicon" src="https://i1.theportalwiki.net/img/d/df/Puzzle_Creator_fizzler.png" title = "Material Emancipation Grill" alt = "Material Emancipation Grill"><div class = "spacer"></div><img class = "rowicon" src="https://i1.theportalwiki.net/img/8/82/Puzzle_Creator_deathfield.png" title = "Laser Field" alt = "Laser Field"><div class = "spacer"></div><img class = "rowicon" src="https://i1.theportalwiki.net/img/0/0f/Puzzle_Creator_laser_emitter.png" title = "Laser" alt = "Laser"><div class = "spacer"></div><img class = "rowicon" src="https://i1.theportalwiki.net/img/6/6c/Puzzle_Creator_hard_light_emitter.png" title = "Light Bridge" alt = "Light Bridge"><div class = "spacer"></div><img class = "rowicon" src="https://i1.theportalwiki.net/img/b/b1/Puzzle_Creator_faithplate.png" title = "Faith Plate" alt = "Faith Plate"><div class = "spacer"></div></div><br>
 					
 					
-					<button type="button" class = "dlbtn" onclick="location.href='https://steamcommunity.com/sharedfiles/filedetails/?id=2117327914'"><span>View/Download in Steam Workshop<div class = "spacer"></div><i class="fab fa-steam"></i></span></button><br>
+					<a class = "dlbtn" href="https://steamcommunity.com/sharedfiles/filedetails/?id=2117327914" target="_blank"><span>View/Download in Steam Workshop<div class = "spacer"></div><i class="fab fa-steam"></i></span></a><br>
 					
 					
-					<button type="button" class = "solnbtn" onclick="location.href='https://youtu.be/zEenIlwy9PM'"><span>Open Solution Video<div class = "spacer"></div><i class="fab fa-youtube"></i></span></button>
+					<a class = "solnbtn" href="https://youtu.be/zEenIlwy9PM" target="_blank"><span>Open Solution Video<div class = "spacer"></div><i class="fab fa-youtube"></i></span></a>
 					</section>
 			</section><br>
 			<section class = "textblock" id = "text-block-blueandorange">
@@ -154,10 +154,10 @@
 					<div class = "datablock">Primary Elements:<br><img class = "rowicon" src="https://raw.githubusercontent.com/BEEmod/BEE2-items/30fe416c03b67cabf617ab3c2ec913b006a20c6a/packages/valve/test_elements/resources/BEE2/items/clean/cubes.png" title = "Cube" alt = "Cube"><div class = "spacer"></div><img class = "rowicon" src="https://i1.theportalwiki.net/img/d/df/Puzzle_Creator_fizzler.png" title = "Material Emancipation Grill" alt = "Material Emancipation Grill"><div class = "spacer"></div><img class = "rowicon" src="https://i1.theportalwiki.net/img/8/82/Puzzle_Creator_deathfield.png" title = "Laser Field" alt = "Laser Field"><div class = "spacer"></div><img class = "rowicon" src="https://i1.theportalwiki.net/img/6/6c/Puzzle_Creator_hard_light_emitter.png" title = "Light Bridge" alt = "Light Bridge"><div class = "spacer"></div><img class = "rowicon" src="https://i1.theportalwiki.net/img/f/fd/Puzzle_Creator_tbeam.png" title = "Excursion Funnel" alt = "Excursion Funnel"><div class = "spacer"></div></div><br>
 					
 					
-					<button type="button" class = "dlbtn" onclick="location.href='https://steamcommunity.com/sharedfiles/filedetails/?id=2089437799'"><span>View/Download in Steam Workshop<div class = "spacer"></div><i class="fab fa-steam"></i></span></button><br>
+					<a class = "dlbtn" href="https://steamcommunity.com/sharedfiles/filedetails/?id=2089437799" target="_blank"><span>View/Download in Steam Workshop<div class = "spacer"></div><i class="fab fa-steam"></i></span></a><br>
 					
 					
-					<button type="button" class = "solnbtn" onclick="location.href='https://youtu.be/qmvXC5JJ8HM'"><span>Open Solution Video<div class = "spacer"></div><i class="fab fa-youtube"></i></span></button>
+					<a class = "solnbtn" href="https://youtu.be/qmvXC5JJ8HM" target="_blank"><span>Open Solution Video<div class = "spacer"></div><i class="fab fa-youtube"></i></span></a>
 					</section>
 			</section><br>
 			<section class = "textblock" id = "text-block-organizedchaos">
@@ -177,10 +177,10 @@
 					<div class = "datablock">Primary Elements:<br><img class = "rowicon" src="https://raw.githubusercontent.com/BEEmod/BEE2-items/30fe416c03b67cabf617ab3c2ec913b006a20c6a/packages/valve/test_elements/resources/BEE2/items/clean/cubes.png" title = "Cube" alt = "Cube"><div class = "spacer"></div><img class = "rowicon" src="https://i1.theportalwiki.net/img/d/df/Puzzle_Creator_fizzler.png" title = "Material Emancipation Grill" alt = "Material Emancipation Grill"><div class = "spacer"></div><img class = "rowicon" src="https://i1.theportalwiki.net/img/8/82/Puzzle_Creator_deathfield.png" title = "Laser Field" alt = "Laser Field"><div class = "spacer"></div><img class = "rowicon" src="https://i1.theportalwiki.net/img/0/0f/Puzzle_Creator_laser_emitter.png" title = "Laser" alt = "Laser"><div class = "spacer"></div><img class = "rowicon" src="https://github.com/BEEmod/BEE2-items/blob/2ca95a3c636d94abaef0cc4ebe9a2a736e08f203/icons/items/sendtor.png?raw=true" title = "Sendificator" alt = "Sendificator"><div class = "spacer"></div></div><br>
 					
 					
-					<button type="button" class = "dlbtn" onclick="location.href='https://steamcommunity.com/sharedfiles/filedetails/?id=2033098549'"><span>View/Download in Steam Workshop<div class = "spacer"></div><i class="fab fa-steam"></i></span></button><br>
+					<a class = "dlbtn" href="https://steamcommunity.com/sharedfiles/filedetails/?id=2033098549" target="_blank"><span>View/Download in Steam Workshop<div class = "spacer"></div><i class="fab fa-steam"></i></span></a><br>
 					
 					
-					<button type="button" class = "solnbtn" onclick="location.href='https://youtu.be/15RRMYrU5PQ'"><span>Open Solution Video<div class = "spacer"></div><i class="fab fa-youtube"></i></span></button>
+					<a class = "solnbtn" href="https://youtu.be/15RRMYrU5PQ" target="_blank"><span>Open Solution Video<div class = "spacer"></div><i class="fab fa-youtube"></i></span></a>
 					</section>
 			</section>
 <br>

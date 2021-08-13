@@ -6,12 +6,12 @@
 		<meta http-equiv="Cache-control" content="no-cache">
         <title>Dynamic Compressor Manager</title>
 		<link rel="stylesheet" type="text/css" href="../../compiledJS/entrypoint.css">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> 
 		<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Lato|Exo 2|Ubuntu|Cairo"> -->
 		<script src = "../../compiledJS/entrypoint.bundle.js"></script>
 		<meta name="script-def" content="footer-spacing">
 		<meta name="script-def" content="navbar-scroll-indicator">
-		<meta name="script-def" content="quicknav-pos">
+		<!-- <meta name="script-def" content="quicknav-pos"> -->
     </head>
     <body  data-game="se">
         	<div id = "navbar" class="navbar">
@@ -80,15 +80,15 @@
 	</div>
 		<noscript><div style = "text-align: center; width: 100%;"><div id = "nojs-header"><div><img class = "header-alert" src = "../../images/alert.png"></div><div>You have JavaScript disabled; it is recommended you enable it for this site.<br>While the site will (mostly) function with scripts disabled, some sections (eg changelog view, or sortable tables) require it to update the page contents based on your input.<br>Additionally, JS is used to generate page styling, meaning disabling scripts will leave pages ugly, boring, and in some cases poorly arranged in ways that might impede readability.<br>If you have no idea what this means, or have not in fact disabled scripts, try simply reloading the page, as it may not have loaded completely or correctly.</div></div></div></noscript>
 <div id="toc_container">
-<div><div style = "display: inline-block;width: 40%; text-align: left;"><h3>Quick Nav</h3></div><div class = "inset-toggle" style = "width: 60%;"><input type="checkbox" id="toc-follow-toggle" checked> Follow Scroll</div></div>
+<h3>Quick Nav</h3>
 <hr>
 <table class="toc_list">
-	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><div><i class="fas fa-angle-double-up"></i></div></button></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-description">Description</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-description'"><div><i class="fas fa-angle-down"></i></div></button></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-details">Details</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-details'"><div><i class="fas fa-angle-down"></i></div></button></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-scriptvars">Script Options</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-scriptvars'"><div><i class="fas fa-angle-down"></i></div></button></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-sourcecode'"><div><i class="fas fa-angle-down"></i></div></button></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-downloads'"><div><i class="fas fa-angle-down"></i></div></button></td></tr>
+	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><a class = "tocbtn" href="#top"><i class="fas fa-angle-double-up"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-description">Description</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-description"></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-details">Details</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-details"></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-scriptvars">Script Options</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-scriptvars"></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-sourcecode"></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-downloads"></a></td></tr>
 </table>
 </div>        <div id = "textarea" class = "textarea ">
 				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
@@ -177,13 +177,13 @@ Type: string<br>
 <br>
 			<section class = "textblock" id = "text-block-sourcecode">
 			<div class = "modsource">
-				<h3>Source Code</h3>				The source code for Dynamic Compressor Manager can be found here:<button type="button" class = "srcbtn" onclick="window.open('https://github.com/ReikaKalseki/IngameScripts/blob/master/CompressorManager.cs', '_blank'); return false;"><span>GitHub<div class = "spacer"></div><i class="fab fa-github"></i></span></button>
+				<h3>Source Code</h3>				The source code for Dynamic Compressor Manager can be found here:<a class = "srcbtn" href="https://github.com/ReikaKalseki/IngameScripts/blob/master/CompressorManager.cs" target="_blank"><span>GitHub<div class = "spacer"></div><i class="fab fa-github"></i></span></a>
 			</div>
 			</section>
 <br>
 <section class = "textblock" id = "text-block-downloads">
 	<h3>Downloads</h3>
-<button type="button" class = "dlbtn" onclick="window.open('https://steamcommunity.com/sharedfiles/filedetails/?id=2557249549', '_blank'); return false;"><span>Steam Workshop<div class = "spacer"></div><i class="fas fa-download"></i></span></button>
+<a class = "dlbtn" href="https://steamcommunity.com/sharedfiles/filedetails/?id=2557249549" target="_blank"><span>Steam Workshop<div class = "spacer"></div><i class="fas fa-download"></i></span></a>
 </section>
 <footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
 		<hr>

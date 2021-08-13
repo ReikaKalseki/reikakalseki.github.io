@@ -6,12 +6,12 @@
 		<meta http-equiv="Cache-control" content="no-cache">
         <title>FAQ</title>
 		<link rel="stylesheet" type="text/css" href="../../../compiledJS/entrypoint.css">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> 
 		<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Lato|Exo 2|Ubuntu|Cairo"> -->
 		<script src = "../../../compiledJS/entrypoint.bundle.js"></script>
 		<meta name="script-def" content="footer-spacing">
 		<meta name="script-def" content="navbar-scroll-indicator">
-		<meta name="script-def" content="quicknav-pos">
+		<!-- <meta name="script-def" content="quicknav-pos"> -->
 			<meta name="script-def" content="minecraft/precursor">
     </head>
     <body  data-game="minecraft">
@@ -89,13 +89,13 @@
 	</div>
 		<noscript><div style = "text-align: center; width: 100%;"><div id = "nojs-header"><div><img class = "header-alert" src = "../../../images/alert.png"></div><div>You have JavaScript disabled; it is recommended you enable it for this site.<br>While the site will (mostly) function with scripts disabled, some sections (eg changelog view, or sortable tables) require it to update the page contents based on your input.<br>Additionally, JS is used to generate page styling, meaning disabling scripts will leave pages ugly, boring, and in some cases poorly arranged in ways that might impede readability.<br>If you have no idea what this means, or have not in fact disabled scripts, try simply reloading the page, as it may not have loaded completely or correctly.</div></div></div></noscript>
 <div id="toc_container">
-<div><div style = "display: inline-block;width: 40%; text-align: left;"><h3>Quick Nav</h3></div><div class = "inset-toggle" style = "width: 60%;"><input type="checkbox" id="toc-follow-toggle" checked> Follow Scroll</div></div>
+<h3>Quick Nav</h3>
 <hr>
 <table class="toc_list">
-	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><div><i class="fas fa-angle-double-up"></i></div></button></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-general">General</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-general'"><div><i class="fas fa-angle-down"></i></div></button></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-issues">Issues</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-issues'"><div><i class="fas fa-angle-down"></i></div></button></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-features">Features</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-features'"><div><i class="fas fa-angle-down"></i></div></button></td></tr>
+	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><a class = "tocbtn" href="#top"><i class="fas fa-angle-double-up"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-general">General</a></td><td><a class = "tocbtn fas fa-bars" href="#text-block-general"></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-issues">Issues</a></td><td><a class = "tocbtn fas fa-bars" href="#text-block-issues"></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-features">Features</a></td><td><a class = "tocbtn fas fa-bars" href="#text-block-features"></a></td></tr>
 </table>
 </div>        <div id = "textarea" class = "textarea ">
 				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
@@ -107,7 +107,7 @@
 		<h4 class = "faq-entry" style = "margin-top: 18px;">"Can I use this mod in a modpack?"</h4>
 		That depends on what you mean. If you want to install it in your own personal pack, that is fine, as long as you do not distribute it.If you mean a private pack for a server with you and friends, that is also fine, but I appreciate being notified. Like personal packs, these may not be distributed outside your group, and may not be monetized. A couple mods have additional rules; see them for details.If you mean a public pack that you intend to distribute to hundreds or thousands of players, or leave available to anyone, you must ask my permission. If I grant it, you may include it in the pack as long as dismantling the pack and distributing the constituent mods is disallowed, as well as some other situational conditions.See the <a href="../../../minecraft/pages/perms/packrules.html">Pack Rules</a> for more details.
 		<h4 class = "faq-entry" style = "margin-top: 18px;">"Mojang said people can do whatever they want with their mods, I'm going to make a copy/ripoff/modified version/distribute/sell it/etc and there's nothing you can do about it!"</h4>
-		One, that is in fact a misinterpretation of the recent statement of Mojang's Mods Terms of Use, which do not state that anyone can take and do "whatever they like" with mods.Two, because of the misunderstanding, Mojang has since revoked this statement, replacing it with the original "we can incorporate any idea from any mod, and you may not sell the mod" rules that have been in place since 2011.Three, the code and assets are separate from the content, and I own the copyrights to them. Even if the Mojang ToS said you could take my code or assets, it would have no power because copyright law overrides it.
+		One, that is in fact a misinterpretation of the recent statement of Mojang's Mods Terms of Use, which do not state that anyone can take and do "whatever they like" with mods.<br>Two, because of the misunderstanding, Mojang has since revoked this statement, replacing it with the original "we can incorporate any idea from any mod, and you may not sell the mod" rules that have been in place since 2011.<br>Three, the code and assets are separate from the content, and I own the copyrights to them. Even if the Mojang ToS said you could take my code or assets, it would have no power because copyright law overrides it.
 		<h4 class = "faq-entry" style = "margin-top: 18px;">"Can I use DragonAPI to help with the development of my mod?"</h4>
 		You may use DragonAPI with your mod and thus make it a dependency, so long as you do not include your own copy of DragonAPI; Including your own copy makes it impossible for me to control version updates. Link to my project instead (not directly to a given download file, which will break as soon as the API updates). Also, because of the fact that much of your functionality will be based on my work, such a mod cannot be used in a competition such as ModJam. See the <a href="../../../minecraft/pages/perms/license.html">license</a> for more details.
 		<h4 class = "faq-entry" style = "margin-top: 18px;">"Will you (ever) update to [version]?"</h4>

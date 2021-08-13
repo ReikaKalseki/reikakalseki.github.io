@@ -6,12 +6,12 @@
 		<meta http-equiv="Cache-control" content="no-cache">
         <title>Change Logs</title>
 		<link rel="stylesheet" type="text/css" href="../../../compiledJS/entrypoint.css">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> 
 		<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Lato|Exo 2|Ubuntu|Cairo"> -->
 		<script src = "../../../compiledJS/entrypoint.bundle.js"></script>
 		<meta name="script-def" content="footer-spacing">
 		<meta name="script-def" content="navbar-scroll-indicator">
-		<meta name="script-def" content="quicknav-pos">
+		<!-- <meta name="script-def" content="quicknav-pos"> -->
 			<meta name="script-def" content="changeloader">
     </head>
     <body  data-game="se">
@@ -81,13 +81,13 @@
 	</div>
 		<noscript><div style = "text-align: center; width: 100%;"><div id = "nojs-header"><div><img class = "header-alert" src = "../../../images/alert.png"></div><div>You have JavaScript disabled; it is recommended you enable it for this site.<br>While the site will (mostly) function with scripts disabled, some sections (eg changelog view, or sortable tables) require it to update the page contents based on your input.<br>Additionally, JS is used to generate page styling, meaning disabling scripts will leave pages ugly, boring, and in some cases poorly arranged in ways that might impede readability.<br>If you have no idea what this means, or have not in fact disabled scripts, try simply reloading the page, as it may not have loaded completely or correctly.</div></div></div></noscript>
 <div id="toc_container">
-<div><div style = "display: inline-block;width: 40%; text-align: left;"><h3>Quick Nav</h3></div><div class = "inset-toggle" style = "width: 60%;"><input type="checkbox" id="toc-follow-toggle" checked> Follow Scroll</div></div>
+<h3>Quick Nav</h3>
 <hr>
 <table class="toc_list">
-	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><div><i class="fas fa-angle-double-up"></i></div></button></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-intro">Introduction</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-intro'"><div><i class="fas fa-angle-down"></i></div></button></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-mods">Mod List And Info</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-mods'"><div><i class="fas fa-angle-down"></i></div></button></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-changes">Change Viewer</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-changes'"><div><i class="fas fa-angle-down"></i></div></button></td></tr>
+	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><a class = "tocbtn" href="#top"><i class="fas fa-angle-double-up"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-intro">Introduction</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-intro"></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-mods">Mod List And Info</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-mods"></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-changes">Change Viewer</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-changes"></a></td></tr>
 </table>
 </div>        <div id = "textarea" class = "textarea ">
 				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
@@ -128,147 +128,147 @@ These are the changelogs for all the mods going back as far as they have been ke
 <td><a href = "../../../se/scripts/airlocks.html">Airlock Protection And Indicators</a></td>
 <td>Any</td>
 <td>2/4/2019 [Any] - 25/7/2021 [Any]</td>
-<td>26/7/2021 [Any]</td>
+<td>31/7/2021 [Any]</td>
 <td><input type="checkbox" class="modchangecheck" data-value = "airlocks" data-mod = "Airlock Protection And Indicators" checked></td>
 </tr>
 <tr>
 <td><a href = "../../../se/blueprints/anaconda.html">Dragon Industries - Anaconda</a></td>
 <td>Any</td>
 <td>None</td>
-<td>26/7/2021 [Any]</td>
+<td>31/7/2021 [Any]</td>
 <td><input type="checkbox" class="modchangecheck" data-value = "anaconda" data-mod = "Dragon Industries - Anaconda" checked></td>
 </tr>
 <tr>
 <td><a href = "../../../se/blueprints/anaconda2.html">Custom-Design Anaconda</a></td>
 <td>Any</td>
 <td>16/12/2019 [Any] - 25/7/2021 [Any]</td>
-<td>26/7/2021 [Any]</td>
+<td>31/7/2021 [Any]</td>
 <td><input type="checkbox" class="modchangecheck" data-value = "anaconda2" data-mod = "Custom-Design Anaconda" checked></td>
 </tr>
 <tr>
 <td><a href = "../../../se/scripts/cargomanager.html">Refinery and Cargo Manager</a></td>
 <td>Any</td>
 <td>18/4/2019 [Any] - 25/7/2021 [Any]</td>
-<td>26/7/2021 [Any]</td>
+<td>31/7/2021 [Any]</td>
 <td><input type="checkbox" class="modchangecheck" data-value = "cargomanager" data-mod = "Refinery and Cargo Manager" checked></td>
 </tr>
 <tr>
 <td><a href = "../../../se/scripts/compressors.html">Dynamic Compressor Manager</a></td>
 <td>Any</td>
 <td>None</td>
-<td>26/7/2021 [Any]</td>
+<td>31/7/2021 [Any]</td>
 <td><input type="checkbox" class="modchangecheck" data-value = "compressors" data-mod = "Dynamic Compressor Manager" checked></td>
 </tr>
 <tr>
 <td><a href = "../../../se/mods/electronicwarfare.html">Dragon Industries - Electronic Warfare</a></td>
 <td>Any</td>
 <td>None</td>
-<td>26/7/2021 [Any]</td>
+<td>31/7/2021 [Any]</td>
 <td><input type="checkbox" class="modchangecheck" data-value = "electronicwarfare" data-mod = "Dragon Industries - Electronic Warfare" checked></td>
 </tr>
 <tr>
 <td><a href = "../../../se/mods/cargoships.html">Extra Cargo Ships Variety Pack</a></td>
 <td>Any</td>
-<td>21/12/2017 [Any] - 26/7/2021 [Any]</td>
-<td>26/7/2021 [Any]</td>
+<td>21/12/2017 [Any] - 30/7/2021 [Any]</td>
+<td>31/7/2021 [Any]</td>
 <td><input type="checkbox" class="modchangecheck" data-value = "cargoships" data-mod = "Extra Cargo Ships Variety Pack" checked></td>
 </tr>
 <tr>
 <td><a href = "../../../se/blueprints/dropship.html">Federal Dropship - Dragon Industries</a></td>
 <td>Any</td>
 <td>None</td>
-<td>26/7/2021 [Any]</td>
+<td>31/7/2021 [Any]</td>
 <td><input type="checkbox" class="modchangecheck" data-value = "dropship" data-mod = "Federal Dropship - Dragon Industries" checked></td>
 </tr>
 <tr>
 <td><a href = "../../../se/mods/gastanks.html">Dragon Industries - Gas Compressor</a></td>
 <td>Any</td>
 <td>25/12/2019 [Any] - 1/7/2021 [Any]</td>
-<td>26/7/2021 [Any]</td>
+<td>31/7/2021 [Any]</td>
 <td><input type="checkbox" class="modchangecheck" data-value = "gastanks" data-mod = "Dragon Industries - Gas Compressor" checked></td>
 </tr>
 <tr>
 <td><a href = "../../../se/mods/lowgravgen.html">Lower Priority Gravity Gen</a></td>
 <td>Any</td>
 <td>None</td>
-<td>26/7/2021 [Any]</td>
+<td>31/7/2021 [Any]</td>
 <td><input type="checkbox" class="modchangecheck" data-value = "lowgravgen" data-mod = "Lower Priority Gravity Gen" checked></td>
 </tr>
 <tr>
 <td><a href = "../../../se/scripts/hangar.html">Automatic Hangar Air and Door Control</a></td>
 <td>Any</td>
 <td>15/3/2019 [Any] - 25/7/2021 [Any]</td>
-<td>26/7/2021 [Any]</td>
+<td>31/7/2021 [Any]</td>
 <td><input type="checkbox" class="modchangecheck" data-value = "hangar" data-mod = "Automatic Hangar Air and Door Control" checked></td>
 </tr>
 <tr>
 <td><a href = "../../../se/blueprints/harvester.html">Harvester</a></td>
 <td>Any</td>
 <td>None</td>
-<td>26/7/2021 [Any]</td>
+<td>31/7/2021 [Any]</td>
 <td><input type="checkbox" class="modchangecheck" data-value = "harvester" data-mod = "Harvester" checked></td>
 </tr>
 <tr>
 <td><a href = "../../../se/mods/industrialthruster.html">Industrial Thruster - Dragon Industries Edition</a></td>
 <td>Any</td>
 <td>None</td>
-<td>26/7/2021 [Any]</td>
+<td>31/7/2021 [Any]</td>
 <td><input type="checkbox" class="modchangecheck" data-value = "industrialthruster" data-mod = "Industrial Thruster - Dragon Industries Edition" checked></td>
 </tr>
 <tr>
 <td><a href = "../../../se/scripts/jumpcontrol.html">Jump Gate Control</a></td>
 <td>Any</td>
 <td>None</td>
-<td>26/7/2021 [Any]</td>
+<td>31/7/2021 [Any]</td>
 <td><input type="checkbox" class="modchangecheck" data-value = "jumpcontrol" data-mod = "Jump Gate Control" checked></td>
 </tr>
 <tr>
 <td><a href = "../../../se/blueprints/jumpgate.html">Jump Gate</a></td>
 <td>Any</td>
 <td>None</td>
-<td>26/7/2021 [Any]</td>
+<td>31/7/2021 [Any]</td>
 <td><input type="checkbox" class="modchangecheck" data-value = "jumpgate" data-mod = "Jump Gate" checked></td>
 </tr>
 <tr>
 <td><a href = "../../../se/mods/oreproc.html">Dragon Industries - Expanded Ore Processing</a></td>
 <td>Any</td>
 <td>4/4/2019 [Any] - 14/4/2019 [Any]</td>
-<td>26/7/2021 [Any]</td>
+<td>31/7/2021 [Any]</td>
 <td><input type="checkbox" class="modchangecheck" data-value = "oreproc" data-mod = "Dragon Industries - Expanded Ore Processing" checked></td>
 </tr>
 <tr>
 <td><a href = "../../../se/scripts/powercontrol.html">Tiered Power Manager</a></td>
 <td>Any</td>
 <td>None</td>
-<td>26/7/2021 [Any]</td>
+<td>31/7/2021 [Any]</td>
 <td><input type="checkbox" class="modchangecheck" data-value = "powercontrol" data-mod = "Tiered Power Manager" checked></td>
 </tr>
 <tr>
 <td><a href = "../../../se/scripts/o2control.html">Pressurization Control And Display</a></td>
 <td>Any</td>
 <td>22/11/2017 [Any] - 25/7/2021 [Any]</td>
-<td>26/7/2021 [Any]</td>
+<td>31/7/2021 [Any]</td>
 <td><input type="checkbox" class="modchangecheck" data-value = "o2control" data-mod = "Pressurization Control And Display" checked></td>
 </tr>
 <tr>
 <td><a href = "../../../se/blueprints/salvager.html">Salvager</a></td>
 <td>Any</td>
 <td>None</td>
-<td>26/7/2021 [Any]</td>
+<td>31/7/2021 [Any]</td>
 <td><input type="checkbox" class="modchangecheck" data-value = "salvager" data-mod = "Salvager" checked></td>
 </tr>
 <tr>
 <td><a href = "../../../se/blueprints/spacetruck.html">Space Truck</a></td>
 <td>Any</td>
 <td>None</td>
-<td>26/7/2021 [Any]</td>
+<td>31/7/2021 [Any]</td>
 <td><input type="checkbox" class="modchangecheck" data-value = "spacetruck" data-mod = "Space Truck" checked></td>
 </tr>
 <tr>
 <td><a href = "../../../se/blueprints/waypoint.html">Waypoint Station</a></td>
 <td>Any</td>
-<td>None</td>
-<td>26/7/2021 [Any]</td>
+<td>25/7/2021 [Any] - 31/7/2021 [Any]</td>
+<td>31/7/2021 [Any]</td>
 <td><input type="checkbox" class="modchangecheck" data-value = "waypoint" data-mod = "Waypoint Station" checked></td>
 </tr>
 </table>
@@ -276,8 +276,9 @@ These are the changelogs for all the mods going back as far as they have been ke
 <br><br>
 <div style = "display: none">
 	<div id = "mod-version-list-Any">
-			<div class = "mod-version-list-entry" data-date = "July 26, 2021" data-modset = "cargoships">26/7/2021</div>
-			<div class = "mod-version-list-entry" data-date = "July 25, 2021" data-modset = "airlocks|hangar|cargomanager|o2control|anaconda2">25/7/2021</div>
+			<div class = "mod-version-list-entry" data-date = "July 31, 2021" data-modset = "waypoint">31/7/2021</div>
+			<div class = "mod-version-list-entry" data-date = "July 30, 2021" data-modset = "cargoships|waypoint">30/7/2021</div>
+			<div class = "mod-version-list-entry" data-date = "July 25, 2021" data-modset = "airlocks|waypoint|hangar|cargomanager|o2control|anaconda2">25/7/2021</div>
 			<div class = "mod-version-list-entry" data-date = "July 1, 2021" data-modset = "gastanks">1/7/2021</div>
 			<div class = "mod-version-list-entry" data-date = "December 25, 2019" data-modset = "gastanks">25/12/2019</div>
 			<div class = "mod-version-list-entry" data-date = "December 16, 2019" data-modset = "anaconda2">16/12/2019</div>
@@ -293,10 +294,22 @@ These are the changelogs for all the mods going back as far as they have been ke
 			<div class = "mod-version-list-entry" data-date = "December 21, 2017" data-modset = "cargoships">21/12/2017</div>
 			<div class = "mod-version-list-entry" data-date = "November 22, 2017" data-modset = "o2control">22/11/2017</div>
 	</div>
-			<div class = "changelog-data-cache" id = "Any|26/7/2021|cargoships"><ul class = "changelist">				
+			<div class = "changelog-data-cache" id = "Any|31/7/2021|waypoint"><ul class = "changelist">				
+					<li>Fixed missing conveyor connection between external cargo ports on blast furnace pod</li>
+					<li>Applied proper names to all cargo containers and connectors</li>
+					<li>Fixed some terminal displays</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "Any|30/7/2021|cargoships"><ul class = "changelist">				
 					<li>Added randomized and valuable loot, themed by ship type</li>
 					<li>Updated onboard scripts</li>
 					<li>Added new defence mechanisms</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "Any|30/7/2021|waypoint"><ul class = "changelist">				
+					<li>Fixed missing conveyor connection for grinders/reactor to the rest of the station</li>
+					<li>Added control sensor for grinder bay</li>
+					<li>Updated power control script</li>
 </ul>
 			</div>
 			<div class = "changelog-data-cache" id = "Any|25/7/2021|airlocks"><ul class = "changelist">				
@@ -330,6 +343,10 @@ These are the changelogs for all the mods going back as far as they have been ke
 			</div>
 			<div class = "changelog-data-cache" id = "Any|25/7/2021|o2control"><ul class = "changelist">				
 					<li>Updated visualization of depressurized sections</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "Any|25/7/2021|waypoint"><ul class = "changelist">				
+					<li>Creation and Release</li>
 </ul>
 			</div>
 			<div class = "changelog-data-cache" id = "Any|1/7/2021|gastanks"><ul class = "changelist">				

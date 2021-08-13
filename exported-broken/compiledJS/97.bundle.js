@@ -1,2 +1,0 @@
-(self.webpackChunksitecore=self.webpackChunksitecore||[]).push([[97],{97:(t,e,n)=>{"use strict";function i(){var t=this.dataset.type;"link"==t?window.open(this.dataset.url):"video"==t?function(t){let e='<iframe width="960" height="540" src="';e+=t,e+='"></iframe>',document.getElementById("spotlight-box").innerHTML=e}(this.dataset.url):alert("Unrecognized spotlight format '"+t+"'!")}function s(){for(var t=document.getElementsByClassName("spotbtn"),e=0;e<t.length;e++){let n=t[e];n.onclick=i.bind(n)}}n.r(e),n.d(e,{default:()=>s})}}]);
-//# sourceMappingURL=97.bundle.js.map

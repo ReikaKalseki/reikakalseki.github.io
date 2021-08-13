@@ -6,12 +6,12 @@
 		<meta http-equiv="Cache-control" content="no-cache">
         <title>Space Engineers Main</title>
 		<link rel="stylesheet" type="text/css" href="../compiledJS/entrypoint.css">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> 
 		<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Lato|Exo 2|Ubuntu|Cairo"> -->
 		<script src = "../compiledJS/entrypoint.bundle.js"></script>
 		<meta name="script-def" content="footer-spacing">
 		<meta name="script-def" content="navbar-scroll-indicator">
-		<meta name="script-def" content="quicknav-pos">
+		<!-- <meta name="script-def" content="quicknav-pos"> -->
     </head>
     <body  data-game="se">
         	<div id = "navbar" class="navbar">
@@ -80,12 +80,15 @@
 	</div>
 		<noscript><div style = "text-align: center; width: 100%;"><div id = "nojs-header"><div><img class = "header-alert" src = "../images/alert.png"></div><div>You have JavaScript disabled; it is recommended you enable it for this site.<br>While the site will (mostly) function with scripts disabled, some sections (eg changelog view, or sortable tables) require it to update the page contents based on your input.<br>Additionally, JS is used to generate page styling, meaning disabling scripts will leave pages ugly, boring, and in some cases poorly arranged in ways that might impede readability.<br>If you have no idea what this means, or have not in fact disabled scripts, try simply reloading the page, as it may not have loaded completely or correctly.</div></div></div></noscript>
 <div id="toc_container">
-<div><div style = "display: inline-block;width: 40%; text-align: left;"><h3>Quick Nav</h3></div><div class = "inset-toggle" style = "width: 60%;"><input type="checkbox" id="toc-follow-toggle" checked> Follow Scroll</div></div>
+<h3>Quick Nav</h3>
 <hr>
 <table class="toc_list">
-	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#top'"><div><i class="fas fa-angle-double-up"></i></div></button></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-overview">Overview</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-overview'"><div><i class="fas fa-angle-down"></i></div></button></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-modlist">Content</a></td><td><button type="button" class = "tocbtn" onclick="location.href='#text-block-modlist'"><div><i class="fas fa-angle-down"></i></div></button></td></tr>
+	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><a class = "tocbtn" href="#top"><i class="fas fa-angle-double-up"></i></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-overview">Overview</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-overview"></a></td></tr>
+		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-modlist">Content</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-modlist"></a></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-modlist-mod">Mods</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-modlist-mod"></a></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-modlist-blueprint">Blueprints</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-modlist-blueprint"></a></td></tr>
+		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-modlist-script">Scripts</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-modlist-script"></a></td></tr>
 </table>
 </div>        <div id = "textarea" class = "textarea ">
 				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
@@ -100,7 +103,7 @@
 <section class = "textblock" id = "text-block-modlist">
 	<h3>Content</h3>
 	The following is a full list of my mods, blueprints, and  scripts for Space Engineers, sorted alphabetically:<br>
-		<h4>Mods</h4>
+<section class = "textblock" id = "text-block-modlist-mod">		<h4>Mods</h4>
 		<ul style = "margin-top: 2px">
 				<li><a href = "../se/mods/electronicwarfare.html">Dragon Industries - Electronic Warfare</a> - Adds a handful of electronic weaponry that focuses on nondestructive incapacitation or acquisition of a target.</li>
 				<li><a href = "../se/mods/cargoships.html">Extra Cargo Ships Variety Pack</a> - Adds a variety of new and unique NPC cargo ships, with new styles and features not present in vanilla.</li>
@@ -109,7 +112,7 @@
 				<li><a href = "../se/mods/industrialthruster.html">Industrial Thruster - Dragon Industries Edition</a> - An updated and rebalanced version of the popular mod with the giant thruster.</li>
 				<li><a href = "../se/mods/oreproc.html">Dragon Industries - Expanded Ore Processing</a> - Adds a variety of new ore processing blocks to improve speed, efficiency, or both for various ore types.</li>
 		</ul>
-		<h4>Blueprints</h4>
+</section><section class = "textblock" id = "text-block-modlist-blueprint">		<h4>Blueprints</h4>
 		<ul style = "margin-top: 2px">
 				<li><a href = "../se/blueprints/anaconda.html">Dragon Industries - Anaconda</a></li>
 				<li><a href = "../se/blueprints/anaconda2.html">Custom-Design Anaconda</a></li>
@@ -120,7 +123,7 @@
 				<li><a href = "../se/blueprints/spacetruck.html">Space Truck</a> - An early-to-mid-game ship capable of acting as a ferry to space from high gravity worlds.</li>
 				<li><a href = "../se/blueprints/waypoint.html">Waypoint Station</a> - A very large ore handling, recharge, and refuel station.</li>
 		</ul>
-		<h4>Scripts</h4>
+</section><section class = "textblock" id = "text-block-modlist-script">		<h4>Scripts</h4>
 		<ul style = "margin-top: 2px">
 				<li><a href = "../se/scripts/airlocks.html">Airlock Protection And Indicators</a> - Automates the safe operation of airlocks.</li>
 				<li><a href = "../se/scripts/cargomanager.html">Refinery and Cargo Manager</a> - Overhauls cargo transport within a conveyor network to more efficiently process ores and distribute materials.</li>
@@ -130,7 +133,7 @@
 				<li><a href = "../se/scripts/powercontrol.html">Tiered Power Manager</a> - Manages the use of power sources to avoid wasting energy using reactors when unnecessary or to charge batteries.</li>
 				<li><a href = "../se/scripts/o2control.html">Pressurization Control And Display</a> - Handles the pressurization of subsections in a ship or station and reacts to leaks without needlessly impacting traversibility.</li>
 		</ul>
-</section>
+</section></section>
 <footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
 		<hr>
 		<div id = "footer-spacing">

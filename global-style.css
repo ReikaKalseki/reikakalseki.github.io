@@ -13,23 +13,34 @@ html {
 	font-weight: 500;
 }
 
-body {
+body { /** My viewport size is 1920x1007 -> setTimeout(()=>alert(window.innerWidth + ":" + window.innerHeight), 2000)*/
 	margin: 0px !important;
 	padding: 0px !important;
 	font-size: 97%;
-	min-height: 100vh;/*
+	min-height: 100vh;
 	overflow-x: hidden;
-	overflow-y: hidden;
-	height: 100%;
-	width: 100%;
-	position: absolute;
-	top:0;
-	left:0;*/
-	transform: translate(0);
+	/*overflow-y: hidden; 
+	height: 100%;*/
+	width: 100vw;
+	
+     display: grid;
+    grid-template-areas:
+        "header header header"
+         "quick main space";
+		 /*"gap gap gap";*/
+		 grid-template-columns: 1fr min(2200px, max(67%, 720px)) 1fr;
+		 grid-template-rows: var(--navbarHeight) 1fr;/* 6px;*/
+     gap: 12px 18px;
 	
 	/** Firefox scroll */
 	scrollbar-width: thin;
 	scrollbar-color: #555 #ccc;
+}
+
+@media only screen and (max-width: 750px) {
+  body {		 
+	grid-template-columns: 1fr 90% 1fr !important;
+  }
 }
 
 main {
@@ -40,6 +51,10 @@ main {
 
 b {
 	font-size: 99%;
+}
+
+.warncolor {
+	color: #e60000;
 }
 
 #footer-spacing {
@@ -190,16 +205,22 @@ display: inline-block;
 }
 
 #toc_container {
-	border: 2Q groove #777;
-	width: auto;
+	grid-area: quick;
+	border: 2Q groove #777;/*
 	width: 14%;
-	right: 84.4%;
+	right: 84.4%;*/
 	/*font-size: 105%;*/
 	font-size: 0.83vw;
-	position:absolute;
-	margin: auto;
+	position: sticky;
+    width: min(14.5vw, 95%);
+	/*margin: auto;*/
+	margin: 0;
 	display:block;
-	margin-top: 12px;
+	margin-left: 6px;
+    margin-bottom: auto;
+	margin-top: -1.5px;
+    left: 0;
+    top: 0;
 	font-weight: 600;
 	background-image: url("images/text-bcg.png");
 	padding-left: 9px;
@@ -217,22 +238,28 @@ display: inline-block;
 
 .tocbtn {
   font-family: "Source Sans Pro", "Ubuntu", "Verdana", sans-serif;
+  text-decoration: none;
   display: inline-block;
   background-color: var(--blueHighlight);
   border: none;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   text-align: center;
-  padding-left: 2px;
-  padding-right: 2px;
-  padding-bottom: 1px;
-  padding-top: 2px;/*
+ /* padding-left: 1px;*/
+  padding-right: 0px;
+  padding-bottom: 0px;
+  /*padding-top: 1px;*//*
   width: 24px;
   height: 24px;*/
   width: 1.25vw;
   height: 1.25vw;
-  transition: all 0.5s;
+  transition: background 0.5s, color 0.5s;
   cursor: pointer;
 	z-index: 25;
+	font-size: 80%;
+	
+	align-items: center;
+display: flex !important;
+justify-content: center;
 }
 
 #toc_container li, #toc_container ul li{
@@ -289,11 +316,12 @@ display: inline-block;
   font-size: 125%;
   padding: 6px;
   width: 100%;
-  transition: all 0.5s;
+  transition: background 0.5s, color 0.5s;
   cursor: pointer;
   margin: 5px;
 	z-index: 25;
 	letter-spacing: 1px;
+	text-decoration: none;
 }
 
 .rowicon {
@@ -416,27 +444,55 @@ audio {
     display: block;
 }
 
-#background-content {
-  position: absolute;
+#background-content {/*
+  position: absolute;*/
   padding: 0px;
   margin: 0px;
-  display: flex;
+  display: grid;
+  grid-template: "all" 1fr / 1fr;
   z-index: -1;
   background-color: black;
 	overflow-x: hidden;
-	overflow-y: hidden;
+	overflow-y: hidden;/*
 	height:100%;
-	width:100%;
+	width:100%;*/
+	grid-column: 1 / -1;
+	grid-row: 1 / -1;
 }
 
+#background-content > * {
+  grid-area: 1/1/-1/-1;
+}
+
+.entity-layer, .tile-layer .entity-layer {
+  display: grid;
+  grid_template: 1fr / 1fr;
+}
+.entity-layer > *, .tile-layer .entity-layer > * {
+  grid-area: 1/1/-1/-1;
+}
+/*
+#background-content > * {
+  height: 0;
+  overflow: visible;
+  width: 0;
+}*/
+/*
+#background-content > div {
+	grid-column: 1 / -1;
+	grid-row: 1 / -1;
+}
+*/
 .tile-layer {/*
   display: flex;
-  z-index: -1;*/
+  z-index: -1;
   position: absolute;
   left: 0;
   top: 0;
   flex-direction: column;
-  flex-wrap: nowrap;
+  flex-wrap: nowrap;*/
+  grid-column: 1 / -1;
+	grid-row: 1 / -1;
 }
 
 .tile-layer div {
@@ -447,17 +503,19 @@ audio {
 }
 
 .textarea {
-	margin: auto;
-	display:block;
+	/*margin: auto;*/
+	margin: 0;
+	display:block;/*
 	margin-top: 12px;
-	width: max(67%, 720px);
+	width: max(67%, 720px);*/
+	grid-area: main;
 	background-image: url("images/text-bcg.png");
 	padding-left: 12px;
 	padding-right: 12px;
 	padding-top: 6px;
 	padding-bottom: 12px;
 	border: none;
-	/*margin-bottom: 8px;*/
+	margin-bottom: 8px;
 	/*pointer-events: none;*/
 	/*overflow: hidden;*/
 }
@@ -518,12 +576,12 @@ audio {
 	color: #fff !important;
 	text-shadow: 0px 0px 5px #000 !important;
 }
-
+/*
 @media only screen and (max-width: 720px) {
   .textarea, .footer-textarea, .textarea-core, .textarea-other-project, .textarea-error {
     max-width: 95% !important;
   }
-}
+}*/
 
 @media only screen and (max-width: 1075px) {
   
@@ -612,13 +670,18 @@ audio {
     background: var(--navBCG) none repeat scroll 0% 50%;
 	color: #ffffff;
 	text-align: center;
-	transition: 0.3s;
+	transition: background 0.3s, color 0.3s;
 	font-family: "Exo 2", "Ubuntu", "Verdana", sans-serif !important;
 	font-size: 0.9896vw;
 	overflow-x: hidden;
 	z-index: 4;
   height: var(--navbarHeight);
   display: flex;
+  grid-area: header;
+  user-select: none;
+	-webkit-user-drag: none;
+	-webkit-app-region: no-drag;
+	cursor: pointer;
 }
 
 .navbar a {
@@ -683,7 +746,7 @@ transition: opacity 0.25s linear; /* could also use ease-in-out for a more "acce
   padding: 7px 0px;
 	text-decoration: none;
 	font-weight: bold;
-	transition: 0.3s;
+	transition: background 0.3s, color 0.3s;
   width: var(--navbarWidth);
   height: var(--navbarHeight);
 	font-family: "Exo 2", "Ubuntu", "Verdana", sans-serif !important;
@@ -707,7 +770,7 @@ transition: opacity 0.25s linear; /* could also use ease-in-out for a more "acce
   width: var(--navbarWidth);
   height: var(--navbarHeight);
   font-family: inherit;
-	transition: 0.3s;
+	transition: background 0.3s, color 0.3s;
   margin: 0;
 	font-family: "Exo 2", "Ubuntu", "Verdana", sans-serif !important;
 	box-sizing:border-box;
@@ -735,7 +798,7 @@ transition: opacity 0.25s linear; /* could also use ease-in-out for a more "acce
 	border-top: 1px solid #000000;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-	transition: 0.15s;
+	transition: background 0.15s, color 0.15s;
 	font-weight: normal;
 	font-family: "Exo 2", "Ubuntu", "Verdana", sans-serif;
       background: var(--navBCG) none repeat scroll 0% 50%;
@@ -998,7 +1061,7 @@ tr:nth-child(even) {
   padding: 4px;
   padding-right: 6px !important;
   width: 115px;
-  transition: all 0.5s;
+  transition: background 0.5s, color 0.5s;
   cursor: pointer;
   margin: 5px;
 	z-index: 25;
@@ -1077,7 +1140,8 @@ tr:nth-child(even) {
 	background: repeating-linear-gradient(  45deg,  #ADE6FF,  #ADE6FF 10px,  #7EC1E5 10px,  #7EC1E5 20px);
 	color: #000 !important;
 	background-clip: border-box !important;
-	transition: all 0.5s ease-in-out;
+	/*transition: all 0.5s ease-in-out;*/
+	transition: background 0.5s, color 0.5s;
 }
 
 .spotbtn {
@@ -1091,7 +1155,7 @@ tr:nth-child(even) {
   font-size: 125%;
   padding: 6px;
   width: 100%;
-  transition: all 0.5s;
+  transition: background 0.5s, color 0.5s;
   cursor: pointer;
   margin: 5px;
 	z-index: 25;
