@@ -460,7 +460,7 @@ audio {
 	grid-row: 1 / -1;
 }
 
-#background-content > div {
+#background-content > * {
   grid-area: 1/1/-1/-1;
 }
 
