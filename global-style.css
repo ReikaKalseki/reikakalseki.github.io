@@ -71,6 +71,7 @@ b {
 	background-repeat:   no-repeat;
 	overflow-y: hidden;
 	max-height: 100vh;
+	display: block;
 }
 
 .colorized a, b a, i a {
