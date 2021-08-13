@@ -460,6 +460,18 @@ audio {
 	grid-row: 1 / -1;
 }
 
+#background-content > div {
+  grid-area: 1/1/-1/-1;
+}
+
+.entity-layer {
+  display: grid;
+  grid_template: 1fr / 1fr;
+}
+.entity-layer > * {
+  grid-area: 1/1/-1/-1;
+}
+
 #background-content > * {
   height: 0;
   overflow: visible;
