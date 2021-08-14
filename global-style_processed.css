@@ -4,6 +4,7 @@
 	--navbarEntryHeight: max(1vh,.6cm,1.25em);
 	--blueHighlight: #22aaff;
 	--navBCG: #323232;
+	--rowGap: 0.813890396093326rem;
 }
 
 html {
@@ -30,7 +31,7 @@ body { /** My viewport size is 1920x1007 -> setTimeout(()=>alert(window.innerWid
 		 /*"gap gap gap";*/
 		 grid-template-columns: 1fr min(149.21323928377643rem, max(67%, 48.83342376559956rem)) 1fr;
 		 grid-template-rows: var(--navbarHeight) 1fr;/* 0.406945198046663rem;*/
-     gap: 0.813890396093326rem 1.220835594139989rem;
+     gap: var(--rowGap) 1.220835594139989rem;
 	
 	/** Firefox scroll */
 	scrollbar-width: thin;
@@ -214,6 +215,7 @@ display: inline-block;
 	font-size: 0.83vw;
 	position: sticky;
     width: min(14.5vw, 95%);
+	max-height: calc(95vh - calc(var(--rowGap) + var(--navbarHeight)));
 	/*margin: auto;*/
 	margin: 0;
 	display:block;
@@ -229,7 +231,8 @@ display: inline-block;
 	padding-top: 0.3391209983722192rem;
 	padding-bottom: 0.3391209983722192rem;
   white-space: nowrap;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   text-overflow: ellipsis;
 }
 
