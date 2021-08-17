@@ -215,7 +215,7 @@ display: inline-block;
 	font-size: 0.83vw;
 	position: sticky;
     width: min(14.5vw, 95%);
-	max-height: calc(95vh - calc(var(--rowGap) + var(--navbarHeight)));
+	max-height: calc(98vh - calc(var(--rowGap) + var(--navbarHeight)));
 	/*margin: auto;*/
 	margin: 0;
 	display:block;
@@ -591,6 +591,21 @@ audio {
   
   #toc_container {
 	  display: none;
+  }
+}
+
+@media only screen and (max-width: 1450px) {
+  
+  .tocbtn {
+	  display: none !important;
+  }
+  
+  .toc-entry-label {
+	  width: 100% !important;
+  }
+  
+  .toc-entry {
+	  font-size: 118% !important;
   }
 }
 
