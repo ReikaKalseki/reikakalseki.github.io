@@ -1079,7 +1079,8 @@ tr:nth-child(even) {
   font-size: 115%;
   padding: 4px;
   padding-right: 6px !important;
-  width: 115px;
+  /*width: 115px;*/
+  width: 6vw;
   transition: background 0.5s, color 0.5s;
   cursor: pointer;
   margin: 5px;
@@ -1105,7 +1106,8 @@ tr:nth-child(even) {
 }
 
 .verbtn-mod {
-	 width: 140px !important;
+	 /*width: 140px !important;*/
+	 width: 7.5vw !important;
 }
 
 .gamever-width, .modver-width {

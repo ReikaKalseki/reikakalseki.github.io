@@ -1079,7 +1079,8 @@ tr:nth-child(even) {
   font-size: 115%;
   padding: 0.27129679869777534rem;
   padding-right: 0.406945198046663rem !important;
-  width: 7.799782962561041rem;
+  /*width: 7.799782962561041rem;*/
+  width: 6vw;
   transition: background 0.5s, color 0.5s;
   cursor: pointer;
   margin: 0.3391209983722192rem;
@@ -1105,7 +1106,8 @@ tr:nth-child(even) {
 }
 
 .verbtn-mod {
-	 width: 9.495387954422137rem !important;
+	 /*width: 9.495387954422137rem !important;*/
+	 width: 7.5vw !important;
 }
 
 .gamever-width, .modver-width {
