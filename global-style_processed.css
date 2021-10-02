@@ -309,6 +309,13 @@ justify-content: center;
 	vertical-align: middle;
 }
 
+.datablock-wide {
+	margin-top: 1.8312533912099835rem !important;
+	margin-bottom: 1.8312533912099835rem !important;
+	padding-top: 1.627780792186652rem !important;
+	padding-bottom: 1.627780792186652rem !important;
+}
+
 .solnbtn, .dlbtn, .srcbtn {
   font-family: "Source Sans Pro", "Ubuntu", "Verdana", sans-serif;
   font-weight: 600;
