@@ -327,27 +327,32 @@ Your browser does not support the video tag.
 					
 					<table class = "luablock-docs">
 	<tr><th style = "width: 20%">Definition Key</th><th style = "width: 45%">Description</th><th style = "width: 15%">Default Value</th><th style = "width: 10%">Min Value</th><th style = "width: 10%">Max Value</th></tr>
-		<tr class = "luablock-setting"><td>minCount</td><td>Min yield (item count) per harvest cycle</td><td>1</td><td>1</td><td>maxCount</td></tr>
-		<tr class = "luablock-setting"><td>maxCount</td><td>Max yield (item count) per harvest cycle</td><td>1</td><td>minCount</td><td>64</td></tr>
 		<tr class = "luablock-setting"><td>displayName</td><td>Resource type display name</td><td><type></td><td></td><td></td></tr>
 		<tr class = "luablock-setting"><td>renderColor</td><td>Node render color</td><td>0xffffff</td><td></td><td></td></tr>
 		<tr class = "luablock-setting"><td>spawnWeight</td><td>Weighted Random spawn weight</td><td>10</td><td>0</td><td>Any</td></tr>
 		<tr class = "luablock-setting"><td>speedFactor</td><td>Production speed factor (Optional)</td><td>1</td><td>>0</td><td>Any</td></tr>
-		<tr class = "luablock-setting"><td>peacefulScale</td><td>Yield Multiplier on Peaceful Mode (Optional)</td><td>1</td><td>0</td><td>1</td></tr>
 		<tr class = "luablock-setting"><td>effects</td><td>Ambient AoE effects around the node (Optional)</td><td></td><td></td><td></td></tr>
 		<tr class = "luablock-setting"><td>outputItems</td><td>The yieldable items (weighted random)</td><td></td><td></td><td></td></tr>
-			<tr class = "luablock-subsetting"><td style = "text-align: right;">key</td><td>Item definition</td><td></td><td></td><td></td></tr>
-			<tr class = "luablock-subsetting"><td style = "text-align: right;">minimumPurity</td><td>Minimum node purity level to spawn this item</td><td></td><td></td><td></td></tr>
-			<tr class = "luablock-subsetting"><td style = "text-align: right;">weight</td><td>Weighted Random spawn weight</td><td>10</td><td>0</td><td>Any</td></tr>
-			<tr class = "luablock-subsetting"><td style = "text-align: right;">manualModifier</td><td>Yield Multiplier for manual mining (Optional)</td><td>1</td><td>0</td><td>1</td></tr>
-			<tr class = "luablock-subsetting"><td style = "text-align: right;">weightModifiers</td><td>Weight modifiers by purity level:</td><td></td><td></td><td></td></tr>
-			<tr class = "luablock-subsetting"><td style = "text-align: right;">IMPURE</td><td>Weight scale for impure (worst) level</td><td>1</td><td>0</td><td>Any</td></tr>
-			<tr class = "luablock-subsetting"><td style = "text-align: right;">NORMAL</td><td>Weight scale for normal level</td><td>1</td><td>0</td><td>Any</td></tr>
-			<tr class = "luablock-subsetting"><td style = "text-align: right;">PURE</td><td>Weight scale for pure (best) level</td><td>1</td><td>0</td><td>Any</td></tr>
+			<tr class = "luablock-subsetting"><td class = "luablock-entry">key</td><td>Item definition</td><td></td><td></td><td></td></tr>
+			<tr class = "luablock-subsetting"><td class = "luablock-entry">minimumPurity</td><td>Minimum node purity level to spawn this item</td><td></td><td></td><td></td></tr>
+			<tr class = "luablock-subsetting"><td class = "luablock-entry">weight</td><td>Weighted Random spawn weight</td><td>10</td><td>0</td><td>Any</td></tr>
+			<tr class = "luablock-subsetting"><td class = "luablock-entry">minCount</td><td>Min yield (item count) per harvest cycle</td><td>1</td><td>1</td><td>maxCount</td></tr>
+			<tr class = "luablock-subsetting"><td class = "luablock-entry">maxCount</td><td>Max yield (item count) per harvest cycle</td><td>1</td><td>minCount</td><td>64</td></tr>
+			<tr class = "luablock-subsetting"><td class = "luablock-entry">peacefulScale</td><td>Yield Multiplier on Peaceful Mode (Optional)</td><td>1</td><td>0</td><td>1</td></tr>
+			<tr class = "luablock-subsetting"><td class = "luablock-entry">manualAmountModifier</td><td>Yield Multiplier for manual mining (Optional)</td><td>1</td><td>0</td><td>1</td></tr>
+			<tr class = "luablock-subsetting"><td class = "luablock-entry">manualWeightModifier</td><td>Weight Multiplier for manual mining (Optional)</td><td>1</td><td>0</td><td>1</td></tr>
+			<tr class = "luablock-subsetting"><td class = "luablock-entry">weightModifiers</td><td>Weight modifiers by purity level:</td><td></td><td></td><td></td></tr>
+				<tr class = "luablock-subsetting-2"><td class = "luablock-entry">IMPURE</td><td>Weight scale for impure (worst) level</td><td>1</td><td>0</td><td>Any</td></tr>
+				<tr class = "luablock-subsetting-2"><td class = "luablock-entry">NORMAL</td><td>Weight scale for normal level</td><td>1</td><td>0</td><td>Any</td></tr>
+				<tr class = "luablock-subsetting-2"><td class = "luablock-entry">PURE</td><td>Weight scale for pure (best) level</td><td>1</td><td>0</td><td>Any</td></tr>
+			<tr class = "luablock-subsetting"><td class = "luablock-entry">amountModifiers</td><td>Yield modifiers by purity level:</td><td></td><td></td><td></td></tr>
+				<tr class = "luablock-subsetting-2"><td class = "luablock-entry">IMPURE</td><td>Amount scale for impure (worst) level</td><td>1</td><td>0</td><td>Any</td></tr>
+				<tr class = "luablock-subsetting-2"><td class = "luablock-entry">NORMAL</td><td>Amount scale for normal level</td><td>1</td><td>0</td><td>Any</td></tr>
+				<tr class = "luablock-subsetting-2"><td class = "luablock-entry">PURE</td><td>Amount scale for pure (best) level</td><td>1</td><td>0</td><td>Any</td></tr>
 		<tr class = "luablock-setting"><td>purityLevels</td><td>Purity level distribution (weighted random)</td><td></td><td></td><td></td></tr>
-			<tr class = "luablock-subsetting"><td style = "text-align: right;">IMPURE</td><td>Spawn weight for impure (worst) level</td><td>10</td><td>0</td><td>Any</td></tr>
-			<tr class = "luablock-subsetting"><td style = "text-align: right;">NORMAL</td><td>Spawn weight for normal level</td><td>10</td><td>0</td><td>Any</td></tr>
-			<tr class = "luablock-subsetting"><td style = "text-align: right;">PURE</td><td>Spawn weight for pure (best) level</td><td>10</td><td>0</td><td>Any</td></tr>
+			<tr class = "luablock-subsetting"><td class = "luablock-entry">IMPURE</td><td>Spawn weight for impure (worst) level</td><td>10</td><td>0</td><td>Any</td></tr>
+			<tr class = "luablock-subsetting"><td class = "luablock-entry">NORMAL</td><td>Spawn weight for normal level</td><td>10</td><td>0</td><td>Any</td></tr>
+			<tr class = "luablock-subsetting"><td class = "luablock-entry">PURE</td><td>Spawn weight for pure (best) level</td><td>10</td><td>0</td><td>Any</td></tr>
 </table>
 					
 					
@@ -482,12 +487,12 @@ Your browser does not support the video tag.
 		<tr class = "luablock-setting"><td>maxCount</td><td>Maximum item count per fetch cycle</td><td>1</td><td>minCount</td><td>64</td></tr>
 		<tr class = "luablock-setting"><td>weight</td><td>Weighted Random spawn weight</td><td>10</td><td>0</td><td>Any</td></tr>
 		<tr class = "luablock-setting"><td>weightFactors</td><td>Conditionally-applied multipliers to weight (Optional)</td><td></td><td></td><td></td></tr>
-			<tr class = "luablock-subsetting"><td style = "text-align: right;">check</td><td>Condition identifier</td><td></td><td></td><td></td></tr>
-			<tr class = "luablock-subsetting"><td style = "text-align: right;">value</td><td>Value to check condition against</td><td></td><td></td><td></td></tr>
-			<tr class = "luablock-subsetting"><td style = "text-align: right;">factor</td><td>Multiplier if check succeeds</td><td></td><td>0.0</td><td>Any</td></tr>
+			<tr class = "luablock-subsetting"><td class = "luablock-entry">check</td><td>Condition identifier</td><td></td><td></td><td></td></tr>
+			<tr class = "luablock-subsetting"><td class = "luablock-entry">value</td><td>Value to check condition against</td><td></td><td></td><td></td></tr>
+			<tr class = "luablock-subsetting"><td class = "luablock-entry">factor</td><td>Multiplier if check succeeds</td><td></td><td>0.0</td><td>Any</td></tr>
 		<tr class = "luablock-setting"><td>limits</td><td>Requirements to allow this item to be found (Optional)</td><td></td><td></td><td></td></tr>
-			<tr class = "luablock-subsetting"><td style = "text-align: right;">check</td><td>Condition identifier</td><td></td><td></td><td></td></tr>
-			<tr class = "luablock-subsetting"><td style = "text-align: right;">value</td><td>Value to check condition against</td><td></td><td></td><td></td></tr>
+			<tr class = "luablock-subsetting"><td class = "luablock-entry">check</td><td>Condition identifier</td><td></td><td></td><td></td></tr>
+			<tr class = "luablock-subsetting"><td class = "luablock-entry">value</td><td>Value to check condition against</td><td></td><td></td><td></td></tr>
 </table>
 					
 					
