@@ -11,6 +11,7 @@
 		<script src = "../../../compiledJS/entrypoint.bundle.js"></script>
 		<meta name="script-def" content="footer-spacing">
 		<meta name="script-def" content="navbar-scroll-indicator">
+		<meta name="script-def" content="spoiler-handler">
 		<!-- <meta name="script-def" content="quicknav-pos"> -->
     </head>
     <body  data-game="fce">
@@ -50,6 +51,7 @@
 				<a class = "navdrop-entry" href="../../../factorio/index.html">Factorio</a>
 				<a class = "navdrop-entry" href="../../../p2/index.html">Portal 2</a>
 				<a class = "navdrop-entry" href="../../../stellaris/index.html">Stellaris</a>
+				<a class = "navdrop-entry" href="../../../subnautica/index.html">Subnautica</a>
 				<a class = "navdrop-entry" href="../../../se/index.html">Space Engineers</a>
 				<a class = "navdrop-entry" href="../../../starbound/index.html">Starbound</a>
 		</div>
@@ -60,6 +62,7 @@
 				<a class = "navdrop-entry" href="../../../projects/calendar.html">Game Calendar</a>
 				<a class = "navdrop-entry" href="../../../projects/eventbuilder.html">Stellaris Event Builder</a>
 				<a class = "navdrop-entry" href="../../../projects/fcompile.html">FCompile</a>
+				<a class = "navdrop-entry" href="https://dragonrealm.overminddl1.com/">Dragon Realm Modpack</a>
 		</div>
 	  </div>
 	</div>
@@ -69,10 +72,11 @@
 <hr>
 <table class="toc_list">
 	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><a class = "tocbtn" href="#top"><i class="fas fa-angle-double-up"></i></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-introduction">Introduction</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-introduction"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-tryingagain">Trying Again</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-tryingagain"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-gamecompletion">Game Completion</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-gamecompletion"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-thefuture">The Future</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-thefuture"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-introduction">Introduction</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-introduction"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-tryingagain">Trying Again</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-tryingagain"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-gamecompletion">Game Completion</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-gamecompletion"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-alonghiatus">A Long Hiatus</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-alonghiatus"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-thefuture">The Future</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-thefuture"></a></td></tr>
 </table>
 </div>        <div id = "textarea" class = "textarea ">
 				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
@@ -182,13 +186,13 @@ Your browser does not support the video tag.
 </div><br>
 					
 					
-					It was at this time that I invented <a href="../../../fce/mods/roomenviro.html">Room Environmentals</a>, since I was growing increasingly exasperated with the fact that my allegedly-heated rooms still behaved as if they were freezing cold. Having just learned of a C#-patching tool called <a href="https://github.com/pardeike/Harmony">Harmony</a>, somewhat akin to Java ASM, I vigorously applied it to temperature-related code all over FCE, ending up with a massively redesigned thermal and room system. Now knowing how to do this, I did it again to address some other headaches of mine; most of these became <a href="../../../fce/mods/fortresstweaks.html">FortressTweaks</a>, while the ones rebalancing the LPTs became a standalone mod. I also started work on <a href="../../../fce/mods/cryopathy.html">Cryopathy</a>, but that mod never reached a complete state.
+					It was at this time that I invented <a href="../../../fce/mods/roomenviro.html">Room Environmentals</a>, since I was growing increasingly exasperated with the fact that my allegedly-heated rooms still behaved as if they were freezing cold. Having just learned of a C#-patching tool called <a href="https://github.com/pardeike/Harmony">Harmony</a>, somewhat akin to Java ASM, I vigorously applied it to temperature-related code all over FCE, ending up with a massively redesigned thermal and room system, <a href="../../../fce/mods/roomenviro.html">RoomEnvironmentals</a>. Now knowing how to do this, I did it again to address some other headaches of mine; most of these became <a href="../../../fce/mods/fortresstweaks.html">FortressTweaks</a>, while the ones rebalancing the LPTs became a standalone mod. I also started work on <a href="../../../fce/mods/cryopathy.html">Cryopathy</a>, but that mod never reached a complete state.
 					
 					
 					<br><br>
 					
 					
-					Indeed, my time with FCE was already drawing to a close; I destroyed my first cryospawner after a short while, and was too burned out to continue.<br>
+					Indeed, my time with FCE was already drawing to a close; I destroyed my first cryospawner after a short while, and was too burned out (no pun intended) to continue.<br>
 					
 					
 					<div class = "block-image">
@@ -200,6 +204,26 @@ Your browser does not support the video tag.
 					
 					
 					Not helping matters was that the <i>very next</i> day after that, I suffered a partial drive failure which made any kind of play impossible, and which required spending more than a week simply backing up the remaining data and transferring all that onto a new drive.
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-alonghiatus">
+				<h3>Return From A Long Hiatus</h3>
+					
+					I did not end up touching FCE again until the middle of January in 2022, having spent the intervening two years on content for a lot of other games, notably <a href="../../../minecraft/index.html">Minecraft</a>, <a href="../../../p2/index.html">Portal</a>, <a href="../../../factorio/index.html">Factorio</a>,  <a href="../../../se/index.html">Space Engineers</a>, and Satisfactory. This playthrough was ultimately prompted by having completed a LPT-inspired power transfer block in my <a href="https://dragonrealm.overminddl1.com/">DragonRealm modpack</a>, the design of which ended up spurring quite a lot of nostalgia for past FCE playthroughs.
+					
+					
+					<br><br>
+					
+					
+					This time around ended up being largely the same as the last time, except for more aggressive building practices in the Cold Caverns during Frozen Factory, and more extensive construction at extreme depths. In particular, now armed with a more-complete-than-before Cryopathy, I expanded into the Magma Caverns, having cleared a huge region of lava in preparation for pushing past to the (modded) uranium below.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../../imagedownloads/i-imgur-com_2FwXPLTeM.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../../imagedownloads/i-imgur-com_2FwXPLTeM.jpg" style="max-width:75%;" ></a>	<a href = "../../../imagedownloads/i-imgur-com_2FsxzFAv5.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../../imagedownloads/i-imgur-com_2FsxzFAv5.jpg" style="max-width:75%;" ></a>	<a href = "../../../imagedownloads/i-imgur-com_2FZEAbTRT.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../../imagedownloads/i-imgur-com_2FZEAbTRT.jpg" style="max-width:75%;" ></a>	<a href = "../../../imagedownloads/i-imgur-com_2FGfOUQt7.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../../imagedownloads/i-imgur-com_2FGfOUQt7.jpg" style="max-width:75%;" ></a>
+</div><br>
+					
+					
+					From a modding standpoint, the increased time spent in this save resulted in a much wider set of features for FortressTweaks, which when combined with more active development for Cryopathy, led to a major overhaul to how I do C# and Unity modding. This laid the groundwork for my extensive <a href="../../../subnautica/index.html">Subnautica</a> modding that would come a couple months later.
 					
 			</section><br>
 			<section class = "textblock" id = "text-block-thefuture">
@@ -273,6 +297,7 @@ Your browser does not support the video tag.
 			Factorio and its content and assets are &copy; Wube Software, with whom I am not affiliated<br>
 			Portal 2 and its content and assets are &copy; Valve Corporation, with whom I am not affiliated<br>
 			Stellaris and its content and assets are &copy; Paradox Interactive, with whom I am not affiliated<br>
+			Subnautica and its content and assets are &copy; Unknown Worlds Entertainment, with whom I am not affiliated<br>
 			Space Engineers and its content and assets are &copy; Keen Software House, with whom I am not affiliated<br>
 			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
 			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>

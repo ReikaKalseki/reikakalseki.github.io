@@ -11,6 +11,7 @@
 		<script src = "../../compiledJS/entrypoint.bundle.js"></script>
 		<meta name="script-def" content="footer-spacing">
 		<meta name="script-def" content="navbar-scroll-indicator">
+		<meta name="script-def" content="spoiler-handler">
 		<!-- <meta name="script-def" content="quicknav-pos"> -->
     </head>
     <body  data-game="factorio">
@@ -68,6 +69,7 @@
 				<a class = "navdrop-entry" href="../../minecraft/index.html">Minecraft</a>
 				<a class = "navdrop-entry" href="../../p2/index.html">Portal 2</a>
 				<a class = "navdrop-entry" href="../../stellaris/index.html">Stellaris</a>
+				<a class = "navdrop-entry" href="../../subnautica/index.html">Subnautica</a>
 				<a class = "navdrop-entry" href="../../se/index.html">Space Engineers</a>
 				<a class = "navdrop-entry" href="../../fce/index.html">FortressCraft Evolved</a>
 				<a class = "navdrop-entry" href="../../starbound/index.html">Starbound</a>
@@ -79,6 +81,7 @@
 				<a class = "navdrop-entry" href="../../projects/calendar.html">Game Calendar</a>
 				<a class = "navdrop-entry" href="../../projects/eventbuilder.html">Stellaris Event Builder</a>
 				<a class = "navdrop-entry" href="../../projects/fcompile.html">FCompile</a>
+				<a class = "navdrop-entry" href="https://dragonrealm.overminddl1.com/">Dragon Realm Modpack</a>
 		</div>
 	  </div>
 	</div>
@@ -88,13 +91,13 @@
 <hr>
 <table class="toc_list">
 	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><a class = "tocbtn" href="#top"><i class="fas fa-angle-double-up"></i></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-overview">Overview</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-overview"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-settings">Settings</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-settings"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-generationprofiles">Generation Profiles</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-generationprofiles"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-importantnote">Important Note</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-importantnote"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-modsettings">Configuration Settings</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-modsettings"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-sourcecode"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-downloads"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-overview">Overview</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-overview"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-settings">Settings</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-settings"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-generationprofiles">Generation Profiles</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-generationprofiles"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-importantnote">Important Note</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-importantnote"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-modsettings">Configuration Settings</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-modsettings"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-sourcecode"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-downloads"></a></td></tr>
 </table>
 </div>        <div id = "textarea" class = "textarea ">
 				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
@@ -158,59 +161,61 @@
 				<h3>Configuration Settings</h3>
 				This mod contains several config options to modify values and behaviors - such as for balance or server safety concerns, or simply personal taste - to your preferences. Note that several settings may have bounds imposed on their values, either logically or explicitly; these can usually be seen in the actual settings files or ingame. These are listed in order found in the source code, which is generally the order in which they were added; They may be present in a different order ingame or in the configuration files.
 				<br>
+				The settings for the mod, when installed, can be found ingame, in the mod settings menu.
+				<br>
 				<div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Terrain Scale</h4>
+			<h4 class = "setting-name heading-without-nav">Terrain Scale</h4>
 Type: double<br>
-			Current Default Value:<div class = "code-block">1.0</div>
+Current Default Value:<div class = "code-block">1.0</div>
 		</div>
 	A simple multiplier for the raw scale of the overall pattern; larger values means the web of rivers is "scaled up" in size, with larger continents inside them.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Terrain X Offset</h4>
+			<h4 class = "setting-name heading-without-nav">Terrain X Offset</h4>
 Type: int<br>
-			Current Default Value:<div class = "code-block">0</div>
+Current Default Value:<div class = "code-block">0</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Terrain Y Offset</h4>
+			<h4 class = "setting-name heading-without-nav">Terrain Y Offset</h4>
 Type: int<br>
-			Current Default Value:<div class = "code-block">0</div>
+Current Default Value:<div class = "code-block">0</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Terrain Seed Mixin</h4>
+			<h4 class = "setting-name heading-without-nav">Terrain Seed Mixin</h4>
 Type: int<br>
-			Current Default Value:<div class = "code-block">0</div>
+Current Default Value:<div class = "code-block">0</div>
 		</div>
 	This affects the seed used for the terrain program (and how it is combined with the map seed). Use this to get a new distribution with an existing map.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">River Thickness</h4>
+			<h4 class = "setting-name heading-without-nav">River Thickness</h4>
 Type: double<br>
-			Current Default Value:<div class = "code-block">1.0</div>
+Current Default Value:<div class = "code-block">1.0</div>
 		</div>
 	A simple multiplier for how thick the dividing rivers should be. Only applies for some map generation algorithms.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Allow Traversible Shores</h4>
+			<h4 class = "setting-name heading-without-nav">Allow Traversible Shores</h4>
 Type: bool<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	Whether to allow the generator to make the innermost shores "mud water", which is traversible to you (slowly) and to biters (normal speed). This looks better, and makes transport a bit easier, but means that walls cannot be 100% effective.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Distance Falloff (% per 100 tiles)</h4>
+			<h4 class = "setting-name heading-without-nav">Distance Falloff (% per 100 tiles)</h4>
 Type: double<br>
-			Current Default Value:<div class = "code-block">12</div>
+Current Default Value:<div class = "code-block">12</div>
 		</div>
 	How much the effect of the river generation should fade with distance. At 100%, the rivers will be half-width at 50 tiles and not generate at all past 100 tiles. This makes the worldgen gradually faster to compute the further you go, without affecting chokepoints near spawn, which are the ones that really matter from a gameplay perspective.
 </div>
@@ -293,6 +298,7 @@ Type: double<br>
 			Factorio and its content and assets are &copy; Wube Software, with whom I am not affiliated<br>
 			Portal 2 and its content and assets are &copy; Valve Corporation, with whom I am not affiliated<br>
 			Stellaris and its content and assets are &copy; Paradox Interactive, with whom I am not affiliated<br>
+			Subnautica and its content and assets are &copy; Unknown Worlds Entertainment, with whom I am not affiliated<br>
 			Space Engineers and its content and assets are &copy; Keen Software House, with whom I am not affiliated<br>
 			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
 			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>

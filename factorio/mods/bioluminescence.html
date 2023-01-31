@@ -11,6 +11,7 @@
 		<script src = "../../compiledJS/entrypoint.bundle.js"></script>
 		<meta name="script-def" content="footer-spacing">
 		<meta name="script-def" content="navbar-scroll-indicator">
+		<meta name="script-def" content="spoiler-handler">
 		<!-- <meta name="script-def" content="quicknav-pos"> -->
     </head>
     <body  data-game="factorio">
@@ -68,6 +69,7 @@
 				<a class = "navdrop-entry" href="../../minecraft/index.html">Minecraft</a>
 				<a class = "navdrop-entry" href="../../p2/index.html">Portal 2</a>
 				<a class = "navdrop-entry" href="../../stellaris/index.html">Stellaris</a>
+				<a class = "navdrop-entry" href="../../subnautica/index.html">Subnautica</a>
 				<a class = "navdrop-entry" href="../../se/index.html">Space Engineers</a>
 				<a class = "navdrop-entry" href="../../fce/index.html">FortressCraft Evolved</a>
 				<a class = "navdrop-entry" href="../../starbound/index.html">Starbound</a>
@@ -79,6 +81,7 @@
 				<a class = "navdrop-entry" href="../../projects/calendar.html">Game Calendar</a>
 				<a class = "navdrop-entry" href="../../projects/eventbuilder.html">Stellaris Event Builder</a>
 				<a class = "navdrop-entry" href="../../projects/fcompile.html">FCompile</a>
+				<a class = "navdrop-entry" href="https://dragonrealm.overminddl1.com/">Dragon Realm Modpack</a>
 		</div>
 	  </div>
 	</div>
@@ -88,12 +91,12 @@
 <hr>
 <table class="toc_list">
 	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><a class = "tocbtn" href="#top"><i class="fas fa-angle-double-up"></i></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-overview">Overview</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-overview"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-details">Details</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-details"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-options">Options</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-options"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-modsettings">Configuration Settings</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-modsettings"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-sourcecode"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-downloads"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-overview">Overview</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-overview"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-details">Details</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-details"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-options">Options</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-options"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-modsettings">Configuration Settings</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-modsettings"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-sourcecode"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-downloads"></a></td></tr>
 </table>
 </div>        <div id = "textarea" class = "textarea ">
 				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
@@ -133,37 +136,47 @@
 				<h3>Configuration Settings</h3>
 				This mod contains several config options to modify values and behaviors - such as for balance or server safety concerns, or simply personal taste - to your preferences. Note that several settings may have bounds imposed on their values, either logically or explicitly; these can usually be seen in the actual settings files or ingame. These are listed in order found in the source code, which is generally the order in which they were added; They may be present in a different order ingame or in the configuration files.
 				<br>
+				The settings for the mod, when installed, can be found ingame, in the mod settings menu.
+				<br>
 				<div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Make biters glow in the dark</h4>
+			<h4 class = "setting-name heading-without-nav">Make biters glow in the dark</h4>
 Type: bool<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Generate glowing plants</h4>
+			<h4 class = "setting-name heading-without-nav">Generate glowing plants</h4>
 Type: bool<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Plant spawn density</h4>
+			<h4 class = "setting-name heading-without-nav">Plant spawn density</h4>
 Type: double<br>
-			Current Default Value:<div class = "code-block">1</div>
+Current Default Value:<div class = "code-block">1</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Use LuaRendering control script lights</h4>
+			<h4 class = "setting-name heading-without-nav">Use LuaRendering control script lights</h4>
 Type: bool<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
-	Whether the lights on the plants use the LuaRendering mod scripting system for adding lights. This is cleaner and more reliable, but is markedly worse for client framerate performance on large maps. If this option is false, the lights will be accomplished with hidden entities instead, which does not have the FPS impact, but is messier and may cause weird issues like rails not working properly if placed directly adjacent to glowing plants, or lights persisting after their plant is removed.
+	Whether the lights on the plants use the LuaRendering mod scripting system for adding lights. This is cleaner and more reliable, but is markedly worse for client framerate performance on large maps. If this option is false, the lights will be accomplished with hidden entities instead, which does not have the FPS impact, but is messier and may cause weird issues like lights persisting after their plant is removed via unexpected means.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name heading-without-nav">Rescan Rate</h4>
+Type: int<br>
+Current Default Value:<div class = "code-block">1</div>
+		</div>
+	When the mod profile of a save file is changed, the world will be scanned for biolum entities to replace any missing lights and remove straggling entities. This is the number of chunks scanned per tick. Higher numbers complete the scan more quickly, but reduce UPS more severely while it is ongoing, while lower ones reduce its impact but lengthen its duration. Set it to zero to disable this resynchronization, but be warned that doing so will likely result in missing or leftover lights accumulating in older saves.
 </div>
 
 			</div>
@@ -244,6 +257,7 @@ Type: bool<br>
 			Factorio and its content and assets are &copy; Wube Software, with whom I am not affiliated<br>
 			Portal 2 and its content and assets are &copy; Valve Corporation, with whom I am not affiliated<br>
 			Stellaris and its content and assets are &copy; Paradox Interactive, with whom I am not affiliated<br>
+			Subnautica and its content and assets are &copy; Unknown Worlds Entertainment, with whom I am not affiliated<br>
 			Space Engineers and its content and assets are &copy; Keen Software House, with whom I am not affiliated<br>
 			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
 			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>

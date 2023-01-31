@@ -11,6 +11,7 @@
 		<script src = "../../compiledJS/entrypoint.bundle.js"></script>
 		<meta name="script-def" content="footer-spacing">
 		<meta name="script-def" content="navbar-scroll-indicator">
+		<meta name="script-def" content="spoiler-handler">
 		<!-- <meta name="script-def" content="quicknav-pos"> -->
 			<meta name="script-def" content="minecraft/precursor">
     </head>
@@ -73,6 +74,7 @@
 				<a class = "navdrop-entry" href="../../factorio/index.html">Factorio</a>
 				<a class = "navdrop-entry" href="../../p2/index.html">Portal 2</a>
 				<a class = "navdrop-entry" href="../../stellaris/index.html">Stellaris</a>
+				<a class = "navdrop-entry" href="../../subnautica/index.html">Subnautica</a>
 				<a class = "navdrop-entry" href="../../se/index.html">Space Engineers</a>
 				<a class = "navdrop-entry" href="../../fce/index.html">FortressCraft Evolved</a>
 				<a class = "navdrop-entry" href="../../starbound/index.html">Starbound</a>
@@ -84,6 +86,7 @@
 				<a class = "navdrop-entry" href="../../projects/calendar.html">Game Calendar</a>
 				<a class = "navdrop-entry" href="../../projects/eventbuilder.html">Stellaris Event Builder</a>
 				<a class = "navdrop-entry" href="../../projects/fcompile.html">FCompile</a>
+				<a class = "navdrop-entry" href="https://dragonrealm.overminddl1.com/">Dragon Realm Modpack</a>
 		</div>
 	  </div>
 	</div>
@@ -93,13 +96,13 @@
 <hr>
 <table class="toc_list">
 	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><a class = "tocbtn" href="#top"><i class="fas fa-angle-double-up"></i></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-overview">Overview</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-overview"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-features">Features</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-features"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-developerfeatures">Developer Features</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-developerfeatures"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-developeruse">Developer Use</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-developeruse"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-modsettings">Configuration Settings</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-modsettings"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-sourcecode"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-downloads"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-overview">Overview</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-overview"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-features">Features</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-features"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-developerfeatures">Developer Features</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-developerfeatures"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-developeruse">Developer Use</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-developeruse"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-modsettings">Configuration Settings</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-modsettings"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-sourcecode"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-downloads"></a></td></tr>
 </table>
 </div>        <div id = "textarea" class = "textarea ">
 				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
@@ -185,395 +188,397 @@
 				<h3>Configuration Settings</h3>
 				This mod contains several config options to modify values and behaviors - such as for balance or server safety concerns, or simply personal taste - to your preferences. Note that several settings may have bounds imposed on their values, either logically or explicitly; these can usually be seen in the actual settings files or ingame. These are listed in order found in the source code, which is generally the order in which they were added; They may be present in a different order ingame or in the configuration files.
 				<br>
+				The settings for the mod, when installed, can be found in the 'config/Reika' subfolder of the MC instance.
+				<br>
 				<div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Console Loading Info</h4>
+			<h4 class = "setting-name heading-without-nav">Console Loading Info</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Log Loading Info To Separate File</h4>
+			<h4 class = "setting-name heading-without-nav">Log Loading Info To Separate File</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Debug Mode</h4>
+			<h4 class = "setting-name heading-without-nav">Debug Mode</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Sync Packet ID</h4>
+			<h4 class = "setting-name heading-without-nav">Sync Packet ID</h4>
 Type: int<br>
-			Current Default Value:<div class = "code-block">182</div>
+Current Default Value:<div class = "code-block">182</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Disable Renders For Debug</h4>
+			<h4 class = "setting-name heading-without-nav">Disable Renders For Debug</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Show TileEntity NBT when using Debug Key</h4>
+			<h4 class = "setting-name heading-without-nav">Show TileEntity NBT when using Debug Key</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Increase sound channel count</h4>
+			<h4 class = "setting-name heading-without-nav">Increase sound channel count</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Restore Obsidian Blast Resistance</h4>
+			<h4 class = "setting-name heading-without-nav">Restore Obsidian Blast Resistance</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Disable Hotbar Swapping</h4>
+			<h4 class = "setting-name heading-without-nav">Disable Hotbar Swapping</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Log errors to chat</h4>
+			<h4 class = "setting-name heading-without-nav">Log errors to chat</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Sort Creative Tabs Alphabetically</h4>
+			<h4 class = "setting-name heading-without-nav">Sort Creative Tabs Alphabetically</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Custom/Donator Renders</h4>
+			<h4 class = "setting-name heading-without-nav">Custom/Donator Renders</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Only show update notice to Ops or SSP</h4>
+			<h4 class = "setting-name heading-without-nav">Only show update notice to Ops or SSP</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Only show update notice to pack creator</h4>
+			<h4 class = "setting-name heading-without-nav">Only show update notice to pack creator</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Force Gregtech Ore Compatibility</h4>
+			<h4 class = "setting-name heading-without-nav">Force Gregtech Ore Compatibility</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Log Sync Packet CME Avoidance</h4>
+			<h4 class = "setting-name heading-without-nav">Log Sync Packet CME Avoidance</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Slow Sync Packets - Only use this as a last resort</h4>
+			<h4 class = "setting-name heading-without-nav">Slow Sync Packets - Only use this as a last resort</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Minimum Delay (ms) for 'Can't Keep Up!' Log Warning</h4>
+			<h4 class = "setting-name heading-without-nav">Minimum Delay (ms) for 'Can't Keep Up!' Log Warning</h4>
 Type: int<br>
-			Current Default Value:<div class = "code-block">0</div>
+Current Default Value:<div class = "code-block">0</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Check Environment Sanity</h4>
+			<h4 class = "setting-name heading-without-nav">Check Environment Sanity</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Attempt to Repair Environment Sanity</h4>
+			<h4 class = "setting-name heading-without-nav">Attempt to Repair Environment Sanity</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Admins Bypass Permissions</h4>
+			<h4 class = "setting-name heading-without-nav">Admins Bypass Permissions</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Use HashMap for Sound Categories - Only use if necessary</h4>
+			<h4 class = "setting-name heading-without-nav">Use HashMap for Sound Categories - Only use if necessary</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Compare mod file hashes between client and server</h4>
+			<h4 class = "setting-name heading-without-nav">Compare mod file hashes between client and server</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Enable Temporally Dependent Amusement Behavior</h4>
+			<h4 class = "setting-name heading-without-nav">Enable Temporally Dependent Amusement Behavior</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Particle Limit (Vanilla = 4000)</h4>
+			<h4 class = "setting-name heading-without-nav">Particle Limit (Vanilla = 4000)</h4>
 Type: int<br>
-			Current Default Value:<div class = "code-block">4000</div>
+Current Default Value:<div class = "code-block">4000</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Debug Overlay Key (LWJGL ID)</h4>
+			<h4 class = "setting-name heading-without-nav">Debug Overlay Key (LWJGL ID)</h4>
 Type: float<br>
-			Current Default Value:<div class = "code-block">0x0F</div>
+Current Default Value:<div class = "code-block">0x0F</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Direct OpenComputers Support</h4>
+			<h4 class = "setting-name heading-without-nav">Direct OpenComputers Support</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Automatic Reboot Interval (Seconds)</h4>
+			<h4 class = "setting-name heading-without-nav">Automatic Reboot Interval (Seconds)</h4>
 Type: int<br>
-			Current Default Value:<div class = "code-block">-1</div>
+Current Default Value:<div class = "code-block">-1</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Merge XP Orbs Like Items</h4>
+			<h4 class = "setting-name heading-without-nav">Merge XP Orbs Like Items</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Extra Block Ticks When Raining</h4>
+			<h4 class = "setting-name heading-without-nav">Extra Block Ticks When Raining</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Prevent Mobs From Targeting Players Immediately After Logging In</h4>
+			<h4 class = "setting-name heading-without-nav">Prevent Mobs From Targeting Players Immediately After Logging In</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Cache Skins</h4>
+			<h4 class = "setting-name heading-without-nav">Cache Skins</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Biome Humidity Dependent Fire Spread</h4>
+			<h4 class = "setting-name heading-without-nav">Biome Humidity Dependent Fire Spread</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Restrict profiling abilities to admins</h4>
+			<h4 class = "setting-name heading-without-nav">Restrict profiling abilities to admins</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Bytecodeexec command user UUID whitelist</h4>
+			<h4 class = "setting-name heading-without-nav">Bytecodeexec command user UUID whitelist</h4>
 Type: String Array<br>
-			Current Default Value:<div class = "code-block">new String[0]</div>
+Current Default Value:<div class = "code-block">new String[0]</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Automatic Collection of Inventories; set to 'NULL' to disable</h4>
+			<h4 class = "setting-name heading-without-nav">Automatic Collection of Inventories; set to 'NULL' to disable</h4>
 Type: String<br>
-			Current Default Value:<div class = "code-block">Key.LCTRL.name()</div>
+Current Default Value:<div class = "code-block">Key.LCTRL.name()</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">AFK Timer Threshold (Seconds); Set to 0 to Disable</h4>
+			<h4 class = "setting-name heading-without-nav">AFK Timer Threshold (Seconds); Set to 0 to Disable</h4>
 Type: int<br>
-			Current Default Value:<div class = "code-block">120</div>
+Current Default Value:<div class = "code-block">120</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Reroute Ender Eyes to Stronghold Entrances</h4>
+			<h4 class = "setting-name heading-without-nav">Reroute Ender Eyes to Stronghold Entrances</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Expected Approximate Maximum World Size (Radius)</h4>
+			<h4 class = "setting-name heading-without-nav">Expected Approximate Maximum World Size (Radius)</h4>
 Type: int<br>
-			Current Default Value:<div class = "code-block">5000</div>
+Current Default Value:<div class = "code-block">5000</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Expected Approximate World Center Location X</h4>
+			<h4 class = "setting-name heading-without-nav">Expected Approximate World Center Location X</h4>
 Type: int<br>
-			Current Default Value:<div class = "code-block">0</div>
+Current Default Value:<div class = "code-block">0</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Expected Approximate World Center Location Z</h4>
+			<h4 class = "setting-name heading-without-nav">Expected Approximate World Center Location Z</h4>
 Type: int<br>
-			Current Default Value:<div class = "code-block">0</div>
+Current Default Value:<div class = "code-block">0</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Disable rain sound and particles</h4>
+			<h4 class = "setting-name heading-without-nav">Disable rain sound and particles</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Bytecodeexec command notifies other admins</h4>
+			<h4 class = "setting-name heading-without-nav">Bytecodeexec command notifies other admins</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Player-Specific Mob Caps</h4>
+			<h4 class = "setting-name heading-without-nav">Player-Specific Mob Caps</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Setting Warning Persistence (EVERYLOAD/SETTINGCHANGE/VERSION/ONCE)</h4>
+			<h4 class = "setting-name heading-without-nav">Setting Warning Persistence (EVERYLOAD/SETTINGCHANGE/VERSION/ONCE)</h4>
 Type: String<br>
-			Current Default Value:<div class = "code-block">SETTINGCHANGE</div>
+Current Default Value:<div class = "code-block">SETTINGCHANGE</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Allow charged certus to be recognized as normal certus ore</h4>
+			<h4 class = "setting-name heading-without-nav">Allow charged certus to be recognized as normal certus ore</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Prevent block spreading near unloaded chunks</h4>
+			<h4 class = "setting-name heading-without-nav">Prevent block spreading near unloaded chunks</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Make bonemeal generate biome-correct foliage instead of tall grass</h4>
+			<h4 class = "setting-name heading-without-nav">Make bonemeal generate biome-correct foliage instead of tall grass</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Version Change Warning Level (0 = None, 1 = ReikaMods only, 2 = All)</h4>
+			<h4 class = "setting-name heading-without-nav">Version Change Warning Level (0 = None, 1 = ReikaMods only, 2 = All)</h4>
 Type: int<br>
-			Current Default Value:<div class = "code-block">2</div>
+Current Default Value:<div class = "code-block">2</div>
 		</div>
 	
 </div>
@@ -660,6 +665,7 @@ Type: int<br>
 			Factorio and its content and assets are &copy; Wube Software, with whom I am not affiliated<br>
 			Portal 2 and its content and assets are &copy; Valve Corporation, with whom I am not affiliated<br>
 			Stellaris and its content and assets are &copy; Paradox Interactive, with whom I am not affiliated<br>
+			Subnautica and its content and assets are &copy; Unknown Worlds Entertainment, with whom I am not affiliated<br>
 			Space Engineers and its content and assets are &copy; Keen Software House, with whom I am not affiliated<br>
 			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
 			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>

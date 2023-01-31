@@ -11,6 +11,7 @@
 		<script src = "../../compiledJS/entrypoint.bundle.js"></script>
 		<meta name="script-def" content="footer-spacing">
 		<meta name="script-def" content="navbar-scroll-indicator">
+		<meta name="script-def" content="spoiler-handler">
 		<!-- <meta name="script-def" content="quicknav-pos"> -->
     </head>
     <body  data-game="factorio">
@@ -68,6 +69,7 @@
 				<a class = "navdrop-entry" href="../../minecraft/index.html">Minecraft</a>
 				<a class = "navdrop-entry" href="../../p2/index.html">Portal 2</a>
 				<a class = "navdrop-entry" href="../../stellaris/index.html">Stellaris</a>
+				<a class = "navdrop-entry" href="../../subnautica/index.html">Subnautica</a>
 				<a class = "navdrop-entry" href="../../se/index.html">Space Engineers</a>
 				<a class = "navdrop-entry" href="../../fce/index.html">FortressCraft Evolved</a>
 				<a class = "navdrop-entry" href="../../starbound/index.html">Starbound</a>
@@ -79,6 +81,7 @@
 				<a class = "navdrop-entry" href="../../projects/calendar.html">Game Calendar</a>
 				<a class = "navdrop-entry" href="../../projects/eventbuilder.html">Stellaris Event Builder</a>
 				<a class = "navdrop-entry" href="../../projects/fcompile.html">FCompile</a>
+				<a class = "navdrop-entry" href="https://dragonrealm.overminddl1.com/">Dragon Realm Modpack</a>
 		</div>
 	  </div>
 	</div>
@@ -88,11 +91,11 @@
 <hr>
 <table class="toc_list">
 	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><a class = "tocbtn" href="#top"><i class="fas fa-angle-double-up"></i></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-overview">Overview</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-overview"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-details">Details</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-details"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-modsettings">Configuration Settings</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-modsettings"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-sourcecode"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-downloads"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-overview">Overview</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-overview"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-details">Details</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-details"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-modsettings">Configuration Settings</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-modsettings"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-sourcecode"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-downloads"></a></td></tr>
 </table>
 </div>        <div id = "textarea" class = "textarea ">
 				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
@@ -312,195 +315,237 @@
 				<h3>Configuration Settings</h3>
 				This mod contains several config options to modify values and behaviors - such as for balance or server safety concerns, or simply personal taste - to your preferences. Note that several settings may have bounds imposed on their values, either logically or explicitly; these can usually be seen in the actual settings files or ingame. These are listed in order found in the source code, which is generally the order in which they were added; They may be present in a different order ingame or in the configuration files.
 				<br>
+				The settings for the mod, when installed, can be found ingame, in the mod settings menu.
+				<br>
 				<div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Bigger material stack sizes</h4>
+			<h4 class = "setting-name heading-without-nav">Bigger material stack sizes</h4>
 Type: bool<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	If true raw materials (ore, plates etc) stack to 200.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Cheaper steel</h4>
+			<h4 class = "setting-name heading-without-nav">Cheaper steel</h4>
 Type: bool<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	Bobplates-style; reduces cost to 2 iron per steel and halves smelt time.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Harder silo</h4>
+			<h4 class = "setting-name heading-without-nav">Cheaper landfill</h4>
+Type: double<br>
+Current Default Value:<div class = "code-block">0.5</div>
+		</div>
+	Reduces landfill stone cost to the specified fraction.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name heading-without-nav">Harder silo</h4>
 Type: bool<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	Makes the rocket silo much harder both in terms of research and resources.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Force manual silo crafting</h4>
+			<h4 class = "setting-name heading-without-nav">Force manual silo crafting</h4>
 Type: bool<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	Forces manual-only crafting of rocket silos. Only meaningful with the Harder Silo option enabled.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Harder reactors</h4>
+			<h4 class = "setting-name heading-without-nav">Harder reactors</h4>
 Type: bool<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	Greatly increases the technology progression required to research nuclear reactors.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Harder rockets</h4>
+			<h4 class = "setting-name heading-without-nav">Harder rockets</h4>
 Type: bool<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	Makes the rocket launches more difficult by making the resultant noise SERIOUSLY upset the local wildlife.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Tiered armor</h4>
+			<h4 class = "setting-name heading-without-nav">Tiered armor</h4>
 Type: bool<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	Makes the armor progression more natural; also makes each stage require the previous so that old armor still has value.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Smaller tree selection box</h4>
+			<h4 class = "setting-name heading-without-nav">Smaller tree selection box</h4>
 Type: bool<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	This halves the size of tree hitboxes, allowing easier placement of entities around them.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Enable Wood Decomposition</h4>
+			<h4 class = "setting-name heading-without-nav">Enable Wood Decomposition</h4>
 Type: bool<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	This controls two oil-processing recipes to convert wood - raw and planks - into oil products.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Enable Advanced Research Satellite</h4>
+			<h4 class = "setting-name heading-without-nav">Enable Advanced Research Satellite</h4>
 Type: bool<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	Should a tier-2 research satellite be obtainable? It has a higher space science yield per rocket (and per rocket cost), but costs far more to create.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Smarter Concrete</h4>
+			<h4 class = "setting-name heading-without-nav">Smarter Concrete</h4>
 Type: bool<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	Whether to replace the iron ore in the concrete recipe with iron sticks, which is both more friendly to factory setups and more realistic.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Early-Game technology cost decrease factor</h4>
+			<h4 class = "setting-name heading-without-nav">Early-Game technology cost decrease factor</h4>
 Type: int<br>
-			Current Default Value:<div class = "code-block">1</div>
+Current Default Value:<div class = "code-block">1</div>
 		</div>
 	The factor by which to decrease the costs of a few entry-level technologies (eg Automation I) so that high-difficulty saves do not force the manual crafting of hundreds of science packs before they can begin to be automated. Usually equal to the technology price multipler.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Split Science Pack 1 recipe into manual and automated variants</h4>
+			<h4 class = "setting-name heading-without-nav">Split Science Pack 1 recipe into manual and automated variants</h4>
 Type: bool<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	Whether to split the red science pack recipe into a more-expensive-but-faster-to-craft manual version (for making the first research into automation less painful), and a slightly-cheaper-but slower version for assemblers.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Make each BobMod robot part require the previous tier</h4>
+			<h4 class = "setting-name heading-without-nav">Make each BobMod robot part require the previous tier</h4>
 Type: bool<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	If enabled, this changes the recipes for BobMod robot parts - frames, tools, and robot brains - so that each tier is crafted from the previous tier plus the difference in cost in original recipes (eg if T4 costs 4 CPUs and 6 transitors, and T3 0 CPUs and 2 Transistors, the T4 will now cost 4 CPUs, 4 Transitors, and a T3).
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Cheaper High-Tier Belts</h4>
+			<h4 class = "setting-name heading-without-nav">Cheaper High-Tier Belts</h4>
 Type: bool<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	BobMods integration; Makes the blue, green, and purple belts use fewer gears and bearings (just count, not type) to avoid each unit of belt costing hundreds of units of material. Additionally, if logistic science packs exist (which contain a blue belt in their recipe), this option prevents technologies using it from being extraordinarily expensive to research.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Enable Coal Decomposition</h4>
+			<h4 class = "setting-name heading-without-nav">Enable Coal Decomposition</h4>
 Type: bool<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	This controls a recipe to break down coal into its chemical constituents - carbon, sulfur, and hydrogen. Only works when those items/fluids exist.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Counteract expensive-tech for upgrade techs</h4>
+			<h4 class = "setting-name heading-without-nav">Counteract expensive-tech for upgrade techs</h4>
 Type: bool<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	Whether to apply the "tech demultiply" behavior to "pure upgrade" technologies like bullet damage, train braking force, and lab speed
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Make fluid resource patches eventually deplete and disappear</h4>
+			<h4 class = "setting-name heading-without-nav">Make fluid resource patches eventually deplete and disappear</h4>
 Type: bool<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Add pipe to green science</h4>
+			<h4 class = "setting-name heading-without-nav">Add pipe to green science</h4>
 Type: bool<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	Whether to add one unit of iron pipe to the green (logistic) science pack recipe. This was an idea raised in FFF #275 and never actually implemented.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Replace water with steam in advanced oil recipes</h4>
+			<h4 class = "setting-name heading-without-nav">Replace water with steam in advanced oil recipes</h4>
 Type: bool<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Make Construction Drones invincible</h4>
+			<h4 class = "setting-name heading-without-nav">Make Construction Drones invincible</h4>
 Type: bool<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	Useful given their tendency to run off into biter swarms.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Cheaper cliff explosives</h4>
+			<h4 class = "setting-name heading-without-nav">Cheaper cliff explosives</h4>
 Type: bool<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Improved Artillery Strength</h4>
+			<h4 class = "setting-name heading-without-nav">Improved Artillery Strength</h4>
 Type: bool<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	Whether to make artillery stronger, to compensate for things like wider pollution spread, stronger nests, or more aggressive biter expansion. Increases both range and damage per shot.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Enable Item Collector equipment</h4>
+			<h4 class = "setting-name heading-without-nav">Enable Item Collector equipment</h4>
 Type: bool<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name heading-without-nav">BobMods gemstone cutting efficiency</h4>
+Type: double<br>
+Current Default Value:<div class = "code-block">1.0</div>
+		</div>
+	What fraction of the raw gem input is successfully processed into a cut gem.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name heading-without-nav">BobMods cargo wagon capacity bonus scaling</h4>
+Type: double<br>
+Current Default Value:<div class = "code-block">2</div>
+		</div>
+	What to multiply the "improvement amount" (ie how much more capacity a given tier provides over the vanilla baseline) for high-tier boblogistics cargo wagons.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name heading-without-nav">Enable productivity effect on ammo recipes</h4>
+Type: bool<br>
+Current Default Value:<div class = "code-block">true</div>
+		</div>
+	Whether recipes making ammo will accept productivity modules/effect. EGCombat ammo crating/unpacking recipes are exempted, to prevent feedback-loop exploits.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name heading-without-nav">Enable productivity effect on BobMods gemstone recipes</h4>
+Type: bool<br>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
@@ -583,6 +628,7 @@ Type: bool<br>
 			Factorio and its content and assets are &copy; Wube Software, with whom I am not affiliated<br>
 			Portal 2 and its content and assets are &copy; Valve Corporation, with whom I am not affiliated<br>
 			Stellaris and its content and assets are &copy; Paradox Interactive, with whom I am not affiliated<br>
+			Subnautica and its content and assets are &copy; Unknown Worlds Entertainment, with whom I am not affiliated<br>
 			Space Engineers and its content and assets are &copy; Keen Software House, with whom I am not affiliated<br>
 			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
 			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>

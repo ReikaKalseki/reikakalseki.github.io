@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="shortcut icon" href="../../images/favicon.ico">
+        <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+		<meta http-equiv="Cache-control" content="no-cache">
+        <title>Sea To Sea</title>
+		<link rel="stylesheet" type="text/css" href="../../compiledJS/entrypoint.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> 
+		<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Lato|Exo 2|Ubuntu|Cairo"> -->
+		<script src = "../../compiledJS/entrypoint.bundle.js"></script>
+		<meta name="script-def" content="footer-spacing">
+		<meta name="script-def" content="navbar-scroll-indicator">
+		<meta name="script-def" content="spoiler-handler">
+		<!-- <meta name="script-def" content="quicknav-pos"> -->
+    </head>
+    <body  data-game="subnautica">
+        	<div id = "navbar" class="navbar">
+	  <a class="navbar-button" href="../../index.html">Reika's Mods Home</a>
+	  <a class="navbar-button" href="../../subnautica/index.html">Subnautica Home</a>
+		  <div class="navdropdown">
+			<div class="navdropbtn">Information <i class="fa fa-angle-down"></i></div>
+			<div class="navdrop-content">
+					<a class = "navdrop-entry" href="../../subnautica/pages/info/faq.html">FAQ</a>
+					<a class = "navdrop-entry" href="../../subnautica/pages/info/contact.html">Contact</a>
+					<a class = "navdrop-entry" href="../../subnautica/pages/info/history.html">History</a>
+					<a class = "navdrop-entry" href="../../subnautica/pages/info/configs.html">Configs</a>
+			</div>
+		  </div>
+		  <div class="navdropdown">
+			<div class="navdropbtn">Permissions <i class="fa fa-angle-down"></i></div>
+			<div class="navdrop-content">
+					<a class = "navdrop-entry" href="../../subnautica/pages/perms/license.html">License</a>
+			</div>
+		  </div>
+	  <div class="navdropdown">
+		<div class="navdropbtn">Mods <i class="fa fa-angle-down"></i></div>
+		<div class="navdrop-content">
+				<a class = "navdrop-entry" href="../../subnautica/mods/aqueousengineering.html">Aqueous Engineering</a>
+				<a class = "navdrop-entry" href="../../subnautica/mods/auroresource.html">Auroresource</a>
+				<a class = "navdrop-entry" href="../../subnautica/mods/di.html">Dragon Industries</a>
+				<a class = "navdrop-entry" href="../../subnautica/mods/ecocean.html">Ecocean</a>
+				<a class = "navdrop-entry" href="../../subnautica/mods/exscansion.html">Exscansion</a>
+				<a class = "navdrop-entry" href="../../subnautica/mods/reefbalance.html">Re(ef)Balance</a>
+				<a class = "navdrop-entry" href="../../subnautica/mods/seatosea.html">Sea To Sea</a>
+		</div>
+	  </div>
+	  <div class="navdropdown">
+		<div class="navdropbtn">Other Games <i class="fa fa-angle-down"></i></div>
+		<div class="navdrop-content">
+				<a class = "navdrop-entry" href="../../minecraft/index.html">Minecraft</a>
+				<a class = "navdrop-entry" href="../../factorio/index.html">Factorio</a>
+				<a class = "navdrop-entry" href="../../p2/index.html">Portal 2</a>
+				<a class = "navdrop-entry" href="../../stellaris/index.html">Stellaris</a>
+				<a class = "navdrop-entry" href="../../se/index.html">Space Engineers</a>
+				<a class = "navdrop-entry" href="../../fce/index.html">FortressCraft Evolved</a>
+				<a class = "navdrop-entry" href="../../starbound/index.html">Starbound</a>
+		</div>
+	  </div>
+	  <div class="navdropdown">
+		<div class="navdropbtn">Other Projects <i class="fa fa-angle-down"></i></div>
+		<div class="navdrop-content">
+				<a class = "navdrop-entry" href="../../projects/calendar.html">Game Calendar</a>
+				<a class = "navdrop-entry" href="../../projects/eventbuilder.html">Stellaris Event Builder</a>
+				<a class = "navdrop-entry" href="../../projects/fcompile.html">FCompile</a>
+				<a class = "navdrop-entry" href="https://dragonrealm.overminddl1.com/">Dragon Realm Modpack</a>
+		</div>
+	  </div>
+	</div>
+		<noscript><div style = "text-align: center; width: 100%;"><div id = "nojs-header"><div><img class = "header-alert" src = "../../images/alert.png"></div><div>You have JavaScript disabled; it is recommended you enable it for this site.<br>While the site will (mostly) function with scripts disabled, some sections (eg changelog view, or sortable tables) require it to update the page contents based on your input.<br>Additionally, JS is used to generate page styling, meaning disabling scripts will leave pages ugly, boring, and in some cases poorly arranged in ways that might impede readability.<br>If you have no idea what this means, or have not in fact disabled scripts, try simply reloading the page, as it may not have loaded completely or correctly.</div></div></div></noscript>
+<div id="toc_container">
+<h3>Quick Nav</h3>
+<hr>
+<table class="toc_list">
+	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><a class = "tocbtn" href="#top"><i class="fas fa-angle-double-up"></i></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-general">General</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-general"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-exploringtheocean">Exploring the Ocean</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-exploringtheocean"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-usingmechanics">Using Mechanics</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-usingmechanics"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-bioprocessor">Bioprocessor</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-bioprocessor"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-liquidbreathing">Liquid Breathing</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-liquidbreathing"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-ingots">Ingots</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-ingots"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-abyssalstalkers">Abyssal Stalkers</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-abyssalstalkers"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-newbiomes">New Biomes</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-newbiomes"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-lifepods">Lifepods</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-lifepods"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-puzzle">Puzzle</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-puzzle"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-environmentalhazards">Environmental Hazards</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-environmentalhazards"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-moddependencies">Mod Dependencies</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-moddependencies"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-newitems">New Items</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-newitems"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-sourcecode"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-downloads"></a></td></tr>
+</table>
+</div>        <div id = "textarea" class = "textarea ">
+				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
+			<!-- <h2>Sea To Sea</h2> -->
+						<section class = "textblock" id = "text-block-general">
+				<h3>General</h3>
+					
+					Sea to Sea (abbreviated C2C) is a very large progression and exploration expansion mod for Subnautica, designed to dramatically expand and extend the gameplay of a typical playthrough, both in terms of duration and amount of used content.
+					
+					
+					<br><br>
+					
+					
+					This is done by making many more regions of the map and game mechanics necessary for the core progression (both story completion and escape in the Neptune rocket), primarily by adding location-unique resources, blueprints, items, or knowledge, and situational needs for those resources, tools, or knowledge.
+					
+					
+					<br><br>
+					
+					
+					Sea to Sea aims to preserve the original gameplay as much as possible, building upon it rather than replacing it. As such, a C2C playthrough should still have strong thematic similarities, and a nearly-identical narrative experience, to that of the vanilla game.
+					
+					
+					<br><br>
+					
+					
+					<span class = "colorized warncolor"><b>This page details changes to vanilla progression, and will contain many unmarked spoilers of locations, features, and their related story elements!</b></span>
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-exploringtheocean">
+				<h3>Exploring the Ocean</h3>
+					
+					The chief effect of Sea to Sea is to add the need for the player to have explored nearly the entire map, rather than only a small handful of regions absolutely required to progress the story or collect important resources. With the mod installed, you will find yourself traversing large areas of the map, either in search of points of interest or for resources which can only be found where certain environmental conditions exist. It is from this property that the mod derives its name; you will be crossing the entire ocean, from the Dunes to the Grand Reef to the northern Mountains, exploring reefs, cave systems, and more.
+					
+					
+					<br><br>
+					
+					
+					In some cases, these points of interest or resources are ones already present in the vanilla game, but which normally have little reason to venture towards (for example wrecks with no blueprints that are not more easily found elsewhere); with Sea to Sea installed those will take on new importance, often with the addition of select new blueprint unlocks or new uses for the materials featured in the region. In other cases, a previously largely-useless area was given completely new content, such as a wreck or new material.
+					
+					
+					<br><br>
+					
+					
+					Additionally, several key story events and locations have been made absolutely required for progression, to ensure the player experiences the full story. This includes visiting all Degasi outposts and the Disease Research Facility, and witnessing the Sunbeam's landing attempt.<br>
+					
+					
+					<div class = "spoiler"><br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2FrEjFYDM.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FrEjFYDM.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2FgSw7vP4.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FgSw7vP4.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2FYO5Oeiy-jpg+.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FYO5Oeiy-jpg+.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Key story elements become more relevant to progression.</div>
+</div><br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2FNYofZpi.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FNYofZpi.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2FU5N7hJl.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FU5N7hJl.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2Frw1bEBH.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2Frw1bEBH.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Some resources not found in these locations in vanilla.</div>
+</div><br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2F52rpTqv.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2F52rpTqv.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2Fx0ZzwsS.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2Fx0ZzwsS.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2FOQrAKLW.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FOQrAKLW.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2F8MKIWE4.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2F8MKIWE4.png" style="max-width:75%;" ></a>	<div class = "image-caption">Some points of interest.</div>
+</div><br>
+					
+					
+					</div>
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-usingmechanics">
+				<h3>Using Mechanics</h3>
+					
+					In addition to making use of much more of the map than is normally required, Sea to Sea makes the player utilize several game mechanics that are semi-frequently ignored.
+					
+					
+					<br><br>
+					
+					
+					One of the most significant of these is the Seabase building mechanic; while this can be completely skipped for a vanilla playthrough, C2C requires seabases for several reasons, including to house and operate a recharging system for the liquid breathing apparatus - without which deep exploration is nearly impossible - and a new "Bioprocessor" crafting machine which has inherited most of the "plant to resource" type recipes.
+					
+					
+					<br><br>
+					
+					
+					Closely related to this is the agricultural mechanic, something encouraged by the vanilla game yet never required. With this mod, that encouragement is much much stronger.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2FMwxSaRf.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FMwxSaRf.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Or does scavenging this from the wild by hand every time sound fun to you?</div>
+</div><br>
+					
+					
+					Other examples of emphasizing game mechanics include extending the amount of time the player will spend with each "tier" of vehicle (including "no vehicle"), and increasing the need to interact with Sea Treaders for their...resource yields.<br>
+					
+					
+					<!--<br>
+					
+					
+					Another mechanic made more important is the Cyclops-as-seabase; while the cyclops is itself gated much later in the techtree than in vanilla, it, in particular its ability to act as a mobile base, becomes more important in the latest stages of the game.-->
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-bioprocessor">
+				<h3>Bioprocessor</h3>
+					
+					The bioprocessor is a processing (ie crafting, but automatic and over time) machine which is now the primary way you produce most plant- and animal-derived crafting products, such as benzene and hydrochloric acid, as well as several new ones including luminol and sealant. All of these work in the same general manner, taking some number of the raw input ingredient and some processing enzymes, and gradually consuming these enzymes until the final product is created.
+					
+					
+					<br><br>
+					
+					
+					Some of the recipes are not <i>replacements</i> for the original recipes, but simply efficiency improvements. That is, for early-game items like lubricant, the original recipe continues to exist in a less efficient form, with the bioprocessor alternative being far more convenient once available.
+					
+					
+					<br><br>
+					
+					
+					The bioprocessor is quite power-hungry, necessitating substantiative power generation infrastructure, and as such is best placed in a base that is more than a simple minimalist outpost.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2FsZTDNu4.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FsZTDNu4.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Enzymes.</div>
+</div><br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2FIAPtqQy.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FIAPtqQy.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2FMvIRjJi.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FMvIRjJi.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Sample recipes.</div>
+</div><br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2FR6yoTrX.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FR6yoTrX.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2F5P4yYtJ.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2F5P4yYtJ.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2Fi4TPulq.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2Fi4TPulq.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">The machine in operation.</div>
+</div>
+					</section>
+			</section><br>
+			<section class = "textblock" id = "text-block-liquidbreathing">
+				<h3>Liquid Breathing</h3>
+					
+					With C2C installed, at extreme depths, your oxygen consumption will rise, even with a rebreather, and at greater depths still you will begin to suffer direct injury from the act of respiration. The solution to this is the liquid breathing system, which involves a special tank which supplies oxygen-saturated fluid through a compatible helmet. While this system is equipped, you will be immune to these pressure effects.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2FpH5Wb6p.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FpH5Wb6p.jpg" style="max-width:75%;" ></a>
+</div><br>
+					
+					
+					The respiration tank has a main storage and a smaller "active" supply charge; the latter determines the maximum duration of your activities outside, as it can only be charged within a powered seabase or vehicle. In doing so, it drains from the main storage, which will eventually run empty. This main storage can only be refilled in a powered seabase equipped with the appropriate module, and requires consumable "breathing fluid", with each full charge being equivalent to one unit of said fluid (partial charge will only consume part of the value of the item).<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2FSwgEegP.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FSwgEegP.jpg" style="max-width:75%;" ></a>
+</div><br>
+					
+					
+					As a final word of warning, while using the liquid breathing system, you will not be able to use outdoor air (seabase/cyclops air will still be accessible, and you will not consume precious breathing fluid while in such spaces), nor will you be able to eat. Furthermore, removing the device will completely empty your lungs of the fluid, and if not in an air-filled space you will rapidly asphyxiate.
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-ingots">
+				<h3>Ingots</h3>
+					
+					As a convenience feature, C2C adds reversible compressed ingots for most basic materials for which this would make sense, allowing you to save large quantities of inventory space, and for recipes to use larger quantities of materials without using too much inventory space to craft.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2FuZnRIIi.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FuZnRIIi.jpg" style="max-width:75%;" ></a>
+</div>
+					</section>
+			</section><br>
+			<section class = "textblock" id = "text-block-abyssalstalkers">
+				<h3>Abyssal Stalkers</h3>
+					
+					C2C adds a new subspecies of stalkers, found in much deeper biomes. This variant tends to remain around sea treaders, where they collect the metallic deposits unearthed by their movement. Caution in their presence is advised, as their possessive nature significantly exceeds that of their surface counterparts, especially for the most valuable metals.<br>
+					
+					
+					<div class = "video">
+	<iframe class = "deembed-media" style = "max-width: 75%;" width="960" height="540" src="https://www.youtube.com/embed/eeQvqW8C6yQ" title="A demo video of their behavior." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-newbiomes">
+				<h3>New Biomes</h3>
+					
+					The mod adds two new biomes to the game, done both to add a reason to venture to a new area, and to include some unique content not present at all in vanilla. Both of these biomes' locations, exact natures, and contained treasures are a secret you will need to discover for yourself, but be warned that the feeling of danger within them is not without basis.<br>
+					
+					
+					<div class = "spoiler"><br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2FcP1OszT.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FcP1OszT.png" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2FZaOzaQz.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FZaOzaQz.png" style="max-width:75%;" ></a>	<div class = "image-caption">Early development images of one of the biomes.</div>
+</div><br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2FiZVdjKa.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FiZVdjKa.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">The Glass Forest.</div>
+</div><br>
+					
+					
+					</div>
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-lifepods">
+				<h3>Lifepods</h3>
+					
+					Sea to Sea adds four new lifepods to the game, similar in design to the vanilla ones. The new ones serve the same purpose as those lifepods, to draw a player towards a general area, with the intent that they then explore the surrounding region and find the nearby POIs or other things of value.
+					
+					
+					<br><br>
+					
+					
+					These pods, their inhabitants, and those characters' experiences in the hours or days after the Aurora crash will both add new "leaves" to the narrative of the game, as well as serve a major role in the player's progression as they encounter what remains. At the time of this writing, these seven characters' material legacy includes a half-dozen databoxes, and a suite of nine new voice-acted PDAs to connect them to the main story, explain their posession of certain technologies, or provide hints to the player where to find or how to utilize valuable items or resources, or how to overcome some obstacle.<br>
+					
+					
+					<div class = "spoiler"><br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2Fc1Zf25e.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2Fc1Zf25e.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2FpUWjAMp.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FpUWjAMp.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2FldYjY5N.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FldYjY5N.jpg" style="max-width:75%;" ></a>
+</div><br>
+					
+					
+					</div>
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-puzzle">
+				<h3>Puzzle</h3>
+					
+					The hints mentioned above are not idle. In several cases, the player will be presented with a barrier to their progression or exploration, but not given any explicit instruction on how to surpass it; it is left to the player to make the connections between the pieces of knowledge they have and synthesize potential solutions. This is similar in concept to the "connect the dots from the hints" puzzles seen in <a href="../../minecraft/mods/chromaticraft.html">ChromatiCraft</a>, though at a much smaller scale. The majority focus on determining either the location of some desired feature, or of gaining access to a location that is otherwise generally inaccesible.
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-environmentalhazards">
+				<h3>Environmental Hazards</h3>
+					
+					Many of such "initially inaccessible locations" are that way because of new dangers added to the oceans of 4546B, specifically to the environment in certain regions. Surmounting these will necessitate gaining specific equipment, knowledge, or both, until which point the areas are - generally lethally - unable to be explored and exploited.<br>
+					
+					
+					<div class = "spoiler"><br>
+					
+					
+					These new hazards include but are very much not limited to:
+					
+					
+					<ul><li>The effects of the toxic, hypersaline brine of the lost river is no longer solely confined to a narrow basin in the floor; though the effect remains by far the most pronounced under that surface, chemical diffusion has rendered all the water in the tunnels both aggressively toxic and extremely electrically conductive</li>
+					
+					
+					<li>Water pressures at extreme depths now act upon a free-swimming player, resulting in severely shortened survival times unless mitigation efforts are employed</li>
+					
+					
+					<li>Lava zone temperatures have been drastically increased, to the point where unprotected swimming is rapidly fatal, some regions are unsafe when outside of a vehicle regardless of equipment, and some vehicles, if not retrofitted, will disastrously overheat</li></ul>
+					
+					
+					</div>
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-moddependencies">
+				<h3>Dependencies on Other Mods</h3>
+					
+					Several of the supporting content and mechanics from C2C have been split into other mods, and as such C2C depends on the rest of my SN mods to function (the reverse is not true, ie they do not require C2C). As such, you will need to install all of them if you want to play with C2C.
+					
+					
+					<br><br>
+					
+					
+					Also worth noting is that where those mods are configurable, some of these options are fixed or at least range-bounded when C2C is installed, to ensure the game balance remains within appropriate parameters.
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-newitems">
+				<h3>New Items</h3>
+					
+					C2C adds many new items, both as raw resources and as crafting/intermediate materials:<br>
+					
+					
+					<table class = "sn-recipe-table">
+  <tr>
+	<th style = "width: 5%">
+		
+	</th>
+	<th class = "left-output-column" style = "width: 15%; border-collapse: collapse; border-spacing:0;">
+		Name
+	</th>
+	<th class = "original-column" style = "width: 10%">
+		Type
+	</th>
+	<th class = "original-column" style = "width: 70%">
+		Description
+	</th>
+  </tr>
+  <tr>
+	<td>
+		<img class = "sn-item-icon-azurite sn-recipe-ingredient sn-custom-item" src="E:/My Documents/Desktop Stuff/Game Stuff/Modding/Subnautica/Mods/SeaToSea/SeaToSea/Textures/Items/VentCrystal.png">
+	</td>
+	<td>
+		Azurite
+	</td>
+	<td>
+		Raw Material
+	</td>
+	<td>
+		A luminous gemstone with exquisite optical properties and electromagnetic conductivity.
+	</td>
+  </tr>
+  <tr>
+	<td>
+		<img class = "sn-item-icon-avolite sn-recipe-ingredient sn-custom-item" src="E:/My Documents/Desktop Stuff/Game Stuff/Modding/Subnautica/Mods/SeaToSea/SeaToSea/Textures/Items/PhaseCrystal.png">
+	</td>
+	<td>
+		Avolite
+	</td>
+	<td>
+		Raw Material
+	</td>
+	<td>
+		An integral part of ship drives and phase gates. These crystals are not fully understood, but are known to only form in deep space.
+	</td>
+  </tr>
+  <tr>
+	<td>
+		<img class = "sn-item-icon-platinum sn-recipe-ingredient sn-custom-item" src="E:/My Documents/Desktop Stuff/Game Stuff/Modding/Subnautica/Mods/SeaToSea/SeaToSea/Textures/Items/Platinum.png">
+	</td>
+	<td>
+		Platinum
+	</td>
+	<td>
+		Raw Material
+	</td>
+	<td>
+		A dense, valuable, rare metal with extreme resistance to corrosion. In addition to being useful for creating alloys, it is also useful as a chemical catalyst with organic compounds.
+	</td>
+  </tr>
+  <tr>
+	<td>
+		<img class = "sn-item-icon-pressurecrys sn-recipe-ingredient sn-custom-item" src="E:/My Documents/Desktop Stuff/Game Stuff/Modding/Subnautica/Mods/SeaToSea/SeaToSea/Textures/Items/PressureCrystals.png">
+	</td>
+	<td>
+		Abyssoclase
+	</td>
+	<td>
+		Raw Material
+	</td>
+	<td>
+		Small, dense crystals formed under extreme pressure, with trace amounts of exotic elements such as Tellurium.
+	</td>
+  </tr>
+  <tr>
+	<td>
+		<img class = "sn-item-icon-iridium sn-recipe-ingredient sn-custom-item" src="E:/My Documents/Desktop Stuff/Game Stuff/Modding/Subnautica/Mods/SeaToSea/SeaToSea/Textures/Items/Iridium.png">
+	</td>
+	<td>
+		Iridium
+	</td>
+	<td>
+		Raw Material
+	</td>
+	<td>
+		An exotic and dense metal not typically found in most geologic strata.
+	</td>
+  </tr>
+</table><br>
+					
+					
+					<table class = "sn-recipe-table">
+  <tr>
+	<th style = "width: 5%">
+		
+	</th>
+	<th class = "left-output-column" style = "width: 15%; border-collapse: collapse; border-spacing:0;">
+		Name
+	</th>
+	<th class = "original-column" style = "width: 10%">
+		Type
+	</th>
+	<th class = "original-column" style = "width: 70%">
+		Description
+	</th>
+  </tr>
+  <tr>
+	<td>
+		<img class = "sn-item-icon-honeycomb sn-recipe-ingredient sn-custom-item" src="E:/My Documents/Desktop Stuff/Game Stuff/Modding/Subnautica/Mods/SeaToSea/SeaToSea/Textures/Items/HoneycombComposite.png">
+	</td>
+	<td>
+		Honeycomb Composite Plating
+	</td>
+	<td>
+		Crafting Item
+	</td>
+	<td>
+		A strong lightweight panel with extremely low thermal conductivity, and very effective force and vibration absorption capabilities.
+	</td>
+  </tr>
+  <tr>
+	<td>
+		<img class = "sn-item-icon-denseazurite sn-recipe-ingredient sn-custom-item" src="E:/My Documents/Desktop Stuff/Game Stuff/Modding/Subnautica/Mods/SeaToSea/SeaToSea/Textures/Items/DenseAzurite.png">
+	</td>
+	<td>
+		Shaped Azurite
+	</td>
+	<td>
+		Crafting Item
+	</td>
+	<td>
+		A more densely packed and energetically useful form of Azurite.
+	</td>
+  </tr>
+  <tr>
+	<td>
+		<img class = "sn-item-icon-lens sn-recipe-ingredient sn-custom-item" src="E:/My Documents/Desktop Stuff/Game Stuff/Modding/Subnautica/Mods/SeaToSea/SeaToSea/Textures/Items/CrystalLens.png">
+	</td>
+	<td>
+		Refractive Lens
+	</td>
+	<td>
+		Crafting Item
+	</td>
+	<td>
+		A lens with the ability to refract several kinds of energy and waves.
+	</td>
+  </tr>
+  <tr>
+	<td>
+		<img class = "sn-item-icon-hullplate sn-recipe-ingredient sn-custom-item" src="E:/My Documents/Desktop Stuff/Game Stuff/Modding/Subnautica/Mods/SeaToSea/SeaToSea/Textures/Items/HullPlating.png">
+	</td>
+	<td>
+		Hull Plating
+	</td>
+	<td>
+		Crafting Item
+	</td>
+	<td>
+		Heavy armor for vehicles.
+	</td>
+  </tr>
+  <tr>
+	<td>
+		<img class = "sn-item-icon-sealant sn-recipe-ingredient sn-custom-item" src="E:/My Documents/Desktop Stuff/Game Stuff/Modding/Subnautica/Mods/SeaToSea/SeaToSea/Textures/Items/Sealant.png">
+	</td>
+	<td>
+		Sealant
+	</td>
+	<td>
+		Crafting Item
+	</td>
+	<td>
+		A thick goo useful for impregnating other materials to induce impermeability.
+	</td>
+  </tr>
+  <tr>
+	<td>
+		<img class = "sn-item-icon-sealfabric sn-recipe-ingredient sn-custom-item" src="E:/My Documents/Desktop Stuff/Game Stuff/Modding/Subnautica/Mods/SeaToSea/SeaToSea/Textures/Items/SealFabric.png">
+	</td>
+	<td>
+		Sealed Fabric
+	</td>
+	<td>
+		Crafting Item
+	</td>
+	<td>
+		Fabric woven together and thoroughly saturated with sealing compounds.
+	</td>
+  </tr>
+  <tr>
+	<td>
+		<img class = "sn-item-icon-chlorine sn-recipe-ingredient sn-custom-item" src="E:/My Documents/Desktop Stuff/Game Stuff/Modding/Subnautica/Mods/SeaToSea/SeaToSea/Textures/Items/Chlorine.png">
+	</td>
+	<td>
+		Chlorine
+	</td>
+	<td>
+		Crafting Item
+	</td>
+	<td>
+		A highly poisonous gas which dissolves easily in water. Good for killing microorganisms.
+	</td>
+  </tr>
+  <tr>
+	<td>
+		<img class = "sn-item-icon-luminol sn-recipe-ingredient sn-custom-item" src="E:/My Documents/Desktop Stuff/Game Stuff/Modding/Subnautica/Mods/SeaToSea/SeaToSea/Textures/Items/Luminol.png">
+	</td>
+	<td>
+		Luminol
+	</td>
+	<td>
+		Crafting Item
+	</td>
+	<td>
+		A luminous fluid, colorless in small amounts and pale blue in large quantities.
+	</td>
+  </tr>
+  <tr>
+	<td>
+		<img class = "sn-item-icon-smartpoly sn-recipe-ingredient sn-custom-item" src="E:/My Documents/Desktop Stuff/Game Stuff/Modding/Subnautica/Mods/SeaToSea/SeaToSea/Textures/Items/SmartPolymer.png">
+	</td>
+	<td>
+		Smart Polymer
+	</td>
+	<td>
+		Crafting Item
+	</td>
+	<td>
+		A flexible plastic material that remembers its original shape and returns to it when stress is released.
+	</td>
+  </tr>
+  <tr>
+	<td>
+		<img class = "sn-item-icon-weakacid sn-recipe-ingredient sn-custom-item" src="E:/My Documents/Desktop Stuff/Game Stuff/Modding/Subnautica/Mods/SeaToSea/SeaToSea/Textures/Items/WeakAcid.png">
+	</td>
+	<td>
+		Carboxylic Acid
+	</td>
+	<td>
+		Crafting Item
+	</td>
+	<td>
+		A dilute organic acid, suitable for use in basic electronics.
+	</td>
+  </tr>
+  <tr>
+	<td>
+		<img class = "sn-item-icon-motor sn-recipe-ingredient sn-custom-item" src="E:/My Documents/Desktop Stuff/Game Stuff/Modding/Subnautica/Mods/SeaToSea/SeaToSea/Textures/Items/Motor.png">
+	</td>
+	<td>
+		Electric Motor
+	</td>
+	<td>
+		Crafting Item
+	</td>
+	<td>
+		A midsize motor, capable of generating sufficient power to move sizeable machinery, pump fluids, or drive propulsion systems.
+	</td>
+  </tr>
+</table><br>
+					
+					
+					<table class = "sn-recipe-table">
+  <tr>
+	<th style = "width: 5%">
+		
+	</th>
+	<th class = "left-output-column" style = "width: 15%; border-collapse: collapse; border-spacing:0;">
+		Name
+	</th>
+	<th class = "original-column" style = "width: 10%">
+		Type
+	</th>
+	<th class = "original-column" style = "width: 70%">
+		Description
+	</th>
+  </tr>
+  <tr>
+	<td>
+		<img class = "sn-item-icon-t2battery sn-recipe-ingredient sn-custom-item" src="E:/My Documents/Desktop Stuff/Game Stuff/Modding/Subnautica/Mods/SeaToSea/SeaToSea/Textures/Items/t2battery.png">
+	</td>
+	<td>
+		Advanced Battery
+	</td>
+	<td>
+		Equipment
+	</td>
+	<td>
+		A better battery, with significantly greater storage density. Its material construction precludes being adapted into a vehicular power cell.
+	</td>
+  </tr>
+  <tr>
+	<td>
+		<img class = "sn-item-icon-sealsuit sn-recipe-ingredient sn-custom-item" src="E:/My Documents/Desktop Stuff/Game Stuff/Modding/Subnautica/Mods/SeaToSea/SeaToSea/Textures/Items/Sealedsuit.png">
+	</td>
+	<td>
+		Electrochemical Suit
+	</td>
+	<td>
+		Equipment
+	</td>
+	<td>
+		A suit made of molecularly impenetrable fabric.
+			Stops almost all electrical and chemical penetration, but does little against radiation or thermal hazards.
+	</td>
+  </tr>
+  <tr>
+	<td>
+		<img class = "sn-item-icon-rebreatherv2 sn-recipe-ingredient sn-custom-item" src="E:/My Documents/Desktop Stuff/Game Stuff/Modding/Subnautica/Mods/SeaToSea/SeaToSea/Textures/Items/Rebreatherv2.png">
+	</td>
+	<td>
+		Recirculation Mask
+	</td>
+	<td>
+		Equipment
+	</td>
+	<td>
+		A motorized face mask equipped with the ability to actively pump a breathing medium from storage and either recirculate it back to the tank or force waste gas out against very high pressures.
+			
+			A requirement for liquid breathing hardware to function.
+	</td>
+  </tr>
+  <tr>
+	<td>
+		<img class = "sn-item-icon-fluidtank sn-recipe-ingredient sn-custom-item" src="E:/My Documents/Desktop Stuff/Game Stuff/Modding/Subnautica/Mods/SeaToSea/SeaToSea/Textures/Items/LiquidTank.png">
+	</td>
+	<td>
+		Liquid Breathing System
+	</td>
+	<td>
+		Equipment
+	</td>
+	<td>
+		A breathing apparatus that uses an oxygen-saturated perfluorocarbon liquid instead of air.
+			Allows for respiration at extreme depths and pressures without risk of barotrauma or toxicity from gas mixtures.
+	</td>
+  </tr>
+  <tr>
+	<td>
+		<img class = "sn-item-icon-heatsink sn-recipe-ingredient sn-custom-item" src="E:/My Documents/Desktop Stuff/Game Stuff/Modding/Subnautica/Mods/SeaToSea/SeaToSea/Textures/Items/Seamothheatsink.png">
+	</td>
+	<td>
+		Seamoth Heat Sink
+	</td>
+	<td>
+		Equipment
+	</td>
+	<td>
+		A consumable item for the heat sink module to operate.
+	</td>
+  </tr>
+</table><br>
+					
+					
+					<table class = "sn-recipe-table">
+  <tr>
+	<th style = "width: 5%">
+		
+	</th>
+	<th class = "left-output-column" style = "width: 15%; border-collapse: collapse; border-spacing:0;">
+		Name
+	</th>
+	<th class = "original-column" style = "width: 10%">
+		Type
+	</th>
+	<th class = "original-column" style = "width: 70%">
+		Description
+	</th>
+  </tr>
+  <tr>
+	<td>
+		<img class = "sn-item-icon-smdepth4 sn-recipe-ingredient sn-custom-item" src="E:/My Documents/Desktop Stuff/Game Stuff/Modding/Subnautica/Mods/SeaToSea/SeaToSea/Textures/Items/Smdepth4.png">
+	</td>
+	<td>
+		Seamoth Depth Module Mk4
+	</td>
+	<td>
+		Modules
+	</td>
+	<td>
+		Raises depth limit to 1300m.
+	</td>
+  </tr>
+  <tr>
+	<td>
+		<img class = "sn-item-icon-smvoidstealth sn-recipe-ingredient sn-custom-item" src="E:/My Documents/Desktop Stuff/Game Stuff/Modding/Subnautica/Mods/SeaToSea/SeaToSea/Textures/Items/Seamothvoidstealth.png">
+	</td>
+	<td>
+		Acoustic Suppression Module
+	</td>
+	<td>
+		Modules
+	</td>
+	<td>
+		Greatly reduces the detectability of basic seamoth systems to passive listeners.
+			Will not affect active echolocators, or creatures at close range.
+	</td>
+  </tr>
+  <tr>
+	<td>
+		<img class = "sn-item-icon-smheat sn-recipe-ingredient sn-custom-item" src="E:/My Documents/Desktop Stuff/Game Stuff/Modding/Subnautica/Mods/SeaToSea/SeaToSea/Textures/Items/Seamothheatsinkmodule.png">
+	</td>
+	<td>
+		Seamoth Heat Sink Module
+	</td>
+	<td>
+		Modules
+	</td>
+	<td>
+		Allows the seamoth to dump large quantities of heat quickly, helping it survive in extremely hot environments. Derived from spacecraft technology.
+	</td>
+  </tr>
+  <tr>
+	<td>
+		<img class = "sn-item-icon-powerseal sn-recipe-ingredient sn-custom-item" src="E:/My Documents/Desktop Stuff/Game Stuff/Modding/Subnautica/Mods/SeaToSea/SeaToSea/Textures/Items/Seamothpowerseal.png">
+	</td>
+	<td>
+		Electrical Sealant Module
+	</td>
+	<td>
+		Modules
+	</td>
+	<td>
+		Applies an insulating coating to the seamoth exterior, significantly reducing the power loss when in conductive environments.
+	</td>
+  </tr>
+  <tr>
+	<td>
+		<img class = "sn-item-icon-cyclopsheat sn-recipe-ingredient sn-custom-item" src="E:/My Documents/Desktop Stuff/Game Stuff/Modding/Subnautica/Mods/SeaToSea/SeaToSea/Textures/Items/Cyclopsheat.png">
+	</td>
+	<td>
+		Cyclops Heat Dissipation Module
+	</td>
+	<td>
+		Modules
+	</td>
+	<td>
+		Provides the ability for the cyclops to shed excess heat in superheated environments, preventing serious overheating and fire.
+	</td>
+  </tr>
+</table><br>
+					
+					
+					<table class = "sn-recipe-table">
+  <tr>
+	<th style = "width: 5%">
+		
+	</th>
+	<th class = "left-output-column" style = "width: 15%; border-collapse: collapse; border-spacing:0;">
+		Name
+	</th>
+	<th class = "original-column" style = "width: 10%">
+		Type
+	</th>
+	<th class = "original-column" style = "width: 70%">
+		Description
+	</th>
+  </tr>
+  <tr>
+	<td>
+		<img class = "sn-item-icon-breathfluid sn-recipe-ingredient sn-custom-item" src="E:/My Documents/Desktop Stuff/Game Stuff/Modding/Subnautica/Mods/SeaToSea/SeaToSea/Textures/Items/BreathFluid.png">
+	</td>
+	<td>
+		Breathing Fluid
+	</td>
+	<td>
+		Misc
+	</td>
+	<td>
+		A nontoxic solvent saturated with oxygen, suitable for liquid-based respiration.
+	</td>
+  </tr>
+  <tr>
+	<td>
+		<img class = "sn-item-icon-bandage sn-recipe-ingredient sn-custom-item" src="E:/My Documents/Desktop Stuff/Game Stuff/Modding/Subnautica/Mods/SeaToSea/SeaToSea/Textures/Items/CurativeBandage.png">
+	</td>
+	<td>
+		Nanowrap Bandages
+	</td>
+	<td>
+		Misc
+	</td>
+	<td>
+		A highly sophisticated wound dressing, capable of restoring far more health than a basic first aid kit, staunching any blood loss, and alleviating all symptoms of poisoning or other ongoing harming effects.
+	</td>
+  </tr>
+</table>
+					</section>
+			</section>
+<br>
+			<section class = "textblock" id = "text-block-sourcecode">
+			<div class = "modsource">
+				<h3>Source Code</h3>				The source code for Sea To Sea can be found here:<a class = "srcbtn" href="https://github.com/ReikaKalseki/SeaToSea" target="_blank"><span>GitHub<div class = "spacer"></div><i class="fab fa-github"></i></span></a>
+			</div>
+			</section>
+<br>
+<section class = "textblock" id = "text-block-downloads">
+	<h3>Downloads</h3>
+<a class = "dlbtn" href="https://github.com/ReikaKalseki/Reika_SubnauticaModsShared/releases/download/Downloads/SeaToSea.zip"><span>GitHub Releases<div class = "spacer"></div><i class="fas fa-download"></i></span></a>
+</section>
+<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
+		<hr>
+		<div id = "footer-spacing">
+		
+		</div>
+		<hr>
+		If you like any of my mods, maps, or other content, or want to help me develop them, feel free to use my Patreon or the buttons below. Every little bit helps me be able to keep working on them, and helps ensure both maintenance and expansion of them.<br>
+		If you wish to give a one-time donation, I recommend you use the Paypal link on the right; Patreon, though it can be used for one-time donations, is designed for ongoing monthly 'subscriptions' (ie a set amount of money gifted each month for as long as you remain a 'patron'). Paypal can also register a donation with monthly recurrence, should that seem preferable to you.<br>
+		For both systems, the amount you choose to donate is up to you, and for Patreon, can be changed at any time should you wish to decrease or increase the amount.<br>
+		And thank you for your support. :D<br>
+					<div class = "linkiconblock">
+					<div class = "linktile" style = "width: 49.75%">
+						<div class = "linklabel">Patreon</div>
+						<a class = "icon icon-patreon" href="http://www.patreon.com/reikasminecraft" ></a>
+					</div>
+					<div class = "linktile" style = "width: 49.75%">
+						<div class = "linklabel">Paypal</div>
+						<a class = "icon icon-paypal" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5XRAM3SXBRJY4" ></a>
+					</div>
+			</div>
+		<hr>
+		To contact me (though some of these are only checked periodically, and many are for specific topics) or find additional information or content, visit any one of these platforms:<br>
+					<div class = "linkiconblock">
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Minecraft Forums</div>
+						<a class = "icon icon-mcforums" href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1291655" title="Minecraft Only"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Factorio Forums</div>
+						<a class = "icon icon-facforums" href="https://forums.factorio.com/viewforum.php?f=216" title="Factorio Only"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">GitHub</div>
+						<a class = "icon icon-github" href="https://github.com/ReikaKalseki" ></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Discord</div>
+						<a class = "icon icon-discord" href="https://discord.com/channels/466852131895508992/466852131895508994/" title="Discord ID: Reika#3161"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Steam</div>
+						<a class = "icon icon-steam" href="https://steamcommunity.com/id/ReikaKalseki/myworkshopfiles/" title="Please no random friend requests"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">YouTube</div>
+						<a class = "icon icon-youtube" href="https://www.youtube.com/user/ReikasMinecraft/videos" ></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">SoundCloud</div>
+						<a class = "icon icon-soundcloud" href="https://soundcloud.com/reikakalseki" title="Music Only"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Reddit</div>
+						<a class = "icon icon-reddit" href="https://www.reddit.com/user/ReikaKalseki/" ></a>
+					</div>
+			</div>
+		<hr>
+		This site is proudly Canadian. <i class="fab fa-canadian-maple-leaf"></i><br>
+		<hr>
+		Site (including embedded JavaScript) and linked projects (mods, maps, etc) created by and &copy; ReikaKalseki, except for content within which is part of the base games, as noted below.<br>
+		<hr>
+			Minecraft and its content and assets are &copy; Mojang AB, with whom I am not affiliated<br>
+			Factorio and its content and assets are &copy; Wube Software, with whom I am not affiliated<br>
+			Portal 2 and its content and assets are &copy; Valve Corporation, with whom I am not affiliated<br>
+			Stellaris and its content and assets are &copy; Paradox Interactive, with whom I am not affiliated<br>
+			Subnautica and its content and assets are &copy; Unknown Worlds Entertainment, with whom I am not affiliated<br>
+			Space Engineers and its content and assets are &copy; Keen Software House, with whom I am not affiliated<br>
+			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
+			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>
+	</div></footer>		</div>
+    </body>
+</html>

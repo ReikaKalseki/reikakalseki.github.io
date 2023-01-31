@@ -11,6 +11,7 @@
 		<script src = "../../compiledJS/entrypoint.bundle.js"></script>
 		<meta name="script-def" content="footer-spacing">
 		<meta name="script-def" content="navbar-scroll-indicator">
+		<meta name="script-def" content="spoiler-handler">
 		<!-- <meta name="script-def" content="quicknav-pos"> -->
     </head>
     <body  data-game="se">
@@ -65,6 +66,7 @@
 				<a class = "navdrop-entry" href="../../factorio/index.html">Factorio</a>
 				<a class = "navdrop-entry" href="../../p2/index.html">Portal 2</a>
 				<a class = "navdrop-entry" href="../../stellaris/index.html">Stellaris</a>
+				<a class = "navdrop-entry" href="../../subnautica/index.html">Subnautica</a>
 				<a class = "navdrop-entry" href="../../fce/index.html">FortressCraft Evolved</a>
 				<a class = "navdrop-entry" href="../../starbound/index.html">Starbound</a>
 		</div>
@@ -75,6 +77,7 @@
 				<a class = "navdrop-entry" href="../../projects/calendar.html">Game Calendar</a>
 				<a class = "navdrop-entry" href="../../projects/eventbuilder.html">Stellaris Event Builder</a>
 				<a class = "navdrop-entry" href="../../projects/fcompile.html">FCompile</a>
+				<a class = "navdrop-entry" href="https://dragonrealm.overminddl1.com/">Dragon Realm Modpack</a>
 		</div>
 	  </div>
 	</div>
@@ -84,10 +87,10 @@
 <hr>
 <table class="toc_list">
 	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><a class = "tocbtn" href="#top"><i class="fas fa-angle-double-up"></i></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-description">Description</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-description"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-scriptvars">Script Options</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-scriptvars"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-sourcecode"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-downloads"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-description">Description</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-description"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-scriptvars">Script Options</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-scriptvars"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-sourcecode"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-downloads"></a></td></tr>
 </table>
 </div>        <div id = "textarea" class = "textarea ">
 				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
@@ -131,129 +134,129 @@
 				<br>
 				<div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">DISPLAY_TAG</h4>
+			<h4 class = "setting-name heading-without-nav">DISPLAY_TAG</h4>
 Type: string<br>
-			Current Default Value:<div class = "code-block">"Beam"</div>
+Current Default Value:<div class = "code-block">"Beam"</div>
 		</div>
 	Any spotlight with this (and a hangar ID) in its name will be color-controlled.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">AUX_DISPLAY_TAG</h4>
+			<h4 class = "setting-name heading-without-nav">AUX_DISPLAY_TAG</h4>
 Type: string<br>
-			Current Default Value:<div class = "code-block">"Color Lights"</div>
+Current Default Value:<div class = "code-block">"Color Lights"</div>
 		</div>
 	Any lighting block in a group named "&lt;HangarID&gt; - &lt;AUX_DISPLAY_TAG&gt;" will be counted as an auxiliary color-controlled light.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">AUX_GROUP_TAG</h4>
+			<h4 class = "setting-name heading-without-nav">AUX_GROUP_TAG</h4>
 Type: string<br>
-			Current Default Value:<div class = "code-block">"Lights"</div>
+Current Default Value:<div class = "code-block">"Lights"</div>
 		</div>
 	Any lighting block in a group named "&lt;HangarID&gt; - &lt;AUX_GROUP_TAG&gt;" will be counted as an auxiliary light for that hangar.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">VENT_GROUP_TAG</h4>
+			<h4 class = "setting-name heading-without-nav">VENT_GROUP_TAG</h4>
 Type: string<br>
-			Current Default Value:<div class = "code-block">"Air Vent"</div>
+Current Default Value:<div class = "code-block">"Air Vent"</div>
 		</div>
 	Any vent with this (and a hangar ID) in its name will be counted as a Hangar supply vent and will be consulted for oxygen levels.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">EXTERNAL_VENT_TAG</h4>
+			<h4 class = "setting-name heading-without-nav">EXTERNAL_VENT_TAG</h4>
 Type: string<br>
-			Current Default Value:<div class = "code-block">"External Air Vent"</div>
+Current Default Value:<div class = "code-block">"External Air Vent"</div>
 		</div>
 	Any vent with this in its name will be counted as an external vent and will be consulted for atmospheric oxygen levels.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">SENSOR_TAG</h4>
+			<h4 class = "setting-name heading-without-nav">SENSOR_TAG</h4>
 Type: string<br>
-			Current Default Value:<div class = "code-block">"Door Sensor"</div>
+Current Default Value:<div class = "code-block">"Door Sensor"</div>
 		</div>
 	Any sensor with this (and a hangar ID) in its name will be checked for what grids it detects to know when to open the door of the hangar.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">RED_THRESHOLD</h4>
+			<h4 class = "setting-name heading-without-nav">RED_THRESHOLD</h4>
 Type: float<br>
-			Current Default Value:<div class = "code-block">10</div>
+Current Default Value:<div class = "code-block">10</div>
 		</div>
 	Spotlights will be red if air level is below this percentage.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">GREEN_THRESHOLD</h4>
+			<h4 class = "setting-name heading-without-nav">GREEN_THRESHOLD</h4>
 Type: float<br>
-			Current Default Value:<div class = "code-block">98</div>
+Current Default Value:<div class = "code-block">98</div>
 		</div>
 	And green if it is above this; they will be yellow if it is in between.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">AMBIENT_LIGHT_THRESHOLD</h4>
+			<h4 class = "setting-name heading-without-nav">AMBIENT_LIGHT_THRESHOLD</h4>
 Type: float<br>
-			Current Default Value:<div class = "code-block">GREEN_THRESHOLD</div>
+Current Default Value:<div class = "code-block">GREEN_THRESHOLD</div>
 		</div>
 	Any auxiliary lights in the hangar will be toggled on and off, being on if the oxygen level is above this.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">RED_IF_PRESSURIZED</h4>
+			<h4 class = "setting-name heading-without-nav">RED_IF_PRESSURIZED</h4>
 Type: bool<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	Enable this to flip red and green, so that instead of an air level indicator, you get a "safe to open the door" indicator.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">COLOR_FADE_DURATION</h4>
+			<h4 class = "setting-name heading-without-nav">COLOR_FADE_DURATION</h4>
 Type: float<br>
-			Current Default Value:<div class = "code-block">60</div>
+Current Default Value:<div class = "code-block">60</div>
 		</div>
 	How many update cycles (in 1/60th of a second) should be spent fading between colors.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">OPEN_ATMO_THRESHOLD</h4>
+			<h4 class = "setting-name heading-without-nav">OPEN_ATMO_THRESHOLD</h4>
 Type: float<br>
-			Current Default Value:<div class = "code-block">80F</div>
+Current Default Value:<div class = "code-block">80F</div>
 		</div>
 	If atmospheric O2 is above this percentage, hangars will be left open; set this over 100 to disable that behavior.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">allowOpenIfNoO2Space</h4>
+			<h4 class = "setting-name heading-without-nav">allowOpenIfNoO2Space</h4>
 Type: bool<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	Whether to allow the hangar to open when pressurized but there is no space to put the air in tanks.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">SCREEN_TAG</h4>
+			<h4 class = "setting-name heading-without-nav">SCREEN_TAG</h4>
 Type: string<br>
-			Current Default Value:<div class = "code-block">"AirLevel"</div>
+Current Default Value:<div class = "code-block">"AirLevel"</div>
 		</div>
 	Any LCD panel with this (and a hangar ID) in its name will show the air level in its hangar.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">HANGAR_GROUPS</h4>
+			<h4 class = "setting-name heading-without-nav">HANGAR_GROUPS</h4>
 Type: string[]<br>
-			Current Default Value:<div class = "code-block">{"Hangar"}</div>
+Current Default Value:<div class = "code-block">{"Hangar"}</div>
 		</div>
 	Each string in this list is treated as a separate hangar group ('ID').
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">isConnectedToHangar<code class = "setting-args">(string blockName, string id)</code></h4>
+			<h4 class = "setting-name heading-without-nav">isConnectedToHangar<code class = "setting-args">(string blockName, string id)</code></h4>
 Return Type: bool<br>
-			Current Default Code:<div class = "code-block">return blockName.Contains(id);</div>
+Current Default Code:<div class = "code-block">return blockName.Contains(id);</div>
 		</div>
 	Whether a given vent or internal door is connected to the hangar of a given ID; This is usually "hangar and vent/door are part of the same group", but might be different if for example the hangars are all connected, sharing doors and/or vents.
 </div>
@@ -336,6 +339,7 @@ Return Type: bool<br>
 			Factorio and its content and assets are &copy; Wube Software, with whom I am not affiliated<br>
 			Portal 2 and its content and assets are &copy; Valve Corporation, with whom I am not affiliated<br>
 			Stellaris and its content and assets are &copy; Paradox Interactive, with whom I am not affiliated<br>
+			Subnautica and its content and assets are &copy; Unknown Worlds Entertainment, with whom I am not affiliated<br>
 			Space Engineers and its content and assets are &copy; Keen Software House, with whom I am not affiliated<br>
 			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
 			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>

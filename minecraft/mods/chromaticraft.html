@@ -11,6 +11,7 @@
 		<script src = "../../compiledJS/entrypoint.bundle.js"></script>
 		<meta name="script-def" content="footer-spacing">
 		<meta name="script-def" content="navbar-scroll-indicator">
+		<meta name="script-def" content="spoiler-handler">
 		<!-- <meta name="script-def" content="quicknav-pos"> -->
 			<meta name="script-def" content="minecraft/precursor">
     </head>
@@ -73,6 +74,7 @@
 				<a class = "navdrop-entry" href="../../factorio/index.html">Factorio</a>
 				<a class = "navdrop-entry" href="../../p2/index.html">Portal 2</a>
 				<a class = "navdrop-entry" href="../../stellaris/index.html">Stellaris</a>
+				<a class = "navdrop-entry" href="../../subnautica/index.html">Subnautica</a>
 				<a class = "navdrop-entry" href="../../se/index.html">Space Engineers</a>
 				<a class = "navdrop-entry" href="../../fce/index.html">FortressCraft Evolved</a>
 				<a class = "navdrop-entry" href="../../starbound/index.html">Starbound</a>
@@ -84,6 +86,7 @@
 				<a class = "navdrop-entry" href="../../projects/calendar.html">Game Calendar</a>
 				<a class = "navdrop-entry" href="../../projects/eventbuilder.html">Stellaris Event Builder</a>
 				<a class = "navdrop-entry" href="../../projects/fcompile.html">FCompile</a>
+				<a class = "navdrop-entry" href="https://dragonrealm.overminddl1.com/">Dragon Realm Modpack</a>
 		</div>
 	  </div>
 	</div>
@@ -93,23 +96,24 @@
 <hr>
 <table class="toc_list">
 	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><a class = "tocbtn" href="#top"><i class="fas fa-angle-double-up"></i></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-overview">Overview</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-overview"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-theworld">The World</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-theworld"></a></td></tr>
-		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-theworld-autosub-pylons">Pylons</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-theworld-autosub-pylons"></a></td></tr>
-		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-theworld-autosub-buriedstructures">Buried Structures</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-theworld-autosub-buriedstructures"></a></td></tr>
-		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-theworld-autosub-cavecrystals">Cave Crystals</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-theworld-autosub-cavecrystals"></a></td></tr>
-		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-theworld-autosub-forests">Forests</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-theworld-autosub-forests"></a></td></tr>
-		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-theworld-autosub-luminouscliffs">Luminous Cliffs</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-theworld-autosub-luminouscliffs"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-constructs">Constructs</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-constructs"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-progression">Progression</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-progression"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-modinteractions">Mod Interactions</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-modinteractions"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-api">API</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-api"></a></td></tr>
-		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-api-autosub-background">Background</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-api-autosub-background"></a></td></tr>
-		<tr class = "toc-entry toc-entry-l2"><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-api-autosub-installation">Installation</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-api-autosub-installation"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-customrecipes">Custom Recipes</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-customrecipes"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-modsettings">Configuration Settings</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-modsettings"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-sourcecode"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-downloads"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-overview">Overview</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-overview"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-theworld">The World</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-theworld"></a></td></tr>
+		<tr class = "toc-entry toc-entry-l2 "><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-theworld-autosub-pylons">Pylons</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-theworld-autosub-pylons"></a></td></tr>
+		<tr class = "toc-entry toc-entry-l2 "><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-theworld-autosub-buriedstructures">Buried Structures</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-theworld-autosub-buriedstructures"></a></td></tr>
+		<tr class = "toc-entry toc-entry-l2 "><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-theworld-autosub-cavecrystals">Cave Crystals</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-theworld-autosub-cavecrystals"></a></td></tr>
+		<tr class = "toc-entry toc-entry-l2 "><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-theworld-autosub-forests">Forests</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-theworld-autosub-forests"></a></td></tr>
+		<tr class = "toc-entry toc-entry-l2 "><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-theworld-autosub-luminouscliffs">Luminous Cliffs</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-theworld-autosub-luminouscliffs"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-constructs">Constructs</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-constructs"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-progression">Progression</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-progression"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-puzzles">Puzzles</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-puzzles"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-modinteractions">Mod Interactions</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-modinteractions"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-api">API</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-api"></a></td></tr>
+		<tr class = "toc-entry toc-entry-l2 "><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-api-autosub-background">Background</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-api-autosub-background"></a></td></tr>
+		<tr class = "toc-entry toc-entry-l2 "><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-api-autosub-installation">Installation</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-api-autosub-installation"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-customrecipes">Custom Recipes</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-customrecipes"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-modsettings">Configuration Settings</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-modsettings"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-sourcecode"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-downloads"></a></td></tr>
 </table>
 </div>        <div id = "textarea" class = "textarea ">
 				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
@@ -298,6 +302,18 @@ Your browser does not support the video tag.
 </div>
 					
 			</section><br>
+			<section class = "textblock" id = "text-block-puzzles">
+				<h3>Puzzles</h3>
+					
+					The primary puzzles found in ChromatiCraft are the ongoing ones regarding your knowledge as you progress; not everything you learn or need to discover will be straightforward. In many cases, you will only be explicitly presented with half the information, or with the knowledge separated into several isolated components. In all cases, you will be required to work out the missing data, or the connection between seemingly unrelated pieces of information. As a simple example, you may find yourself needing to utilize a particular construct, but with the construct requires an additive with specific properties; meanwhile, you - much earlier in the progression - have discovered a material you have made occasional use of, which exhibited signs of possessing those properties. You would be left to realize the connection and application, rather than ever being explicitly told.
+					
+					
+					<br><br>
+					
+					
+					Much later in the mod, you will find yourself in front of - in a very literal sense - a wide variety of much more explicit puzzles, in part as a representation of unlocking some of the deepest secrets regarding the manipulation of crystal energy. Solving these will be required to reach the pinnacle of such developments.
+					
+			</section><br>
 			<section class = "textblock" id = "text-block-modinteractions">
 				<h3>Mod Interactions</h3>
 					
@@ -353,555 +369,557 @@ Your browser does not support the video tag.
 				<h3>Configuration Settings</h3>
 				This mod contains several config options to modify values and behaviors - such as for balance or server safety concerns, or simply personal taste - to your preferences. Note that several settings may have bounds imposed on their values, either logically or explicitly; these can usually be seen in the actual settings files or ingame. These are listed in order found in the source code, which is generally the order in which they were added; They may be present in a different order ingame or in the configuration files.
 				<br>
+				The settings for the mod, when installed, can be found in the 'config/Reika' subfolder of the MC instance.
+				<br>
 				<div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Lamp Noises</h4>
+			<h4 class = "setting-name heading-without-nav">Lamp Noises</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Nether Crystals</h4>
+			<h4 class = "setting-name heading-without-nav">Nether Crystals</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Disable Pendant Particles</h4>
+			<h4 class = "setting-name heading-without-nav">Disable Pendant Particles</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Crystal Plants May Drop Shards</h4>
+			<h4 class = "setting-name heading-without-nav">Crystal Plants May Drop Shards</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Max Accelerator Lag in NanoSeconds(Set Negative To Disable Throttling)</h4>
+			<h4 class = "setting-name heading-without-nav">Max Accelerator Lag in NanoSeconds(Set Negative To Disable Throttling)</h4>
 Type: int<br>
-			Current Default Value:<div class = "code-block">1000000</div>
+Current Default Value:<div class = "code-block">1000000</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Guardian Stone Range</h4>
+			<h4 class = "setting-name heading-without-nav">Guardian Stone Range</h4>
 Type: int<br>
-			Current Default Value:<div class = "code-block">16</div>
+Current Default Value:<div class = "code-block">16</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Guardian Stone is Full Chunk Height</h4>
+			<h4 class = "setting-name heading-without-nav">Guardian Stone is Full Chunk Height</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Dye Block Particles</h4>
+			<h4 class = "setting-name heading-without-nav">Dye Block Particles</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Generate Anti-Taint plants in Rainbow Forest</h4>
+			<h4 class = "setting-name heading-without-nav">Generate Anti-Taint plants in Rainbow Forest</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Rainbow Forest Animal Density</h4>
+			<h4 class = "setting-name heading-without-nav">Rainbow Forest Animal Density</h4>
 Type: int<br>
-			Current Default Value:<div class = "code-block">6</div>
+Current Default Value:<div class = "code-block">6</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Rainbow Trees Spread Rainbow Forests</h4>
+			<h4 class = "setting-name heading-without-nav">Rainbow Trees Spread Rainbow Forests</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Ender Forest Coloring</h4>
+			<h4 class = "setting-name heading-without-nav">Ender Forest Coloring</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Ender Pool Density from 1 to 3</h4>
+			<h4 class = "setting-name heading-without-nav">Ender Pool Density from 1 to 3</h4>
 Type: int<br>
-			Current Default Value:<div class = "code-block">2</div>
+Current Default Value:<div class = "code-block">2</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Liquid Ender Effect</h4>
+			<h4 class = "setting-name heading-without-nav">Liquid Ender Effect</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Rainbow Leaf Gold Apple Drop Percentage</h4>
+			<h4 class = "setting-name heading-without-nav">Rainbow Leaf Gold Apple Drop Percentage</h4>
 Type: float<br>
-			Current Default Value:<div class = "code-block">0.25F</div>
+Current Default Value:<div class = "code-block">0.25F</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Generate Some Pylons as Broken</h4>
+			<h4 class = "setting-name heading-without-nav">Generate Some Pylons as Broken</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Reload Handbook Data on Open</h4>
+			<h4 class = "setting-name heading-without-nav">Reload Handbook Data on Open</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Run Worldgen in Superflat Worlds</h4>
+			<h4 class = "setting-name heading-without-nav">Run Worldgen in Superflat Worlds</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Generate Pylons in Non-Overworld</h4>
+			<h4 class = "setting-name heading-without-nav">Generate Pylons in Non-Overworld</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Spawn with CC Lexicon</h4>
+			<h4 class = "setting-name heading-without-nav">Spawn with CC Lexicon</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Chest Generation Tier</h4>
+			<h4 class = "setting-name heading-without-nav">Chest Generation Tier</h4>
 Type: int<br>
-			Current Default Value:<div class = "code-block">4</div>
+Current Default Value:<div class = "code-block">4</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Enable Ender TNT</h4>
+			<h4 class = "setting-name heading-without-nav">Enable Ender TNT</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Use vanilla keybind system for ability selection GUI</h4>
+			<h4 class = "setting-name heading-without-nav">Use vanilla keybind system for ability selection GUI</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Allow duplication wand to copy TileEntities</h4>
+			<h4 class = "setting-name heading-without-nav">Allow duplication wand to copy TileEntities</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">More difficult ThaumCraft integration</h4>
+			<h4 class = "setting-name heading-without-nav">More difficult ThaumCraft integration</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Energy Buffer Overlay Location</h4>
+			<h4 class = "setting-name heading-without-nav">Energy Buffer Overlay Location</h4>
 Type: int<br>
-			Current Default Value:<div class = "code-block">0</div>
+Current Default Value:<div class = "code-block">0</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Retrogeneration</h4>
+			<h4 class = "setting-name heading-without-nav">Retrogeneration</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Enable Biome Painter</h4>
+			<h4 class = "setting-name heading-without-nav">Enable Biome Painter</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Rainbow Forest Biome Weight</h4>
+			<h4 class = "setting-name heading-without-nav">Rainbow Forest Biome Weight</h4>
 Type: int<br>
-			Current Default Value:<div class = "code-block">10</div>
+Current Default Value:<div class = "code-block">10</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Ender Forest Biome Weight</h4>
+			<h4 class = "setting-name heading-without-nav">Ender Forest Biome Weight</h4>
 Type: int<br>
-			Current Default Value:<div class = "code-block">10</div>
+Current Default Value:<div class = "code-block">10</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Luminous Cliffs Biome Weight</h4>
+			<h4 class = "setting-name heading-without-nav">Luminous Cliffs Biome Weight</h4>
 Type: int<br>
-			Current Default Value:<div class = "code-block">4</div>
+Current Default Value:<div class = "code-block">4</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Allow Danger in Rainbow Forests</h4>
+			<h4 class = "setting-name heading-without-nav">Allow Danger in Rainbow Forests</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Lumen Relay Range</h4>
+			<h4 class = "setting-name heading-without-nav">Lumen Relay Range</h4>
 Type: int<br>
-			Current Default Value:<div class = "code-block">16</div>
+Current Default Value:<div class = "code-block">16</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Always Respawn EnderDragon</h4>
+			<h4 class = "setting-name heading-without-nav">Always Respawn EnderDragon</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Delete End on Unload</h4>
+			<h4 class = "setting-name heading-without-nav">Delete End on Unload</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Auxiliary Fragment Acquisition</h4>
+			<h4 class = "setting-name heading-without-nav">Auxiliary Fragment Acquisition</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Duplication Wand Max Volume</h4>
+			<h4 class = "setting-name heading-without-nav">Duplication Wand Max Volume</h4>
 Type: int<br>
-			Current Default Value:<div class = "code-block">1000</div>
+Current Default Value:<div class = "code-block">1000</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">World Shift Can Move TileEntities</h4>
+			<h4 class = "setting-name heading-without-nav">World Shift Can Move TileEntities</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Dimension Structure Difficulty</h4>
+			<h4 class = "setting-name heading-without-nav">Dimension Structure Difficulty</h4>
 Type: int<br>
-			Current Default Value:<div class = "code-block">3</div>
+Current Default Value:<div class = "code-block">3</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Enable Ball Lightning</h4>
+			<h4 class = "setting-name heading-without-nav">Enable Ball Lightning</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Pylons Chunkload Selves Once Used</h4>
+			<h4 class = "setting-name heading-without-nav">Pylons Chunkload Selves Once Used</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">World Rifts Chunkload</h4>
+			<h4 class = "setting-name heading-without-nav">World Rifts Chunkload</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Make Pylon pathfinding attempt shortest path - can be intensive</h4>
+			<h4 class = "setting-name heading-without-nav">Make Pylon pathfinding attempt shortest path - can be intensive</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Notify players of progress gains</h4>
+			<h4 class = "setting-name heading-without-nav">Notify players of progress gains</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Notify players via chat of their own progress gains</h4>
+			<h4 class = "setting-name heading-without-nav">Notify players via chat of their own progress gains</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Cave Lighter Range</h4>
+			<h4 class = "setting-name heading-without-nav">Cave Lighter Range</h4>
 Type: int<br>
-			Current Default Value:<div class = "code-block">128</div>
+Current Default Value:<div class = "code-block">128</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Cave Lighter Zone Size</h4>
+			<h4 class = "setting-name heading-without-nav">Cave Lighter Zone Size</h4>
 Type: int<br>
-			Current Default Value:<div class = "code-block">8</div>
+Current Default Value:<div class = "code-block">8</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Connected Crystalline Stone Textures</h4>
+			<h4 class = "setting-name heading-without-nav">Connected Crystalline Stone Textures</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Adjacency Upgrades Require Energy</h4>
+			<h4 class = "setting-name heading-without-nav">Adjacency Upgrades Require Energy</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Progression Notification Duration</h4>
+			<h4 class = "setting-name heading-without-nav">Progression Notification Duration</h4>
 Type: int<br>
-			Current Default Value:<div class = "code-block">800</div>
+Current Default Value:<div class = "code-block">800</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Play Dimension Join Sound For Others</h4>
+			<h4 class = "setting-name heading-without-nav">Play Dimension Join Sound For Others</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Blend CC Biome Edges</h4>
+			<h4 class = "setting-name heading-without-nav">Blend CC Biome Edges</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Orchestra MIDI Size Limit (KB)</h4>
+			<h4 class = "setting-name heading-without-nav">Orchestra MIDI Size Limit (KB)</h4>
 Type: int<br>
-			Current Default Value:<div class = "code-block">80</div>
+Current Default Value:<div class = "code-block">80</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Structure Bypass Usability (0 = None, 1 = Admins Only, 2 = All)</h4>
+			<h4 class = "setting-name heading-without-nav">Structure Bypass Usability (0 = None, 1 = Admins Only, 2 = All)</h4>
 Type: int<br>
-			Current Default Value:<div class = "code-block">2</div>
+Current Default Value:<div class = "code-block">2</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Superbuild Ability Activation</h4>
+			<h4 class = "setting-name heading-without-nav">Superbuild Ability Activation</h4>
 Type: String<br>
-			Current Default Value:<div class = "code-block">Key.LCTRL.name()</div>
+Current Default Value:<div class = "code-block">Key.LCTRL.name()</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Village Structure Frequency</h4>
+			<h4 class = "setting-name heading-without-nav">Village Structure Frequency</h4>
 Type: float<br>
-			Current Default Value:<div class = "code-block">1F</div>
+Current Default Value:<div class = "code-block">1F</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Crystal-Network-Integrated ThaumCraft Node Improvement Speed</h4>
+			<h4 class = "setting-name heading-without-nav">Crystal-Network-Integrated ThaumCraft Node Improvement Speed</h4>
 Type: float<br>
-			Current Default Value:<div class = "code-block">1F</div>
+Current Default Value:<div class = "code-block">1F</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Meteor Tower Projectiles Start Fires On Impact</h4>
+			<h4 class = "setting-name heading-without-nav">Meteor Tower Projectiles Start Fires On Impact</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Panel-Form Lumen Lamps Have No Hitbox</h4>
+			<h4 class = "setting-name heading-without-nav">Panel-Form Lumen Lamps Have No Hitbox</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Epilepsy Mode</h4>
+			<h4 class = "setting-name heading-without-nav">Epilepsy Mode</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Spawn Pylons in Overworld</h4>
+			<h4 class = "setting-name heading-without-nav">Spawn Pylons in Overworld</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Wireless RF Transmission Efficiency (%)</h4>
+			<h4 class = "setting-name heading-without-nav">Wireless RF Transmission Efficiency (%)</h4>
 Type: float<br>
-			Current Default Value:<div class = "code-block">100F</div>
+Current Default Value:<div class = "code-block">100F</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Launch Pad Power</h4>
+			<h4 class = "setting-name heading-without-nav">Launch Pad Power</h4>
 Type: float<br>
-			Current Default Value:<div class = "code-block">1F</div>
+Current Default Value:<div class = "code-block">1F</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Crystal Fence segment count limit</h4>
+			<h4 class = "setting-name heading-without-nav">Crystal Fence segment count limit</h4>
 Type: int<br>
-			Current Default Value:<div class = "code-block">64</div>
+Current Default Value:<div class = "code-block">64</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Structure Generation Attempts Per Flagged Chunk - affects worldgen CPU use and structure rarity</h4>
+			<h4 class = "setting-name heading-without-nav">Structure Generation Attempts Per Flagged Chunk - affects worldgen CPU use and structure rarity</h4>
 Type: int<br>
-			Current Default Value:<div class = "code-block">20</div>
+Current Default Value:<div class = "code-block">20</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Use Alternate Progress Shader</h4>
+			<h4 class = "setting-name heading-without-nav">Use Alternate Progress Shader</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Enhanced Pendants Require Charging</h4>
+			<h4 class = "setting-name heading-without-nav">Enhanced Pendants Require Charging</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Ability Selection GUI only shows abilities you have</h4>
+			<h4 class = "setting-name heading-without-nav">Ability Selection GUI only shows abilities you have</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Allow Recursive Aura Pouches</h4>
+			<h4 class = "setting-name heading-without-nav">Allow Recursive Aura Pouches</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
@@ -984,6 +1002,7 @@ Type: boolean<br>
 			Factorio and its content and assets are &copy; Wube Software, with whom I am not affiliated<br>
 			Portal 2 and its content and assets are &copy; Valve Corporation, with whom I am not affiliated<br>
 			Stellaris and its content and assets are &copy; Paradox Interactive, with whom I am not affiliated<br>
+			Subnautica and its content and assets are &copy; Unknown Worlds Entertainment, with whom I am not affiliated<br>
 			Space Engineers and its content and assets are &copy; Keen Software House, with whom I am not affiliated<br>
 			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
 			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>

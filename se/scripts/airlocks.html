@@ -11,6 +11,7 @@
 		<script src = "../../compiledJS/entrypoint.bundle.js"></script>
 		<meta name="script-def" content="footer-spacing">
 		<meta name="script-def" content="navbar-scroll-indicator">
+		<meta name="script-def" content="spoiler-handler">
 		<!-- <meta name="script-def" content="quicknav-pos"> -->
     </head>
     <body  data-game="se">
@@ -65,6 +66,7 @@
 				<a class = "navdrop-entry" href="../../factorio/index.html">Factorio</a>
 				<a class = "navdrop-entry" href="../../p2/index.html">Portal 2</a>
 				<a class = "navdrop-entry" href="../../stellaris/index.html">Stellaris</a>
+				<a class = "navdrop-entry" href="../../subnautica/index.html">Subnautica</a>
 				<a class = "navdrop-entry" href="../../fce/index.html">FortressCraft Evolved</a>
 				<a class = "navdrop-entry" href="../../starbound/index.html">Starbound</a>
 		</div>
@@ -75,6 +77,7 @@
 				<a class = "navdrop-entry" href="../../projects/calendar.html">Game Calendar</a>
 				<a class = "navdrop-entry" href="../../projects/eventbuilder.html">Stellaris Event Builder</a>
 				<a class = "navdrop-entry" href="../../projects/fcompile.html">FCompile</a>
+				<a class = "navdrop-entry" href="https://dragonrealm.overminddl1.com/">Dragon Realm Modpack</a>
 		</div>
 	  </div>
 	</div>
@@ -84,11 +87,11 @@
 <hr>
 <table class="toc_list">
 	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><a class = "tocbtn" href="#top"><i class="fas fa-angle-double-up"></i></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-description">Description</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-description"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-details">Details</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-details"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-scriptvars">Script Options</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-scriptvars"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-sourcecode"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-downloads"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-description">Description</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-description"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-details">Details</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-details"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-scriptvars">Script Options</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-scriptvars"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-sourcecode"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-downloads"></a></td></tr>
 </table>
 </div>        <div id = "textarea" class = "textarea ">
 				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
@@ -121,65 +124,65 @@
 				<br>
 				<div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">VENT_ID</h4>
+			<h4 class = "setting-name heading-without-nav">VENT_ID</h4>
 Type: string<br>
-			Current Default Value:<div class = "code-block">"Air Vent"</div>
+Current Default Value:<div class = "code-block">"Air Vent"</div>
 		</div>
 	The name of air vents to look for.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">AIRLOCK_SCREEN_ID</h4>
+			<h4 class = "setting-name heading-without-nav">AIRLOCK_SCREEN_ID</h4>
 Type: string<br>
-			Current Default Value:<div class = "code-block">"AirlockScreen"</div>
+Current Default Value:<div class = "code-block">"AirlockScreen"</div>
 		</div>
 	Anything whose name contains this is used for overall display of airlock states.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">EXTERNAL_BLOCK_ID</h4>
+			<h4 class = "setting-name heading-without-nav">EXTERNAL_BLOCK_ID</h4>
 Type: string<br>
-			Current Default Value:<div class = "code-block">"External"</div>
+Current Default Value:<div class = "code-block">"External"</div>
 		</div>
 	Anything whose name contains this is assumed to be exposed to the ship/station exterior.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">AIRLOCK_BLOCK_ID</h4>
+			<h4 class = "setting-name heading-without-nav">AIRLOCK_BLOCK_ID</h4>
 Type: string<br>
-			Current Default Value:<div class = "code-block">"Airlock"</div>
+Current Default Value:<div class = "code-block">"Airlock"</div>
 		</div>
 	Anything whose name contains this is assumed to be part of an airlock.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">MAX_ATMOSPHERE</h4>
+			<h4 class = "setting-name heading-without-nav">MAX_ATMOSPHERE</h4>
 Type: float<br>
-			Current Default Value:<div class = "code-block">0.5F</div>
+Current Default Value:<div class = "code-block">0.5F</div>
 		</div>
 	The value (out of 1) below which atmospheric pressure is low enough to be considerered space/unbreathable.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">allowOpenIfNoO2Space</h4>
+			<h4 class = "setting-name heading-without-nav">allowOpenIfNoO2Space</h4>
 Type: bool<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	Whether to allow airlocks to open when pressurized but there is no space to put the air in tanks.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">isOuterAirlockDoor<code class = "setting-args">(string name)</code></h4>
+			<h4 class = "setting-name heading-without-nav">isOuterAirlockDoor<code class = "setting-args">(string name)</code></h4>
 Return Type: bool<br>
-			Current Default Code:<div class = "code-block">return name.Contains(EXTERNAL_BLOCK_ID) || name.Contains("Outer") || name.Contains("Exterior");</div>
+Current Default Code:<div class = "code-block">return name.Contains(EXTERNAL_BLOCK_ID) || name.Contains("Outer") || name.Contains("Exterior");</div>
 		</div>
 	Whether a door is part of the outer half of an airlock
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">isInnerAirlockDoor<code class = "setting-args">(string name)</code></h4>
+			<h4 class = "setting-name heading-without-nav">isInnerAirlockDoor<code class = "setting-args">(string name)</code></h4>
 Return Type: bool<br>
-			Current Default Code:<div class = "code-block">return name.Contains("Inner") || name.Contains("Interior");</div>
+Current Default Code:<div class = "code-block">return name.Contains("Inner") || name.Contains("Interior");</div>
 		</div>
 	Whether a door is part of the inner half of an airlock
 </div>
@@ -262,6 +265,7 @@ Return Type: bool<br>
 			Factorio and its content and assets are &copy; Wube Software, with whom I am not affiliated<br>
 			Portal 2 and its content and assets are &copy; Valve Corporation, with whom I am not affiliated<br>
 			Stellaris and its content and assets are &copy; Paradox Interactive, with whom I am not affiliated<br>
+			Subnautica and its content and assets are &copy; Unknown Worlds Entertainment, with whom I am not affiliated<br>
 			Space Engineers and its content and assets are &copy; Keen Software House, with whom I am not affiliated<br>
 			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
 			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>

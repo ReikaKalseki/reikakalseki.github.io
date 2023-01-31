@@ -11,6 +11,7 @@
 		<script src = "../../compiledJS/entrypoint.bundle.js"></script>
 		<meta name="script-def" content="footer-spacing">
 		<meta name="script-def" content="navbar-scroll-indicator">
+		<meta name="script-def" content="spoiler-handler">
 		<!-- <meta name="script-def" content="quicknav-pos"> -->
 			<meta name="script-def" content="minecraft/precursor">
     </head>
@@ -73,6 +74,7 @@
 				<a class = "navdrop-entry" href="../../factorio/index.html">Factorio</a>
 				<a class = "navdrop-entry" href="../../p2/index.html">Portal 2</a>
 				<a class = "navdrop-entry" href="../../stellaris/index.html">Stellaris</a>
+				<a class = "navdrop-entry" href="../../subnautica/index.html">Subnautica</a>
 				<a class = "navdrop-entry" href="../../se/index.html">Space Engineers</a>
 				<a class = "navdrop-entry" href="../../fce/index.html">FortressCraft Evolved</a>
 				<a class = "navdrop-entry" href="../../starbound/index.html">Starbound</a>
@@ -84,6 +86,7 @@
 				<a class = "navdrop-entry" href="../../projects/calendar.html">Game Calendar</a>
 				<a class = "navdrop-entry" href="../../projects/eventbuilder.html">Stellaris Event Builder</a>
 				<a class = "navdrop-entry" href="../../projects/fcompile.html">FCompile</a>
+				<a class = "navdrop-entry" href="https://dragonrealm.overminddl1.com/">Dragon Realm Modpack</a>
 		</div>
 	  </div>
 	</div>
@@ -93,11 +96,11 @@
 <hr>
 <table class="toc_list">
 	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><a class = "tocbtn" href="#top"><i class="fas fa-angle-double-up"></i></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-overview">Overview</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-overview"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-options">Options</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-options"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-modsettings">Configuration Settings</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-modsettings"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-sourcecode"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-downloads"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-overview">Overview</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-overview"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-options">Options</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-options"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-modsettings">Configuration Settings</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-modsettings"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-sourcecode"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-downloads"></a></td></tr>
 </table>
 </div>        <div id = "textarea" class = "textarea ">
 				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
@@ -251,363 +254,365 @@
 				<h3>Configuration Settings</h3>
 				This mod contains several config options to modify values and behaviors - such as for balance or server safety concerns, or simply personal taste - to your preferences. Note that several settings may have bounds imposed on their values, either logically or explicitly; these can usually be seen in the actual settings files or ingame. These are listed in order found in the source code, which is generally the order in which they were added; They may be present in a different order ingame or in the configuration files.
 				<br>
+				The settings for the mod, when installed, can be found in the 'config/Reika' subfolder of the MC instance.
+				<br>
 				<div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">New Mob AI</h4>
+			<h4 class = "setting-name heading-without-nav">New Mob AI</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Disable Baby Zombies</h4>
+			<h4 class = "setting-name heading-without-nav">Disable Baby Zombies</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Old Zombie Sight Range</h4>
+			<h4 class = "setting-name heading-without-nav">Old Zombie Sight Range</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Old Zombie HP/Damage</h4>
+			<h4 class = "setting-name heading-without-nav">Old Zombie HP/Damage</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Old Bonemeal Mechanics</h4>
+			<h4 class = "setting-name heading-without-nav">Old Bonemeal Mechanics</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Zombies Target Villagers</h4>
+			<h4 class = "setting-name heading-without-nav">Zombies Target Villagers</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Disable Zombie Reinforcements</h4>
+			<h4 class = "setting-name heading-without-nav">Disable Zombie Reinforcements</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Zombies Break Doors</h4>
+			<h4 class = "setting-name heading-without-nav">Zombies Break Doors</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Zombies Can Spawn With Tools</h4>
+			<h4 class = "setting-name heading-without-nav">Zombies Can Spawn With Tools</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Mobs Can Spawn With Armor</h4>
+			<h4 class = "setting-name heading-without-nav">Mobs Can Spawn With Armor</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Zombies Attack with Fire</h4>
+			<h4 class = "setting-name heading-without-nav">Zombies Attack with Fire</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Allow Skeleton Flaming Arrows</h4>
+			<h4 class = "setting-name heading-without-nav">Allow Skeleton Flaming Arrows</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Old Skeleton Fire Rate</h4>
+			<h4 class = "setting-name heading-without-nav">Old Skeleton Fire Rate</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Creepers Explode on Fall</h4>
+			<h4 class = "setting-name heading-without-nav">Creepers Explode on Fall</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Spawn Bats</h4>
+			<h4 class = "setting-name heading-without-nav">Spawn Bats</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Spawn Witches</h4>
+			<h4 class = "setting-name heading-without-nav">Spawn Witches</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Damaged Mob Weapon Drops</h4>
+			<h4 class = "setting-name heading-without-nav">Damaged Mob Weapon Drops</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Mobs Pick Up Drops</h4>
+			<h4 class = "setting-name heading-without-nav">Mobs Pick Up Drops</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Old Regen and Heal Potions</h4>
+			<h4 class = "setting-name heading-without-nav">Old Regen and Heal Potions</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Golden Apple Level 0 Uses Nuggets</h4>
+			<h4 class = "setting-name heading-without-nav">Golden Apple Level 0 Uses Nuggets</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Disable Nether Hidden Lava Pockets</h4>
+			<h4 class = "setting-name heading-without-nav">Disable Nether Hidden Lava Pockets</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Spider Potion Effects on Spawn</h4>
+			<h4 class = "setting-name heading-without-nav">Spider Potion Effects on Spawn</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">New Angry Enderman Sounds</h4>
+			<h4 class = "setting-name heading-without-nav">New Angry Enderman Sounds</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Allow Enderman Pickup of Cobble, Planks And Stone</h4>
+			<h4 class = "setting-name heading-without-nav">Allow Enderman Pickup of Cobble, Planks And Stone</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Disable Random Enderman Teleporting in Daylight</h4>
+			<h4 class = "setting-name heading-without-nav">Disable Random Enderman Teleporting in Daylight</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Old Book Recipe</h4>
+			<h4 class = "setting-name heading-without-nav">Old Book Recipe</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Old Glistering Melon Recipe</h4>
+			<h4 class = "setting-name heading-without-nav">Old Glistering Melon Recipe</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Disable silverfish stone in Extreme Hills</h4>
+			<h4 class = "setting-name heading-without-nav">Disable silverfish stone in Extreme Hills</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Original Fire Spread</h4>
+			<h4 class = "setting-name heading-without-nav">Original Fire Spread</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Disable Entities Travelling Through Portals</h4>
+			<h4 class = "setting-name heading-without-nav">Disable Entities Travelling Through Portals</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Disable Portal Pigmen Spawns</h4>
+			<h4 class = "setting-name heading-without-nav">Disable Portal Pigmen Spawns</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Disable Villager Noises</h4>
+			<h4 class = "setting-name heading-without-nav">Disable Villager Noises</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Disable Biome Colors on Sugarcane</h4>
+			<h4 class = "setting-name heading-without-nav">Disable Biome Colors on Sugarcane</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Turn poppies into roses</h4>
+			<h4 class = "setting-name heading-without-nav">Turn poppies into roses</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Disable yellowed block light</h4>
+			<h4 class = "setting-name heading-without-nav">Disable yellowed block light</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Alpha Grass and Leaf Color</h4>
+			<h4 class = "setting-name heading-without-nav">Alpha Grass and Leaf Color</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Old Sheep Wool Harvesting</h4>
+			<h4 class = "setting-name heading-without-nav">Old Sheep Wool Harvesting</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Pre Adventure Update Animal Spawning</h4>
+			<h4 class = "setting-name heading-without-nav">Pre Adventure Update Animal Spawning</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Allow Mobs to Hold Enchanted Weapons</h4>
+			<h4 class = "setting-name heading-without-nav">Allow Mobs to Hold Enchanted Weapons</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Enable Ice to Water in Nether</h4>
+			<h4 class = "setting-name heading-without-nav">Enable Ice to Water in Nether</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Lava Movement Hiss</h4>
+			<h4 class = "setting-name heading-without-nav">Lava Movement Hiss</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Mobs Target Creative Players</h4>
+			<h4 class = "setting-name heading-without-nav">Mobs Target Creative Players</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Disable Horses</h4>
+			<h4 class = "setting-name heading-without-nav">Disable Horses</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Old Nether Portal Sounds</h4>
+			<h4 class = "setting-name heading-without-nav">Old Nether Portal Sounds</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">Old Flint And Steel Sound</h4>
+			<h4 class = "setting-name heading-without-nav">Old Flint And Steel Sound</h4>
 Type: boolean<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	
 </div>
@@ -691,6 +696,7 @@ Type: boolean<br>
 			Factorio and its content and assets are &copy; Wube Software, with whom I am not affiliated<br>
 			Portal 2 and its content and assets are &copy; Valve Corporation, with whom I am not affiliated<br>
 			Stellaris and its content and assets are &copy; Paradox Interactive, with whom I am not affiliated<br>
+			Subnautica and its content and assets are &copy; Unknown Worlds Entertainment, with whom I am not affiliated<br>
 			Space Engineers and its content and assets are &copy; Keen Software House, with whom I am not affiliated<br>
 			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
 			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>

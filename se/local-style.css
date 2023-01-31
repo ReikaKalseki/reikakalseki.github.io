@@ -1,3 +1,15 @@
+.se-gui {
+  color: #D9D9D9;
+  width: 40%;
+  font-weight: bold;
+  font-size: 90%;
+  border: 2px solid #0E1311;
+  background-color: #0E1311c0;
+  margin: auto;
+  display: inline-block;
+  font-family: "Century Gothic", sans-serif;
+}
+
 .bp-block-table {
 	
 }

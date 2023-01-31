@@ -11,6 +11,7 @@
 		<script src = "../compiledJS/entrypoint.bundle.js"></script>
 		<meta name="script-def" content="footer-spacing">
 		<meta name="script-def" content="navbar-scroll-indicator">
+		<meta name="script-def" content="spoiler-handler">
 		<!-- <meta name="script-def" content="quicknav-pos"> -->
     </head>
     <body class = "other-project-body" >
@@ -22,6 +23,7 @@
 			<a class="navbar-button" href="factorio/index.html">Factorio</a>
 			<a class="navbar-button" href="p2/index.html">Portal 2</a>
 			<a class="navbar-button" href="stellaris/index.html">Stellaris</a>
+			<a class="navbar-button" href="subnautica/index.html">Subnautica</a>
 			<a class="navbar-button" href="se/index.html">Space Engineers</a>
 			<a class="navbar-button" href="fce/index.html">FortressCraft Evolved</a>
 			<a class="navbar-button" href="starbound/index.html">Starbound</a>
@@ -33,6 +35,7 @@
 				<a class = "navdrop-entry" href="../factorio/index.html">Factorio</a>
 				<a class = "navdrop-entry" href="../p2/index.html">Portal 2</a>
 				<a class = "navdrop-entry" href="../stellaris/index.html">Stellaris</a>
+				<a class = "navdrop-entry" href="../subnautica/index.html">Subnautica</a>
 				<a class = "navdrop-entry" href="../se/index.html">Space Engineers</a>
 				<a class = "navdrop-entry" href="../fce/index.html">FortressCraft Evolved</a>
 				<a class = "navdrop-entry" href="../starbound/index.html">Starbound</a>
@@ -44,6 +47,7 @@
 				<a class = "navdrop-entry" href="../projects/calendar.html">Game Calendar</a>
 				<a class = "navdrop-entry" href="../projects/eventbuilder.html">Stellaris Event Builder</a>
 				<a class = "navdrop-entry" href="../projects/fcompile.html">FCompile</a>
+				<a class = "navdrop-entry" href="../projects/dragonrealm.html">Dragon Realm Modpack</a>
 		</div>
 	  </div>
 	</div>
@@ -53,13 +57,13 @@
 <hr>
 <table class="toc_list">
 	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><a class = "tocbtn" href="#top"><i class="fas fa-angle-double-up"></i></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-overview">Overview</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-overview"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-function">Function</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-function"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-settings">Settings</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-settings"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-futureplans">Future Plans</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-futureplans"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-sourcecode"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-license">License</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-license"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-downloads"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-overview">Overview</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-overview"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-function">Function</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-function"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-settings">Settings</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-settings"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-futureplans">Future Plans</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-futureplans"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-sourcecode"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-license">License</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-license"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-downloads"></a></td></tr>
 </table>
 </div>        <div id = "textarea" class = "textarea textarea-other-project">
 				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
@@ -87,89 +91,105 @@
 					
 					<div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">mod_directory</h4>
+			<h4 class = "setting-name heading-without-nav">mod_directory</h4>
 Type: Single Value<br>
-			Current Default Value:<div class = "code-block">C:/Users/Reika/AppData/Roaming/Factorio/mods</div>
+Current Default Value:<div class = "code-block">C:/Users/Reika/AppData/Roaming/Factorio/mods</div>
 		</div>
 	Where your Factorio mods are located.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">target_author</h4>
+			<h4 class = "setting-name heading-without-nav">target_author</h4>
 Type: Single Value<br>
-			Current Default Value:<div class = "code-block">Reika</div>
+Current Default Value:<div class = "code-block">Reika</div>
 		</div>
 	The mod author whose mods you wish to compile. Almost always you.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">output_directory</h4>
+			<h4 class = "setting-name heading-without-nav">api_key</h4>
 Type: Single Value<br>
-			Current Default Value:<div class = "code-block">E:/Compiled Factorio Mods</div>
+Current Default Value:<div class = "code-block">c9e0537be1cb.e9d7f614eb82cee8d72a77045f1ba4fd</div>
+		</div>
+	Upload API Key
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name heading-without-nav">min_age</h4>
+Type: Single Value<br>
+Current Default Value:<div class = "code-block">360</div>
+		</div>
+	How old compiled files must be to count as out of date. Anything that exists and is less than this number of seconds old will not be recompiled.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name heading-without-nav">ver_cache_lifetime</h4>
+Type: Single Value<br>
+Current Default Value:<div class = "code-block">86400</div>
+		</div>
+	How old the cached mod portal release data (ie what versions were released when) must be, in seconds, before it is replaced. Default = 86400s = 1d
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name heading-without-nav">output_directory</h4>
+Type: Single Value<br>
+Current Default Value:<div class = "code-block">E:/Compiled Factorio Mods</div>
 		</div>
 	The output to which you want the compiled mods exported.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">clean_output</h4>
+			<h4 class = "setting-name heading-without-nav">version_override</h4>
 Type: Single Value<br>
-			Current Default Value:<div class = "code-block">true</div>
-		</div>
-	Whether to purge the contents of the above output folder each compile.
-</div>
-<div class = "setting-group-box">
-		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">version_override</h4>
-Type: Single Value<br>
-			Current Default Value:<div class = "code-block">1.105.001</div>
+Current Default Value:<div class = "code-block">1.153.001</div>
 		</div>
 	If this is not 'none', whatever version is supplied in the mod folder/info is ignored in favor of the override. Very useful if you do not want a constantly-changing folder name (for example, because of GitHub pathing). Ensure it is the standard 'A.B.C' format, but you can use the numbers to mean what you wish.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">ignored_filetypes</h4>
+			<h4 class = "setting-name heading-without-nav">ignored_filetypes</h4>
 Type: List<br>
-			Current Default Value:<div class = "code-block">pdn,<br> psd,<br> zip,<br> rar,<br> bmp,<br> gif,<br> jpg,<br> jpeg,<br> aup,<br> aiff,<br> wav,<br> skp,<br> skb</div>
+Current Default Value:<div class = "code-block">pdn,<br> psd,<br> zip,<br> rar,<br> bmp,<br> gif,<br> jpg,<br> jpeg,<br> aup,<br> aiff,<br> wav,<br> skp,<br> skb</div>
 		</div>
 	File extenstions to ignore; basically anything you do not want packed into the mod download. Use 'none' for nothing; separate entries with ',', and do not include the leading period.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">ignored_strings</h4>
+			<h4 class = "setting-name heading-without-nav">ignored_strings</h4>
 Type: List<br>
-			Current Default Value:<div class = "code-block">.git,<br> metadata</div>
+Current Default Value:<div class = "code-block">.git,<br> metadata</div>
 		</div>
 	Anything containing any one of the following strings (anywhere in the path or name) is ignored. Use 'none' for nothing; separate entries with ','.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">image_filter</h4>
+			<h4 class = "setting-name heading-without-nav">image_filter</h4>
 Type: Single Value<br>
-			Current Default Value:<div class = "code-block">graphics</div>
+Current Default Value:<div class = "code-block">graphics</div>
 		</div>
 	Should images only be allowed conditionally, and if so, from what folder(s) (ie in-mod path must start with one of these)? Use 'none' for no filter; separate entries with ','.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">sound_filter</h4>
+			<h4 class = "setting-name heading-without-nav">sound_filter</h4>
 Type: List<br>
-			Current Default Value:<div class = "code-block">sounds,<br> sound</div>
+Current Default Value:<div class = "code-block">sounds,<br> sound</div>
 		</div>
 	Should sounds only be allowed conditionally, and if so, from what folder(s) (ie in-mod path must start with one of these)? Use 'none' for no filter; separate entries with ','.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">log_per_file</h4>
+			<h4 class = "setting-name heading-without-nav">log_per_file</h4>
 Type: Single Value<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	Whether to print a log message for every file parsed. Useful when debugging to see why a file is or is not being included in the final zip.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">swap_ins</h4>
+			<h4 class = "setting-name heading-without-nav">swap_ins</h4>
 Type: Single Value<br>
-			Current Default Value:<div class = "code-block">Oreverhaul|config.lua|E:/Java Workspaces/FactorioCompiler/Factorio Compiler/default_oreverhaul_config.lua</div>
+Current Default Value:<div class = "code-block">Oreverhaul|config.lua|E:/Java Workspaces/FactorioCompiler/Factorio Compiler/default_oreverhaul_config.lua</div>
 		</div>
 	Which, if any, files to "swap in" in place of ones from the mod dir, and from where. Format: [ModName|FileToSwap|Replacement], with the file to swap using mod-relative path and the replacement using absolute. Use 'none' for no swaps; separate entries with ','.
 </div>
@@ -270,6 +290,7 @@ Type: Single Value<br>
 			Factorio and its content and assets are &copy; Wube Software, with whom I am not affiliated<br>
 			Portal 2 and its content and assets are &copy; Valve Corporation, with whom I am not affiliated<br>
 			Stellaris and its content and assets are &copy; Paradox Interactive, with whom I am not affiliated<br>
+			Subnautica and its content and assets are &copy; Unknown Worlds Entertainment, with whom I am not affiliated<br>
 			Space Engineers and its content and assets are &copy; Keen Software House, with whom I am not affiliated<br>
 			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
 			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>

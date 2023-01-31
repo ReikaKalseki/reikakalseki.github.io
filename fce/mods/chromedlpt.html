@@ -11,6 +11,7 @@
 		<script src = "../../compiledJS/entrypoint.bundle.js"></script>
 		<meta name="script-def" content="footer-spacing">
 		<meta name="script-def" content="navbar-scroll-indicator">
+		<meta name="script-def" content="spoiler-handler">
 		<!-- <meta name="script-def" content="quicknav-pos"> -->
     </head>
     <body  data-game="fce">
@@ -50,6 +51,7 @@
 				<a class = "navdrop-entry" href="../../factorio/index.html">Factorio</a>
 				<a class = "navdrop-entry" href="../../p2/index.html">Portal 2</a>
 				<a class = "navdrop-entry" href="../../stellaris/index.html">Stellaris</a>
+				<a class = "navdrop-entry" href="../../subnautica/index.html">Subnautica</a>
 				<a class = "navdrop-entry" href="../../se/index.html">Space Engineers</a>
 				<a class = "navdrop-entry" href="../../starbound/index.html">Starbound</a>
 		</div>
@@ -60,6 +62,7 @@
 				<a class = "navdrop-entry" href="../../projects/calendar.html">Game Calendar</a>
 				<a class = "navdrop-entry" href="../../projects/eventbuilder.html">Stellaris Event Builder</a>
 				<a class = "navdrop-entry" href="../../projects/fcompile.html">FCompile</a>
+				<a class = "navdrop-entry" href="https://dragonrealm.overminddl1.com/">Dragon Realm Modpack</a>
 		</div>
 	  </div>
 	</div>
@@ -69,10 +72,12 @@
 <hr>
 <table class="toc_list">
 	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><a class = "tocbtn" href="#top"><i class="fas fa-angle-double-up"></i></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-general">General</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-general"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-details">Details</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-details"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-sourcecode"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-downloads"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-general">General</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-general"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-details">Details</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-details"></a></td></tr>
+		<tr class = "toc-entry toc-entry-l2 "><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-details-autosub-throughputs">Throughputs</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-details-autosub-throughputs"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-modsettings">Configuration Settings</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-modsettings"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-sourcecode"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-downloads"></a></td></tr>
 </table>
 </div>        <div id = "textarea" class = "textarea ">
 				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
@@ -91,7 +96,7 @@
 					The above is done by adding a substantial flat (ie constant irrespective of LPT base throughput) bonus, granting the following net throughputs:<br>
 					
 					
-					<h4>Throughput (PPS) By LPT Tier</h4>
+					<section class = "textblock" id = "text-block-details-autosub-throughputs"><h4>Throughput (PPS) By LPT Tier</h4>
 <table class = "delta-table">
   <tr>
 	<th style = "width: 22.25%">
@@ -158,8 +163,88 @@
 		2000
 	</td>
   </tr>
-</table>
+</table></section>
 					</section>
+			</section>
+<br>
+			<section class = "textblock" id = "text-block-modsettings">
+			<div class = "modsettings">
+				<h3>Configuration Settings</h3>
+				This mod contains several config options to modify values and behaviors - such as for balance or server safety concerns, or simply personal taste - to your preferences. Note that several settings may have bounds imposed on their values, either logically or explicitly; these can usually be seen in the actual settings files or ingame. These are listed in order found in the source code, which is generally the order in which they were added; They may be present in a different order ingame or in the configuration files.
+				<br>
+				The settings for the mod, when installed, can be found in the ModSettings/ReikaKalseki subfolder of your FCE userdata folder (typically AppData/Local/ProjectorGames).
+				<br>
+				<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Chromed PPS (Green)</h4>
+Type: int<br>
+Current Default Value:<div class = "code-block">180</div>
+		</div>
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Vanilla Value</h4>
+<br>
+Value:<div class = "code-block">50</div>
+		</div>
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Minimum Value</h4>
+<br>
+Value:<div class = "code-block">10</div>
+		</div>
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Maximum Value</h4>
+<br>
+Value:<div class = "code-block">320</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Chromed PPS (Blue)</h4>
+Type: int<br>
+Current Default Value:<div class = "code-block">250</div>
+		</div>
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Vanilla Value</h4>
+<br>
+Value:<div class = "code-block">200</div>
+		</div>
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Minimum Value</h4>
+<br>
+Value:<div class = "code-block">40</div>
+		</div>
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Maximum Value</h4>
+<br>
+Value:<div class = "code-block">1600</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Chromed PPS (Purple)</h4>
+Type: int<br>
+Current Default Value:<div class = "code-block">2000</div>
+		</div>
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Vanilla Value</h4>
+<br>
+Value:<div class = "code-block">1600</div>
+		</div>
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Minimum Value</h4>
+<br>
+Value:<div class = "code-block">320</div>
+		</div>
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Maximum Value</h4>
+<br>
+Value:<div class = "code-block">6000</div>
+		</div>
+	
+</div>
+
+			</div>
 			</section>
 <br>
 			<section class = "textblock" id = "text-block-sourcecode">
@@ -237,6 +322,7 @@
 			Factorio and its content and assets are &copy; Wube Software, with whom I am not affiliated<br>
 			Portal 2 and its content and assets are &copy; Valve Corporation, with whom I am not affiliated<br>
 			Stellaris and its content and assets are &copy; Paradox Interactive, with whom I am not affiliated<br>
+			Subnautica and its content and assets are &copy; Unknown Worlds Entertainment, with whom I am not affiliated<br>
 			Space Engineers and its content and assets are &copy; Keen Software House, with whom I am not affiliated<br>
 			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
 			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>

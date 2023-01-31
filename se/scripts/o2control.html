@@ -11,6 +11,7 @@
 		<script src = "../../compiledJS/entrypoint.bundle.js"></script>
 		<meta name="script-def" content="footer-spacing">
 		<meta name="script-def" content="navbar-scroll-indicator">
+		<meta name="script-def" content="spoiler-handler">
 		<!-- <meta name="script-def" content="quicknav-pos"> -->
     </head>
     <body  data-game="se">
@@ -65,6 +66,7 @@
 				<a class = "navdrop-entry" href="../../factorio/index.html">Factorio</a>
 				<a class = "navdrop-entry" href="../../p2/index.html">Portal 2</a>
 				<a class = "navdrop-entry" href="../../stellaris/index.html">Stellaris</a>
+				<a class = "navdrop-entry" href="../../subnautica/index.html">Subnautica</a>
 				<a class = "navdrop-entry" href="../../fce/index.html">FortressCraft Evolved</a>
 				<a class = "navdrop-entry" href="../../starbound/index.html">Starbound</a>
 		</div>
@@ -75,6 +77,7 @@
 				<a class = "navdrop-entry" href="../../projects/calendar.html">Game Calendar</a>
 				<a class = "navdrop-entry" href="../../projects/eventbuilder.html">Stellaris Event Builder</a>
 				<a class = "navdrop-entry" href="../../projects/fcompile.html">FCompile</a>
+				<a class = "navdrop-entry" href="https://dragonrealm.overminddl1.com/">Dragon Realm Modpack</a>
 		</div>
 	  </div>
 	</div>
@@ -84,10 +87,10 @@
 <hr>
 <table class="toc_list">
 	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><a class = "tocbtn" href="#top"><i class="fas fa-angle-double-up"></i></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-description">Description</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-description"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-scriptvars">Script Options</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-scriptvars"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-sourcecode"></a></td></tr>
-		<tr class = "toc-entry "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-downloads"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-description">Description</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-description"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-scriptvars">Script Options</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-scriptvars"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-sourcecode"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-downloads"></a></td></tr>
 </table>
 </div>        <div id = "textarea" class = "textarea ">
 				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
@@ -120,91 +123,91 @@
 				<br>
 				<div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">DISPLAY_TAG</h4>
+			<h4 class = "setting-name heading-without-nav">DISPLAY_TAG</h4>
 Type: string<br>
-			Current Default Value:<div class = "code-block">"O2Status"</div>
+Current Default Value:<div class = "code-block">"O2Status"</div>
 		</div>
 	Any LCD panel with this in its name is overridden to show the pressurization/breach status.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 32.75%">
-			<h4 class = "setting-name">VENT_ID</h4>
+			<h4 class = "setting-name heading-without-nav">VENT_ID</h4>
 Type: string<br>
-			Current Default Value:<div class = "code-block">"Air Vent"</div>
+Current Default Value:<div class = "code-block">"Air Vent"</div>
 		</div>
 		<div class = "setting-box" style = "width: 32.75%">
-			<h4 class = "setting-name">LIGHT_ID</h4>
+			<h4 class = "setting-name heading-without-nav">LIGHT_ID</h4>
 Type: string<br>
-			Current Default Value:<div class = "code-block">"O2 Light"</div>
+Current Default Value:<div class = "code-block">"O2 Light"</div>
 		</div>
 		<div class = "setting-box" style = "width: 32.75%">
-			<h4 class = "setting-name">SOUND_ID</h4>
+			<h4 class = "setting-name heading-without-nav">SOUND_ID</h4>
 Type: string<br>
-			Current Default Value:<div class = "code-block">"O2 Alarm"</div>
+Current Default Value:<div class = "code-block">"O2 Alarm"</div>
 		</div>
 	Any vents/lights/etc containing this in their name are assumed to be involved in monitoring O2 status or part of an alarm system, and are activated accordingly. Section names are parsed by removing this string from their name (and trimming any leading or trailing " ", ":" or "-" characters, and any trailing numbers); whatever remains is considered the section the block is in/acts for. So "Cockpit Air Vent", "O2 Light - Reactor 7" and "O2 Alarm: Hangar A" become "Cockpit", "Reactor", and "Hangar A" respectively.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">EXTERNAL_BLOCK_ID</h4>
+			<h4 class = "setting-name heading-without-nav">EXTERNAL_BLOCK_ID</h4>
 Type: string<br>
-			Current Default Value:<div class = "code-block">"External"</div>
+Current Default Value:<div class = "code-block">"External"</div>
 		</div>
 	Anything whose name contains this is assumed to be exposed to the ship/station exterior.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">INTERFACE_DOOR_SECTION_PATTERN</h4>
+			<h4 class = "setting-name heading-without-nav">INTERFACE_DOOR_SECTION_PATTERN</h4>
 Type: string<br>
-			Current Default Value:<div class = "code-block">@"\[(.*?)\]"</div>
+Current Default Value:<div class = "code-block">@"\[(.*?)\]"</div>
 		</div>
 	Hope you like Regex if you want to change this...
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">INTERFACE_DOOR_SECTION_SPLIT</h4>
+			<h4 class = "setting-name heading-without-nav">INTERFACE_DOOR_SECTION_SPLIT</h4>
 Type: char<br>
-			Current Default Value:<div class = "code-block">'|'</div>
+Current Default Value:<div class = "code-block">'|'</div>
 		</div>
 	The separator char between section 1 and section 2 in the door name; under default settings, an ID looks like [Sec1|Sec2] to indicate that the door separates sections Sec1 and Sec2, and closing it (and any other doors with the same pair of tags) will isolate the two from each other, in case only one is breached.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">MAX_ATMOSPHERE</h4>
+			<h4 class = "setting-name heading-without-nav">MAX_ATMOSPHERE</h4>
 Type: float<br>
-			Current Default Value:<div class = "code-block">0.5F</div>
+Current Default Value:<div class = "code-block">0.5F</div>
 		</div>
 	The value (out of 1) below which atmospheric pressure is low enough to be considerered space/unbreathable and in which lockdowns apply.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">CLOSE_ALL_DOORS</h4>
+			<h4 class = "setting-name heading-without-nav">CLOSE_ALL_DOORS</h4>
 Type: bool<br>
-			Current Default Value:<div class = "code-block">false</div>
+Current Default Value:<div class = "code-block">false</div>
 		</div>
 	Whether to close (and keep closed) all doors in the ship whenever a breach is detected.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">SEPARATE_BREACHES</h4>
+			<h4 class = "setting-name heading-without-nav">SEPARATE_BREACHES</h4>
 Type: bool<br>
-			Current Default Value:<div class = "code-block">true</div>
+Current Default Value:<div class = "code-block">true</div>
 		</div>
 	Whether to close doors between two breached sections; not recommended to disable this.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">SCREEN_UPDATE_RATE</h4>
+			<h4 class = "setting-name heading-without-nav">SCREEN_UPDATE_RATE</h4>
 Type: int<br>
-			Current Default Value:<div class = "code-block">5</div>
+Current Default Value:<div class = "code-block">5</div>
 		</div>
 	How fast to update displays; larger is less often. More rapid updates mean more lag, especially if you have lots (15+) of screens. Default is about 1.5 times per second.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name">isExternalDoor<code class = "setting-args">(string name)</code></h4>
+			<h4 class = "setting-name heading-without-nav">isExternalDoor<code class = "setting-args">(string name)</code></h4>
 Return Type: bool<br>
-			Current Default Code:<div class = "code-block">return name.Contains(EXTERNAL_BLOCK_ID) || ((name.Contains("Hangar") || name.Contains("Airlock")) && name.Contains("Outer"));</div>
+Current Default Code:<div class = "code-block">return name.Contains(EXTERNAL_BLOCK_ID) || ((name.Contains("Hangar") || name.Contains("Airlock")) && name.Contains("Outer"));</div>
 		</div>
 	isExternalDoor
 </div>
@@ -287,6 +290,7 @@ Return Type: bool<br>
 			Factorio and its content and assets are &copy; Wube Software, with whom I am not affiliated<br>
 			Portal 2 and its content and assets are &copy; Valve Corporation, with whom I am not affiliated<br>
 			Stellaris and its content and assets are &copy; Paradox Interactive, with whom I am not affiliated<br>
+			Subnautica and its content and assets are &copy; Unknown Worlds Entertainment, with whom I am not affiliated<br>
 			Space Engineers and its content and assets are &copy; Keen Software House, with whom I am not affiliated<br>
 			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
 			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>

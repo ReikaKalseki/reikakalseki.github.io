@@ -1,0 +1,73 @@
+.sn-recipe-table {
+	box-shadow: inset 0px 0px 3px 2px #A5F7FFb0, inset 0px 0px 15px 12px #47CAFFb0;
+	background-color: #2499F2af;
+	border: 3px solid #A5F7FFc0;
+	border-radius: 32px;
+	border-spacing: initial;
+}
+
+.sn-recipe-table * {
+	border: none;
+	background: none;
+}
+
+.sn-recipe-table tr:nth-child(odd) {
+  background-color: #ffffff20 !important;
+}
+
+.sn-recipe-table tr:nth-child(even) {
+  background-color: #d0d0d020 !important;
+}
+
+.sn-recipe-table .original-column {
+    border-left: 2px solid #0001;
+    border-right: 2px solid #0001;
+}
+
+.sn-recipe-table .left-output-column {
+    border-left: 2px solid #0001;
+}
+
+.sn-recipe-ingredient {
+	vertical-align:middle;
+	text-align: center;
+	height: 64PX;
+}
+
+.sn-recipe-ingredient-box {
+	white-space: nowrap;
+	word-break: keep-all;
+}
+
+.recipe-number {
+	font-size: 2rem;
+	color: #fff;
+	margin-right: 1rem;
+	margin-left: 0.15rem;
+	font-weight: 700;
+	position: relative;
+	top: 0.3rem;
+	font-family: "Ubuntu";
+}
+
+.recipe-number-spacer {
+	margin-left: 0.25rem;
+	display: inline-block;
+}
+
+.sn-custom-item {
+	background-image: url("images/snitems/itembcg.png");
+	background-size: 64PX 64PX;
+	background-repeat: no-repeat;
+}
+
+.sn-new-item-tag {
+    position: absolute;
+    left: 8px;
+    z-index: 2;
+	display: none;
+}
+
+.sn-new-item-tag:hover {
+	display: inline-block;
+}
