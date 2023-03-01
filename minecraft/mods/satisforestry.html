@@ -107,6 +107,7 @@
 		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-powerslugs">Power Slugs</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-powerslugs"></a></td></tr>
 		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-buriedsecrets">Buried Secrets</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-buriedsecrets"></a></td></tr>
 		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-resourceextractor">Resource Extractor</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-resourceextractor"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-soundtrack">Soundtrack</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-soundtrack"></a></td></tr>
 		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-configurability">Configurability</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-configurability"></a></td></tr>
 		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-oreconfiguration">Ore Configuration</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-oreconfiguration"></a></td></tr>
 		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-nodeconfiguration">Node Configuration</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-nodeconfiguration"></a></td></tr>
@@ -117,7 +118,6 @@
 		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-doggoconfiguration">Doggo Configuration</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-doggoconfiguration"></a></td></tr>
 		<tr class = "toc-entry toc-entry-l2 "><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-doggoconfiguration-autosub-doggodefinitions">Doggo Definitions</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-doggoconfiguration-autosub-doggodefinitions"></a></td></tr>
 		<tr class = "toc-entry toc-entry-l2 "><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-doggoconfiguration-autosub-conditions">Conditions</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-doggoconfiguration-autosub-conditions"></a></td></tr>
-		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-soundtrack">Soundtrack</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-soundtrack"></a></td></tr>
 		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-modsettings">Configuration Settings</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-modsettings"></a></td></tr>
 		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-sourcecode"></a></td></tr>
 		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-downloads"></a></td></tr>
@@ -304,10 +304,10 @@ Your browser does not support the video tag.
 					Like the pink forest in Satisfactory, there is a large tunnel system running under the biome, one which contains a "resource node", which can provide an inexhaustible - though not high-throughput - supply of whatever resource it is configured to. Just as with their Satisfactory counterparts, these resource nodes can occur in varying purity levels - Impure, Normal, and Pure - which influence both their yield and potentially what items they may provide. Of course, this is a moot point if you cannot find the node and put it to use, something that may not be quite so trivial...<br>
 					
 					
-					<div class = "block-image">
+					<div class = "spoiler"><div class = "block-image">
 	<a href = "../../imagedownloads/i-imgur-com_2Fys26HQK.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2Fys26HQK.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2F4nJ2bPe.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2F4nJ2bPe.jpg" style="max-width:75%;" ></a>
-</div>
-					</section>
+</div></div>
+					
 			</section><br>
 			<section class = "textblock" id = "text-block-resourceextractor">
 				<h3>Resource Node Extractor</h3>
@@ -327,6 +327,12 @@ Your browser does not support the video tag.
 	<a href = "../../imagedownloads/i-imgur-com_2FV6SzYRU.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FV6SzYRU.png" style="max-width:75%;" ></a>	<div class = "image-caption">The GUI for the RotaryCraft version, with various upgrade configurations.</div>
 </div>
 					</section>
+			</section><br>
+			<section class = "textblock" id = "text-block-soundtrack">
+				<h3>Soundtrack</h3>
+					
+					Satisforestry can load the Satisfactory soundtrack from disk to play in the biome, in place of the default MC soundtrack. To do this, create a folder somewhere on your system and specify this location in the <code>Satisfactory OST Folder</code> config setting. In that folder, create five subfolders: "all", "day", "morning", "night", and "evening". Place the various tracks into one or more of the folders to categorize them, and the mod will select from them at the appropriate times of day. The ogg filetype is the only supported by default, but with the <a href="https://www.curseforge.com/minecraft/mc-mods/notenoughcodecs/files">Not Enough Codecs</a> mod, you can also use MP3 and .flac audio formats (though the latter will require a 1.7.10 backport of newer versions, available <a href="https://gregtech.overminddl1.com/openmods/codecs/NotEnoughCodecs/1.7.10-0.6/NotEnoughCodecs-1.7.10-0.6.jar">here</a>).
+					
 			</section><br>
 			<section class = "textblock" id = "text-block-configurability">
 				<h3>Configurability</h3>
@@ -540,7 +546,7 @@ Your browser does not support the video tag.
 					<h4>Conditions</h4>
 					
 					
-					Weight factors and limitations both use a condition/check system, where each entry is defined as checking some property about the game state, such as the time of day or the doggo's health. These are compared against a provided value - the actual comparison depends on the condition being queried - yielding a true/false result which determines whether the weight factor is applied or the limitation is satisfied. In the case of the latter, all limitations must be satisfied to allow that item to be found by a lizard doggo. The available checks is as follows:<br>
+					Weight factors and limitations both use a condition/check system, where each entry is defined as checking some property about the game state, such as the time of day or the doggo's health. These are compared against a provided value - the actual comparison depends on the condition being queried - yielding a true/false result which determines whether the weight factor is applied or the limitation is satisfied. In the case of the latter, all limitations must be satisfied to allow that item to be found by a lizard doggo. The available checks are as follows:<br>
 					
 					
 					<table>
@@ -571,12 +577,6 @@ Your browser does not support the video tag.
 					
 					
 					</table>
-					
-			</section><br>
-			<section class = "textblock" id = "text-block-soundtrack">
-				<h3>Soundtrack</h3>
-					
-					Satisforestry can load the Satisfactory soundtrack from disk to play in the biome, in place of the default MC soundtrack. To do this, create a folder somewhere on your system and specify this location in the <code>Satisfactory OST Folder</code> config setting. In that folder, create five subfolders: "all", "day", "morning", "night", and "evening". Place the various tracks into one or more of the folders to categorize them, and the mod will select from them at the appropriate times of day. The ogg filetype is the only supported by default, but with the <a href="https://www.curseforge.com/minecraft/mc-mods/notenoughcodecs/files">Not Enough Codecs</a> mod, you can also use MP3 and .flac audio formats (though the latter will require a 1.7.10 backport of newer versions, available <a href="https://gregtech.overminddl1.com/openmods/codecs/NotEnoughCodecs/1.7.10-0.6/NotEnoughCodecs-1.7.10-0.6.jar">here</a>).
 					</section>
 			</section>
 <br>
