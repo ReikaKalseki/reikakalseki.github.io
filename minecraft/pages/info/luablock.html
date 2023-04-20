@@ -189,7 +189,7 @@
 					<h4>Basic Definition</h4>
 					
 					
-					ItemStacks - like what are used in recipes or as drops - are defined somewhat specially, but similar to Minetweaker, in a format of <code>modid:itemregistryname:metadata*stacksize</code>. Metadata is optional, and will be set to zero if unspecified. If NBT is desired, a separate entry - usually called "nbt" or similar - will be parsed into the NBT tag.
+					ItemStacks - like what are used in recipes or as drops - are defined somewhat specially, but similar to Minetweaker, in a format of <code>modid:itemregistryname:metadata*stacksize</code>. Metadata is optional, and will be set to zero if unspecified. Stack size is also optional (skip the <code>*</code> if not specifying it), and will default to one. If NBT is desired, a separate entry - usually called "nbt" or similar - will be parsed into the NBT tag using the same structure as the LuaBlock definition, with simple properties becoming the appropriate primitive tag types (<code>NBTTagInt</code>, <code>NBTTagString</code>, et cetera), lists of nameless values becoming an <code>NBTTagList</code>, and a series of named key-value pairs becoming a <code>NBTTagCompound</code>. Generally, the root NBT block will be your root <code>NBTTagCompound</code> on the item.
 					
 					
 					<br><br>
@@ -348,7 +348,10 @@
 					}<br>
 					
 					
-					</div>
+					</div><br>
+					
+					
+					Do note that you will need to know their internal IDs/names in their respective registries (for example the allele UID for most forestry genes, seen in the "species" tags above), but this can usually be determined by reading the NBT of a known valid item.
 					
 			</section><br>
 			<section class = "textblock" id = "text-block-specialkeys">

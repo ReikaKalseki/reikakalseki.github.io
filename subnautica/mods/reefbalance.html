@@ -75,6 +75,8 @@
 	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><a class = "tocbtn" href="#top"><i class="fas fa-angle-double-up"></i></a></td></tr>
 		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-general">General</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-general"></a></td></tr>
 		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-changes">Changes</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-changes"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-fragmentscancounts">Fragment Scan Counts</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-fragmentscancounts"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-modsettings">Configuration Settings</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-modsettings"></a></td></tr>
 		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-sourcecode"></a></td></tr>
 		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-downloads"></a></td></tr>
 </table>
@@ -84,7 +86,7 @@
 						<section class = "textblock" id = "text-block-general">
 				<h3>General</h3>
 					
-					BalanceTweaks is a simple mod that performs a host of minor balance or QoL changes to the game, with the primary aim at reducing the impact of common irritants without significantly altering game balance or progression.
+					Re(ef)balance is a simple mod that performs a host of minor balance or QoL changes to the game, with the primary aim at reducing the impact of common irritants without significantly altering game balance or progression.
 					
 					
 					<br><br>
@@ -135,8 +137,287 @@
 					<li>Controllable lantern tree fruit spawn rate<div class = "tooltip"><img class = 'tooltipicon' src = '../../images/gear.png'><span class='tooltiptext'>Configurable</span></div></li>
 					
 					
-					<li>Thermoblade doubles coral tube yields<div class = "tooltip"><img class = 'tooltipicon' src = '../../images/gear.png'><span class='tooltiptext'>Configurable</span></div></li></ul>
+					<li>Adjust fragment scan counts on an item-by-item basis<div class = "tooltip"><img class = 'tooltipicon' src = '../../images/gear.png'><span class='tooltiptext'>Configurable</span></div></li>
+					
+					
+					<li>Thermoblade doubles coral tube and mushroom disk yields<div class = "tooltip"><img class = 'tooltipicon' src = '../../images/gear.png'><span class='tooltiptext'>Configurable</span></div></li></ul>
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-fragmentscancounts">
+				<h3>Fragment Scan Counts</h3>
+					
+					Re(ef)balance allows you to change the required fragment scan count for any unlock in the game, modded or vanilla. To do this, edit the file<br><code>[Subnautica Install Folder]\QMods\Reefbalance\fragment_scan_requirements.txt</code>.<br>
+					
+					
+					Each line of this file will specify an unlock and its scan count, in the format <code>unlock=count</code>.<br>
+					
+					
+					For example, the following file contents would set the seamoth to require 4 fragment scans, the nuclear reactor 7, and the prawn drill arm 11:
+					
+					
+					<div class = "code-block">
+					
+					
+					SeamothFragment=4<br>
+					
+					
+					BaseNuclearReactorFragment=7<br>
+					
+					
+					ExosuitDrillArmFragment=11<br>
+					
+					
+					</div><br>
+					
+					
+					Do note that this will require knowing the "name" of the unlock in question, ie the <code>TechType</code> entry in the game database. This is the same name as used when spawning the item/entity in the world, and can be determined ingame with the RuntimeEditor mod, as the <code>type</code> property on the <code>TechTag</code> component of the <code>GameObject</code>. For vanilla unlocks, a partial list can be found <a href="https://subnautica.fandom.com/wiki/Spawn_IDs_(Subnautica)">here</a>. The 'Fragment' portion of the name is usually optional, though for some items - notably base parts - there are multiple similarly-named TechTypes and it may be unclear which is the correct one, and using the one with the 'Fragment' name ensures you have the correct one.
 					</section>
+			</section>
+<br>
+			<section class = "textblock" id = "text-block-modsettings">
+			<div class = "modsettings">
+				<h3>Configuration Settings</h3>
+				This mod contains several config options to modify values and behaviors - such as for balance or server safety concerns, or simply personal taste - to your preferences. Note that several settings may have bounds imposed on their values, either logically or explicitly; these can usually be seen in the actual settings files or ingame. These are listed in order found in the source code, which is generally the order in which they were added; They may be present in a different order ingame or in the configuration files.
+				<br>
+				The settings for the mod, when installed, can be found in the mod's install folder.
+				<br>
+				<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 49.75%">
+			<h4 class = "setting-name heading-without-nav">Reduce creepvine sample size to 1x2</h4>
+Type: boolean<br>
+Current Default Value:<div class = "code-block">true</div>
+		</div>
+		<div class = "setting-box" style = "width: 49.75%">
+			<h4 class = "setting-name heading-without-nav">Vanilla Value</h4>
+<br>
+Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 49.75%">
+			<h4 class = "setting-name heading-without-nav">Make nonfunctional decorative blocks 1x1</h4>
+Type: boolean<br>
+Current Default Value:<div class = "code-block">true</div>
+		</div>
+		<div class = "setting-box" style = "width: 49.75%">
+			<h4 class = "setting-name heading-without-nav">Vanilla Value</h4>
+<br>
+Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 49.75%">
+			<h4 class = "setting-name heading-without-nav">Make decorative seeds 1x1</h4>
+Type: boolean<br>
+Current Default Value:<div class = "code-block">true</div>
+		</div>
+		<div class = "setting-box" style = "width: 49.75%">
+			<h4 class = "setting-name heading-without-nav">Vanilla Value</h4>
+<br>
+Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 49.75%">
+			<h4 class = "setting-name heading-without-nav">Downsize some of the larger tools to 1x2 or 2x2</h4>
+Type: boolean<br>
+Current Default Value:<div class = "code-block">false</div>
+		</div>
+		<div class = "setting-box" style = "width: 49.75%">
+			<h4 class = "setting-name heading-without-nav">Vanilla Value</h4>
+<br>
+Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Vegetable-Based food spoilage start delay (days)</h4>
+Type: float<br>
+Current Default Value:<div class = "code-block">0.75F</div>
+		</div>
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Vanilla Value</h4>
+<br>
+Value:<div class = "code-block">0.0F</div>
+		</div>
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Minimum Value</h4>
+<br>
+Value:<div class = "code-block">0.0F</div>
+		</div>
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Maximum Value</h4>
+<br>
+Value:<div class = "code-block">100.0F</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Meat-Based food spoilage start delay (days)</h4>
+Type: float<br>
+Current Default Value:<div class = "code-block">0.25F</div>
+		</div>
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Vanilla Value</h4>
+<br>
+Value:<div class = "code-block">0.0F</div>
+		</div>
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Minimum Value</h4>
+<br>
+Value:<div class = "code-block">0.0F</div>
+		</div>
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Maximum Value</h4>
+<br>
+Value:<div class = "code-block">100.0F</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Generic food spoilage start delay (days)</h4>
+Type: float<br>
+Current Default Value:<div class = "code-block">0.5F</div>
+		</div>
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Vanilla Value</h4>
+<br>
+Value:<div class = "code-block">0.0F</div>
+		</div>
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Minimum Value</h4>
+<br>
+Value:<div class = "code-block">0.0F</div>
+		</div>
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Maximum Value</h4>
+<br>
+Value:<div class = "code-block">100.0F</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 49.75%">
+			<h4 class = "setting-name heading-without-nav">Reduce glass cost to 1 quartz</h4>
+Type: boolean<br>
+Current Default Value:<div class = "code-block">false</div>
+		</div>
+		<div class = "setting-box" style = "width: 49.75%">
+			<h4 class = "setting-name heading-without-nav">Vanilla Value</h4>
+<br>
+Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 49.75%">
+			<h4 class = "setting-name heading-without-nav">Replace scanner HUD chip magnetite</h4>
+Type: boolean<br>
+Current Default Value:<div class = "code-block">true</div>
+		</div>
+		<div class = "setting-box" style = "width: 49.75%">
+			<h4 class = "setting-name heading-without-nav">Vanilla Value</h4>
+<br>
+Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 49.75%">
+			<h4 class = "setting-name heading-without-nav">Replace glass in seabase parts with reinforced glass which costs half as much quartz</h4>
+Type: boolean<br>
+Current Default Value:<div class = "code-block">true</div>
+		</div>
+		<div class = "setting-box" style = "width: 49.75%">
+			<h4 class = "setting-name heading-without-nav">Vanilla Value</h4>
+<br>
+Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 49.75%">
+			<h4 class = "setting-name heading-without-nav">Reduce cost of some seabase components</h4>
+Type: boolean<br>
+Current Default Value:<div class = "code-block">true</div>
+		</div>
+		<div class = "setting-box" style = "width: 49.75%">
+			<h4 class = "setting-name heading-without-nav">Vanilla Value</h4>
+<br>
+Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 49.75%">
+			<h4 class = "setting-name heading-without-nav">Increase size of cyclops lockers</h4>
+Type: boolean<br>
+Current Default Value:<div class = "code-block">true</div>
+		</div>
+		<div class = "setting-box" style = "width: 49.75%">
+			<h4 class = "setting-name heading-without-nav">Vanilla Value</h4>
+<br>
+Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 49.75%">
+			<h4 class = "setting-name heading-without-nav">Thermoblade gives doubled coral tube yield</h4>
+Type: boolean<br>
+Current Default Value:<div class = "code-block">true</div>
+		</div>
+		<div class = "setting-box" style = "width: 49.75%">
+			<h4 class = "setting-name heading-without-nav">Vanilla Value</h4>
+<br>
+Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 49.75%">
+			<h4 class = "setting-name heading-without-nav">Thermoblade gives doubled mushroom disk yield</h4>
+Type: boolean<br>
+Current Default Value:<div class = "code-block">true</div>
+		</div>
+		<div class = "setting-box" style = "width: 49.75%">
+			<h4 class = "setting-name heading-without-nav">Vanilla Value</h4>
+<br>
+Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Lantern Tree Growth Rate Multiplier</h4>
+Type: float<br>
+Current Default Value:<div class = "code-block">1.0F</div>
+		</div>
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Vanilla Value</h4>
+<br>
+Value:<div class = "code-block">1.0F</div>
+		</div>
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Minimum Value</h4>
+<br>
+Value:<div class = "code-block">0.1F</div>
+		</div>
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Maximum Value</h4>
+<br>
+Value:<div class = "code-block">10.0F</div>
+		</div>
+	
+</div>
+
+			</div>
 			</section>
 <br>
 			<section class = "textblock" id = "text-block-sourcecode">

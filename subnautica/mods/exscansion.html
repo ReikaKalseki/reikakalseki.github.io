@@ -76,6 +76,7 @@
 		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-general">General</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-general"></a></td></tr>
 		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-changes">Changes</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-changes"></a></td></tr>
 		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-customizations">Customizations</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-customizations"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-modsettings">Configuration Settings</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-modsettings"></a></td></tr>
 		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-sourcecode"></a></td></tr>
 		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-downloads"></a></td></tr>
 </table>
@@ -121,13 +122,16 @@
 					<li>Eggs can only be detected after the corresponding encyclopedia page is unlocked</li>
 					
 					
-					<li>Stalker teeth can only be detected after being scanned</li>
+					<li>Stalker teeth can only be detected after being scanned<div class = "tooltip"><img class = 'tooltipicon' src = '../../images/gear.png'><span class='tooltiptext'>Configurable</span></div></li>
 					
 					
 					<li>Opened databoxes no longer appear on the scanner room</li>
 					
 					
 					<li>Deleted GameObjects are also deleted from the scanner room</li>
+					
+					
+					<li>Scanner HUD pings are now hidden when in a seabase to reduce visual clutter</li>
 					
 					
 					<li>Mod Integration: Allows mods to dictate the scanner-room detectability of their own GameObjects</li>
@@ -159,6 +163,184 @@
 					
 					<li>Maximum speed</li></ul>
 					</section>
+			</section>
+<br>
+			<section class = "textblock" id = "text-block-modsettings">
+			<div class = "modsettings">
+				<h3>Configuration Settings</h3>
+				This mod contains several config options to modify values and behaviors - such as for balance or server safety concerns, or simply personal taste - to your preferences. Note that several settings may have bounds imposed on their values, either logically or explicitly; these can usually be seen in the actual settings files or ingame. These are listed in order found in the source code, which is generally the order in which they were added; They may be present in a different order ingame or in the configuration files.
+				<br>
+				The settings for the mod, when installed, can be found in the mod's install folder.
+				<br>
+				<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 49.75%">
+			<h4 class = "setting-name heading-without-nav">Leviathans Need To Be Scanned Before Scanner Room Detection</h4>
+Type: boolean<br>
+Current Default Value:<div class = "code-block">true</div>
+		</div>
+		<div class = "setting-box" style = "width: 49.75%">
+			<h4 class = "setting-name heading-without-nav">Vanilla Value</h4>
+<br>
+Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 49.75%">
+			<h4 class = "setting-name heading-without-nav">Scanner Room Can Detect Time Capsules</h4>
+Type: boolean<br>
+Current Default Value:<div class = "code-block">false</div>
+		</div>
+		<div class = "setting-box" style = "width: 49.75%">
+			<h4 class = "setting-name heading-without-nav">Vanilla Value</h4>
+<br>
+Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Base Scanner Range (m)</h4>
+Type: float<br>
+Current Default Value:<div class = "code-block">300.0F</div>
+		</div>
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Vanilla Value</h4>
+<br>
+Value:<div class = "code-block">300.0F</div>
+		</div>
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Minimum Value</h4>
+<br>
+Value:<div class = "code-block">50.0F</div>
+		</div>
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Maximum Value</h4>
+<br>
+Value:<div class = "code-block">1000.0F</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Range Upgrade Value (m)</h4>
+Type: float<br>
+Current Default Value:<div class = "code-block">50.0F</div>
+		</div>
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Vanilla Value</h4>
+<br>
+Value:<div class = "code-block">50.0F</div>
+		</div>
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Minimum Value</h4>
+<br>
+Value:<div class = "code-block">10.0F</div>
+		</div>
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Maximum Value</h4>
+<br>
+Value:<div class = "code-block">250.0F</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Max Scanner Range (m)</h4>
+Type: float<br>
+Current Default Value:<div class = "code-block">500.0F</div>
+		</div>
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Vanilla Value</h4>
+<br>
+Value:<div class = "code-block">500.0F</div>
+		</div>
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Minimum Value</h4>
+<br>
+Value:<div class = "code-block">100.0F</div>
+		</div>
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Maximum Value</h4>
+<br>
+Value:<div class = "code-block">2000.0F</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Base Scanner Speed Per Ping (s)</h4>
+Type: float<br>
+Current Default Value:<div class = "code-block">14.0F</div>
+		</div>
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Vanilla Value</h4>
+<br>
+Value:<div class = "code-block">14.0F</div>
+		</div>
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Minimum Value</h4>
+<br>
+Value:<div class = "code-block">1.0F</div>
+		</div>
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Maximum Value</h4>
+<br>
+Value:<div class = "code-block">3600.0F</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Speed Upgrade Value (s)</h4>
+Type: float<br>
+Current Default Value:<div class = "code-block">3.0F</div>
+		</div>
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Vanilla Value</h4>
+<br>
+Value:<div class = "code-block">3.0F</div>
+		</div>
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Minimum Value</h4>
+<br>
+Value:<div class = "code-block">1.0F</div>
+		</div>
+		<div class = "setting-box" style = "width: 24.75%">
+			<h4 class = "setting-name heading-without-nav">Maximum Value</h4>
+<br>
+Value:<div class = "code-block">30.0F</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 49.75%">
+			<h4 class = "setting-name heading-without-nav">Resources Need To Be Scanned Before Scanner Room Detection</h4>
+Type: boolean<br>
+Current Default Value:<div class = "code-block">true</div>
+		</div>
+		<div class = "setting-box" style = "width: 49.75%">
+			<h4 class = "setting-name heading-without-nav">Vanilla Value</h4>
+<br>
+Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 49.75%">
+			<h4 class = "setting-name heading-without-nav">Stalker Teeth To Be Scanned Before Scanner Room Detection</h4>
+Type: boolean<br>
+Current Default Value:<div class = "code-block">false</div>
+		</div>
+		<div class = "setting-box" style = "width: 49.75%">
+			<h4 class = "setting-name heading-without-nav">Vanilla Value</h4>
+<br>
+Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+
+			</div>
 			</section>
 <br>
 			<section class = "textblock" id = "text-block-sourcecode">
