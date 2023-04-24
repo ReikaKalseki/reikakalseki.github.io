@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="shortcut icon" href="../../../images/favicon.ico">
+        <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+		<meta http-equiv="Cache-control" content="no-cache">
+        <title>Change Logs</title>
+		<link rel="stylesheet" type="text/css" href="../../../compiledJS/entrypoint.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> 
+		<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Lato|Exo 2|Ubuntu|Cairo"> -->
+		<script src = "../../../compiledJS/entrypoint.bundle.js"></script>
+		<meta name="script-def" content="footer-spacing">
+		<meta name="script-def" content="navbar-scroll-indicator">
+		<meta name="script-def" content="spoiler-handler">
+		<!-- <meta name="script-def" content="quicknav-pos"> -->
+			<meta name="script-def" content="changeloader">
+    </head>
+    <body  data-game="subnautica">
+        	<div id = "navbar" class="navbar">
+	  <a class="navbar-button" href="../../../index.html">Reika's Mods Home</a>
+	  <a class="navbar-button" href="../../../subnautica/index.html">Subnautica Home</a>
+		  <div class="navdropdown">
+			<div class="navdropbtn">Information <i class="fa fa-angle-down"></i></div>
+			<div class="navdrop-content">
+					<a class = "navdrop-entry" href="../../../subnautica/pages/info/faq.html">FAQ</a>
+					<a class = "navdrop-entry" href="../../../subnautica/pages/info/contact.html">Contact</a>
+					<a class = "navdrop-entry" href="../../../subnautica/pages/info/history.html">History</a>
+					<a class = "navdrop-entry" href="../../../subnautica/pages/info/changelog.html">Change Logs</a>
+					<a class = "navdrop-entry" href="../../../subnautica/pages/info/configs.html">Configs</a>
+			</div>
+		  </div>
+		  <div class="navdropdown">
+			<div class="navdropbtn">Permissions <i class="fa fa-angle-down"></i></div>
+			<div class="navdrop-content">
+					<a class = "navdrop-entry" href="../../../subnautica/pages/perms/license.html">License</a>
+			</div>
+		  </div>
+	  <div class="navdropdown">
+		<div class="navdropbtn">Mods <i class="fa fa-angle-down"></i></div>
+		<div class="navdrop-content">
+				<a class = "navdrop-entry" href="../../../subnautica/mods/di.html">Dragon Industries</a>
+				<a class = "navdrop-entry" href="../../../subnautica/mods/aqueousengineering.html">Aqueous Engineering</a>
+				<a class = "navdrop-entry" href="../../../subnautica/mods/auroresource.html">Auroresource</a>
+				<a class = "navdrop-entry" href="../../../subnautica/mods/ecocean.html">Ecocean</a>
+				<a class = "navdrop-entry" href="../../../subnautica/mods/exscansion.html">Exscansion</a>
+				<a class = "navdrop-entry" href="../../../subnautica/mods/reefbalance.html">Re(ef)Balance</a>
+				<a class = "navdrop-entry" href="../../../subnautica/mods/seatosea.html">Sea To Sea</a>
+		</div>
+	  </div>
+	  <div class="navdropdown">
+		<div class="navdropbtn">Other Games <i class="fa fa-angle-down"></i></div>
+		<div class="navdrop-content">
+				<a class = "navdrop-entry" href="../../../minecraft/index.html">Minecraft</a>
+				<a class = "navdrop-entry" href="../../../factorio/index.html">Factorio</a>
+				<a class = "navdrop-entry" href="../../../p2/index.html">Portal 2</a>
+				<a class = "navdrop-entry" href="../../../stellaris/index.html">Stellaris</a>
+				<a class = "navdrop-entry" href="../../../se/index.html">Space Engineers</a>
+				<a class = "navdrop-entry" href="../../../fce/index.html">FortressCraft Evolved</a>
+				<a class = "navdrop-entry" href="../../../starbound/index.html">Starbound</a>
+		</div>
+	  </div>
+	  <div class="navdropdown">
+		<div class="navdropbtn">Other Projects <i class="fa fa-angle-down"></i></div>
+		<div class="navdrop-content">
+				<a class = "navdrop-entry" href="../../../projects/calendar.html">Game Calendar</a>
+				<a class = "navdrop-entry" href="../../../projects/eventbuilder.html">Stellaris Event Builder</a>
+				<a class = "navdrop-entry" href="../../../projects/fcompile.html">FCompile</a>
+				<a class = "navdrop-entry" href="https://dragonrealm.overminddl1.com/">Dragon Realm Modpack</a>
+		</div>
+	  </div>
+	</div>
+		<noscript><div style = "text-align: center; width: 100%;"><div id = "nojs-header"><div><img class = "header-alert" src = "../../../images/alert.png"></div><div>You have JavaScript disabled; it is recommended you enable it for this site.<br>While the site will (mostly) function with scripts disabled, some sections (eg changelog view, or sortable tables) require it to update the page contents based on your input.<br>Additionally, JS is used to generate page styling, meaning disabling scripts will leave pages ugly, boring, and in some cases poorly arranged in ways that might impede readability.<br>If you have no idea what this means, or have not in fact disabled scripts, try simply reloading the page, as it may not have loaded completely or correctly.</div></div></div></noscript>
+<div id="toc_container">
+<h3>Quick Nav</h3>
+<hr>
+<table class="toc_list">
+	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><a class = "tocbtn" href="#top"><i class="fas fa-angle-double-up"></i></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-intro">Introduction</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-intro"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-mods">Mod List And Info</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-mods"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-changes">Change Viewer</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-changes"></a></td></tr>
+</table>
+</div>        <div id = "textarea" class = "textarea ">
+				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
+			<!-- <h2>Change Logs</h2> -->
+			<section class = "textblock" id = "text-block-intro">
+<h3>Introduction</h3>
+These are the changelogs for all the mods going back as far as they have been kept, sorted by game and mod version. Click a button to load the changes made in that version; the presence of any mod and its changes in the displayed data can be toggled with the options below.<br><br>Note that I have not always kept changelogs, nor equally good ones; as you go back, changelogs may be missing data such as their release date or game version, or even be absent entirely. This also means the "Game Version" ranges below may not be fully accurate for the earliest releases, which may predate any changelog efforts, and where manual reconstruction was attempted. Furthermore, where I have record of changes but incomplete record of releases, the changes will be attributed to the soonest release after the change I can confirm, which may not be the actual release date of that change.<br><br>Finally, the display data you see here is autogenerated by parsing existing written changelogs in other forms, and as such I cannot guarantee that it not have the occasional error such as a missing change or incorrect date ranges in the table below.
+</section>
+<br><br>
+<section class = "textblock" id = "text-block-mods">
+<h3>Mods</h3>
+<table class = "changetable">
+  <tr>
+	<th style = "width: 25%;">
+		Mod Name
+	</th>
+	<th style = "width: 20%;">
+		Game Version Range
+	</th>
+	<th style = "width: 25%;">
+		Changelog Data Range
+	</th>
+	<th style = "width: 20%;">
+		Latest Available Version
+	</th>
+	<th style = "width: 10%;">
+		Show Changes
+	</th>
+  </tr>
+<tr>
+<td>[ALL]</td>
+<td></td>
+<td></td>
+<td></td>
+<td><input type="checkbox" class="modchangecheck" data-value = "all" data-mod = "[ALL]" checked></td>
+</tr>
+<tr>
+<td><a href = "../../../subnautica/mods/di.html">Dragon Industries - Alterra Division</a></td>
+<td>1.0</td>
+<td>30/1/2023 [1.0] - 21/4/2023 [1.0] (v17)</td>
+<td>21/4/2023 [1.0] (v20)</td>
+<td><input type="checkbox" class="modchangecheck" data-value = "di" data-mod = "Dragon Industries - Alterra Division" checked></td>
+</tr>
+<tr>
+<td><a href = "../../../subnautica/mods/aqueousengineering.html">Aqueous Engineering</a></td>
+<td>1.0</td>
+<td>30/1/2023 [1.0] - 17/4/2023 [1.0] (v14)</td>
+<td>21/4/2023 [1.0] (v20)</td>
+<td><input type="checkbox" class="modchangecheck" data-value = "aqueousengineering" data-mod = "Aqueous Engineering" checked></td>
+</tr>
+<tr>
+<td><a href = "../../../subnautica/mods/auroresource.html">Auroresource</a></td>
+<td>1.0</td>
+<td>30/1/2023 [1.0] - 17/4/2023 [1.0] (v3)</td>
+<td>21/4/2023 [1.0] (v20)</td>
+<td><input type="checkbox" class="modchangecheck" data-value = "auroresource" data-mod = "Auroresource" checked></td>
+</tr>
+<tr>
+<td><a href = "../../../subnautica/mods/ecocean.html">Ecocean</a></td>
+<td>1.0</td>
+<td>30/1/2023 [1.0] - 21/4/2023 [1.0] (v10)</td>
+<td>21/4/2023 [1.0] (v20)</td>
+<td><input type="checkbox" class="modchangecheck" data-value = "ecocean" data-mod = "Ecocean" checked></td>
+</tr>
+<tr>
+<td><a href = "../../../subnautica/mods/exscansion.html">Exscansion</a></td>
+<td>1.0</td>
+<td>30/1/2023 [1.0] - 17/4/2023 [1.0] (v3)</td>
+<td>21/4/2023 [1.0] (v20)</td>
+<td><input type="checkbox" class="modchangecheck" data-value = "exscansion" data-mod = "Exscansion" checked></td>
+</tr>
+<tr>
+<td><a href = "../../../subnautica/mods/reefbalance.html">Re(ef)Balance</a></td>
+<td>1.0</td>
+<td>30/1/2023 [1.0] - 17/4/2023 [1.0] (v6)</td>
+<td>21/4/2023 [1.0] (v20)</td>
+<td><input type="checkbox" class="modchangecheck" data-value = "reefbalance" data-mod = "Re(ef)Balance" checked></td>
+</tr>
+<tr>
+<td><a href = "../../../subnautica/mods/seatosea.html">Sea To Sea</a></td>
+<td>1.0</td>
+<td>30/1/2023 [1.0] - 21/4/2023 [1.0] (v20)</td>
+<td>21/4/2023 [1.0] (v20)</td>
+<td><input type="checkbox" class="modchangecheck" data-value = "seatosea" data-mod = "Sea To Sea" checked></td>
+</tr>
+</table>
+</section>
+<br><br>
+<div style = "display: none">
+	<div id = "mod-version-list-1.0">
+			<div class = "mod-version-list-entry" data-date = "April 21, 2023" data-modset = "seatosea">21/4/2023</div>
+			<div class = "mod-version-list-entry" data-date = "April 21, 2023" data-modset = "di">21/4/2023</div>
+			<div class = "mod-version-list-entry" data-date = "April 21, 2023" data-modset = "ecocean">21/4/2023</div>
+			<div class = "mod-version-list-entry" data-date = "April 17, 2023" data-modset = "ecocean">17/4/2023</div>
+			<div class = "mod-version-list-entry" data-date = "April 17, 2023" data-modset = "reefbalance">17/4/2023</div>
+			<div class = "mod-version-list-entry" data-date = "April 17, 2023" data-modset = "auroresource">17/4/2023</div>
+			<div class = "mod-version-list-entry" data-date = "April 17, 2023" data-modset = "seatosea">17/4/2023</div>
+			<div class = "mod-version-list-entry" data-date = "April 17, 2023" data-modset = "di">17/4/2023</div>
+			<div class = "mod-version-list-entry" data-date = "April 17, 2023" data-modset = "aqueousengineering">17/4/2023</div>
+			<div class = "mod-version-list-entry" data-date = "April 13, 2023" data-modset = "di">13/4/2023</div>
+			<div class = "mod-version-list-entry" data-date = "April 12, 2023" data-modset = "di">12/4/2023</div>
+			<div class = "mod-version-list-entry" data-date = "March 20, 2023" data-modset = "di">20/3/2023</div>
+			<div class = "mod-version-list-entry" data-date = "March 10, 2023" data-modset = "di">10/3/2023</div>
+			<div class = "mod-version-list-entry" data-date = "March 3, 2023" data-modset = "ecocean">3/3/2023</div>
+			<div class = "mod-version-list-entry" data-date = "March 1, 2023" data-modset = "di">1/3/2023</div>
+			<div class = "mod-version-list-entry" data-date = "February 28, 2023" data-modset = "di">28/2/2023</div>
+			<div class = "mod-version-list-entry" data-date = "February 3, 2023" data-modset = "di">3/2/2023</div>
+			<div class = "mod-version-list-entry" data-date = "January 30, 2023" data-modset = "di">30/1/2023</div>
+	</div>
+			<div class = "changelog-data-cache" id = "1.0|21/4/2023|seatosea" data-nameappend = " (v20)"><ul class = "changelist">				
+					<li>Added option to make lifepod slowly drift, sink, fail, and be destroyed to force moving to a seabase</li>
+					<li>Fixed locker contents not appearing for pod 9 occupant</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|21/4/2023|di" data-nameappend = " (v17)"><ul class = "changelist">				
+					<li>Added command to hide version warning</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|21/4/2023|ecocean" data-nameappend = " (v10)"><ul class = "changelist">				
+					<li>Fixed more log errors with lumenshroom oil</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|17/4/2023|ecocean" data-nameappend = " (v8)"><ul class = "changelist">				
+					<li>Added version checker</li>
+					<li>Reduced intensity of passive sonar visual slightly</li>
+					<li>Geysers now impart upward force when firing</li>
+					<li>Hopefully reduced scanner room inaccuracy with lumenshroom oil</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|17/4/2023|reefbalance" data-nameappend = " (v6)"><ul class = "changelist">				
+					<li>Added version checker</li>
+					<li>Fragment scan count system is now open to configuration by user</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|17/4/2023|auroresource" data-nameappend = " (v3)"><ul class = "changelist">				
+					<li>Added version checker</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|17/4/2023|exscansion" data-nameappend = " (v3)"><ul class = "changelist">				
+					<li>Added version checker</li>
+					<li>Resource scannability check is now open to mod interaction</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|17/4/2023|seatosea" data-nameappend = " (v18)"><ul class = "changelist">				
+					<li>Added version checker</li>
+					<li>Most materials and plants now need a manual scan before appearing on scanner rooms</li>
+					<li>Scanner Room cameras now take damage in the ILZ</li>
+					<li>Increased aggression at keeping vents unblocked in the glass forest wreck</li>
+					<li>Removed plantability of amoeboid samples</li>
+					<li>Moved worldgen loading later in game load phase to fix mod interaction content (eg AE databoxes)</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|17/4/2023|di" data-nameappend = " (v15)"><ul class = "changelist">				
+					<li>Added version checker</li>
+					<li>Fixed ObjectDeleter</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|17/4/2023|aqueousengineering" data-nameappend = " (v14)"><ul class = "changelist">				
+					<li>Added version checker</li>
+					<li>Added code to periodically force visual updates on ACUs even if the biome theme has not changed</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|13/4/2023|di" data-nameappend = ""><ul class = "changelist">				
+					<li>Removed some unwanted debug logging messages</li>
+					<li>Fixed manual invocations of vanilla music/soundscapes "sticking" until another one was invoked</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|13/4/2023|aqueousengineering" data-nameappend = ""><ul class = "changelist">				
+					<li>Fixed minipoo having improper item properties preventing recipes using it from appearing in the PDA</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|13/4/2023|exscansion" data-nameappend = ""><ul class = "changelist">				
+					<li>Stalker teeth needing scan before detectability is now configurable</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|13/4/2023|seatosea" data-nameappend = ""><ul class = "changelist">				
+					<li>Fixed some exception possibilities when calculating thermal damage</li>
+					<li>Thermal Reactor modules now slightly reduce heat damage for vehicles</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|12/4/2023|di" data-nameappend = ""><ul class = "changelist">				
+					<li>Added callbacks for sound events, plus touching of EMP pulses, lost river brine, and airlocks, as well as solar panel effectivity and propulsion gun grabbability</li>
+					<li>ATP airlocks now properly change MotorMode for the Seamoth, preventing seamoth flight</li>
+					<li>Propulsion guns now work on the seamoth</li>
+					<li>Further improved which items will trigger unlock popups</li>
+					<li>Greatly improved how CustomMachine entities consume power</li>
+					<li>Fixed unhandled exception in some CoordinatedSpawn placements which was triggering spawn duplication</li>
+					<li>WreckDoorSwap now supports door deletion</li>
+					<li>Added ObjectDeleter worldgennable prefab</li>
+					<li>Fixed several issues related to worldgen seabases including partial reconstruction and some functionality being preserved</li>
+					<li>Worldgenned objects now preserve their scaling properly if it was normally set via code</li>
+					<li>Fixed crafting tree location for seamoth depth modules on the modification station</li>
+					<li>CustomMachine entities will no longer find unwanted bases (or cyclopses) to parent themselves to, preventing weird cyclops collision/physics issues and bases that seem unable to sustain power</li>
+					<li>Fixed size of some entities in ACUs</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|12/4/2023|aqueousengineering" data-nameappend = ""><ul class = "changelist">				
+					<li>Added databoxes for the seabase battery</li>
+					<li>Added dome light</li>
+					<li>Made item display much cheaper</li>
+					<li>Increased base ACU poo chance and reduced eat rate</li>
+					<li>Adjusted base sonar antenna recipe when C2C is installed to keep it from being gated too late</li>
+					<li>Greatly reduced base sonar power cost</li>
+					<li>ACU ecosystem and predation data is now saved across save/reloads and so reloading a game should not result in a wave of eating</li>
+					<li>Removed ACU predation notification in chat</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|12/4/2023|ecocean" data-nameappend = ""><ul class = "changelist">				
+					<li>Added passive sonar HUD for reapers</li>
+					<li>Added compass distortion system and geomagnetic and local anomalies</li>
+					<li>Reduced biter aggression for most damage types</li>
+					<li>Bloodvine predation no longer detects the seamoth and prawn large lava detection AoE</li>
+					<li>Bloodvine predation no longer imparts forces to the cyclops</li>
+					<li>Added more currents</li>
+					<li>Lava bombs can no longer be seen on the scanner room</li>
+					<li>Fertile creepvine cores now react to seamoth impact and will deal minor damage and dislodge the seeds</li>
+					<li>Sonar now aggravates plankton clouds</li>
+					<li>Further reduced sonar attraction level, but it now reacts to AE seabase sonar too</li>
+					<li>Fixed farmed lanternshroom size</li>
+					<li>Farmed lanternshrooms now keep the "lava veins"</li>
+					<li>Reduced lava bomb maximum ambient heat but doubled radius of effect</li>
+					<li>Reduced plankton item size to 1x1</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|12/4/2023|exscansion" data-nameappend = ""><ul class = "changelist">				
+					<li>Resources needing scan before detectability is now configurable</li>
+					<li>Fixed some resources being missed or incorrectly included in the above check</li>
+					<li>Fixed egg scan detection</li>
+					<li>Scanner HUD pings no longer show when inside seabases (not including cyclops)</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|12/4/2023|reefbalance" data-nameappend = ""><ul class = "changelist">				
+					<li>Added system to modify required fragment scan counts</li>
+					<li>Added option to double mushroom disk yield from the thermoblade</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|12/4/2023|seatosea" data-nameappend = ""><ul class = "changelist">				
+					<li>Findable azurite battery is now broken to require the use of a small amount of azurite, plus some other materials, to repair it</li>
+					<li>Added "Hard Mode"</li>
+					<li>ACU stalkers will not drop teeth until one has been found naturally</li>
+					<li>Added thermoblade, polyaniline, and seamoth electrical defense to time capsule ban list</li>
+					<li>Added seamoth propulsion module</li>
+					<li>Adjusted oxygen consumption curves in high-pressure environments so the threshold is not nearly such a sudden change</li>
+					<li>Platinum avarice chance is now configurable</li>
+					<li>Added more bioprocessor fragments</li>
+					<li>Re-added long-removed powercell crate near "step cave"</li>
+					<li>Greatly reduced platinum overspawn and accumulation rate</li>
+					<li>Added in-world renders for heat sinks, breathing fluid and nanowrap bandages</li>
+					<li>Increased scan counts for many fragment types</li>
+					<li>Seamoth electrical defense gate now only applies in hard mode</li>
+					<li>Added ingot-type item for salt compression</li>
+					<li>Reduced localized compass distortion in some areas</li>
+					<li>Moved and improved glass forest wreck</li>
+					<li>Added findable bioprocessor efficiency boost data chit</li>
+					<li>Added more mercury ore to the map</li>
+					<li>Fixed loopholes/exploits with getting too-early looks at the [REDACTED] or travelling there via unexpected means</li>
+					<li>Reduced power leakage in conductive environments by 20% on non-hard mode</li>
+					<li>Increased liquid breathing per-item duration by 50% on non-hard mode</li>
+					<li>Fixed acoustic suppression module</li>
+					<li>Added harvestability to amoeboids to further improve lysing enzyme crafting efficiency</li>
+					<li>Reduced vehicle damage from extreme temperature, and substantially reduced heat flux (ie heating/cooling rate)</li>
+					<li>Vehicles in structures now do not take environmental damage</li>
+					<li>Adjused Ecocean plankton and glowshroom oil spawn rate and usage in recipes</li>
+					<li>Changed ion battery recipes</li>
+					<li>Fixed biome detections around the ILZ and ATP</li>
+					<li>The sea emperor now communicates with the [REDACTED]</li>
+					<li>Fixed liquid breathing removal not purging O2 tank</li>
+					<li>ACUs now use enameled glass</li>
+					<li>Adjusted neptune recipe costs</li>
+					<li>Increased endgame tablet inventory sizes</li>
+					<li>Koosh cave currents now heat and jostle the seamoth</li>
+					<li>Fixed bioprocessor cooldown not working</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|20/3/2023|di" data-nameappend = ""><ul class = "changelist">				
+					<li>Added some fixes to item in-world rendering and extraction of models from prefabs</li>
+					<li>CustomMachine entities can now react to inventory initialization</li>
+					<li>Fixed crafting tree location for seamoth modules</li>
+					<li>Added reaper grab callback</li>
+					<li>Fixed moonpool detecting and reacting to the seamoth/prawn large AoE trigger and thus grabbing the vehicle from a greater distance</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|20/3/2023|aqueousengineering" data-nameappend = ""><ul class = "changelist">				
+					<li>Fixed display of some items in the display, including flashlights, creatures, and anything with an Animator component</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|20/3/2023|auroresource" data-nameappend = ""><ul class = "changelist">				
+					<li>Added a "progression popup" for jailbreaking the laser cutter</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|20/3/2023|ecocean" data-nameappend = ""><ul class = "changelist">				
+					<li>Fixed sonar and horn attracting all entities rather than only some types</li>
+					<li>Reduced sonar attraction level</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|20/3/2023|seatosea" data-nameappend = ""><ul class = "changelist">				
+					<li>Removed sparking from azurite that had been previously held by someone else</li>
+					<li>Fixed lathing drone model when in item display</li>
+					<li>Adjusted display of some other in-world items</li>
+					<li>Creative mode now overrides docking requirement for vehicle modules</li>
+					<li>Added sonar interference in the [REDACTED]</li>
+					<li>Added voiceover for rescue/salvage operator PDAs</li>
+					<li>Seamoth electrical defense is now gated behind a reaper grab</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|10/3/2023|di" data-nameappend = ""><ul class = "changelist">				
+					<li>Setpiece designer now has a feature to force-activate objects placed with it</li>
+					<li>Fixed error log when mousing over laser-cutter objects that are not doors</li>
+					<li>Items defined with DI classes no longer show as being from DI ingame, but instead their real owner mod</li>
+					<li>Added hook for fruiting plant growth rate</li>
+					<li>Sound system now supports callbacks and ongoing sound manipulation</li>
+					<li>Fixed number and string parsing being region- or locale-specific (especially worldgen XMLs)</li>
+					<li>Added more customizability to BasicCraftingItem</li>
+					<li>Improved IL printouts</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|10/3/2023|aqueousengineering" data-nameappend = ""><ul class = "changelist">				
+					<li>Added Item Display</li>
+					<li>Moved "grass cache" warning to log from chat</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|10/3/2023|ecocean" data-nameappend = ""><ul class = "changelist">				
+					<li>Added currents to more biomes</li>
+					<li>Fixed interaction with C2C regarding anchor pod detonation</li>
+					<li>Removed "regrow" visual from exploded anchor pods due to glitchiness</li>
+					<li>Improved performance of bloodvine predation</li>
+					<li>Currents' strength now varies with radius from the core</li>
+					<li>Increased strength of the strongest "impassable" currents</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|10/3/2023|reefbalance" data-nameappend = ""><ul class = "changelist">				
+					<li>Added options to double coral tube yield from the thermoblade and to control lantern tree fruiting rate</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|10/3/2023|seatosea" data-nameappend = ""><ul class = "changelist">				
+					<li>Crafting Items now have in-world renders</li>
+					<li>Avolite now looks more interesting</li>
+					<li>Added visual warnings for extreme prawn bay heat</li>
+					<li>Fixed exception when non-seamoth entities are hit by a lava bomb</li>
+					<li>Adjusted lysing enzyme crafting tree again</li>
+					<li>Added Carboxylic acid to more recipes</li>
+					<li>Improved performance of Abyssal Stalker renderer</li>
+					<li>Increased viewing distance and adjusted placement for pod 9 breadcrumbs</li>
+					<li>Improved seamoth heat sink sound and it now follows the vehicle</li>
+					<li>Seamoth heat sink module is no longer "chargeable", only a single-click fire</li>
+					<li>Fixed fruiting rate control not working</li>
+					<li>Increased hatching enzyme cost but reduced inventory space usage</li>
+					<li>Added one more silver to wiring kit cost</li>
+					<li>Fixed bioprocessor power handling, especially for cheap recipes</li>
+					<li>Added more logging to bioprocessor shutdowns</li>
+					<li>Adjusted deepvine samples and yield thereof</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|3/3/2023|ecocean" data-nameappend = ""><ul class = "changelist">				
+					<li>Made lumenshroom oil more visible when glowing</li>
+					<li>Added additional currents to the mountains</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|3/3/2023|seatosea" data-nameappend = ""><ul class = "changelist">				
+					<li>Held or dropped azurite will no longer spark, only natural</li>
+					<li>Greatly optimized deepvine and reduced lag in Glass Forest</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|1/3/2023|di" data-nameappend = ""><ul class = "changelist">				
+					<li>Added "is cave biome" property to biome registry</li>
+					<li>Moved modded biomes to the same system as vanilla ones</li>
+					<li>Updated some biome assignments</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|1/3/2023|ecocean" data-nameappend = ""><ul class = "changelist">				
+					<li>Added currents to the mountains</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|1/3/2023|seatosea" data-nameappend = ""><ul class = "changelist">				
+					<li>Native biome yield now applies at 50% strength for farmed fruit</li>
+					<li>Lantern tree control in RB used to greatly reduce lantern tree fruiting rate</li>
+					<li>Pod 14 now has a number</li>
+					<li>Blocked one entrance to a cave near pod 14</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|28/2/2023|di" data-nameappend = ""><ul class = "changelist">				
+					<li>Fixed buildability check preventing ACU hatches and ladders from being placed properly</li>
+					<li>Moved "wreck door swap" failure notice to log file from chat</li>
+					<li>Added radiation level hook</li>
+					<li>Added command to kill self including current vehicle</li>
+					<li>Added custom mouseover text to laser-cutter bulkheads</li>
+					<li>Added "data chit" object</li>
+					<li>Fixed exception when registering seedless plants</li>
+					<li>Added functionality to raise customized progression/unlock popups</li>
+					<li>Triggered tech unlocks now force popups for the appropriate items</li>
+					<li>Fixed missing "pinecone" VanillaFlora entry</li>
+					<li>Setpiece designer "place at look" now sets orientation properly, ie normal to surface</li>
+					<li>Silenced a lot of "could not find mod assembly" messages in logging</li>
+					<li>Removed a lot of logging for worldgen loading</li>
+					<li>Added registry of vanilla biomes and a system to identify biome (vanilla or modded) by location</li>
+					<li>Plants and creatures now have biome mappings for use in code</li>
+					<li>Added optional feature to prevent coral tube destruction from harvesting</li>
+					<li>Added knife harvest hook</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|28/2/2023|aqueousengineering" data-nameappend = ""><ul class = "changelist">				
+					<li>Changed some internal names</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|28/2/2023|ecocean" data-nameappend = ""><ul class = "changelist">				
+					<li>Fixed plankton being craftable from nothing</li>
+					<li>Greatly reduced spontaneous anchor pod detonation chance plus imposed a max range</li>
+					<li>Adjusted detonation AoE damage</li>
+					<li>ACU anchor pods will not detonate</li>
+					<li>Added Piezo Crystals</li>
+					<li>Added water currents to several biomes</li>
+					<li>Added more resources inside the mushroom tree</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|28/2/2023|seatosea" data-nameappend = ""><ul class = "changelist">				
+					<li>Docked vehicles now have a forced ambient temp of 25C</li>
+					<li>Unpiloted seamoths will not make melting noises</li>
+					<li>Reduced abyssal stalker counts 25%</li>
+					<li>Made abyssal stalker despawn more aggressive to keep their numbers in check</li>
+					<li>Added more breadcrumbs for pod 9</li>
+					<li>Added more breadcrumbs for the azurite battery unlock</li>
+					<li>Added a second prompt for nanolathing drone fragments if the first never triggered</li>
+					<li>Added dense azurite to cyclops shield and blue tablet</li>
+					<li>Removed polyaniline traces</li>
+					<li>Azurite battery databox is now a findable battery which unlocks the recipe</li>
+					<li>Azurite and its battery now spark</li>
+					<li>Fixed erroneous radiation warning in the [REDACTED]</li>
+					<li>Added custom tooltip to laser cutter-needing bulkheads</li>
+					<li>Laser cutter now needs an upgrade to cut bulkheads</li>
+					<li>Added rescue/salvage operator storyline and POIs</li>
+					<li>Added bacterial samples item and changed lysing enzyme crafting chain to reduce inventory space usage and involve a new unlock</li>
+					<li>Added a new scannable entity required for the above</li>
+					<li>Fixed red tablet unlock popup showing every game load after it is acheived</li>
+					<li>Plants now yield double when in their native biomes</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|3/2/2023|di" data-nameappend = ""><ul class = "changelist">				
+					<li>Added callbacks for StoryHandTarget activation</li>
+					<li>Updated Language handling</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|3/2/2023|aqueousengineering" data-nameappend = ""><ul class = "changelist">				
+					<li>Fixed ACUs sometimes holding onto old data</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|3/2/2023|seatosea" data-nameappend = ""><ul class = "changelist">				
+					<li>Removed extra scrap from the crash zone</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|30/1/2023|di" data-nameappend = ""><ul class = "changelist">				
+					<li>Initial release</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|30/1/2023|aqueousengineering" data-nameappend = ""><ul class = "changelist">				
+					<li>Initial release</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|30/1/2023|auroresource" data-nameappend = ""><ul class = "changelist">				
+					<li>Initial release</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|30/1/2023|ecocean" data-nameappend = ""><ul class = "changelist">				
+					<li>Initial release</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|30/1/2023|exscansion" data-nameappend = ""><ul class = "changelist">				
+					<li>Initial release</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|30/1/2023|reefbalance" data-nameappend = ""><ul class = "changelist">				
+					<li>Initial release</li>
+</ul>
+			</div>
+			<div class = "changelog-data-cache" id = "1.0|30/1/2023|seatosea" data-nameappend = ""><ul class = "changelist">				
+					<li>Initial release</li>
+</ul>
+			</div>
+<div id = "game-version-cache"></div>
+<div id = "mod-version-cache"></div>
+<div id = "changedata-empty-cache">Select a mod version...</div>
+</div>
+<br><br>
+<section class = "textblock" id = "text-block-changes">
+<span><div style = "display: inline-block; width: 49.8%; text-align: left;"><h3>Change Logs</h3></div><div style = "display: inline-block; width: 49.8%; text-align: right;"><button type="button" id = "newverbtn"><span>Select Most Recent Version<div class = "spacer"></div><i class="fas fa-fast-forward"></i></span></button></div></span>
+<table class = "changetable">
+	<tr>
+		<th class = "changetable-header" style = "width: 11%;">
+			Game Version
+		</th>
+		<th class = "changetable-header" style = "width: 16%;">
+			Mod Versions
+		</th>
+		<th class = "changetable-header" id = "changedata-header" style = "width: 73%;">
+			Changes
+		</th>
+	</tr>
+	<tr>
+		<td style = "vertical-align: top;">
+			<div id = "gamever-box">
+				<button type="button"  id = "newestgamever"  class = "verbtn-game" data-value = "1.0"><span><div class = "gamever-width">1.0</div><i class="fas fa-angle-right"></i></span></button><br>
+			</div>
+		</td>
+		<td>
+			<div id = "modver-box">Select a game version...</div>
+		</td>
+		<td>
+			<div id = "changedata">Select a mod version...</div>
+		</td>
+	</tr>
+</table>
+</section>
+<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
+		<hr>
+		<div id = "footer-spacing">
+		
+		</div>
+		<hr>
+		If you like any of my mods, maps, or other content, or want to help me develop them, feel free to use my Patreon or the buttons below. Every little bit helps me be able to keep working on them, and helps ensure both maintenance and expansion of them.<br>
+		If you wish to give a one-time donation, I recommend you use the Paypal link on the right; Patreon, though it can be used for one-time donations, is designed for ongoing monthly 'subscriptions' (ie a set amount of money gifted each month for as long as you remain a 'patron'). Paypal can also register a donation with monthly recurrence, should that seem preferable to you.<br>
+		For both systems, the amount you choose to donate is up to you, and for Patreon, can be changed at any time should you wish to decrease or increase the amount.<br>
+		And thank you for your support. :D<br>
+					<div class = "linkiconblock">
+					<div class = "linktile" style = "width: 49.75%">
+						<div class = "linklabel">Patreon</div>
+						<a class = "icon icon-patreon" href="http://www.patreon.com/reikasminecraft" ></a>
+					</div>
+					<div class = "linktile" style = "width: 49.75%">
+						<div class = "linklabel">Paypal</div>
+						<a class = "icon icon-paypal" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5XRAM3SXBRJY4" ></a>
+					</div>
+			</div>
+		<hr>
+		To contact me (though some of these are only checked periodically, and many are for specific topics) or find additional information or content, visit any one of these platforms:<br>
+					<div class = "linkiconblock">
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Minecraft Forums</div>
+						<a class = "icon icon-mcforums" href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1291655" title="Minecraft Only"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Factorio Forums</div>
+						<a class = "icon icon-facforums" href="https://forums.factorio.com/viewforum.php?f=216" title="Factorio Only"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">GitHub</div>
+						<a class = "icon icon-github" href="https://github.com/ReikaKalseki" ></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Discord</div>
+						<a class = "icon icon-discord" href="https://discord.com/channels/466852131895508992/466852131895508994/" title="Discord ID: Reika#3161"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Steam</div>
+						<a class = "icon icon-steam" href="https://steamcommunity.com/id/ReikaKalseki/myworkshopfiles/" title="Please no random friend requests"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">YouTube</div>
+						<a class = "icon icon-youtube" href="https://www.youtube.com/user/ReikasMinecraft/videos" ></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">SoundCloud</div>
+						<a class = "icon icon-soundcloud" href="https://soundcloud.com/reikakalseki" title="Music Only"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Reddit</div>
+						<a class = "icon icon-reddit" href="https://www.reddit.com/user/ReikaKalseki/" ></a>
+					</div>
+			</div>
+		<hr>
+		This site is proudly Canadian. <i class="fab fa-canadian-maple-leaf"></i><br>
+		<hr>
+		Site (including embedded JavaScript) and linked projects (mods, maps, etc) created by and &copy; ReikaKalseki, except for content within which is part of the base games, as noted below.<br>
+		<hr>
+			Minecraft and its content and assets are &copy; Mojang AB, with whom I am not affiliated<br>
+			Factorio and its content and assets are &copy; Wube Software, with whom I am not affiliated<br>
+			Portal 2 and its content and assets are &copy; Valve Corporation, with whom I am not affiliated<br>
+			Stellaris and its content and assets are &copy; Paradox Interactive, with whom I am not affiliated<br>
+			Subnautica and its content and assets are &copy; Unknown Worlds Entertainment, with whom I am not affiliated<br>
+			Space Engineers and its content and assets are &copy; Keen Software House, with whom I am not affiliated<br>
+			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
+			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>
+	</div></footer>		</div>
+    </body>
+</html>
