@@ -11,7 +11,29 @@
 }
 
 .bp-block-table {
-	
+	background-color: #8BBED9;
+	border: none !important;
+	color: #fff;
+	border-collapse: collapse !important;
+	/*font-weight: bold;*/
+	font-family: "Exo 2", "Ubuntu", "Verdana", sans-serif !important;
+	clip-path: polygon(0.9rem 0,calc(50% - 2.5rem) 0%,50% calc(0% + 1.75rem),80% calc(0% + 1.75rem),calc(80% + 2.5rem) 0%,calc(100% - 5rem) 0,100% 5rem,100% calc(100% - 5rem),calc(100% - 5rem) 100%,calc(60% + 1.5rem) 100%,60% calc(100% - 0.75rem),40% calc(100% - 0.75rem),calc(40% - 1.5rem) 100%,1rem 100%,0 calc(100% - 1rem),0 1rem)
+}
+
+.bp-block-table th {
+  border-bottom: 0.13564839934888767rem solid #8BBED9 !important;
+}
+
+.bp-block-table tr:nth-child(odd) {
+  /*background-color: #31556B !important;*/
+  background-size: 2PX 2PX;
+  background-image:  repeating-linear-gradient(0deg, #31556B, #31556B 1PX, #376682 1PX, #376682);
+}
+
+.bp-block-table tr:nth-child(even) {
+  /*background-color: #27485B !important;*/
+  background-size: 2PX 2PX;
+  background-image:  repeating-linear-gradient(0deg, #27485B, #27485B 1PX, #31556B 1PX, #31556B);
 }
 
 .blueprint-data {
