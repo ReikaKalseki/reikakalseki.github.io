@@ -97,6 +97,9 @@
 <table class="toc_list">
 	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><a class = "tocbtn" href="#top"><i class="fas fa-angle-double-up"></i></a></td></tr>
 		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-overview">Overview</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-overview"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-configuration">Configuration</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-configuration"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-specificproperties">Specific Properties</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-specificproperties"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-loadingandcommands">Loading and Commands</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-loadingandcommands"></a></td></tr>
 		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-modsettings">Configuration Settings</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-modsettings"></a></td></tr>
 		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-sourcecode"></a></td></tr>
 		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-downloads"></a></td></tr>
@@ -137,8 +140,473 @@
 					
 					<div class = "block-image">
 	<a href = "../../imagedownloads/i-imgur-com_2FTx0nzEj.png" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FTx0nzEj.png" style="max-width:75%;" ></a>
-</div><br>
+</div>
+					</section>
+			</section><br>
+			<section class = "textblock" id = "text-block-configuration">
+				<h3>Configuration</h3>
 					
+					As of v32b [1.7.10], zones are defined using the <a href="../../minecraft/pages/info/luablock.html">LuaBlock</a> system, using the following schematic:
+					
+					
+					<div class = "code-block">
+					
+					
+					{<br>
+					
+					
+					<div class = "code-indent"></div>type = "example"<br>
+					
+					
+					<div class = "code-indent"></div>dimension = ?<br>
+					
+					
+					<div class = "code-indent"></div>color = ?<br>
+					
+					
+					<div class = "code-indent"></div>radius = ?<br>
+					
+					
+					<div class = "code-indent"></div>shape = ?<br>
+					
+					
+					<div class = "code-indent"></div>position = {<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>x = ?<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>y = ?<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>z = ?<br>
+					
+					
+					<div class = "code-indent"></div>}<br>
+					
+					
+					<div class = "code-indent"></div>owners = {<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>{<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>username = ?<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>uuid = ?<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>}<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>...<br>
+					
+					
+					<div class = "code-indent"></div>}<br>
+					
+					
+					<div class = "code-indent"></div>settings = {<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>BREAK = {<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>chat = true/false<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>log = true/false<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>protect = true/false<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>}<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>PLACE = {<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>chat = true/false<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>log = true/false<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>protect = true/false<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>}<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>GUI = {<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>chat = true/false<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>log = true/false<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>protect = true/false<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>}<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>ANIMALS = {<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>chat = true/false<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>log = true/false<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>protect = true/false<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>}<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>PVP = {<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>chat = true/false<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>log = true/false<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>protect = true/false<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>}<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>ITEMS = {<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>chat = true/false<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>log = true/false<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>protect = true/false<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>}<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>FIRESPREAD = {<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>chat = true/false<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>log = true/false<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>protect = true/false<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>}<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>RESOURCE = {<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>chat = true/false<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>log = true/false<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>protect = true/false<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>}<br>
+					
+					
+					<div class = "code-indent"></div>}<br>
+					
+					
+					}<br>
+					
+					
+					</div>
+					
+					
+					<br><br>
+					
+					
+					As always, territory definitions can inherit from other definitions, allowing for easy definition of many territories from a base template, without needing to repeatedly re-specify shared properties. For example:
+					
+					
+					<div class = "code-block">
+					
+					
+					{<br>
+					
+					
+					<div class = "code-indent"></div>type = "base"<br>
+					
+					
+					<div class = "code-indent"></div>dimension = 0<br>
+					
+					
+					<div class = "code-indent"></div>color = 0xff0000<br>
+					
+					
+					<div class = "code-indent"></div>radius = 1024<br>
+					
+					
+					<div class = "code-indent"></div>shape = "PRISM"<br>
+					
+					
+					<div class = "code-indent"></div>settings = {<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>BREAK = {<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>chat = true<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>log = true<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>protect = false<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>}<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>PLACE = {<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>chat = false<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>log = true<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>protect = false<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>}<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>GUI = {<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>chat = false<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>log = true<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>protect = false<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>}<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>ANIMALS = {<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>chat = false<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>log = true<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>protect = false<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>}<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>PVP = {<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>chat = true<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>log = true<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>protect = false<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>}<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>ITEMS = {<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>chat = false<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>log = true<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>protect = false<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>}<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>FIRESPREAD = {<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>chat = false<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>log = false<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>protect = false<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>}<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>RESOURCE = {<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>chat = true<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>log = true<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>protect = false<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>}<br>
+					
+					
+					<div class = "code-indent"></div>}<br>
+					
+					
+					}<br>
+					
+					
+					{<br>
+					
+					
+					<div class = "code-indent"></div>type = "someone"<br>
+					
+					
+					<div class = "code-indent"></div>position = {<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>x = 103<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>y = 92<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>z = -1328<br>
+					
+					
+					<div class = "code-indent"></div>}<br>
+					
+					
+					<div class = "code-indent"></div>owners = {<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>{<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>username = "SomePlayer"<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>uuid = "<a uuid string>"<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>}<br>
+					
+					
+					<div class = "code-indent"></div>}<br>
+					
+					
+					<div class = "code-indent"></div>settings = {<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>PLACE = {<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>chat = true<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>log = true<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>protect = false<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>}<br>
+					
+					
+					<div class = "code-indent"></div>}<br>
+					
+					
+					}<br>
+					
+					
+					{<br>
+					
+					
+					<div class = "code-indent"></div>type = "someone_else"<br>
+					
+					
+					<div class = "code-indent"></div>color = 0x00ffff<br>
+					
+					
+					<div class = "code-indent"></div>position = {<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>x = 7822<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>y = 27<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>z = 5483<br>
+					
+					
+					<div class = "code-indent"></div>}<br>
+					
+					
+					<div class = "code-indent"></div>owners = {<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>{<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>username = "OtherPlayer"<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div><div class = "code-indent"></div>uuid = "<a uuid string>"<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>}<br>
+					
+					
+					<div class = "code-indent"></div>}<br>
+					
+					
+					}<br>
+					
+					
+					</div>
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-specificproperties">
+				<h3>Specific Properties</h3>
 					
 					Zones can be the following shapes:
 					
@@ -152,7 +620,7 @@
 					<li>Cylindrical - all points whose XZ planar pythagorean distance to the center are less than the radius are in the zone</li>
 					
 					
-					<li>Cubical - all points whose X, Y, and Z distances to the center are less than the radius are in the zone</li>
+					<li>Cubic - all points whose X, Y, and Z distances to the center are less than the radius are in the zone</li>
 					
 					
 					<li>Prism - all points whose X and Z distances to the center are less than the radius are in the zone</li></ul>
@@ -164,6 +632,45 @@
 					<br><br>
 					
 					
+					"Settings" controls the specific events you wish the territory to apply to, including breaking and placing blocks, opening GUIs, killing players, and collecting dropped items. Each event is configurable independently, and can be set to do almost any combination of three things. <code>log</code>, the default and "lowest" level, logs non-owner events inside the territory to a log file, for reference later if the owner - for example - finds damage or missing items. <code>chat</code> is the same idea as log, and will only apply if <code>log</code> is enabled, and will mirror those log messages into a chat message sent to the territory owners when they occur. <code>protect</code>, the most aggressive flag, will actively <i>prevent</i> the action listed, and can be set independently of logging options.
+					
+					
+					<br><br>
+					
+					
+					The following event types are available:
+					
+					
+					<ul>
+					
+					
+					<li>BREAK - Block Breaking</li>
+					
+					
+					<li>PLACE - Block Placing</li>
+					
+					
+					<li>GUI - Opening GUIs</li>
+					
+					
+					<li>ANIMALS - Killing Animals</li>
+					
+					
+					<li>PVP - PvP (not just to zone owners)</li>
+					
+					
+					<li>ITEMS - Item Pickup</li>
+					
+					
+					<li>FIRESPREAD - Fire Spread</li>
+					
+					
+					<li>RESOURCE - Resource Harvesting</li></ul>
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-loadingandcommands">
+				<h3>Loading and Commands</h3>
+					
 					Zones can be added, removed, and changed without restarting the server; much like MineTweaker, the zones are declared in a special config file, which can be reloaded at any time with the command <code>/reloadterritories</code>, which will update every client logged into the server.
 					
 					
@@ -171,6 +678,12 @@
 					
 					
 					Overlapping zones are permitted but are flagged by the loader, and notify the server admin and the owner of the zone.
+					
+					
+					<br><br>
+					
+					
+					There is another command, <code>/gototerritory</code>, which will warp a player back to the center of their territory <b>if and only if</b> they are not already inside their territory at all. This allows them to use it as a "get home from very far away" command, without allowing it to work as a generalized "return home from every trip".
 					</section>
 			</section>
 <br>

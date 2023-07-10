@@ -103,7 +103,9 @@
 		<tr class = "toc-entry toc-entry-l2 "><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-controlparameters-autosub-sampleprototype">Sample Prototype</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-controlparameters-autosub-sampleprototype"></a></td></tr>
 		<tr class = "toc-entry toc-entry-l2 "><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-controlparameters-autosub-propertylist">Property List</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-controlparameters-autosub-propertylist"></a></td></tr>
 		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-propertydetails">Property Details</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-propertydetails"></a></td></tr>
+		<tr class = "toc-entry toc-entry-l2 "><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-propertydetails-autosub-blocks">Blocks</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-propertydetails-autosub-blocks"></a></td></tr>
 		<tr class = "toc-entry toc-entry-l2 "><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-propertydetails-autosub-sprinklemix">Sprinkle Mix</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-propertydetails-autosub-sprinklemix"></a></td></tr>
+		<tr class = "toc-entry toc-entry-l2 "><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-propertydetails-autosub-veinshape">Vein Shape</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-propertydetails-autosub-veinshape"></a></td></tr>
 		<tr class = "toc-entry toc-entry-l2 "><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-propertydetails-autosub-heightpattern">Height Pattern</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-propertydetails-autosub-heightpattern"></a></td></tr>
 		<tr class = "toc-entry toc-entry-l2 "><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-propertydetails-autosub-spawnrules">Spawn Rules</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-propertydetails-autosub-spawnrules"></a></td></tr>
 		<tr class = "toc-entry toc-entry-l2 "><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-propertydetails-autosub-combinations">Combinations</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-propertydetails-autosub-combinations"></a></td></tr>
@@ -234,7 +236,7 @@
 					</div><br>
 					
 					
-					This prototype will inherit some values - such as the empty biome restrictions or the vanilla stone spawn block - from the base, while overriding the specified values, such as changing the spawning Y range from 0-64 to 16-48.
+					This prototype will inherit some values - such as the empty biome restrictions and the spawn block of vanilla stone - from the base definition included with CondensedOres, while overriding the specified values, such as changing the spawning Y range from 0-64 to 16-48.
 					
 					
 					<br><br>
@@ -253,10 +255,14 @@
 		<tr class = "luablock-setting"><td>sprinkleMix</td><td>Enable sprinkle mixing</td><td>false</td><td></td><td></td></tr>
 		<tr class = "luablock-setting"><td>veinSize</td><td>Vein axial length (not block count)</td><td>10</td><td>0</td><td>Any</td></tr>
 		<tr class = "luablock-setting"><td>blocks</td><td>Ore block list</td><td></td><td></td><td></td></tr>
+		<tr class = "luablock-setting"><td>blockSet</td><td>Ore block weights (ALTERNATIVE TO <code>blocks</code>)</td><td></td><td></td><td></td></tr>
 		<tr class = "luablock-setting"><td>heightRule</td><td>Y-level spawning pattern</td><td></td><td></td><td></td></tr>
 			<tr class = "luablock-subsetting"><td class = "luablock-entry">maxHeight</td><td>Maximum Y level</td><td>64</td><td>minHeight</td><td>255</td></tr>
 			<tr class = "luablock-subsetting"><td class = "luablock-entry">minHeight</td><td>Minimum Y level</td><td>0</td><td>0</td><td>maxHeight</td></tr>
 			<tr class = "luablock-subsetting"><td class = "luablock-entry">variation</td><td>Height distribution pattern</td><td>"linear"</td><td></td><td></td></tr>
+		<tr class = "luablock-setting"><td>veinShape</td><td>What shape the ore veins take</td><td></td><td></td><td></td></tr>
+			<tr class = "luablock-subsetting"><td class = "luablock-entry">shape</td><td>Which shape prefab (see below)</td><td>VANILLA</td><td></td><td></td></tr>
+			<tr class = "luablock-subsetting"><td class = "luablock-entry">&lt;Other&gt;</td><td>Other properties depending on shape (see below)</td><td></td><td></td><td></td></tr>
 		<tr class = "luablock-setting"><td>veinFrequency</td><td>Spawn frequency rules</td><td></td><td></td><td></td></tr>
 			<tr class = "luablock-subsetting"><td class = "luablock-entry">chunkGenChance</td><td>Chance (out of 1) to attempt generation per chunk</td><td>1.0</td><td>0.0</td><td>1.0</td></tr>
 			<tr class = "luablock-subsetting"><td class = "luablock-entry">veinsPerChunk</td><td>Number of generation attempts per chunk if the above test suceeds</td><td>8</td><td>0</td><td>Any</td></tr>
@@ -272,6 +278,51 @@
 			</section><br>
 			<section class = "textblock" id = "text-block-propertydetails">
 				<h3>Property Details</h3>
+					<section class = "textblock" id = "text-block-propertydetails-autosub-blocks">
+					<h4>Blocks</h4>
+					
+					
+					Every definition requires - and cannot inherit - a definition for which blocks it can select. The default format is a list-type entry <code>blocks</code>, which is just a list of all available options. If you wish to make certain blocks more common relative to others, you can instead specify a <code>blockSet</code> block, using the following format:
+					
+					
+					<div class = "code-block">
+					
+					
+					{<br>
+					
+					
+					<div class = "code-indent"></div>...<br>
+					
+					
+					<div class = "code-indent"></div>blockSet = {<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>"minecraft:ore_block" = 10.5<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>"modname:its_ore" = 1.3<br>
+					
+					
+					<div class = "code-indent"></div><div class = "code-indent"></div>"overpoweredmod:thing_ore" = 22.1<br>
+					
+					
+					<div class = "code-indent"></div>}<br>
+					
+					
+					<div class = "code-indent"></div>...<br>
+					
+					
+					}<br>
+					
+					
+					</div><br>
+					
+					
+					This will load the ore blocks into a WeightedRandom where each block is assigned the specified weight.
+					
+					
+					<br><br>
+					</section>
 					<section class = "textblock" id = "text-block-propertydetails-autosub-sprinklemix">
 					<h4>Sprinkle Mix</h4>
 					
@@ -280,6 +331,44 @@
 					
 					
 					<br><br>
+					</section>
+					<section class = "textblock" id = "text-block-propertydetails-autosub-veinshape">
+					<h4>Vein Shape</h4>
+					
+					
+					CondensedOres supports several ore vein shape prefabs. The default, which will be chosen if no shape block is specified, is 'Vanilla', which uses the "ore plops" generator that vanilla and almost all mods use. For small veins, this results in boxy veins (think vanilla iron, gold, or diamond ore), and large veins become roughly elliptical, as seen in the header image.
+					
+					
+					<br><br>
+					
+					
+					The "Tendril" vein shape is much longer, thinner, and often twisted, resulting in a similar overall size to the vanilla generation but in a shape that is typically more reminiscent of real ore veins.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2F0HHNIhQ.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2F0HHNIhQ.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2FtdLJHLE.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FtdLJHLE.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Tendril veins visualized with metal blocks and sprinkle mix enabled.</div>
+</div><br>
+					
+					
+					The "Star" vein shape is entirely different from vanilla, consisting of a radiating set of spikes from a central dense cluster. This shape can optionally have a special block inside the core of the cluster, which is specified with an <code>specialBlock</code> option on the <code>veinShape</code> block, using the same "specify an item" format as used elsewhere in the ore definitions.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2FN3iZd86.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FN3iZd86.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2FSA6M85J.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FSA6M85J.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Star veins visualized with metal blocks.</div>
+</div><br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2FhgiVNXW.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FhgiVNXW.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2F0sREpqq.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2F0sREpqq.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Removing these metal blocks exposes the special-block core of redstone blocks.</div>
+</div><br>
+					
+					
+					The "Noise" vein shape is not really a vein at all, and in fact if chosen will nullify the <code>veinFrequency</code> and <code>veinSize</code> parameters, as well as the height parameters except for minimum and maximum Y levels. Noise-based generation uses a 3D simplex noise algorithm (the same as used in a great deal of other worldgen code, including most of <a href="../../minecraft/mods/chromaticraft.html">ChromatiCraft</a>), and values in the approximate middle of the noise field magnitude (ie absolute magnitude < some threshold) will become ore if the placement conditions are met. This type <i>requires</i> an additional property <code>threshold</code>, which ranges from 0 to 1, corresponding to no and solid ore respectively. Recommended values are around <code>0.015</code> to <code>0.25</code>.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2FQCXJxHN.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FQCXJxHN.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/+i-imgur-com_2FgeGvXit.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/+i-imgur-com_2FgeGvXit.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Noise generation, at thresholds 0.2 and 0.05.</div>
+</div><br>
 					</section>
 					<section class = "textblock" id = "text-block-propertydetails-autosub-heightpattern">
 					<h4>Height Pattern</h4>

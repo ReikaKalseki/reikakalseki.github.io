@@ -104,6 +104,7 @@
 		<tr class = "toc-entry toc-entry-l2 "><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-controlparameters-autosub-propertylist">Property List</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-controlparameters-autosub-propertylist"></a></td></tr>
 		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-propertydetails">Property Details</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-propertydetails"></a></td></tr>
 		<tr class = "toc-entry toc-entry-l2 "><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-propertydetails-autosub-densitymultipliers">Density Multipliers</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-propertydetails-autosub-densitymultipliers"></a></td></tr>
+		<tr class = "toc-entry toc-entry-l2 "><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-propertydetails-autosub-dimensionfilters">Dimension Filters</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-propertydetails-autosub-dimensionfilters"></a></td></tr>
 		<tr class = "toc-entry toc-entry-l2 "><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-propertydetails-autosub-generationmodifiers">Generation Modifiers</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-propertydetails-autosub-generationmodifiers"></a></td></tr>
 		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-comparisons">Comparisons</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-comparisons"></a></td></tr>
 		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-modsettings">Configuration Settings</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-modsettings"></a></td></tr>
@@ -229,6 +230,15 @@
 					
 					
 					Note that excessive densities can easily cause lag and even crash the game, as the Minecraft cave generation algorithms are surprisingly intensive.
+					
+					
+					<br><br>
+					</section>
+					<section class = "textblock" id = "text-block-propertydetails-autosub-dimensionfilters">
+					<h4>Dimension Filters</h4>
+					
+					
+					Cave definitions can optionally have a <code>dimensions</code> child block, which contains a list of integer dimension IDs. If this is specified, the cave definition will only apply to the specified dimensions. This allows you to exclude some worlds from custom generation, or to have two otherwise-conflicting definitions for the same biome ID. Not specifying the dimension list, or specifying an empty list, will result in the definition having no dimension restrictions.
 					
 					
 					<br><br>
