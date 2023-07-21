@@ -29,6 +29,7 @@
 					<a class = "navdrop-entry" href="../../minecraft/pages/info/spotlights.html">Spotlights</a>
 					<a class = "navdrop-entry" href="../../minecraft/pages/info/fanmade.html">Fanmade Content</a>
 					<a class = "navdrop-entry" href="../../minecraft/pages/info/luablock.html">LuaBlock</a>
+					<a class = "navdrop-entry" href="../../minecraft/pages/info/byteexec.html">/bytecodeexec Command</a>
 					<a class = "navdrop-entry" href="../../minecraft/pages/info/nottosay.html">Things Not To Say</a>
 					<a class = "navdrop-entry" href="../../minecraft/pages/info/updating.html">Version Updates</a>
 			</div>
@@ -103,6 +104,10 @@
 		<tr class = "toc-entry toc-entry-l2 "><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-design-autosub-tools">Tools</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-design-autosub-tools"></a></td></tr>
 		<tr class = "toc-entry toc-entry-l2 "><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-design-autosub-progression">Progression</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-design-autosub-progression"></a></td></tr>
 		<tr class = "toc-entry toc-entry-l2 "><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-design-autosub-thepuzzle">The Puzzle</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-design-autosub-thepuzzle"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-specialoptions">Special Options</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-specialoptions"></a></td></tr>
+		<tr class = "toc-entry toc-entry-l2 "><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-specialoptions-autosub-difficulty">Difficulty</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-specialoptions-autosub-difficulty"></a></td></tr>
+		<tr class = "toc-entry toc-entry-l2 "><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-specialoptions-autosub-recipegating">Recipe Gating</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-specialoptions-autosub-recipegating"></a></td></tr>
+		<tr class = "toc-entry toc-entry-l2 "><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-specialoptions-autosub-convertergating">Converter Gating</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-specialoptions-autosub-convertergating"></a></td></tr>
 		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-extrainfo">Extra Info</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-extrainfo"></a></td></tr>
 		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-api">API</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-api"></a></td></tr>
 		<tr class = "toc-entry toc-entry-l2 "><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-api-autosub-background">Background</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-api-autosub-background"></a></td></tr>
@@ -243,6 +248,198 @@
 </div>
 					</section>
 			</section><br>
+			<section class = "textblock" id = "text-block-specialoptions">
+				<h3>Special Options</h3>
+					
+					Among its configuration options, RotaryCraft has a handful of settings whose effects or usage is more complex:<br>
+					</section>
+					<section class = "textblock" id = "text-block-specialoptions-autosub-difficulty">
+					<h4>Difficulty</h4>
+					
+					
+					Distinct from the <i>game</i> difficulty, RotaryCraft has an option to control some recipe/fuel costs, failure chances, and other numerical tweaks, as a rough "grindiness/risk factor" option. Importantly, <b>progression is not changed</b>; recipe ingredients, power requirements, and core behaviors are not affected by this setting. The option is an integer from 1-3 (inclusive), to choose "easy", "medium", or "hard", and defaults to medium.<br>
+					
+					
+					<table>
+					
+					
+					<tr><th>Effect</th><th>Easy</th><th>Medium</th><th>Hard</th></tr>
+					
+					
+					<tr><td>Bedrock Breaker Per-Cycle Yield</td><td>3</td><td>2</td><td>1</td></tr>
+					
+					
+					<tr><td>Pipe Crafting Yild</td><td>32</td><td>16</td><td>8</td></tr>
+					
+					
+					<tr><td>Part Crafting Yield</td><td>6</td><td>3</td><td>2</td></tr>
+					
+					
+					<tr><td>Belt Crafting Yield</td><td>16</td><td>8</td><td>2</td></tr>
+					
+					
+					<tr><td>Expensive Part Crafting Yield</td><td>2</td><td>2</td><td>1</td></tr>
+					
+					
+					<tr><td>Railgun Ammo Crafting Yield</td><td>18</td><td>6</td><td>2</td></tr>
+					
+					
+					<tr><td>HSLA Bonus Chance</td><td>2x</td><td>1x</td><td>0.5x</td></tr>
+					
+					
+					<tr><td>Blast Furnace Ingredient Consumption Chance Multiplier</td><td>0.4x</td><td>1x</td><td>3x</td></tr>
+					
+					
+					<tr><td>Compactor Stage Output Count</td><td>2</td><td>2</td><td>1</td></tr>
+					
+					
+					<tr><td>Damaged Gas Turbine Failure Chance Per Tick</td><td>1/4500</td><td>1/1800</td><td>1/900</td></tr>
+					
+					
+					<tr><td>Gas Turbine Failure Chance On Damage</td><td>5%</td><td>20%</td><td>50%</td></tr>
+					
+					
+					<tr><td>Fractionator Ingredient Consumption Chance</td><td>3.125%</td><td>25%</td><td>75%</td></tr>
+					
+					
+					<tr><td>Fractionator Base Yield Per Cycle</td><td>1600mB-3200mB</td><td>1000mB-2200mB</td><td>400mB-800mB</td></tr>
+					
+					
+					<tr><td>Fractionator Ghast Tear Consumption Chance Per Cycle</td><td>0%</td><td>0%</td><td>5%</td></tr>
+					
+					
+					<tr><td>Coil Winder Steel Coil Breakage Chance Per 65kJ</td><td>1%</td><td>5%</td><td>15%</td></tr>
+					
+					
+					<tr><td>Friction Heater Furnace Melt Chance Per Tick</td><td>1/1800</td><td>1/600</td><td>1/150</td></tr>
+					
+					
+					<tr><td>Grinder Canola Lubricant Yield</td><td>128mB-280mB</td><td>64mB-160mB</td><td>8mB-64mB</td></tr>
+					
+					
+					<tr><td>Lubricant Usage</td><td>0.25x</td><td>1x</td><td>2.5x</td></tr>
+					
+					
+					</table>
+					
+					
+					<br><br>
+					</section>
+					<section class = "textblock" id = "text-block-specialoptions-autosub-recipegating">
+					<h4>Blast Furnace And Worktable Gating</h4>
+					
+					
+					Both the blast furnace and the worktable - ie the two machines which are entry points into RotaryCraft, and thus can be used to lock access into the entire mod - support the addition of up to four distinct gating items into their recipes, to allow gating RC behind other mods in the techtree. This list is not freeform; it is curated to prevent unreasonable (here meaning thematically inappropriate or excessively expensive/lategame) from being added.
+					
+					
+					The available options are as follows:
+					
+					
+					<ul>
+					
+					
+					<li><code>GOLD</code> - Vanilla gold ingot</li>
+					
+					
+					<li><code>OBSIDIAN</code> - Vanilla obsidian</li>
+					
+					
+					<li><code>OBSIDINGOT</code> - <code>ingotObsidian</code> oreDict tag</li>
+					
+					
+					<li><code>STEEL</code> - <code>ingotSteel</code> oreDict tag</li>
+					
+					
+					<li><code>COPPER</code> - <code>ingotCopper</code> oreDict tag</li>
+					
+					
+					<li><code>SILVER</code> - <code>ingotSilver</code> oreDict tag</li>
+					
+					
+					<li><code>BRASS</code> - <code>ingotBrass</code> oreDict tag</li>
+					
+					
+					<li><code>BRONZE</code> - <code>ingotBronze</code> oreDict tag</li>
+					
+					
+					<li><code>INVAR</code> - <code>ingotInvar</code> oreDict tag</li>
+					
+					
+					<li><code>TITANIUM</code> - <code>ingotTitanium</code> oreDict tag</li>
+					
+					
+					<li><code>OSMIUM</code> - <code>ingotOsmium</code> oreDict tag</li>
+					
+					
+					<li><code>SIGNALUM</code> - <code>ingotSignalum</code> oreDict tag</li>
+					
+					
+					<li><code>ENDERIUM</code> - <code>ingotEnderium</code> oreDict tag</li>
+					
+					
+					<li><code>DARKSTEEL</code> - EnderIO dark steel ingot</li>
+					
+					
+					<li><code>ALUMITE</code> - TiC Alumite ingot</li>
+					
+					
+					<li><code>MANYULLYN</code> - TiC Manyullyn ingot</li>
+					
+					
+					<li><code>STEELEAF</code> - TwilightForest Steelleaf)</li>
+					
+					
+					<li><code>IRONWOOD</code> - TwilightForest Ironwood)</li>
+					
+					
+					<li><code>GOLDGEAR</code> - BuildCraft golden gear)</li>
+					
+					
+					<li><code>TERRASTEEL</code> - Botania Terrasteel ingot</li>
+					
+					
+					</ul>
+					
+					
+					The option takes the form of a string list with up to four entries, choosing up to four of the ingredient types described above (duplicates are permitted). Depending on how many entries are given, different slots in the recipe will be replaced with these items. If a chosen option does not have any valid items (such as being for a mod that is not installed), this item will be ignored and the default item will be used.
+					
+					
+					<br><br>
+					
+					
+					This option also allows the gating of bedrock armor and the gravel gun, using the same ingredient list. These options only allow for one gating item.
+					
+					
+					<br><br>
+					</section>
+					<section class = "textblock" id = "text-block-specialoptions-autosub-convertergating">
+					<h4>Rotational Dynamo Recipe Difficulty</h4>
+					
+					
+					This option adds one gating item (in place of a single HSLA ingot) to each of the RC-to-other-mod power conversion machines. (The 'rotational dynamo' name is an artifact of when it only applied to this machine, and the fact that changing it would reset it to defaults for all users). This option is an integer, and will choose the corresponding item from the list below:
+					
+					
+					<ul>
+					
+					
+					<li>0 - HSLA Steel Ingot</li>
+					
+					
+					<li>1 - Inductive Metal Ingot</li>
+					
+					
+					<li>2 - Tungsten Ingot</li>
+					
+					
+					<li>3 - Bedrock Alloy Ingot</li>
+					
+					
+					<li>4 - Cd-In-Ag Alloy Ingot (<a href="../../minecraft/mods/reactorcraft.html">ReactorCraft</a> only)</li>
+					
+					
+					<li>5 - 4.096T magnet (ReactorCraft only)</li></ul>
+					
+			</section><br>
 			<section class = "textblock" id = "text-block-extrainfo">
 				<h3>Extra Info</h3>
 					
@@ -336,7 +533,7 @@ Current Default Value:<div class = "code-block">true</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">true</div>
 		</div>
-	
+	Whether the woodcutter cuts blocks instantly as opposed to making them fall to the ground.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -536,15 +733,7 @@ Current Default Value:<div class = "code-block">true</div>
 Type: int<br>
 Current Default Value:<div class = "code-block">2</div>
 		</div>
-	
-</div>
-<div class = "setting-group-box">
-		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name heading-without-nav">Machine Warning Alarms</h4>
-Type: boolean<br>
-Current Default Value:<div class = "code-block">false</div>
-		</div>
-	
+	1-3 for easy/medium/hard; controls some recipe/fuel costs, failure chances, and other numerical tweaks. Progression is <b>not</b> changed.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -552,7 +741,7 @@ Current Default Value:<div class = "code-block">false</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">true</div>
 		</div>
-	
+	Whether the terraformer can not only change the biome but set blocks, eg spawning trees.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -568,7 +757,7 @@ Current Default Value:<div class = "code-block">false</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">false</div>
 		</div>
-	
+	If false, the worktable will be required to craft machines.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -584,7 +773,7 @@ Current Default Value:<div class = "code-block">4</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">false</div>
 		</div>
-	
+	Recipe conflict avoidance.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -608,7 +797,7 @@ Current Default Value:<div class = "code-block">true</div>
 Type: int<br>
 Current Default Value:<div class = "code-block">4</div>
 		</div>
-	
+	How advanced/expensive items generating in worldgen chests can be. Higher is more.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -640,7 +829,7 @@ Current Default Value:<div class = "code-block">true</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">false</div>
 		</div>
-	
+	ie registers HSLA as ingotSteel.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -656,7 +845,7 @@ Current Default Value:<div class = "code-block">true</div>
 Type: int<br>
 Current Default Value:<div class = "code-block">4</div>
 		</div>
-	
+	0-4, with lower being fewer particles.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -672,7 +861,7 @@ Current Default Value:<div class = "code-block">true</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">true</div>
 		</div>
-	
+	Whether to make the jetpack be a bit less likely to fire from things like jumping, helping reduce fuel usage at the cost of making it a bit less immediate.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -744,7 +933,7 @@ Current Default Value:<div class = "code-block">true</div>
 Type: float<br>
 Current Default Value:<div class = "code-block">1F</div>
 		</div>
-	
+	If set to &gt;1, this will spawn extra iron ore in the world, to help with the fact RC uses a lot of it. Does nothing at &lt;= 1
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -760,7 +949,7 @@ Current Default Value:<div class = "code-block">false</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">true</div>
 		</div>
-	
+	Whether using a chat-writing tool will clear your chat buffer to make it easier to read their output.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -776,7 +965,7 @@ Current Default Value:<div class = "code-block">true</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">true</div>
 		</div>
-	
+	Whether a PIP without a target inventory will spray the items everywhere.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -792,7 +981,7 @@ Current Default Value:<div class = "code-block">false</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">false</div>
 		</div>
-	
+	Adjusts charge-damage curves to require more charge per unit damage and cap the damage at a lower value.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -800,7 +989,7 @@ Current Default Value:<div class = "code-block">false</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">false</div>
 		</div>
-	
+	Makes the borer's operation require a drill item it slowly consumes.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -816,7 +1005,7 @@ Current Default Value:<div class = "code-block">false</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">ModList.GREGTECH.isLoaded()</div>
 		</div>
-	
+	Whether to make EU compat more difficult, suitable for GT packs.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -848,7 +1037,7 @@ Current Default Value:<div class = "code-block">16</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">false</div>
 		</div>
-	
+	Whether to also run power sync code on the client, to help with sync at the cost of additional load on the client tick.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -864,7 +1053,7 @@ Current Default Value:<div class = "code-block">false</div>
 Type: int<br>
 Current Default Value:<div class = "code-block">0</div>
 		</div>
-	
+	Efficiency of the RC-to-other-mod converters. 0% loss = 100% efficiency.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -872,7 +1061,7 @@ Current Default Value:<div class = "code-block">0</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">true</div>
 		</div>
-	
+	Whether things like the bedrock axe and its tree cutting will apply when used by fake players, eg auto activators.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -880,7 +1069,7 @@ Current Default Value:<div class = "code-block">true</div>
 Type: int<br>
 Current Default Value:<div class = "code-block">0</div>
 		</div>
-	
+	How big of an AoE of chunks will the borer generate around the mining head.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -932,23 +1121,15 @@ Current Default Value:<div class = "code-block">false</div>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name heading-without-nav">Core Recipe Editing</h4>
-Type: String<br>
-Current Default Value:<div class = "code-block">X</div>
-		</div>
-	
-</div>
-<div class = "setting-group-box">
-		<div class = "setting-box" style = "width: 99.75%">
 			<h4 class = "setting-name heading-without-nav">AutoCrafter Lag Profiling And Compensation</h4>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">true</div>
 		</div>
-	
+	Make the autocrafter tick less often to reduce lag.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name heading-without-nav">Increased Harvest Level for HSLA</h4>
+			<h4 class = "setting-name heading-without-nav">Increased Harvest Level for HSLA tools</h4>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">false</div>
 		</div>
@@ -960,7 +1141,7 @@ Current Default Value:<div class = "code-block">false</div>
 Type: int<br>
 Current Default Value:<div class = "code-block">0</div>
 		</div>
-	
+	0-5 to choose a gating item; see above.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -976,7 +1157,7 @@ Current Default Value:<div class = "code-block">1F</div>
 Type: int<br>
 Current Default Value:<div class = "code-block">0</div>
 		</div>
-	
+	0 = disabled, 1 = slippery bee also produces yeast (alternate source); 2 = the bee is the only source of yeast.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -1000,7 +1181,7 @@ Current Default Value:<div class = "code-block">false</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">false</div>
 		</div>
-	
+	Whether to enable the recipe gate functionality for the blast furnace.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -1008,7 +1189,7 @@ Current Default Value:<div class = "code-block">false</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">false</div>
 		</div>
-	
+	Whether to enable the recipe gate functionality for the worktable.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -1024,7 +1205,7 @@ Current Default Value:<div class = "code-block">(int)PowerReceivers.VACUUM.getMi
 Type: int<br>
 Current Default Value:<div class = "code-block">8</div>
 		</div>
-	
+	How tall a Streams waterfall must be to count as max yield for a hydrokinetic.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -1040,7 +1221,7 @@ Current Default Value:<div class = "code-block">1.5F</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">true</div>
 		</div>
-	
+	Normally the ic2 compressor requires 5 powder per rod, but as the grinder makes six powder per rod this is a feedback exploit. This option increases the ic2 cost to 8.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -1048,7 +1229,7 @@ Current Default Value:<div class = "code-block">true</div>
 Type: float<br>
 Current Default Value:<div class = "code-block">1F</div>
 		</div>
-	
+	How much if any free water can be produced by things like the pump power surplus, spillway "scraping" (ie back to a waterfall) and rain in reservoirs.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">

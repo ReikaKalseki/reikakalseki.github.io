@@ -29,6 +29,7 @@
 					<a class = "navdrop-entry" href="../../minecraft/pages/info/spotlights.html">Spotlights</a>
 					<a class = "navdrop-entry" href="../../minecraft/pages/info/fanmade.html">Fanmade Content</a>
 					<a class = "navdrop-entry" href="../../minecraft/pages/info/luablock.html">LuaBlock</a>
+					<a class = "navdrop-entry" href="../../minecraft/pages/info/byteexec.html">/bytecodeexec Command</a>
 					<a class = "navdrop-entry" href="../../minecraft/pages/info/nottosay.html">Things Not To Say</a>
 					<a class = "navdrop-entry" href="../../minecraft/pages/info/updating.html">Version Updates</a>
 			</div>
@@ -124,6 +125,7 @@
 		<tr class = "toc-entry toc-entry-l2 "><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-doggoconfiguration-autosub-conditions">Conditions</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-doggoconfiguration-autosub-conditions"></a></td></tr>
 		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-recipeconfiguration">Recipe Configuration</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-recipeconfiguration"></a></td></tr>
 		<tr class = "toc-entry toc-entry-l2 "><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-recipeconfiguration-autosub-recipedefinitions">Recipe Definitions</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-recipeconfiguration-autosub-recipedefinitions"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-delayedtreegen">Delayed Tree Gen</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-delayedtreegen"></a></td></tr>
 		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-modsettings">Configuration Settings</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-modsettings"></a></td></tr>
 		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-sourcecode">Source Code</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-sourcecode"></a></td></tr>
 		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-downloads">Downloads</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-downloads"></a></td></tr>
@@ -700,6 +702,59 @@ Your browser does not support the video tag.
 			<tr class = "luablock-subsetting"><td class = "luablock-entry">item</td><td>Required item type and count</td><td></td><td></td><td></td></tr>
 			<tr class = "luablock-subsetting"><td class = "luablock-entry">nbt</td><td>NBT tags to require on the input (Optional)</td><td></td><td></td><td></td></tr>
 </table>
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-delayedtreegen">
+				<h3>Delayed Giant Pink Tree Generation</h3>
+					
+					The "delayed giant pink tree generation" option allows you to delay giant pink tree generation until after chunks are finished generating, in an effort to reduce cascading chunkgen.
+					
+					
+					<br><br>
+					
+					
+					This may not be a 1:1 replacement for normal generation, and so should <b>only</b> be enabled as a last resort, when the biome deocration is failing. This situation can be identified as the log file containing many instances like the following:
+					
+					
+					<div class = "code-block">
+					
+					
+					SATISFORESTRY ERROR: STATE STACK IS TOO LARGE [250] TO SAFELY CONTINUE, ABORTING Reika.Satisforestry.Biome.DecoratorPinkForest@64f3da52 DECORATION IN CHUNK 1600, -5088<br>
+					
+					
+					SATISFORESTRY ERROR: STATE STACK IS TOO LARGE [250] TO SAFELY CONTINUE, ABORTING Reika.Satisforestry.Biome.DecoratorPinkForest@64f3da52 DECORATION IN CHUNK 1600, -5072<br>
+					
+					
+					SATISFORESTRY ERROR: STATE STACK IS TOO LARGE [250] TO SAFELY CONTINUE, ABORTING Reika.Satisforestry.Biome.DecoratorPinkForest@64f3da52 DECORATION IN CHUNK 1568, -5056<br>
+					
+					
+					SATISFORESTRY ERROR: STATE STACK IS TOO LARGE [250] TO SAFELY CONTINUE, ABORTING Reika.Satisforestry.Biome.DecoratorPinkForest@64f3da52 DECORATION IN CHUNK 1600, -5056<br>
+					
+					
+					SATISFORESTRY ERROR: STATE STACK IS TOO LARGE [250] TO SAFELY CONTINUE, ABORTING Reika.Satisforestry.Biome.DecoratorPinkForest@64f3da52 DECORATION IN CHUNK 1584, -5056<br>
+					
+					
+					SATISFORESTRY ERROR: STATE STACK IS TOO LARGE [250] TO SAFELY CONTINUE, ABORTING Reika.Satisforestry.Biome.DecoratorPinkForest@64f3da52 DECORATION IN CHUNK 1536, -5008<br>
+					
+					
+					</div><br>
+					
+					
+					Additionally, this often results in generation being missing from the biome.
+					
+					
+					<br><br>
+					
+					
+					This tends to only happen in worst-case scenarios, ie packs with huge amounts of cascading worldgen or "Large Biomes" worlds (especially if multiple spilling-heavy biomes happen to be adjacent to one another, such as a Luminous Cliffs being bordered by pink forests on either side).<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2FfgQ6rtd.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FfgQ6rtd.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2F3QnxbGr.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2F3QnxbGr.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">An example world where some increase to the limit was necessary, comprised of exactly the worst-case described above.</div>
+</div><br>
+					
+					
+					Before enabling this option, you should first try to increase the state stack limit. To do this, add a new JVM argument <code>-<a href="../../minecraft/mods/dragonapi.html">DragonAPI</a>_DecoratorStackLimit=N</code>, where N is the new limit (the default value is 250). Note that this may cause StackOverflowError crashes during worldgen, but this can be avoided by adding an additional JVM argument <code>-Xss=A</code> to allocate more stack memory, where A is the amount of memory allocated to each thread's stack (using the same format as <code>-Xmx</code> arguments, eg <code>-Xss=4M</code> will allocate 4MB). Be careful not to set that allocation too large; this limit is per-thread and from the native (ie non-heap) pool and so can quickly and dramatically increase the JVM's RAM usage, often to the point of exhausting system resources or causing the game to lock up. A few MB is a good guideline as a safe limit, but you should experiment to see how much is strictly necessary for your use case.
 					</section>
 			</section>
 <br>
@@ -736,6 +791,14 @@ Current Default Value:<div class = "code-block">false</div>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name heading-without-nav">Use Alternate Poison Shader</h4>
+Type: boolean<br>
+Current Default Value:<div class = "code-block">false</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
 			<h4 class = "setting-name heading-without-nav">Satisfactory OST Folder</h4>
 Type: String<br>
 Current Default Value:<div class = "code-block"></div>
@@ -752,11 +815,11 @@ Current Default Value:<div class = "code-block">1F</div>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name heading-without-nav">Make Green Power Slugs Blue (SF Update 5)</h4>
+			<h4 class = "setting-name heading-without-nav">Make Green Power Slugs Blue</h4>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">false</div>
 		</div>
-	
+	In Update 5, Satisfactory changed green power slugs to blue. Enable this to also apply that change.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -764,7 +827,55 @@ Current Default Value:<div class = "code-block">false</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">false</div>
 		</div>
+	Whether the ability of the Paleberry Sucker butterfly to fertilize paleberries depends on having a pink birch tree in range.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name heading-without-nav">Delayed Giant Pink Tree Generation</h4>
+Type: boolean<br>
+Current Default Value:<div class = "code-block">false</div>
+		</div>
+	Whether to engage delayed pink tree gen as described above.
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name heading-without-nav">Compacted Coal Unlock Required Item (Empty for None)</h4>
+Type: String<br>
+Current Default Value:<div class = "code-block">minecraft:coal*64</div>
+		</div>
 	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name heading-without-nav">Compacted Coal Unlock Required Power (power type;amount pertick;ticks to maintain)</h4>
+Type: String<br>
+Current Default Value:<div class = "code-block">RF;300;600</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name heading-without-nav">Turbofuel Unlock Required Item (Empty for None)</h4>
+Type: String<br>
+Current Default Value:<div class = "code-block"></div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name heading-without-nav">Turbofuel Unlock Required Power (power type;amount pertick;ticks to maintain)</h4>
+Type: String<br>
+Current Default Value:<div class = "code-block">RF;2400;600</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name heading-without-nav">Lizard Doggo Ore Yield Type</h4>
+Type: String<br>
+Current Default Value:<div class = "code-block">ore</div>
+		</div>
+	This option allows you to choose what kind of item ('ore' for ore blocks, 'dust' for the dust form of the resource, 'products' for whatever the usual smelted result is, 'cluster' for ThaumCraft native clusters) doggos will find when told to find X kind of ore. If the type chosen has no mapping for the ore in question (eg native clusters without TC installed), the ore block will be used as a fallback.
 </div>
 
 			</div>

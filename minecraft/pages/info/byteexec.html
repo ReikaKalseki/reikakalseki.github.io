@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="shortcut icon" href="../../../images/favicon.ico">
+        <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+		<meta http-equiv="Cache-control" content="no-cache">
+        <title>/bytecodeexec Command</title>
+		<link rel="stylesheet" type="text/css" href="../../../compiledJS/entrypoint.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> 
+		<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|Lato|Exo 2|Ubuntu|Cairo"> -->
+		<script src = "../../../compiledJS/entrypoint.bundle.js"></script>
+		<meta name="script-def" content="footer-spacing">
+		<meta name="script-def" content="navbar-scroll-indicator">
+		<meta name="script-def" content="spoiler-handler">
+		<!-- <meta name="script-def" content="quicknav-pos"> -->
+			<meta name="script-def" content="minecraft/precursor">
+    </head>
+    <body  data-game="minecraft">
+        	<div id = "navbar" class="navbar">
+	  <a class="navbar-button" href="../../../index.html">Reika's Mods Home</a>
+	  <a class="navbar-button" href="../../../minecraft/index.html">Minecraft Home</a>
+		  <div class="navdropdown">
+			<div class="navdropbtn">Information <i class="fa fa-angle-down"></i></div>
+			<div class="navdrop-content">
+					<a class = "navdrop-entry" href="../../../minecraft/pages/info/faq.html">FAQ</a>
+					<a class = "navdrop-entry" href="../../../minecraft/pages/info/contact.html">Contact</a>
+					<a class = "navdrop-entry" href="../../../minecraft/pages/info/history.html">History</a>
+					<a class = "navdrop-entry" href="../../../minecraft/pages/info/changelog.html">Change Logs</a>
+					<a class = "navdrop-entry" href="../../../minecraft/pages/info/spotlights.html">Spotlights</a>
+					<a class = "navdrop-entry" href="../../../minecraft/pages/info/fanmade.html">Fanmade Content</a>
+					<a class = "navdrop-entry" href="../../../minecraft/pages/info/luablock.html">LuaBlock</a>
+					<a class = "navdrop-entry" href="../../../minecraft/pages/info/byteexec.html">/bytecodeexec Command</a>
+					<a class = "navdrop-entry" href="../../../minecraft/pages/info/nottosay.html">Things Not To Say</a>
+					<a class = "navdrop-entry" href="../../../minecraft/pages/info/updating.html">Version Updates</a>
+			</div>
+		  </div>
+		  <div class="navdropdown">
+			<div class="navdropbtn">Permissions <i class="fa fa-angle-down"></i></div>
+			<div class="navdrop-content">
+					<a class = "navdrop-entry" href="../../../minecraft/pages/perms/license.html">License</a>
+					<a class = "navdrop-entry" href="../../../minecraft/pages/perms/packrules.html">Modpack Rules</a>
+					<a class = "navdrop-entry" href="../../../minecraft/pages/perms/thirdparty.html">Third Party Modifications</a>
+					<a class = "navdrop-entry" href="../../../minecraft/pages/perms/modpacks.html">Approved Modpacks</a>
+			</div>
+		  </div>
+	  <div class="navdropdown">
+		<div class="navdropbtn">Mods <i class="fa fa-angle-down"></i></div>
+		<div class="navdrop-content">
+				<a class = "navdrop-entry" href="../../../minecraft/mods/dragonapi.html">DragonAPI</a>
+				<a class = "navdrop-entry" href="../../../minecraft/mods/archisections.html">ArchiSections</a>
+				<a class = "navdrop-entry" href="../../../minecraft/mods/cavecontrol.html">CaveControl</a>
+				<a class = "navdrop-entry" href="../../../minecraft/mods/chromaticraft.html">ChromatiCraft</a>
+				<a class = "navdrop-entry" href="../../../minecraft/mods/condensedores.html">CondensedOres</a>
+				<a class = "navdrop-entry" href="../../../minecraft/mods/critterpet.html">CritterPet</a>
+				<a class = "navdrop-entry" href="../../../minecraft/mods/dyetrees.html">DyeTrees</a>
+				<a class = "navdrop-entry" href="../../../minecraft/mods/electricraft.html">ElectriCraft</a>
+				<a class = "navdrop-entry" href="../../../minecraft/mods/enderforest.html">EnderForest</a>
+				<a class = "navdrop-entry" href="../../../minecraft/mods/expandedredstone.html">Expanded Redstone</a>
+				<a class = "navdrop-entry" href="../../../minecraft/mods/geostrata.html">GeoStrata</a>
+				<a class = "navdrop-entry" href="../../../minecraft/mods/legacycraft.html">LegacyCraft</a>
+				<a class = "navdrop-entry" href="../../../minecraft/mods/loottweaks.html">LootTweaks</a>
+				<a class = "navdrop-entry" href="../../../minecraft/mods/meteorcraft.html">MeteorCraft</a>
+				<a class = "navdrop-entry" href="../../../minecraft/mods/reactorcraft.html">ReactorCraft</a>
+				<a class = "navdrop-entry" href="../../../minecraft/mods/rotarycraft.html">RotaryCraft</a>
+				<a class = "navdrop-entry" href="../../../minecraft/mods/satisforestry.html">Satisforestry</a>
+				<a class = "navdrop-entry" href="../../../minecraft/mods/territoryzone.html">TerritoryZone</a>
+				<a class = "navdrop-entry" href="../../../minecraft/mods/treeclimbing.html">TreeClimbing</a>
+				<a class = "navdrop-entry" href="../../../minecraft/mods/usefultnt.html">UsefulTNT</a>
+				<a class = "navdrop-entry" href="../../../minecraft/mods/voidmonster.html">Void Monster</a>
+		</div>
+	  </div>
+	  <div class="navdropdown">
+		<div class="navdropbtn">Other Games <i class="fa fa-angle-down"></i></div>
+		<div class="navdrop-content">
+				<a class = "navdrop-entry" href="../../../factorio/index.html">Factorio</a>
+				<a class = "navdrop-entry" href="../../../p2/index.html">Portal 2</a>
+				<a class = "navdrop-entry" href="../../../stellaris/index.html">Stellaris</a>
+				<a class = "navdrop-entry" href="../../../subnautica/index.html">Subnautica</a>
+				<a class = "navdrop-entry" href="../../../se/index.html">Space Engineers</a>
+				<a class = "navdrop-entry" href="../../../fce/index.html">FortressCraft Evolved</a>
+				<a class = "navdrop-entry" href="../../../starbound/index.html">Starbound</a>
+		</div>
+	  </div>
+	  <div class="navdropdown">
+		<div class="navdropbtn">Other Projects <i class="fa fa-angle-down"></i></div>
+		<div class="navdrop-content">
+				<a class = "navdrop-entry" href="../../../projects/calendar.html">Game Calendar</a>
+				<a class = "navdrop-entry" href="../../../projects/eventbuilder.html">Stellaris Event Builder</a>
+				<a class = "navdrop-entry" href="../../../projects/fcompile.html">FCompile</a>
+				<a class = "navdrop-entry" href="https://dragonrealm.overminddl1.com/">Dragon Realm Modpack</a>
+		</div>
+	  </div>
+	</div>
+		<noscript><div style = "text-align: center; width: 100%;"><div id = "nojs-header"><div><img class = "header-alert" src = "../../../images/alert.png"></div><div>You have JavaScript disabled; it is recommended you enable it for this site.<br>While the site will (mostly) function with scripts disabled, some sections (eg changelog view, or sortable tables) require it to update the page contents based on your input.<br>Additionally, JS is used to generate page styling, meaning disabling scripts will leave pages ugly, boring, and in some cases poorly arranged in ways that might impede readability.<br>If you have no idea what this means, or have not in fact disabled scripts, try simply reloading the page, as it may not have loaded completely or correctly.</div></div></div></noscript>
+<div id="toc_container">
+<h3>Quick Nav</h3>
+<hr>
+<table class="toc_list">
+	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><a class = "tocbtn" href="#top"><i class="fas fa-angle-double-up"></i></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-introduction">Introduction</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-introduction"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-usage">Usage</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-usage"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-classesandparameters">Classes and Parameters</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-classesandparameters"></a></td></tr>
+		<tr class = "toc-entry toc-entry-l2 "><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-classesandparameters-autosub-classreferences">Class References</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-classesandparameters-autosub-classreferences"></a></td></tr>
+		<tr class = "toc-entry toc-entry-l2 "><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-classesandparameters-autosub-parameterlists">Parameter Lists</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-classesandparameters-autosub-parameterlists"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-opcodes">Opcodes</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-opcodes"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-obfuscation">Obfuscation</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-obfuscation"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-shortcuts">Shortcuts</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-shortcuts"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-programs">Programs</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-programs"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-examples">Examples</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-examples"></a></td></tr>
+</table>
+</div>        <div id = "textarea" class = "textarea ">
+				<div style="position: relative; width: 0; height: 0; float:right;"><button type="button" id = "darkmode-toggle">Toggle Dark Mode<div class = "spacer"></div><i class="fas fa-adjust"></i></button></div>
+			<!-- <h2>/bytecodeexec Command</h2> -->
+						<section class = "textblock" id = "text-block-introduction">
+				<h3>Introduction</h3>
+					
+					<a href="../../../minecraft/mods/dragonapi.html">DragonAPI</a> includes a command intended for debugging where more specialized debuggers do not exist, designed to be able to inspect or modify anything about the game state at will. It works similarly to a REPL (Read-Evaluate-Print-Loop) console, allowing the user to invoke or access any arbitrary class, object, or member thereof, allowing for the ability to - for example - see entity AI targets, query or edit data registries, check the return value of functions, and edit objects' properties.
+					
+					
+					<br><br>
+					
+					
+					<b>Because this command can be used to execute nearly arbitrary code, it is very dangerous if misused</b> - either from ill intent or incompetence - and so it does not use the usual "admin or not" check most commands have. Instead, you need to explicitly and individually whitelist each user you want to have the power to run the command, by UUID, in the relevant string-list entry in the DragonAPI config file.
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-usage">
+				<h3>Usage</h3>
+					
+					All invocations of this command are done in the form of <code>/bytecodeexec [opcode] &lt;arguments&gt;</code> for standard instructions and <code>/bytecodeexec [action] &lt;arguments&gt;</code> for special actions.
+					
+					
+					<br><br>
+					
+					
+					The command operates like the JVM itself, ie on an operand stack, with various "instructions" (here called "opcodes") being able to view, consume, or place objects on the stack. For those with experience with Java ASM, it is modelled after this system, and an understanding of ASM should make using the command fairly intuitive. This command also requires knowing the code of the relevant classes (vanilla, Forge, and mod) to be used effectively, as you will otherwise not know what properties to look for or how to properly manipulate them.
+					
+					
+					<br><br>
+					
+					
+					All object references work like Java, ie they are copy by reference unless they are primitives, and as such modifications are reflected back into the ingame objects. Internally, the command works via reflection, not bytecode, and so is subject to the usual rules of reflection, with the exception of accessibility modifiers, which are ignored.
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-classesandparameters">
+				<h3>Class References and Arguments</h3>
+					
+					Many opcodes take special strings as arguments, which are not parsed as literal strings. These are either class references or method parameter lists.
+					
+					
+					<br><br>
+					</section>
+					<section class = "textblock" id = "text-block-classesandparameters-autosub-classreferences">
+					<h4>Class References</h4>
+					
+					
+					For opcodes which take a class as an argument, the class is specified using a "class reference" string, which can be in one of two forms. The first form is simply the fully qualified class name, eg <code>net.minecraft.world.biome.BiomeGenBase</code> or <code>Reika.<a href="../../../minecraft/mods/chromaticraft.html">ChromatiCraft</a>.TileEntity.AOE.Effect.TileEntityAccelerator</code>. The second form, generally more convenient - and in some cases required due to command character limit counts - is as a shorthand form, referenced as simply the class's simple name preceded with '#', eg <code>#BiomeGenBase</code> and <code>#TileEntityAccelerator</code> for the two examples above. Note that aside from some common presets, classes' shortcuts must be defined explicitly, using the <code>define</code> special action (details below).
+					
+					
+					<br><br>
+					
+					
+					The following classes come with preset shortcuts:<br>
+					
+					
+					<table>
+<tr>
+<th>Full Class Name</th>
+<th>Shortcut</th>
+</tr>
+	<tr>
+		<td>java.lang.String</td>
+		<td>String</td>
+	</tr>
+	<tr>
+		<td>java.lang.Object</td>
+		<td>Object</td>
+	</tr>
+	<tr>
+		<td>java.lang.Enum</td>
+		<td>Enum</td>
+	</tr>
+	<tr>
+		<td>java.util.ArrayList</td>
+		<td>ArrayList</td>
+	</tr>
+	<tr>
+		<td>java.util.HashMap</td>
+		<td>HashMap</td>
+	</tr>
+	<tr>
+		<td>java.lang. Class</td>
+		<td>Class</td>
+	</tr>
+	<tr>
+		<td>java.lang.reflect.Field</td>
+		<td>Field</td>
+	</tr>
+	<tr>
+		<td>java.lang.reflect.Method</td>
+		<td>Method</td>
+	</tr>
+	<tr>
+		<td>java.lang.reflect.Array</td>
+		<td>Array</td>
+	</tr>
+	<tr>
+		<td>java.util.Arrays</td>
+		<td>Arrays</td>
+	</tr>
+	<tr>
+		<td>java.lang.Math</td>
+		<td>Math</td>
+	</tr>
+	<tr>
+		<td>net.minecraft.world.World</td>
+		<td>World</td>
+	</tr>
+	<tr>
+		<td>net.minecraft.entity.Entity</td>
+		<td>Entity</td>
+	</tr>
+	<tr>
+		<td>net.minecraft.entity.EntityLivingBase</td>
+		<td>EntityLivingBase</td>
+	</tr>
+	<tr>
+		<td>net.minecraft.entity.player.EntityPlayer</td>
+		<td>EntityPlayer</td>
+	</tr>
+	<tr>
+		<td>net.minecraft.entity.player.EntityPlayerMP</td>
+		<td>EntityPlayerMP</td>
+	</tr>
+	<tr>
+		<td>net.minecraft.tileentity.TileEntity</td>
+		<td>TileEntity</td>
+	</tr>
+	<tr>
+		<td>net.minecraft.block.Block</td>
+		<td>Block</td>
+	</tr>
+	<tr>
+		<td>net.minecraft.item.Item</td>
+		<td>Item</td>
+	</tr>
+	<tr>
+		<td>net.minecraft.init.Blocks</td>
+		<td>Blocks</td>
+	</tr>
+	<tr>
+		<td>net.minecraft.init.Items</td>
+		<td>Items</td>
+	</tr>
+	<tr>
+		<td>net.minecraft.item.ItemStack</td>
+		<td>ItemStack</td>
+	</tr>
+	<tr>
+		<td>net.minecraft.world.biome.BiomeGenBase</td>
+		<td>Biome</td>
+	</tr>
+	<tr>
+		<td>net.minecraft.world.biome.BiomeGenBase</td>
+		<td>BiomeGenBase</td>
+	</tr>
+	<tr>
+		<td>net.minecraft.server.MinecraftServer</td>
+		<td>Server</td>
+	</tr>
+	<tr>
+		<td>net.minecraft.server.MinecraftServer</td>
+		<td>MinecraftServer</td>
+	</tr>
+	<tr>
+		<td>net.minecraft.world.gen.ChunkProviderServer</td>
+		<td>ChunkProviderServer</td>
+	</tr>
+	<tr>
+		<td>net.minecraft.world.gen.ChunkProviderGenerate</td>
+		<td>ChunkProviderGenerate</td>
+	</tr>
+	<tr>
+		<td>net.minecraftforge.common.DimensionManager</td>
+		<td>DimensionManager</td>
+	</tr>
+	<tr>
+		<td>cpw.mods.fml.common.FMLCommonHandler</td>
+		<td>FML</td>
+	</tr>
+	<tr>
+		<td>net.minecraftforge.common.MinecraftForge</td>
+		<td>Forge</td>
+	</tr>
+	<tr>
+		<td>net.minecraftforge.common.util.ForgeDirection</td>
+		<td>ForgeDirection</td>
+	</tr>
+	<tr>
+		<td>cpw.mods.fml.common.Loader</td>
+		<td>Loader</td>
+	</tr>
+	<tr>
+		<td>net.minecraftforge.fluids.Fluid</td>
+		<td>Fluid</td>
+	</tr>
+	<tr>
+		<td>net.minecraftforge.fluids.FluidStack</td>
+		<td>FluidStack</td>
+	</tr>
+	<tr>
+		<td>net.minecraftforge.fluids.FluidRegistry</td>
+		<td>FluidRegistry</td>
+	</tr>
+	<tr>
+		<td>cpw.mods.fml.common.registry.GameRegistry</td>
+		<td>GameRegistry</td>
+	</tr>
+	<tr>
+		<td>net.minecraftforge.oredict.OreDictionary</td>
+		<td>OreDictionary</td>
+	</tr>
+	<tr>
+		<td>Reika.DragonAPI.Libraries.Java.ReikaASMHelper</td>
+		<td>ASMHelper</td>
+	</tr>
+	<tr>
+		<td>Reika.DragonAPI.Libraries.Java.ReikaReflectionHelper</td>
+		<td>ReflectionHelper</td>
+	</tr>
+	<tr>
+		<td>Reika.DragonAPI.Libraries.Java.ReikaJavaLibrary</td>
+		<td>JavaLibrary</td>
+	</tr>
+	<tr>
+		<td>Reika.DragonAPI.Libraries.Java.ReikaStringParser</td>
+		<td>StringParser</td>
+	</tr>
+	<tr>
+		<td>Reika.DragonAPI.Libraries.Java.ReikaArrayHelper</td>
+		<td>ArrayHelper</td>
+	</tr>
+	<tr>
+		<td>Reika.DragonAPI.Libraries.MathSci.ReikaMathLibrary</td>
+		<td>MathLibrary</td>
+	</tr>
+	<tr>
+		<td>Reika.DragonAPI.Libraries.MathSci.ReikaPhysicsHelper</td>
+		<td>PhysicsHelper</td>
+	</tr>
+	<tr>
+		<td>Reika.DragonAPI.Libraries.World.ReikaWorldHelper</td>
+		<td>WorldHelper</td>
+	</tr>
+	<tr>
+		<td>Reika.DragonAPI.Libraries.World.ReikaBiomeHelper</td>
+		<td>BiomeHelper</td>
+	</tr>
+	<tr>
+		<td>Reika.DragonAPI.Libraries.World.ReikaBlockHelper</td>
+		<td>BlockHelper</td>
+	</tr>
+	<tr>
+		<td>Reika.DragonAPI.Libraries.Registry.ReikaItemHelper</td>
+		<td>ItemHelper</td>
+	</tr>
+	<tr>
+		<td>Reika.DragonAPI.Libraries.ReikaInventoryHelper</td>
+		<td>InventoryHelper</td>
+	</tr>
+	<tr>
+		<td>Reika.DragonAPI.Libraries.ReikaPlayerAPI</td>
+		<td>PlayerAPI</td>
+	</tr>
+	<tr>
+		<td>Reika.DragonAPI.Libraries.Registry.ReikaPlantHelper</td>
+		<td>PlantHelper</td>
+	</tr>
+	<tr>
+		<td>Reika.DragonAPI.Libraries.Registry.ReikaCropHelper</td>
+		<td>CropHelper</td>
+	</tr>
+	<tr>
+		<td>Reika.DragonAPI.Libraries.Registry.ReikaOreHelper</td>
+		<td>OreHelper</td>
+	</tr>
+	<tr>
+		<td>Reika.DragonAPI.Libraries.Registry.ReikaTreeHelper</td>
+		<td>TreeHelper</td>
+	</tr>
+	<tr>
+		<td>Reika.DragonAPI.ModList</td>
+		<td>ModList</td>
+	</tr>
+	<tr>
+		<td>Reika.DragonAPI.ModRegistry.ModOreList</td>
+		<td>ModOreList</td>
+	</tr>
+	<tr>
+		<td>Reika.DragonAPI.ModRegistry.ModWoodList</td>
+		<td>ModWoodList</td>
+	</tr>
+	<tr>
+		<td>Reika.DragonAPI.ModRegistry.ModCropList</td>
+		<td>ModCropList</td>
+	</tr>
+</table>
+					
+					
+					<br><br>
+					</section>
+					<section class = "textblock" id = "text-block-classesandparameters-autosub-parameterlists">
+					<h4>Parameter Lists</h4>
+					
+					
+					For opcodes which involve invoking methods, such as INVOKESTATIC and NEW, the parameter types need to be explicitly specified. This is done in the form <code>A;B;C;D...</code> where A, B, C, D, etc are the argument types, such as <code>int</code>, <code>double</code>, or an object type (full name or shortcut, eg <code>#String</code>). For no-arg methods, simply provide a single ';', eg <code>invokestatic #SomeClass doThing ;</code> to call <code>fully.qualified.namespace.SomeClass.doThing()</code>.
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-opcodes">
+				<h3>Opcodes</h3>
+					
+					<table>
+					
+					
+					<tr><th>Opcode</th><th>Description</th><th>Arguments</th><th>Consumes N Objects From Stack</th><th>Adds N Objects To Stack</th><th>Notes</th></tr>
+					
+					
+					<tr><td>LDC</td><td>Load literal onto stack</td><td>1 string</td><td></td><td>1</td><td>The argument will be parsed to null, an integer, then a float (for decimals use the <code>F</code> suffix), then a double, then a string in that order of attempts</td></tr>
+					
+					
+					<tr><td>NEW</td><td>Instantiate object</td><td>Class Reference, Argument Type String</td><td>Any</td><td>1</td><td>Consumes as many objects from the stack as the constructor is stated to require</td></tr>
+					
+					
+					<tr><td>DUP</td><td>Duplicate top of stack</td><td></td><td></td><td>1</td><td></td></tr>
+					
+					
+					<tr><td>POP</td><td>Remove top of stack</td><td></td><td>1</td><td></td><td></td></tr>
+					
+					
+					<tr><td>SWAP</td><td>Swap stack top</td><td></td><td></td><td></td><td>Swaps the position of the top two objects on the stack.</td></tr>
+					
+					
+					<tr><td>INVOKESTATIC</td><td>Call static method</td><td>Class Reference, Name, Argument Type String</td><td>Any</td><td>0 or 1</td><td>Consumes as many objects from the stack as the method has parameters. Will put a return value back on the stack for non-void methods.</td></tr>
+					
+					
+					<tr><td>INVOKEVIRTUAL</td><td>Call instance method</td><td>Class Reference, Name, Argument Type String</td><td>Any</td><td>0 or 1</td><td>Consumes as many objects from the stack as the method has parameters, plus one for the object instance. Object instance must be below the parameters on the stack. Will put a return value back on the stack for non-void methods.</td></tr>
+					
+					
+					<tr><td>OBJMETHOD</td><td>Call instance method from object</td><td>Name</td><td>Any</td><td>0 or 1</td><td>Finds the named method in the class defining the object on the top of the stack and invokes it. Consumes as many objects from the stack as the method has parameters, plus one for the object instance. Object instance must be the top of the stack. Will put a return value back on the stack for non-void methods.</td></tr>
+					
+					
+					<tr><td>GETSTATIC</td><td>Fetch static field</td><td>Class Reference, Name</td><td></td><td>1</td><td></td></tr>
+					
+					
+					<tr><td>GETFIELD</td><td>Fetch instance field</td><td>Class Reference, Name</td><td>1</td><td>1</td><td>Consumes the object instance from the stack</td></tr>
+					
+					
+					<tr><td>OBJFIELD</td><td>Fetch field value from object</td><td>Name</td><td>1</td><td>1</td><td>Consumes the object on the top of the stack, and returns that object's value of the specified field to the stack.</td></tr>
+					
+					
+					<tr><td>SETFIELD</td><td>Set field value</td><td>Class Reference, Name</td><td>2</td><td></td><td>Sets the named field in the specified class, with the top of the stack being the new field value and the value below it being the object instance (use null for static fields)</td></tr>
+					
+					
+					<tr><td>INSTANCEOF</td><td>Check <code>instanceof</code></td><td></td><td>2</td><td>1</td><td>Checks if the object represented by the top of the stack is of the class object below it in the stack. Returns boolean.</td></tr>
+					
+					
+					<tr><td>MAKEARRAY</td><td>Construct object array</td><td>Array Length</td><td>Any</td><td>1</td><td>Constructs a new <code>Object[]</code> whose members consist of the top N objects from the stack, removing all of them in the process.</td></tr>
+					
+					
+					<tr><td>GETARRAY</td><td>Get array index</td><td></td><td>2</td><td>1</td><td>Fetches the object at the Nth index of the array at the top of the stack, where N is the integer below it on the stack.</td></tr>
+					
+					
+					<tr><td>SETARRAY</td><td>Set array index</td><td></td><td>3</td><td></td><td>Fetches the array at the top of the stack, and sets its Nth index to X, where N is the integer below the array and X is the object below that.</td></tr>
+					
+					
+					<tr><td>CONCAT</td><td>Concatenate strings</td><td></td><td>2</td><td>1</td><td>Pops the two objects off the top of the stack, concatenates their string values (lower-upper order), and returns to the stack.</td></tr>
+					
+					
+					<tr><td>ITERATE</td><td>Iterate collection or array</td><td></td><td></td><td></td><td>Unimplemented</td></tr>
+					
+					
+					<tr><td>OUTPUT</td><td>View stack contents</td><td></td><td></td><td></td><td></td></tr>
+					
+					
+					<tr><td>WRITE</td><td>Write stack to file</td><td>File path</td><td></td><td></td><td></td></tr>
+					
+					
+					<tr><td>FLUSH</td><td>Clear stack</td><td>All</td><td></td><td></td><td></td></tr>
+					
+					
+					</table>
+					
+					
+					<br><br>
+					
+					
+					As a convenience, you can often preface the opcode argument with '&' to peek rather than pop the stack for the operative object, allowing it to be reused. For example, <code>&invokevirtual name args</code> will not remove the instance object from the stack, allowing for multiple successive <code>&invokevirtual</code> calls without reloading it onto the stack (though any parameters will still need to be).
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-obfuscation">
+				<h3>Method Names And Obfuscation</h3>
+					
+					Unless using this command in a development environment, the copy of Minecraft you will be running with uses obfuscated field and method names, such as <code>func_147439_a</code> instead of <code>getBlock</code>. This means that for vanilla classes, you will need a copy of the mappings to know the names of the members you wish to reference, such as can be found in the standard <code>mcp-srg.srg</code> file.
+					
+					
+					<br><br>
+					
+					
+					For ease of use, some commonly-accessed members come with automatic deobfuscation:<br>
+					
+					
+					<table>
+<tr>
+<th>Class</th>
+<th>Deobfuscated Name</th>
+<th>Obfuscated Name</th>
+</tr>
+	<tr>
+		<td>World</td>
+		<td>getBlock</td>
+		<td>func_147439_a</td>
+	</tr>
+	<tr>
+		<td>World</td>
+		<td>getBlockMetadata</td>
+		<td>func_72805_g</td>
+	</tr>
+	<tr>
+		<td>World</td>
+		<td>getTileEntity</td>
+		<td>func_147438_o</td>
+	</tr>
+	<tr>
+		<td>World</td>
+		<td>getPlayerEntityByName</td>
+		<td>func_72924_a</td>
+	</tr>
+	<tr>
+		<td>World</td>
+		<td>getPlayerEntityByUUID</td>
+		<td>func_152378_a</td>
+	</tr>
+	<tr>
+		<td>World</td>
+		<td>provider</td>
+		<td>field_73011_w</td>
+	</tr>
+	<tr>
+		<td>EntityLivingBase</td>
+		<td>getHealth</td>
+		<td>func_110143_aJ</td>
+	</tr>
+	<tr>
+		<td>EntityPlayer</td>
+		<td>getCurrentEquippedItem</td>
+		<td>func_71045_bC</td>
+	</tr>
+	<tr>
+		<td>ItemStack</td>
+		<td>getItem</td>
+		<td>func_77973_b</td>
+	</tr>
+	<tr>
+		<td>ItemStack</td>
+		<td>getItemDamage</td>
+		<td>func_77960_j</td>
+	</tr>
+	<tr>
+		<td>ItemStack</td>
+		<td>stackSize</td>
+		<td>field_77994_a</td>
+	</tr>
+	<tr>
+		<td>TileEntity</td>
+		<td>worldObj</td>
+		<td>field_145850_b</td>
+	</tr>
+	<tr>
+		<td>TileEntity</td>
+		<td>xCoord</td>
+		<td>field_145851_c</td>
+	</tr>
+	<tr>
+		<td>TileEntity</td>
+		<td>yCoord</td>
+		<td>field_145848_d</td>
+	</tr>
+	<tr>
+		<td>TileEntity</td>
+		<td>zCoord</td>
+		<td>field_145849_e</td>
+	</tr>
+	<tr>
+		<td>Entity</td>
+		<td>worldObj</td>
+		<td>field_70170_p</td>
+	</tr>
+	<tr>
+		<td>Entity</td>
+		<td>posX</td>
+		<td>field_70165_t</td>
+	</tr>
+	<tr>
+		<td>Entity</td>
+		<td>posY</td>
+		<td>field_70163_u</td>
+	</tr>
+	<tr>
+		<td>Entity</td>
+		<td>posZ</td>
+		<td>field_70161_v</td>
+	</tr>
+	<tr>
+		<td>BiomeGenBase</td>
+		<td>biomeID</td>
+		<td>field_76756_M</td>
+	</tr>
+	<tr>
+		<td>BiomeGenBase</td>
+		<td>theBiomeDecorator</td>
+		<td>field_76760_I</td>
+	</tr>
+</table>
+					
+					
+					<br><br>
+					
+					
+					You can also use the <code>loadsrg</code> special action with a filepath argument to load the mcp-srg.srg file from disk, but be aware that like all commands, <b>this runs on the serverside</b>, and so if you are running the command on a non-local server referencing a file on your own PC is not going to work.
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-shortcuts">
+				<h3>Shortcuts And Special Actions</h3>
+					
+					Instead of an opcode, you can supply a "special function name" to perform other actions to help use the command:<br>
+					
+					
+					<table>
+					
+					
+					<tr><th>Command String</th><th>Arguments</th><th>Description</th></tr>
+					
+					
+					<tr><td>define</td><td>Fully qualified class name</td><td>Define a class reference shortcut. Can use <code>*stack*</code> to fetch the class defining the object on the top of the stack (popping it off the stack in the process) instead</td></tr>
+					
+					
+					<tr><td>mapsrg</td><td>Class Reference, Obf Name, Deobf Name</td><td>Map one srg name</td></tr>
+					
+					
+					<tr><td>loadsrg</td><td>File path</td><td>Load Forge MCP-SRG file</td></tr>
+					
+					
+					<tr><td>shortcuts</td><td></td><td>See class shortcuts</td></tr>
+					
+					
+					<tr><td>self</td><td></td><td>Load self (<code>EntityPlayer</code> object) onto the stack</td></tr>
+					
+					
+					<tr><td>getplayer</td><td>Name</td><td>Load logged-in player (<code>EntityPlayer</code> object) onto the stack</td></tr>
+					
+					
+					<tr><td>held</td><td></td><td>Load held item (<code>ItemStack</code> object) onto the stack</td></tr>
+					
+					
+					<tr><td>look</td><td></td><td>Load looked-at position onto the stack (<code>World</code> and three ints), ready for an invocation of a world function like <code>getBlock</code> or <code>getTileEntity</code></td></tr>
+					
+					
+					<tr><td>getclass</td><td>Qualified Class Name</td><td>Load <code>Class</code> object onto the stack</td></tr>
+					
+					
+					<tr><td>startprogram</td><td>Name, [Properties...]</td><td>Start 'recording' a bytecodeexec 'program'</td></tr>
+					
+					
+					<tr><td>saveprogram</td><td></td><td>Finish 'recording' a bytecodeexec 'program' and save to disk</td></tr>
+					
+					
+					<tr><td>runprogram</td><td>Program Name</td><td>Run a bytecodeexec 'program'</td></tr>
+					
+					
+					</table>
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-programs">
+				<h3>Programs</h3>
+					
+					The command supports the recording of small "programs" which are basically just previously-executed instructions, somewhat akin to OpenGL call lists. Programs are identified by a unique name, and can be set to allow any admin or even any player to run them once recorded (with the <code>admin</code> and <code>public</code> properties respectively). To create a program, start recording, then run the opcode commands as normal. Note that special shortcuts like <code>self</code> or <code>look</code> will <i>not</i> function.
+					
+			</section><br>
+			<section class = "textblock" id = "text-block-examples">
+				<h3>Examples</h3>
+					
+					The following set of commands will spawn an explosion, with the power of a charged creeper (6.0) set to both spawn fires and destroy blocks, at the position -1200, 36, 720 in the overworld.
+					
+					
+					<div class = "code-block">
+					
+					
+					/bytecodeexec ldc 0<br>
+					
+					
+					/bytecodeexec invokestatic #DimensionManager getWorld int<br>
+					
+					
+					/bytecodeexec ldc null<br>
+					
+					
+					/bytecodeexec ldc -1200<br>
+					
+					
+					/bytecodeexec ldc 36<br>
+					
+					
+					/bytecodeexec ldc 720<br>
+					
+					
+					/bytecodeexec ldc 6F<br>
+					
+					
+					/bytecodeexec ldc true<br>
+					
+					
+					/bytecodeexec ldc true<br>
+					
+					
+					/bytecodeexec invokevirtual #World func_72885_a #Entity;double;double;double;float;boolean;boolean<br>
+					
+					
+					</div>
+					
+					
+					<br><br>
+					
+					
+					The following set of commands will spawn a <a href="../../../minecraft/mods/meteorcraft.html">MeteorCraft</a> meteor aimed at player NAME, but set to explode above them (y=120), done by "faking" a use of the <code>/meteor</code> command in that mod.
+					
+					
+					<div class = "code-block">
+					
+					
+					/bytecodeexec define Reika.MeteorCraft.Entity.EntityMeteor<br>
+					
+					
+					/bytecodeexec define Reika.MeteorCraft.MeteorCommand<br>
+					
+					
+					/bytecodeexec define Reika.MeteorCraft.MeteorSpawnController<br>
+					
+					
+					/bytecodeexec define Reika.MeteorCraft.MeteorGenerator$MeteorType<br>
+					
+					
+					/bytecodeexec define net.minecraft.entity.player.EntityPlayerMP
+					
+					
+					<br><br>
+					
+					
+					/bytecodeexec new #MeteorCommand ;<br>
+					
+					
+					/bytecodeexec getstatic #MeteorSpawnController instance<br>
+					
+					
+					/bytecodeexec getplayer NAME<br>
+					
+					
+					/bytecodeexec dup<br>
+					
+					
+					/bytecodeexec getfield #Entity worldObj<br>
+					
+					
+					/bytecodeexec swap<br>
+					
+					
+					/bytecodeexec invokevirtual #MeteorSpawnController createMeteor #World;#EntityPlayer<br>
+					
+					
+					/bytecodeexec invokevirtual #EntityMeteor setExploding ;<br>
+					
+					
+					/bytecodeexec getstatic #MeteorType STONE<br>
+					
+					
+					/bytecodeexec invokevirtual #EntityMeteor setType #MeteorType<br>
+					
+					
+					/bytecodeexec getplayer NAME<br>
+					
+					
+					/bytecodeexec swap<br>
+					
+					
+					/bytecodeexec invokevirtual #MeteorCommand spawnMeteorAt #EntityPlayerMP;#EntityMeteor<br>
+					
+					
+					/bytecodeexec dup<br>
+					
+					
+					/bytecodeexec ldc 120<br>
+					
+					
+					/bytecodeexec setfield #EntityMeteor explodeY<br>
+					
+					
+					</div>
+					
+					
+					<br><br>
+					
+					
+					The following command will change the tree density (ie <code>BiomeDecorator.treesPerChunk</code>) of the Ice Plains biome type to match that of the vanilla Forest biome (whatever it might, eg if mods changed it). Obviously, this would only apply to newly generated chunks, and would reset once the server is rebooted.
+					
+					
+					<div class = "code-block">
+					
+					
+					/bytecodeexec define net.minecraft.world.biome.BiomeGenBase<br>
+					
+					
+					/bytecodeexec define net.minecraft.world.biome.BiomeDecorator
+					
+					
+					<br><br>
+					
+					
+					/bytecodeexec getstatic #BiomeGenBase field_76774_n<br>
+					
+					
+					/bytecodeexec getfield #BiomeGenBase field_76760_I<br>
+					
+					
+					/bytecodeexec getstatic #BiomeGenBase field_76767_f<br>
+					
+					
+					/bytecodeexec getfield #BiomeGenBase field_76760_I<br>
+					
+					
+					/bytecodeexec setfield #BiomeGenBase field_76832_z<br>
+					
+					
+					</div>
+					</section>
+			</section>
+			
+<footer id = "footer-block">	<div id = "footer-content" class = "textblock-dynamic">
+		<hr>
+		<div id = "footer-spacing">
+		
+		</div>
+		<hr>
+		If you like any of my mods, maps, or other content, or want to help me develop them, feel free to use my Patreon or the buttons below. Every little bit helps me be able to keep working on them, and helps ensure both maintenance and expansion of them.<br>
+		If you wish to give a one-time donation, I recommend you use the Paypal link on the right; Patreon, though it can be used for one-time donations, is designed for ongoing monthly 'subscriptions' (ie a set amount of money gifted each month for as long as you remain a 'patron'). Paypal can also register a donation with monthly recurrence, should that seem preferable to you.<br>
+		For both systems, the amount you choose to donate is up to you, and for Patreon, can be changed at any time should you wish to decrease or increase the amount.<br>
+		And thank you for your support. :D<br>
+					<div class = "linkiconblock">
+					<div class = "linktile" style = "width: 49.75%">
+						<div class = "linklabel">Patreon</div>
+						<a class = "icon icon-patreon" href="http://www.patreon.com/reikasminecraft" ></a>
+					</div>
+					<div class = "linktile" style = "width: 49.75%">
+						<div class = "linklabel">Paypal</div>
+						<a class = "icon icon-paypal" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5XRAM3SXBRJY4" ></a>
+					</div>
+			</div>
+		<hr>
+		To contact me (though some of these are only checked periodically, and many are for specific topics) or find additional information or content, visit any one of these platforms:<br>
+					<div class = "linkiconblock">
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Minecraft Forums</div>
+						<a class = "icon icon-mcforums" href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1291655" title="Minecraft Only"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Factorio Forums</div>
+						<a class = "icon icon-facforums" href="https://forums.factorio.com/viewforum.php?f=216" title="Factorio Only"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">GitHub</div>
+						<a class = "icon icon-github" href="https://github.com/ReikaKalseki" ></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Discord</div>
+						<a class = "icon icon-discord" href="https://discord.com/channels/466852131895508992/466852131895508994/" title="Discord ID: reikakalseki"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Steam</div>
+						<a class = "icon icon-steam" href="https://steamcommunity.com/id/ReikaKalseki/myworkshopfiles/" title="Please no random friend requests"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">YouTube</div>
+						<a class = "icon icon-youtube" href="https://www.youtube.com/user/ReikasMinecraft/videos" ></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">SoundCloud</div>
+						<a class = "icon icon-soundcloud" href="https://soundcloud.com/reikakalseki" title="Music Only"></a>
+					</div>
+					<div class = "linktile" style = "width: 11.75%">
+						<div class = "linklabel">Reddit</div>
+						<a class = "icon icon-reddit" href="https://www.reddit.com/user/ReikaKalseki/" ></a>
+					</div>
+			</div>
+		<hr>
+		This site is proudly Canadian. <i class="fab fa-canadian-maple-leaf"></i><br>
+		<hr>
+		Site (including embedded JavaScript) and linked projects (mods, maps, etc) created by and &copy; ReikaKalseki, except for content within which is part of the base games, as noted below.<br>
+		<hr>
+			Minecraft and its content and assets are &copy; Mojang AB, with whom I am not affiliated<br>
+			Factorio and its content and assets are &copy; Wube Software, with whom I am not affiliated<br>
+			Portal 2 and its content and assets are &copy; Valve Corporation, with whom I am not affiliated<br>
+			Stellaris and its content and assets are &copy; Paradox Interactive, with whom I am not affiliated<br>
+			Subnautica and its content and assets are &copy; Unknown Worlds Entertainment, with whom I am not affiliated<br>
+			Space Engineers and its content and assets are &copy; Keen Software House, with whom I am not affiliated<br>
+			FortressCraft Evolved and its content and assets are &copy; Projector Games, with whom I am not affiliated<br>
+			Starbound and its content and assets are &copy; Chucklefish Limited, with whom I am not affiliated<br>
+	</div></footer>		</div>
+    </body>
+</html>

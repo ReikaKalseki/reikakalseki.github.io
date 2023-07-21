@@ -29,6 +29,7 @@
 					<a class = "navdrop-entry" href="../../minecraft/pages/info/spotlights.html">Spotlights</a>
 					<a class = "navdrop-entry" href="../../minecraft/pages/info/fanmade.html">Fanmade Content</a>
 					<a class = "navdrop-entry" href="../../minecraft/pages/info/luablock.html">LuaBlock</a>
+					<a class = "navdrop-entry" href="../../minecraft/pages/info/byteexec.html">/bytecodeexec Command</a>
 					<a class = "navdrop-entry" href="../../minecraft/pages/info/nottosay.html">Things Not To Say</a>
 					<a class = "navdrop-entry" href="../../minecraft/pages/info/updating.html">Version Updates</a>
 			</div>
@@ -393,19 +394,11 @@ Current Default Value:<div class = "code-block">true</div>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name heading-without-nav">Nether Crystals</h4>
-Type: boolean<br>
-Current Default Value:<div class = "code-block">true</div>
-		</div>
-	
-</div>
-<div class = "setting-group-box">
-		<div class = "setting-box" style = "width: 99.75%">
 			<h4 class = "setting-name heading-without-nav">Disable Pendant Particles</h4>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">true</div>
 		</div>
-	
+	Whether to disable potion spirals from pendant-given effects.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -417,11 +410,11 @@ Current Default Value:<div class = "code-block">true</div>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name heading-without-nav">Max Accelerator Lag in NanoSeconds(Set Negative To Disable Throttling)</h4>
+			<h4 class = "setting-name heading-without-nav">Max Accelerator Lag in NanoSeconds</h4>
 Type: int<br>
 Current Default Value:<div class = "code-block">1000000</div>
 		</div>
-	
+	How many ns can be spent before an accelerator will stop ticking a TileEntity that tick (set negative to disable throttling).
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -461,7 +454,7 @@ Current Default Value:<div class = "code-block">true</div>
 Type: int<br>
 Current Default Value:<div class = "code-block">6</div>
 		</div>
-	
+	Note that when reducing this, animals in rainbow forests drop more, to keep total yields the same.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -477,7 +470,7 @@ Current Default Value:<div class = "code-block">true</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">false</div>
 		</div>
-	
+	Whether to use the purplish coloring of foliage for Ender Forests.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -485,7 +478,7 @@ Current Default Value:<div class = "code-block">false</div>
 Type: int<br>
 Current Default Value:<div class = "code-block">2</div>
 		</div>
-	
+	Higher is more pools.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -493,7 +486,7 @@ Current Default Value:<div class = "code-block">2</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">true</div>
 		</div>
-	
+	Whether CC liquid ender should propel entities around (meaningless if TE is installed as Resonant Ender is used instead).
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -549,7 +542,7 @@ Current Default Value:<div class = "code-block">true</div>
 Type: int<br>
 Current Default Value:<div class = "code-block">4</div>
 		</div>
-	
+	How advanced/expensive items generating in worldgen chests can be. Higher is more.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -565,7 +558,7 @@ Current Default Value:<div class = "code-block">true</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">false</div>
 		</div>
-	
+	Instead of forced middle mouse button.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -581,7 +574,7 @@ Current Default Value:<div class = "code-block">false</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">true</div>
 		</div>
-	
+	Whether CC/TC integration requires more progress in both mods.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -589,23 +582,7 @@ Current Default Value:<div class = "code-block">true</div>
 Type: int<br>
 Current Default Value:<div class = "code-block">0</div>
 		</div>
-	
-</div>
-<div class = "setting-group-box">
-		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name heading-without-nav">Retrogeneration</h4>
-Type: boolean<br>
-Current Default Value:<div class = "code-block">false</div>
-		</div>
-	
-</div>
-<div class = "setting-group-box">
-		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name heading-without-nav">Enable Biome Painter</h4>
-Type: boolean<br>
-Current Default Value:<div class = "code-block">true</div>
-		</div>
-	
+	Where to place the lumen buffer HUD element on screen, 0-3 for the corners, 0 being top-left, 1 bottom-left, 2 top-right, 3 bottom-right.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -637,7 +614,7 @@ Current Default Value:<div class = "code-block">4</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">false</div>
 		</div>
-	
+	Whether ball lightnings can do damage, becoming the only potentially-dangerous (if not aggressive) mobs in the biome.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -653,7 +630,7 @@ Current Default Value:<div class = "code-block">16</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">false</div>
 		</div>
-	
+	Respawn the EnderDragon when it is killed and the end is reloaded.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -669,7 +646,7 @@ Current Default Value:<div class = "code-block">false</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">false</div>
 		</div>
-	
+	Whether certain progress flags will also give an associated fragment, instead of you needing to unlock it like the others.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -693,7 +670,7 @@ Current Default Value:<div class = "code-block">false</div>
 Type: int<br>
 Current Default Value:<div class = "code-block">3</div>
 		</div>
-	
+	1-3, with 1 being easy and 3 hard.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -757,15 +734,7 @@ Current Default Value:<div class = "code-block">128</div>
 Type: int<br>
 Current Default Value:<div class = "code-block">8</div>
 		</div>
-	
-</div>
-<div class = "setting-group-box">
-		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name heading-without-nav">Connected Crystalline Stone Textures</h4>
-Type: boolean<br>
-Current Default Value:<div class = "code-block">false</div>
-		</div>
-	
+	The subterranean illuminator works by dividing the world into NxNxN blocks and attempting to place a light in each one. Smaller zones take longer to process the volume but have more thorough lighting.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -797,7 +766,7 @@ Current Default Value:<div class = "code-block">true</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">true</div>
 		</div>
-	
+	Whether to attempt to blend the edges of the Luminous Cliffs to the surroundings. Expensive and imperfect.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -805,15 +774,7 @@ Current Default Value:<div class = "code-block">true</div>
 Type: int<br>
 Current Default Value:<div class = "code-block">80</div>
 		</div>
-	
-</div>
-<div class = "setting-group-box">
-		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name heading-without-nav">Structure Bypass Usability (0 = None, 1 = Admins Only, 2 = All)</h4>
-Type: int<br>
-Current Default Value:<div class = "code-block">2</div>
-		</div>
-	
+	How large a MIDI can be loaded into the crystal orchestra, as superlarge MIDIs will overflow packet limits.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -821,7 +782,7 @@ Current Default Value:<div class = "code-block">2</div>
 Type: String<br>
 Current Default Value:<div class = "code-block">Key.LCTRL.name()</div>
 		</div>
-	
+	What key to hold to build in superbuild.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -861,15 +822,7 @@ Current Default Value:<div class = "code-block">false</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">false</div>
 		</div>
-	
-</div>
-<div class = "setting-group-box">
-		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name heading-without-nav">Spawn Pylons in Overworld</h4>
-Type: boolean<br>
-Current Default Value:<div class = "code-block">true</div>
-		</div>
-	
+	Whether to reduce the dynamism of some visuals, such as by making them only show when holding a manipulator.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -901,7 +854,7 @@ Current Default Value:<div class = "code-block">64</div>
 Type: int<br>
 Current Default Value:<div class = "code-block">20</div>
 		</div>
-	
+	How forcefully should CC attempt to generate structures in the planned locations. More attempts means more computation time, but fewer means a lower success rate and thus lower total structure frequency.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -909,7 +862,7 @@ Current Default Value:<div class = "code-block">20</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">false</div>
 		</div>
-	
+	Whether to replace the pixelation progress shader with a colorful overlay.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -917,7 +870,7 @@ Current Default Value:<div class = "code-block">false</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">false</div>
 		</div>
-	
+	Whether enhanced pendants are "charged tools" like the aura tracker is.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -929,11 +882,11 @@ Current Default Value:<div class = "code-block">false</div>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name heading-without-nav">Allow Recursive Aura Pouches</h4>
-Type: boolean<br>
-Current Default Value:<div class = "code-block">true</div>
+			<h4 class = "setting-name heading-without-nav">Luminous Cliffs Terrain Shape Seed Shift</h4>
+Type: int<br>
+Current Default Value:<div class = "code-block">0</div>
 		</div>
-	
+	A modifier for the seed used to generate luminous cliffs terrain. Allows you to try a new terrain layout for a biome while keeping the overall world seed.
 </div>
 
 			</div>

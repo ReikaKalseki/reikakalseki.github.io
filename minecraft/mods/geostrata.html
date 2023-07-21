@@ -29,6 +29,7 @@
 					<a class = "navdrop-entry" href="../../minecraft/pages/info/spotlights.html">Spotlights</a>
 					<a class = "navdrop-entry" href="../../minecraft/pages/info/fanmade.html">Fanmade Content</a>
 					<a class = "navdrop-entry" href="../../minecraft/pages/info/luablock.html">LuaBlock</a>
+					<a class = "navdrop-entry" href="../../minecraft/pages/info/byteexec.html">/bytecodeexec Command</a>
 					<a class = "navdrop-entry" href="../../minecraft/pages/info/nottosay.html">Things Not To Say</a>
 					<a class = "navdrop-entry" href="../../minecraft/pages/info/updating.html">Version Updates</a>
 			</div>
@@ -98,6 +99,10 @@
 	<tr class = "toc-entry" style = "border-bottom: 3px solid black;"><td><a href="#top">Back To Top</a></td><td><a class = "tocbtn" href="#top"><i class="fas fa-angle-double-up"></i></a></td></tr>
 		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-overview">Overview</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-overview"></a></td></tr>
 		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-rocktypes">Rock Types</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-rocktypes"></a></td></tr>
+		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-generationpattern">Generation Pattern</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-generationpattern"></a></td></tr>
+		<tr class = "toc-entry toc-entry-l2 "><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-generationpattern-autosub-legacy">Legacy</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-generationpattern-autosub-legacy"></a></td></tr>
+		<tr class = "toc-entry toc-entry-l2 "><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-generationpattern-autosub-banded">Banded</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-generationpattern-autosub-banded"></a></td></tr>
+		<tr class = "toc-entry toc-entry-l2 "><td class = "toc-entry-label"><div class = "spacer-narrow"></div><i class="fas fa-caret-right"></i><div class = "spacer-narrow"></div><a href="#text-block-generationpattern-autosub-simplex">Simplex</a></td><td><a class = "tocbtn fas fa-caret-down" href="#text-block-generationpattern-autosub-simplex"></a></td></tr>
 		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-vents">Vents</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-vents"></a></td></tr>
 		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-otherblocks">Other Blocks</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-otherblocks"></a></td></tr>
 		<tr class = "toc-entry  "><td class = "toc-entry-label"><a href="#text-block-blocks&biomes">Blocks & Biomes</a></td><td><a class = "tocbtn fas fa-angle-down" href="#text-block-blocks&biomes"></a></td></tr>
@@ -190,6 +195,51 @@
 					
 					<li>Opal</li></ul>
 					
+			</section><br>
+			<section class = "textblock" id = "text-block-generationpattern">
+				<h3>Generation Pattern</h3>
+					
+					Rock generation can occur in one of several patterns, selectable via the config.
+					
+					
+					<br><br>
+					</section>
+					<section class = "textblock" id = "text-block-generationpattern-autosub-legacy">
+					<h4>Legacy</h4>
+					
+					
+					This is the default option, and is basically 'Vanilla'; it uses the "ore plops" generator that vanilla and almost all mods use for their ores. This results in roughly elliptical blobs of rock.
+					
+					
+					<br><br>
+					</section>
+					<section class = "textblock" id = "text-block-generationpattern-autosub-banded">
+					<h4>Banded</h4>
+					
+					
+					Banded generation is characterized by thin to moderate-thickness layers of rock, with the type strongly determined by depth. This option requires specifying the base Y levels of each of the rock types' bands; if not specified they will use the default y level of the vanilla generation (about 75% the way upwards of their vertical range), resulting in lots of rock overwriting each other and many Y levels being vanilla stone, which is not desirable.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2FBB9yStf.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FBB9yStf.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2Fwaj6zzg.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2Fwaj6zzg.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2FZwI6azy.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FZwI6azy.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Bands at several Y levels using the above defaults.</div>
+</div><br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2Fggw0zsK.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2Fggw0zsK.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2FQyEqwrB.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FQyEqwrB.jpg" style="max-width:75%;" ></a>	<div class = "image-caption">Cross-sections of the same settings.</div>
+</div><br>
+					</section>
+					<section class = "textblock" id = "text-block-generationpattern-autosub-simplex">
+					<h4>Simplex</h4>
+					
+					
+					Simplex generation uses a 3D noise function to generate rock, resulting in a much more 'continuous' 'weblike' structure. Each rock type has its own distinct 'web', which will intersect in complex ways.<br>
+					
+					
+					<div class = "block-image">
+	<a href = "../../imagedownloads/i-imgur-com_2FwwgMufe.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FwwgMufe.jpg" style="max-width:75%;" ></a>	<a href = "../../imagedownloads/i-imgur-com_2FAaV8C7D.jpg" target="_blank" rel="noopener noreferrer"><img class = "deembed-media" src = "../../imagedownloads/i-imgur-com_2FAaV8C7D.jpg" style="max-width:75%;" ></a>
+</div>
+					</section>
 			</section><br>
 			<section class = "textblock" id = "text-block-vents">
 				<h3>Vents</h3>
@@ -399,22 +449,6 @@ Current Default Value:<div class = "code-block">1F</div>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name heading-without-nav">Ore Mode</h4>
-Type: int<br>
-Current Default Value:<div class = "code-block">0</div>
-		</div>
-	
-</div>
-<div class = "setting-group-box">
-		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name heading-without-nav">Retrogeneration</h4>
-Type: boolean<br>
-Current Default Value:<div class = "code-block">false</div>
-		</div>
-	
-</div>
-<div class = "setting-group-box">
-		<div class = "setting-box" style = "width: 99.75%">
 			<h4 class = "setting-name heading-without-nav">Waila Overlay</h4>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">true</div>
@@ -451,13 +485,29 @@ Current Default Value:<div class = "code-block">Legacy</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">false</div>
 		</div>
-	
+	Whether a flux crystal requires activation to be used. What activation entails depends on the pack, and how the modified item is produced.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
 			<h4 class = "setting-name heading-without-nav">Rock Can Generate Into Other Rock</h4>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">true</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name heading-without-nav">Kelp Forest Biome ID (0 To Disable)</h4>
+Type: int<br>
+Current Default Value:<div class = "code-block">190</div>
+		</div>
+	
+</div>
+<div class = "setting-group-box">
+		<div class = "setting-box" style = "width: 99.75%">
+			<h4 class = "setting-name heading-without-nav">Arctic Spires Biome ID (0 To Disable)</h4>
+Type: int<br>
+Current Default Value:<div class = "code-block">191</div>
 		</div>
 	
 </div>

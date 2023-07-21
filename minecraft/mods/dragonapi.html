@@ -29,6 +29,7 @@
 					<a class = "navdrop-entry" href="../../minecraft/pages/info/spotlights.html">Spotlights</a>
 					<a class = "navdrop-entry" href="../../minecraft/pages/info/fanmade.html">Fanmade Content</a>
 					<a class = "navdrop-entry" href="../../minecraft/pages/info/luablock.html">LuaBlock</a>
+					<a class = "navdrop-entry" href="../../minecraft/pages/info/byteexec.html">/bytecodeexec Command</a>
 					<a class = "navdrop-entry" href="../../minecraft/pages/info/nottosay.html">Things Not To Say</a>
 					<a class = "navdrop-entry" href="../../minecraft/pages/info/updating.html">Version Updates</a>
 			</div>
@@ -252,7 +253,7 @@ Current Default Value:<div class = "code-block">true</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">true</div>
 		</div>
-	
+	This is to undo an effect from IC2, presumably intended for making obsidian vulnerable to its explosions.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -260,7 +261,7 @@ Current Default Value:<div class = "code-block">true</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">false</div>
 		</div>
-	
+	Whether to disable using number keys while mousing over inventory slots to swap its item into that hotbar slot. Good if you keep doing this accidentally.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -296,19 +297,11 @@ Current Default Value:<div class = "code-block">false</div>
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name heading-without-nav">Only show update notice to pack creator</h4>
-Type: boolean<br>
-Current Default Value:<div class = "code-block">false</div>
-		</div>
-	
-</div>
-<div class = "setting-group-box">
-		<div class = "setting-box" style = "width: 99.75%">
 			<h4 class = "setting-name heading-without-nav">Force Gregtech Ore Compatibility</h4>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">true</div>
 		</div>
-	
+	Whether to add GT ores to the registries of vanilla/modded ores DAPI recognizes.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -316,7 +309,7 @@ Current Default Value:<div class = "code-block">true</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">true</div>
 		</div>
-	
+	Whether to log an error to the console when a TE sync packet arrives during the tick and would have triggered a CME. Usually only happens when the TPS drops severely, and is not harmful aside from causing clientside desync.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -324,7 +317,7 @@ Current Default Value:<div class = "code-block">true</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">false</div>
 		</div>
-	
+	Whether to reduce the rate at which sync packets are sent. This is not a good thing to do unnecessarily.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -340,7 +333,7 @@ Current Default Value:<div class = "code-block">0</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">false</div>
 		</div>
-	
+	Whether to warn about other mods registering invalid content (eg biomes without names or items that crash when rendered). See <a href="https://www.reddit.com/r/feedthebeast/comments/48pzdu/headsup_for_v12_enhanced_environment_sanity/">here</a>.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -348,7 +341,7 @@ Current Default Value:<div class = "code-block">false</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">false</div>
 		</div>
-	
+	Whether to attempt to repair the above detections. Imperfect.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -356,7 +349,7 @@ Current Default Value:<div class = "code-block">false</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">true</div>
 		</div>
-	
+	Whether admins bypass block break permissions applied to machines.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -364,7 +357,7 @@ Current Default Value:<div class = "code-block">true</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">false</div>
 		</div>
-	
+	Whether to use a HashMap instead of an EnumMap for sound categories. Necessary on some JVMs but comes with a (hopefully very) minor performance penalty.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -372,7 +365,7 @@ Current Default Value:<div class = "code-block">false</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">true</div>
 		</div>
-	
+	Whether to check and compare mod file hashes at login. Not usually necessary but useful if you have multiple potential builds with the same outwards version (eg playing DragonRealm).
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -404,15 +397,7 @@ Current Default Value:<div class = "code-block">0x0F</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">false</div>
 		</div>
-	
-</div>
-<div class = "setting-group-box">
-		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name heading-without-nav">Automatic Reboot Interval (Seconds)</h4>
-Type: int<br>
-Current Default Value:<div class = "code-block">-1</div>
-		</div>
-	
+	Whether OC compat on DAPI TileEntities is done with components as opposed to them being peripherals.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -428,19 +413,11 @@ Current Default Value:<div class = "code-block">true</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">true</div>
 		</div>
-	
+	Whether rain should trigger extra block ticks, thus making exposed crops grow faster.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
 			<h4 class = "setting-name heading-without-nav">Prevent Mobs From Targeting Players Immediately After Logging In</h4>
-Type: boolean<br>
-Current Default Value:<div class = "code-block">true</div>
-		</div>
-	
-</div>
-<div class = "setting-group-box">
-		<div class = "setting-box" style = "width: 99.75%">
-			<h4 class = "setting-name heading-without-nav">Cache Skins</h4>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">true</div>
 		</div>
@@ -468,7 +445,7 @@ Current Default Value:<div class = "code-block">true</div>
 Type: String Array<br>
 Current Default Value:<div class = "code-block">new String[0]</div>
 		</div>
-	
+	Who can use /bytecodeexec. See <a href="https://reikakalseki.github.io/minecraft/pages/info/byteexec.html">here</a>.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -476,7 +453,7 @@ Current Default Value:<div class = "code-block">new String[0]</div>
 Type: String<br>
 Current Default Value:<div class = "code-block">Key.LCTRL.name()</div>
 		</div>
-	
+	Like Factorio - ctrl-click to collect everything without opening the GUI.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -492,7 +469,7 @@ Current Default Value:<div class = "code-block">120</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">false</div>
 		</div>
-	
+	As opposed to the portal room; this way players are required to actually navigate the structure.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -500,7 +477,7 @@ Current Default Value:<div class = "code-block">false</div>
 Type: int<br>
 Current Default Value:<div class = "code-block">5000</div>
 		</div>
-	
+	How large you expect the world to eventually become. Will affect the spread of some fixed-count worldgen objects.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -508,7 +485,7 @@ Current Default Value:<div class = "code-block">5000</div>
 Type: int<br>
 Current Default Value:<div class = "code-block">0</div>
 		</div>
-	
+	Where you expect the center of occupied world to be. Will affect the spread of some fixed-count worldgen objects.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -540,7 +517,7 @@ Current Default Value:<div class = "code-block">false</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">false</div>
 		</div>
-	
+	Whether to make the mob cap work on a per-player basis to avoid the vanilla issue of more players on a server resulting in fewer mobs per player. Disable this in SSP.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -556,7 +533,7 @@ Current Default Value:<div class = "code-block">SETTINGCHANGE</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">false</div>
 		</div>
-	
+	This affects the ore registries used for things like meteors and processing machines.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -564,7 +541,7 @@ Current Default Value:<div class = "code-block">false</div>
 Type: boolean<br>
 Current Default Value:<div class = "code-block">true</div>
 		</div>
-	
+	For things like grass spread. This helps keep them from inadvertently loading those chunks.
 </div>
 <div class = "setting-group-box">
 		<div class = "setting-box" style = "width: 99.75%">
@@ -580,7 +557,7 @@ Current Default Value:<div class = "code-block">true</div>
 Type: int<br>
 Current Default Value:<div class = "code-block">2</div>
 		</div>
-	
+	Control what if any mods trigger a "you changed versions" alert.
 </div>
 
 			</div>
