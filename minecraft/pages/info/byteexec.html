@@ -427,7 +427,7 @@
 					<tr><td>LDC</td><td>Load literal onto stack</td><td>1 string</td><td></td><td>1</td><td>The argument will be parsed to null, an integer, then a float (for decimals use the <code>F</code> suffix), then a double, then a string in that order of attempts</td></tr>
 					
 					
-					<tr><td>NEW</td><td>Instantiate object</td><td>Class Reference, Argument Type String</td><td>Any</td><td>1</td><td>Consumes as many objects from the stack as the constructor is stated to require</td></tr>
+					<tr><td>NEW</td><td>Instantiate object</td><td>Class Reference, Parameter List String</td><td>Any</td><td>1</td><td>Consumes as many objects from the stack as the constructor is stated to require</td></tr>
 					
 					
 					<tr><td>DUP</td><td>Duplicate top of stack</td><td></td><td></td><td>1</td><td></td></tr>
@@ -439,10 +439,10 @@
 					<tr><td>SWAP</td><td>Swap stack top</td><td></td><td></td><td></td><td>Swaps the position of the top two objects on the stack.</td></tr>
 					
 					
-					<tr><td>INVOKESTATIC</td><td>Call static method</td><td>Class Reference, Name, Argument Type String</td><td>Any</td><td>0 or 1</td><td>Consumes as many objects from the stack as the method has parameters. Will put a return value back on the stack for non-void methods.</td></tr>
+					<tr><td>INVOKESTATIC</td><td>Call static method</td><td>Class Reference, Name, Parameter List String</td><td>Any</td><td>0 or 1</td><td>Consumes as many objects from the stack as the method has parameters. Will put a return value back on the stack for non-void methods.</td></tr>
 					
 					
-					<tr><td>INVOKEVIRTUAL</td><td>Call instance method</td><td>Class Reference, Name, Argument Type String</td><td>Any</td><td>0 or 1</td><td>Consumes as many objects from the stack as the method has parameters, plus one for the object instance. Object instance must be below the parameters on the stack. Will put a return value back on the stack for non-void methods.</td></tr>
+					<tr><td>INVOKEVIRTUAL</td><td>Call instance method</td><td>Class Reference, Name, Parameter List String</td><td>Any</td><td>0 or 1</td><td>Consumes as many objects from the stack as the method has parameters, plus one for the object instance. Object instance must be below the parameters on the stack. Will put a return value back on the stack for non-void methods.</td></tr>
 					
 					
 					<tr><td>OBJMETHOD</td><td>Call instance method from object</td><td>Name</td><td>Any</td><td>0 or 1</td><td>Finds the named method in the class defining the object on the top of the stack and invokes it. Consumes as many objects from the stack as the method has parameters, plus one for the object instance. Object instance must be the top of the stack. Will put a return value back on the stack for non-void methods.</td></tr>
@@ -808,7 +808,7 @@
 					<br><br>
 					
 					
-					The following command will change the tree density (ie <code>BiomeDecorator.treesPerChunk</code>) of the Ice Plains biome type to match that of the vanilla Forest biome (whatever it might, eg if mods changed it). Obviously, this would only apply to newly generated chunks, and would reset once the server is rebooted.
+					The following command will change the tree density (ie <code>BiomeDecorator.treesPerChunk</code>) of the Ice Plains biome type to match that of the vanilla Forest biome (whatever it might be, even if mods changed it, instead of a hardcoded value). Obviously, this would only apply to newly generated chunks, and would reset once the server is rebooted.
 					
 					
 					<div class = "code-block">
